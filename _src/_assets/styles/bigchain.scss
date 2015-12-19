@@ -1,0 +1,21 @@
+//
+// Collection File
+// ---
+// bigchain.io
+//
+
+// Normalize all the things
+@import '../../../node_modules/normalize-css/normalize.css';
+@import '../../../node_modules/normalize-opentype.css/normalize-opentype.scss';
+
+// Variables & Mixins
+@import 'bigchain/_variables';
+@import 'bigchain/_mixins';
+
+// Components
+
+// Content types
+@import 'bigchain/content-page';
+
+// specific page styles
+@import 'page-front';

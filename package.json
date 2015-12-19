@@ -1,0 +1,26 @@
+{
+  "name": "bigchain-website",
+  "version": "0.0.0",
+  "author": {
+    "name": "Matthias Kretschmann",
+    "email": "m@kretschmann.io"
+  },
+  "description": "Landing page for www.bigchain.io",
+  "homepage": "http://www.bigchain.io",
+  "license": "(c) 2015 ascribe - All Rights Reserved",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "normalize-opentype.css": "^0.2.4",
+  },
+  "devDependencies": {
+
+  },
+  "engines": {
+    "node": ">=0.10.29"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ascribe/bigchain-website"
+  }
+}

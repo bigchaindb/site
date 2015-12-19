@@ -1,0 +1,55 @@
+//
+// Variables
+// ---
+// bigchain.io
+//
+
+//
+// Colors
+//
+$brand-main-blue:         #003C69;
+$brand-main-black:        #000000;
+$brand-main-white:        #FFFFFF;
+
+
+//
+// Typography
+//
+$font-family-fira:        'fira-sans-light', sans-serif !default;
+$font-family-avenir:      'Avenir', 'Helvetica Neue', 'Arial', sans-serif !default;
+
+$font-weight-light:         300 !default;
+$font-weight-normal:        400 !default;
+$font-weight-bold:          600 !default;
+$font-weight-base:          $font-weight-light !default;
+$font-family-base:          $font-family-avenir !default;
+
+$font-size-base:            16px !default;
+$font-size-large:           ceil(($font-size-base * 1.15)) !default;
+$font-size-small:           ceil(($font-size-base * 0.85)) !default;
+$font-size-mini:            ceil(($font-size-base * 0.65)) !default;
+
+$font-size-h1:              floor(($font-size-base * 2.6)) !default;
+$font-size-h2:              floor(($font-size-base * 2.25)) !default;
+$font-size-h3:              ceil(($font-size-base * 1.7)) !default;
+$font-size-h4:              ceil(($font-size-base * 1.25)) !default;
+$font-size-h5:              $font-size-base !default;
+$font-size-h6:              ceil(($font-size-base * 0.85)) !default;
+
+$line-height-base:          1.4 !default;
+$line-height-computed:      floor(($font-size-base * $line-height-base)) !default;
+
+$headings-font-family:      $font-family-fira !default;
+$headings-font-weight:      $font-weight-normal !default;
+$headings-line-height:      1.2 !default;
+$headings-color:            $brand-main-blue !default;
+
+
+//
+// Scaffolding
+//
+$body-bg:                   #fff !default;
+$text-color:                $brand-main-black !default;
+
+$link-color:                $brand-main-blue !default;
+$link-hover-color:          darken($link-color, 15%) !default;
