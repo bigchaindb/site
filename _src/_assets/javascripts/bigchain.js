@@ -15,4 +15,10 @@ jQuery(function($) {
     Forms.init();
     SmoothScroll.init();
 
+    $('.hero .logo').on('animationend webkitAnimationEnd oAnimationEnd',
+        function(e) {
+            $('.hero').addClass('is-ready');
+        }
+    );
+
 });

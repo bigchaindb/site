@@ -51,6 +51,8 @@
         color: #fff;
         font-size: $font-size-h1;
         margin-bottom: ($spacer * 3);
+
+        &:after { display: none }
     }
 
     .btn {
@@ -62,15 +64,29 @@
     }
 
     // intro animation
-    .logo,
+    .logo {
+        @extend .animation-slide-in-from-bottom;
+        animation-duration: 1s;
+        animation-timing-function: $timing-default;
+    }
+
     .section-title,
     .btn {
         @extend .animation-slide-in-from-bottom;
         animation-fill-mode: backwards;
+        animation-play-state: paused;
     }
 
-    .section-title { animation-delay: .2s; }
-    .btn           { animation-delay: .4s; }
+    .btn { animation-delay: .2s; }
+
+    &.is-ready {
+        .section-title,
+        .btn {
+            animation-play-state: running;
+        }
+    }
+
+
 }
 
 

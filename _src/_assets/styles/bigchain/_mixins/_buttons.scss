@@ -5,7 +5,7 @@
     $active-background: darken($background, 5%);
     $active-border: darken($border, 12%);
     color: $color !important;
-    background-color: $background;
+    background: $background;
 
     &:hover,
     &:focus {
@@ -14,11 +14,8 @@
     }
     &:active {
         color: $color !important;
-        background-color: darken($background, 30%);
+        background: darken($background, 10%);
         transition: none;
-
-        // Remove the gradient for the pressed/active state
-        background-image: none;
     }
     &.disabled,
     &:disabled {
