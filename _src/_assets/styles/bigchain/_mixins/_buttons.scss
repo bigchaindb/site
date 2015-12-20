@@ -6,6 +6,7 @@
     $active-border: darken($border, 12%);
     color: $color !important;
     background: $background;
+    border-color: $border;
 
     &:hover,
     &:focus {

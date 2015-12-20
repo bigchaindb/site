@@ -33,16 +33,16 @@ $brand-danger:            #d9534f !default;
 // Typography
 //
 $font-family-fira:        'Fira Sans', sans-serif !default;
-$font-family-avenir:      'Avenir', 'Helvetica Neue', 'Arial', sans-serif !default;
+$font-family-avenir:      'Avenir Next', 'Helvetica Neue', 'Arial', sans-serif !default;
 $font-family-monospace:    Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:         $font-family-avenir !default;
 
 $font-weight-light:         300 !default;
 $font-weight-normal:        400 !default;
 $font-weight-bold:          600 !default;
-$font-weight-base:          $font-weight-light !default;
+$font-weight-base:          $font-weight-normal !default;
 
-$font-size-root:            16px !default;
+$font-size-root:            18px !default;
 
 $font-size-base:            1rem !default;
 $font-size-lg:              1.25rem !default;
@@ -112,7 +112,7 @@ $component-active-bg:    $brand-primary !default;
 //
 $btn-padding-x:                  1.5rem !default;
 $btn-padding-y:                  .375rem !default;
-$btn-font-weight:                $font-weight-light !default;
+$btn-font-weight:                $font-weight-normal !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
@@ -169,4 +169,4 @@ $input-box-shadow-focus:         rgba(102,175,233,.6) !default;
 $input-color-placeholder:        #999 !default;
 
 $input-font:                     $font-family-avenir !default;
-$input-font-weight:              $font-weight-light !default;
+$input-font-weight:              $font-weight-normal !default;

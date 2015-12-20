@@ -8,7 +8,7 @@
     text-align: center;
     overflow: hidden;
     position: relative;
-    text-shadow: 0 1px 0 rgba(0,0,0,.3);
+    text-shadow: 0 1px 0 rgba(0,0,0,.1);
 
     // background
     background: url('../img/photo1.jpg') no-repeat center bottom;
@@ -55,6 +55,24 @@
         &:after { display: none }
     }
 
+    .btn-link {
+        color: #fff;
+        margin-top: ($spacer * 3);
+        opacity: .7;
+
+        &:hover,
+        &:focus { opacity: 1; }
+
+        // the caret
+        .icon {
+            width: 12px;
+            height: 12px;
+            stroke: #fff;
+            display: block;
+            margin: auto;
+        }
+    }
+
     .btn {
         &:hover,
         &:focus,
@@ -64,16 +82,21 @@
     }
 
     // intro animation
-    .logo {
+    .logo,
+    .section-title,
+    .btn {
         @extend .animation-slide-in-from-bottom;
         animation-duration: 1s;
+        animation-fill-mode: backwards;
+    }
+
+    .logo {
         animation-timing-function: $timing-default;
     }
 
     .section-title,
     .btn {
         @extend .animation-slide-in-from-bottom;
-        animation-fill-mode: backwards;
         animation-play-state: paused;
     }
 
@@ -101,6 +124,19 @@
         margin-bottom: $spacer;
     }
 }
+
+
+.section-whitepaper {
+    .icon {
+        stroke: $brand-main-gray;
+        stroke-dasharray: 4,4;
+        opacity: .3;
+        display: block;
+        margin: auto;
+        margin-bottom: $spacer;
+    }
+}
+
 
 .section-earlyaccess {
 
