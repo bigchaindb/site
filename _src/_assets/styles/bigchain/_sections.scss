@@ -2,7 +2,6 @@
 .section {
     padding-top: ($spacer * 2);
     padding-bottom: ($spacer * 2);
-    min-height: 420px;
 
     // use this so animated elements coming in from outside of screen
     // don't affect layout
@@ -11,19 +10,24 @@
     // vertically center everything
     display: flex;
     align-items: center;
+    min-height: 420px;
 
-    .row { flex: 1 }
+    .row { flex: 1; }
 
     @media ($screen-sm) {
-        padding-top: ($spacer * 3);
-        padding-bottom: ($spacer * 3);
+        padding-top: ($spacer * 4);
+        padding-bottom: ($spacer * 4);
     }
+}
+
+.section-header {
+    margin-bottom: ($spacer * 4);
 }
 
 .section-title,
 .section-description {
     text-align: center;
-    
+
     @media ($screen-sm) {
         max-width: 100%;
         margin-left: auto;
@@ -34,7 +38,15 @@
 .section-title {
     font-size: $font-size-h3;
     margin-top: 0;
-    margin-bottom: $spacer;
+
+    &:after {
+        content: "";
+        height: 2px;
+        width: 5rem;
+        display: block;
+        margin: ($spacer * 2) auto 0 auto;
+        background: lighten($brand-main-gray, 30%);
+    }
 
     @media ($screen-sm) {
         font-size: $font-size-h2;
@@ -65,19 +77,22 @@
 // Section backgrounds
 //
 .background--blue {
-    background: $brand-main-blue;
+    background: $brand-main-blue; // fallback
+    background: linear-gradient(to bottom right, $brand-main-blue 0%, lighten($brand-main-blue, 10%) 100%);
 
     * { color: #fff }
 }
 
-.background--black {
-    background: $brand-main-black;
+.background--dark {
+    background: $brand-main-blue-dark; // fallback
+    background: linear-gradient(to bottom right, $brand-main-blue-dark 0%, lighten($brand-main-blue-dark, 10%) 100%);
 
     * { color: #fff }
 }
 
-.background--gray-dark {
-    background: $gray-dark;
+.background--gray {
+    background: $brand-main-gray; // fallback
+    background: linear-gradient(to bottom right, $brand-main-gray 0%, lighten($brand-main-gray, 10%) 100%);
 
     * { color: #fff }
 }

@@ -6,37 +6,61 @@ front_page: true
 
 <header class="section hero">
     <div class="row">
-        <svg class="logo logo--black logo--full" aria-labelledby="title">
-            <title>Logo</title>
-            <use xlink:href="/assets/img/sprite.svg#logo"></use>
-        </svg>
-        <h1 class="section-title">Bigchain is coming.</h1>
-        <a href="#earlyaccess" class="btn btn-secondary-outline">Get Early Access</a>
+        <div class="hero__content">
+            <svg class="logo logo--full" aria-labelledby="title">
+                <title>Logo</title>
+                <use xlink:href="/assets/img/sprite.svg#logo"></use>
+            </svg>
+            <h1 class="section-title">Bigchain is coming.</h1>
+            <a href="#earlyaccess" class="btn btn-secondary-outline">Get Early Access</a>
+        </div>
     </div>
 </header>
 
-<section class="section section-benchmarks background--blue">
+<section class="section section-benchmarks">
     <div class="row">
+        <header class="section-header">
+            <h1 class="section-title">Key Features</h1>
+        </header>
         <div class="section-description">
             <div class="grid grid--gutters">
-                <p class="grid__col">100,000 transactions per second and climbing</p>
-                <p class="grid__col">Petabyte Capacity</p>
-                <p class="grid__col">Open Source</p>
+                <p class="grid__col">
+                    <svg class="icon">
+                        <use xlink:href="/assets/img/sprite.svg#icon-graph"></use>
+                    </svg>
+                    100,000 transactions per second and climbing
+                </p>
+                <p class="grid__col">
+                    <svg class="icon">
+                        <use xlink:href="/assets/img/sprite.svg#icon-servers"></use>
+                    </svg>
+                    Petabyte Capacity
+                </p>
+                <p class="grid__col">
+                    <svg class="icon">
+                        <use xlink:href="/assets/img/sprite.svg#icon-tree"></use>
+                    </svg>
+                    Open Source
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section">
+<section class="section section-whitepaper">
     <div class="row">
-        <h1 class="section-title">Whitepaper</h1>
+        <header class="section-header">
+            <h1 class="section-title">Whitepaper</h1>
+        </header>
         <p class="section-description">Coming soon</p>
     </div>
 </section>
 
-<section id="earlyaccess" class="section section-earlyaccess background--black">
+<section id="earlyaccess" class="section section-earlyaccess background--gray">
     <div class="row">
-        <h1 class="section-title">Early Access</h1>
+        <header class="section-header">
+            <h1 class="section-title">Early Access</h1>
+        </header>
         <p class="section-description">For early access and inquiries, enter your contact information below</p>
 
         <form action="" id="form-earlyaccess" class="js-parsley">

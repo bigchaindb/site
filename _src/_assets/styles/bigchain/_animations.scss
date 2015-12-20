@@ -1,3 +1,52 @@
 
 $timing-default:        ease-out;
 $timing-bounce:         cubic-bezier(0,1.02,.32,1.34); // easeOutBack, modified: http://cubic-bezier.com/#0,1.02,.32,1.34
+
+//
+// Transitions
+//
+@mixin transition {
+    transition: all .2s ease-in-out;
+}
+
+.transition {
+    @include transition;
+}
+
+.fade {
+    @include transition;
+    opacity: 0;
+
+    &.in {
+        opacity: 1;
+    }
+}
+
+
+//
+// Custom animations
+//
+
+// smooooothly slide in from bottom
+@mixin animation-slide-in-from-bottom {
+    animation: slide-in-from-bottom .7s $timing-bounce;
+}
+
+.animation-slide-in-from-bottom {
+    @include animation-slide-in-from-bottom;
+
+    &.paused {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes slide-in-from-bottom {
+    0%   {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

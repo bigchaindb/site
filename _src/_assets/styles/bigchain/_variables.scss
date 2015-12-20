@@ -7,12 +7,17 @@
 //
 // Colors
 //
-$brand-main-blue:         #003C69;
-$brand-main-black:        #000000;
-$brand-main-white:        #FFFFFF;
+//$brand-main-blue:         #003C69 !default;
+$brand-main-blue:         #275B82 !default;
+$brand-main-blue-dark:    #101A25 !default;
+
+$brand-main-gray:         #70859B !default;
+
+$brand-main-brown:        #B56D00 !default;
+$brand-main-light:        #FFFFFF !default;
 
 $gray-dark:               #373a3c !default;
-$gray:                    #55595c !default;
+$gray:                    $brand-main-gray !default;
 $gray-light:              #818a91 !default;
 $gray-lighter:            #eceeef !default;
 $gray-lightest:           #f7f7f9 !default;
@@ -40,9 +45,9 @@ $font-weight-base:          $font-weight-light !default;
 $font-size-root:            16px !default;
 
 $font-size-base:            1rem !default;
-$font-size-lg:              ceil(($font-size-base * 1.25)) !default;
-$font-size-sm:              ceil(($font-size-base * 0.875)) !default;
-$font-size-xs:              ceil(($font-size-base * 0.75)) !default;
+$font-size-lg:              1.25rem !default;
+$font-size-sm:              0.875rem !default;
+$font-size-xs:              0.75rem !default;
 
 $font-size-h1:              3rem !default;
 $font-size-h2:              2.5rem !default;
@@ -56,16 +61,16 @@ $line-height:               1.5 !default;
 $headings-font-family:      $font-family-fira !default;
 $headings-font-weight:      $font-weight-light !default;
 $headings-line-height:      1.2 !default;
-$headings-color:            $brand-main-blue !default;
+$headings-color:            $brand-main-gray !default;
 
 
 //
 // Scaffolding
 //
 $body-bg:                   #fff !default;
-$text-color:                $brand-main-black !default;
+$text-color:                $brand-main-blue-dark !default;
 
-$link-color:                $brand-main-blue !default;
+$link-color:                $brand-main-brown !default;
 $link-hover-color:          darken($link-color, 15%) !default;
 
 

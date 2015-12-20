@@ -6,38 +6,24 @@
     $active-border: darken($border, 12%);
     color: $color !important;
     background-color: $background;
-    border-color: $border;
 
     &:hover,
-    &:focus,
-    &.focus {
+    &:focus {
         color: $color !important;
         background-color: $active-background;
-        border-color: $active-border;
     }
-    &:active,
-    &.active {
+    &:active {
         color: $color !important;
-        background-color: $active-background;
-        border-color: $active-border;
+        background-color: darken($background, 30%);
+        transition: none;
 
         // Remove the gradient for the pressed/active state
         background-image: none;
-
-        &:hover,
-        &:focus,
-        &.focus {
-            color: $color !important;
-            background-color: darken($background, 17%);
-            border-color: darken($border, 25%);
-        }
     }
     &.disabled,
     &:disabled {
-        &:focus,
-        &.focus {
+        &:focus {
             background-color: $background;
-            border-color: $border;
         }
     }
 }
@@ -45,22 +31,22 @@
     color: $color;
     background-image: none;
     background-color: transparent;
-    border-color: $color;
+    border: 1px solid $color;
 
     &:hover,
-    &:focus,
-    &.focus,
-    &:active,
-    &.active {
-        color: #fff;
+    &:focus {
         background-color: $color;
         border-color: $color;
     }
 
+    &:active {
+        background-color: darken($color, 10%);
+        border-color: darken($color, 10%);
+    }
+
     &.disabled,
     &:disabled {
-        &:focus,
-        &.focus {
+        &:focus {
             border-color: lighten($color, 20%);
         }
     }

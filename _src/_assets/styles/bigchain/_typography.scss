@@ -106,12 +106,12 @@ p {
 //
 small,
 .small {
-    font-size: floor((100% * $font-size-sm / $font-size-base));
+    font-size: $font-size-sm;
     font-weight: $font-weight-normal;
 }
 
 .mini {
-    font-size: floor((100% * $font-size-xs / $font-size-base));
+    font-size: $font-size-xs;
     font-weight: $font-weight-normal;
 }
 

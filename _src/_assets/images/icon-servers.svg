@@ -1,0 +1,28 @@
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In  -->
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="60px" height="60px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+<g>
+	<rect x="1" y="11" class="st0" width="58" height="16"/>
+	<polyline class="st0" points="1,11 11,1 49,1 59,11 	"/>
+	<path class="st0" d="M1,43v11c0,2.8,2.2,5,5,5h48c2.8,0,5-2.2,5-5V43"/>
+	<circle class="st0" cx="9" cy="19" r="4"/>
+	<circle class="st0" cx="35" cy="19" r="2"/>
+	<circle class="st0" cx="43" cy="19" r="2"/>
+	<circle class="st0" cx="51" cy="19" r="2"/>
+	<polyline class="st0" points="59,27 59,43 1,43 1,27 	"/>
+	<circle class="st0" cx="9" cy="35" r="4"/>
+	<circle class="st0" cx="35" cy="35" r="2"/>
+	<circle class="st0" cx="43" cy="35" r="2"/>
+	<circle class="st0" cx="51" cy="35" r="2"/>
+	<circle class="st0" cx="35" cy="51" r="2"/>
+	<circle class="st0" cx="43" cy="51" r="2"/>
+	<circle class="st0" cx="51" cy="51" r="2"/>
+	<circle class="st0" cx="9" cy="51" r="4"/>
+</g>
+</svg>
