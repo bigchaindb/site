@@ -32,9 +32,9 @@ var isProduction = ($.util.env.production === true ? true : false);
 
 console.log("");
 console.log($.util.colors.gray("   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>"));
-console.log($.util.colors.cyan("                        ┌─┐┌─┐┌─┐┬─┐┬┌┐ ┌─┐"));
-console.log($.util.colors.cyan("                        ├─┤└─┐│  ├┬┘│├┴┐├┤ "));
-console.log($.util.colors.cyan("                        ┴ ┴└─┘└─┘┴└─┴└─┘└─┘"));
+console.log($.util.colors.cyan("                        ┌─┐┌─┐┌─┐┬─┐┬┌┐ ┌─┐ "));
+console.log($.util.colors.cyan("                        ├─┤└─┐│  ├┬┘│├┴┐├┤  "));
+console.log($.util.colors.cyan("                        ┴ ┴└─┘└─┘┴└─┴└─┘└─┘ "));
 console.log($.util.colors.gray("   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>"));
 console.log("");
 
@@ -243,19 +243,6 @@ gulp.task('rev:replace', function() {
             .pipe($.revReplace({ manifest: manifest }))
             .pipe(gulp.dest(DIST));
     }
-});
-
-
-//
-// CDN url injection
-//
-gulp.task('cdn', function() {
-    return gulp.src([DIST + '/**/*.html', DIST + '/assets/css/*.css'], { base: DIST })
-        .pipe($.replace('/assets/css/', CDN + '/assets/css/'))
-        .pipe($.replace('/assets/js/', CDN + '/assets/js/'))
-        .pipe($.replace('/assets/img/', CDN + '/assets/img/'))
-        .pipe($.replace('../', CDN + '/assets/'))
-        .pipe(gulp.dest(DIST));
 });
 
 
