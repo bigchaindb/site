@@ -9,6 +9,7 @@
     overflow: hidden;
     position: relative;
     text-shadow: 0 1px 0 rgba(0,0,0,.1);
+    min-height: 100vh;
 
     // background
     background: url('../img/photo1.jpg') no-repeat center bottom;
@@ -35,21 +36,19 @@
         z-index: 1;
     }
 
-    @media ($screen-sm) {
-        height: 100vh;
-    }
-
     .logo {
         fill-opacity: .6;
         margin: auto;
-        margin-top: -($spacer * 8);
-        margin-bottom: ($spacer * 2);
         max-width: 31em;
+
+        @media ($screen-sm) {
+            margin-top: -($spacer * 6);
+            margin-bottom: ($spacer * 2);
+        }
     }
 
     .section-title {
         color: #fff;
-        font-size: $font-size-h1;
         margin-bottom: ($spacer * 3);
 
         &:after { display: none }
