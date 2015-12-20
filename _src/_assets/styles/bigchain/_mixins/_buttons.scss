@@ -1,0 +1,75 @@
+//
+// Button variants
+//
+@mixin button-variant($color, $background, $border) {
+    $active-background: darken($background, 5%);
+    $active-border: darken($border, 12%);
+    color: $color !important;
+    background-color: $background;
+    border-color: $border;
+
+    &:hover,
+    &:focus,
+    &.focus {
+        color: $color !important;
+        background-color: $active-background;
+        border-color: $active-border;
+    }
+    &:active,
+    &.active {
+        color: $color !important;
+        background-color: $active-background;
+        border-color: $active-border;
+
+        // Remove the gradient for the pressed/active state
+        background-image: none;
+
+        &:hover,
+        &:focus,
+        &.focus {
+            color: $color !important;
+            background-color: darken($background, 17%);
+            border-color: darken($border, 25%);
+        }
+    }
+    &.disabled,
+    &:disabled {
+        &:focus,
+        &.focus {
+            background-color: $background;
+            border-color: $border;
+        }
+    }
+}
+@mixin button-outline-variant($color) {
+    color: $color;
+    background-image: none;
+    background-color: transparent;
+    border-color: $color;
+
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+        color: #fff;
+        background-color: $color;
+        border-color: $color;
+    }
+
+    &.disabled,
+    &:disabled {
+        &:focus,
+        &.focus {
+            border-color: lighten($color, 20%);
+        }
+    }
+}
+
+// Button sizes
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    line-height: $line-height;
+    border-radius: $border-radius;
+}

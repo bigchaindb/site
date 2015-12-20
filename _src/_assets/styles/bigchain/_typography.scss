@@ -14,7 +14,7 @@ body {
     font-family: $font-family-base;
     font-size: $font-size-base;
     font-weight: $font-weight-base;
-    line-height: $line-height-base;
+    line-height: $line-height;
     color: $text-color;
     background-color: $body-bg;
 
@@ -49,7 +49,6 @@ a {
     &:hover,
     &:focus {
         color: $link-hover-color;
-        text-decoration: underline;
     }
 
     &:active {}
@@ -74,16 +73,16 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-    margin-top: ($line-height-computed * 2);
-    margin-bottom: $line-height-computed;
+    margin-top: ($spacer * 2);
+    margin-bottom: $spacer;
 }
 
 h4, .h4,
 h5, .h5,
 h6, .h6 {
     color: $gray;
-    margin-top: $line-height-computed;
-    margin-bottom: ($line-height-computed / 2);
+    margin-top: $spacer;
+    margin-bottom: ($spacer / 2);
 }
 
 h1, .h1 { font-size: $font-size-h1; }
@@ -98,7 +97,7 @@ h6, .h6 { font-size: $font-size-h6; }
 // Body text
 //
 p {
-    margin: 0 0 ($line-height-computed / 2);
+    margin: 0 0 ($spacer / 2);
 }
 
 
@@ -107,17 +106,17 @@ p {
 //
 small,
 .small {
-    font-size: floor((100% * $font-size-small / $font-size-base));
+    font-size: floor((100% * $font-size-sm / $font-size-base));
     font-weight: $font-weight-normal;
 }
 
 .mini {
-    font-size: floor((100% * $font-size-mini / $font-size-base));
+    font-size: floor((100% * $font-size-xs / $font-size-base));
     font-weight: $font-weight-normal;
 }
 
 .large {
-    font-size: floor((100% * $font-size-large / $font-size-base));
+    font-size: floor((100% * $font-size-lg / $font-size-base));
 }
 
 strong,
@@ -144,13 +143,13 @@ strong,
 // Unordered and Ordered lists
 ul,
 ol {
-    margin-top: $line-height-computed;
-    margin-bottom: $line-height-computed;
-    padding-left: ($line-height-computed * 2);
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+    padding-left: ($spacer * 2);
 
     li {
-        margin-bottom: ($line-height-computed / 2);
-        padding-left: ($line-height-computed / 2);
+        margin-bottom: ($spacer / 2);
+        padding-left: ($spacer / 2);
     }
     ul,
     ol {
@@ -198,9 +197,9 @@ ul {
 blockquote {
     border-left: 3px solid $gray-lighter;
     margin-left: 0;
-    margin-top: $line-height-computed;
-    margin-bottom: $line-height-computed;
-    padding: ($line-height-computed/2) $line-height-computed;
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+    padding: ($spacer/2) $spacer;
     color: $gray;
     font-style: italic;
 
@@ -220,9 +219,9 @@ cite {
 
 // Addresses
 address {
-    margin-bottom: $line-height-computed;
+    margin-bottom: $spacer;
     font-style: normal;
-    line-height: $line-height-base;
+    line-height: $line-height;
 }
 
 

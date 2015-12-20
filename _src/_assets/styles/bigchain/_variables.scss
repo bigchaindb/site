@@ -40,19 +40,18 @@ $font-weight-base:          $font-weight-light !default;
 $font-size-root:            16px !default;
 
 $font-size-base:            1rem !default;
-$font-size-large:           ceil(($font-size-base * 1.25)) !default;
-$font-size-small:           ceil(($font-size-base * 0.875)) !default;
-$font-size-mini:            ceil(($font-size-base * 0.75)) !default;
+$font-size-lg:              ceil(($font-size-base * 1.25)) !default;
+$font-size-sm:              ceil(($font-size-base * 0.875)) !default;
+$font-size-xs:              ceil(($font-size-base * 0.75)) !default;
 
-$font-size-h1:              floor(($font-size-base * 2.6)) !default;
-$font-size-h2:              floor(($font-size-base * 2.25)) !default;
-$font-size-h3:              ceil(($font-size-base * 1.7)) !default;
-$font-size-h4:              ceil(($font-size-base * 1.25)) !default;
+$font-size-h1:              3rem !default;
+$font-size-h2:              2.5rem !default;
+$font-size-h3:              2rem !default;
+$font-size-h4:              1.5rem !default;
 $font-size-h5:              $font-size-base !default;
-$font-size-h6:              ceil(($font-size-base * 0.85)) !default;
+$font-size-h6:              0.85rem !default;
 
-$line-height-base:          1.4 !default;
-$line-height-computed:      floor(($font-size-base * $line-height-base)) !default;
+$line-height:               1.5 !default;
 
 $headings-font-family:      $font-family-fira !default;
 $headings-font-weight:      $font-weight-light !default;
@@ -73,7 +72,7 @@ $link-hover-color:          darken($link-color, 15%) !default;
 //
 // Grid
 //
-$gutter-space:              4% !default;
+$gutter-space:              2rem !default;
 
 
 //
@@ -86,3 +85,83 @@ $screen-lg-min:             87.500em !default;
 $screen-sm:                 'min-width: #{$screen-sm-min}';
 $screen-md:                 'min-width: #{$screen-md-min}';
 $screen-lg:                 'min-width: #{$screen-lg-min}';
+
+
+//
+// Components
+//
+$spacer:                 1rem !default;
+$line-height-lg:         (4 / 3) !default;
+$line-height-sm:         1.5 !default;
+
+$border-radius:          .15rem !default;
+$border-radius-lg:       .2rem !default;
+$border-radius-sm:       .1rem !default;
+
+$component-active-color: #fff !default;
+$component-active-bg:    $brand-primary !default;
+
+
+//
+// Buttons
+//
+$btn-padding-x:                  1.5rem !default;
+$btn-padding-y:                  .375rem !default;
+$btn-font-weight:                $font-weight-light !default;
+
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             $btn-primary-bg !default;
+
+$btn-secondary-color:            $gray-dark !default;
+$btn-secondary-bg:               #fff !default;
+$btn-secondary-border:           #fff !default;
+
+$btn-info-color:                 #fff !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                $btn-info-bg !default;
+
+$btn-success-color:              #fff !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             $btn-success-bg !default;
+
+$btn-warning-color:              #fff !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             $btn-warning-bg !default;
+
+$btn-danger-color:               #fff !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              $btn-danger-bg !default;
+
+$btn-link-disabled-color:        $gray-light !default;
+
+$btn-padding-x-sm:               .75rem !default;
+$btn-padding-y-sm:               .25rem !default;
+
+$btn-padding-x-lg:               1.25rem !default;
+$btn-padding-y-lg:               .75rem !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:              $border-radius !default;
+$btn-border-radius-lg:           $border-radius-lg !default;
+$btn-border-radius-sm:           $border-radius-sm !default;
+
+//
+// Forms
+//
+$input-padding-x:                .5rem !default;
+$input-padding-y:                0 !default;
+
+$input-bg:                       rgba(255,255,255,.1) !default;
+$input-bg-disabled:              $gray-lighter !default;
+
+$input-color:                    $gray !default;
+$input-border-color:             #ccc !default;
+
+$input-border-focus:             #66afe9 !default;
+$input-box-shadow-focus:         rgba(102,175,233,.6) !default;
+
+$input-color-placeholder:        #999 !default;
+
+$input-font:                     $font-family-avenir !default;
+$input-font-weight:              $font-weight-light !default;

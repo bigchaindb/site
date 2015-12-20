@@ -3,3 +3,48 @@
 // ---
 // bigchain.io
 //
+
+.hero {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    // background
+    background: url('../img/photo2.jpg') no-repeat center center;
+    background-size: cover;
+
+    @media ($screen-sm) {
+        height: 85vh;
+        max-height: 680px;
+    }
+
+    .logo {
+        fill-opacity: .7;
+        margin: auto;
+        margin-top: -($spacer * 6);
+        margin-bottom: $spacer;
+        max-width: 31em;
+    }
+
+    .section-title {
+        color: #fff;
+        font-size: $font-size-h1;
+        margin-bottom: ($spacer * 3);
+    }
+}
+
+
+
+.section-benchmarks {
+    text-align: center;
+}
+
+
+
+.section-earlyaccess {
+
+    form {
+        max-width: $screen-sm-min;
+        margin: auto;
+    }
+}

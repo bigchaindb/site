@@ -3,6 +3,8 @@
 //=include ../../../node_modules/jquery/dist/jquery.js
 
 //=include bigchain/analytics.js
+//=include bigchain/forms.js
+//=include bigchain/smoothscroll.js
 
 jQuery(function($) {
 
@@ -10,5 +12,7 @@ jQuery(function($) {
     // init modules
     //
     GoogleAnalytics.init();
+    Forms.init();
+    SmoothScroll.init();
 
 });

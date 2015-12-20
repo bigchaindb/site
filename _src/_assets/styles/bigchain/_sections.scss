@@ -1,20 +1,29 @@
 
 .section {
-    padding-top: ($line-height-computed * 2);
-    padding-bottom: ($line-height-computed * 2);
+    padding-top: ($spacer * 2);
+    padding-bottom: ($spacer * 2);
+    min-height: 420px;
 
     // use this so animated elements coming in from outside of screen
     // don't affect layout
     overflow: hidden;
 
+    // vertically center everything
+    display: flex;
+    align-items: center;
+
+    .row { flex: 1 }
+
     @media ($screen-sm) {
-        padding-top: ($line-height-computed * 3);
-        padding-bottom: ($line-height-computed * 3);
+        padding-top: ($spacer * 3);
+        padding-bottom: ($spacer * 3);
     }
 }
 
 .section-title,
 .section-description {
+    text-align: center;
+    
     @media ($screen-sm) {
         max-width: 100%;
         margin-left: auto;
@@ -25,7 +34,7 @@
 .section-title {
     font-size: $font-size-h3;
     margin-top: 0;
-    margin-bottom: $line-height-computed;
+    margin-bottom: $spacer;
 
     @media ($screen-sm) {
         font-size: $font-size-h2;
@@ -37,12 +46,12 @@
     margin-bottom: 0;
 
     + .section-description {
-        margin-top: $line-height-computed;
+        margin-top: $spacer;
     }
 }
 
 .section-actions {
-    margin-top: $line-height-computed;
+    margin-top: $spacer;
 
     .btn {
         margin-left: 5px;

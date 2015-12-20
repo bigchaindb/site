@@ -4,13 +4,19 @@ layout: base
 front_page: true
 ---
 
-<section class="section">
+<header class="section hero">
     <div class="row">
-        <svg class="logo logo--blue logo--full" aria-labelledby="title">
+        <svg class="logo logo--black logo--full" aria-labelledby="title">
             <title>Logo</title>
             <use xlink:href="/assets/img/sprite.svg#logo"></use>
         </svg>
-        <h1 class="section-title">Bigchain is coming</h1>
+        <h1 class="section-title">Bigchain is coming.</h1>
+        <a href="#earlyaccess" class="btn btn-secondary-outline">Get Early Access</a>
+    </div>
+</header>
+
+<section class="section section-benchmarks background--blue">
+    <div class="row">
         <div class="section-description">
             <div class="grid grid--gutters">
                 <p class="grid__col">100,000 transactions per second and climbing</p>
@@ -21,16 +27,34 @@ front_page: true
     </div>
 </section>
 
-<section class="section background--black">
+<section class="section">
     <div class="row">
         <h1 class="section-title">Whitepaper</h1>
         <p class="section-description">Coming soon</p>
     </div>
 </section>
 
-<section class="section background--blue">
+<section id="earlyaccess" class="section section-earlyaccess background--black">
     <div class="row">
         <h1 class="section-title">Early Access</h1>
         <p class="section-description">For early access and inquiries, enter your contact information below</p>
+
+        <form action="" id="form-earlyaccess" class="js-parsley">
+            <p class="form-group">
+                <input class="form-control" type="text" id="name" name="name">
+                <label class="form-label" for="name">Your Name</label>
+            </p>
+            <p class="form-group">
+                <input class="form-control" type="email" id="email" name="email">
+                <label class="form-label" for="email">Your Email</label>
+            </p>
+            <p class="form-group">
+                <textarea class="form-control" id="comment" name="comment" rows="1"></textarea>
+                <label class="form-label" for="comment">Your Comment (optional)</label>
+            </p>
+            <p class="form-group">
+                <input class="btn btn-secondary" type="submit" value="Send">
+            </p>
+        </form>
     </div>
 </section>
