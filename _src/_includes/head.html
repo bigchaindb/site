@@ -1,0 +1,67 @@
+<head>
+    <meta charset="utf-8">
+
+    <!-- Dynamic meta title -->
+    <title>
+    {% if paginator.previous_page %}
+        Page {{ paginator.page }} &#124; {{ site.name }}
+    {% elsif page.title %}
+        {{ page.title }} &#124; {{ site.name }}
+    {% else %}
+        {{ site.name }} &#124; {{ site.description }}
+    {% endif %}
+    </title>
+
+    <!-- Dynamic meta description -->
+    {% if page.description %}
+        <meta name="description" content="{{ page.description }}">
+    {% elsif page.front_page %}
+        <meta name="description" content="{{ site.description }}">
+    {% else %}
+        <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
+    {% endif %}
+
+    <!-- Mobile meta stuff -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cleartype" content="on">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/bigchain.min.css">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+
+    <!-- Apple  -->
+    <meta name="apple-mobile-web-app-title" content="{{ site.name }}">
+
+    <!-- Touch Icons  -->
+    <link rel="apple-touch-icon-precomposed" href="/assets/img/apple-touch-icon-precomposed-120x120.png" sizes="120x120">
+    <link rel="apple-touch-icon-precomposed" href="/assets/img/apple-touch-icon-precomposed-152x152.png" sizes="152x152">
+    <link rel="apple-touch-icon-precomposed" href="/assets/img/apple-touch-icon-precomposed-180x180.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/img/touch-icon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/assets/img/favicon-96x96.png" sizes="96x96">
+    <link rel="mask-icon" href="/assets/img/favicon-mask.svg" color="#003C69">
+
+    <!-- Win 8/8.1  -->
+    <meta name="msapplication-TileImage" content="{{ site.url }}/assets/img/TileImage-144x144.png"/>
+    <meta name="msapplication-TileColor" content="#003C69"/>
+
+    <!-- Android Lollipop theme color -->
+    <meta name="theme-color" content="#003C69">
+
+    <!-- OpenGraph -->
+    {% include opengraph.html %}
+
+    <!-- Twitter Cards -->
+    {% include twittercards.html %}
+
+    <!-- Prevent search indexing for some pages -->
+    {% if page.sitemap == false %}
+    <meta name="robots" content="noindex">
+    {% endif %}
+
+</head>

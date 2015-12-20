@@ -11,23 +11,38 @@ $brand-main-blue:         #003C69;
 $brand-main-black:        #000000;
 $brand-main-white:        #FFFFFF;
 
+$gray-dark:               #373a3c !default;
+$gray:                    #55595c !default;
+$gray-light:              #818a91 !default;
+$gray-lighter:            #eceeef !default;
+$gray-lightest:           #f7f7f9 !default;
+
+$brand-primary:           $brand-main-blue !default;
+$brand-success:           #5cb85c !default;
+$brand-info:              #5bc0de !default;
+$brand-warning:           #f0ad4e !default;
+$brand-danger:            #d9534f !default;
+
 
 //
 // Typography
 //
-$font-family-fira:        'fira-sans-light', sans-serif !default;
+$font-family-fira:        'Fira Sans', sans-serif !default;
 $font-family-avenir:      'Avenir', 'Helvetica Neue', 'Arial', sans-serif !default;
+$font-family-monospace:    Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:         $font-family-avenir !default;
 
 $font-weight-light:         300 !default;
 $font-weight-normal:        400 !default;
 $font-weight-bold:          600 !default;
 $font-weight-base:          $font-weight-light !default;
-$font-family-base:          $font-family-avenir !default;
 
-$font-size-base:            16px !default;
-$font-size-large:           ceil(($font-size-base * 1.15)) !default;
-$font-size-small:           ceil(($font-size-base * 0.85)) !default;
-$font-size-mini:            ceil(($font-size-base * 0.65)) !default;
+$font-size-root:            16px !default;
+
+$font-size-base:            1rem !default;
+$font-size-large:           ceil(($font-size-base * 1.25)) !default;
+$font-size-small:           ceil(($font-size-base * 0.875)) !default;
+$font-size-mini:            ceil(($font-size-base * 0.75)) !default;
 
 $font-size-h1:              floor(($font-size-base * 2.6)) !default;
 $font-size-h2:              floor(($font-size-base * 2.25)) !default;
@@ -40,7 +55,7 @@ $line-height-base:          1.4 !default;
 $line-height-computed:      floor(($font-size-base * $line-height-base)) !default;
 
 $headings-font-family:      $font-family-fira !default;
-$headings-font-weight:      $font-weight-normal !default;
+$headings-font-weight:      $font-weight-light !default;
 $headings-line-height:      1.2 !default;
 $headings-color:            $brand-main-blue !default;
 
@@ -53,3 +68,21 @@ $text-color:                $brand-main-black !default;
 
 $link-color:                $brand-main-blue !default;
 $link-hover-color:          darken($link-color, 15%) !default;
+
+
+//
+// Grid
+//
+$gutter-space:              4% !default;
+
+
+//
+// Responsive breakpoints
+//
+$screen-sm-min:             30em !default;
+$screen-md-min:             40.625em !default;
+$screen-lg-min:             87.500em !default;
+
+$screen-sm:                 'min-width: #{$screen-sm-min}';
+$screen-md:                 'min-width: #{$screen-md-min}';
+$screen-lg:                 'min-width: #{$screen-lg-min}';

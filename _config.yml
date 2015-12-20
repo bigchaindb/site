@@ -1,0 +1,37 @@
+
+
+# The Basics
+# --------------------
+name:                   Bigchain
+description:
+url:                    http://www.bigchain.io
+
+email:
+    contact:            contact@bigchain.io
+
+twitter:                bigchain
+facebook:               bigchain
+
+
+# Track all the things
+# --------------------
+analyticsID:
+
+
+# Urls
+# --------------------
+permalink:              /:title/
+
+
+# Content Parsing
+# --------------------
+markdown:               redcarpet
+
+redcarpet:
+    extensions:         ['autolink', 'smart', 'hard_wrap', 'with_toc_data']
+
+
+# Generator
+# --------------------
+source:                 ./_src
+destination:            ./_dist

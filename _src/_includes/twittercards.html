@@ -1,0 +1,25 @@
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@{{ site.twitter }}">
+<meta name="twitter:creator" content="@{{ site.twitter }}">
+
+{% if page.title %}
+    <meta name="twitter:title" content="{{ page.title }} &#124; {{ site.name }}">
+{% else %}
+    <meta name="twitter:title" content="{{ site.name }} &#124; {{ site.description }}">
+{% endif %}
+
+{% if page.url %}
+    <meta name="twitter:url" content="{{ site.url}}{{ page.url | replace:'index.html','' }}">
+{% endif %}
+
+{% if page.description %}
+    <meta name="twitter:description" content="{{ page.description }}">
+{% else %}
+    <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
+{% endif %}
+
+{% if page.image %}
+    <meta name="twitter:image:src" content="{{ site.url }}/assets/img/{{ page.image }}">
+{% else %}
+    <meta name="twitter:image:src" content="{{ site.url }}/assets/img/share-image.png">
+{% endif %}

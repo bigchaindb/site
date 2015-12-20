@@ -1,0 +1,246 @@
+//
+// Typography
+// ---
+// bigchain.io
+//
+
+// Body reset
+html {
+    font-size: $font-size-root;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-base;
+    line-height: $line-height-base;
+    color: $text-color;
+    background-color: $body-bg;
+
+    text-rendering: optimizeLegibility;
+    // Controversial! But prevents text flickering in
+    // Safari/Firefox when animations are running
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: 'liga', 'kern';
+
+    // remove old style numerals
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 0, "dlig" 1;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+//
+// Links
+//
+a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: underline;
+    }
+
+    &:active {}
+}
+
+
+//
+// Headings
+//
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    color: $headings-color;
+
+    // remove old style numerals
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 0, "dlig" 1;
+}
+
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+    margin-top: ($line-height-computed * 2);
+    margin-bottom: $line-height-computed;
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    color: $gray;
+    margin-top: $line-height-computed;
+    margin-bottom: ($line-height-computed / 2);
+}
+
+h1, .h1 { font-size: $font-size-h1; }
+h2, .h2 { font-size: $font-size-h2; }
+h3, .h3 { font-size: $font-size-h3; }
+h4, .h4 { font-size: $font-size-h4; }
+h5, .h5 { font-size: $font-size-h5; }
+h6, .h6 { font-size: $font-size-h6; }
+
+
+//
+// Body text
+//
+p {
+    margin: 0 0 ($line-height-computed / 2);
+}
+
+
+//
+// Emphasis & misc
+//
+small,
+.small {
+    font-size: floor((100% * $font-size-small / $font-size-base));
+    font-weight: $font-weight-normal;
+}
+
+.mini {
+    font-size: floor((100% * $font-size-mini / $font-size-base));
+    font-weight: $font-weight-normal;
+}
+
+.large {
+    font-size: floor((100% * $font-size-large / $font-size-base));
+}
+
+strong,
+.strong,
+.bold {
+    font-weight: $font-weight-normal;
+}
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+//
+// Lists
+//
+// Unordered and Ordered lists
+ul,
+ol {
+    margin-top: $line-height-computed;
+    margin-bottom: $line-height-computed;
+    padding-left: ($line-height-computed * 2);
+
+    li {
+        margin-bottom: ($line-height-computed / 2);
+        padding-left: ($line-height-computed / 2);
+    }
+    ul,
+    ol {
+        margin-bottom: 0;
+    }
+}
+
+ul {
+    li { list-style-type: circle; }
+}
+
+// List options
+@mixin list-unstyled {
+    padding-left: 0;
+    margin: 0;
+
+    li {
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+}
+
+.list-unstyled {
+    @include list-unstyled;
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+    @include list-unstyled;
+    margin-left: -5px;
+
+    > li {
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+}
+
+
+//
+// Blockquotes
+//
+blockquote {
+    border-left: 3px solid $gray-lighter;
+    margin-left: 0;
+    margin-top: $line-height-computed;
+    margin-bottom: $line-height-computed;
+    padding: ($line-height-computed/2) $line-height-computed;
+    color: $gray;
+    font-style: italic;
+
+    p,
+    ul,
+    ol {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+cite {
+    @extend .bold, .small;
+    font-style: italic;
+}
+
+// Addresses
+address {
+    margin-bottom: $line-height-computed;
+    font-style: normal;
+    line-height: $line-height-base;
+}
+
+
+//
+// Trademark symbol
+//
+.trademark {
+    top: -.45em;
+    left: -.15em;
+    margin-right: -.2em; // reduce kerning
+    opacity: .6;
+    font-family: inherit;
+    font-size: 60%;
+}
+
+
+//
+// Text selection
+//
+::-moz-selection { color: #fff; background: $brand-main-blue; }
+::selection      { color: #fff; background: $brand-main-blue; }

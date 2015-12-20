@@ -1,0 +1,74 @@
+
+.section {
+    padding-top: ($line-height-computed * 2);
+    padding-bottom: ($line-height-computed * 2);
+
+    // use this so animated elements coming in from outside of screen
+    // don't affect layout
+    overflow: hidden;
+
+    @media ($screen-sm) {
+        padding-top: ($line-height-computed * 3);
+        padding-bottom: ($line-height-computed * 3);
+    }
+}
+
+.section-title,
+.section-description {
+    @media ($screen-sm) {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.section-title {
+    font-size: $font-size-h3;
+    margin-top: 0;
+    margin-bottom: $line-height-computed;
+
+    @media ($screen-sm) {
+        font-size: $font-size-h2;
+    }
+}
+
+.section-description {
+    color: $text-color;
+    margin-bottom: 0;
+
+    + .section-description {
+        margin-top: $line-height-computed;
+    }
+}
+
+.section-actions {
+    margin-top: $line-height-computed;
+
+    .btn {
+        margin-left: 5px;
+        margin-right: 5px;
+        min-width: 200px;
+    }
+}
+
+
+//
+// Section backgrounds
+//
+.background--blue {
+    background: $brand-main-blue;
+
+    * { color: #fff }
+}
+
+.background--black {
+    background: $brand-main-black;
+
+    * { color: #fff }
+}
+
+.background--gray-dark {
+    background: $gray-dark;
+
+    * { color: #fff }
+}
