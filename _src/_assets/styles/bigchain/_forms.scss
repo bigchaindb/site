@@ -75,7 +75,7 @@
     &:invalid:not(.is-empty) ~ .form-label,
     &.parsley-error ~ .form-label,
     &.parsley-success ~ .form-label {
-        transform: translate3d(0, -1.5rem, 0) scale(.75);
+        transform: translate3d(0, -1rem, 0) scale(.75);
         transform-origin: left top;
     }
 }
@@ -129,9 +129,10 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    font-size: $font-size-sm;
-    color: $brand-danger;
-    z-index: -1;
+    font-size: $font-size-xs;
+
+    &,
+    li { color: $brand-danger; }
 
     &.filled {
         animation: errors-list-show .2s $timing-bounce forwards;
