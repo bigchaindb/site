@@ -6,6 +6,8 @@
 //=include bigchain/forms.js
 //=include bigchain/smoothscroll.js
 
+//=include bigchain/form-earlyaccess.js
+
 jQuery(function($) {
 
     //
@@ -14,6 +16,7 @@ jQuery(function($) {
     GoogleAnalytics.init();
     Forms.init();
     SmoothScroll.init();
+    FormEarlyAccess.init();
 
     $('.hero .logo').on('animationend webkitAnimationEnd oAnimationEnd',
         function(e) {

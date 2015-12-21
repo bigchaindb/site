@@ -56,13 +56,12 @@ front_page: true
     <div class="row">
         <header class="section-header">
             <h1 class="section-title">Whitepaper</h1>
+            <p class="section-description">Coming soon</p>
         </header>
-        <p class="section-description">
-            <svg class="icon">
-                <use xlink:href="/assets/img/sprite.svg#icon-documents"></use>
-            </svg>
-            Coming soon
-        </p>
+        
+        <svg class="icon">
+            <use xlink:href="/assets/img/sprite.svg#icon-documents"></use>
+        </svg>
     </div>
 </section>
 
@@ -70,10 +69,10 @@ front_page: true
     <div class="row">
         <header class="section-header">
             <h1 class="section-title">Early Access</h1>
+            <p class="section-description">For early access and inquiries, enter your contact information below</p>
         </header>
-        <p class="section-description">For early access and inquiries, enter your contact information below</p>
 
-        <form action="" id="form-earlyaccess" class="js-parsley">
+        <form id="form-earlyaccess" class="js-parsley" action="" method="POST">
             <p class="form-group">
                 <input class="form-control" type="text" id="name" name="name" required>
                 <label class="form-label" for="name">Your Name</label>
@@ -89,6 +88,25 @@ front_page: true
             <p class="form-group">
                 <input class="btn btn-primary" type="submit" value="Send">
             </p>
+
+            <div class="alert alert-success animation-slide-in-from-bottom hide">
+                <svg class="alert__icon icon icon-success">
+                    <use xlink:href="/assets/img/sprite.svg#icon-success"></use>
+                </svg>
+                <p>
+                    <strong class="alert__title">Great to hear you’re interested!</strong>
+                    We’ll get in touch soon to discuss how we can work together.
+                </p>
+            </div>
+            <div class="alert alert-danger hide">
+                <svg class="alert__icon icon icon-fail">
+                    <use xlink:href="/assets/img/sprite.svg#icon-fail"></use>
+                </svg>
+                <p>
+                    <strong class="alert__title">Ops, there was an error</strong>
+                    Would you mind trying again?
+                </p>
+            </div>
         </form>
     </div>
 </section>

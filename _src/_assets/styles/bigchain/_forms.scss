@@ -75,7 +75,7 @@
     &:invalid:not(.is-empty) ~ .form-label,
     &.parsley-error ~ .form-label,
     &.parsley-success ~ .form-label {
-        transform: translate3d(0, -1rem, 0) scale(.75);
+        transform: translate3d(0, -($spacer), 0) scale(.75);
         transform-origin: left top;
     }
 }
