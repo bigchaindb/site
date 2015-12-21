@@ -193,7 +193,7 @@ gulp.task('svg', function() {
 gulp.task('images', function() {
     return gulp.src(SRC + '_assets/images/**/*')
         .pipe($.if(isProduction, $.imagemin({
-            optimizationLevel: 5, // png
+            optimizationLevel: 3, // png
             progressive: true, // jpg
             interlaced: true, // gif
             multipass: true, // svg
