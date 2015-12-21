@@ -1,0 +1,57 @@
+//
+// Alerts
+// ---
+// bigchain.io
+//
+
+// Base
+.alert {
+    @extend .small;
+    padding: $alert-padding;
+    margin-bottom: $spacer;
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    text-align: left;
+
+    // Improve alignment and spacing of inner content
+    > p + p {
+        margin-top: 5px;
+    }
+
+    > p:last-child { margin-bottom: 0 }
+}
+
+.alert__icon {
+    display: block;
+    width: 100%;
+    height: 2rem;
+    stroke-width: 3;
+    margin: 0 auto $spacer auto;
+    border-bottom: 1px solid transparent;
+    padding-bottom: $spacer;
+}
+
+.alert__title {
+
+}
+
+.alert__link {
+
+}
+
+
+//
+// Alternate styles
+//
+.alert-success {
+    @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
+}
+.alert-info {
+    @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
+}
+.alert-warning {
+    @include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text);
+}
+.alert-danger {
+    @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+}

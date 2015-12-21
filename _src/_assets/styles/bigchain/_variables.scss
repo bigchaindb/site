@@ -23,10 +23,10 @@ $gray-lighter:            #eceeef !default;
 $gray-lightest:           #f7f7f9 !default;
 
 $brand-primary:           $brand-main-blue !default;
-$brand-success:           #5cb85c !default;
-$brand-info:              #5bc0de !default;
-$brand-warning:           #f0ad4e !default;
-$brand-danger:            #d9534f !default;
+$brand-success:           #388250 !default;
+$brand-info:              #3E91CE !default;
+$brand-warning:           #8E8E24 !default;
+$brand-danger:            #8F3B39 !default;
 
 
 //
@@ -110,9 +110,11 @@ $component-active-bg:    $brand-primary !default;
 //
 // Buttons
 //
+$btn-font-family:                $font-family-avenir;
+$btn-font-weight:                $font-weight-normal !default;
+
 $btn-padding-x:                  1.5rem !default;
 $btn-padding-y:                  .375rem !default;
-$btn-font-weight:                $font-weight-normal !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
@@ -154,6 +156,9 @@ $btn-border-radius-sm:           $border-radius-sm !default;
 //
 // Forms
 //
+$input-font:                     $font-family-avenir !default;
+$input-font-weight:              $font-weight-normal !default;
+
 $input-padding-x:                .5rem !default;
 $input-padding-y:                0 !default;
 
@@ -168,5 +173,45 @@ $input-box-shadow-focus:         rgba(102,175,233,.6) !default;
 
 $input-color-placeholder:        #999 !default;
 
-$input-font:                     $font-family-avenir !default;
-$input-font-weight:              $font-weight-normal !default;
+
+//
+// Form states and alerts
+//
+$state-success-text:             $brand-success !default;
+$state-success-bg:               lighten($brand-success, 40%) !default;
+$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
+
+$state-info-text:                $brand-info !default;
+$state-info-bg:                  lighten($brand-info, 30%) !default;
+$state-info-border:              darken(adjust-hue($state-info-bg, -10), 5%) !default;
+
+$state-warning-text:             $brand-warning !default;
+$state-warning-bg:               lighten($brand-warning, 40%) !default;
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+
+$state-danger-text:              $brand-danger !default;
+$state-danger-bg:                lighten($brand-danger, 40%) !default;
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+
+
+//
+// Alerts
+//
+$alert-padding:                 $spacer !default;
+$alert-border-radius:           $border-radius !default;
+
+$alert-success-bg:              $state-success-bg !default;
+$alert-success-text:            $state-success-text !default;
+$alert-success-border:          $state-success-border !default;
+
+$alert-info-bg:                 $state-info-bg !default;
+$alert-info-text:               $state-info-text !default;
+$alert-info-border:             $state-info-border !default;
+
+$alert-warning-bg:              $state-warning-bg !default;
+$alert-warning-text:            $state-warning-text !default;
+$alert-warning-border:          $state-warning-border !default;
+
+$alert-danger-bg:               $state-danger-bg !default;
+$alert-danger-text:             $state-danger-text !default;
+$alert-danger-border:           $state-danger-border !default;

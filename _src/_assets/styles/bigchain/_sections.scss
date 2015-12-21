@@ -81,19 +81,24 @@
     background: $brand-main-blue; // fallback
     background: linear-gradient(to bottom right, $brand-main-blue 0%, lighten($brand-main-blue, 10%) 100%);
 
-    * { color: #fff }
+    .section-title,
+    .section-description { color: #fff }
 }
 
 .background--dark {
     background: $brand-main-blue-dark; // fallback
     background: linear-gradient(to bottom right, $brand-main-blue-dark 0%, lighten($brand-main-blue-dark, 10%) 100%);
 
-    * { color: #fff }
+    .section-title,
+    .section-description { color: #fff }
 }
 
 .background--gray {
     background: $brand-main-gray; // fallback
     background: linear-gradient(to bottom right, $brand-main-gray 0%, lighten($brand-main-gray, 10%) 100%);
 
-    * { color: #fff }
+    .section-title,
+    .section-description,
+    .form-control,
+    .form-label { color: #fff }
 }

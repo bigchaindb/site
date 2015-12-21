@@ -97,7 +97,7 @@ h6, .h6 { font-size: $font-size-h6; }
 // Body text
 //
 p {
-    margin: 0 0 ($spacer / 2);
+    margin: 0 0 $spacer;
 }
 
 
@@ -122,7 +122,7 @@ small,
 strong,
 .strong,
 .bold {
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-bold;
 }
 
 // Alignment
