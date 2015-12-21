@@ -32,7 +32,8 @@
     }
 
     .logo {
-        fill-opacity: .6;
+        fill: #fff;
+        fill-opacity: .8;
         margin: auto;
         max-width: 31em;
 
@@ -49,10 +50,10 @@
         &:after { display: none }
     }
 
-    .btn-link {
+    .btn {
         color: #fff;
         margin-top: ($spacer * 4);
-        opacity: .7;
+        opacity: .8;
 
         &:hover,
         &:focus { opacity: 1; }
@@ -67,23 +68,10 @@
         }
     }
 
-    .btn {
-        &:hover,
-        &:focus,
-        &:active {
-            text-shadow: none;
-        }
-    }
-
-    .btn-link {
-
-    }
-
     // intro animation
     .logo,
     .section-title,
-    .btn,
-    .hero__comingsoon {
+    .btn {
         @extend .animation-slide-in-from-bottom;
         animation-duration: 1s;
         animation-fill-mode: backwards;
@@ -94,20 +82,16 @@
     }
 
     .section-title,
-    .btn,
-    .hero__comingsoon {
+    .btn {
         @extend .animation-slide-in-from-bottom;
         animation-play-state: paused;
     }
 
-    .hero__comingsoon { animation-delay: .2s; }
-    .btn              { animation-delay: .4s; }
-    .btn-link         { animation-delay: .6s; }
+    .btn { animation-delay: .2s; }
 
     &.is-ready {
         .section-title,
-        .btn,
-        .hero__comingsoon {
+        .btn {
             animation-play-state: running;
         }
     }
@@ -132,22 +116,21 @@
     text-align: center;
     border-bottom: 1px solid lighten($brand-main-gray, 40%);
 
+    figure {
+        display: block;
+        margin-bottom: ($spacer * 3);
+        margin-top: -($spacer * 3);
+    }
+
     .icon {
         display: block;
         margin: auto;
         margin-bottom: $spacer;
     }
-}
 
-
-.section-whitepaper {
-    .icon {
-        stroke: $brand-main-gray;
-        stroke-dasharray: 4,4;
-        opacity: .3;
+    .comingsoon {
         display: block;
-        margin: auto;
-        margin-bottom: $spacer;
+        color: $gray-light;
     }
 }
 
