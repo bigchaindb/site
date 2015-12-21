@@ -9,7 +9,7 @@ var FormEarlyAccess = (function(w, d, $) {
         form:       $('#form-earlyaccess'),
         formBtn:    $('#form-earlyaccess').find('.btn'),
         formURL:    $('#form-earlyaccess').attr('action'),
-        formMethod: $('#form-earlyaccess').attr('metthod')
+        formMethod: $('#form-earlyaccess').attr('method')
     };
 
     _private = {
@@ -35,11 +35,15 @@ var FormEarlyAccess = (function(w, d, $) {
                             _config.form.find('.alert-success').removeClass('hide');
                             _config.formBtn.removeClass('disabled');
 
-                            //GoogleAnalytics.gaEventEarlyAccess();
+                            // send GA event
+                            GoogleAnalytics.gaEventEarlyAccessSuccess();
                         },
                         error: function(err) {
                             _config.form.find('.alert-danger').removeClass('hide');
                             _config.formBtn.removeClass('disabled');
+
+                            // send GA event
+                            GoogleAnalytics.gaEventEarlyAccessError();
                         }
                     });
                 }

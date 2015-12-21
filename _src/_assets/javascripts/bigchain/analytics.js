@@ -89,6 +89,12 @@ var GoogleAnalytics = (function(w,d) {
             _private.gaBreakpoints();
             _private.gaViewport();
             _private.gaPixelDensity();
+        },
+        gaEventEarlyAccessSuccess: function() {
+            ga('send', 'event', 'signup', 'early_access_form', 'success', true);
+        },
+        gaEventEarlyAccessError: function() {
+            ga('send', 'event', 'signup', 'early_access_form', 'error', true);
         }
     };
 
