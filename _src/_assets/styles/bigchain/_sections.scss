@@ -40,23 +40,28 @@
     margin-top: 0;
     margin-bottom: ($spacer * 2);
 
+    @media ($screen-sm) {
+        font-size: $font-size-h2;
+    }
+
+    // the bottom line
     &:after {
         content: "";
         height: 2px;
         width: 5rem;
         display: block;
         margin: ($spacer * 2) auto 0 auto;
-        background: lighten($brand-main-gray, 30%);
-    }
-
-    @media ($screen-sm) {
-        font-size: $font-size-h2;
+        background: $gray-lighter;
     }
 }
 
 .section-description {
-    color: $text-color;
+    color: $headings-color;
     margin-bottom: 0;
+
+    @media ($screen-sm) {
+        font-size: $font-size-lg;
+    }
 
     + .section-description {
         margin-top: $spacer;

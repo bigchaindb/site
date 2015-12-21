@@ -16,11 +16,11 @@ $brand-main-gray:         #70859B !default;
 $brand-main-brown:        #B56D00 !default;
 $brand-main-light:        #FFFFFF !default;
 
-$gray-dark:               #373a3c !default;
+$gray-dark:               darken($brand-main-gray, 20%) !default;
 $gray:                    $brand-main-gray !default;
-$gray-light:              #818a91 !default;
-$gray-lighter:            #eceeef !default;
-$gray-lightest:           #f7f7f9 !default;
+$gray-light:              lighten($brand-main-gray, 20%) !default;
+$gray-lighter:            lighten($brand-main-gray, 30%) !default;
+$gray-lightest:           lighten($brand-main-gray, 40%) !default;
 
 $brand-primary:           $brand-main-blue !default;
 $brand-success:           #388250 !default;
@@ -68,7 +68,7 @@ $headings-color:            $brand-main-gray !default;
 // Scaffolding
 //
 $body-bg:                   #fff !default;
-$text-color:                $brand-main-blue-dark !default;
+$text-color:                $gray-dark !default;
 
 $link-color:                $brand-main-brown !default;
 $link-hover-color:          darken($link-color, 15%) !default;
@@ -166,7 +166,7 @@ $input-bg:                       rgba(255,255,255,.1) !default;
 $input-bg-disabled:              $gray-lighter !default;
 
 $input-color:                    $gray !default;
-$input-border-color:             #ccc !default;
+$input-border-color:             $gray-lighter !default;
 
 $input-border-focus:             #66afe9 !default;
 $input-box-shadow-focus:         rgba(102,175,233,.6) !default;

@@ -5,6 +5,7 @@
 //
 
 .btn {
+    @extend .transition;
     display: inline-block;
     font-family: $btn-font-family;
     font-weight: $btn-font-weight;
@@ -15,8 +16,8 @@
     cursor: pointer;
     user-select: none;
     border: 1px solid transparent;
-    @include button-size($btn-padding-y, $btn-padding-x, $font-size-sm, $line-height, $btn-border-radius);
-    transition: all .2s ease-in-out;
+    @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height, $btn-border-radius);
+    min-width: 10rem;
 
     &,
     &:active,
