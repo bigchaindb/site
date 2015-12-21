@@ -105,6 +105,7 @@ gulp.task('jekyll', function(cb) {
     var spawn = require('child_process').spawn;
 
     if (isProduction) {
+        process.env.JEKYLL_ENV = 'production';
         var jekyll = spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit' });
     } else {
         var jekyll = spawn('bundle', ['exec', 'jekyll', 'build', '--incremental', '--drafts', '--future'], { stdio: 'inherit' });
