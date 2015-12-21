@@ -8,7 +8,8 @@ var FormEarlyAccess = (function(w, d, $) {
     _config = {
         form:       $('#form-earlyaccess'),
         formBtn:    $('#form-earlyaccess').find('.btn'),
-        formURL:    $('#form-earlyaccess').attr('action')
+        formURL:    $('#form-earlyaccess').attr('action'),
+        formMethod: $('#form-earlyaccess').attr('method')
     };
 
     _private = {
@@ -18,17 +19,19 @@ var FormEarlyAccess = (function(w, d, $) {
 
                 if ( $(this).parsley().isValid() ) {
 
-                    var data = {};
-                    var dataArray = _config.form.serializeArray();
-                    $.each(dataArray, function (index, item) {
-                        data[item.name] = item.value;
-                    });
+                    // var data = {};
+                    // var dataArray = _config.form.serializeArray();
+                    // $.each(dataArray, function (index, item) {
+                    //     data[item.name] = item.value;
+                    // });
 
                     $.ajax({
-                        url: _config.formURL.replace('/post?', '/post-json?').concat('&c=?'),
-                        data: data,
-                        dataType: 'jsonp',
-                        contentType: 'application/json; charset=utf-8',
+                        url: _config.formURL,
+                        type: _config.formMethod,
+                        accept: {
+                            javascript: 'application/javascript'
+                        },
+                        data: _config.form.serialize(),
                         crossDomain: true,
                         beforeSend: function() {
                             _config.formBtn
@@ -45,7 +48,9 @@ var FormEarlyAccess = (function(w, d, $) {
                         },
                         error: function(err) {
                             _config.form.find('.alert-danger').removeClass('hide');
-                            _config.formBtn.removeClass('disabled');
+                            _config.formBtn
+                                .removeClass('disabled')
+                                .attr('value', 'Send');
 
                             // send GA event
                             GoogleAnalytics.gaEventEarlyAccessError();

@@ -61,41 +61,6 @@ front_page: true
             <p class="section-description">For early access and inquiries, enter your contact information below</p>
         </header>
 
-        <form id="form-earlyaccess" class="js-parsley" action="http://mkretschmann.us4.list-manage1.com/subscribe/post?u=96b695f2a4b06978eaf714c27&id=3fbe27c491" method="POST">
-            <p class="form-group">
-                <input class="form-control" type="text" id="name" name="name" required>
-                <label class="form-label" for="name">Your Name</label>
-            </p>
-            <p class="form-group">
-                <input class="form-control" type="email" id="EMAIL" name="EMAIL" required>
-                <label class="form-label" for="EMAIL">Your Email</label>
-            </p>
-            <p class="form-group">
-                <textarea class="form-control" id="comment" name="comment" rows="1"></textarea>
-                <label class="form-label" for="comment">Your Comment (optional)</label>
-            </p>
-            <p class="form-group">
-                <input class="btn btn-primary" type="submit" value="Send">
-            </p>
-
-            <div class="alert alert-success animation-slide-in-from-bottom hide">
-                <svg class="alert__icon icon icon-success">
-                    <use xlink:href="/assets/img/sprite.svg#icon-success"></use>
-                </svg>
-                <p>
-                    <strong class="alert__title">Great to hear you’re interested!</strong>
-                    We’ll get in touch soon to discuss how we can work together.
-                </p>
-            </div>
-            <div class="alert alert-danger hide">
-                <svg class="alert__icon icon icon-fail">
-                    <use xlink:href="/assets/img/sprite.svg#icon-fail"></use>
-                </svg>
-                <p>
-                    <strong class="alert__title">Ops, there was an error</strong>
-                    Would you mind trying again?
-                </p>
-            </div>
-        </form>
+        {% include/form-earlyaccess.html %}
     </div>
 </section>
