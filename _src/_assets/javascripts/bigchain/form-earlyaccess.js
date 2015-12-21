@@ -8,8 +8,7 @@ var FormEarlyAccess = (function(w, d, $) {
     _config = {
         form:       $('#form-earlyaccess'),
         formBtn:    $('#form-earlyaccess').find('.btn'),
-        formURL:    $('#form-earlyaccess').attr('action'),
-        formMethod: $('#form-earlyaccess').attr('method')
+        formURL:    $('#form-earlyaccess').attr('action')
     };
 
     _private = {
@@ -18,13 +17,19 @@ var FormEarlyAccess = (function(w, d, $) {
                 e.preventDefault();
 
                 if ( $(this).parsley().isValid() ) {
+
+                    var data = {};
+                    var dataArray = _config.form.serializeArray();
+                    $.each(dataArray, function (index, item) {
+                        data[item.name] = item.value;
+                    });
+
                     $.ajax({
-                        url: _config.formURL,
-                        method: _config.formMethod,
-                        data: $(this).serialize(),
-                        // dataType: 'json',
-                        // contentType: 'application/json',
-                        // crossDomain: true,
+                        url: _config.formURL.replace('/post?', '/post-json?').concat('&c=?'),
+                        data: data,
+                        dataType: 'jsonp',
+                        contentType: 'application/json; charset=utf-8',
+                        crossDomain: true,
                         beforeSend: function() {
                             _config.formBtn
                                 .addClass('disabled')
