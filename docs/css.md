@@ -1,6 +1,15 @@
 CSS
 ------------------
 
+### Font sizes and units
+
+It's `rem` all the way. The base font size is defined as `px`-based variable and set once the `html` root element. All other font sizes and spacing values are set as `rem` units, being nicely relative to the root font size.
+
+```css
+html { font-size: 18px; }
+p    { font-size: 1rem; }
+```
+
 ### Vendor Prefixes
 
 Just write the official, unprefixed syntax for all CSS 3 features, no need to write the vendor prefixed versions.
