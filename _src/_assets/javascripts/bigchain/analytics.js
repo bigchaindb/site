@@ -31,10 +31,10 @@ var GoogleAnalytics = (function(w,d) {
             var timeout;
 
             var breakpoints = {
-                xs: '(max-width: 29.9999em)',
-                sm: '(min-width: 30em) and (max-width: 40.624em)',
-                md: '(min-width: 40.625em) and (max-width: 87.499em)',
-                lg: '(min-width: 87.500em)'
+                xs: '(max-width: 34.999em)',
+                sm: '(min-width: 35em) and (max-width: 44.999)',
+                md: '(min-width: 45em) and (max-width: 74.999)',
+                lg: '(min-width: 75em)'
             };
 
             Object.keys(breakpoints).forEach(function(breakpoint) {

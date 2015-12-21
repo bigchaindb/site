@@ -36,13 +36,9 @@
 }
 
 .section-title {
-    font-size: $font-size-h3;
+    font-size: $font-size-h2;
     margin-top: 0;
     margin-bottom: ($spacer * 2);
-
-    @media ($screen-sm) {
-        font-size: $font-size-h2;
-    }
 
     // the bottom line
     &:after {
@@ -56,12 +52,9 @@
 }
 
 .section-description {
+    font-size: $font-size-lg;
     color: $headings-color;
     margin-bottom: 0;
-
-    @media ($screen-sm) {
-        font-size: $font-size-lg;
-    }
 
     + .section-description {
         margin-top: $spacer;

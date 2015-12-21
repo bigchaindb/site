@@ -42,7 +42,8 @@ $font-weight-normal:        400 !default;
 $font-weight-bold:          600 !default;
 $font-weight-base:          $font-weight-normal !default;
 
-$font-size-root:            18px !default;
+$font-size-root:            16px !default;
+$font-size-root-lg:         18px !default;
 
 $font-size-base:            1rem !default;
 $font-size-lg:              1.25rem !default;
@@ -75,17 +76,11 @@ $link-hover-color:          darken($link-color, 15%) !default;
 
 
 //
-// Grid
-//
-$gutter-space:              2rem !default;
-
-
-//
 // Responsive breakpoints
 //
-$screen-sm-min:             30em !default;
-$screen-md-min:             40.625em !default;
-$screen-lg-min:             87.500em !default;
+$screen-sm-min:             35em !default;
+$screen-md-min:             45em !default;
+$screen-lg-min:             75em !default;
 
 $screen-sm:                 'min-width: #{$screen-sm-min}';
 $screen-md:                 'min-width: #{$screen-md-min}';
@@ -105,6 +100,12 @@ $border-radius-sm:       .1rem !default;
 
 $component-active-color: #fff !default;
 $component-active-bg:    $brand-primary !default;
+
+
+//
+// Grid
+//
+$gutter-space:              ($spacer * 2) !default;
 
 
 //
