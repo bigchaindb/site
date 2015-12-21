@@ -31,11 +31,6 @@
         z-index: 0;
     }
 
-    .hero__content {
-        position: relative;
-        z-index: 1;
-    }
-
     .logo {
         fill-opacity: .6;
         margin: auto;
@@ -49,14 +44,14 @@
 
     .section-title {
         color: #fff;
-        margin-bottom: ($spacer * 3);
+        margin-bottom: $spacer;
 
         &:after { display: none }
     }
 
     .btn-link {
         color: #fff;
-        margin-top: ($spacer * 3);
+        margin-top: ($spacer * 4);
         opacity: .7;
 
         &:hover,
@@ -80,10 +75,15 @@
         }
     }
 
+    .btn-link {
+
+    }
+
     // intro animation
     .logo,
     .section-title,
-    .btn {
+    .btn,
+    .hero__comingsoon {
         @extend .animation-slide-in-from-bottom;
         animation-duration: 1s;
         animation-fill-mode: backwards;
@@ -94,22 +94,36 @@
     }
 
     .section-title,
-    .btn {
+    .btn,
+    .hero__comingsoon {
         @extend .animation-slide-in-from-bottom;
         animation-play-state: paused;
     }
 
-    .btn      { animation-delay: .2s; }
-    .btn-link { animation-delay: .4s; }
+    .hero__comingsoon { animation-delay: .2s; }
+    .btn              { animation-delay: .4s; }
+    .btn-link         { animation-delay: .6s; }
 
     &.is-ready {
         .section-title,
-        .btn {
+        .btn,
+        .hero__comingsoon {
             animation-play-state: running;
         }
     }
+}
 
+.hero__content {
+    position: relative;
+    z-index: 1;
+}
 
+.hero__comingsoon {
+    text-shadow: none;
+    display: block;
+    color: rgba($brand-main-blue-dark, .9);
+    margin-top: ($spacer * 2);
+    margin-bottom: ($spacer * 2);
 }
 
 
