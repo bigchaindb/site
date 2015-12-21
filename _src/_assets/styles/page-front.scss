@@ -99,7 +99,8 @@
         animation-play-state: paused;
     }
 
-    .btn { animation-delay: .2s; }
+    .btn      { animation-delay: .2s; }
+    .btn-link { animation-delay: .4s; }
 
     &.is-ready {
         .section-title,
