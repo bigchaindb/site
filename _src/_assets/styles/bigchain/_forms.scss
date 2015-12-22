@@ -5,11 +5,13 @@
 //
 
 .form-control {
+    @extend .transition;
     display: block;
     width: 100%;
     appearance: none;
     padding: $input-padding-x $input-padding-y;
     font-family: $input-font;
+    font-weight: $font-weight-bold;
     font-size: $font-size-base;
     line-height: $line-height;
     color: $input-color;
@@ -17,11 +19,10 @@
     border: none;
     border-bottom: 2px solid $input-border-color;
     border-radius: 0;
-    transition: border-color ease-in-out .15s;
 
     &:focus {
         outline: 0;
-        border-color: #fff;
+        border-color: $input-border-focus;
     }
 
     // Placeholder

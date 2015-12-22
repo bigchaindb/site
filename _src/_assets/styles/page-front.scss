@@ -153,4 +153,10 @@
         max-width: $screen-sm-min;
         margin: auto;
     }
+
+    .form-control {
+        &:focus {
+            border-color: #fff;
+        }
+    }
 }

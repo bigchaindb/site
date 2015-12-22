@@ -47,9 +47,35 @@ sitemap: false
 </div>
 
 
-# Typography
+## Logo
 
-## Body Copy
+<svg class="logo logo--sm" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--full" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+```html
+<svg class="logo logo--sm" aria-labelledby="title">
+    <title>Logo Bigchain</title>
+    <use xlink:href="/assets/img/sprite.svg#logo"></use>
+</svg>
+
+<svg class="logo" aria-labelledby="title">
+    <title>Logo Bigchain</title>
+    <use xlink:href="/assets/img/sprite.svg#logo"></use>
+</svg>
+
+<svg class="logo logo--full" aria-labelledby="title">
+    <title>Logo Bigchain</title>
+    <use xlink:href="/assets/img/sprite.svg#logo"></use>
+</svg>
+```
+
+
+## Typography
+
+### Body Copy
 
 Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis [parturient montes](#), nascetur ridiculus mus. Nullam id dolor id nibh **ultricies vehicula**.
 
@@ -121,6 +147,38 @@ Donec *ullamcorper nulla* non metus auctor fringilla. Duis mollis, est non commo
 <a class="btn btn-primary-outline btn-lg">Button</a>
 ```
 
+
+### Forms
+
+<form class="js-parsley" action="#">
+    <div class="form-group">
+        <input class="form-control" type="text" id="name" name="name" required>
+        <label class="form-label" for="name">Your Name</label>
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="email" id="email" name="email">
+        <label class="form-label" for="email">Your Email</label>
+    </div>
+    <div class="form-group">
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </div>
+</form>
+
+```html
+<form class="js-parsley" action="#">
+    <div class="form-group">
+        <input class="form-control" type="text" id="name" name="name" required>
+        <label class="form-label" for="name">Your Name</label>
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="email" id="email" name="email">
+        <label class="form-label" for="email">Your Email</label>
+    </div>
+    <div class="form-group">
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </div>
+</form>
+```
 
 ### Alerts
 

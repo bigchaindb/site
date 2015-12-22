@@ -180,13 +180,11 @@ $input-padding-y:                0 !default;
 $input-bg:                       rgba(255,255,255,.1) !default;
 $input-bg-disabled:              $gray-lighter !default;
 
-$input-color:                    $gray !default;
+$input-color:                    $gray-dark !default;
 $input-border-color:             $gray-lighter !default;
 
-$input-border-focus:             #66afe9 !default;
-$input-box-shadow-focus:         rgba(102,175,233,.6) !default;
-
-$input-color-placeholder:        #999 !default;
+$input-border-focus:             $gray !default;
+$input-color-placeholder:        $gray !default;
 
 
 //

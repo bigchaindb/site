@@ -6,7 +6,7 @@
 
 // default logo
 .logo {
-    fill: $brand-main-blue-dark;
+    fill: $brand-main-blue;
     width: 300px;
     height: 30px;
 }
@@ -22,7 +22,7 @@
 
 .logo--full {
     display: block;
-    width: 99%;
+    width: 100%;
     height: auto;
 }
 
@@ -30,6 +30,6 @@
 //
 // color modifiers
 //
-.logo--blue {
-    fill: $brand-main-blue;
+.logo--dark {
+    fill: $brand-main-blue-dark;
 }
