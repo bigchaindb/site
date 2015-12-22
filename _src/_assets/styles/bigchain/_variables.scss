@@ -7,7 +7,6 @@
 //
 // Colors
 //
-//$brand-main-blue:         #003C69 !default;
 $brand-main-blue:         #275B82 !default;
 $brand-main-blue-dark:    #101A25 !default;
 
@@ -109,6 +108,20 @@ $gutter-space:              ($spacer * 2) !default;
 
 
 //
+// Code
+//
+$code-color:                    #c7254e !default;
+$code-bg:                       #f9f2f4 !default;
+
+$kbd-color:                     #fff !default;
+$kbd-bg:                        #333 !default;
+
+$pre-bg:                        #f5f5f5 !default;
+$pre-color:                     $gray-dark !default;
+$pre-scrollable-max-height:     340px !default;
+
+
+//
 // Buttons
 //
 $btn-font-family:                $font-family-avenir;
@@ -153,6 +166,7 @@ $btn-padding-y-lg:               .75rem !default;
 $btn-border-radius:              $border-radius !default;
 $btn-border-radius-lg:           $border-radius-lg !default;
 $btn-border-radius-sm:           $border-radius-sm !default;
+
 
 //
 // Forms

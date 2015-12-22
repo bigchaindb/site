@@ -1,0 +1,48 @@
+
+#
+# Primary
+#
+primary:
+    - name: brand-main-blue
+      hex: 275B82
+    - name: brand-main-blue-dark
+      hex: 101A25
+    - name: brand-main-gray
+      hex: 70859B
+    - name: brand-main-brown
+      hex: B56D00
+    - name: brand-main-light
+      hex: FFFFFF
+
+
+#
+# Grays
+#
+grays:
+    - name: gray-dark
+      hex: 445261
+    - name: gray
+      hex: 70859B
+    - name: gray-light
+      hex: ACB8C5
+    - name: gray-lighter
+      hex: CAD2DA
+    - name: gray-lightest
+      hex: E8EBEF
+
+
+#
+# Errors
+#
+errors:
+    - name: brand-success
+      hex: 388250
+
+    - name: brand-info
+      hex: 3E91CE
+
+    - name: brand-warning
+      hex: 8E8E24
+
+    - name: brand-danger
+      hex: 8F3B39

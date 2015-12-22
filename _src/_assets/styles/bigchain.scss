@@ -24,6 +24,8 @@
 @import 'bigchain/_media';
 @import 'bigchain/_sections';
 @import 'bigchain/_alerts';
+@import 'bigchain/_code';
+@import 'bigchain/_syntax';
 @import 'bigchain/_footer';
 @import 'bigchain/_utilities';
 
@@ -33,3 +35,4 @@
 // specific page styles
 @import 'page-front';
 @import 'page-404';
+@import 'page-styleguide';
