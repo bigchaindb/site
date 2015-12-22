@@ -2,6 +2,8 @@
 
 > Landing page for www.bigchain.io
 
+[Live](http://www.bigchain.io) | [Styleguide](http://www.bigchain.io/styleguide/)
+
 ## Development
 
 You need to have the following tools installed on your development machine before moving on:
