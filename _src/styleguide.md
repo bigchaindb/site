@@ -112,6 +112,15 @@ Donec *ullamcorper nulla* non metus auctor fringilla. Duis mollis, est non commo
 <a class="btn btn-primary btn-lg">Button</a>
 ```
 
+<a class="btn btn-primary-outline">Button</a> <a class="btn btn-primary-outline btn-xs">Button</a> <a class="btn btn-primary-outline btn-sm">Button</a> <a class="btn btn-primary-outline btn-lg">Button</a>
+
+```html
+<a class="btn btn-primary-outline">Button</a>
+<a class="btn btn-primary-outline btn-xs">Button</a>
+<a class="btn btn-primary-outline btn-sm">Button</a>
+<a class="btn btn-primary-outline btn-lg">Button</a>
+```
+
 
 ### Alerts
 
