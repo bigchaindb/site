@@ -127,10 +127,22 @@
         margin: auto;
         margin-bottom: $spacer;
     }
+}
 
-    .comingsoon {
+.comingsoon {
+    display: block;
+    color: $gray-light;
+}
+
+
+.section-whitepaper {
+    .icon {
+        stroke: $brand-main-gray;
+        stroke-dasharray: 4,4;
+        opacity: .3;
         display: block;
-        color: $gray-light;
+        margin: auto;
+        margin-bottom: $spacer;
     }
 }
 
