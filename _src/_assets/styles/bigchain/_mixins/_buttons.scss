@@ -1,12 +1,10 @@
 //
 // Button variants
 //
-@mixin button-variant($color, $background, $border) {
+@mixin button-variant($color, $background) {
     $active-background: darken($background, 5%);
-    $active-border: darken($border, 12%);
     color: $color !important;
     background: $background;
-    border-color: $border;
 
     &:hover,
     &:focus {

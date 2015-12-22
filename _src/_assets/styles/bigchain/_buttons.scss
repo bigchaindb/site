@@ -15,22 +15,21 @@
     vertical-align: middle;
     cursor: pointer;
     user-select: none;
-    border: 1px solid transparent;
+    border: none;
     @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height, $btn-border-radius);
-    min-width: 8rem;
 
-    &,
-    &:active,
-    &.active {
-        &:focus,
-        &.focus {
-
-        }
+    &:hover,
+    &:focus {
+        box-shadow: 0 1px 3px rgba($brand-main-blue-dark, .15);
+        transform: translateY(-1px);
     }
+
     &:active,
     &.active {
         background-image: none;
         outline: 0;
+        transform: translateY(0);
+        box-shadow: 0 1px 3px rgba($brand-main-blue-dark, .05);
     }
     &.disabled,
     &:disabled {
@@ -50,22 +49,22 @@ fieldset[disabled] a.btn {
 // Alternate buttons
 //
 .btn-primary {
-    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+    @include button-variant($btn-primary-color, $btn-primary-bg);
 }
 .btn-secondary {
-    @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+    @include button-variant($btn-secondary-color, $btn-secondary-bg);
 }
 .btn-info {
-    @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+    @include button-variant($btn-info-color, $btn-info-bg);
 }
 .btn-success {
-    @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+    @include button-variant($btn-success-color, $btn-success-bg);
 }
 .btn-warning {
-    @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+    @include button-variant($btn-warning-color, $btn-warning-bg);
 }
 .btn-danger {
-    @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+    @include button-variant($btn-danger-color, $btn-danger-bg);
 }
 
 // Remove all backgrounds
@@ -73,7 +72,7 @@ fieldset[disabled] a.btn {
     @include button-outline-variant($btn-primary-bg);
 }
 .btn-secondary-outline {
-    @include button-outline-variant($btn-secondary-border);
+    @include button-outline-variant($btn-secondary);
 }
 .btn-info-outline {
     @include button-outline-variant($btn-info-bg);
@@ -104,9 +103,12 @@ fieldset[disabled] a.btn {
         box-shadow: none;
     }
     &,
+    &:hover,
     &:focus,
     &:active {
         border-color: transparent;
+        box-shadow: none;
+
     }
     &:disabled {
     }
@@ -116,14 +118,16 @@ fieldset[disabled] a.btn {
 // Button Sizes
 //
 .btn-lg {
-
     // line-height: ensure even-numbered height of button next to large input
     @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
 }
 .btn-sm {
-
     // line-height: ensure proper height of button next to small input
     @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+}
+.btn-xs {
+    // line-height: ensure proper height of button next to small input
+    @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-xs, $line-height-xs, $btn-border-radius-xs);
 }
 
 //

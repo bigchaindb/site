@@ -138,6 +138,15 @@ Donec *ullamcorper nulla* non metus auctor fringilla. Duis mollis, est non commo
 <a class="btn btn-primary btn-lg">Button</a>
 ```
 
+<a class="btn btn-secondary">Button</a> <a class="btn btn-secondary btn-xs">Button</a> <a class="btn btn-secondary btn-sm">Button</a> <a class="btn btn-secondary btn-lg">Button</a>
+
+```html
+<a class="btn btn-secondary">Button</a>
+<a class="btn btn-secondary btn-xs">Button</a>
+<a class="btn btn-secondary btn-sm">Button</a>
+<a class="btn btn-secondary btn-lg">Button</a>
+```
+
 <a class="btn btn-primary-outline">Button</a> <a class="btn btn-primary-outline btn-xs">Button</a> <a class="btn btn-primary-outline btn-sm">Button</a> <a class="btn btn-primary-outline btn-lg">Button</a>
 
 ```html
@@ -145,6 +154,24 @@ Donec *ullamcorper nulla* non metus auctor fringilla. Duis mollis, est non commo
 <a class="btn btn-primary-outline btn-xs">Button</a>
 <a class="btn btn-primary-outline btn-sm">Button</a>
 <a class="btn btn-primary-outline btn-lg">Button</a>
+```
+
+<a class="btn btn-secondary-outline">Button</a> <a class="btn btn-secondary-outline btn-xs">Button</a> <a class="btn btn-secondary-outline btn-sm">Button</a> <a class="btn btn-secondary-outline btn-lg">Button</a>
+
+```html
+<a class="btn btn-secondary-outline">Button</a>
+<a class="btn btn-secondary-outline btn-xs">Button</a>
+<a class="btn btn-secondary-outline btn-sm">Button</a>
+<a class="btn btn-secondary-outline btn-lg">Button</a>
+```
+
+<a class="btn btn-link">Button</a> <a class="btn btn-link btn-xs">Button</a> <a class="btn btn-link btn-sm">Button</a> <a class="btn btn-link btn-lg">Button</a>
+
+```html
+<a class="btn btn-link">Button</a>
+<a class="btn btn-link btn-xs">Button</a>
+<a class="btn btn-link btn-sm">Button</a>
+<a class="btn btn-link btn-lg">Button</a>
 ```
 
 
