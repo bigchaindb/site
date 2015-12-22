@@ -18,13 +18,6 @@ var FormEarlyAccess = (function(w, d, $) {
                 e.preventDefault();
 
                 if ( $(this).parsley().isValid() ) {
-
-                    // var data = {};
-                    // var dataArray = _config.form.serializeArray();
-                    // $.each(dataArray, function (index, item) {
-                    //     data[item.name] = item.value;
-                    // });
-
                     $.ajax({
                         url: _config.formURL,
                         type: _config.formMethod,
