@@ -28,7 +28,8 @@
 @import 'bigchain/_utilities';
 
 // Content types
-//@import 'bigchain/content-page';
+@import 'bigchain/_content-page';
 
 // specific page styles
 @import 'page-front';
+@import 'page-404';

@@ -35,3 +35,9 @@ redcarpet:
 # --------------------
 source:                 ./_src
 destination:            ./_dist
+
+
+# Plugins
+# --------------------
+gems:
+    - jekyll-sitemap
