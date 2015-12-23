@@ -4,11 +4,11 @@
     <!-- Dynamic meta title -->
     <title>
     {% if paginator.previous_page %}
-        Page {{ paginator.page }} &#124; {{ site.name }}
+        Page {{ paginator.page }} &bull; &bull; {{ site.name }}
     {% elsif page.title %}
-        {{ page.title }} &#124; {{ site.name }}
+        {{ page.title }} &bull; &bull; {{ site.name }}
     {% else %}
-        {{ site.name }} &#124; {{ site.description }}
+        {{ site.name }} &bull; &bull; {{ site.description }}
     {% endif %}
     </title>
 

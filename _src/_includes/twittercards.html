@@ -3,9 +3,9 @@
 <meta name="twitter:creator" content="@{{ site.twitter }}">
 
 {% if page.title %}
-    <meta name="twitter:title" content="{{ page.title }} &#124; {{ site.name }}">
+    <meta name="twitter:title" content="{{ page.title }} &bull; &bull; {{ site.name }}">
 {% else %}
-    <meta name="twitter:title" content="{{ site.name }} &#124; {{ site.description }}">
+    <meta name="twitter:title" content="{{ site.name }} &bull; &bull; {{ site.description }}">
 {% endif %}
 
 {% if page.url %}
@@ -14,6 +14,8 @@
 
 {% if page.description %}
     <meta name="twitter:description" content="{{ page.description }}">
+{% elsif page.front_page %}
+    <meta name="twitter:description" content="{{ site.description }}">
 {% else %}
     <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
 {% endif %}
