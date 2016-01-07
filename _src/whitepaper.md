@@ -1,7 +1,7 @@
 ---
 layout: page
 
-title: Bigchain: A Scalable Blockchain Database
+title: 'Bigchain: A Scalable Blockchain Database'
 ---
 
 Trent McConaghy, Rodolphe Marques, Andreas Müller
