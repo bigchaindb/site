@@ -1,0 +1,20 @@
+
+.menu {
+}
+
+.menu__link {
+    display: inline-block;
+    padding: $spacer
+}
+
+.menu__logo svg { fill: #fff }
+
+.menu--main {
+    @extend .background--gray;
+
+    .menu__link { color: #fff; }
+}
+
+.menu--footer {
+    @extend .text-center;
+}

@@ -1,6 +1,9 @@
 
 <footer class="footer" role="contentinfo">
     <div class="row">
-        <small>&copy; {{ site.time | date: "%Y" }} {{ site.name }}</small>
+
+        {% include menu-footer.html %}
+        
+        <p><small>&copy; {{ site.time | date: "%Y" }} {{ site.name }}</small></p>
     </div>
 </footer>

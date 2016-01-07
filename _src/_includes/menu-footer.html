@@ -1,0 +1,14 @@
+<nav class="menu menu--footer">
+    <div class="row">
+        {% for link in site.data.menus.footer %}
+
+            {% assign active = nil %}
+            {% if page.url contains link.url %}
+                {% assign active = 'active' %}
+            {% endif %}
+
+            <a class="menu__link" class="{{ active }}" href="{{ link.url }}">{{ link.title }}</a>
+
+        {% endfor %}
+    </div>
+</nav>

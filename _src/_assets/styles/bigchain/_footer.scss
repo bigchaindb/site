@@ -1,5 +1,6 @@
 
 .footer {
+    @extend .small;
     padding-top: $spacer;
     padding-bottom: $spacer;
     text-align: center;

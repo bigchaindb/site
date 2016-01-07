@@ -2,16 +2,13 @@
 layout: base
 ---
 
-<header role="banner" class="page-header background--gray">
-    <a href="/">
-        <svg class="logo logo--sm" aria-labelledby="title">
-            <title>Logo</title>
-            <use xlink:href="/assets/img/sprite.svg#logo"></use>
-        </svg>
-    </a>
+<header role="banner" class="page__header">
+    <div class="row">
+        <h1 class="page__title">{{ page.title }}</h1>
+    </div>
 </header>
 
-<section role="main" class="page-content">
+<section role="main" class="page__content">
     <div class="row">
 
         {{ content }}

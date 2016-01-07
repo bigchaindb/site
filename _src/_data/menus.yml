@@ -1,0 +1,18 @@
+
+main:
+    - title: Features
+      url: /features/
+    - title: Whitepaper
+      url: /whitepaper/
+    - title: Docs
+      url: /docs/
+
+footer:
+    - title: About
+      url: /about/
+    - title: Contact
+      url: /contact/
+    - title: Terms of Service
+      url: /tos/
+    - title: Privacy
+      url: /privacy/
