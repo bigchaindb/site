@@ -2,7 +2,7 @@
 
 > Landing page for www.bigchain.io
 
-[Live](http://www.bigchain.io) | [Styleguide](http://www.bigchain.io/styleguide/)
+[Live](https://www.bigchain.io) | [Beta](https://beta.bigchain.io) | [Styleguide](https://www.bigchain.io/styleguide/)
 
 ## Development
 
@@ -51,6 +51,19 @@ AWS_PROFILE=bigchain gulp deploy:live
 ```
 
 In case that you get authentication errors or need an alternative way to authenticate with AWS, check out the [AWS documentation](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html).
+
+### Production build & beta deployment
+
+```bash
+# make sure your local npm packages & gems are up to date
+npm update && bundle update
+
+# make production build in /_dist
+gulp build --production
+
+# deploy contents of /_dist to beta
+gulp deploy:beta
+```
 
 ### Production build & live deployment
 

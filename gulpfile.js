@@ -358,3 +358,51 @@ gulp.task('deploy:live', function() {
             states: ['create', 'update', 'delete']
         }));
 });
+
+gulp.task('deploy:beta', function() {
+
+    // create publisher, define config
+    var publisher = $.awspublish.create({
+        params: {
+            'Bucket': S3BUCKET_BETA
+        },
+        'accessKeyId': process.env.AWS_ACCESS_KEY,
+        'secretAccessKey': process.env.AWS_SECRET_KEY,
+        'region': S3REGION_BETA
+    });
+
+    return gulp.src(DIST + '**/*')
+        .pipe($.awspublishRouter({
+            cache: {
+                // cache for 5 minutes by default
+                cacheTime: 300
+            },
+            routes: {
+                // all static assets, cached & gzipped
+                '^assets/(?:.+)\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|ttf)$': {
+                    cacheTime: 2592000, // cache for 1 month
+                    gzip: true
+                },
+
+                // every other asset, cached
+                '^assets/.+$': {
+                    cacheTime: 2592000  // cache for 1 month
+                },
+
+                // all html files, not cached & gzipped
+                '^.+\\.html': {
+                    cacheTime: 0,
+                    gzip: true
+                },
+
+                // pass-through for anything that wasn't matched by routes above, to be uploaded with default options
+                "^.+$": "$&"
+            }
+        }))
+        .pipe(parallelize(publisher.publish(), 10))
+        .pipe(publisher.sync()) // delete files in bucket that are not in local folder
+        .pipe(publisher.cache())
+        .pipe($.awspublish.reporter({
+            states: ['create', 'update', 'delete']
+        }));
+});
