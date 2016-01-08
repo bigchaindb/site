@@ -30,10 +30,37 @@ gulp
 
 ## Deployment
 
-### Production build
+The site is hosted in an S3 bucket and gets deployed via a gulp task.
 
-The following builds the site and runs a bunch of optimizations over everything, like assets optimizations, revisioning, CDN url injection etc.
+### Prerequisite: Authentication
+
+To deploy the site, you must authenticate yourself against the AWS API with your AWS credentials. Get your AWS access key and secret and add them to `~/.aws/credentials`:
+
+```
+[default]
+aws_access_key_id = <YOUR_ACCESS_KEY_ID>
+aws_secret_access_key = <YOUR_SECRET_ACCESS_KEY>
+```
+
+This is all that is needed to authenticate with AWS if you've setup your credentials as the default profile.
+
+If you've set them up as another profile, say `[bigchain]` you can grab those credentials by using the `AWS_PROFILE` variable like so:
 
 ```bash
+AWS_PROFILE=bigchain gulp deploy:live
+```
+
+In case that you get authentication errors or need an alternative way to authenticate with AWS, check out the [AWS documentation](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html).
+
+### Production build & live deployment
+
+```bash
+# make sure your local npm packages & gems are up to date
+npm update && bundle update
+
+# make production build in /_dist
 gulp build --production
+
+# deploy contents of /_dist to live
+gulp deploy:live
 ```
