@@ -115,6 +115,7 @@ gulp.task('jekyll', function(cb) {
         process.env.JEKYLL_ENV = 'production';
         var jekyll = spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit' });
     } else {
+        process.env.JEKYLL_ENV = 'development';
         var jekyll = spawn('bundle', ['exec', 'jekyll', 'build', '--incremental', '--drafts', '--future'], { stdio: 'inherit' });
     }
 
