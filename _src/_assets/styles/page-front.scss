@@ -111,7 +111,7 @@
 
 
 
-.section-benchmarks {
+.section-features {
     text-align: center;
     border-bottom: 1px solid lighten($brand-main-gray, 40%);
 
@@ -125,20 +125,26 @@
         display: block;
         margin: auto;
         margin-bottom: $spacer;
+        stroke: $brand-main-gray;
     }
 }
 
-.comingsoon {
-    display: block;
-    color: $gray-light;
-}
-
-
 .section-whitepaper {
+
+    a {
+        @extend .transition;
+        display: block;
+        text-align: center;
+
+        &:hover,
+        &:focus {
+            transform: scale(1.05);
+        }
+    }
+
     .icon {
-        stroke: $brand-main-gray;
-        stroke-dasharray: 4,4;
-        opacity: .3;
+        stroke: $link-color;
+        stroke-width: 2;
         display: block;
         margin: auto;
         margin-bottom: $spacer;

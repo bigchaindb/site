@@ -13,12 +13,65 @@ front_page: true
             </svg>
             <h1 class="section-title">Coming Soon on February 10.</h1>
 
-            <a href="#benchmarks" class="btn btn-link btn-sm">Learn More <svg class="icon">
+            <a href="#features" class="btn btn-link btn-sm">Learn More <svg class="icon">
                 <use xlink:href="/assets/img/sprite.svg#icon-caret"></use>
             </svg></a>
         </div>
     </div>
 </header>
+
+<section id="features" class="section section-features">
+    <div class="row">
+        <header class="section-header">
+            <h1 class="section-title">This is BigchainDB. 100K writes/s, sustained.</h1>
+        </header>
+
+        <figure>
+            <img class="img__responsive" src="/assets/img/graph.png" width="672" height="226">
+        </figure>
+
+        <div class="grid grid--full grid-small--fit grid--gutters">
+            <p class="grid__col">
+                <svg class="icon">
+                    <use xlink:href="/assets/img/sprite.svg#icon-graph"></use>
+                </svg>
+                1 Million Transactions per Second
+            </p>
+            <p class="grid__col">
+                <svg class="icon">
+                    <use xlink:href="/assets/img/sprite.svg#icon-servers"></use>
+                </svg>
+                Petabyte Capacity
+            </p>
+            <p class="grid__col">
+                <svg class="icon">
+                    <use xlink:href="/assets/img/sprite.svg#icon-tree"></use>
+                </svg>
+                Use as a Public or Private Blockchain
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-suitable">
+    <div class="row">
+        <header class="section-header">
+            <h1 class="section-title">Suitable for</h1>
+        </header>
+
+        <div class="grid grid--full grid-small--fit grid--gutters text-center">
+            <p class="grid__col">
+                Blockchain companies looking to scale or serve their clients
+            </p>
+            <p class="grid__col">
+                Companies experimenting with blockchain technologies
+            </p>
+            <p class="grid__col">
+                Cloud platforms wanting to deploy Blockchain as a Service
+            </p>
+        </div>
+    </div>
+</section>
 
 <section class="section section-whitepaper">
     <div class="row">
@@ -26,18 +79,20 @@ front_page: true
             <h1 class="section-title">Whitepaper</h1>
         </header>
 
-        <svg class="icon">
-            <use xlink:href="/assets/img/sprite.svg#icon-documents"></use>
-        </svg>
-        <p class="text-center comingsoon">Coming soon</p>
+        <a href="/whitepaper/">
+            <svg class="icon">
+                <use xlink:href="/assets/img/sprite.svg#icon-documents"></use>
+            </svg>
+            Access our Whitepaper
+        </a>
     </div>
 </section>
 
 <section id="earlyaccess" class="section section-earlyaccess background--gray">
     <div class="row">
         <header class="section-header">
-            <h1 class="section-title">Early Access</h1>
-            <p class="section-description">For early access and inquiries, enter your contact information below</p>
+            <h1 class="section-title">Sign Up for Early Access</h1>
+            <p class="section-description">For early access and inquiries, enter your contact information below. A member of our team will contact you.</p>
         </header>
 
         {% include/form-earlyaccess.html %}
