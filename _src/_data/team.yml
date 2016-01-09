@@ -1,20 +1,20 @@
 
 - name:     Bruce Pon
   position: CEO
-  image:
+  image:    team-bruce.jpg
 
 - name:     Trent McConaghy
   position: CTO
-  image:
+  image:    team-trent.jpg
 
 - name:     Andreas Müller
   position: Databases
-  image:
+  image:    team-andreas.jpg
 
 - name:     Rodolphe Marques
   position: Protocols
-  image:
+  image:    team-rodolphe.jpg
 
 - name:     Troy McConaghy
-  position: 
-  image:
+  position:
+  image:    team-troy.jpg

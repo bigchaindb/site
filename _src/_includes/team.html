@@ -1,10 +1,14 @@
 
-{% for member in site.data.team %}
-<div class="grid__col">
-    <article class="team">
-        <img class="team__image" src="/assets/img/team/{{ member.image }}">
-        <h1 class="team__name">{{ member.name }}</h1>
-        <p class="team__position">{{ member.position }}</p>
-    </article>
+<div class="grid grid--full grid-small--third grid--gutters text-center">
+
+    {% for member in site.data.team %}
+    <div class="grid__col">
+        <article class="team">
+            <img class="team__image" src="/assets/img/{{ member.image }}">
+            <h1 class="team__name">{{ member.name }}</h1>
+            <p class="team__position">{{ member.position }}</p>
+        </article>
+    </div>
+    {% endfor %}
+
 </div>
-{% endfor %}

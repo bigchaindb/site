@@ -10,6 +10,6 @@ We released a whitepaper in Feb 2015 highlighting the ideal characteristics of a
 
 The result is Bigchain, a blockchain for the world.
 
-# Team
+## Team
 
 {% include team.html %}

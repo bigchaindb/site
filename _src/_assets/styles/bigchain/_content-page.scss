@@ -1,5 +1,27 @@
 
 .page__header {
+    position: relative;
+    
+    // background
+    background: url('../img/photo1.jpg') no-repeat center bottom;
+    background-size: cover;
+
+    // color overlay
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        //background: $brand-main-brown;
+        background: linear-gradient(to top left, $brand-main-blue 0%, $brand-main-brown 100%);
+        opacity: .7;
+        z-index: 0;
+    }
+
     padding: ($spacer * 4) 0;
 }
 
@@ -9,5 +31,11 @@
 }
 
 .page__content {
-
+    .row {
+        > h2 {
+            border-bottom: 1px solid $gray-lightest;
+            padding-bottom: $spacer;
+            text-align: center;
+        }
+    }
 }

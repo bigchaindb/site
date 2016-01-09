@@ -1,0 +1,24 @@
+//
+// Team Unit
+// ---
+// bigchain.io
+//
+
+// Base class
+.team {}
+
+.team__image {
+    @extend .img--responsive;
+    width: 230px;
+    border-radius: 50%;
+}
+
+.team__name {
+    @extend .h5;
+    color: $text-color;
+    margin-bottom: 0;
+}
+
+.team__position {
+    @extend .text-dimmed;
+}
