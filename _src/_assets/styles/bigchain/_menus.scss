@@ -7,12 +7,33 @@
     padding: $spacer
 }
 
-.menu__logo svg { fill: #fff }
+.menu__logo {
+    display: block;
+    svg { fill: #fff }
+}
 
+
+//
+// Main menu overlaying a dark background image
+// in front page hero or page headers
+//
 .menu--main {
-    @extend .background--gray;
+    position: absolute;;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    border-bottom: 1px solid rgba(#fff, .2);
+    height: 60px;
 
-    .menu__link { color: #fff; }
+    .menu__link {
+        color: #fff;
+        opacity: .8;
+
+        &:hover,
+        &:focus { opacity: 1 }
+    }
 }
 
 .menu--footer {

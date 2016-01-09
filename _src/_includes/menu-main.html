@@ -1,21 +1,30 @@
 <nav class="menu menu--main">
     <div class="row">
-        <a class="menu__logo" href="/">
-            <svg class="logo logo--sm" aria-labelledby="title">
-                <title>Logo</title>
-                <use xlink:href="/assets/img/sprite.svg#logo"></use>
-            </svg>
-        </a>
 
-        {% for link in site.data.menus.main %}
+        <div class="grid grid--full grid-small--fit grid--center">
+            <div class="grid__col">
+                <a class="menu__logo" href="/">
+                    <svg class="logo logo--sm" aria-labelledby="title">
+                        <title>Logo</title>
+                        <use xlink:href="/assets/img/sprite.svg#logo"></use>
+                    </svg>
+                </a>
+            </div>
 
-            {% assign active = nil %}
-            {% if page.url contains link.url %}
-                {% assign active = 'active' %}
-            {% endif %}
+            <div class="grid__col">
 
-            <a class="menu__link" class="{{ active }}" href="{{ link.url }}">{{ link.title }}</a>
+                {% for link in site.data.menus.main %}
 
-        {% endfor %}
+                    {% assign active = nil %}
+                    {% if page.url contains link.url %}
+                        {% assign active = 'active' %}
+                    {% endif %}
+
+                    <a class="menu__link" class="{{ active }}" href="{{ link.url }}">{{ link.title }}</a>
+
+                {% endfor %}
+
+            </div>
+        </div>
     </div>
 </nav>

@@ -47,6 +47,7 @@ textarea {
 // Links
 //
 a {
+    @extend .transition;
     color: $link-color;
     text-decoration: none;
 

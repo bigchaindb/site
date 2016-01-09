@@ -2,13 +2,16 @@
 layout: base
 ---
 
-<header role="banner" class="page__header">
+<header role="banner" class="header">
+
+    {% include menu-main.html %}
+
     <div class="row">
-        <h1 class="page__title">{{ page.title }}</h1>
+        <h1 class="header__title">{{ page.title }}</h1>
     </div>
 </header>
 
-<section role="main" class="page__content">
+<section role="main" class="content content--page">
     <div class="row">
 
         {{ content }}
