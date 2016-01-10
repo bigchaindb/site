@@ -2,19 +2,29 @@
 - name:     Bruce Pon
   position: CEO
   image:    team-bruce.jpg
+  twitter:  BrucePon
+  facebook: bruce.pon
+  linkedin: ponbruce
 
 - name:     Trent McConaghy
   position: CTO
   image:    team-trent.jpg
+  twitter:  trentmc0
+  facebook: trent.mcconaghy
+  linkedin: trentmc
+  github:   trentmc
 
 - name:     Andreas Müller
   position: Databases
   image:    team-andreas.jpg
+  linkedin: andreas-mueller-07152825
 
 - name:     Rodolphe Marques
   position: Protocols
   image:    team-rodolphe.jpg
+  twitter:  rodmar_
 
 - name:     Troy McConaghy
-  position:
+  position: Developer
   image:    team-troy.jpg
+  twitter:  TroyMc
