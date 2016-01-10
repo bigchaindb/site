@@ -9,7 +9,16 @@
 
 .menu__logo {
     display: block;
-    svg { fill: #fff }
+    svg {
+        @extend .transition;
+        fill: #fff;
+        opacity: .8;
+    }
+
+    &:hover svg,
+    &:focus svg {
+        opacity: 1;
+    }
 }
 
 

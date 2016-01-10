@@ -144,6 +144,12 @@ strong,
 
 .text-dimmed         { color: $gray-light }
 
+
+.lead {
+    font-size: $font-size-lg;
+    color: $headings-color;
+}
+
 //
 // Lists
 //

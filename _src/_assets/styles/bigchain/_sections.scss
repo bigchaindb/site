@@ -91,6 +91,11 @@
     .section-description { color: #fff }
 }
 
+.background--light {
+    background: $gray-lightest; // fallback
+    background: linear-gradient(to bottom right, $gray-lightest 0%, lighten($gray-lightest, 10%) 100%);
+}
+
 .background--gray {
     background: $brand-main-gray; // fallback
     background: linear-gradient(to bottom right, $brand-main-gray 0%, lighten($brand-main-gray, 10%) 100%);

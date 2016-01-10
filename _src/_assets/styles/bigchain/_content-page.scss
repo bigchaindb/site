@@ -1,9 +1,10 @@
 
 .content--page {
     .row {
-        > h2 {
-            border-bottom: 1px solid $gray-lightest;
+        > h1, h2 {
+            border-bottom: 2px solid $gray-lightest;
             padding-bottom: $spacer;
+            margin-bottom: ($spacer * 2);
             text-align: center;
         }
     }
