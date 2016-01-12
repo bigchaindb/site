@@ -229,7 +229,7 @@ gulp.task('fonts', function() {
 gulp.task('rev', function() {
     // globbing is slow so do everything conditionally for faster dev build
     if (isProduction) {
-        return gulp.src(DIST + '/assets/**/*.{css,js,png,jpg,jpeg,svg,eot,ttf,woff}')
+        return gulp.src(DIST + '/assets/**/*.{css,js,png,jpg,jpeg,svg,eot,ttf,woff,woff2}')
             .pipe($.rev())
             .pipe(gulp.dest(DIST + '/assets/'))
             // output rev manifest for next replace task
@@ -248,7 +248,7 @@ gulp.task('rev:replace', function() {
     if (isProduction) {
         var manifest = gulp.src(DIST + '/assets/rev-manifest.json');
 
-        return gulp.src(DIST + '/**/*.{html,xml,txt,json,css,js,png,jpg,jpeg,svg,eot,ttf,woff}')
+        return gulp.src(DIST + '/**/*.{html,xml,txt,json,css,js,png,jpg,jpeg,svg,eot,ttf,woff,woff2}')
             .pipe($.revReplace({ manifest: manifest }))
             .pipe(gulp.dest(DIST));
     }
