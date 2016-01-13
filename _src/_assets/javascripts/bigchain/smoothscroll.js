@@ -21,7 +21,7 @@ var SmoothScroll = (function(w, d) {
                 return _config.win.width() >= _config.minWidth;
             }
 
-            $('a[href*=#]:not([href=#]):not(.nav-tabs a[href*=#])').click(function(e) {
+            $("a[href*='#']").not("[href='#'], .nav a[href*='#']").click(function(e) {
                 if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
                     var target = $(this.hash);
                     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
