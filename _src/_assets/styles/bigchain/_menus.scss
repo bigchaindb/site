@@ -3,8 +3,10 @@
 }
 
 .menu__link {
+    @extend .small;
     display: inline-block;
-    padding: $spacer
+    padding: $spacer;
+    text-transform: uppercase;
 }
 
 .menu__logo {
@@ -66,4 +68,8 @@
 
 .menu--footer {
     @extend .text-center;
+
+    .menu__link {
+        padding: $spacer ($spacer/1.5);
+    }
 }
