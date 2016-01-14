@@ -33,15 +33,34 @@
     top: 0;
     width: 100%;
     z-index: 2;
-    border-bottom: 1px solid rgba(#fff, .2);
     height: 60px;
 
     .menu__link {
         color: #fff;
         opacity: .8;
 
+        // link line
+        &:after {
+            content: "";
+            height: 2px;
+            width: 30px;
+            background: #fff;
+            display: block;
+            margin: ($spacer / 3) auto 0 auto;
+            // hidden by default
+            transform: scale(0);
+            transform-origin: center;
+            transition: transform .2s ease-out;
+        }
+
         &:hover,
-        &:focus { opacity: 1 }
+        &:focus,
+        &.active {
+            opacity: 1;
+
+            // show link line
+            &:after { transform: scale(1); }
+        }
     }
 }
 
