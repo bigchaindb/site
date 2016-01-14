@@ -12,9 +12,15 @@ layout: base
 </header>
 
 <section role="main" class="content content--page">
-    <div class="row">
+
+    {% if page.path contains '.md' %}
+    <div class="row content--page--markdown">
+    {% endif %}
 
         {{ content }}
 
+    {% if page.path contains '.md' %}
     </div>
+    {% endif %}
+
 </section>

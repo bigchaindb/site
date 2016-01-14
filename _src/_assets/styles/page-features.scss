@@ -1,0 +1,28 @@
+
+.section-difference {
+    @extend .background--gray;
+}
+
+.difference {
+    display: flex;
+    align-items: center;
+    padding: ($spacer * 2) 0;
+
+    &:first-of-type { padding-top: 0; }
+}
+
+.difference__icon {
+    flex: 0 0 15%;
+    margin-right: 5%;
+}
+
+.difference__text {
+    flex: 0 0 80%;
+
+    .section-difference & { color: #fff; }
+}
+
+
+.section-timeline {
+    @extend .background--light;
+}
