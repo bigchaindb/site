@@ -216,7 +216,7 @@ gulp.task('images', function() {
 //
 gulp.task('fonts', function() {
     return gulp.src([
-            './node_modules/fira/**/FiraSans-Light.*'
+            './node_modules/fira/**/FiraSans-Light.{eot,ttf,woff,woff2}'
         ])
         .pipe($.rename({dirname: ''}))
         .pipe(gulp.dest(DIST + 'assets/fonts/'));
@@ -248,7 +248,7 @@ gulp.task('rev:replace', function() {
     if (isProduction) {
         var manifest = gulp.src(DIST + '/assets/rev-manifest.json');
 
-        return gulp.src(DIST + '/**/*.{html,xml,txt,json,css,js,png,jpg,jpeg,svg,eot,ttf,woff,woff2}')
+        return gulp.src(DIST + '/**/*.{html,xml,txt,json,css,js,svg}')
             .pipe($.revReplace({ manifest: manifest }))
             .pipe(gulp.dest(DIST));
     }
@@ -331,7 +331,7 @@ gulp.task('deploy:live', function() {
             },
             routes: {
                 // all static assets, cached & gzipped
-                '^assets/(?:.+)\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|ttf)$': {
+                '^assets/(?:.+)\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|ttf|eot|woff|woff2)$': {
                     cacheTime: 2592000, // cache for 1 month
                     gzip: true
                 },
@@ -345,6 +345,24 @@ gulp.task('deploy:live', function() {
                 '^.+\\.html': {
                     cacheTime: 0,
                     gzip: true
+                },
+
+                // font mime types
+                '\.eot$': {
+                    key: '$&',
+                    headers: { 'Content-Type': 'application/vnd.ms-fontobject' }
+                },
+                '\.ttf$': {
+                    key: '$&',
+                    headers: { 'Content-Type': 'application/x-font-ttf' }
+                },
+                '\.woff$': {
+                    key: '$&',
+                    headers: { 'Content-Type': 'application/x-font-woff' }
+                },
+                '\.woff2$': {
+                    key: '$&',
+                    headers: { 'Content-Type': 'application/x-font-woff2' }
                 },
 
                 // pass-through for anything that wasn't matched by routes above, to be uploaded with default options
@@ -379,7 +397,7 @@ gulp.task('deploy:beta', function() {
             },
             routes: {
                 // all static assets, cached & gzipped
-                '^assets/(?:.+)\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|ttf)$': {
+                '^assets/(?:.+)\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|ttf|eot|woff|woff2)$': {
                     cacheTime: 2592000, // cache for 1 month
                     gzip: true
                 },
@@ -393,6 +411,24 @@ gulp.task('deploy:beta', function() {
                 '^.+\\.html': {
                     cacheTime: 0,
                     gzip: true
+                },
+
+                // font mime types
+                '\.eot$': {
+                    key: '$&',
+                    headers: { 'Content-Type': 'application/vnd.ms-fontobject' }
+                },
+                '\.ttf$': {
+                    key: '$&',
+                    headers: { 'Content-Type': 'application/x-font-ttf' }
+                },
+                '\.woff$': {
+                    key: '$&',
+                    headers: { 'Content-Type': 'application/x-font-woff' }
+                },
+                '\.woff2$': {
+                    key: '$&',
+                    headers: { 'Content-Type': 'application/x-font-woff2' }
                 },
 
                 // pass-through for anything that wasn't matched by routes above, to be uploaded with default options
