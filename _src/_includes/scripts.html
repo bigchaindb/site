@@ -23,6 +23,7 @@ svg4everybody.js
 //
 -->
 <script>
+if (!_dntEnabled()) {
     (function(window) {
 
         // Google Analytics async snippet
@@ -59,6 +60,7 @@ svg4everybody.js
         };
 
     }(window));
+}
 </script>
 
 {% if jekyll.environment == "production" %}

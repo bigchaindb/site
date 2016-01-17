@@ -5,6 +5,7 @@
 //=include bigchain/analytics.js
 //=include bigchain/forms.js
 //=include bigchain/smoothscroll.js
+//=include bigchain/dnt.js
 
 //=include bigchain/form-earlyaccess.js
 
@@ -13,10 +14,13 @@ jQuery(function($) {
     //
     // init modules
     //
-    GoogleAnalytics.init();
     Forms.init();
     SmoothScroll.init();
     FormEarlyAccess.init();
+
+    if (!_dntEnabled()) {
+        GoogleAnalytics.init();
+    }
 
     $('.hero .logo').on('animationend webkitAnimationEnd oAnimationEnd',
         function(e) {

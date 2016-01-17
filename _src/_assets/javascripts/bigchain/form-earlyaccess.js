@@ -37,7 +37,9 @@ var FormEarlyAccess = (function(w, d, $) {
                             _config.formBtn.removeClass('disabled');
 
                             // send GA event
-                            GoogleAnalytics.gaEventEarlyAccessSuccess();
+                            if (!_dntEnabled()) {
+                                GoogleAnalytics.gaEventEarlyAccessSuccess();
+                            }
                         },
                         error: function(err) {
                             _config.form.find('.alert-danger').removeClass('hide');
@@ -46,7 +48,9 @@ var FormEarlyAccess = (function(w, d, $) {
                                 .attr('value', 'Send');
 
                             // send GA event
-                            GoogleAnalytics.gaEventEarlyAccessError();
+                            if (!_dntEnabled()) {
+                                GoogleAnalytics.gaEventEarlyAccessError();
+                            }
                         }
                     });
                 }
