@@ -36,10 +36,14 @@
 }
 
 .row {
-    max-width: 45em;
+    max-width: $screen-md-min;
     margin: auto;
     padding-left: $gutter-space;
     padding-right: $gutter-space;
+}
+
+.row--wide {
+    max-width: 60rem;
 }
 
 

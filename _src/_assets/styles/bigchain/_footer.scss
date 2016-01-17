@@ -1,8 +1,18 @@
 
 .footer {
-    @extend .small;
     padding-top: $spacer;
     padding-bottom: $spacer;
-    text-align: center;
+    border-top: 1px solid $gray-lightest;
     color: $gray-light;
+}
+
+.footer__copyright {
+    &,
+    small {
+        @extend .mini;
+    }
+
+    @media ($screen-md) {
+        text-align: right;
+    }
 }

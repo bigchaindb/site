@@ -1,16 +1,56 @@
 
 .menu {
+    position: relative;
+    z-index: 10;
+
+    .grid__col {
+        text-align: center;
+
+        @media ($screen-md) {
+            text-align: left;
+
+            &:last-child { text-align: right; }
+        }
+    }
 }
 
 .menu__link {
     @extend .small;
     display: inline-block;
-    padding: $spacer;
+    padding: ($spacer * 1.5) $spacer;
     text-transform: uppercase;
+
+    // link line
+    &:after {
+        content: "";
+        height: 2px;
+        width: 30px;
+        background: #fff;
+        display: block;
+        margin: ($spacer / 3) auto 0 auto;
+        // hidden by default
+        transform: scale(0);
+        transform-origin: center;
+        transition: transform .2s ease-out;
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+        // show link line
+        &:after { transform: scale(1); }
+    }
 }
 
 .menu__logo {
     display: block;
+    margin-top: $spacer;
+
+    @media ($screen-md) {
+        display: inline-block;
+        margin-top: 0;
+    }
+
     svg {
         @extend .transition;
         fill: #fff;
@@ -29,47 +69,50 @@
 // in front page hero or page headers
 //
 .menu--main {
-    position: absolute;;
-    left: 0;
-    right: 0;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-    height: 60px;
+    .menu__logo {
+        @media ($screen-md) {
+            padding: ($spacer/1.2) 0 ($spacer * 1.5) 0;
+        }
+    }
 
     .menu__link {
         color: #fff;
         opacity: .8;
 
-        // link line
-        &:after {
-            content: "";
-            height: 2px;
-            width: 30px;
-            background: #fff;
-            display: block;
-            margin: ($spacer / 3) auto 0 auto;
-            // hidden by default
-            transform: scale(0);
-            transform-origin: center;
-            transition: transform .2s ease-out;
-        }
-
         &:hover,
         &:focus,
         &.active {
             opacity: 1;
-
-            // show link line
-            &:after { transform: scale(1); }
         }
     }
 }
 
+
+//
+// Footer Menu
+//
 .menu--footer {
-    @extend .text-center;
+    .logo {
+        fill: $gray;
+        opacity: 1;
+        height: 9px;
+    }
 
     .menu__link {
+        @extend .mini;
         padding: $spacer ($spacer/1.5);
+        color: $gray;
+
+        // link line
+        &:after {
+            background: $link-color;
+        }
+
+        &:first-child { padding-left: 0; }
+        &:last-child { padding-right: 0; }
+
+        &:hover,
+        &:focus,
+        &.active { color: $link-color; }
     }
 }
