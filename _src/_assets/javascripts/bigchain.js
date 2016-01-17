@@ -28,4 +28,18 @@ jQuery(function($) {
         }
     );
 
+
+    //
+    // Automatically add header links to all Markdown headings
+    //
+    $('.content--page--markdown h1, .content--page--markdown h2').each(function(i, el) {
+        var $el, icon, id;
+        $el = $(el);
+        id = $el.attr('id');
+        icon = '<i class="header-icon">#</i>';
+        if (id) {
+        return $el.prepend($('<a />').addClass('header-link').attr('href', '#' + id).html(icon));
+        }
+    });
+
 });
