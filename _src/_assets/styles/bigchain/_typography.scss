@@ -22,6 +22,12 @@ body {
     color: $text-color;
     background-color: $body-bg;
 
+    // handling long text, like URLs
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+
     text-rendering: optimizeLegibility;
     // Controversial! But prevents text flickering in
     // Safari/Firefox when animations are running
