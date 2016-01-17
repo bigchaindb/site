@@ -25,7 +25,14 @@ permalink:              /:title/
 
 # Content Parsing
 # --------------------
-markdown:               redcarpet
+#markdown:               kramdown
+
+kramdown:
+    input: GFM
+    extensions:
+        - autolink
+        - footnotes
+        - smart
 
 redcarpet:
     extensions:         ['autolink', 'smart', 'hard_wrap', 'with_toc_data']

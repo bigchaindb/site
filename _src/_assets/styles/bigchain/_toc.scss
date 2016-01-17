@@ -1,0 +1,38 @@
+
+.toc {
+    &,
+    ol { counter-reset: item;}
+
+    &,
+    li { padding-left: 0; }
+
+    &:before {
+        @extend .h1;
+        content: "Table Of Contents";
+        display: block;
+        border-bottom: 2px solid $gray-lightest;
+        padding-bottom: $spacer;
+        margin-bottom: ($spacer * 2);
+        text-align: center;
+    }
+
+    li,
+    ol { margin: 0; }
+
+    li {
+        display: block;
+        
+        // custom numbers
+        &:before {
+            content: counters(item, ".") " ";
+            counter-increment: item;
+            margin-right: $spacer;
+            color: $gray;
+        }
+    }
+}
+
+// output by Kramdown
+#markdown-toc {
+    @extend .toc;
+}
