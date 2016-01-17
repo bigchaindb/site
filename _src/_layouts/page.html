@@ -24,3 +24,12 @@ layout: base
     {% endif %}
 
 </section>
+
+{% if page.comments %}
+    <footer class="comments">
+        <div class="row">
+            <h1 id="comments">Comments</h1>
+            <div id="disqus_thread"></div>
+        </div>
+    </footer>
+{% endif %}

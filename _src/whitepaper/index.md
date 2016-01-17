@@ -2,6 +2,8 @@
 layout: page
 
 title: 'Bigchain: A Scalable Blockchain Database'
+
+comments: true
 ---
 
 Trent McConaghy, Rodolphe Marques, Andreas Müller
