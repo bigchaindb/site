@@ -4,6 +4,8 @@ main:
       url: /features/
     - title: Whitepaper
       url: /whitepaper/
+    - title: Community
+      url: /community/
     - title: Docs
       url: /docs/
 

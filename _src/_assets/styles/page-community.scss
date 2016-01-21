@@ -1,0 +1,19 @@
+//
+// Page: Community
+// ---
+// bigchain.io
+//
+
+.section-community,
+.section-conduct {
+    @extend .text-center;
+}
+
+.section-community {
+
+    .grid h1 { @extend .h3; }
+}
+
+.section-conduct {
+    @extend .background--light;
+}
