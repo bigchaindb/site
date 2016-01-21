@@ -45,18 +45,6 @@
     margin: 0 ($spacer / 4);
 
     .icon {
-        @extend .transition;
-        width: 1rem;
-        height: 1rem;
-        stroke: none;
         fill: rgba($link-color, .4);
-    }
-
-    &:hover,
-    &:focus {
-        .icon--twitter  { fill: #55acee }
-        .icon--facebook { fill: #3b5998 }
-        .icon--linkedin { fill: #0077b5 }
-        .icon--github   { fill: #4183c4 }
     }
 }

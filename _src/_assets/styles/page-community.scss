@@ -3,6 +3,12 @@
 // ---
 // bigchain.io
 //
+.page-community {
+    .header {
+        background: url('../img/photo2.jpg') no-repeat center top;
+        background-size: cover;
+    }
+}
 
 .section-community,
 .section-conduct {
@@ -10,6 +16,8 @@
 }
 
 .section-community {
+    @extend .background--light;
+
     .grid h1 { @extend .h3; }
 
     .icon--social {
@@ -19,5 +27,31 @@
 }
 
 .section-conduct {
-    @extend .background--light;
+    position: relative;
+
+    // background
+    background: url('../img/photo1.jpg') no-repeat center top;
+    background-size: cover;
+
+    // color overlay
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(to top left, $brand-main-blue 0%, $brand-main-brown 100%);
+        opacity: .7;
+        z-index: 0;
+    }
+
+    .row { z-index: 1 }
+
+    .section-title,
+    .section-description {
+        color: #fff;
+    }
 }
