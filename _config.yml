@@ -12,6 +12,11 @@ email:
 twitter:                BigchainDB
 disqus:                 bigchain
 
+address:
+    street:             Wichertstr. 17
+    zip:                10439
+    city:               Berlin
+    country:            Germany
 
 # Track all the things
 # --------------------

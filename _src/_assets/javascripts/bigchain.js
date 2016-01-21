@@ -8,6 +8,7 @@
 //=include bigchain/dnt.js
 
 //=include bigchain/form-earlyaccess.js
+//=include bigchain/form-contact.js
 
 jQuery(function($) {
 
