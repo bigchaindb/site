@@ -9,3 +9,21 @@
     width: 60px;
     height: 60px;
 }
+
+.icon--social {
+    @extend .transition;
+    width: 1rem;
+    height: 1rem;
+    stroke: none;
+    fill: rgba($link-color, .4);
+}
+
+a {
+    &:hover,
+    &:focus {
+        .icon--twitter  { fill: #55acee }
+        .icon--facebook { fill: #3b5998 }
+        .icon--linkedin { fill: #0077b5 }
+        .icon--github   { fill: #4183c4 }
+    }
+}

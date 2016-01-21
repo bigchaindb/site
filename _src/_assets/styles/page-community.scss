@@ -10,8 +10,12 @@
 }
 
 .section-community {
-
     .grid h1 { @extend .h3; }
+
+    .icon--social {
+        width: 2rem;
+        height: 2rem;
+    }
 }
 
 .section-conduct {
