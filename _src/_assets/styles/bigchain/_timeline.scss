@@ -1,0 +1,58 @@
+//
+// Timeline
+// ---
+// bigchain.io
+//
+
+.timeline {
+    position: relative;
+
+    // actual timeline line
+    &:before {
+        @media ($screen-sm) {
+            content: "";
+            width: 400%;
+            margin-left: -200%;
+            height: 1px;
+            display: block;
+            background: #fff;
+            position: absolute;
+            bottom: 2.4rem;
+        }
+    }
+}
+
+.timeline__entry {
+    text-align: center;
+}
+
+.timeline__entry__title,
+.timeline__entry__time {
+    display: block;
+}
+
+.timeline__entry__title {
+    @extend .h4;
+    color: #fff;
+
+    // data point
+    &:after {
+        content: "";
+        width: .5rem;
+        height: .5rem;
+        border-radius: 50%;
+        margin: $spacer auto;
+        display: block;
+        background: #fff;
+    }
+}
+
+.timeline__entry__time {
+    @extend .small;
+    opacity: .5;
+}
+
+
+.timeline__entry--future {
+    opacity: .7;
+}
