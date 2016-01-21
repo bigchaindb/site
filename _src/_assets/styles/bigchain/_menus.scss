@@ -17,8 +17,12 @@
 .menu__link {
     @extend .small;
     display: inline-block;
-    padding: ($spacer * 1.5) $spacer;
+    padding: $spacer;
     text-transform: uppercase;
+
+    @media ($screen-md) {
+        padding: ($spacer * 1.5) $spacer;
+    }
 
     // link line
     &:after {
@@ -92,6 +96,13 @@
 // Footer Menu
 //
 .menu--footer {
+
+    .menu__logo {
+        margin-bottom: $spacer;
+
+        @media ($screen-md) { margin-bottom: 0 }
+    }
+
     .logo {
         fill: $gray;
         opacity: 1;
@@ -100,7 +111,7 @@
 
     .menu__link {
         @extend .mini;
-        padding: $spacer ($spacer/2);
+        padding: ($spacer/2);
         color: $gray;
 
         // link line

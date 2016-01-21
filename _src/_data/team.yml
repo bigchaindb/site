@@ -3,7 +3,6 @@
   position: CEO
   image:    team-bruce.jpg
   twitter:  BrucePon
-  facebook: bruce.pon
   linkedin: ponbruce
 
 - name:     Trent McConaghy
@@ -13,6 +12,12 @@
   facebook: trent.mcconaghy
   linkedin: trentmc
   github:   trentmc
+
+- name:     Greg McMullen
+  position: CPO
+  image:    team-greg.jpg
+  twitter:  gmcmullen
+  linkedin: gregmcm
 
 - name:     Andreas Müller
   position: Databases
@@ -28,3 +33,17 @@
   position: Developer
   image:    team-troy.jpg
   twitter:  TroyMc
+
+- name:     Dimitri de Jonge
+  position: Developer
+  image:    team-dimitri.jpg
+  twitter:  DimitriDeJonghe
+  facebook: dimitri.jonghe
+  github:   diminator
+  linkedin: dimitridejonghe
+
+- name:     Alberto Granzotto
+  position: Developer
+  image:    team-alberto.jpg
+  twitter:  vrde
+  github:   vrde
