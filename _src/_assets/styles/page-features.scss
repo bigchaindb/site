@@ -1,6 +1,6 @@
 
 .section-difference {
-    @extend .background--gray;
+
 }
 
 .difference {
@@ -18,8 +18,6 @@
 
 .difference__text {
     flex: 0 0 80%;
-
-    .section-difference & { color: #fff; }
 }
 
 
@@ -40,7 +38,7 @@
         top: 0;
         bottom: 0;
         right: 0;
-        background: linear-gradient(to top left, $brand-main-blue 0%, $brand-main-brown 100%);
+        background: linear-gradient(to top left, $brand-main-blue 0%, $brand-main-violet 100%);
         opacity: .7;
         z-index: 0;
     }

@@ -10,7 +10,7 @@
         @extend .h1;
         content: "Table Of Contents";
         display: block;
-        border-bottom: 2px solid $gray-lightest;
+        border-bottom: 1px solid $brand-main-blue-light;
         padding-bottom: $spacer;
         margin-bottom: ($spacer * 2);
         text-align: center;
@@ -21,7 +21,7 @@
 
     li {
         display: block;
-        
+
         // custom numbers
         &:before {
             content: counters(item, ".") " ";

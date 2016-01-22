@@ -5,20 +5,22 @@
 primary:
     - name: brand-main-blue
       hex: 275B82
+    - name: brand-main-violet
+      hex: D98FD9
     - name: brand-main-blue-dark
       hex: 101A25
+    - name: brand-main-blue-light
+      hex: BFE6EC
     - name: brand-main-gray
       hex: 70859B
-    - name: brand-main-brown
-      hex: B56D00
-    - name: brand-main-light
-      hex: FFFFFF
 
 
 #
 # Grays
 #
 grays:
+    - name: gray-darker
+      hex: 2f3943
     - name: gray-dark
       hex: 445261
     - name: gray

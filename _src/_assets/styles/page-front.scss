@@ -6,7 +6,6 @@
 
 .section-features {
     text-align: center;
-    border-bottom: 1px solid lighten($brand-main-gray, 40%);
 
     figure {
         display: block;
@@ -18,7 +17,6 @@
         display: block;
         margin: auto;
         margin-bottom: $spacer;
-        stroke: $brand-main-gray;
     }
 }
 

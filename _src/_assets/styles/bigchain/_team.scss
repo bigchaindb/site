@@ -23,11 +23,11 @@
     // the bottom line
     &:after {
         content: "";
-        height: 2px;
+        height: 1px;
         width: 3rem;
         display: block;
         margin: ($spacer / 2) auto;
-        background: $gray-lightest;
+        background: $brand-main-blue-light;
     }
 }
 

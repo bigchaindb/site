@@ -3,6 +3,8 @@
     padding-top: ($spacer * 2);
     padding-bottom: ($spacer * 2);
 
+    &:last-child { border-bottom: none; }
+
     // use this so animated elements coming in from outside of screen
     // don't affect layout
     overflow: hidden;
@@ -43,17 +45,16 @@
     // the bottom line
     &:after {
         content: "";
-        height: 2px;
+        height: 1px;
         width: 5rem;
         display: block;
         margin: ($spacer * 2) auto 0 auto;
-        background: $gray-lighter;
+        background: $gray;
     }
 }
 
 .section-description {
     font-size: $font-size-lg;
-    color: $headings-color;
     margin-bottom: 0;
 
     + .section-description {
@@ -76,32 +77,22 @@
 // Section backgrounds
 //
 .background--blue {
-    background: $brand-main-blue; // fallback
-    background: linear-gradient(to bottom right, $brand-main-blue 0%, lighten($brand-main-blue, 10%) 100%);
-
-    .section-title,
-    .section-description { color: #fff }
+    background: $brand-main-blue;
 }
 
-.background--dark {
-    background: $brand-main-blue-dark; // fallback
-    background: linear-gradient(to bottom right, $brand-main-blue-dark 0%, lighten($brand-main-blue-dark, 10%) 100%);
-
-    .section-title,
-    .section-description { color: #fff }
+.background--darker {
+    background: $gray-darker;
 }
 
 .background--light {
-    background: $gray-lightest; // fallback
-    background: linear-gradient(to bottom right, $gray-lightest 0%, lighten($gray-lightest, 10%) 100%);
+    background: $gray-lightest;
+
+    .section-title,
+    p {
+        color: $gray;
+    }
 }
 
 .background--gray {
-    background: $brand-main-gray; // fallback
-    background: linear-gradient(to bottom right, $brand-main-gray 0%, lighten($brand-main-gray, 10%) 100%);
-
-    .section-title,
-    .section-description,
-    .form-control,
-    .form-label { color: #fff }
+    background: $brand-main-gray;
 }

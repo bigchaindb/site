@@ -9,7 +9,7 @@ sitemap: false
 
 ### Primary
 
-<div class="grid grid--gutters grid--full grid-medium--fit">
+<div class="grid grid--gutters grid--full grid-medium--third">
     {% for color in site.data.colors.primary %}
     <div class="grid__col">
         <div class="color {{ color.name }}">
@@ -22,7 +22,7 @@ sitemap: false
 
 ### Grays
 
-<div class="grid grid--gutters grid--full grid-medium--fit">
+<div class="grid grid--gutters grid--full grid-medium--third">
     {% for color in site.data.colors.grays %}
     <div class="grid__col">
         <div class="color {{ color.name }}">
@@ -35,7 +35,7 @@ sitemap: false
 
 ### Errors
 
-<div class="grid grid--gutters grid--full grid-medium--fit">
+<div class="grid grid--gutters grid--full grid-medium--third">
     {% for color in site.data.colors.errors %}
     <div class="grid__col">
         <div class="color {{ color.name }}">
