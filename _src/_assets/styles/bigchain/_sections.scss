@@ -96,3 +96,22 @@
 .background--gray {
     background: $brand-main-gray;
 }
+
+
+//
+// Photo background
+//
+.background--photo {
+    @extend .color-overlay;
+    text-shadow: 0 1px 0 rgba(0,0,0,.1);
+
+    // background
+    background: url('../img/photo1.jpg') no-repeat center top;
+    background-size: cover;
+
+    .section-title,
+    .section-description,
+    .header__title {
+        //color: #fff;
+    }
+}

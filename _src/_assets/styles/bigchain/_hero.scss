@@ -7,10 +7,10 @@
 $menu-height-md: 73px;
 
 .hero {
+    @extend .background--photo;
     text-align: center;
     overflow: hidden;
     position: relative;
-    text-shadow: 0 1px 0 rgba(0,0,0,.1);
 
     .section {
         @media ($screen-md) {
@@ -18,27 +18,7 @@ $menu-height-md: 73px;
         }
     }
 
-    // background
-    background: url('../img/photo1.jpg') no-repeat center bottom;
-    background-size: cover;
-
-    // color overlay
-    &:before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        background: linear-gradient(to top left, $gray-dark 0%, $gray 100%);
-        opacity: .7;
-        z-index: 0;
-    }
-
     .logo--full {
-        fill: #fff;
         fill-opacity: .8;
         margin: auto;
         max-width: 31em;
@@ -50,7 +30,6 @@ $menu-height-md: 73px;
     }
 
     .section-title {
-        color: #fff;
         margin-bottom: $spacer;
 
         &:after { display: none }
