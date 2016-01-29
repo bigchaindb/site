@@ -19,7 +19,7 @@
     "jquery": "^2.1.4",
     "parsleyjs": "^2.0.7",
     "svg4everybody": "^2.0.0",
-    "fira": "kremalicious/Fira"
+    "fira": "mozilla/Fira"
   },
   "devDependencies": {
     "browser-sync": ">=2.10.0",
