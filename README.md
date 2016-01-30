@@ -1,6 +1,6 @@
-# bigchain.io
+# BigchainDB
 
-> Landing page for www.bigchain.io
+> Landing page for BigchainDB
 
 [Live](https://www.bigchain.io) | [Beta](https://beta.bigchain.io) | [Styleguide](https://www.bigchain.io/styleguide/)
 
