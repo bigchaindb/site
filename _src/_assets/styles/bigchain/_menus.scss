@@ -105,11 +105,14 @@
     .menu__logo {
         margin-bottom: $spacer;
 
-        @media ($screen-md) { margin-bottom: 0 }
+        &:hover,
+        &:focus {
+            .logo { fill: $brand-primary }
+        }
     }
 
     .logo {
-        fill: $gray;
+        fill: $gray-light;
         opacity: 1;
         height: 9px;
     }
@@ -117,11 +120,11 @@
     .menu__link {
         @extend .mini;
         padding: ($spacer/2);
-        color: $gray;
+        color: $gray-light;
 
         // link line
         &:after {
-            background: $link-color;
+            background: $brand-primary;
         }
 
         &:first-child { padding-left: 0; }
@@ -129,6 +132,6 @@
 
         &:hover,
         &:focus,
-        &.active { color: $link-color; }
+        &.active { color: $brand-primary; }
     }
 }

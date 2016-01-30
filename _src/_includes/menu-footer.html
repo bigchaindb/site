@@ -1,12 +1,7 @@
 <nav class="menu menu--footer">
+
     <div class="grid grid--full grid-medium--half">
         <div class="grid__col">
-            <a class="menu__logo" href="/">
-                <svg class="logo logo--sm" aria-labelledby="title">
-                    <title>Logo</title>
-                    <use xlink:href="/assets/img/sprite.svg#logo"></use>
-                </svg>
-            </a>
             {% for link in site.data.menus.main %}
 
                 {% assign active = nil %}
@@ -18,6 +13,7 @@
 
             {% endfor %}
         </div>
+
         <div class="grid__col">
             {% for link in site.data.menus.footer %}
 
@@ -31,4 +27,5 @@
             {% endfor %}
         </div>
     </div>
+
 </nav>
