@@ -43,8 +43,15 @@
 .team__social__link {
     display: inline-block;
     margin: 0 ($spacer / 4);
+    box-shadow: none;
+
+    &,
+    &:hover,
+    &:focus {
+        background: transparent;
+    }
 
     .icon {
-        fill: rgba($link-color, .4);
+        fill: $brand-primary;
     }
 }

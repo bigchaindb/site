@@ -55,10 +55,12 @@ a {
     @extend .transition;
     color: $link-color;
     text-decoration: none;
+    box-shadow: inset 0 -2px 0 $brand-primary;
 
     &:hover,
     &:focus {
         color: $link-hover-color;
+        background: $link-hover-bg;
     }
 
     &:active {}

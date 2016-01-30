@@ -21,25 +21,7 @@
 }
 
 .section-whitepaper {
-
-    a {
-        @extend .transition;
-        display: block;
-        text-align: center;
-
-        &:hover,
-        &:focus {
-            transform: scale(1.05);
-        }
-    }
-
-    .icon {
-        stroke: $link-color;
-        stroke-width: 2;
-        display: block;
-        margin: auto;
-        margin-bottom: $spacer;
-    }
+    @extend .text-center;
 }
 
 

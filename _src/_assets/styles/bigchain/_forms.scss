@@ -48,6 +48,10 @@
     &:disabled {
         cursor: disabled;
     }
+
+    .background--photo & {
+        border-bottom-color: rgba(#fff, .5);
+    }
 }
 
 
@@ -67,6 +71,10 @@
     font-size: $font-size-base;
     line-height: $line-height;
     color: $input-color-placeholder;
+
+    .background--photo & {
+        color: rgba(#fff, .5);
+    }
 }
 
 .form-control {

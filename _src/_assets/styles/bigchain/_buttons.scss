@@ -16,11 +16,12 @@
     cursor: pointer;
     user-select: none;
     border: none;
+    box-shadow: none;
     @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height, $btn-border-radius);
 
     &:hover,
     &:focus {
-        box-shadow: 0 1px 3px rgba($brand-main-blue-dark, .15);
+        box-shadow: 0 1px 4px rgba($brand-main-blue-dark, .4);
         transform: translateY(-1px);
     }
 
@@ -29,13 +30,20 @@
         background-image: none;
         outline: 0;
         transform: translateY(0);
-        box-shadow: 0 1px 3px rgba($brand-main-blue-dark, .05);
+        box-shadow: 0 1px 2px rgba($brand-main-blue-dark, .3);
     }
     &.disabled,
     &:disabled {
         cursor: disabled;
         opacity: 0.65;
         box-shadow: none;
+    }
+
+    .icon {
+        width: $font-size-base;
+        height: $font-size-base;
+        margin-right: .25rem;
+        margin-bottom: -1px;
     }
 }
 
@@ -67,25 +75,6 @@ fieldset[disabled] a.btn {
     @include button-variant($btn-danger-color, $btn-danger-bg);
 }
 
-// Remove all backgrounds
-.btn-primary-outline {
-    @include button-outline-variant($btn-primary-bg);
-}
-.btn-secondary-outline {
-    @include button-outline-variant($btn-secondary);
-}
-.btn-info-outline {
-    @include button-outline-variant($btn-info-bg);
-}
-.btn-success-outline {
-    @include button-outline-variant($btn-success-bg);
-}
-.btn-warning-outline {
-    @include button-outline-variant($btn-warning-bg);
-}
-.btn-danger-outline {
-    @include button-outline-variant($btn-danger-bg);
-}
 
 //
 // Link buttons
@@ -108,11 +97,12 @@ fieldset[disabled] a.btn {
     &:active {
         border-color: transparent;
         box-shadow: none;
-
+        background: none;
     }
     &:disabled {
     }
 }
+
 
 //
 // Button Sizes
@@ -120,14 +110,29 @@ fieldset[disabled] a.btn {
 .btn-lg {
     // line-height: ensure even-numbered height of button next to large input
     @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
+
+    .icon {
+        width: $font-size-lg;
+        height: $font-size-lg;
+    }
 }
 .btn-sm {
     // line-height: ensure proper height of button next to small input
     @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+
+    .icon {
+        width: $font-size-sm;
+        height: $font-size-sm;
+    }
 }
 .btn-xs {
     // line-height: ensure proper height of button next to small input
     @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-xs, $line-height-xs, $btn-border-radius-xs);
+
+    .icon {
+        width: $font-size-xs;
+        height: $font-size-xs;
+    }
 }
 
 //

@@ -2,7 +2,7 @@
 // Button variants
 //
 @mixin button-variant($color, $background) {
-    $active-background: darken($background, 5%);
+    $active-background: lighten($background, 5%);
     color: $color !important;
     background: $background;
 
@@ -13,7 +13,7 @@
     }
     &:active {
         color: $color !important;
-        background: darken($background, 10%);
+        background: darken($background, 2%);
         transition: none;
     }
     &.disabled,
@@ -22,31 +22,8 @@
             background-color: $background;
         }
     }
-}
-@mixin button-outline-variant($color) {
-    color: $color;
-    background-image: none;
-    background-color: transparent;
-    border: 1px solid $color;
 
-    &:hover,
-    &:focus {
-        background-color: $color;
-        border-color: $color;
-        color: #fff;
-    }
-
-    &:active {
-        background-color: darken($color, 10%);
-        border-color: darken($color, 10%);
-    }
-
-    &.disabled,
-    &:disabled {
-        &:focus {
-            border-color: lighten($color, 20%);
-        }
-    }
+    .icon { fill: $color; }
 }
 
 // Button sizes

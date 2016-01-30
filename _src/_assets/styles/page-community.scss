@@ -5,8 +5,8 @@
 //
 .page-community {
     .header {
-        background: url('../img/photo2.jpg') no-repeat center top;
-        background-size: cover;
+        background-image: url('../img/photo2.jpg');
+        background-position: center top;
     }
 }
 
@@ -17,11 +17,6 @@
 
 .section-community {
     .grid h1 { @extend .h3; }
-
-    .icon--social {
-        width: 2rem;
-        height: 2rem;
-    }
 }
 
 .section-conduct {
