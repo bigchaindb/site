@@ -20,7 +20,7 @@
                         {% assign active = 'active' %}
                     {% endif %}
 
-                    <a class="menu__link" class="{{ active }}" href="{{ link.url }}">{{ link.title }}</a>
+                    <a class="menu__link {{ active }}" href="{{ link.url }}">{{ link.title }}</a>
 
                 {% endfor %}
 
