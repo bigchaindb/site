@@ -5,9 +5,9 @@
     "name": "Matthias Kretschmann",
     "email": "m@kretschmann.io"
   },
-  "description": "Landing page for www.bigchain.io",
-  "homepage": "http://www.bigchain.io",
-  "license": "(c) 2015 ascribe - All Rights Reserved",
+  "description": "Landing page for BigchainDB",
+  "homepage": "https://www.bigchaindb.com",
+  "license": "(c) 2016 ascribe - All Rights Reserved",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
