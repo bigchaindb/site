@@ -15,15 +15,11 @@
     width: 1rem;
     height: 1rem;
     stroke: none;
-    fill: $link-color;
+    fill: $text-color;
+    margin-bottom: -2px;
 }
 
-a {
-    &:hover,
-    &:focus {
-        .icon--twitter  { fill: #55acee }
-        .icon--facebook { fill: #3b5998 }
-        .icon--linkedin { fill: #0077b5 }
-        .icon--github   { fill: #4183c4 }
-    }
+.icon--sm {
+    width: .5rem;
+    height: .5rem;
 }

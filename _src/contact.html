@@ -5,21 +5,34 @@ title: Contact
 ---
 
 <section class="section section-contactform">
-    <div class="row">
+    <div class="row row--wide">
         <header class="section-header">
             <h1 class="section-title">Get in touch</h1>
         </header>
 
-        <div class="grid grid--full grid-small--columns grid--gutters">
+        <div class="grid grid--full grid-medium--columns grid--gutters">
             <div class="grid__col grid__col--4">
                 {% include/form-contact.html %}
             </div>
             <div class="grid__col grid__col--2">
-                <div class="contactlist">
-                    <p>{{ site.address.street }}</p>
-                    <p>{{ site.address.zip }} {{ site.address.city }}</p>
-                    <p>{{ site.address.country }}</p>
-                    <p>{{ site.email.contact }}</p>
+                <div class="h-card contactlist">
+                    <p><strong class="p-name p-org">{{ site.name }}</strong></p>
+
+                    <div class="p-adr">
+                        <p class="p-street-address">{{ site.address.street }}</p>
+                        <p><span class="p-postal-code">{{ site.address.zip }}</span> <span class="p-locality">{{ site.address.city }}</span></p>
+                        <p class="p-country-name">{{ site.address.country }}</p>
+                    </div>
+
+                    <p><a class="u-url" href="{{ site.url }}">{{ site.url | remove: 'https://' }}</a></p>
+                    <p><a class="u-email" href="mailto:{{ site.email.contact }}">{{ site.email.contact }}</a></p>
+
+                    <p class="social">
+                        <a href="https://twitter.com/{{ site.twitter }}">
+                            <svg class="icon icon--social icon--twitter"><use xlink:href="/assets/img/sprite.svg#twitter"></use></svg>
+                            Twitter
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
