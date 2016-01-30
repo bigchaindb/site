@@ -10,11 +10,11 @@ title: Contact
             <h1 class="section-title">Get in touch</h1>
         </header>
 
-        <div class="grid grid--full grid-small--fit grid--gutters">
-            <div class="grid__col">
+        <div class="grid grid--full grid-small--columns grid--gutters">
+            <div class="grid__col grid__col--4">
                 {% include/form-contact.html %}
             </div>
-            <div class="grid__col">
+            <div class="grid__col grid__col--2">
                 <div class="contactlist">
                     <p>{{ site.address.street }}</p>
                     <p>{{ site.address.zip }} {{ site.address.city }}</p>
