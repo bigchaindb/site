@@ -2,7 +2,7 @@
 
 > Landing page for BigchainDB
 
-[Live](https://www.bigchain.io) | [Beta](https://beta.bigchain.io) | [Styleguide](https://www.bigchain.io/styleguide/)
+[Live](https://www.bigchaindb.com) | [Beta](https://beta.bigchaindb.com) | [Styleguide](https://www.bigchaindb.com/styleguide/)
 
 ## Development
 
