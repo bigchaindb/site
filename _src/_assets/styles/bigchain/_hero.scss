@@ -20,25 +20,29 @@ $menu-height-md: 73px;
 
     .logo--full {
         fill-opacity: .8;
-        margin: auto;
+        margin: 0 auto;
         max-width: 31em;
-
-        @media ($screen-sm) {
-            margin-top: -$menu-height-md;
-            margin-bottom: ($spacer * 2);
-        }
     }
 
     .section-title {
-        margin-bottom: $spacer;
+        color: #fff;
 
         &:after { display: none }
     }
 
     .btn {
         color: #fff;
-        margin-top: ($spacer * 4);
         opacity: .8;
+        position: absolute;
+        bottom: ($spacer * 3);
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: none;
+
+        @media ($screen-lg) {
+            display: block;
+        }
 
         &:hover,
         &:focus { opacity: 1; }
@@ -85,4 +89,59 @@ $menu-height-md: 73px;
 .hero__content {
     position: relative;
     z-index: 1;
+}
+
+
+//
+// Video hero
+//
+.hero-video {
+    background: #000;
+
+    &:before { display: none; }
+}
+
+.hero-video .menu,
+.hero-video__content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.hero-video__content {
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+// video container
+.hero-video__background {
+    @extend .color-overlay;
+    max-height: 100vh;
+
+    &:before {
+        opacity: .5;
+    }
+
+    z-index: 0;
+
+    // poster image
+    background: url('../img/hero-video-poster.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+// the video itself
+.hero-video__video {
+    @extend .img--responsive;
+
+    // smoothly fade in when ready
+    @extend .transition;
+    //opacity: 0;
+
+    &.enabled {
+        opacity: 1
+    }
 }

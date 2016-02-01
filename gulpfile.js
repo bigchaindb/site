@@ -224,6 +224,15 @@ gulp.task('fonts', function() {
 
 
 //
+// Copy Videos
+//
+gulp.task('videos', function() {
+    return gulp.src(SRC + '_assets/videos/**/*')
+        .pipe(gulp.dest(DIST + 'assets/videos/'));
+});
+
+
+//
 // Revision static assets
 //
 gulp.task('rev', function() {
@@ -280,6 +289,7 @@ gulp.task('default', ['build', 'server'], function() {
     gulp.watch([SRC + '_assets/javascripts/**/*.js'], ['js', browser.reload]);
     gulp.watch([SRC + '_assets/images/**/*.{png,jpg,jpeg,gif,webp}'], ['images', browser.reload]);
     gulp.watch([SRC + '_assets/images/**/*.{svg}'], ['svg', browser.reload]);
+    gulp.watch([SRC + '_assets/videos/**/*.{mp4,webm}'], ['videos', browser.reload]);
     gulp.watch([SRC + '**/*.{html,xml,json,txt,md,yml}', './_config.yml', SRC + '_includes/svg/*'], ['build', browser.reload]);
 });
 
@@ -299,7 +309,7 @@ gulp.task('build', function(done) {
     runSequence(
         'clean',
         'jekyll',
-        ['html', 'css', 'js', 'images', 'fonts', 'svg'],
+        ['html', 'css', 'js', 'images', 'fonts', 'videos', 'svg'],
         'rev',
         'rev:replace',
         done
