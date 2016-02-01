@@ -34,13 +34,13 @@ $menu-height-md: 73px;
         color: #fff;
         opacity: .8;
         position: absolute;
-        bottom: ($spacer * 3);
+        bottom: ($spacer * 2);
         left: 0;
         right: 0;
         width: 100%;
         display: none;
 
-        @media ($screen-lg) {
+        @media ($screen-md) {
             display: block;
         }
 
@@ -96,52 +96,41 @@ $menu-height-md: 73px;
 // Video hero
 //
 .hero-video {
-    background: #000;
-
-    &:before { display: none; }
+    // poster image
+    background: $brand-main-blue-dark url('../img/hero-video-poster.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 .hero-video .menu,
 .hero-video__content {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 1;
+    @media ($screen-md) {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
 }
 
 .hero-video__content {
-    bottom: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    @media ($screen-md) {
+        z-index: 1;
+        bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 }
 
 // video container
 .hero-video__background {
-    @extend .color-overlay;
-    max-height: 100vh;
-
-    &:before {
-        opacity: .5;
-    }
-
     z-index: 0;
 
-    // poster image
-    background: url('../img/hero-video-poster.jpg') no-repeat center center;
-    background-size: cover;
+    @media ($screen-md) {
+        max-height: 100vh;
+    }
 }
 
 // the video itself
 .hero-video__video {
     @extend .img--responsive;
-
-    // smoothly fade in when ready
-    @extend .transition;
-    //opacity: 0;
-
-    &.enabled {
-        opacity: 1
-    }
 }

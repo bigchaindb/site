@@ -1,77 +1,45 @@
-// the real thing
-function HeroVideo(elm) {
-    var heroVideo = $(elm || '.hero-video__video').get(0);
-    var minWidth = 768;
+var HeroVideo = (function(w, d, $) {
 
-    var pause = function() {
-        heroVideo.pause();
-    };
+    'use strict'
 
-    var play = function() {
-        if (heroVideo.paused) {
-            if (heroVideo.readyState < 4) {
-                heroVideo.load();
+    var app, _private, _config
+
+    _config = {
+        heroVideo: $('.hero-video__video').get(0),
+        minWidth: 720 // $screen-md
+    }
+
+    _private = {
+        play: function() {
+            if ( _config.heroVideo.paused ) {
+                if ( _config.heroVideo.readyState < 4 ) {
+                    _config.heroVideo.load();
+                }
+                _config.heroVideo.play();
+                $(_config.heroVideo).addClass('enabled').removeClass('hide');
             }
-            heroVideo.play();
-        }
-    };
-
-    var enable = function() {
-        $(heroVideo).addClass('enabled');
-    };
-
-    function supportsVideoFormat(video, fmt) {
-        return video && (video.canPlayType('video/' + fmt) !== '');
+        },
+        pause: function() {
+            _config.heroVideo.pause();
+            $(_config.heroVideo).addClass('hide').removeClass('enabled');
+        },
+        isWide: function() {
+            return $(window).width() >= _config.minWidth;
+        },
     }
 
-    function isHTML5VideoSupported() {
-        if (supportsVideoFormat(heroVideo, 'mp4') ||
-            supportsVideoFormat(heroVideo, 'webm')) {
-
-            $.each(['playing'], function(_, eventName) {
-                heroVideo.addEventListener(eventName, enable);
-            });
-
-            return true;
+    app = {
+        init: function() {
+            $(window).on('load resize', function() {
+                if (_private.isWide()) {
+                    _private.play()
+                } else {
+                    _private.pause()
+                }
+            })
         }
     }
 
-    // Check window width helper
-    function isWide() {
-        return $(window).width() >= minWidth;
-    }
+    return app
 
-    function updateVideoState() {
-        if (isWide()) {
-            play();
-        } else {
-            pause();
-            $(heroVideo).removeClass('enabled');
-        }
-    }
-
-    function trackWidth() {
-        $(window).resize(function() {
-            updateVideoState();
-        });
-    }
-
-    if (isHTML5VideoSupported()) {
-        updateVideoState();
-        trackWidth();
-    }
-
-    return {
-        play: play,
-        pause: pause,
-        enable: enable,
-        isWide: isWide,
-        trackWidth: trackWidth
-    };
-}
-
-// fire all the things
-if (HeroVideo().isWide()) {
-    HeroVideo().play();
-}
-HeroVideo().trackWidth();
+})(window, document, jQuery)

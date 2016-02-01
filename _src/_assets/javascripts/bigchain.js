@@ -9,6 +9,7 @@
 
 //=include bigchain/form-earlyaccess.js
 //=include bigchain/form-contact.js
+//=include bigchain/hero-video.js
 
 jQuery(function($) {
 
@@ -18,6 +19,10 @@ jQuery(function($) {
     Forms.init();
     SmoothScroll.init();
     FormEarlyAccess.init();
+
+    if ($('.hero-video').length > 0) {
+        HeroVideo.init();
+    }
 
     if (!_dntEnabled()) {
         GoogleAnalytics.init();
