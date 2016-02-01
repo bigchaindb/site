@@ -17,7 +17,7 @@
 .menu__link {
     @extend .small;
     display: inline-block;
-    padding: $spacer;
+    padding: $spacer ($spacer / 2);
     text-transform: uppercase;
     box-shadow: none;
 
@@ -54,7 +54,6 @@
     box-shadow: none;
 
     @media ($screen-md) {
-        display: inline-block;
         margin-top: 0;
     }
 

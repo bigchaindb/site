@@ -38,8 +38,13 @@
 .row {
     max-width: $screen-md-min;
     margin: auto;
-    padding-left: $gutter-space;
-    padding-right: $gutter-space;
+    padding-left: ($gutter-space / 2);
+    padding-right: ($gutter-space / 2);
+
+    @media ($screen-sm) {
+        padding-left: $gutter-space;
+        padding-right: $gutter-space;
+    }
 }
 
 .row--wide {

@@ -1,8 +1,8 @@
 <nav class="menu menu--main">
     <div class="row row--wide">
 
-        <div class="grid grid--full grid-medium--half grid--center">
-            <div class="grid__col">
+        <div class="grid grid--full grid-medium--columns grid--center">
+            <div class="grid__col grid__col--1">
                 <a class="menu__logo" href="/">
                     <svg class="logo logo--sm" aria-labelledby="title">
                         <title>Logo</title>
@@ -11,7 +11,7 @@
                 </a>
             </div>
 
-            <div class="grid__col">
+            <div class="grid__col grid__col--5">
 
                 {% for link in site.data.menus.main %}
 
