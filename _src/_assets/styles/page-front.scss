@@ -32,10 +32,9 @@
     }
 
     .logo {
-        fill: #fff;
-        fill-opacity: .8;
+        fill-opacity: .6;
         margin: auto;
-        max-width: 31em;
+        max-width: 28em;
 
         @media ($screen-sm) {
             margin-top: -($spacer * 6);
