@@ -55,9 +55,9 @@ var SRC      = '_src/',
     DIST     = '_dist/';
 
 // deployment
-var S3BUCKET         = 'www.bigchain.io',
+var S3BUCKET         = 'www.bigchaindb.com',
     S3REGION         = 'eu-central-1',
-    S3BUCKET_BETA    = 'beta.bigchain.io',
+    S3BUCKET_BETA    = 'beta.bigchaindb.com',
     S3REGION_BETA    = 'eu-central-1';
 
 // SVG sprite

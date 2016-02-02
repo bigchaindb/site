@@ -2,15 +2,14 @@
 
 # The Basics
 # --------------------
-name:                   Bigchain
+name:                   BigchainDB
 description:            'The world’s most scalable blockchain.'
-url:                    http://www.bigchain.io
+url:                    https://www.bigchaindb.com
 
 email:
-    contact:            contact@bigchain.io
+    contact:            contact@bigchaindb.com
 
-twitter:                bigchain
-facebook:               bigchain
+twitter:                BigchainDB
 
 
 # Track all the things
