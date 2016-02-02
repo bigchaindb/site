@@ -49,11 +49,31 @@ sitemap: false
 
 ## Logo
 
+Logo can be used with a base class and modifier classes for size & color:
+
+- `logo`: default logo
+- `logo--sm`: small version
+- `logo--full`: full width version
+- `logo--white`: complete white version
+- `logo--white--green`: white & green version
+
 <svg class="logo logo--sm" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
 
 <svg class="logo" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
 
 <svg class="logo logo--full" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--sm logo--white--green" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--white--green" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--full logo--white--green" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--sm logo--white" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--white" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--full logo--white" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
 
 ```html
 <svg class="logo logo--sm" aria-labelledby="title">
