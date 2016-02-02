@@ -10,7 +10,7 @@
 $brand-main-blue:         #074354 !default;
 $brand-main-blue-light:   #BFE6EC !default;
 $brand-main-blue-dark:    #101A25 !default;
-$brand-main-violet:       #d37cd3 !default;
+$brand-main-green:        #54C695 !default;
 $brand-main-gray:         #70859B !default;
 
 $gray-darker:             darken($brand-main-gray, 25%) !default;
@@ -20,7 +20,7 @@ $gray-light:              lighten($brand-main-gray, 20%) !default;
 $gray-lighter:            lighten($brand-main-gray, 30%) !default;
 $gray-lightest:           lighten($brand-main-gray, 40%) !default;
 
-$brand-primary:           $brand-main-violet !default;
+$brand-primary:           $brand-main-green !default;
 $brand-success:           #388250 !default;
 $brand-info:              #3E91CE !default;
 $brand-warning:           #8E8E24 !default;

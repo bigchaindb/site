@@ -3,16 +3,18 @@
 # Primary
 #
 primary:
+    - name: brand-main-green
+      hex: 54C695
+    - name: gray-dark
+      hex: 445261
+    - name: brand-main-gray
+      hex: 70859B
     - name: brand-main-blue
-      hex: 275B82
-    - name: brand-main-violet
-      hex: d37cd3
+      hex: 074354
     - name: brand-main-blue-dark
       hex: 101A25
     - name: brand-main-blue-light
       hex: BFE6EC
-    - name: brand-main-gray
-      hex: 70859B
 
 
 #
