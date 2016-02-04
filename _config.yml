@@ -30,7 +30,7 @@ permalink:              /:title/
 
 # Content Parsing
 # --------------------
-markdown:               kramdown
+markdown:               redcarpet
 
 kramdown:
     input: GFM
