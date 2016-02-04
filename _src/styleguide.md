@@ -46,7 +46,6 @@ sitemap: false
     {% endfor %}
 </div>
 
-
 ## Logo
 
 Logo can be used with a base class and modifier classes for size & color:
@@ -94,6 +93,10 @@ Logo can be used with a base class and modifier classes for size & color:
 
 
 ## Typography
+
+The main branding typeface is <strong>Noto Sans Regular</strong>, used for all headings and buttons. Noto Sans is open source and free to download and use.
+
+<a class="btn btn-secondary btn-sm" href="http://www.google.com/get/noto/#sans-lgc">Download Noto Sans</a>
 
 ### Body Copy
 
