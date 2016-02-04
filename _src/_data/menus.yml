@@ -1,13 +1,11 @@
 
 main:
-    - title: Features
+    - title: How it works
       url: /features/
     - title: Whitepaper
       url: /whitepaper/
     - title: Community
       url: /community/
-    - title: Docs
-      url: /docs/
 
 footer:
     - title: About

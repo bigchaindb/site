@@ -43,30 +43,45 @@ hero_video_name: northern-light
     </div>
 </section>
 
-<section class="section section-suitable background--darker">
-    <div class="row">
+<section class="section section-getstarted background--darker">
+    <div class="row row--wide">
         <header class="section-header">
-            <h1 class="section-title">Built for</h1>
+            <h1 class="section-title">Get started</h1>
+            <h1 class="section-description">Just clone and run</h1>
         </header>
 
-        <div class="grid grid--full grid-small--fit grid--gutters text-center">
-            <p class="grid__col">
-                Blockchain companies looking to scale or serve their clients
-            </p>
-            <p class="grid__col">
-                Companies experimenting with blockchain technologies
-            </p>
-            <p class="grid__col">
-                Cloud platforms wanting to deploy Blockchain as a Service
-            </p>
+        <div class="grid grid--gutters grid--full grid-medium--columns grid--center">
+            <div class="grid__col grid__col--2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus temporibus nostrum, omnis non dolores repellat! Harum delectus, dolores.</p>
+                <p><a href="">Read documentation</a></p>
+            </div>
+            <div class="grid__col grid__col--4">
+                <figure class="terminal highlight">
+                    <code>
+                        <span class="comment"># clone the repo</span>
+                        <span><span class="ne">git</span> clone <span class="cp">git@github.com:bigchaindb/bigchaindb.git</span></span>
+                        <span><span class="ne">cd</span> bigchaindb/</span>
+                        <span class="comment"># start the database</span>
+                        <span><span class="ne">rethinkdb</span></span>
+                        <span class="comment"># install dependencies</span>
+                        <span><span class="ne">pip</span> install -r requirements.txt && <span class="ne">pip</span> install -e .</span>
+                        <span class="comment"># initialize bigchain</span>
+                        <span><span class="ne">bigchain</span> init</span>
+                    </code>
+                </figure>
+            </div>
         </div>
+
+
+
     </div>
 </section>
 
-<section class="section section-whitepaper">
+<section class="section section-whitepaper background--photo">
     <div class="row">
         <header class="section-header">
             <h1 class="section-title">Whitepaper</h1>
+            <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quisquam doloremque nam quia, voluptate velit nihil</p>
         </header>
 
         <a class="btn btn-primary" href="/whitepaper/">
@@ -75,16 +90,5 @@ hero_video_name: northern-light
             </svg>
             Read our Whitepaper
         </a>
-    </div>
-</section>
-
-<section id="earlyaccess" class="section section-earlyaccess background--photo">
-    <div class="row">
-        <header class="section-header">
-            <h1 class="section-title">Sign Up for Early Access</h1>
-            <p class="section-description">For early access and inquiries, enter your contact information below. A member of our team will contact you.</p>
-        </header>
-
-        {% include/form-earlyaccess.html %}
     </div>
 </section>
