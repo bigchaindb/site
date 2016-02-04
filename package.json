@@ -18,8 +18,7 @@
     "normalize-opentype.css": ">=0.2.4",
     "jquery": "^2.1.4",
     "parsleyjs": "^2.0.7",
-    "svg4everybody": "^2.0.0",
-    "fira": "mozilla/Fira"
+    "svg4everybody": "^2.0.0"
   },
   "devDependencies": {
     "browser-sync": ">=2.10.0",

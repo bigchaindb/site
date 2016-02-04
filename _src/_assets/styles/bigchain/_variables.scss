@@ -30,7 +30,7 @@ $brand-danger:            #c9726a !default;
 //
 // Typography
 //
-$font-family-fira:         'Fira Sans', sans-serif !default;
+$font-family-noto:         'Noto Sans', 'Helvetica Neue', 'Arial', sans-serif  !default;
 $font-family-avenir:       'Avenir Next', 'Helvetica Neue', 'Arial', sans-serif !default;
 $font-family-monospace:     Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:          $font-family-avenir !default;
@@ -57,7 +57,7 @@ $font-size-h6:              0.85rem !default;
 
 $line-height:               1.5 !default;
 
-$headings-font-family:      $font-family-fira !default;
+$headings-font-family:      $font-family-noto !default;
 $headings-font-weight:      $font-weight-normal !default;
 $headings-line-height:      1.2 !default;
 $headings-color:            $brand-main-blue-light !default;
@@ -126,7 +126,7 @@ $pre-scrollable-max-height:     340px !default;
 //
 // Buttons
 //
-$btn-font-family:                $font-family-avenir;
+$btn-font-family:                $font-family-noto;
 $btn-font-weight:                $font-weight-normal !default;
 
 $btn-padding-x:                  2rem !default;

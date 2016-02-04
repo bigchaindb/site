@@ -215,9 +215,7 @@ gulp.task('images', function() {
 // Copy Fonts
 //
 gulp.task('fonts', function() {
-    return gulp.src([
-            './node_modules/fira/**/FiraSans-Regular.{eot,ttf,woff,woff2}'
-        ])
+    return gulp.src(SRC + '_assets/fonts/**/*')
         .pipe($.rename({dirname: ''}))
         .pipe(gulp.dest(DIST + 'assets/fonts/'));
 });
