@@ -62,8 +62,10 @@
     position: absolute;
     top: $input-padding-x;
     left: $input-padding-y;
+    right: $input-padding-y;
     transition: .15s ease-out;
     user-select: none;
+    cursor: text;
 
     // style like placeholder
     font-family: $input-font;
@@ -84,8 +86,9 @@
     &:invalid:not(.is-empty) ~ .form-label,
     &.parsley-error ~ .form-label,
     &.parsley-success ~ .form-label {
-        transform: translate3d(0, -($spacer + $input-padding-x), 0) scale(.75);
-        transform-origin: left top;
+        transform: translate3d(0, -($spacer + $input-padding-x), 0) scale(.7);
+        transform-origin: left;
+        color: $input-border-focus;
     }
 }
 
@@ -98,6 +101,108 @@
     position: relative;
     // make room for floating labels
     margin-top: $spacer;
+}
+
+
+//
+// Checkboxes and radios
+//
+.radio,
+.checkbox {
+    position: relative;
+    display: block;
+    margin-bottom: ($spacer * .75);
+
+    label {
+        padding-left: 1.25rem;
+        margin-bottom: 0;
+        cursor: pointer;
+        // When there's no labels, don't position the input.
+        input:only-child {
+            position: static;
+        }
+    }
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-bottom: -0.25rem;
+    margin-left: -1.25rem;
+    margin-right: 0.25rem;
+
+    // reset styling, then style
+    -webkit-appearance:button;
+    background: none;
+
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    border: 2px solid $input-border-color;
+    outline: none;
+
+    &:focus {
+        border-color: $input-border-focus;
+    }
+
+    &:checked {
+        background: $brand-primary;
+        border-color: $input-border-focus;
+    }
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+    // Move up sibling radios or checkboxes for tighter spacing
+    margin-top: -.25rem;
+}
+
+// Radios and checkboxes on same line
+.radio-inline,
+.checkbox-inline {
+    position: relative;
+    display: inline-block;
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+    margin-top: 0;
+    margin-left: 0.75rem;
+}
+
+// Apply same disabled cursor tweak as for inputs
+// Some special care is needed because <label>s don't inherit their parent's `cursor`.
+//
+// Note: Neither radios nor checkboxes can be readonly.
+input[type="radio"],
+input[type="checkbox"] {
+    &:disabled,
+    &.disabled {
+        cursor: not-allowed;
+    }
+}
+
+// These classes are used directly on <label>s
+.radio-inline,
+.checkbox-inline {
+    &.disabled {
+        cursor: not-allowed;
+    }
+}
+
+// These classes are used on elements with <label> descendants
+.radio,
+.checkbox {
+    &.disabled {
+        label {
+            cursor: not-allowed;
+        }
+    }
 }
 
 
