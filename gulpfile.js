@@ -216,7 +216,7 @@ gulp.task('images', function() {
 //
 gulp.task('fonts', function() {
     return gulp.src([
-            './node_modules/fira/**/FiraSans-Light.{eot,ttf,woff,woff2}'
+            './node_modules/fira/**/FiraSans-Regular.{eot,ttf,woff,woff2}'
         ])
         .pipe($.rename({dirname: ''}))
         .pipe(gulp.dest(DIST + 'assets/fonts/'));
