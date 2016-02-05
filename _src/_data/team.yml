@@ -36,7 +36,7 @@
   image:    team-troy.jpg
   twitter:  TroyMc
 
-- name:     Dimitri de Jonge
+- name:     Dimitri de Jonghe
   position: Developer
   image:    team-dimitri.jpg
   twitter:  DimitriDeJonghe
@@ -49,3 +49,8 @@
   image:    team-alberto.jpg
   twitter:  vrde
   github:   vrde
+
+- name:     Ryan Henderson
+  position: Developer
+  image:    team-ryan.jpg
+  twitter:  rhsimplex
