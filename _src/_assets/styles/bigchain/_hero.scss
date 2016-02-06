@@ -97,7 +97,11 @@ $menu-height-md: 73px;
 // Video hero
 //
 .hero-video {
-
+    // hide color overlay to prevent double overlays
+    // color overlay of hero-video__background will take over
+    @media ($screen-md) {
+        &:before { display: none }
+    }
 }
 
 .hero-video .menu,
