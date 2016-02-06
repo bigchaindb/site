@@ -1,0 +1,2 @@
+
+//=include bigchain/smoothscroll.js

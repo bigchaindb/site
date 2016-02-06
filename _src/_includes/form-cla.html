@@ -1,116 +1,121 @@
 
-<div class="grid grid--full grid-small--half">
-    <div class="grid__col">
-        <a href="#form-cla-individuals">For Individuals</a>
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" href="#individual" data-toggle="tab" role="tab">For Individuals</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#entity" data-toggle="tab" role="tab">For Organizations</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+
+    <div class="tab-pane active" id="#individual" role="tabpanel">
+        <form id="form-cla-individuals" class="form-cla js-parsley" action="//formspree.io/{{ site.email.cla }}" method="POST" accept-charset="UTF-8">
+            <p class="form-group">
+                <input class="form-control" type="text" id="name" name="name" required>
+                <label class="form-label" for="name">Your Name</label>
+            </p>
+            <p class="form-group">
+                <input class="form-control" type="email" id="email" name="_replyto" required>
+                <label class="form-label" for="email">Your Email</label>
+            </p>
+            <p class="form-group">
+                <input class="form-control" type="text" id="org" name="org">
+                <label class="form-label" for="org">Your Organization (if applicable)</label>
+            </p>
+            <p class="form-group">
+                <input class="form-control" type="text" id="github" name="github">
+                <label class="form-label" for="github">Your GitHub Account Name</label>
+            </p>
+            <p class="form-group">
+                <input class="form-control" type="tel" id="phone" name="phone">
+                <label class="form-label" for="phone">Your Phone Number</label>
+            </p>
+            <p class="text-dimmed">
+                Agreed and accepted: By clicking and accepting this Agreement, I represent and warrant that I have authority to bind the entity named above (if applicable) to the terms and conditions of this Agreement.
+            </p>
+            <div class="checkbox">
+                <label class="text-dimmed">
+                    <input type="checkbox" value="agreement" required>
+                    I have read and agree to the terms of this Agreement
+                </label>
+            </div>
+            <p class="form-group">
+                <input class="btn btn-primary" type="submit" value="Send">
+            </p>
+
+            <div class="alert alert-success animation-slide-in-from-bottom hide">
+                <svg class="alert__icon icon icon-success">
+                    <use xlink:href="/assets/img/sprite.svg#icon-success"></use>
+                </svg>
+                <p>
+                    <strong class="alert__title">Great to hear you’re interested!</strong>
+                    We’ll get in touch soon to discuss how we can work together.
+                </p>
+            </div>
+            <div class="alert alert-danger hide">
+                <svg class="alert__icon icon icon-fail">
+                    <use xlink:href="/assets/img/sprite.svg#icon-fail"></use>
+                </svg>
+                <p>
+                    <strong class="alert__title">Ops, there was an error</strong>
+                    Would you mind trying again?
+                </p>
+            </div>
+        </form>
     </div>
-    <div class="grid__col">
-        <a href="#form-cla-entities">For Organizations</a>
+
+    <div class="tab-pane" id="entity" role="tabpanel">
+        <form id="form-cla-entities" class="form-cla js-parsley" action="//formspree.io/{{ site.email.cla }}" method="POST" accept-charset="UTF-8">
+            <p class="form-group">
+                <input class="form-control" type="text" id="org" name="org" required>
+                <label class="form-label" for="org">Name of organization, foundation, company or other entity</label>
+            </p>
+            <p class="form-group">
+                <input class="form-control" type="text" id="name" name="name" required>
+                <label class="form-label" for="name">Contact Person</label>
+            </p>
+            <p class="form-group">
+                <input class="form-control" type="email" id="email" name="_replyto" required>
+                <label class="form-label" for="email">Contact Email Address</label>
+            </p>
+            <p class="form-group">
+                <input class="form-control" type="tel" id="phone" name="phone">
+                <label class="form-label" for="phone">Contact Phone Number</label>
+            </p>
+            <p class="text-dimmed">
+                Agreed and accepted: By clicking and accepting this Agreement, I represent and warrant that I have authority to bind the entity named above (if applicable) to the terms and conditions of this Agreement.
+            </p>
+            <div class="checkbox">
+                <label class="text-dimmed">
+                    <input type="checkbox" value="agreement" required>
+                    I have read and agree to the terms of this Agreement
+                </label>
+            </div>
+            <p class="form-group">
+                <input class="btn btn-primary" type="submit" value="Send">
+            </p>
+
+            <div class="alert alert-success animation-slide-in-from-bottom hide">
+                <svg class="alert__icon icon icon-success">
+                    <use xlink:href="/assets/img/sprite.svg#icon-success"></use>
+                </svg>
+                <p>
+                    <strong class="alert__title">Great to hear you’re interested!</strong>
+                    We’ll get in touch soon to discuss how we can work together.
+                </p>
+            </div>
+            <div class="alert alert-danger hide">
+                <svg class="alert__icon icon icon-fail">
+                    <use xlink:href="/assets/img/sprite.svg#icon-fail"></use>
+                </svg>
+                <p>
+                    <strong class="alert__title">Ops, there was an error</strong>
+                    Would you mind trying again?
+                </p>
+            </div>
+        </form>
     </div>
+
 </div>
-
-<form id="form-cla-individuals" class="form-cla js-parsley" action="//formspree.io/{{ site.email.contact }}" method="POST" accept-charset="UTF-8">
-
-    <p class="form-group">
-        <input class="form-control" type="text" id="name" name="name" required>
-        <label class="form-label" for="name">Your Name</label>
-    </p>
-    <p class="form-group">
-        <input class="form-control" type="email" id="email" name="_replyto" required>
-        <label class="form-label" for="email">Your Email</label>
-    </p>
-    <p class="form-group">
-        <input class="form-control" type="text" id="org" name="org">
-        <label class="form-label" for="org">Your Organization (if applicable)</label>
-    </p>
-    <p class="form-group">
-        <input class="form-control" type="text" id="github" name="github">
-        <label class="form-label" for="github">Your GitHub Account Name</label>
-    </p>
-    <p class="form-group">
-        <input class="form-control" type="tel" id="phone" name="phone">
-        <label class="form-label" for="phone">Your Phone Number</label>
-    </p>
-    <p class="text-dimmed">
-        Agreed and accepted: By clicking and accepting this Agreement, I represent and warrant that I have authority to bind the entity named above (if applicable) to the terms and conditions of this Agreement.
-    </p>
-    <div class="checkbox">
-        <label class="text-dimmed">
-            <input type="checkbox" value="agreement" required>
-            I have read and agree to the terms of this Agreement
-        </label>
-    </div>
-    <p class="form-group">
-        <input class="btn btn-primary" type="submit" value="Send">
-    </p>
-
-    <div class="alert alert-success animation-slide-in-from-bottom hide">
-        <svg class="alert__icon icon icon-success">
-            <use xlink:href="/assets/img/sprite.svg#icon-success"></use>
-        </svg>
-        <p>
-            <strong class="alert__title">Great to hear you’re interested!</strong>
-            We’ll get in touch soon to discuss how we can work together.
-        </p>
-    </div>
-    <div class="alert alert-danger hide">
-        <svg class="alert__icon icon icon-fail">
-            <use xlink:href="/assets/img/sprite.svg#icon-fail"></use>
-        </svg>
-        <p>
-            <strong class="alert__title">Ops, there was an error</strong>
-            Would you mind trying again?
-        </p>
-    </div>
-</form>
-
-
-<form id="form-cla-entities" class="form-cla js-parsley" action="//formspree.io/{{ site.email.contact }}" method="POST" accept-charset="UTF-8">
-
-    <p class="form-group">
-        <input class="form-control" type="text" id="org" name="org" required>
-        <label class="form-label" for="org">Name of organization, foundation, company or other entity</label>
-    </p>
-    <p class="form-group">
-        <input class="form-control" type="text" id="name" name="name" required>
-        <label class="form-label" for="name">Contact Person</label>
-    </p>
-    <p class="form-group">
-        <input class="form-control" type="email" id="email" name="_replyto" required>
-        <label class="form-label" for="email">Contact Email Address</label>
-    </p>
-    <p class="form-group">
-        <input class="form-control" type="tel" id="phone" name="phone">
-        <label class="form-label" for="phone">Contact Phone Number</label>
-    </p>
-    <p class="text-dimmed">
-        Agreed and accepted: By clicking and accepting this Agreement, I represent and warrant that I have authority to bind the entity named above (if applicable) to the terms and conditions of this Agreement.
-    </p>
-    <div class="checkbox">
-        <label class="text-dimmed">
-            <input type="checkbox" value="agreement" required>
-            I have read and agree to the terms of this Agreement
-        </label>
-    </div>
-    <p class="form-group">
-        <input class="btn btn-primary" type="submit" value="Send">
-    </p>
-
-    <div class="alert alert-success animation-slide-in-from-bottom hide">
-        <svg class="alert__icon icon icon-success">
-            <use xlink:href="/assets/img/sprite.svg#icon-success"></use>
-        </svg>
-        <p>
-            <strong class="alert__title">Great to hear you’re interested!</strong>
-            We’ll get in touch soon to discuss how we can work together.
-        </p>
-    </div>
-    <div class="alert alert-danger hide">
-        <svg class="alert__icon icon icon-fail">
-            <use xlink:href="/assets/img/sprite.svg#icon-fail"></use>
-        </svg>
-        <p>
-            <strong class="alert__title">Ops, there was an error</strong>
-            Would you mind trying again?
-        </p>
-    </div>
-</form>

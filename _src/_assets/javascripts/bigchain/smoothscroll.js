@@ -1,81 +1,58 @@
+//
+// https://github.com/bendc/anchor-scroll/blob/master/scroll.min.js
+//
 
-var SmoothScroll = (function(w, d) {
-
-    'use strict';
-
-    var app, _private, _config;
-
-    // workaround for blog
-    var $ = jQuery;
-
-    _config = {
-        win: $(window)
-    },
-
-    _private = {
-
-        scrollToTarget: function() {
-
-            // Check window width helper
-            function isWide() {
-                return _config.win.width() >= _config.minWidth;
-            }
-
-            $("a[href*='#']").not("[href='#'], .nav a[href*='#']").click(function(e) {
-                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-
-                    if (target.length) {
-                        e.preventDefault();
-
-                        if (typeof document.body.style.transitionProperty === 'string') {
-                            var avail = $(document).height() - _config.win.height();
-
-                            scroll = target.offset().top;
-
-                            if (scroll > avail) {
-                                scroll = avail;
-                            }
-
-                            $('html').css({
-                                'transform': 'translate3d(0, ' + ( _config.win.scrollTop() - scroll ) + 'px, 0)',
-                                'transition' : '.6s ease-in-out'
-                            }).data('transitioning', true);
-                        }
-                        else {
-                            // fallback for dumb browsers
-                            $('html, body').animate({
-                                scrollTop: target.offset().top
-                            }, 600);
-                        }
-                    }
-                }
-            });
+document.addEventListener("DOMContentLoaded", function() {
+    var e = function() {
+            if ("scrollingElement" in document) return document.scrollingElement;
+            var a = document.documentElement,
+                b = a.scrollTop;
+            a.scrollTop = b + 1;
+            var c = a.scrollTop;
+            a.scrollTop = b;
+            return c > b ? a : document.body
+        }(),
+        g = function(a) {
+            var b = e.scrollTop;
+            if (2 > a.length) a = -b;
+            else if (a = document.querySelector(a)) {
+                a = a.getBoundingClientRect().top;
+                var c = e.scrollHeight - window.innerHeight;
+                a = b + a < c ? a : c - b
+            } else a = void 0;
+            if (a) return new Map([
+                ["start", b],
+                ["delta", a]
+            ])
         },
-
-        //
-        // remove styles after transition has finished
-        //
-        removeStyles: function() {
-
-            $('html').on('transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd', function (e) {
-                if (e.target == e.currentTarget && $(this).data('transitioning') === true) {
-                    $(this).removeAttr('style').data('transitioning', false);
-                    $('html, body').scrollTop(scroll);
-                    return;
-                }
+        h = function(a) {
+            var b =
+                a.getAttribute("href"),
+                c = g(b);
+            if (c) {
+                var d = new Map([
+                        ["duration", 800]
+                    ]),
+                    k = performance.now();
+                requestAnimationFrame(function l(a) {
+                    d.set("elapsed", a - k);
+                    a = d.get("duration");
+                    var f = d.get("elapsed"),
+                        g = c.get("start"),
+                        h = c.get("delta");
+                    e.scrollTop = Math.round(h * (-Math.pow(2, -10 * f / a) + 1) + g);
+                    d.get("elapsed") < d.get("duration") ? requestAnimationFrame(l) : (history.pushState(null, null, b), e.scrollTop = c.get("start") + c.get("delta"))
+                })
+            }
+        },
+        f = document.querySelectorAll("a.scroll");
+    (function b(c, d) {
+        var e = c.item(d);
+        e.addEventListener("click",
+            function(b) {
+                b.preventDefault();
+                h(e)
             });
-        }
-    };
-
-    app = {
-        init: function() {
-            _private.scrollToTarget();
-            _private.removeStyles();
-        }
-    };
-
-    return app;
-
-})(window, document);
+        if (d) return b(c, d - 1)
+    })(f, f.length - 1)
+});

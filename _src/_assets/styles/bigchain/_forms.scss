@@ -139,7 +139,7 @@
 
     width: 1.3rem;
     height: 1.3rem;
-    border-radius: 50%;
+    border-radius: $border-radius;
     border: 2px solid $input-border-color;
     outline: none;
 
@@ -151,6 +151,11 @@
         background: $brand-primary;
         border-color: $input-border-focus;
     }
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+    border-radius: 50%;
 }
 
 .radio + .radio,

@@ -14,9 +14,9 @@
     "build": "gulp build --production"
   },
   "dependencies": {
+    "jquery": "^2.1.4",
     "normalize-css": ">=2.3.1",
     "normalize-opentype.css": ">=0.2.4",
-    "jquery": "^2.1.4",
     "parsleyjs": "^2.0.7",
     "svg4everybody": "^2.0.0"
   },
