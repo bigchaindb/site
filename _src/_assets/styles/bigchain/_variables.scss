@@ -77,9 +77,9 @@ $link-hover-bg:             rgba($brand-primary, .8) !default;
 //
 // Responsive breakpoints
 //
-$screen-sm-min:             35rem !default;
-$screen-md-min:             45rem !default;
-$screen-lg-min:             70rem !default;
+$screen-sm-min:             35em !default;
+$screen-md-min:             45em !default;
+$screen-lg-min:             70em !default;
 
 $screen-sm:                 'min-width: #{$screen-sm-min}';
 $screen-md:                 'min-width: #{$screen-md-min}';
