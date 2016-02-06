@@ -3,7 +3,6 @@
     {% include menu-main.html %}
 
     <div class="hero__content hero-video__content row">
-
         <hgroup>
             <svg class="logo logo--full logo--white--green" aria-labelledby="title">
                 <title>Logo</title>
@@ -12,7 +11,6 @@
 
             <h1 class="section-title">{{ page.tagline }}</h1>
         </hgroup>
-
 
         <a href="#features" class="scroll btn btn-link btn-sm">Learn More <svg class="icon">
             <use xlink:href="/assets/img/sprite.svg#icon-caret"></use>
@@ -24,6 +22,7 @@
             <source src="/assets/videos/{{ page.hero_video_name }}.mp4" type="video/mp4">
             <source src="/assets/videos/{{ page.hero_video_name }}.webm" type="video/webm">
         </video>
+        <img class="hero-video__poster" width="1920" height="1080" src="/assets/img/northern-lights-poster.jpg" />
     </div>
 
 </header>

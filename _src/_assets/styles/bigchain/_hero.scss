@@ -8,6 +8,7 @@ $menu-height-md: 73px;
 
 .hero {
     @extend .background--photo;
+    background-image: url('/assets/img/northern-lights-poster.jpg');
     text-align: center;
     overflow: hidden;
     position: relative;
@@ -96,13 +97,12 @@ $menu-height-md: 73px;
 // Video hero
 //
 .hero-video {
-    // poster image
-    background: $brand-main-blue-dark url('../img/hero-video-poster.jpg') no-repeat center center;
-    background-size: cover;
+
 }
 
 .hero-video .menu,
-.hero-video__content {
+.hero-video__content,
+.hero-video__video {
     @media ($screen-md) {
         position: absolute;
         left: 0;
@@ -112,8 +112,9 @@ $menu-height-md: 73px;
 }
 
 .hero-video__content {
+
     @media ($screen-md) {
-        z-index: 1;
+        z-index: 3 !important;
         bottom: 0;
         display: flex;
         flex-wrap: wrap;
@@ -123,14 +124,36 @@ $menu-height-md: 73px;
 
 // video container
 .hero-video__background {
-    z-index: 0;
+    @extend .color-overlay;
+    display: none;
 
     @media ($screen-md) {
+        display: block;
+        margin-bottom: -9px;
         max-height: 100vh;
+
+        &:before { z-index: 2; }
     }
 }
 
 // the video itself
-.hero-video__video {
+.hero-video__video,
+.hero-video__poster {
     @extend .img--responsive;
+}
+
+.hero-video__video {
+    @extend .transition;
+    opacity: 0;
+    margin: auto;
+    width: 100%;
+
+    &.enabled {
+        opacity: 1
+    }
+}
+
+.hero-video__poster {
+    display: block;
+    opacity: 0;
 }
