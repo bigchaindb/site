@@ -5,12 +5,10 @@
 //
 
 .section-features {
-    text-align: center;
 
     figure {
         display: block;
-        margin-bottom: ($spacer * 6);
-        margin-top: -($spacer * 2);
+        margin-bottom: ($spacer * 2);
     }
 
     .icon {
@@ -19,6 +17,14 @@
         margin-bottom: $spacer;
     }
 }
+
+.section-features__main {
+    @extend .text-center;
+    margin-top: $spacer;
+}
+
+.section-features__detail {}
+
 
 .section-whitepaper {
     @extend .text-center;

@@ -3,7 +3,7 @@
 # The Basics
 # --------------------
 name:                   BigchainDB
-description:            'Coming Soon on February 10'
+description:            'The world’s most scalable blockchain database.'
 url:                    https://www.bigchaindb.com
 
 email:
@@ -12,6 +12,7 @@ email:
 
 twitter:                BigchainDB
 facebook:               BigchainDB
+github:                 BigchainDB
 disqus:                 bigchain
 
 address:
