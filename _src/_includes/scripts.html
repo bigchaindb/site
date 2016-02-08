@@ -9,6 +9,8 @@
 
 {% if page.js %}
 <script src="/assets/js/{{ page.js }}"></script>
+{% elsif layout.js %}
+<script src="/assets/js/{{ layout.js }}"></script>
 {% endif %}
 
 <!--

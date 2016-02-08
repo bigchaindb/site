@@ -5,17 +5,28 @@
 //
 
 .section-features {
-
-    figure {
-        display: block;
-        margin-bottom: ($spacer * 2);
-    }
-
     .icon {
         display: block;
         margin: auto;
         margin-bottom: $spacer;
     }
+}
+
+.graph-bigchain {
+    display: block;
+    margin-bottom: ($spacer * 2);
+
+
+}
+
+// the SVG
+#bigchain-graph {
+    @media ($screen-md) {
+        margin-left: -10%;
+        margin-right: -10%;
+        width: 120%;
+    }
+
 }
 
 .section-features__main {

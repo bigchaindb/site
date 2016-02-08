@@ -1,11 +1,11 @@
 ---
 layout: base
 
-front_page: true
-
 tagline:    'Meet BigchainDB, the world’s most scalable blockchain database'
 
+front_page: true
 hero_video_name: northern-light
+js: page-front.min.js
 ---
 
 {% include hero-video.html %}
@@ -19,8 +19,8 @@ hero_video_name: northern-light
             </p>
         </header>
 
-        <figure>
-            <img class="img--responsive" src="/assets/img/graph.png" width="672" height="226">
+        <figure class="graph-bigchain img--responsive">
+            {% include svg/graph-bigchain.svg %}
         </figure>
 
         <div class="section-features__main grid grid--full grid-small--fit grid--gutters">
