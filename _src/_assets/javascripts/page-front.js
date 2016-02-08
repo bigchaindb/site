@@ -7,7 +7,7 @@ jQuery(function($) {
 
     // graph animation
     var iconOptions = {
-        type: 'delayed',
+        type: 'async',
         start: 'inViewport',
         duration: 200,
         animTimingFunction: Vivus.EASE_OUT,
