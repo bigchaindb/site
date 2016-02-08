@@ -1,23 +1,35 @@
 
-.section-difference {
-
+.section-ecosystem {
+    figcaption { margin-top: $spacer; }
 }
 
-.difference {
+.feature {
     display: flex;
-    align-items: center;
-    padding: ($spacer * 2) 0;
+    margin-bottom: $spacer;
 
     &:first-of-type { padding-top: 0; }
 }
 
-.difference__icon {
-    flex: 0 0 15%;
+.feature__icon {
+    flex: 0 0 20%;
     margin-right: 5%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.difference__text {
-    flex: 0 0 80%;
+.feature__detail {
+    flex: 0 0 75%;
+}
+
+.feature__title {
+    font-size: $font-size-h4;
+    margin-top: 0;
+    margin-bottom: ($spacer / 3);
+}
+
+.feature__text {
+    @extend .text-dimmed;
+    margin-bottom: 0;
 }
 
 

@@ -13,8 +13,11 @@
     display: flex;
     align-items: center;
     min-height: 420px;
+    flex-wrap: wrap;
 
-    .row { flex: 1; }
+    .row {
+        flex: 0 0 100%;
+    }
 
     @media ($screen-sm) {
         padding-top: ($spacer * 4);
