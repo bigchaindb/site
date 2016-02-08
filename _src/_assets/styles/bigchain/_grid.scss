@@ -128,9 +128,9 @@
 @mixin grid-columns() {
     > .grid__col {
         &.grid__col--1 { flex: 0 0 16%; }
-        &.grid__col--2 { flex: 0 0 33%; }
+        &.grid__col--2 { flex: 0 0 33.3%; }
         &.grid__col--3 { flex: 0 0 50%; }
-        &.grid__col--4 { flex: 0 0 66%; }
+        &.grid__col--4 { flex: 0 0 66.6%; }
         &.grid__col--5 { flex: 0 0 84%; }
         &.grid__col--6 { flex: 0 0 100%; }
     }
@@ -145,7 +145,7 @@
 }
 
 .grid--third {
-    > .grid__col { flex: 0 0 33%; }
+    > .grid__col { flex: 0 0 33.3%; }
 }
 
 .grid--half {
@@ -167,7 +167,7 @@
         > .grid__col { flex: 0 0 100%; }
     }
     .grid-small--third {
-        > .grid__col { flex: 0 0 33%; }
+        > .grid__col { flex: 0 0 33.3%; }
     }
     .grid-small--half {
         > .grid__col { flex: 0 0 50%; }
@@ -185,7 +185,7 @@
         > .grid__col { flex: 0 0 100%; }
     }
     .grid-medium--third {
-        > .grid__col { flex: 0 0 33%; }
+        > .grid__col { flex: 0 0 33.3%; }
     }
     .grid-medium--half {
         > .grid__col { flex: 0 0 50%; }
@@ -203,7 +203,7 @@
         > .grid__col { flex: 0 0 100%; }
     }
     .grid-large--third {
-        > .grid__col { flex: 0 0 33%; }
+        > .grid__col { flex: 0 0 33.3%; }
     }
     .grid-large--half {
         > .grid__col { flex: 0 0 50%; }
