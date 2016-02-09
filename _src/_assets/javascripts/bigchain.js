@@ -41,6 +41,17 @@ jQuery(function($) {
 
 
     //
+    // Open all external links in new window
+    //
+    $('a').not('[href*="mailto:"]').each(function () {
+        var isInternalLink = new RegExp('/' + window.location.host + '/');
+        if ( !isInternalLink.test(this.href) ) {
+            $(this).attr('target', '_blank');
+        }
+    });
+
+
+    //
     // Automatically add header links to all Markdown headings
     //
     $('.content--page--markdown h1, .content--page--markdown h2').each(function(i, el) {
