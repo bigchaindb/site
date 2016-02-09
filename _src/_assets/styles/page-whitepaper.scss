@@ -1,0 +1,13 @@
+
+.page-whitepaper {
+    .content--page--markdown {
+        > p:nth-child(1),
+        > p:nth-child(2) { text-align: center; }
+    }
+
+    #get-the-whitepaper {
+        + a {
+            @extend .btn, .btn-primary;
+        }
+    }
+}
