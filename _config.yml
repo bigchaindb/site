@@ -3,7 +3,7 @@
 # The Basics
 # --------------------
 name:                   BigchainDB
-description:            'The world’s most scalable blockchain database.'
+description:            'A blockchain database, at scale.'
 url:                    https://www.bigchaindb.com
 
 email:
