@@ -19,19 +19,39 @@
         text-align: center;
 
         .header-link {
-            @extend .transition;
+            box-shadow: none;
             transition-timing-function: $timing-bounce;
             display: inline-block;
-            padding: 0 .5rem;
+            padding: 0 .25rem;
             opacity: 0;
             transform: translate3d(20px,0,0) scale(0);
 
-            .header-icon { font-style: normal; }
+            &,
+            .header-icon {
+                @extend .transition;
+            }
+
+            &:hover,
+            &:focus {
+                background: none;
+
+                .header-icon {
+                    color: lighten($brand-primary, 10%);
+                }
+            }
+
+            .header-icon {
+                font-style: normal;
+                font-size: 2rem;
+                color: $brand-primary;
+            }
         }
 
-        &:hover .header-link {
-            opacity: 1;
-            transform: translate3d(0,0,0) scale(.8);
+        &:hover {
+            .header-link {
+                opacity: 1;
+                transform: translate3d(0,0,0) scale(.8);
+            }
         }
     }
 }
