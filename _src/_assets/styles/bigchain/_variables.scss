@@ -124,6 +124,18 @@ $pre-scrollable-max-height:     340px !default;
 
 
 //
+// Tables
+//
+$table-cell-padding:            .75rem !default;
+$table-sm-cell-padding:         .3rem !default;
+
+$table-bg:                      $gray-darker !default;
+$table-bg-accent:               $gray-darker !default;
+
+$table-border-width:            1px !default;
+$table-border-color:            $gray !default;
+
+//
 // Buttons
 //
 $btn-font-family:                $font-family-noto;

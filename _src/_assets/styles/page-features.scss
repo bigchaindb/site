@@ -1,4 +1,13 @@
 
+.table--comparison {
+    .icon-check {
+        width: 1rem;
+        height: 1rem;
+        margin: auto;
+        display: block;
+    }
+}
+
 .section-ecosystem {
     figcaption { margin-top: $spacer; }
 }
