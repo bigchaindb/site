@@ -13,28 +13,21 @@
   linkedin: trentmc
   github:   trentmc
 
+- name:     Masha McConaghy
+  position: COO
+  image:    team-masha.jpg
+  linkedin: mashamc
+
+- name:     Ryan Henderson
+  position: Developer
+  image:    team-ryan.jpg
+  twitter:  rhsimplex
+
 - name:     Greg McMullen
   position: CPO
   image:    team-greg.jpg
   twitter:  gmcmullen
   linkedin: gregmcm
-
-- name:     Andreas Müller
-  position: Databases
-  image:    team-andreas.jpg
-  linkedin: andreas-mueller-07152825
-
-- name:     Rodolphe Marques
-  position: Protocols
-  image:    team-rodolphe.jpg
-  twitter:  rodmar_
-  github:   r-marques
-  linkedin: rodolphemarques
-
-- name:     Troy McConaghy
-  position: Developer
-  image:    team-troy.jpg
-  twitter:  TroyMc
 
 - name:     Dimitri de Jonghe
   position: Developer
@@ -44,13 +37,82 @@
   github:   diminator
   linkedin: dimitridejonghe
 
+- name:     Paloma Rodriguez Carrington
+  position: Community
+  image:    team-paloma.jpg
+  twitter:  palomarodriguez
+  linkedin: palomarodriguezcarrington
+
+- name:     Carly Sheridan
+  position: Marketing and Communications Manager
+  image:    team-carly.jpg
+  twitter:  _carlynoelle
+  linkedin: carlysheridan
+
+- name:     Troy McConaghy
+  position: Developer
+  image:    team-troy.jpg
+  twitter:  TroyMc
+
+- name:     Abigail Toll
+  position: Community
+  image:    team-abigail.jpg
+  twitter:  AbigailToll
+  linkedin: abigailtoll
+
+- name:     Wojciech Hupert
+  position: UX / UI Designer
+  image:    team-wojciech.jpg
+  twitter:  WojciechHupert
+  linkedin: wojciechhupert
+
+- name:     Kasia Kazimierczak
+  position: Executive Assistant
+  image:    team-kasia.jpg
+  linkedin: katarzyna-kazimierczak
+
+- name:     Sylvain Bellemare
+  position: Developer
+  image:    team-sylvain.jpg
+  twitter:  sbellem
+  facebook: slvnb
+  github:   sbellem
+  linkedin: sylvainbellemare
+
+- name:     Tim Daubenschütz
+  position: Developer
+  image:    team-tim.jpg
+  twitter:  TimDaub
+  github:   TimDaub
+
+- name:     Andreas Müller
+  position: Databases
+  image:    team-andreas.jpg
+  linkedin: andreas-mueller-07152825
+
 - name:     Alberto Granzotto
   position: Developer
   image:    team-alberto.jpg
   twitter:  vrde
   github:   vrde
 
-- name:     Ryan Henderson
+- name:     Rodolphe Marques
+  position: Protocols
+  image:    team-rodolphe.jpg
+  twitter:  rodmar_
+  github:   r-marques
+  linkedin: rodolphemarques
+
+- name:     Jazmina Figueroa
+  position: Community
+  image:    team-jazmina.jpg
+  twitter:  Jazmazzzz
+  linkedin: jazfigueroa
+
+- name:     Brett Sun
   position: Developer
-  image:    team-ryan.jpg
-  twitter:  rhsimplex
+  image:    team-brett.jpg
+  facebook: R1SINGSUN
+  twitter:  sohkai
+  github:   SohKai
+  linkedin: brettsun
