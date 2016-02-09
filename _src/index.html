@@ -67,23 +67,18 @@ js: page-front.min.js
             <p class="section-description">Install and Run</p>
         </header>
 
-        <div class="grid grid--gutters grid--full grid-medium--columns grid--center">
-            <div class="grid__col grid__col--2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus temporibus nostrum, omnis non dolores repellat! Harum delectus, dolores.</p>
+        <div class="grid grid--gutters grid--full grid-medium--half grid--center">
+            <div class="grid__col">
+                <p>BigchainDB provides a rich API to create, query and transfer digital assets.</p>
                 <!-- <p><a href="">Read documentation</a></p> -->
             </div>
-            <div class="grid__col grid__col--4">
+            <div class="grid__col">
                 <figure class="terminal highlight">
                     <code>
-                        <span class="comment"># clone the repo</span>
-                        <span><span class="ne">git</span> clone <span class="cp">git@github.com:bigchaindb/bigchaindb.git</span></span>
-                        <span><span class="ne">cd</span> bigchaindb/</span>
-                        <span class="comment"># start the database</span>
-                        <span><span class="ne">rethinkdb</span></span>
-                        <span class="comment"># install dependencies</span>
-                        <span><span class="ne">pip</span> install -r requirements.txt && <span class="ne">pip</span> install -e .</span>
-                        <span class="comment"># initialize bigchain</span>
-                        <span><span class="ne">bigchain</span> init</span>
+                        <span class="comment"># install bigchaindb</span>
+                        <span><span class="ne">pip</span> install <span class="cp">bigchaindb</span></span><br/>
+                        <span class="comment"># start bigchaindb</span>
+                        <span><span class="ne">bigchaindb</span> start</span>
                     </code>
                 </figure>
             </div>
