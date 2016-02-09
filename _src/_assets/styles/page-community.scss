@@ -16,11 +16,31 @@
 }
 
 .section-community {
+    position: relative;
+    // make room for BuffyDB
+    padding-bottom: 200px;
+
+    @media ($screen-lg) {
+        padding-bottom: 0;
+    }
+
     .section-header {
         .section-description { margin-bottom: ($spacer * 2); }
     }
 
-    .grid h1 { @extend .h3; }
+    .grid h1 {
+        @extend .h3;
+        margin-top: 0;
+    }
+
+    .buffy {
+        @extend .img--responsive;
+        vertical-align: bottom;
+        height: 220px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 
     .social-link {
         &,
@@ -58,8 +78,4 @@
             height: 1.5rem;
         }
     }
-}
-
-.section-conduct {
-    @extend .background--photo;
 }
