@@ -20,14 +20,16 @@
 }
 
 .feature__icon {
-    flex: 0 0 20%;
+    flex: 0 0 15%;
     margin-right: 5%;
-    margin-top: 0;
+    margin-top: 2px;
     margin-bottom: 0;
+    width: 3rem;
+    height: 3rem;
 }
 
 .feature__detail {
-    flex: 0 0 75%;
+    flex: 0 0 80%;
 }
 
 .feature__title {
