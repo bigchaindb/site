@@ -8,10 +8,6 @@
     }
 }
 
-.section-ecosystem {
-    figcaption { margin-top: $spacer; }
-}
-
 .feature {
     display: flex;
     margin-bottom: $spacer;
@@ -41,6 +37,22 @@
 .feature__text {
     @extend .text-dimmed;
     margin-bottom: 0;
+}
+
+.section-stacks {
+
+}
+
+.stacks {
+
+}
+
+.stacks__title {
+    font-size: $font-size-h3;
+}
+
+.stacks__image {
+    figcaption { margin: $spacer 0; }
 }
 
 
