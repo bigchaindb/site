@@ -16,6 +16,10 @@
 }
 
 .section-community {
+    .section-header {
+        .section-description { margin-bottom: ($spacer * 2); }
+    }
+
     .grid h1 { @extend .h3; }
 
     .social-link {
