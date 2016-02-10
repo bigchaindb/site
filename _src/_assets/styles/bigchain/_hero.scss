@@ -13,6 +13,12 @@ $menu-height-md: 73px;
     overflow: hidden;
     position: relative;
 
+    // vertically center everything
+    display: flex;
+    align-items: center;
+    min-height: 420px;
+    flex-wrap: wrap;
+
     .section {
         @media ($screen-md) {
             min-height: calc(100vh - #{$menu-height-md});

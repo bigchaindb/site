@@ -2,7 +2,6 @@
 .section {
     padding-top: ($spacer * 2);
     padding-bottom: ($spacer * 2);
-    min-height: 420px;
 
     &:last-child { border-bottom: none; }
 
@@ -108,7 +107,7 @@
     background: url('../img/northern-lights-poster.jpg') no-repeat center center;
     background-size: cover;
 
-    .row {
+    .row * {
         position: relative;
         z-index: 5;
     }
