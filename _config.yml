@@ -3,14 +3,27 @@
 # The Basics
 # --------------------
 name:                   BigchainDB
-description:            'Coming Soon on February 10'
+description:            'The scalable blockchain database.'
 url:                    https://www.bigchaindb.com
 
 email:
     contact:            contact@bigchaindb.com
+    cla:                troy@ascribe.io
 
 twitter:                BigchainDB
+facebook:               BigchainDB
+github:
+    org:                bigchaindb
+    repo:               bigchaindb
+medium:                 the-bigchaindb-blog
+googlegroup:            bigchaindb
+disqus:                 bigchain
 
+address:
+    street:             Wichertstr. 17
+    zip:                10439
+    city:               Berlin
+    country:            Germany
 
 # Track all the things
 # --------------------
@@ -26,6 +39,13 @@ permalink:              /:title/
 # --------------------
 markdown:               redcarpet
 
+kramdown:
+    input: GFM
+    extensions:
+        - autolink
+        - footnotes
+        - smart
+
 redcarpet:
     extensions:         ['autolink', 'smart', 'hard_wrap', 'with_toc_data']
 
@@ -40,3 +60,4 @@ destination:            ./_dist
 # --------------------
 gems:
     - jekyll-sitemap
+    - jekyll-redirect-from

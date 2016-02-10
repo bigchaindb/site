@@ -22,6 +22,11 @@ body {
     color: $text-color;
     background-color: $body-bg;
 
+    // handling long text, like URLs
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+
     text-rendering: optimizeLegibility;
     // Controversial! But prevents text flickering in
     // Safari/Firefox when animations are running
@@ -47,12 +52,15 @@ textarea {
 // Links
 //
 a {
+    @extend .transition;
     color: $link-color;
     text-decoration: none;
+    box-shadow: inset 0 -2px 0 $brand-primary;
 
     &:hover,
     &:focus {
         color: $link-hover-color;
+        background: $link-hover-bg;
     }
 
     &:active {}
@@ -84,7 +92,7 @@ h3, .h3 {
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-    color: $gray;
+    color: $gray-light;
     margin-top: $spacer;
     margin-bottom: ($spacer / 2);
 }
@@ -141,6 +149,14 @@ strong,
 .text-uppercase      { text-transform: uppercase; }
 .text-capitalize     { text-transform: capitalize; }
 
+.text-dimmed         { color: $gray-light }
+
+
+.lead {
+    font-size: $font-size-lg;
+    color: $headings-color;
+}
+
 //
 // Lists
 //
@@ -157,6 +173,7 @@ ol {
     }
     ul,
     ol {
+        margin-top: ($spacer / 2);
         margin-bottom: 0;
     }
 }

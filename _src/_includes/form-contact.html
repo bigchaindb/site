@@ -1,0 +1,37 @@
+
+<form id="form-contact" class="js-parsley" action="//formspree.io/{{ site.email.contact }}" method="POST" accept-charset="UTF-8">
+    <p class="form-group">
+        <input class="form-control" type="text" id="name" name="name" required>
+        <label class="form-label" for="name">Your Name</label>
+    </p>
+    <p class="form-group">
+        <input class="form-control" type="email" id="email" name="_replyto" required>
+        <label class="form-label" for="email">Your Email</label>
+    </p>
+    <p class="form-group">
+        <textarea class="form-control" id="comment" name="comment" rows="1" required></textarea>
+        <label class="form-label" for="comment">Your Message</label>
+    </p>
+    <p class="form-group">
+        <input class="btn btn-primary" type="submit" value="Send">
+    </p>
+
+    <div class="alert alert-success animation-slide-in-from-bottom hide">
+        <svg class="alert__icon icon icon-success">
+            <use xlink:href="/assets/img/sprite.svg#icon-success"></use>
+        </svg>
+        <p>
+            <strong class="alert__title">Great to hear you’re interested!</strong>
+            We’ll get in touch soon to discuss how we can work together.
+        </p>
+    </div>
+    <div class="alert alert-danger hide">
+        <svg class="alert__icon icon icon-fail">
+            <use xlink:href="/assets/img/sprite.svg#icon-fail"></use>
+        </svg>
+        <p>
+            <strong class="alert__title">Ops, there was an error</strong>
+            Would you mind trying again?
+        </p>
+    </div>
+</form>

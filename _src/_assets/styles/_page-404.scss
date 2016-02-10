@@ -1,0 +1,14 @@
+
+.page-404 {
+    .header {
+        background-image: url('/assets/img/fail-cat.gif');
+        min-height: 420px;
+
+        @media ($screen-md) {
+            min-height: 100vh;
+        }
+    }
+    .content--page {
+        text-align: center;
+    }
+}

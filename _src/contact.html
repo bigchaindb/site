@@ -1,0 +1,64 @@
+---
+layout: page
+
+title: Contact
+---
+
+<section class="section section-contactform">
+    <div class="row row--wide">
+        <header class="section-header">
+            <h1 class="section-title">Get In Touch</h1>
+        </header>
+
+        <div class="grid grid--full grid-medium--columns grid--gutters">
+            <div class="grid__col grid__col--4">
+                {% include/form-contact.html %}
+            </div>
+            <div class="grid__col grid__col--2">
+                <div class="h-card contactlist">
+                    <p><strong class="p-name p-org">{{ site.name }}</strong></p>
+
+                    <!-- <div class="p-adr">
+                        <p class="p-street-address">{{ site.address.street }}</p>
+                        <p><span class="p-postal-code">{{ site.address.zip }}</span> <span class="p-locality">{{ site.address.city }}</span></p>
+                        <p class="p-country-name">{{ site.address.country }}</p>
+                    </div> -->
+
+                    <p><a class="u-url" href="{{ site.url }}">{{ site.url | remove: 'https://' }}</a></p>
+                    <p><a class="u-email" href="mailto:{{ site.email.contact }}">{{ site.email.contact }}</a></p>
+
+                    <div class="social">
+                        <p>
+                            <a href="https://github.com/{{ site.github.org }}">
+                                <svg class="icon icon--social icon--github" aria-labelledby="title">
+                                    <title>GitHub</title>
+                                    <use xlink:href="/assets/img/sprite.svg#github"></use>
+                                </svg>
+                                GitHub
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://twitter.com/{{ site.twitter }}">
+                                <svg class="icon icon--social icon--twitter" aria-labelledby="title">
+                                    <title>Twitter</title>
+                                    <use xlink:href="/assets/img/sprite.svg#twitter"></use>
+                                </svg>
+                                Twitter
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://medium.com/{{ site.medium }}">
+                                <svg class="icon icon--social icon--blog" aria-labelledby="title">
+                                    <title>Blog</title>
+                                    <use xlink:href="/assets/img/sprite.svg#icon-blog"></use>
+                                </svg>
+                                Blog
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,11 @@
+.header {
+    @extend .background--photo;
+}
+
+.header__title {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: 0;
+    padding: ($spacer * 4) 0;
+}

@@ -1,0 +1,22 @@
+
+main:
+    - title: How it works
+      url: /features/
+    - title: Whitepaper
+      url: /whitepaper/
+    - title: Community
+      url: /community/
+    - title: Docs
+      url: https://bigchaindb.readthedocs.org/
+
+footer:
+    - title: About
+      url: /about/
+    - title: Contact
+      url: /contact/
+    - title: Terms
+      url: /terms/
+    - title: Privacy
+      url: /privacy/
+    - title: Imprint
+      url: /imprint/

@@ -1,0 +1,99 @@
+//
+// Terminal window
+// ---
+// bigchain.io
+//
+
+.terminal {
+    @extend .windowframe;
+    max-width: 100%;
+    width: 100%;
+    background: darken($code-bg, 10%);
+
+    code {
+        padding: $spacer;
+        color:#fdce93;
+        display: block;
+        word-break: break-all;
+        word-wrap: break-word;
+        background: none;
+    }
+
+    code > span {
+        display: block;
+
+        &:before {
+            content: "$";
+            color: $code-bg;
+            margin-right: $spacer;
+        }
+        &.comment {
+            &:before { opacity: 0 }
+        }
+    }
+
+    .comment {
+        color: $gray;
+    }
+}
+
+
+$frame-height:          21px;
+$frame-height-mobile:   ($frame-height / 1.5);
+$frame-border-radius:   $border-radius;
+
+.windowframe {
+    display: inline-block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: $frame-height-mobile;
+    border-radius: $frame-border-radius;
+    overflow: hidden;
+
+    @media (min-width: $screen-sm-min) {
+        padding-top: $frame-height;
+    }
+
+    // title bar
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: $frame-height-mobile;
+        border-top-left-radius: $frame-border-radius;
+        border-top-right-radius: $frame-border-radius;
+        background: linear-gradient(to bottom, $gray-dark 0%, $gray-darker 100%);
+        margin-top: -($frame-height-mobile);
+
+        @media (min-width: $screen-sm-min) {
+            height: $frame-height;
+            margin-top: -($frame-height);
+        }
+    }
+
+    // knobs
+    &:after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        left: 6px;
+        top: 4px;
+
+        background: #F55E4A;
+        border-radius: 50%;
+
+        // second & third knob
+        box-shadow: 10px 0 0 #F7CA44, 20px 0 0 #48C54D;
+
+        @media (min-width: $screen-sm-min) {
+            width: 9px;
+            height: 9px;
+            left: 9px;
+            top: 6px;
+            box-shadow: 15px 0 0 #F7CA44, 30px 0 0 #48C54D;
+        }
+    }
+}

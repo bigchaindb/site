@@ -1,0 +1,12 @@
+<svg version="1.1" viewBox="0 0 60 60">
+    <g stroke="currentColor">
+        <circle class="st0" cx="50" cy="26" r="5"/>
+        <circle class="st0" cx="30" cy="6" r="5"/>
+        <circle class="st0" cx="10" cy="26" r="5"/>
+    </g>
+    <g>
+    	<path class="st0" d="M50.2,35H59c0,6.7-0.6,12.7-6,13.8V59h-2.8H47V48.8c-5-1.1-5.7-7.1-5.7-13.8H50.2z"/>
+    	<path class="st0" d="M30.2,15H39c0,6.7-0.6,12.9-6,14v10h-2.8H27V29c-5-1.1-5.7-7.3-5.7-14H30.2z"/>
+    	<path class="st0" d="M9.8,35h8.8c0,6.7-0.3,12.9-5.7,14v10h-3H7V49c-5-1.1-6-7.3-6-14H9.8z"/>
+    </g>
+</svg>

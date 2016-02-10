@@ -16,6 +16,7 @@
 @import 'bigchain/_fonts';
 @import 'bigchain/_typography';
 @import 'bigchain/_animations';
+@import 'bigchain/_tables';
 @import 'bigchain/_buttons';
 @import 'bigchain/_forms';
 @import 'bigchain/_logo';
@@ -23,16 +24,31 @@
 @import 'bigchain/_grid';
 @import 'bigchain/_media';
 @import 'bigchain/_sections';
+@import 'bigchain/_menus';
+@import 'bigchain/_tabs';
 @import 'bigchain/_alerts';
 @import 'bigchain/_code';
 @import 'bigchain/_syntax';
+@import 'bigchain/_hero';
+@import 'bigchain/_header';
 @import 'bigchain/_footer';
+@import 'bigchain/_team';
+@import 'bigchain/_timeline';
+@import 'bigchain/_terminal';
 @import 'bigchain/_utilities';
 
 // Content types
 @import 'bigchain/_content-page';
+@import 'bigchain/_comments';
+@import 'bigchain/_toc';
 
 // specific page styles
-@import 'page-front';
-@import 'page-404';
-@import 'page-styleguide';
+@import '_page-front';
+@import '_page-whitepaper';
+@import '_page-404';
+@import '_page-styleguide';
+@import '_page-about';
+@import '_page-features';
+@import '_page-community';
+@import '_page-contact';
+@import '_page-cla';

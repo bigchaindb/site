@@ -1,0 +1,17 @@
+//
+// Comments
+// --------------
+// bigchain.io
+//
+
+.comments {
+    margin-bottom: ($spacer * 2);
+
+    .row > h1 {
+        font-size: $font-size-h2;
+        border-bottom: 1px solid $brand-main-blue-light;
+        padding-bottom: $spacer;
+        margin-bottom: ($spacer * 2);
+        text-align: center;
+    }
+}

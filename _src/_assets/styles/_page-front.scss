@@ -1,0 +1,60 @@
+//
+// Page: front
+// ---
+// bigchain.io
+//
+
+.section-features__main {
+    .icon {
+        display: block;
+        margin: auto;
+        margin-bottom: $spacer;
+    }
+}
+
+.graph-bigchain {
+    display: block;
+}
+
+// the SVG
+#bigchain-graph {
+    @media ($screen-md) {
+        margin-left: -15%;
+        margin-right: -15%;
+        width: 130%;
+    }
+
+}
+
+.section-features__main {
+    @extend .text-center;
+    margin-top: $spacer;
+
+    h3 {
+        display: block;
+        font-size: $font-size-h4;
+        margin-top: 0;
+    }
+}
+
+.section-features__detail {}
+
+
+.section-whitepaper {
+    @extend .text-center;
+}
+
+
+.section-earlyaccess {
+
+    form {
+        max-width: $screen-sm-min;
+        margin: auto;
+    }
+
+    .form-control {
+        &:focus {
+            border-color: #fff;
+        }
+    }
+}

@@ -3,8 +3,6 @@ source "https://rubygems.org"
 group :jekyll do
     gem 'jekyll'
     gem 'jekyll-sitemap'
-end
-
-group :development do
+    gem 'jekyll-redirect-from'
     gem 'redcarpet'
 end

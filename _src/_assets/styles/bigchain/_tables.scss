@@ -1,0 +1,82 @@
+
+//
+// Base class
+//
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+
+    th,
+    td {
+        padding: $table-cell-padding;
+        vertical-align: top;
+        border-top: $table-border-width solid $table-border-color;
+    }
+
+    thead th {
+        color: $brand-main-blue-light;
+        font-weight: $font-weight-base;
+        vertical-align: bottom;
+        border-bottom: (2 * $table-border-width) solid $table-border-color;
+    }
+
+    tbody + tbody {
+        border-top: (2 * $table-border-width) solid $table-border-color;
+    }
+
+    .table {
+        background-color: $body-bg;
+    }
+}
+
+
+//
+// Condensed table w/ half padding
+//
+.table-sm {
+    th,
+    td {
+        padding: $table-sm-cell-padding;
+    }
+}
+
+
+//
+// Bordered version
+//
+.table-bordered {
+    border: $table-border-width solid $table-border-color;
+
+    th,
+    td {
+        border: $table-border-width solid $table-border-color;
+    }
+    thead {
+        th,
+        td {
+            border-bottom-width: (2 * $table-border-width);
+        }
+    }
+}
+
+
+//
+// Zebra-striping
+//
+.table-striped {
+    tbody tr:nth-of-type(odd) {
+        background-color: $table-bg-accent;
+    }
+}
+
+
+// Responsive tables
+//
+// Wrap your tables in `.table-responsive`
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}

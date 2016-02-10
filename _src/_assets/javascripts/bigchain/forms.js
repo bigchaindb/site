@@ -1,14 +1,11 @@
 
 //=include ../../../../node_modules/parsleyjs/dist/parsley.js
 
-var Forms = (function(w, d) {
+var Forms = (function(w, d, $) {
 
     'use strict'
 
     var app, _private, _config
-
-    // workaround for blog
-    var $ = jQuery
 
     _config = {
         form: $('form'),
@@ -52,4 +49,4 @@ var Forms = (function(w, d) {
 
     return app
 
-})(window, document)
+})(window, document, jQuery)

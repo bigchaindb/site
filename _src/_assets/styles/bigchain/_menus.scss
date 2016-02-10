@@ -1,0 +1,135 @@
+
+.menu {
+    position: relative;
+    z-index: 10;
+
+    .grid__col {
+        text-align: center;
+
+        @media ($screen-md) {
+            text-align: left;
+
+            &:last-child { text-align: right; }
+        }
+    }
+}
+
+.menu__link {
+    @extend .small;
+    display: inline-block;
+    padding: $spacer ($spacer / 2);
+    text-transform: uppercase;
+    box-shadow: none;
+
+    @media ($screen-md) {
+        padding: ($spacer * 1.5) $spacer;
+    }
+
+    // link line
+    &:after {
+        content: "";
+        height: 2px;
+        width: 30px;
+        background: #fff;
+        display: block;
+        margin: ($spacer / 3) auto 0 auto;
+        // hidden by default
+        transform: scale(0);
+        transform-origin: center;
+        transition: transform .2s ease-out;
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+        background: transparent;
+        // show link line
+        &:after { transform: scale(1); }
+    }
+}
+
+.menu__logo {
+    display: block;
+    margin-top: $spacer;
+    box-shadow: none;
+
+    @media ($screen-md) {
+        margin-top: 0;
+    }
+
+    svg {
+        @extend .transition;
+        opacity: .8;
+    }
+
+    &:hover,
+    &:focus {
+        background: transparent;
+
+        svg { opacity: 1; }
+    }
+}
+
+
+//
+// Main menu overlaying a dark background image
+// in front page hero or page headers
+//
+.menu--main {
+    .menu__logo {
+        @media ($screen-md) {
+            padding: ($spacer/1.2) 0 ($spacer * 1.5) 0;
+        }
+    }
+
+    .menu__link {
+        color: #fff;
+        opacity: .8;
+
+        &:hover,
+        &:focus,
+        &.active {
+            opacity: 1;
+        }
+    }
+}
+
+
+//
+// Footer Menu
+//
+.menu--footer {
+
+    .menu__logo {
+        margin-bottom: $spacer;
+
+        &:hover,
+        &:focus {
+            .logo { fill: $brand-primary }
+        }
+    }
+
+    .logo {
+        fill: $gray-light;
+        opacity: 1;
+        height: 9px;
+    }
+
+    .menu__link {
+        @extend .mini;
+        padding: ($spacer/2);
+        color: $gray-light;
+
+        // link line
+        &:after {
+            background: $brand-primary;
+        }
+
+        &:first-child { padding-left: 0; }
+        &:last-child { padding-right: 0; }
+
+        &:hover,
+        &:focus,
+        &.active { color: $brand-primary; }
+    }
+}

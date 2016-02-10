@@ -1,0 +1,30 @@
+<nav class="menu menu--main">
+    <div class="row row--wide">
+
+        <div class="grid grid--full grid-medium--columns grid--center">
+            <div class="grid__col grid__col--1">
+                <a class="menu__logo" href="/">
+                    <svg class="logo logo--sm logo--white--green" aria-labelledby="title">
+                        <title>Logo</title>
+                        <use xlink:href="/assets/img/sprite.svg#logo"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="grid__col grid__col--5">
+
+                {% for link in site.data.menus.main %}
+
+                    {% assign active = nil %}
+                    {% if page.url contains link.url %}
+                        {% assign active = 'active' %}
+                    {% endif %}
+
+                    <a class="menu__link {{ active }} js-tracking-menu" href="{{ link.url }}">{{ link.title }}</a>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</nav>

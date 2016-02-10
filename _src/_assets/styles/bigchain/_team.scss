@@ -1,0 +1,57 @@
+//
+// Team Unit
+// ---
+// bigchain.io
+//
+
+// Base class
+.team {}
+
+.team__image {
+    @extend .img--responsive;
+    background: $gray;
+    width: 230px;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+
+}
+
+.team__name {
+    @extend .h5;
+    color: $text-color;
+    margin-bottom: 0;
+
+    // the bottom line
+    &:after {
+        content: "";
+        height: 1px;
+        width: 3rem;
+        display: block;
+        margin: ($spacer / 2) auto;
+        background: $brand-main-blue-light;
+    }
+}
+
+.team__position {
+    @extend .text-dimmed;
+    margin-bottom: ($spacer / 2);
+}
+
+.team__social {
+    margin-bottom: 0;
+}
+
+.team__social__link {
+    display: inline-block;
+    margin: 0 ($spacer / 4);
+    box-shadow: none;
+
+    &,
+    &:hover,
+    &:focus {
+        background: transparent;
+    }
+
+    .icon {
+        fill: $brand-primary;
+    }
+}

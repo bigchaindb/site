@@ -4,24 +4,45 @@
 
 //=include bigchain/analytics.js
 //=include bigchain/forms.js
-//=include bigchain/smoothscroll.js
+//=include bigchain/dnt.js
 
-//=include bigchain/form-earlyaccess.js
+//=include bigchain/form-contact.js
+
 
 jQuery(function($) {
 
     //
     // init modules
     //
-    GoogleAnalytics.init();
     Forms.init();
-    SmoothScroll.init();
-    FormEarlyAccess.init();
 
-    $('.hero .logo').on('animationend webkitAnimationEnd oAnimationEnd',
-        function(e) {
-            $('.hero').addClass('is-ready');
+    if (!_dntEnabled()) {
+        GoogleAnalytics.init();
+    }
+
+
+    //
+    // Open all external links in new window
+    //
+    $('a').not('[href*="mailto:"]').each(function () {
+        var isInternalLink = new RegExp('/' + window.location.host + '/');
+        if ( !isInternalLink.test(this.href) ) {
+            $(this).attr('target', '_blank');
         }
-    );
+    });
+
+
+    //
+    // Automatically add header links to all Markdown headings
+    //
+    $('.content--page--markdown h1, .content--page--markdown h2').each(function(i, el) {
+        var $el, icon, id;
+        $el = $(el);
+        id = $el.attr('id');
+        icon = '<i class="header-icon">#</i>';
+        if (id) {
+        return $el.prepend($('<a />').addClass('header-link').attr('href', '#' + id).html(icon));
+        }
+    });
 
 });

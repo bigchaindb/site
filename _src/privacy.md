@@ -1,0 +1,57 @@
+---
+layout: page
+
+title: Privacy & Cookies Policy
+description: 'Our Privacy Policy sets out how your personal information is collected and used while you use the Site.'
+---
+
+### Introduction
+
+Our Privacy Policy sets out how your personal information is collected and used while you use the Site. We believe your personal information belongs to you, so we are very open about how we use it. The Privacy Policy is meant to be read together with the Terms, so words that are capitalized have the same meaning in the Privacy Policy as they do in the Terms.
+
+If you have a question about the Privacy Policy, email terms@bigchaindb.com and we will try to answer it for you.
+
+### Our policies
+
+We collect and use information in accordance with the German Telemedia Act (Telemediengesetz) and (Bundesdatenschutzgesetz), or with your specific and express consent.
+
+We do not knowingly collect personal information from children under 18 without consent from a parent or guardian. If we learn a child has provided personal information, we may delete it.
+
+We respect the Do Not Track header.
+
+### What information we collect and how we use it
+
+When you visit the Site, we may log some of the information about your visit (such as your IP address, browser version, and so on) so we can improve the site and keep it secure.
+
+If you want to contribute to the project, you must complete our [Contributor License Agreement](https://www.bigchaindb.com/cla) (CLA). We will store your completed CLA, including the personal information you include on it. We may use that personal information to contact you or to enforce the terms of the CLA.
+
+### How information is shared
+
+Identifiable personal information will not be shared. It will never be given or sold to advertisers.
+
+We may share non-personal or aggregate information, such as usage statistics for the Site.
+
+### Cookies
+
+The Site uses the following cookies:
+
+- Cookie settings, which remembers your cookie settings.
+- Google Analytics, which provides us information about our users and how they use the Site. We use this information to make the Site better.
+
+You can block cookies by installing a browser add-on such as [Ghostery](https://www.ghostery.com/) or [Privacy Badger](https://www.eff.org/privacybadger).
+
+### Updating your personal information or revoking consent
+
+You may ask us correct and update your personal information in cases where you cannot update it yourself. You may ask us to block or delete your personal information unless we are under a legal obligation to store it. If you revoke consent to store your personal information, it will be deleted. If you want to correct or update your personal information, or revoke your consent, you can email us at terms@bigchaindb.com.
+
+### Business transfers
+
+If we are involved in a merger, acquisition, or sale of all or a portion of our assets, your personal information may be transferred as part of that transaction. If this happens we will post a notice on the News section of the Site to advise of any change of control or use of personal information or files, and of any choices you may have regarding the information.
+
+### Law enforcement requests
+
+We may disclose personal information to law enforcement if we believe disclosure is necessary to:
+
+- Comply with a law, regulation, or mandatory request such as a warrant or court order.
+- Protect the any person from death or serious bodily injury.
+- Protect the Site or ascribe GmbH from unlawful abuse or attacks.

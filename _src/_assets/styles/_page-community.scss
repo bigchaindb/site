@@ -1,0 +1,101 @@
+//
+// Page: Community
+// ---
+// bigchain.io
+//
+.page-community {
+    .header {
+        background-image: url('../img/photo2.jpg');
+        background-position: center top;
+    }
+}
+
+.section-community {
+    @extend .text-center;
+    position: relative;
+    // make room for wrigely
+    padding-bottom: 200px;
+
+    @media ($screen-lg) {
+        padding-bottom: 0;
+    }
+
+    .section-header {
+        .section-description { margin-bottom: ($spacer * 2); }
+    }
+
+    .grid h1 {
+        @extend .h3;
+        margin-top: 0;
+    }
+
+    .social-link {
+        &,
+        .icon {
+            @extend .transition;
+        }
+
+        box-shadow: none;
+        padding: $btn-padding-y-sm $btn-padding-x-sm;
+
+        &:hover,
+        &:focus {
+            background: none;
+
+            .icon {
+                fill: lighten($brand-primary, 10%);
+                filter: drop-shadow(0 1px 4px rgba($brand-main-blue-dark, .4));
+                transform: translateY(-1px);
+            }
+        }
+
+        &:active {
+            outline: 0;
+
+            .icon {
+                fill: $brand-primary;
+                filter: drop-shadow(0 1px 2px rgba($brand-main-blue-dark, .3));
+                transform: translateY(0);
+            }
+        }
+
+        .icon {
+            fill: $brand-primary;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+}
+
+
+//
+// wrigely: positioned and animated
+//
+#wrigely {
+    @extend .img--responsive;
+    vertical-align: bottom;
+    height: 220px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    #arm {
+        transform-origin: right;
+    }
+
+    &.is-ready {
+        #arm {
+            animation: wrigely-wink 1s ease-in-out 3s;
+        }
+    }
+
+    &:hover #arm {
+        animation: wrigely-wink 1s ease-in-out;
+    }
+}
+
+@keyframes wrigely-wink {
+    0%   { transform: rotate(0); }
+    25%, 50%  { transform: rotate(-20deg); }
+    30%, 100% { transform: rotate(0); }
+}

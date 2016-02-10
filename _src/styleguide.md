@@ -9,7 +9,7 @@ sitemap: false
 
 ### Primary
 
-<div class="grid grid--gutters grid--full grid-medium--fit">
+<div class="grid grid--gutters grid--full grid-medium--third">
     {% for color in site.data.colors.primary %}
     <div class="grid__col">
         <div class="color {{ color.name }}">
@@ -22,7 +22,7 @@ sitemap: false
 
 ### Grays
 
-<div class="grid grid--gutters grid--full grid-medium--fit">
+<div class="grid grid--gutters grid--full grid-medium--third">
     {% for color in site.data.colors.grays %}
     <div class="grid__col">
         <div class="color {{ color.name }}">
@@ -35,7 +35,7 @@ sitemap: false
 
 ### Errors
 
-<div class="grid grid--gutters grid--full grid-medium--fit">
+<div class="grid grid--gutters grid--full grid-medium--third">
     {% for color in site.data.colors.errors %}
     <div class="grid__col">
         <div class="color {{ color.name }}">
@@ -46,14 +46,33 @@ sitemap: false
     {% endfor %}
 </div>
 
-
 ## Logo
+
+Logo can be used with a base class and modifier classes for size & color:
+
+- `logo`: default logo
+- `logo--sm`: small version
+- `logo--full`: full width version
+- `logo--white`: complete white version
+- `logo--white--green`: white & green version
 
 <svg class="logo logo--sm" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
 
 <svg class="logo" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
 
 <svg class="logo logo--full" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--sm logo--white--green" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--white--green" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--full logo--white--green" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--sm logo--white" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--white" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--full logo--white" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
 
 ```html
 <svg class="logo logo--sm" aria-labelledby="title">
@@ -74,6 +93,12 @@ sitemap: false
 
 
 ## Typography
+
+The main branding typeface is **Noto Sans Regular**, used for all headings and buttons. Noto Sans is open source and free to download and use.
+
+<a class="btn btn-secondary btn-sm" href="http://www.google.com/get/noto/#sans-lgc">Download Noto Sans</a>
+
+For body copy we're using the system installed font **Avenir Next** on Mac OS X & iOS and **Arial** on Windows. Linux will just use the default sans-serif typeface, e.g. on Ubuntu this should be **Bitstream Vera Sans**.
 
 ### Body Copy
 
@@ -109,8 +134,11 @@ Donec *ullamcorper nulla* non metus auctor fringilla. Duis mollis, est non commo
 ## Headings
 
 # Heading 1
+
 ## Heading 2
+
 ### Heading 3
+
 #### Heading 4
 
 
@@ -145,24 +173,6 @@ Donec *ullamcorper nulla* non metus auctor fringilla. Duis mollis, est non commo
 <a class="btn btn-secondary btn-xs">Button</a>
 <a class="btn btn-secondary btn-sm">Button</a>
 <a class="btn btn-secondary btn-lg">Button</a>
-```
-
-<a class="btn btn-primary-outline">Button</a> <a class="btn btn-primary-outline btn-xs">Button</a> <a class="btn btn-primary-outline btn-sm">Button</a> <a class="btn btn-primary-outline btn-lg">Button</a>
-
-```html
-<a class="btn btn-primary-outline">Button</a>
-<a class="btn btn-primary-outline btn-xs">Button</a>
-<a class="btn btn-primary-outline btn-sm">Button</a>
-<a class="btn btn-primary-outline btn-lg">Button</a>
-```
-
-<a class="btn btn-secondary-outline">Button</a> <a class="btn btn-secondary-outline btn-xs">Button</a> <a class="btn btn-secondary-outline btn-sm">Button</a> <a class="btn btn-secondary-outline btn-lg">Button</a>
-
-```html
-<a class="btn btn-secondary-outline">Button</a>
-<a class="btn btn-secondary-outline btn-xs">Button</a>
-<a class="btn btn-secondary-outline btn-sm">Button</a>
-<a class="btn btn-secondary-outline btn-lg">Button</a>
 ```
 
 <a class="btn btn-link">Button</a> <a class="btn btn-link btn-xs">Button</a> <a class="btn btn-link btn-sm">Button</a> <a class="btn btn-link btn-lg">Button</a>

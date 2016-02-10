@@ -1,0 +1,31 @@
+
+.nav-tabs {
+    @extend .list-unstyled;
+    display: flex;
+    border-bottom: 1px solid $brand-primary;
+}
+
+.nav-item {
+    flex: 1;
+}
+
+.nav-link {
+    @extend .text-center;
+    box-shadow: none;
+    display: block;
+    padding: 1rem;
+    border-bottom: 4px solid transparent;
+
+    &.active {
+        color: #fff;
+        border-bottom-color: $brand-primary;
+    }
+}
+
+.tab-pane {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}

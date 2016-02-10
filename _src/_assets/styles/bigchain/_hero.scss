@@ -1,0 +1,169 @@
+//
+// Hero
+// ---
+// bigchain.io
+//
+
+$menu-height-md: 73px;
+
+.hero {
+    @extend .background--photo;
+    background-image: url('/assets/img/northern-lights-poster.jpg');
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    // vertically center everything
+    display: flex;
+    align-items: center;
+    min-height: 420px;
+    flex-wrap: wrap;
+
+    .section {
+        @media ($screen-md) {
+            min-height: calc(100vh - #{$menu-height-md});
+        }
+    }
+
+    .logo--full {
+        fill-opacity: .8;
+        margin: 0 auto;
+        max-width: 20em;
+    }
+
+    .section-title {
+        color: #fff;
+
+        &:after { display: none }
+    }
+
+    .btn {
+        color: #fff;
+        opacity: .8;
+        position: absolute;
+        bottom: ($spacer * 2);
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: none;
+
+        @media ($screen-md) {
+            display: block;
+        }
+
+        &:hover,
+        &:focus { opacity: 1; }
+
+        // the caret
+        .icon {
+            width: 12px;
+            height: 12px;
+            stroke: #fff;
+            display: block;
+            margin: auto;
+        }
+    }
+
+    // intro animation
+    .logo--full,
+    .section-title,
+    .btn {
+        @extend .animation-slide-in-from-bottom;
+        animation-duration: 1s;
+        animation-fill-mode: backwards;
+    }
+
+    .logo--full {
+        animation-timing-function: $timing-default;
+    }
+
+    .section-title,
+    .btn {
+        @extend .animation-slide-in-from-bottom;
+        animation-play-state: paused;
+    }
+
+    .btn { animation-delay: .2s; }
+
+    &.is-ready {
+        .section-title,
+        .btn {
+            animation-play-state: running;
+        }
+    }
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+}
+
+
+//
+// Video hero
+//
+.hero-video {
+    // hide color overlay to prevent double overlays
+    // color overlay of hero-video__background will take over
+    @media ($screen-md) {
+        &:before { display: none }
+    }
+}
+
+.hero-video .menu,
+.hero-video__content,
+.hero-video__video {
+    @media ($screen-md) {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+}
+
+.hero-video__content {
+
+    @media ($screen-md) {
+        z-index: 3 !important;
+        bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+// video container
+.hero-video__background {
+    @extend .color-overlay;
+    display: none;
+
+    @media ($screen-md) {
+        display: block;
+        margin-bottom: -9px;
+        max-height: 100vh;
+
+        &:before { z-index: 2; }
+    }
+}
+
+// the video itself
+.hero-video__video,
+.hero-video__poster {
+    @extend .img--responsive;
+}
+
+.hero-video__video {
+    @extend .transition;
+    opacity: 0;
+    margin: auto;
+    width: 100%;
+
+    &.enabled {
+        opacity: 1
+    }
+}
+
+.hero-video__poster {
+    display: block;
+    opacity: 0;
+}

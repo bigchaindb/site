@@ -7,6 +7,7 @@
 // default logo
 .logo {
     fill: $brand-main-blue;
+    color: $brand-main-green; // the fill="currentColor" trick
     width: 300px;
     height: 30px;
 }
@@ -20,13 +21,18 @@
     color: #fff;
 }
 
+.logo--white--green {
+    fill: #fff;
+    color: $brand-main-green;
+}
+
 
 //
 // size modifiers
 //
 .logo--sm {
-    width: 140px;
-    height: 12px;
+    width: 75px;
+    height: 15px;
 }
 
 .logo--full {

@@ -1,0 +1,59 @@
+
+.page-styleguide {
+    .highlight { margin-bottom: ($spacer * 2) }
+}
+
+// color swatches
+.color {
+    padding: ($spacer / 2);
+    margin-bottom: 5px;
+    border-radius: $border-radius;
+    border: 1px solid $gray-darker;
+    min-height: 70px;
+    text-align: center;
+
+    &,
+    .color-meta { @extend .transition; }
+
+    .color-meta {
+        display: block;
+        font-family: $font-family-monospace;
+        font-size: 11px;
+        color: #fff;
+        vertical-align: middle;
+        opacity: 0;
+    }
+
+    &:hover {
+        background: #444 !important;
+
+        .color-meta { opacity: 1 }
+    }
+}
+
+.color-hex {
+    margin-top: 5px;
+    font-size: 16px !important;
+    border-top: 1px solid #777;
+    padding-top: 5px;
+}
+
+
+// colors
+.brand-main-blue        { background: $brand-main-blue }
+.brand-main-blue-light  { background: $brand-main-blue-light }
+.brand-main-blue-dark   { background: $brand-main-blue-dark }
+.brand-main-gray        { background: $brand-main-gray }
+.brand-main-green       { background: $brand-main-green }
+
+.gray-darker            { background: $gray-darker }
+.gray-dark              { background: $gray-dark }
+.gray                   { background: $gray }
+.gray-light             { background: $gray-light }
+.gray-lighter           { background: $gray-lighter }
+.gray-lightest          { background: $gray-lightest }
+
+.brand-success          { background: $brand-success }
+.brand-info             { background: $brand-info }
+.brand-warning          { background: $brand-warning }
+.brand-danger           { background: $brand-danger }

@@ -1,11 +1,26 @@
 
 .icon {
     fill: none;
-    stroke: $brand-main-brown;
+    stroke: $brand-primary;
+    color: $brand-main-blue-light;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 10;
     width: 60px;
     height: 60px;
+}
+
+.icon--social {
+    @extend .transition;
+    width: 1rem;
+    height: 1rem;
+    stroke: none;
+    fill: $text-color;
+    margin-bottom: -2px;
+}
+
+.icon--sm {
+    width: .5rem;
+    height: .5rem;
 }

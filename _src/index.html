@@ -1,45 +1,104 @@
 ---
 layout: base
 
+tagline:    'Meet BigchainDB. The scalable blockchain database.'
+
 front_page: true
+hero_video_name: northern-light
+js: page-front.min.js
 ---
 
-<header class="section hero">
-    <div class="row">
-        <div class="hero__content">
-            <svg class="logo logo--full logo--white" aria-labelledby="title">
-                <title>BigchainDB</title>
-                <use xlink:href="/assets/img/sprite.svg#logo"></use>
-            </svg>
-            <h1 class="section-title">Coming Soon on February 10.</h1>
+{% include hero-video.html %}
 
-            <a href="#benchmarks" class="btn btn-link btn-sm">Learn More <svg class="icon">
-                <use xlink:href="/assets/img/sprite.svg#icon-caret"></use>
-            </svg></a>
-        </div>
-    </div>
-</header>
-
-<section class="section section-whitepaper">
+<section id="features" class="section section-features">
     <div class="row">
         <header class="section-header">
-            <h1 class="section-title">Whitepaper</h1>
+            <h1 class="section-title">This is BigchainDB</h1>
+            <p class="section-description">
+                1 million writes/s, petabytes of capacity and rich permissioning to power both open and private blockchain networks.
+            </p>
         </header>
 
-        <svg class="icon">
-            <use xlink:href="/assets/img/sprite.svg#icon-documents"></use>
-        </svg>
-        <p class="text-center comingsoon">Coming soon</p>
+        <figure class="graph-bigchain img--responsive">
+            {% include svg/graph-bigchain.svg %}
+        </figure>
+
+        <div class="section-features__main grid grid--full grid-small--fit grid--gutters">
+            <div class="grid__col">
+                <svg class="icon">
+                    <use xlink:href="/assets/img/sprite.svg#icon-graph"></use>
+                </svg>
+                <h3>1 Million Writes per Second</h3>
+            </div>
+            <div class="grid__col">
+                <svg class="icon">
+                    <use xlink:href="/assets/img/sprite.svg#icon-servers"></use>
+                </svg>
+                <h3>Petabyte Capacity</h3>
+            </div>
+            <div class="grid__col">
+                <svg class="icon">
+                    <use xlink:href="/assets/img/sprite.svg#icon-scaling"></use>
+                </svg>
+                <h3>Linear Scaling</h3>
+            </div>
+        </div>
+
+        <p class="lead">BigchainDB allows developers and enterprise to deploy blockchain proof-of-concepts, platforms and applications with a scalable blockchain database.</p>
+
+        <div class="section-features__detail grid grid--full grid-small--columns grid--gutters grid--center">
+            <div class="grid__col grid__col--4">
+                <p>BigchainDB fills a gap in the decentralization ecosystem: a decentralized database, at scale. It is complementary to decentralized processing platforms like Ethereum, and decentralized file systems like InterPlanetary File System (IPFS).</p>
+            </div>
+            <div class="grid__col grid__col--2">
+                <div class="text-center">
+                    <a href="/features" class="btn btn-primary">How it works</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="section section-getstarted background--darker">
+    <div class="row row--wide">
+        <header class="section-header">
+            <h1 class="section-title">Get Started</h1>
+            <p class="section-description">Install and Run</p>
+        </header>
+
+        <div class="grid grid--gutters grid--full grid-medium--half grid--center">
+            <div class="grid__col">
+                <p>BigchainDB provides a rich API to create, query and transfer digital assets.</p>
+                <p><a href="https://bigchaindb.readthedocs.org/">Read documentation</a> | <a href="https://github.com/{{ site.github.org }}/{{ site.github.repo }}"><svg class="icon icon--social icon--github"><use xlink:href="/assets/img/sprite.svg#github"></use></svg> GitHub</a></p>
+            </div>
+            <div class="grid__col">
+                <figure class="terminal highlight js-tracking-terminal">
+                    <code>
+                        <span class="comment"># install bigchaindb</span>
+                        <span><span class="ne">pip</span> install <span class="cp">bigchaindb</span></span><br/>
+                        <span class="comment"># start bigchaindb</span>
+                        <span><span class="ne">bigchaindb</span> start</span>
+                    </code>
+                </figure>
+            </div>
+        </div>
+
     </div>
 </section>
 
-<section id="earlyaccess" class="section section-earlyaccess background--gray">
+<section class="section section-whitepaper background--photo">
     <div class="row">
         <header class="section-header">
-            <h1 class="section-title">Early Access</h1>
-            <p class="section-description">For early access and inquiries, enter your contact information below</p>
+            <h1 class="section-title">Whitepaper</h1>
+            <p class="section-description">BigchainDB: A Scalable Blockchain Database</p>
         </header>
 
-        {% include/form-earlyaccess.html %}
+        <a class="btn btn-primary btn-sm" href="/whitepaper/">
+            <svg class="icon">
+                <use xlink:href="/assets/img/sprite.svg#icon-documents"></use>
+            </svg>
+            Read our Whitepaper
+        </a>
     </div>
 </section>
