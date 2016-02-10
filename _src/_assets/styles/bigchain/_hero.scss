@@ -141,6 +141,9 @@ $menu-height-md: 73px;
         display: block;
         margin-bottom: -9px;
         max-height: 100vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
 
         &:before { z-index: 2; }
     }
