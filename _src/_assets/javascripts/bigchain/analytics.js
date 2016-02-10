@@ -1,7 +1,7 @@
 //
 // Google Analytics
 //
-var GoogleAnalytics = (function(w,d) {
+var GoogleAnalytics = (function(w,d,$) {
 
     var app, _private;
 
@@ -14,6 +14,16 @@ var GoogleAnalytics = (function(w,d) {
             // jQuery('.js-tracking-').on('click', function() {
             //     ga('send', 'event', [eventCategory], [eventAction], [eventLabel]);
             // });
+
+            // Menu clicks
+            $('.js-tracking-menu').on('click', function() {
+                ga('send', 'event', 'menu_click', 'link_click', 'text_link', true);
+            });
+
+            // Terminal interaction
+            $('.js-tracking-terminal').on('click', function() {
+                ga('send', 'event', 'terminal', 'terminal_click', 'selection', true);
+            });
         },
 
 
@@ -100,4 +110,4 @@ var GoogleAnalytics = (function(w,d) {
 
     return app;
 
-})(window, document);
+})(window, document, jQuery);

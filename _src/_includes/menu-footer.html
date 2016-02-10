@@ -9,7 +9,7 @@
                     {% assign active = 'active' %}
                 {% endif %}
 
-                <a class="menu__link {{ active }}" href="{{ link.url }}">{{ link.title }}</a>
+                <a class="menu__link {{ active }} js-tracking-menu" href="{{ link.url }}">{{ link.title }}</a>
 
             {% endfor %}
         </div>
@@ -22,7 +22,7 @@
                     {% assign active = 'active' %}
                 {% endif %}
 
-                <a class="menu__link {{ active }}" href="{{ link.url }}">{{ link.title }}</a>
+                <a class="menu__link {{ active }} js-tracking-menu" href="{{ link.url }}">{{ link.title }}</a>
 
             {% endfor %}
         </div>
