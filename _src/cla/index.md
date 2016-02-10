@@ -2,6 +2,8 @@
 layout: page
 
 title: Contributor License Agreement
+
+js: page-cla.min.js
 ---
 
 Before we can accept any contributions from you or the organization you represent, you or your organization must agree to license the contributions to others under some non-exclusive open licenses (as listed in the contributor license agreement ["Agreement"]).
