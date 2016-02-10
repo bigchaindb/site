@@ -20,12 +20,9 @@ var FormCla = (function(w, d, $) {
                 if ( $(this).parsley().isValid() ) {
                     $.ajax({
                         url: _config.formURL,
-                        type: _config.formMethod,
-                        accept: {
-                            javascript: 'application/javascript'
-                        },
-                        data: _config.form.serialize(),
-                        crossDomain: true,
+                        method: _config.formMethod,
+                        data: $(this).serialize(),
+                        dataType: 'json',
                         beforeSend: function() {
                             _config.formBtn
                                 .addClass('disabled')

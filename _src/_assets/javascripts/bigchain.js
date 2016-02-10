@@ -15,6 +15,7 @@ jQuery(function($) {
     // init modules
     //
     Forms.init();
+    FormContact.init();
 
     if (!_dntEnabled()) {
         GoogleAnalytics.init();
