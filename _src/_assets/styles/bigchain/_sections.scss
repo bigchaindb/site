@@ -15,6 +15,11 @@
     min-height: 420px;
     flex-wrap: wrap;
 
+    // HEADS UP!
+    // this fixes wrng wrapping of rows following each other
+    // BUT only in Chrome & Firefox, it destroys complete layout in Safari
+    //flex-flow: column;
+
     .row {
         flex: 0 0 100%;
     }
