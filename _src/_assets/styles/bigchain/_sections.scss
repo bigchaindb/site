@@ -2,23 +2,13 @@
 .section {
     padding-top: ($spacer * 2);
     padding-bottom: ($spacer * 2);
+    min-height: 420px;
 
     &:last-child { border-bottom: none; }
 
     // use this so animated elements coming in from outside of screen
     // don't affect layout
     overflow: hidden;
-
-    // vertically center everything
-    display: flex;
-    align-items: center;
-    min-height: 420px;
-    flex-wrap: wrap;
-
-    // HEADS UP!
-    // this fixes wrng wrapping of rows following each other
-    // BUT only in Chrome & Firefox, it destroys complete layout in Safari
-    //flex-flow: column;
 
     .row {
         flex: 0 0 100%;
@@ -117,6 +107,11 @@
     // background
     background: url('../img/northern-lights-poster.jpg') no-repeat center center;
     background-size: cover;
+
+    .row {
+        position: relative;
+        z-index: 5;
+    }
 
     .section-title,
     .section-description,
