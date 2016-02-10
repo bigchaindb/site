@@ -8,7 +8,8 @@
     margin-bottom: ($spacer * 2);
 
     .row > h1 {
-        border-bottom: 2px solid $gray-lightest;
+        font-size: $font-size-h2;
+        border-bottom: 1px solid $brand-main-blue-light;
         padding-bottom: $spacer;
         margin-bottom: ($spacer * 2);
         text-align: center;

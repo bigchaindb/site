@@ -112,6 +112,12 @@
         z-index: 5;
     }
 
+    .section-title {
+        &:after {
+            background: rgba($brand-main-blue-light, .5);
+        }
+    }
+
     .section-title,
     .section-description,
     .header__title {

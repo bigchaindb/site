@@ -2,12 +2,11 @@
 .page-whitepaper {
     .content--page--markdown {
         > p:nth-child(1),
-        > p:nth-child(2) { text-align: center; }
+        > p:nth-child(2),
+        > p:nth-child(3) { text-align: center; }
     }
+}
 
-    #get-the-whitepaper {
-        + a {
-            @extend .btn, .btn-primary;
-        }
-    }
+.section-whitepaper-download {
+    background-image: url('/assets/img/photo3.jpg')
 }
