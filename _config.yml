@@ -12,7 +12,9 @@ email:
 
 twitter:                BigchainDB
 facebook:               BigchainDB
-github:                 BigchainDB
+github:
+    org:                bigchaindb
+    repo:               bigchaindb
 medium:                 the-bigchaindb-blog
 googlegroup:            bigchaindb
 disqus:                 bigchain
