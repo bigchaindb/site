@@ -2,6 +2,7 @@
 layout: page
 
 title: Privacy & Cookies Policy
+description: 'Our Privacy Policy sets out how your personal information is collected and used while you use the Site.'
 ---
 
 ### Introduction

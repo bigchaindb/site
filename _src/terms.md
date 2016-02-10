@@ -16,7 +16,7 @@ https://www.ascribe.io
 
 ### Terms and Privacy Policy
 
-This agreement (“Terms”) applies to your use of the Site. If you do not agree with the Terms, you can’t use the Site. If you use the Site, you agree to the Terms. We also have a Privacy Policy, and by using the Site you agree to that too.
+This agreement (“Terms”) applies to your use of the Site. If you do not agree with the Terms, you can’t use the Site. If you use the Site, you agree to the Terms. We also have a [Privacy Policy](/privacy/), and by using the Site you agree to that too.
 
 The most recent version of the Terms will always be available at bigchaindb.com/terms, and most recent version of the Privacy Policy will always be available at bigchaindb.com/privacy. You can print and save if you want.
 
