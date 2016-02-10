@@ -10,12 +10,8 @@
     }
 }
 
-.section-community,
-.section-conduct {
-    @extend .text-center;
-}
-
 .section-community {
+    @extend .text-center;
     position: relative;
     // make room for BuffyDB
     padding-bottom: 200px;
@@ -31,15 +27,6 @@
     .grid h1 {
         @extend .h3;
         margin-top: 0;
-    }
-
-    .buffy {
-        @extend .img--responsive;
-        vertical-align: bottom;
-        height: 220px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
     }
 
     .social-link {
@@ -78,4 +65,37 @@
             height: 1.5rem;
         }
     }
+}
+
+
+//
+// Buffy: positioned and animated
+//
+#buffy {
+    @extend .img--responsive;
+    vertical-align: bottom;
+    height: 220px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    #arm {
+        transform-origin: right;
+    }
+
+    &.is-ready {
+        #arm {
+            animation: buffy-wink 1s ease-in-out 3s;
+        }
+    }
+
+    &:hover #arm {
+        animation: buffy-wink 1s ease-in-out;
+    }
+}
+
+@keyframes buffy-wink {
+    0%   { transform: rotate(0); }
+    25%, 50%  { transform: rotate(-20deg); }
+    30%, 100% { transform: rotate(0); }
 }

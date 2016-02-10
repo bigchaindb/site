@@ -19,7 +19,8 @@
     "normalize-opentype.css": ">=0.2.4",
     "parsleyjs": "^2.0.7",
     "svg4everybody": "^2.0.0",
-    "vivus": "^0.2.2"
+    "vivus": "^0.2.2",
+    "is-in-viewport": "^2.3.0"
   },
   "devDependencies": {
     "browser-sync": ">=2.10.0",
