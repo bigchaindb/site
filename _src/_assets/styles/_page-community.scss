@@ -13,7 +13,7 @@
 .section-community {
     @extend .text-center;
     position: relative;
-    // make room for BuffyDB
+    // make room for wrigely
     padding-bottom: 200px;
 
     @media ($screen-lg) {
@@ -69,9 +69,9 @@
 
 
 //
-// Buffy: positioned and animated
+// wrigely: positioned and animated
 //
-#buffy {
+#wrigely {
     @extend .img--responsive;
     vertical-align: bottom;
     height: 220px;
@@ -85,16 +85,16 @@
 
     &.is-ready {
         #arm {
-            animation: buffy-wink 1s ease-in-out 3s;
+            animation: wrigely-wink 1s ease-in-out 3s;
         }
     }
 
     &:hover #arm {
-        animation: buffy-wink 1s ease-in-out;
+        animation: wrigely-wink 1s ease-in-out;
     }
 }
 
-@keyframes buffy-wink {
+@keyframes wrigely-wink {
     0%   { transform: rotate(0); }
     25%, 50%  { transform: rotate(-20deg); }
     30%, 100% { transform: rotate(0); }

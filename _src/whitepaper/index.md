@@ -9,16 +9,14 @@ whitepaper:
     text: Download the full whitepaper in various formats.
     files:
         - file: bigchaindb-whitepaper.pdf
-          button: Get PDF
-        - file: bigchaindb-whitepaper.epub
-          button: Get ePub
+          button: Download PDF
 ---
 
 ## BigchainDB: A Scalable Blockchain Database
 
 *by <br>Trent McConaghy, Rodolphe Marques, Andreas Müller, Dimitri De Jonghe, Troy McConaghy, Greg McMullen*
 
-*February 8, 2016*
+*February 2016*
 
 ### Abstract
 

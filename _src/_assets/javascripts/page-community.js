@@ -3,13 +3,13 @@
 
 jQuery(function($) {
 
-    // start Buffy animation when in viewport
-    var buffy = $('#buffy');
+    // start wrigely animation when in viewport
+    var wrigely = $('#wrigely');
 
-    if (buffy.isInViewport() ) {
-        buffy.addClass('is-ready');
+    if (wrigely.isInViewport() ) {
+        wrigely.addClass('is-ready');
     } else {
-        buffy.removeClass('is-ready');
+        wrigely.removeClass('is-ready');
     }
 
 });
