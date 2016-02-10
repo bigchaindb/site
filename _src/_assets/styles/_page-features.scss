@@ -39,14 +39,6 @@
     margin-bottom: 0;
 }
 
-.section-stacks {
-
-}
-
-.stacks {
-
-}
-
 .stacks__title {
     font-size: $font-size-h3;
 }
@@ -55,10 +47,11 @@
     figcaption { margin: $spacer 0; }
 }
 
-
-.section-timeline {
-
-    .timeline {
-        color: #fff;
+.section-usecases {
+    .grid {
+        // manually center last column
+        .grid__col:last-child {
+            margin: auto;
+        }
     }
 }

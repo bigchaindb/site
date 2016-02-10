@@ -12,8 +12,6 @@ whitepaper:
           button: Get PDF
         - file: bigchaindb-whitepaper.epub
           button: Get ePub
-
-comments: true
 ---
 
 ## BigchainDB: A Scalable Blockchain Database

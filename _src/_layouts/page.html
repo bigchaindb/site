@@ -26,20 +26,30 @@ layout: base
 </section>
 
 {% if page.title == "Whitepaper" %}
-<section class="section section-whitepaper-download background--photo">
-    <div class="row">
-        <header class="section-header">
-            <h1 class="section-title">{{ page.whitepaper.title }}</h1>
-            <p class="section-description">{{ page.whitepaper.text }}</p>
-        </header>
+    <section class="section section-whitepaper-download background--photo">
+        <div class="row">
+            <header class="section-header">
+                <h1 class="section-title">{{ page.whitepaper.title }}</h1>
+                <p class="section-description">{{ page.whitepaper.text }}</p>
+            </header>
 
-        <p class="text-center">
-            {% for whitepaper in page.whitepaper.files %}
-                <a href="{{ whitepaper.file }}" class="btn btn-primary btn-sm"><svg class="icon"><use xlink:href="/assets/img/sprite.svg#icon-documents"></use></svg> {{ whitepaper.button }}</a>
-            {% endfor %}
-        </p>
-    </div>
-</section>
+            <p class="text-center">
+                {% for whitepaper in page.whitepaper.files %}
+                    <a href="{{ whitepaper.file }}" class="btn btn-primary btn-sm"><svg class="icon"><use xlink:href="/assets/img/sprite.svg#icon-documents"></use></svg> {{ whitepaper.button }}</a>
+                {% endfor %}
+            </p>
+        </div>
+    </section>
+
+    <section class="section section-contact">
+        <div class="row">
+            <header class="section-header">
+                <h1 class="section-title">Get In Touch</h1>
+            </header>
+
+            {% include form-contact.html %}
+        </div>
+    </section>
 {% endif %}
 
 {% if page.comments %}
