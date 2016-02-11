@@ -12,6 +12,11 @@
         padding-bottom: ($spacer * 4);
     }
 
+    p:first-child {
+        @extend .lead;
+        margin-bottom: ($spacer * 2);
+    }
+
     > h1, h2 {
         border-bottom: 1px solid $brand-main-blue-light;
         padding-bottom: $spacer;
