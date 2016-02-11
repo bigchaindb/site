@@ -86,20 +86,56 @@
     #arm {
         transform-origin: right;
     }
+    #head {
+        transform-origin: center;
+    }
+    #eye {
+        transform-origin: center;
+    }
 
+    #arm,
+    #head,
+    #eye {
+        animation: none;
+    }
+
+    &:hover,
     &.is-ready {
+        #arm,
+        #head,
+        #eye {
+            &.paused { animation: none; }
+        }
         #arm {
-            animation: wrigely-wink 1s ease-in-out 3s;
+            animation: wrigely-wink 1s ease-in-out;
+        }
+        #head {
+            animation: wrigely-head-nod 1s ease-in-out;
+        }
+        #eye {
+            &.is-ready {
+                animation: wrigely-blink .3s ease-in-out forwards;
+                animation-iteration-count: 2;
+            }
         }
     }
 
-    &:hover #arm {
-        animation: wrigely-wink 1s ease-in-out;
-    }
 }
 
 @keyframes wrigely-wink {
     0%   { transform: rotate(0); }
     25%, 50%  { transform: rotate(-20deg); }
     30%, 100% { transform: rotate(0); }
+}
+
+@keyframes wrigely-head-nod {
+    0%   { transform: rotate(0); }
+    25%, 50%  { transform: rotate(-2deg); }
+    30%, 100% { transform: rotate(0); }
+}
+
+@keyframes wrigely-blink {
+    0%   { transform: scaleY(1); }
+    50%  { transform: scaleY(0); }
+    100% { transform: scaleY(1); }
 }
