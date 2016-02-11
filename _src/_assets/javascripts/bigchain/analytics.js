@@ -24,6 +24,11 @@ var GoogleAnalytics = (function(w,d,$) {
             $('.js-tracking-terminal').on('click', function() {
                 ga('send', 'event', 'terminal', 'terminal_click', 'selection', true);
             });
+
+            // Whitepaper download
+            $('.js-tracking-whitepaper-download').on('click', function() {
+                ga('send', 'event', 'whitepaper', 'download', 'button', true);
+            });
         },
 
 
@@ -105,6 +110,22 @@ var GoogleAnalytics = (function(w,d,$) {
         },
         gaEventEarlyAccessError: function() {
             ga('send', 'event', 'signup', 'early_access_form', 'error');
+        },
+
+        // contact forms
+        gaEventContactSuccess: function() {
+            ga('send', 'event', 'contact', 'contact_form', 'success');
+        },
+        gaEventContactError: function() {
+            ga('send', 'event', 'contact', 'contact_form', 'error');
+        },
+
+        // CLA forms
+        gaEventClaSuccess: function() {
+            ga('send', 'event', 'cla', 'cla_form', 'success');
+        },
+        gaEventClaError: function() {
+            ga('send', 'event', 'cla', 'cla_form', 'error');
         }
     };
 

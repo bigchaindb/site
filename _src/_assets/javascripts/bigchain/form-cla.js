@@ -51,12 +51,22 @@ var FormCla = (function(w, d, $) {
                             thisForm.find('.form-group').addClass('hide');
                             thisForm.find('.alert-success').removeClass('hide');
                             thisButton.removeClass('disabled');
+
+                            // send GA event
+                            if (!_dntEnabled()) {
+                                GoogleAnalytics.gaEventClaSuccess();
+                            }
                         },
                         error: function(err) {
                             thisForm.find('.alert-danger').removeClass('hide');
                             thisButton
                                 .removeClass('disabled')
                                 .attr('value', 'Send');
+
+                            // send GA event
+                            if (!_dntEnabled()) {
+                                GoogleAnalytics.gaEventClaError();
+                            }
                         }
                     });
                 }

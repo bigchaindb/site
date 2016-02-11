@@ -32,12 +32,22 @@ var FormContact = (function(w, d, $) {
                             _config.form.find('.form-group').addClass('hide');
                             _config.form.find('.alert-success').removeClass('hide');
                             _config.formBtn.removeClass('disabled');
+
+                            // send GA event
+                            if (!_dntEnabled()) {
+                                GoogleAnalytics.gaEventContactSuccess();
+                            }
                         },
                         error: function(err) {
                             _config.form.find('.alert-danger').removeClass('hide');
                             _config.formBtn
                                 .removeClass('disabled')
                                 .attr('value', 'Send');
+
+                            // send GA event
+                            if (!_dntEnabled()) {
+                                GoogleAnalytics.gaEventContactError();
+                            }
                         }
                     });
                 }
