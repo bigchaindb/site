@@ -32,12 +32,12 @@
                 <input class="form-control" type="tel" id="phone" name="phone">
                 <label class="form-label" for="phone">Your Phone Number</label>
             </p>
-            <p class="text-dimmed">
+            <p class="form-group text-dimmed">
                 Agreed and accepted: By clicking and accepting this Agreement, I represent and warrant that I have authority to bind the entity named above (if applicable) to the terms and conditions of this Agreement.
             </p>
-            <div class="checkbox">
+            <div class="form-group checkbox">
                 <label class="text-dimmed">
-                    <input type="checkbox" value="agreement" required>
+                    <input class="agree" type="checkbox" value="agreement" name="agreement" required>
                     I have read and agree to the terms of this Agreement
                 </label>
             </div>
@@ -63,33 +63,35 @@
                     Would you mind trying again?
                 </p>
             </div>
+
+            <input type="hidden" name="_subject" value="New CLA submission (Individual)" />
         </form>
     </div>
 
     <div class="tab-pane" id="entity" role="tabpanel">
         <form id="form-cla-entities" class="form-cla js-parsley" action="//formspree.io/{{ site.email.cla }}" method="POST" accept-charset="UTF-8">
             <p class="form-group">
-                <input class="form-control" type="text" id="org" name="org" required>
-                <label class="form-label" for="org">Name of organization, foundation, company or other entity</label>
+                <input class="form-control" type="text" id="org-entity" name="org" required>
+                <label class="form-label" for="org-entity">Name of organization, foundation, company or other entity</label>
             </p>
             <p class="form-group">
-                <input class="form-control" type="text" id="name" name="name" required>
-                <label class="form-label" for="name">Contact Person</label>
+                <input class="form-control" type="text" id="name-entity" name="name" required>
+                <label class="form-label" for="name-entity">Contact Person</label>
             </p>
             <p class="form-group">
-                <input class="form-control" type="email" id="email" name="_replyto" required>
-                <label class="form-label" for="email">Contact Email Address</label>
+                <input class="form-control" type="email" id="email-entity" name="_replyto" required>
+                <label class="form-label" for="email-entity">Contact Email Address</label>
             </p>
             <p class="form-group">
-                <input class="form-control" type="tel" id="phone" name="phone">
-                <label class="form-label" for="phone">Contact Phone Number</label>
+                <input class="form-control" type="tel" id="phone-entity" name="phone">
+                <label class="form-label" for="phone-entity">Contact Phone Number</label>
             </p>
-            <p class="text-dimmed">
+            <p class="form-group text-dimmed">
                 Agreed and accepted: By clicking and accepting this Agreement, I represent and warrant that I have authority to bind the entity named above (if applicable) to the terms and conditions of this Agreement.
             </p>
-            <div class="checkbox">
+            <div class="form-group checkbox">
                 <label class="text-dimmed">
-                    <input type="checkbox" value="agreement" required>
+                    <input class="agree" type="checkbox" value="agreement" name="agreement" required>
                     I have read and agree to the terms of this Agreement
                 </label>
             </div>
@@ -115,6 +117,8 @@
                     Would you mind trying again?
                 </p>
             </div>
+
+            <input type="hidden" name="_subject" value="New CLA submission (Organization)" />
         </form>
     </div>
 

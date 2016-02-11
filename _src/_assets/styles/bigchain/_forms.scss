@@ -84,9 +84,9 @@
     &:focus ~ .form-label,
     &:valid:not(.is-empty) ~ .form-label,
     &:invalid:not(.is-empty) ~ .form-label,
-    &.parsley-error ~ .form-label,
+    //&.parsley-error ~ .form-label,
     &.parsley-success ~ .form-label {
-        transform: translate3d(0, -($spacer + $input-padding-x), 0) scale(.7);
+        transform: translate3d(0, -(($spacer / 1.5) + $input-padding-x), 0) scale(.7);
         transform-origin: left;
         color: $input-border-focus;
     }
@@ -97,7 +97,7 @@
 // Form groups
 //
 .form-group {
-    margin-bottom: ($spacer * 2);
+    margin-bottom: $spacer;
     position: relative;
     // make room for floating labels
     margin-top: $spacer;
@@ -248,7 +248,7 @@ input[type="checkbox"] {
     position: absolute;
     left: 0;
     bottom: 0;
-    font-size: $font-size-xs;
+    font-size: $font-size-sm;
 
     &,
     li { color: $brand-danger; }
