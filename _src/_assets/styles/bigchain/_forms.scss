@@ -101,6 +101,12 @@
     position: relative;
     // make room for floating labels
     margin-top: $spacer;
+
+    &:last-of-type {
+        .btn {
+            margin-top: $spacer;
+        }
+    }
 }
 
 
