@@ -8,6 +8,10 @@
     margin-top: $spacer;
     margin-bottom: $spacer;
 
+    // reset body word-break
+    // so responsive tables can work
+    word-break: normal;
+
     th,
     td {
         padding: $table-cell-padding;
@@ -78,5 +82,7 @@
 .table-responsive {
     display: block;
     width: 100%;
+    min-height: .01%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
