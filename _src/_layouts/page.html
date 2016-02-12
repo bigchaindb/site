@@ -38,6 +38,7 @@ layout: base
                     <a href="{{ whitepaper.file }}" class="btn btn-primary btn-sm js-tracking-whitepaper-download"><svg class="icon"><use xlink:href="/assets/img/sprite.svg#icon-documents"></use></svg> {{ whitepaper.button }}</a>
                 {% endfor %}
             </p>
+            <p class="text-center small">Last updated: {{ page.whitepaper.updated | date: '%B %d, %Y' }}</p>
         </div>
     </section>
 
