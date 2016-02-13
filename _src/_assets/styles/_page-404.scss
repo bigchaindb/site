@@ -1,14 +1,28 @@
 
 .page-404 {
-    .header {
-        background-image: url('/assets/img/fail-cat.gif');
-        min-height: 420px;
+    position: relative;
+    background-image: url('/assets/img/fail-cat.gif');
+    background-size: cover;
+    background-position: center center;
+    @extend .color-overlay;
+    min-height: 100vh;
 
-        @media ($screen-md) {
-            min-height: 100vh;
-        }
+    &:before {
+        z-index: -1;
     }
-    .content--page {
+
+    .header {
+        background: none;
+        &:before { display: none; }
+    }
+
+    .content--page--markdown {
         text-align: center;
+        padding-top: 0;
+        margin-bottom: ($spacer * 6);
+    }
+
+    .menu--footer {
+        a { color: #fff }
     }
 }
