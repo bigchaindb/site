@@ -1,16 +1,10 @@
 
 .footer {
-    padding-top: $spacer;
-    padding-bottom: $spacer;
+    @extend .background--darker;
     border-top: 1px solid $gray;
     color: $gray-light;
-}
 
-.footer__copyright {
-    text-align: center;
-    
-    &,
-    small {
-        @extend .mini;
+    .grid__col {
+        padding-bottom: 0;
     }
 }

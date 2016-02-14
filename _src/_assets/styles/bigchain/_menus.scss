@@ -17,7 +17,7 @@
 .menu__link {
     @extend .small;
     display: inline-block;
-    padding: $spacer ($spacer / 2);
+    padding: ($spacer / 2);
     text-transform: uppercase;
     box-shadow: none;
 
@@ -50,7 +50,8 @@
 
 .menu__logo {
     display: block;
-    margin-top: $spacer;
+    margin-top: ($spacer * 2);
+    margin-bottom: $spacer;
     box-shadow: none;
 
     @media ($screen-md) {
@@ -99,37 +100,58 @@
 // Footer Menu
 //
 .menu--footer {
+    .grid__col {
+        &:nth-child(2) {
+            margin-top: $spacer;
 
-    .menu__logo {
-        margin-bottom: $spacer;
-
-        &:hover,
-        &:focus {
-            .logo { fill: $brand-primary }
+            @media ($screen-sm) {
+                margin-top: 0;
+            }
         }
     }
 
-    .logo {
-        fill: $gray-light;
-        opacity: 1;
-        height: 9px;
+    .menu__logo {
+        margin-top: ($spacer / 3);
+        margin-bottom: 0;
     }
 
     .menu__link {
-        @extend .mini;
-        padding: ($spacer/2);
+        padding: ($spacer/3);
         color: $gray-light;
 
-        // link line
-        &:after {
-            background: $brand-primary;
+        @media ($screen-sm) {
+            display: block;
+            text-align: left;
         }
 
-        &:first-child { padding-left: 0; }
-        &:last-child { padding-right: 0; }
+        // hide link line
+        &:after { display: none; }
 
         &:hover,
         &:focus,
         &.active { color: $brand-primary; }
+    }
+
+    .footer__copyright {
+        text-align: center;
+        display: block;
+        margin-top: $spacer;
+
+        @media ($screen-sm) {
+            text-align: left;
+            margin-bottom: -($spacer * 2);
+        }
+
+        .menu__link {
+            display: inline-block;
+            text-transform: none;
+        }
+
+        &,
+        small,
+        .menu__link {
+            @extend .mini;
+            color: $gray;
+        }
     }
 }
