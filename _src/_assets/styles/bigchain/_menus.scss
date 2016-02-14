@@ -132,27 +132,31 @@
         &:focus,
         &.active { color: $brand-primary; }
     }
+}
 
-    .footer__copyright {
-        text-align: center;
-        display: block;
-        margin-top: $spacer;
 
-        @media ($screen-sm) {
-            text-align: left;
-            margin-bottom: -($spacer * 2);
-        }
+.footer__copyright {
+    border-top: 1px solid $gray-dark;
+    text-align: center;
+    display: block;
+    margin-top: ($spacer * 4);
 
-        .menu__link {
-            display: inline-block;
-            text-transform: none;
-        }
+    @media ($screen-sm) {
+        text-align: left;
+    }
 
-        &,
-        small,
-        .menu__link {
-            @extend .mini;
-            color: $gray;
-        }
+    .menu__link {
+        display: inline-block;
+        text-transform: none;
+        padding: ($spacer * 2) ($spacer/2);
+
+        &:first-child { margin-left: ($spacer/2); }
+        &:last-child { padding-right: 0; }
+    }
+
+    &,
+    .menu__link {
+        @extend .mini;
+        color: $gray;
     }
 }

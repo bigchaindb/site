@@ -3,10 +3,7 @@
     @extend .background--darker;
     border-top: 1px solid $gray;
     color: $gray-light;
-
-    .grid__col {
-        padding-bottom: 0;
-    }
+    padding-bottom: 0;
 }
 
 

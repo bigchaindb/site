@@ -41,9 +41,12 @@
 
     .footer {
         background: none;
+        border-color: rgba(#fff, .2);
     }
 
     .footer__copyright {
+        border-color: rgba(#fff, .1);
+
         &,
         .menu__link { color: rgba(#fff, .6); }
     }
