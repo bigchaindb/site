@@ -1,14 +1,20 @@
 
 - name: Juan Benet
   org: IPFS
-  quote: 'BigchainDB is exciting! It marries the performance and power of traditional databases with the public verifiability of blockchains. I look forward to adding merkle-linking and digital signatures to all kinds of traditional databases with BigchainDB and IPFS!'
+  link: https://ipfs.io
+  image: /assets/img/juan-benet.png
+  quote: 'BigchainDB is exciting! It marries the performance and power of traditional databases with the public verifiability of blockchains.'
 
 
 - name: Ian Worrall
   org: Encrypted Labs
-  quote: 'BigchainDB is a game changer.  I have been involved in the Blockchain industry full-time since 2013 and this is the first true solution I have seen that resolves many of the restraints with the Bitcoin blockchain.  Not only is the technology associated with BigchainDB fantastic but the approach, team, and scalability potential is unparalleled.  I am excited to watch it unfold.'
+  link: http://encryptedlabs.com
+  image: /assets/img/ian-worrall.jpg
+  quote: 'BigchainDB is a game changer. This is the first true solution I have seen that resolves many of the restraints with the Bitcoin blockchain.'
 
 
 - name: Fabian Vogelsteller
   org: Ethereum Foundation
-  quote: 'I think distributed databases and Blockchains can learn a lot from each other. BigchainDB is the logical next step in scaling non-computational blockchains, especially when storing larger datasets on a permission basis.'
+  link: https://www.ethereum.org
+  image: /assets/img/fabian-vogelsteller.jpg
+  quote: 'BigchainDB is the logical next step in scaling non-computational blockchains.'

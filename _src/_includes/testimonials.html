@@ -8,12 +8,12 @@
 
             <blockquote class="testimonial__quote">{{ testimonial.quote }}</blockquote>
 
-            <div class="testimonial__image">
-                <img class="testimonial__avatar" src="/assets/img/{{ testimonial.image }}">
-            </div>
-
             <figcaption class="testimonial__caption">
-                {{ testimonial.name }} &bull; &bull; {{ testimonial.org }}
+                <img class="testimonial__avatar" src="{{ testimonial.image }}">
+                <cite class="testimonial__cite">
+                    <span class="testimonial__name">{{ testimonial.name }}</span>
+                    <span class="testimonial__org"><a href="{{ testimonial.link }}">{{ testimonial.org }}</a></span>
+                </cite>
             </figcaption>
         </figure>
     </div>
