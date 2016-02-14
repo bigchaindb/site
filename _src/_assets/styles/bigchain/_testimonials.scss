@@ -1,0 +1,46 @@
+
+.testimonials {
+    // clear after every third column
+    .grid__col {
+        flex-basis: 33%;
+    }
+}
+
+.testimonial {
+
+}
+
+.testimonial__image {
+
+}
+
+.testimonial__avatar {
+    width: 85px;
+    height: 85px;
+    display: block;
+    margin: auto;
+}
+
+.testimonial__quote {
+    // blockquote reset
+    margin: 0;
+    position: relative;
+    border: none;
+    color: $text-color;
+    padding-right: 0;
+
+    // styling
+
+
+    // quote characters
+    &:before {
+        content: "“";
+        font-size: 250%;
+        color: $gray;
+        line-height: 1;
+    }
+}
+
+.testimonial__caption {
+
+}

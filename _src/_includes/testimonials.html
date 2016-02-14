@@ -1,0 +1,23 @@
+
+<article class="testimonials grid grid--full grid-medium--fit grid--gutters">
+
+    {% for testimonial in site.data.testimonials %}
+
+    <div class="grid__col">
+        <figure class="testimonial">
+
+            <blockquote class="testimonial__quote">{{ testimonial.quote }}</blockquote>
+
+            <div class="testimonial__image">
+                <img class="testimonial__avatar" src="/assets/img/{{ testimonial.image }}">
+            </div>
+
+            <figcaption class="testimonial__caption">
+                {{ testimonial.name }} &bull; &bull; {{ testimonial.org }}
+            </figcaption>
+        </figure>
+    </div>
+
+    {% endfor %}
+
+</article>
