@@ -5,7 +5,6 @@
     background-size: cover;
     background-position: center center;
     @extend .color-overlay;
-    min-height: 100vh;
 
     &:before {
         z-index: -1;
@@ -18,7 +17,7 @@
     }
 
     .header__title {
-        margin-bottom: ($spacer*2);
+        margin-bottom: ($spacer * 2);
         padding-bottom: 0;
 
         // the bottom line
@@ -35,7 +34,7 @@
     .content--page--markdown {
         text-align: center;
         padding-top: 0;
-        margin-bottom: ($spacer * 6);
+        //margin-bottom: ($spacer * 6);
 
         p { color: #fff; }
     }
