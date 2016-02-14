@@ -1,6 +1,7 @@
 
 //=include bigchain/hero-video.js
 //=include bigchain/smoothscroll.js
+//=include bigchain/testimonials.js
 //=include ../../../node_modules/vivus/dist/vivus.js
 
 
@@ -25,5 +26,7 @@ jQuery(function($) {
     };
 
     new Vivus('bigchain-graph', iconOptions);
+
+    Testimonials.init();
 
 });

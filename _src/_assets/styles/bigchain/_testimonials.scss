@@ -6,11 +6,22 @@
         display: flex;
         flex-wrap: wrap;
     }
+
+    // intro animation
+    &.is-ready .grid__col {
+        &:nth-child(2) .testimonial { animation-delay: .3s; }
+        &:nth-child(3) .testimonial { animation-delay: .6s; }
+    }
 }
 
 .testimonial {
     display: flex;
     flex-wrap: wrap;
+
+    .is-ready & {
+        @extend .animation-slide-in-from-bottom;
+        animation-fill-mode: backwards;
+    }
 }
 
 .testimonial__quote,
@@ -29,7 +40,6 @@
 
     // styling
     margin-bottom: $spacer;
-    font-size: 95%;
     align-self: flex-start;
 
     // quote characters
