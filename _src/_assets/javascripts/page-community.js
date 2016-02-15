@@ -3,45 +3,45 @@
 
 jQuery(function($) {
 
-    var wrigely     = $('#wrigely'),
-        wrigelyArm  = wrigely.find('#arm'),
-        wrigelyHead = wrigely.find('#head'),
-        wrigelyEye  = wrigely.find('#eye');
+    var wrigley     = $('#wrigley'),
+        wrigleyArm  = wrigley.find('#arm'),
+        wrigleyHead = wrigley.find('#head'),
+        wrigleyEye  = wrigley.find('#eye');
 
-    var wrigelyAnimationStart = function() {
+    var wrigleyAnimationStart = function() {
 
         // set utility classes
-        if (wrigely.is( ':in-viewport( -180 )' ) ) {
-            wrigely.addClass('is-ready');
+        if (wrigley.is( ':in-viewport( -180 )' ) ) {
+            wrigley.addClass('is-ready');
 
             // toggle paused class so the :hover interaction can fire animation again
-            wrigelyArm.on('animationend webkitAnimationEnd oAnimationEnd', function(e) {
-                    wrigelyArm.addClass('paused');
-                    wrigelyHead.addClass('paused');
+            wrigleyArm.on('animationend webkitAnimationEnd oAnimationEnd', function(e) {
+                    wrigleyArm.addClass('paused');
+                    wrigleyHead.addClass('paused');
 
-                    wrigely.on('mouseover', function() {
-                        wrigelyArm.removeClass('paused');
-                        wrigelyHead.removeClass('paused');
+                    wrigley.on('mouseover', function() {
+                        wrigleyArm.removeClass('paused');
+                        wrigleyHead.removeClass('paused');
                     });
 
                     // fire eye blinking once other animations have finished
-                    wrigelyEye.addClass('is-ready');
+                    wrigleyEye.addClass('is-ready');
 
-                    wrigelyEye.on('animationend webkitAnimationEnd oAnimationEnd', function(e) {
-                        wrigelyEye.removeClass('is-ready');
+                    wrigleyEye.on('animationend webkitAnimationEnd oAnimationEnd', function(e) {
+                        wrigleyEye.removeClass('is-ready');
                     });
                 }
             );
         } else {
-            wrigely.removeClass('is-ready').removeClass('paused');
-            wrigelyArm.removeClass('paused');
-            wrigelyHead.removeClass('paused');
-            wrigelyEye.removeClass('is-ready').removeClass('paused');
+            wrigley.removeClass('is-ready').removeClass('paused');
+            wrigleyArm.removeClass('paused');
+            wrigleyHead.removeClass('paused');
+            wrigleyEye.removeClass('is-ready').removeClass('paused');
         }
     }
 
     // fire all the viewport things
-    wrigelyAnimationStart();
-    $(window).on('load resize scroll', wrigelyAnimationStart);
+    wrigleyAnimationStart();
+    $(window).on('load resize scroll', wrigleyAnimationStart);
 
 });
