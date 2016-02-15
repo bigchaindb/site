@@ -78,7 +78,12 @@ js: page-front.min.js
                         <span class="comment"># install bigchaindb</span>
                         <span><span class="ne">pip</span> install <span class="cp">bigchaindb</span></span><br/>
                         <span class="comment"># start bigchaindb</span>
-                        <span><span class="ne">bigchaindb</span> start</span>
+                        <span><span class="ne">bigchaindb</span> start</span><br/>
+                        <span class="comment"># generate some test transactions</span>
+                        <span class="comment"># add '-m' if you want to use all your cores</span>
+                        <span><span class="ne">bigchaindb-benchmark</span> load</span><br/>
+                        <span class="comment"># Learn more about the bigchain command</span>
+                        <span><span class="ne">bigchaindb</span> -h</span>
                     </code>
                 </figure>
             </div>
