@@ -73,9 +73,9 @@
 
 
 //
-// wrigely: positioned and animated
+// wrigley: positioned and animated
 //
-#wrigely {
+#wrigley {
     @extend .img--responsive;
     vertical-align: bottom;
     height: 220px;
@@ -107,14 +107,14 @@
             &.paused { animation: none; }
         }
         #arm {
-            animation: wrigely-wink 1s ease-in-out;
+            animation: wrigley-wink 1s ease-in-out;
         }
         #head {
-            animation: wrigely-head-nod 1s ease-in-out;
+            animation: wrigley-head-nod 1s ease-in-out;
         }
         #eye {
             &.is-ready {
-                animation: wrigely-blink .3s ease-in-out forwards;
+                animation: wrigley-blink .3s ease-in-out forwards;
                 animation-iteration-count: 2;
             }
         }
@@ -122,19 +122,19 @@
 
 }
 
-@keyframes wrigely-wink {
+@keyframes wrigley-wink {
     0%   { transform: rotate(0); }
     25%, 50%  { transform: rotate(-20deg); }
     30%, 100% { transform: rotate(0); }
 }
 
-@keyframes wrigely-head-nod {
+@keyframes wrigley-head-nod {
     0%   { transform: rotate(0); }
     25%, 50%  { transform: rotate(-2deg); }
     30%, 100% { transform: rotate(0); }
 }
 
-@keyframes wrigely-blink {
+@keyframes wrigley-blink {
     0%   { transform: scaleY(1); }
     50%  { transform: scaleY(0); }
     100% { transform: scaleY(1); }

@@ -26,7 +26,7 @@
         height: 1px;
         width: 3rem;
         display: block;
-        margin: ($spacer / 2) auto;
+        margin: ($spacer / 1.3) auto ($spacer / 2) auto;
         background: $brand-main-blue-light;
     }
 }
@@ -50,6 +50,19 @@
     &:focus {
         background: transparent;
     }
+
+    &:hover,
+    &:focus {
+        transform: translateY(-1px);
+        filter: drop-shadow(0 1px 4px rgba($brand-main-blue-dark, .4));
+    }
+
+    &:active {
+        filter: drop-shadow(0 1px 2px rgba($brand-main-blue-dark, .3));
+        outline: 0;
+        transform: none;
+    }
+
 
     .icon {
         fill: $brand-primary;
