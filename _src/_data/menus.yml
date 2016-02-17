@@ -15,15 +15,15 @@ secondary:
     - title: Contact
       url: /contact/
     - title: Blog
-      url: https://medium.com/{{ site.medium }}
+      url: https://medium.com/the-bigchaindb-blog
 
 community:
     - title: GitHub
-      url: https://github.com/{{ site.github.org }}
+      url: https://github.com/bigchaindb
     - title: Twitter
-      url: https://twitter.com/{{ site.twitter }}
+      url: https://twitter.com/BigchainDB
     - title: Google Group
-      url: https://groups.google.com/forum/#!forum/{{ site.googlegroup }}
+      url: https://groups.google.com/forum/#!forum/bigchaindb
 
 legal:
     - title: Terms
