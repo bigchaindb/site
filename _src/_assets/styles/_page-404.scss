@@ -1,14 +1,57 @@
 
 .page-404 {
-    .header {
-        background-image: url('/assets/img/fail-cat.gif');
-        min-height: 420px;
+    position: relative;
+    background-image: url('/assets/img/fail-cat.gif');
+    background-size: cover;
+    background-position: center center;
+    @extend .color-overlay;
 
-        @media ($screen-md) {
-            min-height: 100vh;
+    &:before {
+        z-index: -1;
+    }
+
+    .header {
+        background: none;
+
+        &:before { display: none; }
+    }
+
+    .header__title {
+        margin-bottom: ($spacer * 2);
+        padding-bottom: 0;
+
+        // the bottom line
+        &:after {
+            content: "";
+            height: 1px;
+            width: 5rem;
+            display: block;
+            margin: ($spacer * 2) auto 0 auto;
+            background: $gray-lighter;
         }
     }
-    .content--page {
+
+    .content--page--markdown {
         text-align: center;
+        padding-top: 0;
+        //margin-bottom: ($spacer * 6);
+
+        p { color: #fff; }
+    }
+
+    .footer {
+        background: none;
+        border-color: rgba(#fff, .2);
+    }
+
+    .footer__copyright {
+        border-color: rgba(#fff, .1);
+
+        &,
+        .menu__link { color: rgba(#fff, .6); }
+    }
+
+    .menu--footer {
+        a { color: #fff }
     }
 }

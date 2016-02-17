@@ -51,6 +51,10 @@
     max-width: 60rem;
 }
 
+.row--narrow {
+    max-width: ($screen-md-min / 1.75);
+}
+
 
 //
 // Alignment per row

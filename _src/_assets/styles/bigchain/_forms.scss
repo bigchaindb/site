@@ -73,6 +73,7 @@
     font-size: $font-size-base;
     line-height: $line-height;
     color: $input-color-placeholder;
+    transform-origin: left;
 
     .background--photo & {
         color: rgba(#fff, .5);
@@ -87,7 +88,6 @@
     //&.parsley-error ~ .form-label,
     &.parsley-success ~ .form-label {
         transform: translate3d(0, -(($spacer / 1.5) + $input-padding-x), 0) scale(.7);
-        transform-origin: left;
         color: $input-border-focus;
     }
 }

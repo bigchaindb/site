@@ -1,16 +1,19 @@
 
 .footer {
-    padding-top: $spacer;
-    padding-bottom: $spacer;
+    @extend .background--darker;
     border-top: 1px solid $gray;
     color: $gray-light;
+    padding-bottom: 0;
 }
 
-.footer__copyright {
-    text-align: center;
-    
-    &,
-    small {
-        @extend .mini;
-    }
+
+//
+// Nice, clean sticky footer with flexbox
+//
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    > .content { flex: 1; }
 }

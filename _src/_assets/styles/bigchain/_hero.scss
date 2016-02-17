@@ -28,11 +28,29 @@ $menu-height-md: 73px;
     .logo--full {
         fill-opacity: .8;
         margin: 0 auto;
-        max-width: 20em;
+        max-width: 10em;
+
+        @media ($screen-sm) {
+            max-width: 13em;
+        }
+
+        @media ($screen-md) {
+            max-width: 20em;
+            margin-top: ($spacer * 2);
+        }
     }
 
     .section-title {
         color: #fff;
+        font-size: $font-size-h3;
+
+        @media ($screen-sm) {
+            font-size: $font-size-h2;
+        }
+
+        @media ($screen-md) {
+            font-size: $font-size-h1;
+        }
 
         &:after { display: none }
     }
@@ -41,7 +59,7 @@ $menu-height-md: 73px;
         color: #fff;
         opacity: .8;
         position: absolute;
-        bottom: ($spacer * 2);
+        bottom: -($spacer * 2);
         left: 0;
         right: 0;
         width: 100%;
@@ -96,6 +114,7 @@ $menu-height-md: 73px;
 .hero__content {
     position: relative;
     z-index: 1;
+    margin-bottom: ($spacer * 4);
 }
 
 

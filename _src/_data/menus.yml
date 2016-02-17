@@ -9,11 +9,23 @@ main:
     - title: Docs
       url: https://bigchaindb.readthedocs.org/
 
-footer:
+secondary:
     - title: About
       url: /about/
     - title: Contact
       url: /contact/
+    - title: Blog
+      url: https://medium.com/{{ site.medium }}
+
+community:
+    - title: GitHub
+      url: https://github.com/{{ site.github.org }}
+    - title: Twitter
+      url: https://twitter.com/{{ site.twitter }}
+    - title: Google Group
+      url: https://groups.google.com/forum/#!forum/{{ site.googlegroup }}
+
+legal:
     - title: Terms
       url: /terms/
     - title: Privacy
