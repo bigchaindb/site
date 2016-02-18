@@ -18,8 +18,14 @@ js: page-community.min.js
 
         <div class="grid grid--full grid-small--fit grid--gutters">
             <div class="grid__col">
-                <h1>Google Group</h1>
-                <p>Participate in our Google Group</p>
+                <h1>Join the discussion</h1>
+                <p>Participate via Gitter or Google Group</p>
+                <a class="social-link" href="https://gitter.im/{{ site.gitter }}">
+                    <svg class="icon icon--social icon--gitter" aria-labelledby="title">
+                        <title>Gitter</title>
+                        <use xlink:href="/assets/img/sprite.svg#gitter"></use>
+                    </svg>
+                </a>
                 <a class="social-link" href="https://groups.google.com/forum/#!forum/{{ site.googlegroup }}">
                     <svg class="icon icon--social icon--github" aria-labelledby="title">
                         <title>Google Group</title>
@@ -28,7 +34,7 @@ js: page-community.min.js
                 </a>
             </div>
             <div class="grid__col">
-                <h1>Social</h1>
+                <h1>Follow</h1>
                 <p>Follow us for the latest updates</p>
                 <p>
                     <a class="social-link" href="https://github.com/{{ site.github.org }}">
