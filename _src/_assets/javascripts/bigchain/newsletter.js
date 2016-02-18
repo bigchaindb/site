@@ -12,22 +12,33 @@ var Newsletter = (function(w, d, $) {
     },
 
     _private = {
-        parsley: function() {
-            if (_config.newsletter.length > 0) {
-                _config.newsletter.parsley({
-                    trigger: 'change'
-                });
-            }
-        },
-
         ajaxChimp: function() {
-            _config.newsletter.ajaxChimp();
+            _config.newsletter.ajaxChimp({
+                callback: formCallback
+            });
+
+            function formCallback (resp) {
+                if (resp.result === 'success') {
+
+                    _config.newsletter.find('.input-group').addClass('hide');
+
+                    // send GA event
+                    ga('send', 'event', 'newsletter', 'subscribe', 'success', true);
+                }
+                if (resp.result === 'error') {
+                    _config.newsletter.find('.btn')
+                        .removeClass('disabled')
+                        .text('Subscribe');
+
+                    // send GA event
+                    ga('send', 'event', 'newsletter', 'subscribe', 'error', true);
+                }
+            }
         }
     };
 
     app = {
         init: function() {
-            _private.parsley();
             _private.ajaxChimp();
         }
     };

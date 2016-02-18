@@ -57,7 +57,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
             var form = $(elem);
             var email = form.find('input[type=email]');
             var feedback = form.find('.form-control-feedback');
-            var formgroup = form.find('.form-group');
+            var formgroup = form.find('.input-group');
 
             var settings = $.extend({
                 'url': form.attr('action'),
@@ -135,7 +135,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
                 });
 
                 // Translate and display submit message
-                var submitMsg = 'Submitting...';
+                var submitMsg = 'Sending...';
                 if(
                     settings.language !== 'en'
                     && $.ajaxChimp.translations
@@ -144,7 +144,11 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
                 ) {
                     submitMsg = $.ajaxChimp.translations[settings.language]['submit'];
                 }
-                feedback.html(submitMsg).show(2000);
+                form.find('.btn')
+                    .addClass('disabled')
+                    .text(submitMsg);
+
+                //feedback.html(submitMsg).show(2000);
 
                 return false;
             });
