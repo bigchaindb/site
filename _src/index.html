@@ -60,21 +60,26 @@ js: page-front.min.js
 
 </section>
 
-<section class="section section-getstarted background--darker">
+<section class="section section-quickstart background--darker">
     <div class="row row--wide">
         <header class="section-header">
-            <h1 class="section-title">Get Started</h1>
-            <p class="section-description">Install and Run</p>
+            <h1 class="section-title">Quick Start Guide</h1>
         </header>
 
         <div class="grid grid--gutters grid--full grid-medium--half grid--center">
             <div class="grid__col">
+                <h1 class="section-quickstart__title">Install and Run</h1>
                 <p>BigchainDB provides a rich API to create, query and transfer digital assets.</p>
-                <p><a href="https://bigchaindb.readthedocs.org/">Read documentation</a> | <a href="https://github.com/{{ site.github.org }}/{{ site.github.repo }}"><svg class="icon icon--social icon--github"><use xlink:href="/assets/img/sprite.svg#github"></use></svg> GitHub</a></p>
+                <p><a class="btn btn-primary" href="https://bigchaindb.readthedocs.org/">Documentation</a> <a class="btn btn-secondary" href="https://github.com/{{ site.github.org }}/{{ site.github.repo }}"><svg class="icon icon--social icon--github"><use xlink:href="/assets/img/sprite.svg#github"></use></svg> GitHub</a></p>
             </div>
             <div class="grid__col">
                 <figure class="terminal highlight js-tracking-terminal">
                     <code>
+                        <span class="deps">Dependencies: Loaded</span>
+                        <span class="deps">(See <a class="terminal__link" href="https://bigchaindb.readthedocs.org">bigchaindb.readthedocs.org</a>)</span>
+                        <span class="deps">Python: Python 3.4+</span>
+                        <span class="deps">RethinkDB: Running</span>
+                        <span class="deps">---------------</span><br>
                         <span class="comment"># install bigchaindb</span>
                         <span><span class="ne">pip</span> install <span class="cp">bigchaindb</span></span><br/>
                         <span class="comment"># start bigchaindb</span>

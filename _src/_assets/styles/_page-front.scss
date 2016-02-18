@@ -39,6 +39,11 @@
 
 .section-features__detail {}
 
+.section-quickstart__title {
+    @extend .h3;
+    margin-top: 0;
+}
+
 
 .section-whitepaper {
     @extend .text-center;
