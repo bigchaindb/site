@@ -1,6 +1,6 @@
 
 .section-newsletter {
-    background: $brand-main-blue-dark;
+    background: $brand-primary;
 
     // .sections redefinitions
     padding-top: $spacer;
@@ -17,10 +17,31 @@
     .form-group { margin: 0; }
 
     .grid { margin-bottom: 0; }
+
+    .form-control {
+        border-color: $gray-darker;
+
+        &:focus {
+            border-color: #000;
+        }
+    }
+
+    .btn {
+        background: $brand-main-blue;
+    }
+
+    .form-label,
+    .form-control {
+        color: $gray-dark !important;
+    }
 }
 
 .newsletter__title {
     @extend .h4;
     margin-top: 0;
-    color: $headings-color;;
+}
+
+.newsletter__title,
+.newsletter__text {
+    color: $gray-darker;
 }
