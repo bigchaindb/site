@@ -7,6 +7,7 @@
 //=include bigchain/dnt.js
 
 //=include bigchain/form-contact.js
+//=include bigchain/newsletter.js
 
 
 jQuery(function($) {
@@ -16,6 +17,7 @@ jQuery(function($) {
     //
     Forms.init();
     FormContact.init();
+    Newsletter.init();
 
     if (!_dntEnabled()) {
         GoogleAnalytics.init();

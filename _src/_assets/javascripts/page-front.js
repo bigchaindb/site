@@ -26,4 +26,6 @@ jQuery(function($) {
 
     new Vivus('bigchain-graph', iconOptions);
 
+    Newsletter.init();
+
 });

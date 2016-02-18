@@ -1,0 +1,25 @@
+
+.section-newsletter {
+    background: $brand-main-blue-dark;
+
+    // .sections redefinitions
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+
+    @media ($screen-sm) {
+        padding-top: ($spacer * 3);
+        padding-bottom: ($spacer * 3);
+    }
+}
+
+.newsletter {
+    p,
+    .form-group { margin: 0; }
+
+    .grid { margin-bottom: 0; }
+}
+
+.newsletter__title {
+    @extend .h4;
+    margin-top: 0;
+}
