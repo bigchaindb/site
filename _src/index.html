@@ -70,20 +70,20 @@ js: page-front.min.js
             <div class="grid__col">
                 <h1 class="section-quickstart__title">Install and Run</h1>
                 <p>BigchainDB provides a rich API to create, query and transfer digital assets.</p>
-                <p><a class="btn btn-primary" href="https://bigchaindb.readthedocs.org/">Read documentation</a> <a class="btn btn-secondary" href="https://github.com/{{ site.github.org }}/{{ site.github.repo }}"><svg class="icon icon--social icon--github"><use xlink:href="/assets/img/sprite.svg#github"></use></svg> GitHub</a></p>
+                <p><a class="btn btn-primary" href="https://bigchaindb.readthedocs.org/">Documentation</a> <a class="btn btn-secondary" href="https://github.com/{{ site.github.org }}/{{ site.github.repo }}"><svg class="icon icon--social icon--github"><use xlink:href="/assets/img/sprite.svg#github"></use></svg> GitHub</a></p>
             </div>
             <div class="grid__col">
                 <figure class="terminal highlight js-tracking-terminal">
                     <code>
+                        <span class="deps">Dependencies: Loaded</span>
+                        <span class="deps">(see <a class="terminal__link" href="https://bigchaindb.readthedocs.org">bigchaindb.readthedocs.org</a></span>
+                        <span class="deps">Python: Python 3.4+</span>
+                        <span class="deps">RethinkDB: Running</span>
+                        <span class="deps">---------------</span><br>
                         <span class="comment"># install bigchaindb</span>
                         <span><span class="ne">pip</span> install <span class="cp">bigchaindb</span></span><br/>
                         <span class="comment"># start bigchaindb</span>
-                        <span><span class="ne">bigchaindb</span> start</span><br/>
-                        <span class="comment"># generate some test transactions</span>
-                        <span class="comment"># add '-m' if you want to use all your cores</span>
-                        <span><span class="ne">bigchaindb-benchmark</span> load</span><br/>
-                        <span class="comment"># Learn more about the bigchain command</span>
-                        <span><span class="ne">bigchaindb</span> -h</span>
+                        <span><span class="ne">bigchaindb</span> start</span>
                     </code>
                 </figure>
             </div>
