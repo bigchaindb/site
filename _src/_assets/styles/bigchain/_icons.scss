@@ -18,6 +18,10 @@
     stroke: none;
     fill: $text-color;
     margin-bottom: -2px;
+
+    .icon--gitter {
+        stroke: $text-color;
+    }
 }
 
 .icon--sm {

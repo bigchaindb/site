@@ -46,6 +46,10 @@
                 fill: lighten($brand-primary, 10%);
                 filter: drop-shadow(0 1px 4px rgba($brand-main-blue-dark, .4));
                 transform: translateY(-1px);
+
+                &.icon--gitter {
+                    stroke: lighten($brand-primary, 10%);
+                }
             }
         }
 
@@ -63,6 +67,10 @@
             fill: $brand-primary;
             width: 1.5rem;
             height: 1.5rem;
+
+            &.icon--gitter {
+                stroke: $brand-primary;
+            }
         }
     }
 }

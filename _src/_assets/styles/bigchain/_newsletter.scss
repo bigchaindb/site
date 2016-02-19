@@ -1,0 +1,52 @@
+
+.section-newsletter {
+    background: $brand-primary;
+
+    // .sections redefinitions
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+
+    @media ($screen-sm) {
+        padding-top: ($spacer * 3);
+        padding-bottom: ($spacer * 3);
+    }
+}
+
+.newsletter {
+    p,
+    .form-group { margin: 0; }
+
+    .grid { margin-bottom: 0; }
+
+    .form-control {
+        border-color: $gray-darker;
+
+        &:focus {
+            border-color: #000;
+        }
+    }
+
+    .btn {
+        background: $brand-main-blue;
+    }
+
+    .form-label,
+    .form-control {
+        color: $gray-dark !important;
+    }
+
+    .form-control-feedback {
+        @extend .bold;
+        margin-top: ($spacer / 2);
+    }
+}
+
+.newsletter__title {
+    @extend .h4;
+    margin-top: 0;
+}
+
+.newsletter__title,
+.newsletter__text {
+    color: $gray-darker;
+}

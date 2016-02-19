@@ -1,0 +1,60 @@
+//
+// Base styles
+//
+.input-group {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+
+    .form-control {
+        flex: 1;
+        margin-bottom: 0;
+    }
+}
+
+.input-group-btn,
+.input-group .form-control {
+    &:not(:first-child):not(:last-child) {
+        border-radius: 0;
+    }
+}
+
+//
+// Button input groups
+//
+.input-group-btn {
+    white-space: nowrap;
+    vertical-align: middle; // Match the inputs
+    position: relative;
+    // Jankily prevent input button groups from wrapping with `white-space` and
+    // `font-size` in combination with `inline-block` on buttons.
+    font-size: 0;
+    white-space: nowrap;
+
+    > .btn {
+        margin-top: 0 !important;
+    }
+}
+
+
+//
+// Reset rounded corners
+//
+.input-group .form-control:not(:last-child),
+.input-group-btn:not(:last-child) > .btn,
+.input-group-btn:not(:last-child) > .btn-group > .btn,
+.input-group-btn:not(:last-child) > .dropdown-toggle,
+.input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group .form-control:not(:first-child),
+.input-group-btn:not(:first-child) > .btn,
+.input-group-btn:not(:first-child) > .btn-group > .btn,
+.input-group-btn:not(:first-child) > .dropdown-toggle,
+.input-group-btn:not(:last-child) > .btn:not(:first-child),
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
