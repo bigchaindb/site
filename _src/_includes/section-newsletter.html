@@ -8,28 +8,9 @@
                 <p class="newsletter__text">No more than 1 email per month. We're busy too.</p>
             </div>
             <div class="grid__col">
-                <form id="newsletter"
-                    class="form-newsletter js-parsley"
-                    action="//ascribe.us9.list-manage.com/subscribe/post?u=56f2d3da26a7d407177d3fba3&id=0a99a9481e"
-                    method="post">
 
-                    <div class="form-group has-feedback">
-                        <div class="input-group">
-
-                            <input class="form-control" type="email" id="email" name="EMAIL" required>
-                            <label class="form-label" for="email">Your Email</label>
-
-                            <span class="input-group-btn">
-                                <button class="btn btn-secondary" type="submit" name="button">
-                                    Subscribe
-                                </button>
-                            </span>
-
-                        </div>
-
-                        <div class="form-control-feedback"></div>
-                    </div>
-                </form>
+                {% include form-newsletter.html %}
+                
             </div>
         </div>
     </div>

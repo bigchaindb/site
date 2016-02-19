@@ -34,6 +34,11 @@
     .form-control {
         color: $gray-dark !important;
     }
+
+    .form-control-feedback {
+        @extend .bold;
+        margin-top: ($spacer / 2);
+    }
 }
 
 .newsletter__title {
