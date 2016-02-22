@@ -105,11 +105,17 @@ var GoogleAnalytics = (function(w,d,$) {
             _private.gaViewport();
             _private.gaPixelDensity();
         },
-        gaEventEarlyAccessSuccess: function() {
-            ga('send', 'event', 'signup', 'early_access_form', 'success');
+
+        //
+        // All custom events
+        //
+
+        // newsletter forms
+        gaEventNewsletterSuccess: function() {
+            ga('send', 'event', 'newsletter', 'subscribe', 'success');
         },
-        gaEventEarlyAccessError: function() {
-            ga('send', 'event', 'signup', 'early_access_form', 'error');
+        gaEventNewsletterError: function() {
+            ga('send', 'event', 'newsletter', 'subscribe', 'error');
         },
 
         // contact forms

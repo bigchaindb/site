@@ -48,18 +48,3 @@
 .section-whitepaper {
     @extend .text-center;
 }
-
-
-.section-earlyaccess {
-
-    form {
-        max-width: $screen-sm-min;
-        margin: auto;
-    }
-
-    .form-control {
-        &:focus {
-            border-color: #fff;
-        }
-    }
-}

@@ -23,7 +23,10 @@ var Newsletter = (function(w, d, $) {
                     _config.newsletter.find('.input-group').addClass('hide');
 
                     // send GA event
-                    ga('send', 'event', 'newsletter', 'subscribe', 'success', true);
+                    if (!_dntEnabled()) {
+                        GoogleAnalytics.gaEventNewsletterSuccess();
+                    }
+
                 }
                 if (resp.result === 'error') {
                     _config.newsletter.find('.btn')
@@ -31,7 +34,9 @@ var Newsletter = (function(w, d, $) {
                         .text('Subscribe');
 
                     // send GA event
-                    ga('send', 'event', 'newsletter', 'subscribe', 'error', true);
+                    if (!_dntEnabled()) {
+                        GoogleAnalytics.gaEventNewsletterError();
+                    }
                 }
             }
         }
