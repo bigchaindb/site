@@ -2,6 +2,8 @@
 
 > Landing page for BigchainDB
 
+[ ![Codeship Status for ascribe/bigchain-website](https://codeship.com/projects/3204bb70-c384-0133-9cd7-5a80e4317151/status?branch=master)](https://codeship.com/projects/138094)
+
 [Live](https://www.bigchaindb.com) | [Beta](https://beta.bigchaindb.com) | [Styleguide](https://www.bigchaindb.com/styleguide/)
 
 ## Development
@@ -28,7 +30,15 @@ Spin up local dev server and livereloading watch task, reachable under [https://
 gulp
 ```
 
-## Deployment
+## Continuous Delivery
+
+The site gets built & deployed automatically via Codeship under the following conditions:
+
+- every push builds the site
+- every push to the master branch initiates a live deployment
+- every push to a branch starting with `feature` initiates a beta deployment
+
+## Manual Deployment
 
 The site is hosted in an S3 bucket and gets deployed via a gulp task.
 
