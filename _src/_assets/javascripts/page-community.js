@@ -1,7 +1,10 @@
 
 //=include ../../../node_modules/is-in-viewport/lib/isInViewport.js
+//=include bigchain/testimonials.js
 
 jQuery(function($) {
+
+    Testimonials.init();
 
     var wrigley     = $('#wrigley'),
         wrigleyArm  = wrigley.find('#arm'),
