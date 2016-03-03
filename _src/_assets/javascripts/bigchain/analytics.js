@@ -29,6 +29,31 @@ var GoogleAnalytics = (function(w,d,$) {
             $('.js-tracking-whitepaper-download').on('click', function() {
                 ga('send', 'event', 'whitepaper', 'download', 'button', true);
             });
+
+            // Social links
+            $('.js-social-link').on('click', function() {
+
+                var href    = this.getAttribute('href'),
+                    network = extractDomain(href);
+
+                ga('send', 'event', 'social', 'click', network);
+            });
+
+            function extractDomain(url) {
+                var domain;
+                //find & remove protocol (http, ftp, etc.) and get domain
+                if (url.indexOf("://") > -1) {
+                    domain = url.split('/')[2];
+                }
+                else {
+                    domain = url.split('/')[0];
+                }
+
+                //find & remove port number
+                domain = domain.split(':')[0];
+
+                return domain;
+            }
         },
 
 
