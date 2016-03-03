@@ -28,7 +28,15 @@ Spin up local dev server and livereloading watch task, reachable under [https://
 gulp
 ```
 
-## Deployment
+## Continuous Delivery
+
+The site gets built & deployed automatically via Codeship under the following conditions:
+
+- every push builds the site
+- every push to the master branch initiates a live deployment
+- every push to a branch starting with `feature` initiates a beta deployment
+
+## Manual Deployment
 
 The site is hosted in an S3 bucket and gets deployed via a gulp task.
 
