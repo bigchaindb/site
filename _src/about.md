@@ -13,3 +13,5 @@ The result is BigchainDB, a scalable blockchain database for the world.
 ## Team
 
 {% include team.html %}
+
+BigchainDB is a trademark of ascribe GmbH. 
