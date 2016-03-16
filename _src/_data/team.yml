@@ -18,10 +18,18 @@
   image:    team-masha.jpg
   linkedin: mashamc
 
-- name:     Ryan Henderson
+- name:     Alberto Granzotto
   position: Developer
-  image:    team-ryan.jpg
-  twitter:  rhsimplex
+  image:    team-alberto.jpg
+  twitter:  vrde
+  github:   vrde
+
+- name:     Rodolphe Marques
+  position: Protocols
+  image:    team-rodolphe.jpg
+  twitter:  rodmar_
+  github:   r-marques
+  linkedin: rodolphemarques
 
 - name:     Greg McMullen
   position: CPO
@@ -36,12 +44,11 @@
   facebook: dimitri.jonghe
   github:   diminator
   linkedin: dimitridejonghe
-
-- name:     Paloma Rodriguez Carrington
-  position: Partnerships
-  image:    team-paloma.jpg
-  twitter:  palomarodriguez
-  linkedin: palomarodriguezcarrington
+    
+- name:     Ryan Henderson
+  position: Developer
+  image:    team-ryan.jpg
+  twitter:  rhsimplex
 
 - name:     Carly Sheridan
   position: Marketing and Communications Manager
@@ -54,23 +61,29 @@
   image:    team-troy.jpg
   twitter:  TroyMc
 
+- name:     Wojciech Hupert
+  position: UX / UI Designer
+  image:    team-wojciech.jpg
+  twitter:  WojciechHupert
+  linkedin: wojciechhupert
+  
 - name:     Abigail Toll
   position: Partnerships
   image:    team-abigail.jpg
   twitter:  AbigailToll
   linkedin: abigailtoll
 
-- name:     Wojciech Hupert
-  position: UX / UI Designer
-  image:    team-wojciech.jpg
-  twitter:  WojciechHupert
-  linkedin: wojciechhupert
-
 - name:     Kasia Kazimierczak
   position: Executive Assistant
   image:    team-kasia.jpg
   linkedin: katarzyna-kazimierczak
 
+- name:     Paloma Rodriguez Carrington
+  position: Partnerships
+  image:    team-paloma.jpg
+  twitter:  palomarodriguez
+  linkedin: palomarodriguezcarrington
+  
 - name:     Sylvain Bellemare
   position: Developer
   image:    team-sylvain.jpg
@@ -84,19 +97,6 @@
   image:    team-tim.jpg
   twitter:  TimDaub
   github:   TimDaub
-
-- name:     Alberto Granzotto
-  position: Developer
-  image:    team-alberto.jpg
-  twitter:  vrde
-  github:   vrde
-
-- name:     Rodolphe Marques
-  position: Protocols
-  image:    team-rodolphe.jpg
-  twitter:  rodmar_
-  github:   r-marques
-  linkedin: rodolphemarques
 
 - name:     Jazmina Figueroa
   position: Partnerships
