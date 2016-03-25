@@ -39,6 +39,19 @@
     margin-bottom: 0;
 }
 
+.feature__title__comingsoon {
+    @extend .small;
+    font-family: $headings-font-family;
+    color: $gray-light;
+    background: $gray_darker;
+
+    display: inline-block;
+    margin-left: ($spacer / 2);
+    padding: ($spacer / 4) ($spacer / 2);
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
 .stacks__title {
     font-size: $font-size-h3;
 }

@@ -68,3 +68,10 @@
         fill: $brand-primary;
     }
 }
+
+
+.grid--team {
+    .grid__col:last-child {
+        flex: 0 0 100%;
+    }
+}

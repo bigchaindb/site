@@ -5,19 +5,17 @@
 #
 
 set1:
-    - name: John Lilic
-      org: Consensys
-      link: https://consensys.net/
-      image: john-lilic.jpg
-      quote: 'BigchainDB is a system that affords enterprise an opportunity to credibly consider business processes with very high transaction through-put running on a blockchain.'
+    - name: Juan Benet
+      org: IPFS
+      link: https://ipfs.io
+      image: juan-benet.png
+      quote: 'BigchainDB is exciting! It marries the performance and power of traditional databases with the public verifiability of blockchains.'
 
-
-    - name: Fabian Vogelsteller
-      org: Ethereum Foundation
-      link: https://www.ethereum.org
-      image: fabian-vogelsteller.jpg
-      quote: 'BigchainDB is the logical next step in scaling non-computational blockchains.'
-
+    - name: Vinay Gupta
+      org: Ethereum Foundation & Consensys
+      link: https://www.ethereum.org/
+      image: vinay-gupta.jpg
+      quote: 'I think framing Ethereum as logic, IPFS as disk and BigchainDB as database - a direct parallel to the web stack - is nothing short of genius and really points the way to the future of this industry and, shortly, the web itself.'
 
     - name: Chris Messina
       org: Uber
@@ -33,19 +31,18 @@ set2:
       image: brian-fabian-crain.jpg
       quote: 'BigchainDB is a daring attempt to create a highly scalable blockchain design by one of the best teams in the industry.'
 
+    - name: John Lilic
+      org: Consensys
+      link: https://consensys.net/
+      image: john-lilic.jpg
+      quote: 'BigchainDB is a system that affords enterprise an opportunity to credibly consider business processes with very high transaction through-put running on a blockchain.'
 
-    - name: Juan Benet
-      org: IPFS
-      link: https://ipfs.io
-      image: juan-benet.png
-      quote: 'BigchainDB is exciting! It marries the performance and power of traditional databases with the public verifiability of blockchains.'
 
-
-    - name: Vinay Gupta
-      org: Ethereum Foundation & Consensys
-      link: https://www.ethereum.org/
-      image: vinay-gupta.jpg
-      quote: 'I think framing Ethereum as logic, IPFS as disk and BigchainDB as database - a direct parallel to the web stack - is nothing short of genius and really points the way to the future of this industry and, shortly, the web itself.'
+    - name: Fabian Vogelsteller
+      org: Ethereum Foundation
+      link: https://www.ethereum.org
+      image: fabian-vogelsteller.jpg
+      quote: 'BigchainDB is the logical next step in scaling non-computational blockchains.'
 
 
 set3:
