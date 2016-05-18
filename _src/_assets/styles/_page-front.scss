@@ -33,7 +33,12 @@
     h3 {
         display: block;
         font-size: $font-size-h4;
+        margin-bottom: 0;
         margin-top: 0;
+    }
+    
+    sub {
+        font-size: 0.85rem;
     }
 }
 
