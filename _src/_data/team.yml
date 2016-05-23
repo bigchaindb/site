@@ -68,7 +68,7 @@
   linkedin: wojciechhupert
   
 - name:     Abigail Toll
-  position: Partnerships
+  position: Sales
   image:    team-abigail.jpg
   twitter:  AbigailToll
   linkedin: abigailtoll
@@ -78,12 +78,6 @@
   image:    team-kasia.jpg
   linkedin: katarzyna-kazimierczak
 
-- name:     Paloma Rodriguez Carrington
-  position: Partnerships
-  image:    team-paloma.jpg
-  twitter:  palomarodriguez
-  linkedin: palomarodriguezcarrington
-  
 - name:     Sylvain Bellemare
   position: Developer
   image:    team-sylvain.jpg
@@ -99,7 +93,7 @@
   github:   TimDaub
 
 - name:     Jazmina Figueroa
-  position: Partnerships
+  position: Sales
   image:    team-jazmina.jpg
   twitter:  Jazmazzzz
   linkedin: jazfigueroa
