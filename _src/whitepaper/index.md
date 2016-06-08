@@ -9,7 +9,7 @@ whitepaper:
     text: Download the full whitepaper.
     updated: 2016-06-08
     files:
-        - file: bigchaindb-whitepaper08062016.pdf
+        - file: bigchaindb-whitepaper.pdf
           button: Download PDF
 ---
 
