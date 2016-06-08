@@ -7,9 +7,9 @@ description: 'This paper describes BigchainDB. BigchainDB fills a gap in the dec
 whitepaper:
     title: Full Whitepaper
     text: Download the full whitepaper.
-    updated: 2016-04-07
+    updated: 2016-06-08
     files:
-        - file: bigchaindb-whitepaper.pdf
+        - file: bigchaindb-whitepaper08062016.pdf
           button: Download PDF
 ---
 
