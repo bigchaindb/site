@@ -32,11 +32,11 @@ gulp
 
 ## Continuous Delivery
 
-The site gets built & deployed automatically via Codeship under the following conditions:
+The site gets built & deployed automatically via Travis under the following conditions:
 
 - every push builds the site
 - every push to the master branch initiates a live deployment
-- every push to a branch starting with `feature` initiates a beta deployment
+- every pull request initiates a beta deployment
 
 ## Manual Deployment
 
@@ -72,7 +72,7 @@ npm update && bundle update
 gulp build --production
 
 # deploy contents of /_dist to beta
-gulp deploy:beta
+gulp deploy --beta
 ```
 
 ### Production build & live deployment
@@ -85,5 +85,5 @@ npm update && bundle update
 gulp build --production
 
 # deploy contents of /_dist to live
-gulp deploy:live
+gulp deploy --live
 ```
