@@ -8,11 +8,7 @@ echo "              Starting build "
 echo "============================================="
 echo "$(tput sgr0)" # reset
 
-if [ "$TRAVIS_BRANCH" == "master" ]; then
     gulp build --production
-else
-    gulp build
-fi;
 
 echo "$(tput setaf 64)" # green
 echo "---------------------------------------------"
