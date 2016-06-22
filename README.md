@@ -2,7 +2,7 @@
 
 > Landing page for BigchainDB
 
-[ ![Codeship Status for ascribe/bigchain-website](https://codeship.com/projects/3204bb70-c384-0133-9cd7-5a80e4317151/status?branch=master)](https://codeship.com/projects/138094)
+[![Build Status](https://travis-ci.com/ascribe/bigchain-website.svg?token=3psqw6c8KMDqfdGQ2x6d&branch=master)](https://travis-ci.com/ascribe/bigchain-website)
 
 [Live](https://www.bigchaindb.com) | [Beta](https://beta.bigchaindb.com) | [Styleguide](https://www.bigchaindb.com/styleguide/)
 
