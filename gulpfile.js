@@ -319,17 +319,37 @@ gulp.task('build', function(done) {
 // Deployment
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-gulp.task('deploy:live', function() {
+//
+// gulp deploy --live
+// gulp deploy --beta
+//
+gulp.task('deploy', function() {
 
     // create publisher, define config
-    var publisher = $.awspublish.create({
-        params: {
-            'Bucket': S3BUCKET
-        },
-        'accessKeyId': process.env.AWS_ACCESS_KEY,
-        'secretAccessKey': process.env.AWS_SECRET_KEY,
-        'region': S3REGION
-    });
+    if ($.util.env.live === true) {
+        var publisher = $.awspublish.create({
+                params: { "Bucket": S3BUCKET },
+                "accessKeyId": process.env.AWS_ACCESS_KEY,
+                "secretAccessKey": process.env.AWS_SECRET_KEY,
+                "region": S3REGION
+        });
+
+        $.util.log($.util.colors.gray("        ------------------------------------------"));
+        $.util.log($.util.colors.green('                    Deploying to Live... '));
+        $.util.log($.util.colors.gray("        ------------------------------------------"));
+    }
+    if ($.util.env.beta === true) {
+        var publisher = $.awspublish.create({
+                params: { "Bucket": S3BUCKET_BETA },
+                "accessKeyId": process.env.AWS_BETA_ACCESS_KEY,
+                "secretAccessKey": process.env.AWS_BETA_SECRET_KEY,
+                "region": S3REGION_BETA
+        });
+
+        $.util.log($.util.colors.gray("        ------------------------------------------"));
+        $.util.log($.util.colors.green('                  Deploying to Beta... '));
+        $.util.log($.util.colors.gray("        ------------------------------------------"));
+    }
 
     return gulp.src(DIST + '**/*')
         .pipe($.awspublishRouter({
@@ -339,7 +359,7 @@ gulp.task('deploy:live', function() {
             },
             routes: {
                 // all static assets, cached & gzipped
-                '^assets/(?:.+)\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|ttf|eot|woff|woff2)$': {
+                '^assets/(?:.+)\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|ttf)$': {
                     cacheTime: 2592000, // cache for 1 month
                     gzip: true
                 },
@@ -377,75 +397,8 @@ gulp.task('deploy:live', function() {
                 "^.+$": "$&"
             }
         }))
-        .pipe(parallelize(publisher.publish(), 10))
+        .pipe(parallelize(publisher.publish(), 100))
         .pipe(publisher.sync()) // delete files in bucket that are not in local folder
-        .pipe(publisher.cache())
-        .pipe($.awspublish.reporter({
-            states: ['create', 'update', 'delete']
-        }));
-});
-
-gulp.task('deploy:beta', function() {
-
-    // create publisher, define config
-    var publisher = $.awspublish.create({
-        params: {
-            'Bucket': S3BUCKET_BETA
-        },
-        'accessKeyId': process.env.AWS_ACCESS_KEY,
-        'secretAccessKey': process.env.AWS_SECRET_KEY,
-        'region': S3REGION_BETA
-    });
-
-    return gulp.src(DIST + '**/*')
-        .pipe($.awspublishRouter({
-            cache: {
-                // cache for 5 minutes by default
-                cacheTime: 300
-            },
-            routes: {
-                // all static assets, cached & gzipped
-                '^assets/(?:.+)\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|ttf|eot|woff|woff2)$': {
-                    cacheTime: 2592000, // cache for 1 month
-                    gzip: true
-                },
-
-                // every other asset, cached
-                '^assets/.+$': {
-                    cacheTime: 2592000  // cache for 1 month
-                },
-
-                // all html files, not cached & gzipped
-                '^.+\\.html': {
-                    cacheTime: 0,
-                    gzip: true
-                },
-
-                // font mime types
-                '\.eot$': {
-                    key: '$&',
-                    headers: { 'Content-Type': 'application/vnd.ms-fontobject' }
-                },
-                '\.ttf$': {
-                    key: '$&',
-                    headers: { 'Content-Type': 'application/x-font-ttf' }
-                },
-                '\.woff$': {
-                    key: '$&',
-                    headers: { 'Content-Type': 'application/x-font-woff' }
-                },
-                '\.woff2$': {
-                    key: '$&',
-                    headers: { 'Content-Type': 'application/x-font-woff2' }
-                },
-
-                // pass-through for anything that wasn't matched by routes above, to be uploaded with default options
-                "^.+$": "$&"
-            }
-        }))
-        .pipe(parallelize(publisher.publish(), 10))
-        .pipe(publisher.sync()) // delete files in bucket that are not in local folder
-        .pipe(publisher.cache())
         .pipe($.awspublish.reporter({
             states: ['create', 'update', 'delete']
         }));
