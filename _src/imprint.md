@@ -6,15 +6,15 @@ title: Imprint
 
 ### Registered Address
 
-ascribe GmbH
-Wichertstr. 17
+BigchainDB GmbH
+Wichertstr. 14a
 10439 Berlin
 
 ### Contact
 
 Bruce Pon
 Telefon: +49 30 6482 6092
-Email: bruce@ascribe.io
+Email: bruce@bigchaindb.com
 
 [Requirements according to § 5 TMG (Germany)]
 
