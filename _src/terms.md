@@ -8,11 +8,11 @@ title: Terms of Service
 
 The Site is operated by:
 
-ascribe GmbH (“ascribe”, “we”, “us”, “our”)
+BigchainDB GmbH (“BigchainDB”, “we”, “us”, “our”)
 represented by its managing director Bruce Pon
-Wichertstr. 17
+Wichertstr. 14a
 10439 Berlin, Germany
-https://www.ascribe.io
+https://bigchaindb.com
 
 ### Terms and Privacy Policy
 
