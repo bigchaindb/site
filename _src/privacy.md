@@ -56,4 +56,4 @@ If we are involved in a merger, acquisition, or sale of all or a portion of our 
 We may disclose personal information to law enforcement if we believe disclosure is necessary to:
 - Comply with a law, regulation, or mandatory request such as a warrant or court order.
 - Protect the any person from death or serious bodily injury.
-- Protect the Site or ascribe GmbH from unlawful abuse or attacks.
+- Protect the Site or BigchainDB GmbH from unlawful abuse or attacks.
