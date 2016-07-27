@@ -66,12 +66,6 @@
   image:    team-wojciech.jpg
   twitter:  WojciechHupert
   linkedin: wojciechhupert
-  
-- name:     Abigail Toll
-  position: Client Relations
-  image:    team-abigail.jpg
-  twitter:  AbigailToll
-  linkedin: abigailtoll
 
 - name:     Kasia Kazimierczak
   position: Executive Assistant
@@ -91,12 +85,6 @@
   image:    team-tim.jpg
   twitter:  TimDaub
   github:   TimDaub
-
-- name:     Jazmina Figueroa
-  position: Client Relations
-  image:    team-jazmina.jpg
-  twitter:  Jazmazzzz
-  linkedin: jazfigueroa
 
 - name:     Brett Sun
   position: Developer
