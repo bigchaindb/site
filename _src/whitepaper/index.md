@@ -18,7 +18,7 @@ whitepaper:
 *by <br>Trent McConaghy, Rodolphe Marques, Andreas Müller, Dimitri De Jonghe, Troy McConaghy, Greg McMullen, Ryan Henderson, Sylvain Bellemare, Alberto Granzotto*
 
 *February 2016*
-*ascribe GmbH, Berlin, Germany*
+*BigchainDB GmbH, Berlin, Germany*
 
 ### Abstract
 

@@ -7,7 +7,7 @@
   },
   "description": "Landing page for BigchainDB",
   "homepage": "https://www.bigchaindb.com",
-  "license": "(c) 2016 ascribe - All Rights Reserved",
+  "license": "(c) 2016 BigchainDB - All Rights Reserved",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",

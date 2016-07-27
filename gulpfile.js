@@ -33,9 +33,10 @@ var isProduction = ($.util.env.production === true ? true : false);
 
 console.log("");
 console.log($.util.colors.gray("   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>"));
-console.log($.util.colors.cyan("                        ┌─┐┌─┐┌─┐┬─┐┬┌┐ ┌─┐ "));
-console.log($.util.colors.cyan("                        ├─┤└─┐│  ├┬┘│├┴┐├┤  "));
-console.log($.util.colors.cyan("                        ┴ ┴└─┘└─┘┴└─┴└─┘└─┘ "));
+console.log($.util.colors.cyan("                  __                  __  __    "));
+console.log($.util.colors.cyan("                 |__). _  _|_  _ . _ |  \ |__)  "));
+console.log($.util.colors.cyan("                 |__)|(_)(_| )(_||| )|__/|__)  "));
+console.log($.util.colors.cyan("                      _/                       "));
 console.log($.util.colors.gray("   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>"));
 console.log("");
 
