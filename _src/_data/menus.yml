@@ -7,7 +7,7 @@ main:
     - title: Community
       url: /community/
     - title: Docs
-      url: https://bigchaindb.readthedocs.org/
+      url: https://docs.bigchaindb.com/
 
 secondary:
     - title: About
