@@ -87,3 +87,15 @@ gulp build --production
 # deploy contents of /_dist to live
 gulp deploy --live
 ```
+
+
+## `_assets` & `assets`, WTF?
+
+Basically:
+
+- `_assets`: its content won't be copied over to generated site but handled by Gulp during build process.
+- `assets`: its content is copied over to generated site and processed by Jekyll's assets pipeline
+
+The site avoids using Jekyll's builtin assets pipeline for various reasons and all assets are handled and compiled by Gulp during the build process.
+
+This has one important drawback: it limits the use of 3rd-party tools providing a UI for Jekyll-based sites cause all of those tools depend on a simple `jekyll serve` to show a preview of edited content. To work around that, the `assets` folder holds all assets which are merely copied, rather than processed (`fonts` & `videos`). As for the styles, the `css/` folder holds a collection file importing all our main styles. This file then gets processed by Jekyll's assets pipeline so at least styles work when doing a `jekyll serve`. Additionally, this `assets` folder holds a precompiled sprite sheet of the interface assets.

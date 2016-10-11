@@ -57,6 +57,9 @@ redcarpet:
 source:                 ./_src
 destination:            ./_dist
 
+sass:
+    sass_dir: _assets/styles
+
 
 # Plugins
 # --------------------
