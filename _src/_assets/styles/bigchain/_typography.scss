@@ -15,6 +15,7 @@ html {
 }
 
 body {
+    margin: 0;
     font-family: $font-family-base;
     font-size: $font-size-base;
     font-weight: $font-weight-base;
@@ -33,9 +34,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -moz-font-feature-settings: 'liga', 'kern';
-
-    // remove old style numerals
-    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 0, "dlig" 1;
 }
 
 // Reset fonts for relevant elements
