@@ -1,36 +1,34 @@
-
 main:
-    - title: How it works
-      url: /features/
-    - title: Whitepaper
-      url: /whitepaper/
-    - title: Community
-      url: /community/
-    - title: Docs
-      url: https://docs.bigchaindb.com/
-
+  - title: How it works
+    url: /features/
+  - title: Whitepaper
+    url: /whitepaper/
+  - title: Community
+    url: /community/
+  - title: Docs
+    url: 'https://docs.bigchaindb.com/'
+  - title: Contact
+    url: /contact/
 secondary:
-    - title: About
-      url: /about/
-    - title: Contact
-      url: /contact/
-    - title: Blog
-      url: https://medium.com/the-bigchaindb-blog
-
+  - title: About
+    url: /about/
+  - title: Contact
+    url: /contact/
+  - title: Blog
+    url: 'https://medium.com/the-bigchaindb-blog'
 community:
-    - title: GitHub
-      url: https://github.com/bigchaindb
-    - title: Twitter
-      url: https://twitter.com/BigchainDB
-    - title: Gitter
-      url: https://gitter.im/bigchaindb/bigchaindb
-    - title: Google Group
-      url: https://groups.google.com/forum/#!forum/bigchaindb
-
+  - title: GitHub
+    url: 'https://github.com/bigchaindb'
+  - title: Twitter
+    url: 'https://twitter.com/BigchainDB'
+  - title: Gitter
+    url: 'https://gitter.im/bigchaindb/bigchaindb'
+  - title: Google Group
+    url: 'https://groups.google.com/forum/#!forum/bigchaindb'
 legal:
-    - title: Terms
-      url: /terms/
-    - title: Privacy
-      url: /privacy/
-    - title: Imprint
-      url: /imprint/
+  - title: Terms
+    url: /terms/
+  - title: Privacy
+    url: /privacy/
+  - title: Imprint
+    url: /imprint/
