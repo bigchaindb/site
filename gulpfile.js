@@ -110,7 +110,7 @@ gulp.task('jekyll', function(cb) {
 
     browser.notify('Compiling Jekyll');
 
-    var spawn = require('child_process').spawn;
+    var spawn = require('cross-spawn');
 
     if (isProduction) {
         process.env.JEKYLL_ENV = 'production';
