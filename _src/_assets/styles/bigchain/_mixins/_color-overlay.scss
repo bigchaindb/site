@@ -12,8 +12,9 @@
         top: 0;
         bottom: 0;
         right: 0;
-        background: linear-gradient(to bottom right, $color-from 0%, $color-to 100%);
-        opacity: .7;
+        // background: linear-gradient(to bottom right, $color-from 0%, $color-to 100%);
+        background-color: rgba(50,69,68,0.7);
+        opacity: 0.7;
         z-index: 0;
     }
 

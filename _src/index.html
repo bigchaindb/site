@@ -1,7 +1,7 @@
 ---
 layout: base
 
-tagline:    'Meet BigchainDB. The scalable blockchain database.'
+tagline:    'BigchainDB is unlocking the promise of blockchains by giving them scale, using distributed database technology.'
 
 front_page: true
 hero_video_name: northern-light
@@ -17,46 +17,29 @@ js: page-front.min.js
         <header class="section-header">
             <h1 class="section-title">This is BigchainDB</h1>
             <p class="section-description">
-                Towards 1 million writes per second, petabytes of capacity and query capabilities to power both open and private blockchain networks.
+              BigchainDB allows developers and enterprise to deploy blockchain proof-of-concepts, platforms and applications with a scalable blockchain database.
+            </p>
+            <p class="section-description">
+              Leveraging the key benefits of distributed DBs and traditional blockchains with an emphasis on scale, BigchainDB builds the three best characteristics of blockchains: decentralization, immutability and the ability to register and transfer assets, onto an existing big data distributed database.
+            </p>
+            <p class="section-description">
+              We serve the open internet, startups and enterprises alike, from supply chain to energy and financial ecosystems.
             </p>
         </header>
-
-        <figure class="graph-bigchain img--responsive">
-            {% include svg/graph-bigchain.svg %}
-        </figure>
-
-        <div class="section-features__main grid grid--full grid-small--fit grid--gutters">
-            <div class="grid__col">
-                <svg class="icon">
-                    <use xlink:href="/assets/img/sprite.svg#icon-graph"></use>
-                </svg>
-                <h3>Towards 1M Writes/S</h3>
-                <sub>Details in <a href="/whitepaper/">whitepaper</a>, sec. 8.</sub>
-            </div>
-            <div class="grid__col">
-                <svg class="icon">
-                    <use xlink:href="/assets/img/sprite.svg#icon-servers"></use>
-                </svg>
-                <h3>Petabyte Capacity</h3>
-            </div>
-            <div class="grid__col">
-                <svg class="icon">
-                    <use xlink:href="/assets/img/sprite.svg#icon-scaling"></use>
-                </svg>
-                <h3>Linear Scaling</h3>
-            </div>
-        </div>
-
-        <p class="lead">BigchainDB allows developers and enterprise to deploy blockchain proof-of-concepts, platforms and applications with a scalable blockchain database.</p>
-
         <div class="section-features__detail grid grid--full grid-small--columns grid--gutters grid--center">
-            <div class="grid__col grid__col--4">
-                <p>BigchainDB fills a gap in the decentralization ecosystem: a decentralized database, at scale. It is complementary to decentralized processing platforms like Ethereum, and decentralized file systems like InterPlanetary File System (IPFS).</p>
+          <div class="grid__col grid__col--1">
+          </div>
+            <div class="grid__col grid__col--2">
+              <div class="text-center">
+                  <a href="/Whitepaper" class="btn btn-primary"><svg class="icon icon--social icon--documents"><use xlink:href="/assets/img/sprite.svg#documents"></use></svg>Whitepaper</a>
+              </div>
             </div>
             <div class="grid__col grid__col--2">
                 <div class="text-center">
-                    <a href="/features" class="btn btn-primary">How it works</a>
+                    <a href="/Community" class="btn btn-primary">Community</a>
                 </div>
+            </div>
+            <div class="grid__col grid__col--1">
             </div>
         </div>
     </div>
@@ -75,13 +58,13 @@ js: page-front.min.js
             <div class="grid__col">
                 <h1 class="section-quickstart__title">Install and Run</h1>
                 <p>BigchainDB provides a rich API to create, query and transfer digital assets.</p>
-                <p><a class="btn btn-primary" href="https://bigchaindb.readthedocs.org/">Documentation</a> <a class="btn btn-secondary" href="https://github.com/{{ site.github.org }}/{{ site.github.repo }}"><svg class="icon icon--social icon--github"><use xlink:href="/assets/img/sprite.svg#github"></use></svg> GitHub</a></p>
+                <p><a class="btn btn-primary" href="https://docs.bigchaindbcom/">Documentation</a> <a class="btn btn-secondary" href="https://github.com/{{ site.github.org }}/{{ site.github.repo }}"><svg class="icon icon--social icon--github"><use xlink:href="/assets/img/sprite.svg#github"></use></svg> GitHub</a></p>
             </div>
             <div class="grid__col">
                 <figure class="terminal highlight js-tracking-terminal">
                     <code>
                         <span class="deps">Dependencies: Loaded</span>
-                        <span class="deps">(See <a class="terminal__link" href="https://bigchaindb.readthedocs.org">bigchaindb.readthedocs.org</a>)</span>
+                        <span class="deps">(See <a class="terminal__link" href="https://docs.bigchaindb.com">docs.bigchaindb.com</a>)</span>
                         <span class="deps">Python: Python 3.4+</span>
                         <span class="deps">RethinkDB: Running</span>
                         <span class="deps">---------------</span><br>
@@ -97,9 +80,9 @@ js: page-front.min.js
     </div>
 </section>
 
-{% include section-testimonials.html %}
+<!-- {% include section-testimonials.html %} -->
 
-<section class="section section-whitepaper background--photo">
+<!-- <section class="section section-whitepaper background-photo">
     <div class="row">
         <header class="section-header">
             <h1 class="section-title">Whitepaper</h1>
@@ -112,5 +95,16 @@ js: page-front.min.js
             </svg>
             Read our Whitepaper
         </a>
+    </div>
+</section> -->
+<section class="section section-partners">
+    <div class="row">
+        <header class="section-header">
+            <h1 class="section-title">Partners</h1>
+            <p class="section-description">We are proud to partner and collaborate with</p>
+        </header>
+    </div>
+    <div class="center--picture">
+      <img alt="Our Partners: Tangent90, Interledger, Eris, Tymlez, Everledger, Capgemini, Recruit, ReThinkDB" src="\assets\img\partners.png" />
     </div>
 </section>

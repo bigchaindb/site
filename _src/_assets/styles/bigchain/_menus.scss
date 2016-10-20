@@ -78,23 +78,24 @@
 // in front page hero or page headers
 //
 .menu--main {
+  background: white;
+  .menu__link {
+      // link line
+      &:after {
+          background: #000;
+      }
+  }
+
     .menu__logo {
         @media ($screen-md) {
-            padding: ($spacer * 1.2) 0 ($spacer * 1.5) 0;
+            padding: ($spacer * 1.2) 0 ($spacer * 0) 0;
         }
     }
 
     .menu__link {
-        color: #fff;
-        opacity: .8;
-
-        &:hover,
-        &:focus,
-        &.active {
-            opacity: 1;
+        color: #000;
         }
     }
-}
 
 
 //
