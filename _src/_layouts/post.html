@@ -1,0 +1,55 @@
+---
+layout: base
+---
+
+<header role="banner" class="header">
+
+    {% include menu-main.html %}
+
+    <div class="row">
+        <h1 class="header__title">{{ page.title }}</h1>
+    </div>
+</header>
+
+<section role="main" class="content content--page">
+
+    {% if page.path contains '.md' %}
+    <div class="row content--page--markdown">
+    {% endif %}
+
+        {{ content }}
+
+    {% if page.path contains '.md' %}
+    </div>
+    {% endif %}
+
+</section>
+
+{% if page.title == "Whitepaper" %}
+    <section class="section section-whitepaper-download background--photo">
+        <div class="row">
+            <header class="section-header">
+                <h1 class="section-title">{{ page.whitepaper.title }}</h1>
+                <p class="section-description">{{ page.whitepaper.text }}</p>
+            </header>
+
+            <p class="text-center">
+                {% for whitepaper in page.whitepaper.files %}
+                    <a href="{{ whitepaper.file }}" class="btn btn-primary btn-sm js-tracking-whitepaper-download"><svg class="icon"><use xlink:href="/assets/img/sprite.svg#icon-documents"></use></svg> {{ whitepaper.button }}</a>
+                {% endfor %}
+            </p>
+            <p class="text-center small">Last updated: {{ page.whitepaper.updated | date: '%B %d, %Y' }}</p>
+        </div>
+    </section>
+
+    {% include section-newsletter.html %}
+{% endif %}
+
+{% if page.comments %}
+    <footer class="comments">
+        <div class="row">
+            <h1 id="comments">Comments</h1>
+            <div id="disqus_thread"></div>
+        </div>
+    </footer>
+{% endif %}
