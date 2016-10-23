@@ -6,6 +6,8 @@ main:
   url: "/whitepaper/"
 - title: Community
   url: "/community/"
+  - title: Blog
+    url: /blog/
 - title: Docs
   url: https://docs.bigchaindb.com/
 - title: Contact
