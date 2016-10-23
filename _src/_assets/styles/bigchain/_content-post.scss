@@ -1,0 +1,28 @@
+.header--post {
+
+}
+
+.content--post {
+
+}
+
+.hentry--single {
+
+}
+
+.hentry__excerpt {
+    @extend .lead;
+    margin-bottom: ($spacer * 2);
+}
+
+.hentry__teaser {
+
+}
+
+.hentry__teaser--link {
+
+}
+
+.hentry__more {
+
+}
