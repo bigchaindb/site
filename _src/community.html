@@ -14,7 +14,7 @@ quotes: set3
             <h1 class="section-title">Get Involved</h1>
             <p class="section-description">There are many ways you can contribute to the BigchainDB project, some very easy and others more involved. We welcome all potential contributors, so we ask that everyone participating abide by some simple guidelines.</p>
 
-            <a href="https://github.com/{{ site.github.org }}/bigchaindb/blob/master/CONTRIBUTING.md" class="btn btn-primary btn-sm">Read Guidelines</a>
+            <a href="https://github.com/{{ site.github.org }}/bigchaindb/blob/master/CONTRIBUTING.md" class="btn btn-primary btn-sm">Read The Guidelines</a>
         </header>
 
         <div class="grid grid--full grid-small--fit grid--gutters">
@@ -31,28 +31,24 @@ quotes: set3
             <div class="grid__col">
                 <h1>Follow</h1>
                 <p>Follow us for the latest updates</p>
-                <p>
-                    <a class="social-link js-social-link" href="https://github.com/{{ site.github.org }}">
-                        <svg class="icon icon--social icon--github" aria-labelledby="title">
-                            <title>GitHub</title>
-                            <use xlink:href="/assets/img/sprite.svg#github"></use>
-                        </svg>
-                    </a>
-
-                    <a class="social-link js-social-link" href="https://twitter.com/{{ site.twitter }}">
-                        <svg class="icon icon--social icon--twitter" aria-labelledby="title">
-                            <title>Twitter</title>
-                            <use xlink:href="/assets/img/sprite.svg#twitter"></use>
-                        </svg>
-                    </a>
-
-                    <a class="social-link js-social-link" href="https://medium.com/{{ site.medium }}">
-                        <svg class="icon icon--social icon--blog" aria-labelledby="title">
-                            <title>Medium</title>
-                            <use xlink:href="/assets/img/sprite.svg#medium"></use>
-                        </svg>
-                    </a>
-                </p>
+                <a class="social-link js-social-link" href="https://github.com/{{ site.github.org }}">
+                    <svg class="icon icon--social icon--github" aria-labelledby="title">
+                        <title>GitHub</title>
+                        <use xlink:href="/assets/img/sprite.svg#github"></use>
+                    </svg>
+                </a>
+                <a class="social-link js-social-link" href="https://twitter.com/{{ site.twitter }}">
+                    <svg class="icon icon--social icon--twitter" aria-labelledby="title">
+                        <title>Twitter</title>
+                        <use xlink:href="/assets/img/sprite.svg#twitter"></use>
+                    </svg>
+                </a>
+                <a class="social-link js-social-link" href="https://medium.com/{{ site.medium }}">
+                    <svg class="icon icon--social icon--blog" aria-labelledby="title">
+                        <title>Medium</title>
+                        <use xlink:href="/assets/img/sprite.svg#medium"></use>
+                    </svg>
+                </a>
             </div>
         </div>
 
@@ -62,6 +58,6 @@ quotes: set3
 
 </section>
 
-{% include section-newsletter.html %}
+{% include sections/section-newsletter.html %}
 
-{% include section-testimonials.html %}
+{% include sections/section-testimonials.html %}
