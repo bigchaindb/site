@@ -3,22 +3,7 @@
 }
 
 .content--post {
-    // bit too specific but makes sure copy editors can just
-    // start with markdown h1
-    .entry-content {
-        > h1 {
-            @extend .h2;
-        }
-        > h2 {
-            @extend .h3;
-        }
-        > h3 {
-            @extend .h4;
-        }
-        > h4 {
-            @extend .h5;
-        }
-    }
+
 }
 
 .hentry--single {
@@ -28,10 +13,6 @@
 .hentry__excerpt {
     @extend .lead;
     margin-bottom: ($spacer * 2);
-
-    .hentry--single & {
-        font-size: $font-size-h3;
-    }
 }
 
 .hentry__teaser {
