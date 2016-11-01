@@ -36,7 +36,7 @@
         margin-bottom: 0;
         margin-top: 0;
     }
-    
+
     sub {
         font-size: 0.85rem;
     }
@@ -47,9 +47,4 @@
 .section-quickstart__title {
     @extend .h3;
     margin-top: 0;
-}
-
-
-.section-whitepaper {
-    @extend .text-center;
 }

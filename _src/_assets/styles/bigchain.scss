@@ -44,6 +44,9 @@
 @import 'bigchain/_newsletter';
 @import 'bigchain/_testimonials';
 
+// Section specific styles
+@import '_sections/section-whitepaper';
+
 // specific page styles
 @import '_page-front';
 @import '_page-whitepaper';
