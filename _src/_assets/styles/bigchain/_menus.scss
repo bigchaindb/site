@@ -21,6 +21,7 @@
     padding: ($spacer / 2);
     text-transform: uppercase;
     box-shadow: none;
+    position: relative;
 
     @media ($screen-md) {
         padding: ($spacer * 1.5) $spacer;
@@ -29,11 +30,14 @@
     // link line
     &:after {
         content: "";
+        position: absolute;
         height: 2px;
         width: 30px;
         background: #fff;
         display: block;
-        margin: ($spacer / 3) auto 0 auto;
+        left: 50%;
+        margin-left: -15px;
+        bottom: $spacer;
         // hidden by default
         transform: scale(0);
         transform-origin: center;
@@ -51,8 +55,6 @@
 
 .menu__logo {
     display: block;
-    margin-top: ($spacer * 2);
-    margin-bottom: $spacer;
     box-shadow: none;
 
     @media ($screen-md) {
@@ -78,25 +80,56 @@
 // in front page hero or page headers
 //
 .menu--main {
-  background: white;
-  .menu__link {
-      // link line
-      &:after {
-          background: $brand-main-blue-dark;
-      }
-  }
+    background: rgba($brand-main-blue-dark, .35);
+    backdrop-filter: saturate(150%) blur(10px);
+    border-bottom: 1px solid rgba(#fff, .1);
+    padding-top: $spacer;
+    padding-bottom: $spacer;
 
     .menu__logo {
+        margin-bottom: $spacer / 2;
+
         @media ($screen-md) {
-            padding: ($spacer * 1.2) 0 ($spacer * 0) 0;
+            margin-bottom: 0;
         }
     }
 
     .menu__link {
-        color: #000;
+        color: #fff;
+        opacity: .9;
+
+        &:hover,
+        &:focus,
+        &.active {
+            opacity: 1;
         }
     }
 
+    @media ($screen-md) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.menu-overflow {
+    // yummy scrolling
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-left: -$gutter-space / 2;
+    margin-right: -$gutter-space / 2;
+    padding-left: $gutter-space / 2;
+    padding-right: $gutter-space / 2;
+
+    &::-webkit-scrollbar { display: none; }
+
+    @media ($screen-md) {
+        margin: 0;
+        padding: 0;
+        white-space: normal;
+        overflow: visible;
+    }
+}
 
 //
 // Footer Menu
