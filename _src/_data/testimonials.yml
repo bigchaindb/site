@@ -1,67 +1,60 @@
-#
-#
-# Photo paths are relative to /assets/img/
-# Photos of quotees need to be square and should be at least or exact 144x144px.
-#
-
+---
 set1:
-    - name: Juan Benet
-      org: IPFS
-      link: https://ipfs.io
-      image: juan-benet.png
-      quote: 'BigchainDB is exciting! It marries the performance and power of traditional databases with the public verifiability of blockchains.'
-
-    - name: Vinay Gupta
-      org: Ethereum Foundation & Consensys
-      link: https://www.ethereum.org/
-      image: vinay-gupta.jpg
-      quote: 'I think framing Ethereum as logic, IPFS as disk and BigchainDB as database - a direct parallel to the web stack - is nothing short of genius and really points the way to the future of this industry and, shortly, the web itself.'
-
-    - name: Chris Messina
-      org: Uber
-      link: https://www.uber.com
-      image: chris-messina.jpg
-      quote: 'From the makers of ascribe, this has the potential to be a big deal. The team has blown the cap off the conventional blockchain limitations.'
-
-
+- name: Juan Benet
+  org: IPFS
+  link: https://ipfs.io
+  image: juan-benet.png
+  quote: BigchainDB is exciting! It marries the performance and power of traditional
+    databases with the public verifiability of blockchains.
+- name: Vinay Gupta
+  org: Ethereum Foundation & Consensys
+  link: https://www.ethereum.org/
+  image: vinay-gupta.jpg
+  quote: I think framing Ethereum as logic, IPFS as disk and BigchainDB as database
+    - a direct parallel to the web stack - is nothing short of genius and really points
+    the way to the future of this industry and, shortly, the web itself.
+- name: Chris Messina
+  org: Uber
+  link: https://www.uber.com
+  image: chris-messina.jpg
+  quote: From the makers of ascribe, this has the potential to be a big deal. The
+    team has blown the cap off the conventional blockchain limitations.
 set2:
-    - name: Brian Fabian Crain
-      org: Eris Industries Limited
-      link: https://erisindustries.com/
-      image: brian-fabian-crain.jpg
-      quote: 'BigchainDB is a daring attempt to create a highly scalable blockchain design by one of the best teams in the industry.'
-
-    - name: John Lilic
-      org: Consensys
-      link: https://consensys.net/
-      image: john-lilic.jpg
-      quote: 'BigchainDB is a system that affords enterprise an opportunity to credibly consider business processes with very high transaction through-put running on a blockchain.'
-
-
-    - name: Fabian Vogelsteller
-      org: Ethereum Foundation
-      link: https://www.ethereum.org
-      image: fabian-vogelsteller.jpg
-      quote: 'BigchainDB is the logical next step in scaling non-computational blockchains.'
-
-
+- name: Brian Fabian Crain
+  org: Eris Industries Limited
+  link: https://erisindustries.com/
+  image: brian-fabian-crain.jpg
+  quote: BigchainDB is a daring attempt to create a highly scalable blockchain design
+    by one of the best teams in the industry.
+- name: John Lilic
+  org: Consensys
+  link: https://consensys.net/
+  image: john-lilic.jpg
+  quote: BigchainDB is a system that affords enterprise an opportunity to credibly
+    consider business processes with very high transaction through-put running on
+    a blockchain.
+- name: Fabian Vogelsteller
+  org: Ethereum Foundation
+  link: https://www.ethereum.org
+  image: fabian-vogelsteller.jpg
+  quote: BigchainDB is the logical next step in scaling non-computational blockchains.
 set3:
-    - name: Adi Ben-Ari
-      org: Applied Blockchains
-      link: http://appliedblockchain.com
-      image: adi-ben-ari.png
-      quote: 'An amazing piece of work that elegantly addresses some of the biggest challenges that we’re all facing.'
-
-
-    - name: Jutta Steiner
-      org: Ethcore
-      link: https://ethcore.io
-      image: jutta-steiner.jpg
-      quote: 'ascribe has begun tracing their path in that direction with a blockchain whose storage can scale without drastically compromising on decentralisation.'
-
-
-    - name: 'Carsten Stöcker'
-      org: RWE Innovation
-      link: http://www.rwe.com/
-      image: carsten-stoecker.jpg
-      quote: 'BigchainDB is a now signature milestone: a nicely scalable blockchainified database that powers decentralized processing platforms. We are excited to be working with the BigchainDB team.'
+- name: Adi Ben-Ari
+  org: Applied Blockchains
+  link: http://appliedblockchain.com
+  image: adi-ben-ari.png
+  quote: An amazing piece of work that elegantly addresses some of the biggest challenges
+    that we’re all facing.
+- name: Jutta Steiner
+  org: Ethcore
+  link: https://ethcore.io
+  image: jutta-steiner.jpg
+  quote: ascribe has begun tracing their path in that direction with a blockchain
+    whose storage can scale without drastically compromising on decentralisation.
+- name: Carsten Stöcker
+  org: RWE Innovation
+  link: http://www.rwe.com/
+  image: carsten-stoecker.jpg
+  quote: 'BigchainDB is a now signature milestone: a nicely scalable blockchainified
+    database that powers decentralized processing platforms. We are excited to be
+    working with the BigchainDB team.'
