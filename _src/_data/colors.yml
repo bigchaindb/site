@@ -5,6 +5,8 @@
 primary:
     - name: brand-main-green
       hex: 54C695
+    - name: brand-main-violet
+      hex: B56DCF
     - name: gray-dark
       hex: 445261
     - name: brand-main-gray
