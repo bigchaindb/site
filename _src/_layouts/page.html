@@ -43,13 +43,6 @@ layout: base
     </section>
 
     {% include sections/section-newsletter.html %}
-{% endif %}
 
-{% if page.comments %}
-    <footer class="comments">
-        <div class="row">
-            <h1 id="comments">Comments</h1>
-            <div id="disqus_thread"></div>
-        </div>
-    </footer>
+    {% include sections/section-cta-community.html %}
 {% endif %}
