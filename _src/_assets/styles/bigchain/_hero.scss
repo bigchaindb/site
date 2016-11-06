@@ -17,12 +17,11 @@ $menu-height-md: 66px;
     display: flex;
     align-items: center;
     min-height: 420px;
-    max-height: 550px;
     flex-wrap: wrap;
 
     .section {
         @media ($screen-md) {
-            min-height: calc(100vh - #{$menu-height-md});
+            height: 100vh;
         }
     }
 

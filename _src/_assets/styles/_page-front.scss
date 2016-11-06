@@ -4,13 +4,27 @@
 // bigchain.io
 //
 
-.section-features {
+.section-intro {
     .section-header {
         margin-bottom: $spacer * 2;
     }
 }
 
-.section-features__main {
+.section-intro__main {
+    @extend .text-center;
+    margin-top: $spacer;
+
+    h3 {
+        display: block;
+        font-size: $font-size-h4;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    sub {
+        font-size: 0.85rem;
+    }
+
     .icon {
         display: block;
         margin: auto;
@@ -32,23 +46,7 @@
 
 }
 
-.section-features__main {
-    @extend .text-center;
-    margin-top: $spacer;
-
-    h3 {
-        display: block;
-        font-size: $font-size-h4;
-        margin-bottom: 0;
-        margin-top: 0;
-    }
-
-    sub {
-        font-size: 0.85rem;
-    }
-}
-
-.section-features__detail {}
+.section-intro__detail {}
 
 .section-quickstart__title {
     @extend .h3;

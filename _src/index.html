@@ -1,7 +1,7 @@
 ---
 layout: base
 
-tagline:    'BigchainDB is unlocking the promise of blockchains by giving them scale, using distributed database technology.'
+tagline:    'Unlocking the promise of blockchains by giving them scale.'
 
 front_page: true
 hero_video_name: northern-light
@@ -12,7 +12,7 @@ js: page-front.min.js
 
 {% include hero-video.html %}
 
-<section id="features" class="section section-features">
+<section id="features" class="section section-intro">
     <div class="row">
         <header class="section-header">
             <h1 class="section-title">This is BigchainDB</h1>
@@ -21,7 +21,7 @@ js: page-front.min.js
             </p>
         </header>
 
-        <div class="section-features__main grid grid--full grid-small--fit grid--gutters">
+        <div class="section-intro__main grid grid--full grid-small--fit grid--gutters">
             <div class="grid__col">
                 <svg class="icon">
                     <use xlink:href="/assets/img/sprite.svg#icon-graph"></use>
@@ -49,16 +49,9 @@ js: page-front.min.js
         <p class="large">
           We serve the open internet, startups and enterprises alike, from supply chain to energy and financial ecosystems.
         </p>
-
-        <div class="text-center">
-            <a href="/Whitepaper" class="btn btn-primary"><svg class="icon icon--social icon--documents"><use xlink:href="/assets/img/sprite.svg#documents"></use></svg>Whitepaper</a>
-            <a href="/Community" class="btn btn-primary">Community</a>
-        </div>
     </div>
 
 </section>
-
-{% include sections/section-newsletter.html %}
 
 <section class="section section-quickstart background--darker">
     <div class="row row--wide">
@@ -93,3 +86,7 @@ js: page-front.min.js
 </section>
 
 {% include sections/section-partners.html %}
+
+{% include sections/section-testimonials.html %}
+
+{% include sections/section-cta-features.html %}
