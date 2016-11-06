@@ -4,11 +4,17 @@
 // bigchain.io
 //
 
+.section-features {
+    .section-header {
+        margin-bottom: $spacer * 2;
+    }
+}
+
 .section-features__main {
     .icon {
         display: block;
         margin: auto;
-        margin-bottom: $spacer;
+        margin-bottom: $spacer * 2;
     }
 }
 
