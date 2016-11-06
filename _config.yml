@@ -34,11 +34,7 @@ analyticsID:            UA-60614729-8
 
 # Urls
 # --------------------
-permalink:              /blog/:title/
-paginate:               15
-paginate_path:          "/blog/page/:num"
-category_dir:           "/blog/category/"
-category_title_prefix:  ""
+permalink:              /:title/
 
 
 # Content Parsing
@@ -70,15 +66,3 @@ sass:
 gems:
     - jekyll-sitemap
     - jekyll-redirect-from
-    - jekyll-paginate
-    - jekyll-archives
-
-
-# jekyll-archives
-# --------------------
-jekyll-archives:
-    enabled:
-        - categories
-    layout: 'archive'
-    permalinks:
-        category: '/blog/category/:name/'
