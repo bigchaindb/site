@@ -175,6 +175,15 @@ Donec *ullamcorper nulla* non metus auctor fringilla. Duis mollis, est non commo
 <a class="btn btn-secondary btn-lg">Button</a>
 ```
 
+<a class="btn btn-violet">Button</a> <a class="btn btn-violet btn-xs">Button</a> <a class="btn btn-violet btn-sm">Button</a> <a class="btn btn-violet btn-lg">Button</a>
+
+```html
+<a class="btn btn-violet">Button</a>
+<a class="btn btn-violet btn-xs">Button</a>
+<a class="btn btn-violet btn-sm">Button</a>
+<a class="btn btn-violet btn-lg">Button</a>
+```
+
 <a class="btn btn-link">Button</a> <a class="btn btn-link btn-xs">Button</a> <a class="btn btn-link btn-sm">Button</a> <a class="btn btn-link btn-lg">Button</a>
 
 ```html
