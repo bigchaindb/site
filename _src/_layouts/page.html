@@ -26,7 +26,7 @@ layout: base
 </section>
 
 {% if page.title == "Whitepaper" %}
-    <section class="section section-whitepaper-download background--photo">
+    <section class="section section-whitepaper-download background--darker">
         <div class="row">
             <header class="section-header">
                 <h1 class="section-title">{{ page.whitepaper.title }}</h1>
@@ -35,7 +35,7 @@ layout: base
 
             <p class="text-center">
                 {% for whitepaper in page.whitepaper.files %}
-                    <a href="{{ whitepaper.file }}" class="btn btn-violet js-tracking-whitepaper-download"><svg class="icon"><use xlink:href="/assets/img/sprite.svg#icon-documents"></use></svg> {{ whitepaper.button }}</a>
+                    <a href="{{ whitepaper.file }}" class="btn btn-primary js-tracking-whitepaper-download"><svg class="icon"><use xlink:href="/assets/img/sprite.svg#icon-documents"></use></svg> {{ whitepaper.button }}</a>
                 {% endfor %}
             </p>
             <p class="text-center small">Last updated: {{ page.whitepaper.updated | date: '%B %d, %Y' }}</p>
