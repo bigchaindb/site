@@ -4,3 +4,4 @@ Gemfile.lock
 _dist
 .awspublish*
 .sass-cache
+yarn.lock

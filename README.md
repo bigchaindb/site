@@ -11,6 +11,7 @@
 You need to have the following tools installed on your development machine before moving on:
 
 - [node.js](http://nodejs.org/) & [npm](https://npmjs.org/)
+- (optional) use [Yarn](https://yarnpkg.com) instead of npm for faster dependency installations
 - [Ruby](https://www.ruby-lang.org) (for sanity, install with [rvm](https://rvm.io/))
 - [Bundler](http://bundler.io/)
 
@@ -20,6 +21,12 @@ Run the following command from the repository's root folder to install all depen
 
 ```bash
 npm i && bundle install
+```
+
+or
+
+```bash
+yarn && bundle install
 ```
 
 ### Development build
