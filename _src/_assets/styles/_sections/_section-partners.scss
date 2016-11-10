@@ -1,3 +1,44 @@
 .section-partners {
+    @media ($screen-md) {
+        .grid__col {
 
+        }
+    }
+}
+
+.partner {
+    text-align: center;
+    display: block;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+        background: none;
+
+        .partner__logo {
+            fill-opacity: 1;
+        }
+    }
+}
+
+
+//
+// All logos
+//
+.partner__logo {
+    @extend .transition;
+    fill: #fff;
+    fill-opacity: .5;
+    max-width: 100%;
+}
+
+
+//
+// Visual weight tweaks
+//
+// using transforms so we don't affect layout
+// or have to hardcode any sizes
+//
+.partner__logo--ipdb {
+    transform: scale(.5);
 }
