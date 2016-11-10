@@ -63,6 +63,9 @@ fieldset[disabled] a.btn {
 .btn-secondary {
     @include button-variant($btn-secondary-color, $btn-secondary-bg);
 }
+.btn-blue {
+    @include button-variant($btn-blue-color, $btn-blue-bg);
+}
 .btn-violet {
     @include button-variant($btn-violet-color, $btn-violet-bg);
 }
