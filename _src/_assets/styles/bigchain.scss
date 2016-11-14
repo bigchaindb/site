@@ -41,6 +41,12 @@
 @import 'bigchain/_newsletter';
 @import 'bigchain/_testimonials';
 
+// Section specific styles
+@import '_sections/section-cta-whitepaper';
+@import '_sections/section-cta-features';
+@import '_sections/section-cta-community';
+@import '_sections/section-partners';
+
 // specific page styles
 @import '_page-front';
 @import '_page-whitepaper';

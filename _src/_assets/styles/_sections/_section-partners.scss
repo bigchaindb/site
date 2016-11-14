@@ -1,0 +1,63 @@
+.section-partners {
+    .grid__col {
+        padding-right: $gutter-space;
+    }
+    @media ($screen-md) {
+        .grid__col {
+
+        }
+    }
+}
+
+.partner {
+    text-align: center;
+    display: block;
+    box-shadow: none;
+    max-width: 150px;
+    margin: auto;
+
+    &:hover,
+    &:focus {
+        background: none;
+
+        .partner__logo {
+            fill: $brand-main-green;
+            fill-opacity: 1;
+        }
+    }
+}
+
+
+//
+// All logos
+//
+.partner__logo {
+    @extend .transition;
+    fill: $brand-main-blue-light;
+    fill-opacity: .6;
+    max-width: 100%;
+    height: 40px; // need to hardcode some size to overwrite browser's default 150px height for SVGs
+}
+
+
+//
+// Visual weight tweaks
+//
+// using transforms so we don't affect layout
+// or have to hardcode any sizes
+//
+.partner__logo--ipdb {
+    transform: scale(.7);
+}
+
+.partner__logo--interledger {
+    transform: scale(1.2);
+}
+
+.partner__logo--rethinkdb {
+    transform: translateY(.4rem);
+}
+
+.partner__logo--mongodb {
+    transform: translateY(.3rem);
+}

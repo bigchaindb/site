@@ -4,7 +4,7 @@
 // bigchain.io
 //
 
-$menu-height-md: 73px;
+$menu-height-md: 66px;
 
 .hero {
     @extend .background--photo;
@@ -17,11 +17,12 @@ $menu-height-md: 73px;
     display: flex;
     align-items: center;
     min-height: 420px;
+    max-height: 100vh;
     flex-wrap: wrap;
 
     .section {
         @media ($screen-md) {
-            min-height: calc(100vh - #{$menu-height-md});
+            height: 100vh;
         }
     }
 
@@ -55,7 +56,7 @@ $menu-height-md: 73px;
         &:after { display: none }
     }
 
-    .btn {
+    .btn-link {
         color: #fff;
         opacity: .8;
         position: absolute;
@@ -115,6 +116,7 @@ $menu-height-md: 73px;
     position: relative;
     z-index: 1;
     margin-bottom: ($spacer * 4);
+    padding-top: $menu-height-md;
 }
 
 

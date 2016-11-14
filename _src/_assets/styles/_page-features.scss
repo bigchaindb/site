@@ -1,4 +1,8 @@
-
+.page-features {
+    .header {
+        background-position: bottom center;
+    }
+}
 .table--comparison {
     .icon-check {
         width: 1rem;
@@ -35,8 +39,11 @@
 }
 
 .feature__text {
-    @extend .text-dimmed;
+    // @extend .text-dimmed;
     margin-bottom: 0;
+}
+.feture_roadmap {
+  padding: 1rem 0 0 0;
 }
 
 .feature__title__comingsoon {

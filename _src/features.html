@@ -1,7 +1,7 @@
 ---
 layout: page
 
-title: How It Works
+title: How BigchainDB Works
 description: 'Rather than trying to scale up blockchain technology, BigchainDB starts with a big data distributed database and then adds blockchain characteristics - decentralized control, immutability and the transfer of digital assets.'
 
 quotes: set2
@@ -13,10 +13,8 @@ js: page-features.min.js
     <div class="row">
         <header class="section-header">
             <p class="section-description">Rather than trying to scale up blockchain technology, BigchainDB starts with a big data distributed database and then adds blockchain characteristics - decentralized control, immutability and the transfer of digital assets.</p>
-            <p class="text-milestones text-center">Here is our <a href="https://github.com/{{ site.github.org }}/org/blob/master/ROADMAP.md">roadmap</a>.</p>
         </header>
     </div>
-
     <div class="row row--wide">
         <div class="grid grid--full grid-small--half grid--gutters grid--top">
             <div class="grid__col">
@@ -132,6 +130,10 @@ js: page-features.min.js
 
         </div>
 
+        <p class="text-center features-roadmap" >
+            <a href="https://github.com/bigchaindb/org/blob/master/ROADMAP.md" class="btn btn-primary">Our Roadmap</a>
+        </p>
+
         <p class="text-center">
             For more insight, read our <a href="/whitepaper/">whitepaper</a>.
         </p>
@@ -181,17 +183,4 @@ js: page-features.min.js
     </div>
 </section>
 
-{% include section-testimonials.html %}
-
-<section class="section section-contribute background--photo">
-    <div class="row">
-        <header class="section-header">
-            <h1 class="section-title">Contribute</h1>
-            <p class="section-description">There are many ways you can contribute to the BigchainDB project.</p>
-        </header>
-
-        <p class="text-center">
-            <a href="https://github.com/{{ site.github.org }}/bigchaindb/blob/master/CONTRIBUTING.md" class="btn btn-primary btn-sm">Read Guidelines</a>
-        </p>
-    </div>
-</section>
+{% include sections/section-cta-whitepaper.html %}

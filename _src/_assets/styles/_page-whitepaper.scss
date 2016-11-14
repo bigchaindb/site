@@ -1,5 +1,8 @@
 
 .page-whitepaper {
+    .header {
+        background-image: url('/assets/img/photo3.jpg');
+    }
     .content--page--markdown {
         > p:nth-child(1),
         > p:nth-child(2),
@@ -8,5 +11,5 @@
 }
 
 .section-whitepaper-download {
-    background-image: url('/assets/img/photo3.jpg')
+
 }

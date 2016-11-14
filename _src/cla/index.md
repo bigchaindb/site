@@ -10,8 +10,9 @@ Before we can accept any contributions from you or the organization you represen
 
 You will retain full ownership of your work, including the ability to license it to others.
 
-- [Individual Contributor Agreement](individual/)
-- [Entity Contributor Agreement (for organizations)](entity/)
+- [Individual Contributor Agreement](/cla/individual/)
+- [Organizations Contributor Agreement](/cla/entity/)
+
 
 ## Sign the agreement
 

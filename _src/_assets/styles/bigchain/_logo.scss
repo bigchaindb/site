@@ -10,6 +10,7 @@
     color: $brand-main-green; // the fill="currentColor" trick
     width: 300px;
     height: 30px;
+    display: block;
 }
 
 
@@ -31,8 +32,8 @@
 // size modifiers
 //
 .logo--sm {
-    width: 75px;
-    height: 15px;
+    width: 120px;
+    height: 25px;
 }
 
 .logo--full {

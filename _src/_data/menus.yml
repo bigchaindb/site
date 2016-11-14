@@ -8,15 +8,13 @@ main:
   url: "/community/"
 - title: Docs
   url: https://docs.bigchaindb.com/
-- title: Contact
-  url: "/contact/"
 secondary:
 - title: About
   url: "/about/"
 - title: Contact
   url: "/contact/"
 - title: Blog
-  url: https://medium.com/the-bigchaindb-blog
+  url: https://blog.bigchaindb.com
 community:
 - title: GitHub
   url: https://github.com/bigchaindb
@@ -29,5 +27,7 @@ legal:
   url: "/terms/"
 - title: Privacy
   url: "/privacy/"
+- title: Contributor Agreement
+  url: "/cla/"
 - title: Imprint
   url: "/imprint/"

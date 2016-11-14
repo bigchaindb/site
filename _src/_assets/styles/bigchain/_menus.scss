@@ -21,23 +21,32 @@
     padding: ($spacer / 2);
     text-transform: uppercase;
     box-shadow: none;
+    position: relative;
+    line-height: 1;
 
     @media ($screen-md) {
-        padding: ($spacer * 1.5) $spacer;
+        padding: ($spacer * 2) $spacer;
     }
 
     // link line
     &:after {
         content: "";
+        position: absolute;
         height: 2px;
         width: 30px;
         background: #fff;
         display: block;
-        margin: ($spacer / 3) auto 0 auto;
+        left: 50%;
+        margin-left: -15px;
+        bottom: 0;
         // hidden by default
         transform: scale(0);
         transform-origin: center;
         transition: transform .2s ease-out;
+
+        @media ($screen-md) {
+            bottom: $spacer * 1.5;
+        }
     }
 
     &:hover,
@@ -51,17 +60,13 @@
 
 .menu__logo {
     display: block;
-    margin-top: ($spacer * 2);
-    margin-bottom: $spacer;
     box-shadow: none;
-
-    @media ($screen-md) {
-        margin-top: 0;
-    }
 
     svg {
         @extend .transition;
         opacity: .8;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &:hover,
@@ -78,15 +83,23 @@
 // in front page hero or page headers
 //
 .menu--main {
+    background: rgba($brand-main-blue-dark, .35);
+    backdrop-filter: saturate(150%) blur(10px);
+    border-bottom: 1px solid rgba($gray, .9);
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+
     .menu__logo {
+        margin-bottom: $spacer / 2;
+
         @media ($screen-md) {
-            padding: ($spacer * 1.2) 0 ($spacer * 1.5) 0;
+            margin-bottom: 0;
         }
     }
 
     .menu__link {
         color: #fff;
-        opacity: .8;
+        opacity: .9;
 
         &:hover,
         &:focus,
@@ -94,8 +107,32 @@
             opacity: 1;
         }
     }
+
+    @media ($screen-md) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 
+.menu-overflow {
+    // yummy scrolling
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-left: -$gutter-space / 2;
+    margin-right: -$gutter-space / 2;
+    padding-left: $gutter-space / 2;
+    padding-right: $gutter-space / 2;
+
+    &::-webkit-scrollbar { display: none; }
+
+    @media ($screen-md) {
+        margin: 0;
+        padding: 0;
+        white-space: normal;
+        overflow: visible;
+    }
+}
 
 //
 // Footer Menu
@@ -114,10 +151,16 @@
     .menu__logo {
         margin-top: ($spacer / 3);
         margin-bottom: 0;
+
+        svg {
+            @media ($screen-sm) {
+                margin: 0;
+            }
+        }
     }
 
     .menu__link {
-        padding: ($spacer/3);
+        padding: ($spacer / 2);
         color: $gray-light;
 
         @media ($screen-sm) {

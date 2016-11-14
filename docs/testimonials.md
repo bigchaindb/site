@@ -6,7 +6,7 @@ The [testimonials component](../_src/_includes/testimonials.html)'s quotes are b
 The testimonials component consists of various files:
 
 - [HTML component](../_src/_includes/testimonials.html)
-- [HTML section](../_src/_includes/section-testimonials.html)
+- [HTML section](../_src/_includes/sections/section-testimonials.html)
 - [YAML data](../_src/data/testimonials.yml)
 - [SCSS styles](../_src/_assets/styles/bigchain/_testimonials.scss)
 - [JavaScript](../_src/_assets/javascripts/bigchain/testimonials.js)
@@ -41,7 +41,7 @@ In the content of the page where you want to have the testimonials section inclu
 
 ```
 <body>
-    {% include section-testimonials.html  %}
+    {% include sections/section-testimonials.html  %}
 </body>
 ```
 

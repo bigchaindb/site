@@ -1,5 +1,5 @@
 
-@mixin color-overlay($color-from: $brand-main-blue, $color-to: $brand-main-green) {
+@mixin color-overlay($color-from: $brand-main-violet, $color-to: $brand-main-green) {
     position: relative;
 
     // color overlay
@@ -12,7 +12,7 @@
         top: 0;
         bottom: 0;
         right: 0;
-        background: linear-gradient(to bottom right, $color-from 0%, $color-to 100%);
+        background: linear-gradient(to bottom right, $color-from 0%, $color-from 10%, $color-to 70%);
         opacity: .7;
         z-index: 0;
     }
