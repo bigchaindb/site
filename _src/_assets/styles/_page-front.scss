@@ -19,6 +19,7 @@
 .section-intro__main {
     @extend .text-center;
     margin-top: $spacer;
+    margin-bottom: $spacer * 4;
 
     h3 {
         display: block;
