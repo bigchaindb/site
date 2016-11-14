@@ -35,7 +35,10 @@
 @import 'bigchain/_utilities';
 
 // Content types
+@import 'bigchain/_content';
 @import 'bigchain/_content-page';
+@import 'bigchain/_content-post';
+@import 'bigchain/_content-archive';
 @import 'bigchain/_comments';
 @import 'bigchain/_toc';
 @import 'bigchain/_newsletter';
@@ -51,3 +54,4 @@
 @import '_page-community';
 @import '_page-contact';
 @import '_page-cla';
+@import '_page-blog';

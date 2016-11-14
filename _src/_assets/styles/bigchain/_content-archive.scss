@@ -1,0 +1,39 @@
+.header--archive {
+
+}
+
+.content--archive {
+    .entry-title {
+        @extend .h2;
+        margin-top: 0;
+
+        a {
+            color: $brand-main-green;
+            box-shadow: none;
+
+            &:hover,
+            &:focus {
+                color: $text-color;
+            }
+        }
+    }
+
+    .hentry {
+        padding-top: ($spacer * 2);
+        padding-bottom: ($spacer * 2);
+        border-bottom: 1px solid $brand-main-gray;
+
+        @media ($screen-sm) {
+            padding-top: ($spacer * 4);
+            padding-bottom: ($spacer * 4);
+        }
+
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+}
