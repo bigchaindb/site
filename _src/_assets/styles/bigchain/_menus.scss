@@ -182,9 +182,11 @@
     border-top: 1px solid $gray-dark;
     text-align: center;
     display: block;
-    margin-top: ($spacer * 4);
+    margin-top: ($spacer * 2);
+    padding-top: ($spacer * 2);
 
-    @media ($screen-sm) {
+    @media ($screen-md) {
+        padding-bottom: $spacer * 2;
         text-align: left;
         display: flex;
         align-items: center;
@@ -194,15 +196,19 @@
     .menu__link {
         display: inline-block;
         text-transform: none;
-        padding: ($spacer * 2) ($spacer/2);
+
+        @media ($screen-md) {
+            padding: 0 $spacer;
+        }
 
         &:first-child { margin-left: ($spacer/2); }
         &:last-child { padding-right: 0; }
     }
 
     &,
+    small,
     .menu__link {
-        @extend .mini;
+        @extend .small;
         color: $gray;
     }
 }
@@ -213,12 +219,13 @@
 //
 .erdf {
     display: block;
+    margin-top: $spacer * 2;
     margin-bottom: $spacer;
     box-shadow: none;
     text-align: center;
 
-    @media ($screen-sm) {
-        margin-bottom: 0;
+    @media ($screen-md) {
+        margin: 0;
     }
 
     &:hover,
@@ -237,5 +244,6 @@
     fill: $gray-light;
     color: $gray-light;
     width: 150px;
+    height: 30px;
     display: inline-block;
 }
