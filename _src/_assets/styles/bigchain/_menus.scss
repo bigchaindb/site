@@ -186,6 +186,9 @@
 
     @media ($screen-sm) {
         text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .menu__link {
@@ -202,4 +205,37 @@
         @extend .mini;
         color: $gray;
     }
+}
+
+
+//
+// ERDF logo
+//
+.erdf {
+    display: block;
+    margin-bottom: $spacer;
+    box-shadow: none;
+    text-align: center;
+
+    @media ($screen-sm) {
+        margin-bottom: 0;
+    }
+
+    &:hover,
+    &:focus {
+        background: none;
+
+        .logo-erdf {
+            fill: $brand-main-green;
+            color: $brand-main-green;
+        }
+    }
+}
+
+.logo-erdf {
+    @extend .transition;
+    fill: $gray;
+    color: $gray;
+    width: 130px;
+    display: inline-block;
 }
