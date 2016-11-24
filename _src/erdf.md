@@ -9,7 +9,9 @@ BigchainDB is partially supported by the European Regional Development Fund (ERD
 ### Projected goals
 
 - Scalable blockchain database technology that handles at least 100,000 writes per second
-- Scalable blockchain as a service
+- Scalable blockchain database as a service
 - Scalable blockchain with 3-15 nodes
 
 ### Expected outcomes
+
+- Establish partnerships with distributed database providers and enterprises 
