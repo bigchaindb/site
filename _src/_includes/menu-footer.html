@@ -52,19 +52,28 @@
 
     </div>
 
-    <small class="footer__copyright">
-        &copy; {{ site.time | date: "%Y" }} {{ site.address.company }}
+    <div class="footer__copyright">
+        <small>
+            &copy; {{ site.time | date: "%Y" }} {{ site.address.company }}
 
-        {% for link in site.data.menus.legal %}
+            {% for link in site.data.menus.legal %}
 
-            {% assign active = nil %}
-            {% if page.url contains link.url %}
-                {% assign active = 'active' %}
-            {% endif %}
+                {% assign active = nil %}
+                {% if page.url contains link.url %}
+                    {% assign active = 'active' %}
+                {% endif %}
 
-            <a class="menu__link {{ active }} js-tracking-menu" href="{{ link.url }}">{{ link.title }}</a>
+                <a class="menu__link {{ active }} js-tracking-menu" href="{{ link.url }}">{{ link.title }}</a>
 
-        {% endfor %}
-    </small>
+            {% endfor %}
+        </small>
+
+        <a class="erdf" href="/erdf/" title="BigchainDB is partially supported by the European Regional Development Fund (ERDF)">
+            <svg class="logo logo-erdf" aria-labelledby="title">
+                <title>European Regional Development Fund (ERDF)</title>
+                <use xlink:href="/assets/img/sprite.svg#logo-erdf"></use>
+            </svg>
+        </a>
+    </div>
 
 </nav>
