@@ -7,7 +7,7 @@ description: 'Our Privacy Policy sets out how your personal information is colle
 
 ### Introduction
 
-Our Privacy Policy sets out how your personal information is collected and used while you use the Site. We believe your personal information belongs to you, so we are very open about how we use it. The Privacy Policy is meant to be read together with the Terms, so words that are capitalized have the same meaning in the Privacy Policy as they do in the Terms.
+Our Privacy Policy sets out how your personal information is collected and used while you use the Site. We believe your personal information belongs to you, so we are very open about how we use it. The Privacy Policy is meant to be read together with the [Terms](https://bigchaindb.com/terms), so words that are capitalized have the same meaning in the Privacy Policy as they do in the Terms.
 ​
 If you have a question about the Privacy Policy, email terms@bigchaindb.com and we will try to answer it for you.
 ​
@@ -31,9 +31,11 @@ If you want to sign the CLA form or contact us without using these forms, you ca
 ​
 ### How information is shared
 
-We will not share or sell the identifiable personal information we collect or generate.
+We will not share or sell the identifiable personal information we collect or generate except as defined in this section.
 ​
 We may share non-personal or aggregate information, such as usage statistics for the Site.
+​
+We may share personal information with the [Interplanetary Database Foundation e.V.](https://ipdb.foundation) ("IPDB") for the purpose of allowing you to use the IPDB network. Information shared with IPDB will be subject to its [Privacy Policy](https://ipdb.foundation).
 ​
 ### Cookies
 ​
@@ -41,11 +43,11 @@ The Site uses the following cookies:
 - Cookie settings, which remembers your cookie settings.
 - Google Analytics, which provides us information about our users and how they use the Site. We use this information to make the Site better.
 
-You can block cookies by installing a browser add-on such as [Ghostery](https://www.ghostery.com/) or [Privacy Badger](https://www.eff.org/privacybadger).
+You can block cookies by installing a browser add-on such as [Privacy Badger](https://www.eff.org/privacybadger) or [uBlock Origin](https://github.com/gorhill/uBlock).
 ​
 ### Updating your personal information or revoking consent
 
-You may ask us correct or update your personal information if you cannot update it yourself. You may ask us to delete your personal information unless we are under a legal obligation to store it. If you revoke consent to store your personal information, it will be deleted. If you want to correct or update your personal information, or revoke your consent, you can email us at terms@bigchaindb.com.
+You may ask us to correct or update your personal information if you cannot update it yourself. You may ask us to delete your personal information unless we are under a legal obligation to store it. If you revoke consent to store your personal information, it will be deleted. If you want to correct or update your personal information, or revoke your consent, you can email us at terms@bigchaindb.com.
 ​
 ### Business transfers
 
