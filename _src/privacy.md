@@ -39,9 +39,7 @@ We may share personal information with the [Interplanetary Database Foundation e
 ​
 ### Cookies
 ​
-The Site uses the following cookies:
-- Cookie settings, which remembers your cookie settings.
-- Google Analytics, which provides us information about our users and how they use the Site. We use this information to make the Site better.
+The Site uses Google Analytics, which provides us information about our users and how they use the Site. We use this information to make the Site better.
 
 You can block cookies by installing a browser add-on such as [Privacy Badger](https://www.eff.org/privacybadger) or [uBlock Origin](https://github.com/gorhill/uBlock).
 ​
