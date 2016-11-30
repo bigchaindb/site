@@ -8,7 +8,7 @@ With this as a starting point, we asked how do we “blockchain-ify” it? We dr
 
 From the seed of the idea, to intense efforts starting late summer 2015, we made the announcement in February 2016. What initially started as a “let’s solve our own problem” approach almost immediately turned into something much bigger than we expected. With people and enterprises from across all industries reaching out looking to partner, collaborate, license or build on the technology, it became clear that we were solving much more than our own problem. The result is BigchainDB, a scalable blockchain database for the world.
 
-ascribe, WhereOnTheNet and IPDB are all registered trademarks of BigchainDB.
+<a href="https://www.ascribe.io/">ascribe</a>, <a href="https://www.whereonthe.net/">WhereOnTheNet</a> and <a href="https://ipdb.foundation/">IPDB</a> are all registered trademarks of BigchainDB.
 
 ## Team
 
