@@ -2,7 +2,7 @@
 layout: page
 
 title: Privacy & Cookies Policy
-description: 'Our Privacy Policy sets out how your personal information is collected and used while you use the Site.'
+description: 'Privacy & Cookies policies for use of the BigchainDB website.'
 ---
 
 ### Introduction
@@ -30,7 +30,7 @@ If you use the contact forms or CLA form on our website, the information you sub
 If you want to sign the CLA form or contact us without using these forms, you can email contact@bigchaindb.com.
 ​
 ### How information is shared
-
+​
 We will not share or sell the identifiable personal information we collect or generate except as defined in this section.
 ​
 We may share non-personal or aggregate information, such as usage statistics for the Site.
@@ -38,9 +38,9 @@ We may share non-personal or aggregate information, such as usage statistics for
 We may share personal information with the [Interplanetary Database Foundation e.V.](https://ipdb.foundation) ("IPDB") for the purpose of allowing you to use the IPDB network. Information shared with IPDB will be subject to its [Privacy Policy](https://ipdb.foundation).
 ​
 ### Cookies
-​
-The Site uses Google Analytics, which provides us information about our users and how they use the Site. We use this information to make the Site better.
 
+The Site uses Google Analytics, which provides us information about our users and how they use the Site. We use this information to make the Site better.
+​
 You can block cookies by installing a browser add-on such as [Privacy Badger](https://www.eff.org/privacybadger) or [uBlock Origin](https://github.com/gorhill/uBlock).
 ​
 ### Updating your personal information or revoking consent
