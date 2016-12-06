@@ -15,9 +15,6 @@
 }
 
 .testimonial {
-    display: flex;
-    flex-wrap: wrap;
-
     .is-ready & {
         @extend .animation-slide-in-from-bottom;
         animation-fill-mode: backwards;
@@ -26,7 +23,7 @@
 
 .testimonial__quote,
 .testimonial__caption {
-    flex: 0 0 100%;
+
 }
 
 .testimonial__quote {
