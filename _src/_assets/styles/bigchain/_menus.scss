@@ -234,7 +234,6 @@
 
         .logo-erdf {
             fill: $brand-main-green;
-            color: $brand-main-green;
         }
     }
 }
@@ -242,8 +241,7 @@
 .logo-erdf {
     @extend .transition;
     fill: $gray-light;
-    color: $gray-light;
-    width: 150px;
+    width: 122px;
     height: 30px;
     display: inline-block;
 }

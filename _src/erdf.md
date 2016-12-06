@@ -4,7 +4,11 @@ layout: page
 title: The European Regional Development Fund - ERDF
 ---
 
-BigchainDB is partially supported by the European Regional Development Fund (ERDF) to develop a scalable blockchain database technology and open public network. 
+<div class="section-header text-center">
+    <img width="250" src="/assets/img/logo-erdf-light.svg">
+</div>
+
+<p class="section-description">BigchainDB is partially supported by the European Regional Development Fund (ERDF) to develop a scalable blockchain database technology and open public network.</p>
 
 ### Projected goals
 
@@ -14,4 +18,4 @@ BigchainDB is partially supported by the European Regional Development Fund (ERD
 
 ### Expected outcomes
 
-- Establish partnerships with distributed database providers and enterprises 
+- Establish partnerships with distributed database providers and enterprises
