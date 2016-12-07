@@ -153,7 +153,10 @@
 }
 
 .grid--half {
-    > .grid__col { flex: 0 0 50%; }
+    > .grid__col {
+        flex: 0 0 50%;
+        max-width: 50%; // IE 11 workaround for bug (flex-basis doesn't account for box-sizing:border-box)
+    }
 }
 
 .grid--columns {
@@ -174,7 +177,10 @@
         > .grid__col { flex: 0 0 33.3%; }
     }
     .grid-small--half {
-        > .grid__col { flex: 0 0 50%; }
+        > .grid__col {
+            flex: 0 0 50%;
+            max-width: 50%; // IE 11 workaround for bug (flex-basis doesn't account for box-sizing:border-box)
+        }
     }
 }
 
@@ -192,7 +198,10 @@
         > .grid__col { flex: 0 0 33.3%; }
     }
     .grid-medium--half {
-        > .grid__col { flex: 0 0 50%; }
+        > .grid__col {
+            flex: 0 0 50%;
+            max-width: 50%; // IE 11 workaround for bug (flex-basis doesn't account for box-sizing:border-box)
+        }
     }
 }
 
@@ -210,6 +219,9 @@
         > .grid__col { flex: 0 0 33.3%; }
     }
     .grid-large--half {
-        > .grid__col { flex: 0 0 50%; }
+        > .grid__col {
+            flex: 0 0 50%;
+            max-width: 50%; // IE 11 workaround for bug (flex-basis doesn't account for box-sizing:border-box)
+        }
     }
 }
