@@ -1,4 +1,20 @@
 
+- name:     Daniel
+  position:
+  image:    team-daniel.jpg
+
+- name:     Krish
+  position:
+  image:    team-krish.jpg
+
+- name:     Scott
+  position:
+  image:    team-scott.jpg
+
+- name:     Simon
+  position:
+  image:    team-simon.jpg
+
 - name:     Bruce Pon
   position: CEO
   image:    team-bruce.jpg
@@ -44,7 +60,7 @@
   facebook: dimitri.jonghe
   github:   diminator
   linkedin: dimitridejonghe
-    
+
 - name:     Ryan Henderson
   position: Developer
   image:    team-ryan.jpg

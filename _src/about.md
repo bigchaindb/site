@@ -12,4 +12,4 @@ From the seed of the idea, to intense efforts starting late summer 2015, we made
 
 ## Team
 
- {% include team.html %}
+{% include team.html %}
