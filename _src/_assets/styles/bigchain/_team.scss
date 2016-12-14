@@ -42,7 +42,7 @@
 
 .team__social__link {
     display: inline-block;
-    margin: 0 ($spacer / 4);
+    margin: 0 ($spacer / 2);
     box-shadow: none;
 
     &,
@@ -70,8 +70,15 @@
 }
 
 
+//
+// Grid redefinition: more spacious
+//
+$spacer-team: 4rem;
+
 .grid--team {
-    .grid__col:last-child {
-        flex: 0 0 100%;
+    margin: -($spacer-team) 0 $spacer-team (-($spacer-team));
+
+    > .grid__col {
+        padding: $spacer-team 0 0 $spacer-team;
     }
 }
