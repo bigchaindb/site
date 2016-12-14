@@ -1,19 +1,27 @@
 
-- name:     Daniel
-  position:
+- name:     Daniel Lustig
+  position: Administrative Assistant
   image:    team-daniel.jpg
+  linkedin: daniel-lustig-852a408a
 
-- name:     Krish
-  position:
+- name:     Krish Iyer
+  position: Developer
   image:    team-krish.jpg
+  twitter:  krish7919
+  linkedin: krish7919
+  github:   krish7919
 
-- name:     Scott
-  position:
+- name:     Scott Sadler
+  position: Developer
   image:    team-scott.jpg
+  linkedin: scott-sadler-6397316
+  github:   libscott
 
-- name:     Simon
-  position:
+- name:     Simon Schwerin
+  position: Strategy & Business Development Intern
   image:    team-simon.jpg
+  twitter:  Zimmtstern_7
+  linkedin: simonschwerin
 
 - name:     Bruce Pon
   position: CEO
