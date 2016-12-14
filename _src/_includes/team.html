@@ -1,7 +1,9 @@
 
 <div class="grid grid--full grid-small--half grid-medium--third grid--gutters text-center grid--team">
 
-    {% for member in site.data.team %}
+    {% assign team = site.data.team | sort: 'name' %}
+
+    {% for member in team %}
     <div class="grid__col">
         <article class="team">
             <img class="team__image" src="/assets/img/{{ member.image }}">
