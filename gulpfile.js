@@ -355,6 +355,11 @@ gulp.task('deploy', function() {
                     cacheTime: 0,
                     gzip: true
                 },
+                
+                // all pdf files, not cached
+                '^.+\\.pdf': {
+                    cacheTime: 0
+                },
 
                 // font mime types
                 '\.eot$': {
