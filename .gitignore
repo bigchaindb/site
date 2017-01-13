@@ -3,5 +3,4 @@ Gemfile.lock
 .jekyll-metadata
 _dist
 .awspublish*
-.sass-cache
 yarn.lock
