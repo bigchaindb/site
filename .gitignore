@@ -4,3 +4,5 @@ Gemfile.lock
 _dist
 .awspublish*
 yarn.lock
+.bundle
+vendor/
