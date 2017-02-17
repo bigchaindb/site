@@ -30,6 +30,10 @@ $menu-height-md: 66px;
         margin: 0 auto;
         max-width: 10em;
 
+        // visual centering
+        position: relative;
+        right: -3%;
+
         @media ($screen-sm) {
             max-width: 13em;
         }
