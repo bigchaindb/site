@@ -2,16 +2,20 @@
     <div class="row row--wide">
 
         <div class="grid grid--full grid-medium--columns grid--center">
-            <div class="grid__col grid__col--1">
+            <div class="grid__col grid__col--2">
                 <a class="menu__logo" href="/">
                     <svg class="logo logo--sm logo--white--green" aria-labelledby="title">
                         <title>Logo</title>
                         <use xlink:href="/assets/img/sprite.svg#logo"></use>
                     </svg>
                 </a>
+                <a class="menu__hiring" href="https://github.com/bigchaindb/org/blob/master/engjob.md" rel="external">
+                    <svg class="icon icon--suitcase"><use xlink:href="/assets/img/sprite.svg#icon-suitcase"></use></svg>
+                    We're hiring!
+                </a>
             </div>
 
-            <div class="grid__col grid__col--5">
+            <div class="grid__col grid__col--4">
 
                 <div class="menu-overflow">
                     {% for link in site.data.menus.main %}
