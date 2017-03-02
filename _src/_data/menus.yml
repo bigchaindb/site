@@ -1,7 +1,9 @@
 ---
 main:
-    - title: How it works
+    - title: Features
       url: "/features/"
+    - title: Use Cases
+      url: "/usecases/"
     - title: Whitepaper
       url: "/whitepaper/"
     - title: Community
