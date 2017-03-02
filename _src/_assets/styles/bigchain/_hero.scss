@@ -8,7 +8,7 @@ $menu-height-md: 66px;
 
 .hero {
     @extend .background--photo;
-    background-image: url('/assets/img/berlin-poster.jpg');
+    background-image: url('/assets/img/hero-berlin.jpg');
     text-align: center;
     overflow: hidden;
     position: relative;
@@ -16,32 +16,11 @@ $menu-height-md: 66px;
     // vertically center everything
     display: flex;
     align-items: center;
-    min-height: 420px;
-    max-height: 100vh;
+    min-height: 480px;
     flex-wrap: wrap;
 
-    .section {
-        @media ($screen-md) {
-            height: 100vh;
-        }
-    }
-
-    .logo--full {
-        margin: 0 auto;
-        max-width: 10em;
-
-        // visual centering
-        position: relative;
-        right: -3%;
-
-        @media ($screen-sm) {
-            max-width: 13em;
-        }
-
-        @media ($screen-md) {
-            max-width: 20em;
-            margin-top: ($spacer * 2);
-        }
+    @media ($screen-md) {
+        height: 100vh;
     }
 
     .section-title {
@@ -63,7 +42,7 @@ $menu-height-md: 66px;
         color: #fff;
         opacity: .8;
         position: absolute;
-        bottom: -($spacer * 2);
+        bottom: $spacer;
         left: 0;
         right: 0;
         width: 100%;
@@ -87,7 +66,6 @@ $menu-height-md: 66px;
     }
 
     // intro animation
-    .logo--full,
     .section-title,
     .btn {
         @extend .animation-slide-in-from-bottom;
@@ -95,103 +73,16 @@ $menu-height-md: 66px;
         animation-fill-mode: backwards;
     }
 
-    .logo--full {
-        animation-timing-function: $timing-default;
-    }
-
-    .section-title,
     .btn {
-        @extend .animation-slide-in-from-bottom;
-        animation-play-state: paused;
-    }
-
-    .btn { animation-delay: .2s; }
-
-    &.is-ready {
-        .section-title,
-        .btn {
-            animation-play-state: running;
-        }
+        animation-delay: .5s;
     }
 }
 
 .hero__content {
-    position: relative;
-    z-index: 1;
-    margin-bottom: ($spacer * 4);
-    padding-top: $menu-height-md;
-}
-
-
-//
-// Video hero
-//
-.hero-video {
-    // hide color overlay to prevent double overlays
-    // color overlay of hero-video__background will take over
-    @media ($screen-md) {
-        &:before { display: none }
-    }
-}
-
-.hero-video .menu,
-.hero-video__content,
-.hero-video__video {
-    @media ($screen-md) {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-    }
-}
-
-.hero-video__content {
+    margin-bottom: $spacer * 4;
 
     @media ($screen-md) {
-        z-index: 3 !important;
-        bottom: 0;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        width: 100%;
+        align-self: flex-start;
+        margin-bottom: 0;
     }
-}
-
-// video container
-.hero-video__background {
-    @extend .color-overlay;
-    display: none;
-
-    @media ($screen-md) {
-        display: block;
-        margin-bottom: -9px;
-        max-height: 100vh;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-
-        &:before { z-index: 2; }
-    }
-}
-
-// the video itself
-.hero-video__video,
-.hero-video__poster {
-    @extend .img--responsive;
-}
-
-.hero-video__video {
-    @extend .transition;
-    opacity: 0;
-    margin: auto;
-    width: 100%;
-
-    &.enabled {
-        opacity: 1
-    }
-}
-
-.hero-video__poster {
-    display: block;
-    opacity: 0;
 }
