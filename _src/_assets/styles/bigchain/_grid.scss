@@ -37,7 +37,8 @@
 
 .row {
     max-width: $screen-md-min;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: ($gutter-space / 2);
     padding-right: ($gutter-space / 2);
 

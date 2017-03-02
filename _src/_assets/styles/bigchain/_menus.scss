@@ -2,7 +2,8 @@
 .menu {
     position: relative;
     z-index: 10;
-    flex: 1;
+    width: 100%;
+    align-self: flex-start;
 
     .grid__col {
         text-align: center;
@@ -166,7 +167,6 @@
     margin-right: -$gutter-space / 2;
     padding-left: $gutter-space / 2;
     padding-right: $gutter-space / 2;
-    max-width: 100%;
 
     &::-webkit-scrollbar { display: none; }
 
