@@ -92,7 +92,7 @@
 }
 
 .menu__hiring {
-    color: lighten($brand-main-green, 15%);
+    color: $brand-main-green;
     box-shadow: none;
     padding: $spacer ($spacer / 4);
     display: inline-block;
@@ -115,7 +115,7 @@
         @extend .transition;
         width: 1rem;
         height: 1rem;
-        stroke: lighten($brand-main-green, 15%);
+        stroke: $brand-main-green;
         stroke-width: 1.5;
         margin-bottom: -1px;
     }
@@ -129,7 +129,7 @@
 .menu--main {
     background: rgba($brand-main-blue-dark, .35);
     backdrop-filter: saturate(150%) blur(10px);
-    border-bottom: 1px solid rgba($gray, .9);
+    border-bottom: 1px solid rgba($gray, .5);
     padding-top: ($spacer / 2);
     padding-bottom: ($spacer / 2);
 

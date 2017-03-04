@@ -31,10 +31,10 @@ $brand-danger:            #c9726a !default;
 //
 // Typography
 //
-$font-family-noto:         'Noto Sans', 'Helvetica Neue', 'Arial', sans-serif  !default;
-$font-family-avenir:       'Avenir Next', 'Helvetica Neue', 'Arial', sans-serif !default;
+$font-family-noto:         'Muli', 'Noto Sans', 'Helvetica Neue', 'Arial', sans-serif  !default;
+$font-family-avenir:       'Muli', 'Avenir Next', 'Helvetica Neue', 'Arial', sans-serif !default;
 $font-family-monospace:     Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:          $font-family-avenir !default;
+$font-family-base:          $font-family-noto !default;
 
 $font-weight-light:         300 !default;
 $font-weight-normal:        400 !default;
