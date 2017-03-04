@@ -4,4 +4,29 @@ layout: page
 title: Use Cases
 description:
 
+intro:
+    title: BigchainDB can be used for all sorts of things
+    description: Blockchain is awesome and eco system has lots of potential. I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
 ---
+
+{{ page.intro.title }}
+{{ page.intro.description }}
+
+{% for industry in site.data.industries %}
+    <section>
+        {{ industry.name }}
+        {{ industry.description }}
+
+        {% if industry.usecase %}
+            {% for usecase in site.collection.usecases %}
+                <article>
+                    {{ usecase.industry }}
+                    {{ usecase.title }}
+                    {{ usecase.description }}
+                    <a href="{{ usecase.url }}">Learn more</a>
+                </article>
+            {% endfor %}
+            <a href="">Learn more</a>
+        {% endif %}
+    </section>
+{% endfor%}

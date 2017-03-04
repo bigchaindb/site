@@ -60,6 +60,14 @@ source:                 ./_src
 destination:            ./_dist
 
 
+# Jekyll native collections
+# --------------------
+collections:
+    usecases:
+        output: true
+        permalink: /:collection/:path/
+
+
 # Plugins
 # --------------------
 gems:
