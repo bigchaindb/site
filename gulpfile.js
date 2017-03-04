@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     del = require('del'),
     pkg = require('./package.json'),
     parallelize = require('concurrent-transform'),
-    browser = require('browser-sync');
+    browser = require('browser-sync').create(),
+    spawn = require('child_process').spawn;
 
 // Temporary solution until gulp 4
 // https://github.com/gulpjs/gulp/issues/355
@@ -49,7 +50,7 @@ console.log("");
 var PORT = 1337;
 
 // Browsers to target when prefixing CSS
-var COMPATIBILITY = ['Chrome >= 30', 'Safari >= 6.1', 'Firefox >= 35', 'Opera >= 32', 'iOS >= 8', 'Android >= 4', 'ie >= 10'];
+var COMPATIBILITY = ['last 2 versions', 'Chrome >= 30', 'Safari >= 6.1', 'Firefox >= 35', 'Opera >= 32', 'iOS >= 8', 'Android >= 4', 'ie >= 10'];
 
 // paths
 var SRC      = '_src/',
@@ -110,15 +111,13 @@ gulp.task('jekyll', function(cb) {
 
     browser.notify('Compiling Jekyll');
 
-    var spawn = require('cross-spawn');
-
     if (isProduction) {
-        process.env.JEKYLL_ENV = 'production';
-        var jekyll = spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit' });
+        var jekyll_options = 'jekyll build';
     } else {
-        process.env.JEKYLL_ENV = 'development';
-        var jekyll = spawn('bundle', ['exec', 'jekyll', 'build', '--incremental', '--drafts', '--future'], { stdio: 'inherit' });
+        var jekyll_options = 'jekyll build --incremental --drafts --future';
     }
+
+    var jekyll = spawn('bundle', ['exec', jekyll_options], { stdio: 'inherit' });
 
     jekyll.on('exit', function(code) {
         cb(code === 0 ? null : 'ERROR: Jekyll process exited with code: ' + code);
@@ -256,7 +255,7 @@ gulp.task('rev:replace', function() {
     if (isProduction) {
         var manifest = gulp.src(DIST + '/assets/rev-manifest.json');
 
-        return gulp.src(DIST + '/**/*.{html,xml,txt,json,css,js,svg}')
+        return gulp.src(DIST + '/**/*.{html,xml,txt,json,css,js}')
             .pipe($.revReplace({ manifest: manifest }))
             .pipe(gulp.dest(DIST));
     }
@@ -275,6 +274,26 @@ gulp.task('server', ['build'], function() {
 });
 
 
+//
+// Autoreload on gulpfile.js changes
+//
+gulp.task('gulp-autoreload', function() {
+    // Store current process if any
+    var p;
+
+    gulp.watch('gulpfile.js', spawnChildren);
+    spawnChildren();
+
+    function spawnChildren(e) {
+        if(p) {
+            p.kill();
+        }
+
+        p = spawn('gulp', { stdio: 'inherit' });
+    }
+});
+
+
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 // Task sequences
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -290,6 +309,7 @@ gulp.task('default', ['build', 'server'], function() {
     gulp.watch([SRC + '_assets/images/**/*.{svg}'], ['svg', browser.reload]);
     gulp.watch([SRC + '_assets/videos/**/*.{mp4,webm}'], ['videos', browser.reload]);
     gulp.watch([SRC + '**/*.{html,xml,json,txt,md,yml}', './_config.yml', SRC + '_includes/svg/*'], ['build', browser.reload]);
+    gulp.watch('gulpfile.js', [ 'gulp-autoreload' ]);
 });
 
 
@@ -360,7 +380,7 @@ gulp.task('deploy', function() {
             },
             routes: {
                 // all static assets, cached & gzipped
-                '^assets/(?:.+)\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|ttf)$': {
+                '^assets/(?:.+)\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|ttf|eot|woff|woff2)$': {
                     cacheTime: 2592000, // cache for 1 month
                     gzip: true
                 },
