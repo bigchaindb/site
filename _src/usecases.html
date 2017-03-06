@@ -9,24 +9,44 @@ intro:
     description: Blockchain is awesome and eco system has lots of potential. I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
 ---
 
-{{ page.intro.title }}
-{{ page.intro.description }}
+<section class="section">
+    <div class="row">
+        <header class="section-header">
+            <h1 class="section-title">{{ page.intro.title }}</h1>
+            <p class="section-description">{{ page.intro.description }}</p>
+        </header>
+    </div>
+</section>
 
 {% for industry in site.data.industries %}
-    <section>
-        {{ industry.name }}
-        {{ industry.description }}
+
+    <section class="section section--industry">
+
+        <header class="section-header row">
+            <h1 class="section-title">{{ industry.name }}</h1>
+            <h2 class="section-title">{{ industry.tagline }}</h2>
+        </header>
+
+        <div class="row">
+            <p>{{ industry.description }}</p>
+        </div>
 
         {% if industry.usecase %}
-            {% for usecase in site.collection.usecases %}
-                <article>
-                    {{ usecase.industry }}
-                    {{ usecase.title }}
-                    {{ usecase.description }}
-                    <a href="{{ usecase.url }}">Learn more</a>
-                </article>
-            {% endfor %}
-            <a href="">Learn more</a>
+            <div class="row">
+                {% for usecase in site.usecases %}
+                    {% if industry.usecase == usecase.slug %}
+                    <article class="featuredusecase">
+                        <img class="featuredusecase__logo" src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/139.jpg" width="100" height="70">
+                        <div class="featuredusecase__content">
+                            <h1 class="featuredusecase__title"><a href="{{ usecase.url }}">{{ usecase.title }}</a></h1>
+                            <p>{{ usecase.description }}</p>
+                            <a href="{{ usecase.url }}">Learn more</a>
+                        </div>
+                    </article>
+                    {% endif %}
+                {% endfor %}
+            </div>
         {% endif %}
     </section>
+
 {% endfor%}

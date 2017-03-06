@@ -1,0 +1,45 @@
+---
+layout: base
+---
+
+<header role="banner" class="header" {% if page.image %}style="background-image:url('{{ page.image }}')"{% endif %}>
+
+    {% include menu-main.html %}
+
+    <div class="row">
+        <h1 class="header__title">{{ page.title }}</h1>
+    </div>
+</header>
+
+<section role="main" class="section content content--page content--usecase">
+
+    <div class="row">
+
+        {{ content }}
+
+        {% if page.quote %}
+            <figure class="testimonial">
+                <blockquote class="testimonial__quote">{{ page.quote.copy }}</blockquote>
+
+                <figcaption class="testimonial__caption">
+                    <img class="testimonial__avatar" src="/assets/img/{{ page.quote.image }}">
+                    <cite class="testimonial__cite">
+                        <span class="testimonial__name">{{ page.quote.name }}</span>
+                        <span class="testimonial__org">{{ page.quote.org }}</span>
+                    </cite>
+                </figcaption>
+            </figure>
+        {% endif %}
+
+    </div>
+
+
+    <div class="row">
+        {% if page.fullstudy %}
+        <a href="{{ page.fullstudy }}" rel="external">Read full case study</a>
+        {% endif %}
+
+        <a href="/usecases/">Back to use cases</a>
+    </div>
+
+</section>

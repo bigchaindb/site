@@ -1,3 +1,106 @@
 .page-usecases {
+    .section-header {
+        &:first-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
 
+//
+// Industry section
+//
+.section--industry {
+
+    .section-header {
+        margin-bottom: $spacer * 2;
+    }
+    .section-title,
+    .section-description {
+        text-align: left;
+    }
+
+    .section-title {
+        @extend .h3;
+        margin-top: 0;
+
+        &:first-child {
+            color: #fff;
+
+            &:after {
+                margin-left: 0;
+                margin-top: $spacer;
+            }
+        }
+
+        &:nth-child(2) {
+            margin-top: $spacer;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    &:nth-child(even) {
+        @extend .background--darker;
+
+        .featuredusecase {
+            border-top-color: $gray-dark;
+        }
+    }
+}
+
+.featuredusecase {
+    border-top: 1px solid $gray-darker;
+    padding-top: $spacer * 2;
+    margin-top: $spacer * 2;
+
+    @media ($screen-sm) {
+        display: flex;
+    }
+}
+
+.featuredusecase__logo {
+    margin-right: $spacer;
+}
+
+.featuredusecase__content {
+
+}
+
+.featuredusecase__title {
+    @extend .h4;
+    margin-top: 0;
+
+    a {
+        color: $brand-main-green;
+        box-shadow: none;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+}
+
+
+//
+// Single use case page
+//
+.content--usecase {
+    > .row {
+        > h2 {
+            @extend .h3;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .testimonial {
+        @extend .large;
+        max-width: 80%;
+        margin: $spacer * 4 auto;
+    }
 }

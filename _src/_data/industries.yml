@@ -1,7 +1,33 @@
 
+- name: Energy
+  tagline: That’s gonna be huge. And another fact.
+  description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
+  icon: icon-industry-energy
+  usecase: innogy
+
+- name: Land registry
+  tagline: That’s gonna be huge. And another fact.
+  description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
+  icon: icon-industry-landregistry
+  usecase: benben
+
 - name: Identity
-  description:
-  icon:
-  usecase:
-      - name: recruit
-        description:
+  tagline: That’s gonna be huge. And another fact.
+  description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
+  icon: icon-industry-identity
+  usecase: recruit
+
+- name: Intellectual Property
+  tagline: That’s gonna be huge. And another fact.
+  description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
+  icon: icon-industry-identity
+
+- name: Music
+  tagline: That’s gonna be huge. And another fact.
+  description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
+  icon: icon-industry-music
+
+- name: Health Care
+  tagline: That’s gonna be huge. And another fact.
+  description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
+  icon: icon-industry-healthcare
