@@ -6,10 +6,10 @@ description: "Innogy’s project Genesis of Things leads to a future where we kn
 image: http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg
 
 quote:
-    copy: BigchainDB powers the machine economy
+    copy: BigchainDB powers the machine economy.
     name: Dr. Carsten Stöcker
     org: innogy SE
-    image:
+    image: carsten-stoecker.jpg
 
 company: innogy SE
 slug: innogy
