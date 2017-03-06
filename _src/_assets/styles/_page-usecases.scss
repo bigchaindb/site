@@ -13,7 +13,14 @@
 
     .section-header {
         margin-bottom: $spacer * 2;
+
+        .icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: $spacer / 2;
+        }
     }
+
     .section-title,
     .section-description {
         text-align: left;
@@ -22,18 +29,16 @@
     .section-title {
         @extend .h3;
         margin-top: 0;
+        color: #fff;
 
-        &:first-child {
-            color: #fff;
-
-            &:after {
-                margin-left: 0;
-                margin-top: $spacer;
-            }
+        &:after {
+            margin-left: 0;
+            margin-top: $spacer;
         }
 
-        &:nth-child(2) {
+        &:last-child {
             margin-top: $spacer;
+            color: $headings-color;
 
             &:after {
                 display: none;
