@@ -294,4 +294,13 @@
 .menu--sub {
     text-align: center;
     background: $gray-darker;
+
+    .icon {
+        width: 1rem;
+        height: 1rem;
+        vertical-align: baseline;
+        margin-right: $spacer / 6;
+        margin-bottom: -2px;
+        stroke-width: 3px;
+    }
 }

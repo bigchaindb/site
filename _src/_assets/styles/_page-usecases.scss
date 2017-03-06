@@ -58,7 +58,7 @@
 }
 
 .featuredusecase {
-    border-top: 1px solid $gray-darker;
+    border-top: 2px solid lighten($gray-dark, 5%);
     padding-top: $spacer * 2;
     margin-top: $spacer * 2;
 
@@ -98,6 +98,7 @@
 // Single use case page
 //
 .content--usecase {
+    padding-top: $spacer * 4;
     padding-bottom: 0;
 
     > .row {
@@ -112,8 +113,15 @@
 
     .testimonial {
         @extend .large;
-        max-width: 80%;
-        margin: $spacer * 4 auto;
+        margin: 0 auto $spacer * 4 auto;
+
+        @media ($screen-sm) {
+            max-width: 66%;
+        }
+    }
+
+    .actionbar {
+        margin-top: $spacer * 4;
     }
 }
 
@@ -125,6 +133,13 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: $spacer;
+    }
+
+    .header__label {
+        display: block;
+        color: $brand-main-blue-light;
+        font-size: $font-size-lg;
+        margin-bottom: $spacer * 2;
     }
 }
 

@@ -13,6 +13,7 @@ cta:
 
     <div class="row">
         <h1 class="header__title">
+            <span class="header__label">{{ page.industry }}</span>
             <svg class="header__logo">
                 <use xlink:href="/assets/img/sprite.svg#logo-{{ page.slug }}"></use>
             </svg>
@@ -24,8 +25,6 @@ cta:
 <section role="main" class="section content content--page content--usecase">
 
     <div class="row">
-
-        {{ content }}
 
         {% if page.quote %}
             <figure class="testimonial">
@@ -40,6 +39,8 @@ cta:
                 </figcaption>
             </figure>
         {% endif %}
+
+        {{ content }}
 
     </div>
 
