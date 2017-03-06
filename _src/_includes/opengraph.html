@@ -1,7 +1,9 @@
 <meta content="website" property="og:type">
 <meta content="{{ site.name }}" property="og:site_name">
 
-{% if page.title %}
+{% if page.layout == 'usecase' %}
+    <meta content="{{ page.company }} &bull; &bull; {{ page.industry }} &bull; &bull; {{ site.name }}" property="og:title">
+{% elsif page.title %}
     <meta content="{{ page.title }} &bull; &bull; {{ site.name }}" property="og:title">
 {% else %}
     <meta content="{{ site.name }} &bull; &bull; {{ site.description }}" property="og:title">

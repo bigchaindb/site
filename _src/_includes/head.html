@@ -3,8 +3,8 @@
 
     <!-- Dynamic meta title -->
     <title>
-    {% if paginator.previous_page %}
-        Page {{ paginator.page }} &bull; &bull; {{ site.name }}
+    {% if page.layout == 'usecase' %}
+        {{ page.company }} &bull; &bull; {{ page.industry }} &bull; &bull; {{ site.name }}
     {% elsif page.title %}
         {{ page.title }} &bull; &bull; {{ site.name }}
     {% else %}
