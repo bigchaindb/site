@@ -44,13 +44,22 @@ cta:
     </div>
 
 
-    <div class="row">
-        {% if page.fullstudy %}
-        <a href="{{ page.fullstudy }}" rel="external">Read full case study</a>
-        {% endif %}
+    <aside class="actionbar">
 
-        <a href="/usecases/">Back to use cases</a>
-    </div>
+        <div class="grid grid--full grid-small--half grid--top">
+
+            {% if page.fullstudy %}
+            <div class="grid__col">
+                <a href="{{ page.fullstudy }}" rel="external">Read full case study</a>
+            </div>
+            {% endif %}
+
+            <div class="grid__col">
+                <a class="link-back" href="/usecases/">< Back to use cases</a>
+            </div>
+        </div>
+
+    </aside>
 
 </section>
 

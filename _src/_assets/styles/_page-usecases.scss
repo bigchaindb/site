@@ -96,6 +96,8 @@
 // Single use case page
 //
 .content--usecase {
+    padding-bottom: 0;
+
     > .row {
         > h2 {
             @extend .h3;
@@ -121,5 +123,33 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: $spacer;
+    }
+}
+
+.actionbar {
+    a {
+        display: block;
+        padding: ($spacer * 2) $spacer;
+        background: $brand-main-green;
+        text-align: center;
+        box-shadow: none;
+        font-family: $btn-font-family;
+        text-transform: uppercase;
+        color: $brand-main-blue-dark;
+
+        &:hover,
+        &:focus {
+            background: lighten($brand-main-green, 5%);
+        }
+
+        &.link-back {
+            background: $brand-main-blue-dark;
+            color: #fff;
+
+            &:hover,
+            &:focus {
+                background: lighten($brand-main-blue-dark, 5%);
+            }
+        }
     }
 }
