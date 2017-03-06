@@ -2,12 +2,17 @@
 layout: base
 ---
 
-<header role="banner" class="header" {% if page.image %}style="background-image:url('{{ page.image }}')"{% endif %}>
+<header role="banner" class="header header--usecase" {% if page.image %}style="background-image:url('{{ page.image }}')"{% endif %}>
 
     {% include menu-main.html %}
 
     <div class="row">
-        <h1 class="header__title">{{ page.title }}</h1>
+        <h1 class="header__title">
+            <svg class="header__logo">
+                <use xlink:href="/assets/img/sprite.svg#logo-{{ page.slug }}"></use>
+            </svg>
+            {{ page.title }}
+        </h1>
     </div>
 </header>
 

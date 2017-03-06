@@ -39,12 +39,16 @@ intro:
                 {% for usecase in site.usecases %}
                     {% if industry.usecase == usecase.slug %}
                     <article class="featuredusecase">
-                        <img class="featuredusecase__logo" src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/139.jpg" width="100" height="70">
+
                         <div class="featuredusecase__content">
                             <h1 class="featuredusecase__title"><a href="{{ usecase.url }}">{{ usecase.title }}</a></h1>
                             <p>{{ usecase.description }}</p>
                             <a href="{{ usecase.url }}">Learn more</a>
                         </div>
+
+                        <svg class="partner__logo featuredusecase__logo">
+                            <use xlink:href="/assets/img/sprite.svg#logo-{{ usecase.slug }}"></use>
+                        </svg>
                     </article>
                     {% endif %}
                 {% endfor %}
