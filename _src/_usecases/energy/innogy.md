@@ -12,7 +12,6 @@ quote:
 
 company: innogy SE
 slug: innogy
-industry: Energy
 
 fullstudy: innogy.pdf
 ---

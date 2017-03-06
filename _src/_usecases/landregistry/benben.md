@@ -13,7 +13,6 @@ quote:
 
 company: BenBen
 slug: benben
-industry: Identity
 
 fullstudy: benben.pdf
 ---
