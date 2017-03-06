@@ -18,9 +18,19 @@ intro:
     </div>
 </section>
 
+<nav class="menu--sub">
+    <div class="row">
+        <div class="menu-overflow">
+            {% for industry in site.data.industries %}
+                <a class="menu__link scroll" href="#{{ industry.name | downcase | replace: " ", "" }}">{{ industry.name }}</a>
+            {% endfor%}
+        </div>
+    </div>
+</nav>
+
 {% for industry in site.data.industries %}
 
-    <section class="section section--industry">
+    <section class="section section--industry" id="{{ industry.name | downcase | replace: " ", "" }}">
 
         <header class="section-header row">
             <svg class="icon">

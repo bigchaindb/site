@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         g = c.get("start"),
                         h = c.get("delta");
                     e.scrollTop = Math.round(h * (-Math.pow(2, -10 * f / a) + 1) + g);
-                    d.get("elapsed") < d.get("duration") ? requestAnimationFrame(l) : (history.pushState(null, null, b), e.scrollTop = c.get("start") + c.get("delta"))
+                    d.get("elapsed") < d.get("duration") ? requestAnimationFrame(l) : (null, null, b, e.scrollTop = c.get("start") + c.get("delta"))
                 })
             }
         },

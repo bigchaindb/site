@@ -8,6 +8,7 @@
 
 //=include bigchain/form-contact.js
 //=include bigchain/newsletter.js
+//=include bigchain/smoothscroll.js
 
 
 jQuery(function($) {
