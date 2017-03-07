@@ -3,7 +3,7 @@ layout: usecase
 
 title: Blockchain Powered Land Registry in Ghana with BenBen
 description: BenBen is addressing problems in government technology in Ghana, with a focus on land and property ownership rights, management and issues.
-image: http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg
+header: hero-benben.jpg
 
 quote:
     copy: BDB and IPFS are the first blockchain as a service companies. Before you only had the option of using a product and now there’s a service aspect to facilitate all this.

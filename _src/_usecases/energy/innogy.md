@@ -3,6 +3,7 @@ layout: usecase
 
 title: "innogy’s Digital Product Memory - “Every Product Has a Story”"
 description: "Innogy’s project Genesis of Things leads to a future where we know the exact provenance and authenticity of everything we touch, see, feel and taste, and thus the ability to solve some of the many problems in today’s global supply chains."
+header: hero-innogy.jpg
 
 quote:
     copy: BigchainDB powers the machine economy.
