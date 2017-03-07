@@ -14,9 +14,14 @@ cta:
     <div class="row">
         <h1 class="header__title">
             <span class="header__label">{{ page.industry }}</span>
-            <svg class="header__logo">
-                <use xlink:href="/assets/img/sprite.svg#logo-{{ page.slug }}"></use>
-            </svg>
+            {% if page.bitmaplogo %}
+                <img class="header__logo" src="/assets/img/{{ page.bitmaplogo }}" />
+            {% else %}
+                <svg class="header__logo">
+                    <use xlink:href="/assets/img/sprite.svg#logo-{{ page.slug }}"></use>
+                </svg>
+            {% endif %}
+
             {{ page.title }}
         </h1>
     </div>

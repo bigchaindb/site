@@ -9,10 +9,11 @@ quote:
     copy: BDB and IPFS are the first blockchain as a service companies. Before you only had the option of using a product and now there’s a service aspect to facilitate all this.
     name: Daniel Bloch
     org: BenBen
-    image:
+    image: daniel-bloch.jpg
 
 company: BenBen
 slug: benben
+industry: Land registry
 bitmaplogo: logo-benben.png
 
 fullstudy: benben.pdf
