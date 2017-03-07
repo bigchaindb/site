@@ -59,15 +59,21 @@ js: page-usecases.min.js
                     {% if industry.usecase == usecase.slug %}
                     <article class="featuredusecase">
 
+                        {% if usecase.bitmaplogo %}
+                            <img class="featuredusecase__logo" src="/assets/img/{{ usecase.bitmaplogo }}" />
+                        {% else %}
+                            <svg class="featuredusecase__logo">
+                                <use xlink:href="/assets/img/sprite.svg#logo-{{ usecase.slug }}"></use>
+                            </svg>
+                        {% endif %}
+
+
                         <div class="featuredusecase__content">
                             <h1 class="featuredusecase__title"><a href="{{ usecase.url }}">{{ usecase.title }}</a></h1>
                             <p>{{ usecase.description }}</p>
                             <a href="{{ usecase.url }}">Learn more</a>
                         </div>
 
-                        <svg class="partner__logo featuredusecase__logo">
-                            <use xlink:href="/assets/img/sprite.svg#logo-{{ usecase.slug }}"></use>
-                        </svg>
                     </article>
                     {% endif %}
                 {% endfor %}

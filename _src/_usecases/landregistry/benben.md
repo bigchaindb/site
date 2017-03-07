@@ -13,6 +13,7 @@ quote:
 
 company: BenBen
 slug: benben
+bitmaplogo: logo-benben.png
 
 fullstudy: benben.pdf
 ---
