@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.com/ascribe/bigchain-website.svg?token=3psqw6c8KMDqfdGQ2x6d&branch=master)](https://travis-ci.com/ascribe/bigchain-website)
 
-[Live](https://www.bigchaindb.com) | [Beta](https://beta.bigchaindb.com) | [Styleguide](https://www.bigchaindb.com/styleguide/)
+[Live](https://www.bigchaindb.com) | [Beta](http://beta.bigchaindb.com) | [Gamma](http://gamma.bigchaindb.com) | [Styleguide](https://www.bigchaindb.com/styleguide/)
 
 ## Development
 
@@ -64,7 +64,7 @@ This is all that is needed to authenticate with AWS if you've setup your credent
 If you've set them up as another profile, say `[bigchain]` you can grab those credentials by using the `AWS_PROFILE` variable like so:
 
 ```bash
-AWS_PROFILE=bigchain gulp deploy:live
+AWS_PROFILE=bigchain gulp deploy --live
 ```
 
 In case that you get authentication errors or need an alternative way to authenticate with AWS, check out the [AWS documentation](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html).
@@ -81,6 +81,14 @@ gulp build --production
 # deploy contents of /_dist to beta
 gulp deploy --beta
 ```
+
+There's also a second beta deployment target called gamma under http://gamma.bigchaindb.com:
+
+```bash
+# deploy contents of /_dist to gamma
+gulp deploy --gamma
+```
+
 
 ### Production build & live deployment
 

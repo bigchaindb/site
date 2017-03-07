@@ -60,7 +60,9 @@ var SRC      = '_src/',
 var S3BUCKET         = 'www.bigchaindb.com',
     S3REGION         = 'eu-central-1',
     S3BUCKET_BETA    = 'beta.bigchaindb.com',
-    S3REGION_BETA    = 'eu-central-1';
+    S3REGION_BETA    = 'eu-central-1',
+    S3BUCKET_GAMMA   = 'gamma.bigchaindb.com',
+    S3REGION_GAMMA   = 'eu-central-1';
 
 // SVG sprite
 var SPRITECONFIG = {
@@ -343,6 +345,7 @@ gulp.task('build', function(done) {
 //
 // gulp deploy --live
 // gulp deploy --beta
+// gulp deploy --gamma
 //
 gulp.task('deploy', function() {
 
@@ -369,6 +372,18 @@ gulp.task('deploy', function() {
 
         $.util.log($.util.colors.gray("        ------------------------------------------"));
         $.util.log($.util.colors.green('                  Deploying to Beta... '));
+        $.util.log($.util.colors.gray("        ------------------------------------------"));
+    }
+    if ($.util.env.gamma === true) {
+        var publisher = $.awspublish.create({
+                params: { "Bucket": S3BUCKET_GAMMA },
+                "accessKeyId": process.env.AWS_GAMMA_ACCESS_KEY,
+                "secretAccessKey": process.env.AWS_GAMMA_SECRET_KEY,
+                "region": S3REGION_GAMMA
+        });
+
+        $.util.log($.util.colors.gray("        ------------------------------------------"));
+        $.util.log($.util.colors.green('                  Deploying to Gamma... '));
         $.util.log($.util.colors.gray("        ------------------------------------------"));
     }
 
