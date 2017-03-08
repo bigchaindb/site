@@ -16,11 +16,26 @@ slug: innogy
 industry: Energy
 
 fullstudy: innogy.pdf
+
+about:
+    user: "Dr. Carsten Stöcker is the Machine Economy Innovation Lighthouse Lead
+at innogy SE, and a co-founder of “Genesis of Things.” He is a physicist by training with a Ph.D. from University of Aachen. He also serves as a Council Member of Global Future Network for the World Economic Forum. Prior to joining innogy SE, Dr. Stöcker worked for the German Aerospace Center (DLR) and Accenture GmbH."
+    company: "innogy SE is an European energy company. With its three business areas
+of Renewables, Grid & Infra¬structure as well as Retail, it addresses the requirements of a modern, decarbonised, decentralised and digital world. The focus of innogy SE’s activities is on offering existing and potential customers innovative and sustainable products and services which enable them to use energy more efficiently and improve their quality of life. "
 ---
 
 ## Background
 
-[innogy SE](www.innogy.com) is an European energy company. With its three business areas of Renewables, Grid & Infrastructure as well as Retail, it addresses the requirements of a modern, decarbonised, decentralised and digital world. The focus of innogy SE’s activities is on offering existing and potential customers innovative and sustainable products and services which enable them to use energy more efficiently and improve their quality of life.
+[innogy SE](www.innogy.com), a large, multi-faceted energy company based dominantly in Europe, focuses on renewables, grids & infrastructure and retail.
+
+Blockchain technology is utilitzed for, among other things:
+
+- the logging of so-called “smart meter data”
+- the creation peer-to-peer energy cooperatives
+- energy wholesaling, confirmation, settlement, and billing
+- “blockchain-ifying” micro-grids and energy flexibilities, such as batteries
+
+As part of the Genesis of Things a a trusted, encrypted and open platform for the entire 3D printing supply chain is build up on blockchain technology. This approach allows Intellectual Property (IP) to scale globally and stay protected; each printed product has its own ID and digital product memory.
 
 ## Challenges
 
@@ -36,3 +51,13 @@ By adding digital product memory to the component parts of items in the supply c
 - The optimisation of the entire product life cycle - Future reproduction
 
 Additionally, with the transparency the digital product memory is providing, via immutable data records stored in BigchainDB, the “trust tax” in supply chains can be radically reduced.
+
+## How BigchainDB is helping
+
+- ID numbers are written on to BigchainDB, giving physical pieces a digital product memory. Storing digital product memory in BigchainDB allows for querying.
+- BigchainDB allows for the blockchain-ifying of other databases and has no single native language, meaning existing query languages can be used.
+- Scalable infrastructure enables authentificated IoT data from their smart meteres and batteries to be stored into the database to put [their] algorithms into the database.
+
+## Looking ahead
+
+The Genesis of Things project envisions a future where everyone has access to manufacturing assets, open designs and supply chain data. The next step is to scale and market the digital product memory which leads to interoperability of trusted data records along the supply chain.

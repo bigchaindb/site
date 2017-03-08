@@ -31,6 +31,8 @@ cta:
 
     <div class="row">
 
+        <p class="section-description">{{ page.description }}</p>
+
         {% if page.quote %}
             <figure class="testimonial">
                 <blockquote class="testimonial__quote">{{ page.quote.copy }}</blockquote>
@@ -49,6 +51,23 @@ cta:
 
     </div>
 
+    <aside class="content__about">
+        <div class="row">
+            <div class="grid grid--full grid--gutters grid-small--half grid--top">
+
+                <div class="grid__col">
+                    <h1 class="content__about__title">About the user</h1>
+                    {{ page.about.user }}
+                </div>
+
+                <div class="grid__col">
+                    <h1 class="content__about__title">About {{ page.company }}</h1>
+                    {{ page.about.company }}
+                </div>
+            </div>
+        </div>
+    </aside>
+
 
     <aside class="actionbar">
 
@@ -56,7 +75,7 @@ cta:
 
             {% if page.fullstudy %}
             <div class="grid__col">
-                <a href="{{ page.fullstudy }}" rel="external">Read full case study</a>
+                <a href="{{ page.fullstudy }}" download rel="external">Download case study (pdf)</a>
             </div>
             {% endif %}
 

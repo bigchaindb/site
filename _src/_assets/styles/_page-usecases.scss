@@ -128,15 +128,11 @@
 
     .testimonial {
         @extend .large;
-        margin: 0 auto $spacer * 4 auto;
+        margin: $spacer * 4 auto;
 
         @media ($screen-sm) {
             max-width: 66%;
         }
-    }
-
-    .actionbar {
-        margin-top: $spacer * 4;
     }
 }
 
@@ -156,6 +152,19 @@
         font-size: $font-size-lg;
         margin-bottom: $spacer * 2;
     }
+}
+
+.content__about {
+    margin-top: $spacer * 4;
+    background: $gray-darker;
+    padding-top: $spacer * 3;
+    padding-bottom: $spacer;
+}
+
+.content__about__title {
+    @extend .h4;
+    margin-top: 0;
+    margin-bottom: $spacer;
 }
 
 .actionbar {
