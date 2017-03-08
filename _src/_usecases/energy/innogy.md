@@ -31,15 +31,16 @@ of Renewables, Grid & Infra¬structure as well as Retail, it addresses the requi
 Blockchain technology is utilitzed for, among other things:
 
 - the logging of so-called “smart meter data”
-- the creation peer-to-peer energy cooperatives
-- energy wholesaling, confirmation, settlement, and billing
+- the creation of peer-to-peer energy cooperatives
+- energy wholesaling
+- confirmation, settlement, and billing
 - “blockchain-ifying” micro-grids and energy flexibilities, such as batteries
 
 As part of the Genesis of Things a a trusted, encrypted and open platform for the entire 3D printing supply chain is build up on blockchain technology. This approach allows Intellectual Property (IP) to scale globally and stay protected; each printed product has its own ID and digital product memory.
 
 ## Challenges
 
-Current supply-chain management is lacking efficiencies due to disparate component parts lacking provenance, traceability, and interoperability.
+Current supply chain management is lacking efficiencies due to disparate component parts lacking provenance, traceability, and interoperability.
 
 ## Solution
 
