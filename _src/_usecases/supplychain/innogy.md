@@ -13,7 +13,7 @@ quote:
 
 company: innogy SE
 slug: innogy
-industry: Energy
+industry: Supply chain
 
 fullstudy: innogy.pdf
 

@@ -13,7 +13,7 @@ quote:
 
 company: BenBen
 slug: benben
-industry: Land registry
+industry: Government
 bitmaplogo: logo-benben.png
 
 fullstudy: benben.pdf

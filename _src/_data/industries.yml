@@ -1,33 +1,34 @@
 
+- name: Intellectual Property
+  tagline: That’s gonna be huge. And another fact.
+  description: Blockchain technology can help via easy and secure attribution and licensing, transparent audit trails regarding who owns what. By storing metadata on BigchainDB, you can query based on things like creator, title and more.
+  icon: icon-industry-ip
+  usecase: resonate
+
+- name: Identity
+  tagline: That’s gonna be huge. And another fact.
+  description: On the internet, walled gardens lock up your personal data. It’s also siloed, meaning it’s often next to impossible to take your data with you if you want to leave. Blockchain technology enables sovereign personal data. With things like medical records and HR credentials, the original source can be signed and easily verifiable.
+  icon: icon-industry-identity
+  usecase: recruit
+
+- name: Finance
+  tagline: That’s gonna be huge. And another fact.
+  description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
+  icon: icon-industry-finance
+
+- name: Supply chain
+  tagline: That’s gonna be huge. And another fact.
+  description: Blockchain technology can add transparency and auditability to the global supply chain, which is traditionally highly opaque. Blockchain technology reduces leaks in the chain, which in turn reduces insurance costs.
+  icon: icon-industry-supplychain
+  usecase: innogy
+
 - name: Energy
   tagline: That’s gonna be huge. And another fact.
   description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
   icon: icon-industry-energy
-  usecase: innogy
 
-- name: Land registry
+- name: Government
   tagline: That’s gonna be huge. And another fact.
   description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
-  icon: icon-industry-landregistry
+  icon: icon-industry-government
   usecase: benben
-
-- name: Identity
-  tagline: That’s gonna be huge. And another fact.
-  description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
-  icon: icon-industry-identity
-  usecase: recruit
-
-- name: Intellectual Property
-  tagline: That’s gonna be huge. And another fact.
-  description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
-  icon: icon-industry-ip
-
-- name: Music
-  tagline: That’s gonna be huge. And another fact.
-  description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
-  icon: icon-industry-music
-
-- name: Health Care
-  tagline: That’s gonna be huge. And another fact.
-  description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
-  icon: icon-industry-healthcare
