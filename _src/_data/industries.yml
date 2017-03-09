@@ -1,34 +1,28 @@
 
 - name: Intellectual Property
-  tagline: That’s gonna be huge. And another fact.
   description: Blockchain technology can help via easy and secure attribution and licensing, transparent audit trails regarding who owns what. By storing metadata on BigchainDB, you can query based on things like creator, title and more.
   icon: icon-industry-ip
   usecase: resonate
 
 - name: Identity
-  tagline: That’s gonna be huge. And another fact.
-  description: On the internet, walled gardens lock up your personal data. It’s also siloed, meaning it’s often next to impossible to take your data with you if you want to leave. Blockchain technology enables sovereign personal data. With things like medical records and HR credentials, the original source can be signed and easily verifiable.
+  description: On the internet, siloed, walled gardens lock up your personal data. This means it’s often next to impossible to take your data with you if you want to leave or even to gain visibility at all into what is stored where. Blockchain technology enables sovereign personal data. With things like medical records and HR credentials, the original source can be signed and easily verifiable.
   icon: icon-industry-identity
-  usecase: recruit
+  usecase: recruit-technologies
 
 - name: Finance
-  tagline: That’s gonna be huge. And another fact.
-  description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
+  description: A consortium of over 80 of the world’s leading banks are working together to design and ship distributed ledger technologies in the financial world. Blockchain technology makes transferring currency, or any value, across different payment networks not only possible but faster and more secure.
   icon: icon-industry-finance
 
+- name: Energy
+  description: The asymmetrical relationship between energy companies and consumers based on a necessity and control dynamic, is ripe for deregulation. Instead of utilities connecting to producers who connect to consumers, consumers can connect directly with other consumers through blockchain technology. Energy can be traded for euros which can be traded into electricity and so on.
+  icon: icon-industry-energy
+
 - name: Supply chain
-  tagline: That’s gonna be huge. And another fact.
-  description: Blockchain technology can add transparency and auditability to the global supply chain, which is traditionally highly opaque. Blockchain technology reduces leaks in the chain, which in turn reduces insurance costs.
+  description: Blockchain technology can add transparency to the global supply chain, something that currently is lacking efficiencies due to an absence of provenance and traceability. By being both decentralized and immutable, all products can be given a clear record of its history and verifiable authenticity, reducing fraud and in turn reducing insurance costs.
   icon: icon-industry-supplychain
   usecase: innogy
 
-- name: Energy
-  tagline: That’s gonna be huge. And another fact.
-  description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
-  icon: icon-industry-energy
-
 - name: Government
-  tagline: That’s gonna be huge. And another fact.
-  description: I guess because my parents keep telling me to be more ladylike. As though! You lived before you met me?! Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.
+  description: Transparency is easy to implement if you use blockchain technology from the beginning and this could be applied directly to tax dollars, giving transparency into where money is being spent, reducing costs and the opportunity for corruption. Governments could leverage blockchain technology for land registries, personal and public records, patents and more.
   icon: icon-industry-government
   usecase: benben

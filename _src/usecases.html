@@ -2,13 +2,13 @@
 layout: page
 
 title: Use Cases
-description:
+description: For blockchain technology to go mainstream, it needs scale. At BigchainDB, we’ve taken care of that for you.
 
 intro:
-    title: For blockchain technology to go mainstream, it needs scale. At BigchainDB, we’ve taken care of that for you. 
-    description: BigchainDB is for developers and organizations looking for a scalable, queryable database with blockchain characteristics such as decentralization, immutability and the ability to treat anything stored as an asset. Whether it’s attribution, licensing or value transfer, any real-world application with big data and scalability needs is the perfect fit for BigchainDB. We’re still in the early days of the decentralization movement and while all of the industries below are being disrupted in one way or another, there’s an abundance of opportunity within each. 
+    title: Where big data and scalability meet
+    description: "BigchainDB is for developers and organizations looking for a scalable, queryable database with blockchain characteristics such as decentralization, immutability and the ability to treat anything stored in the database as an asset. Whether it’s attribution, licensing or value transfers, any real-world application with big data and scalability needs is the perfect fit for BigchainDB.<br><br>We’re still in the early days of the decentralization movement and while all of the industries below are being disrupted in one way or another, there’s an abundance of opportunity within each. "
 
-actionbar: Built something with BigchainDB? Get in touch.
+actionbar: Building something with BigchainDB? We want to hear from you.
 
 js: page-usecases.min.js
 ---
@@ -17,7 +17,7 @@ js: page-usecases.min.js
     <div class="row">
         <header class="section-header">
             <h1 class="section-title">{{ page.intro.title }}</h1>
-            <p class="section-description">{{ page.intro.description }}</p>
+            <div class="section-description">{{ page.intro.description | markdownify }}</div>
         </header>
     </div>
 </section>
@@ -46,12 +46,8 @@ js: page-usecases.min.js
                 <use xlink:href="/assets/img/sprite.svg#{{ industry.icon }}"></use>
             </svg>
             <h1 class="section-title">{{ industry.name }}</h1>
-            <h2 class="section-title">{{ industry.tagline }}</h2>
+            <p class="section-description">{{ industry.description }}</p>
         </header>
-
-        <div class="row">
-            <p>{{ industry.description }}</p>
-        </div>
 
         {% if industry.usecase %}
             <div class="row">

@@ -19,7 +19,7 @@
         .icon {
             width: 48px;
             height: 48px;
-            margin-bottom: $spacer / 2;
+            margin-bottom: $spacer / 3;
         }
     }
 
@@ -31,20 +31,10 @@
     .section-title {
         @extend .h3;
         margin-top: 0;
-        color: #fff;
+        margin-bottom: $spacer * 2;
 
         &:after {
             margin-left: 0;
-            margin-top: $spacer;
-        }
-
-        &:last-child {
-            margin-top: $spacer;
-            color: $headings-color;
-
-            &:after {
-                display: none;
-            }
         }
     }
 
@@ -73,9 +63,10 @@
     max-width: 80px;
     max-height: 60px;
     height: auto;
-    opacity: .6;
+    opacity: .5;
     margin-bottom: $spacer / 2;
     align-self: flex-start; // work around stretched images flexbox bug
+    fill: #fff;
 
     @media ($screen-sm) {
         flex: 0 0 20%;
@@ -144,6 +135,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: $spacer;
+        fill: #fff;
     }
 
     .header__label {
