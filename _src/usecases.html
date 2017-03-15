@@ -6,7 +6,11 @@ description: For blockchain technology to go mainstream, it needs scale. At Bigc
 
 intro:
     title: Where big data and scalability meet
-    description: "BigchainDB is for developers and organizations looking for a scalable, queryable database with blockchain characteristics such as decentralization, immutability and the ability to treat anything stored in the database as an asset. Whether it’s attribution, licensing or value transfers, any real-world application with big data and scalability needs is the perfect fit for BigchainDB.<br><br>We’re still in the early days of the decentralization movement and while all of the industries below are being disrupted in one way or another, there’s an abundance of opportunity within each. "
+    description: "BigchainDB is for developers and organizations looking for a scalable, queryable database with blockchain characteristics such as decentralization, immutability and the ability to treat anything stored in the database as an asset. Whether it’s attribution, licensing or value transfers, any real-world application with big data and scalability needs is the perfect fit for BigchainDB.<br><br>We’re still in the early days of the decentralization movement and while all of the industries below are being disrupted in one way or another, there’s an abundance of opportunity within each."
+    contact:
+        text: Building something with BigchainDB?
+        action: We want to hear from you.
+        link: "/contact/"
 
 newsletter:
     title: Be the first to hear about our customer stories.
@@ -20,7 +24,7 @@ js: page-usecases.min.js
             <h1 class="section-title">{{ page.intro.title }}</h1>
             <div class="section-description">
                 {{ page.intro.description | markdownify }}
-                <p>Building something with BigchainDB? <a href="/contact/">We want to hear from you.</a></p>
+                <p>{{ page.intro.contact.text }} <a href="{{ page.intro.contact.link }}">{{ page.intro.contact.action }}</a></p>
             </div>
 
         </header>
@@ -41,10 +45,6 @@ js: page-usecases.min.js
         </div>
     </div>
 </nav>
-
-<aside class="actionbar">
-
-</aside>
 
 {% for industry in site.data.industries %}
 
