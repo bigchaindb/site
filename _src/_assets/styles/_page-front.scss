@@ -5,8 +5,8 @@
 //
 
 .page-front {
-    .section-testimonials {
-        border-top: 1px solid $gray;
+    .section-partners {
+        @extend .background--darker
     }
 }
 
