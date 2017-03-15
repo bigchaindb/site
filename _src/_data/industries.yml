@@ -9,14 +9,6 @@
   icon: icon-industry-identity
   usecase: recruit-technologies
 
-- name: Finance
-  description: A consortium of over 80 of the world’s leading banks are working together to design and ship distributed ledger technologies in the financial world. Blockchain technology makes transferring currency, or any value, across different payment networks not only possible but faster and more secure.
-  icon: icon-industry-finance
-
-- name: Energy
-  description: The asymmetrical relationship between energy companies and consumers based on a necessity and control dynamic, is ripe for deregulation. Instead of utilities connecting to producers who connect to consumers, consumers can connect directly with other consumers through blockchain technology. Energy can be traded for euros which can be traded into electricity and so on.
-  icon: icon-industry-energy
-
 - name: Supply chain
   description: Blockchain technology can add transparency to the global supply chain, something that currently is lacking efficiencies due to an absence of provenance and traceability. By being both decentralized and immutable, all products can be given a clear record of its history and verifiable authenticity, reducing fraud and in turn reducing insurance costs.
   icon: icon-industry-supplychain

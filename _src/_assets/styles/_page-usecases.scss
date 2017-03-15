@@ -38,7 +38,7 @@
         }
     }
 
-    &:nth-child(even) {
+    &:nth-child(odd) {
         @extend .background--darker;
 
         .featuredusecase {
