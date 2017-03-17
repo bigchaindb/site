@@ -114,8 +114,10 @@ gulp.task('jekyll', function(cb) {
     browser.notify('Compiling Jekyll');
 
     if (isProduction) {
+        process.env.JEKYLL_ENV = 'production';
         var jekyll_options = 'jekyll build';
     } else {
+        process.env.JEKYLL_ENV = 'development';
         var jekyll_options = 'jekyll build --incremental --drafts --future';
     }
 
