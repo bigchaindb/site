@@ -57,12 +57,12 @@ cta:
 
                 <div class="grid__col">
                     <h1 class="content__about__title">About the user</h1>
-                    {{ page.about.user }}
+                    {{ page.about.user | markdownify }}
                 </div>
 
                 <div class="grid__col">
                     <h1 class="content__about__title">About {{ page.company }}</h1>
-                    {{ page.about.company }}
+                    {{ page.about.company | markdownify }}
                 </div>
             </div>
         </div>
