@@ -18,10 +18,8 @@ industry: Supply chain
 fullstudy: innogy.pdf
 
 about:
-    user: "Dr. Carsten Stöcker is the Machine Economy Innovation Lighthouse Lead
-at innogy SE, and a co-founder of “Genesis of Things.” He is a physicist by training with a Ph.D. from University of Aachen. He also serves as a Council Member of Global Future Network for the World Economic Forum. Prior to joining innogy SE, Dr. Stöcker worked for the German Aerospace Center (DLR) and Accenture GmbH."
-    company: "innogy SE is an European energy company. With its three business areas
-of Renewables, Grid & Infra¬structure as well as Retail, it addresses the requirements of a modern, decarbonised, decentralised and digital world. The focus of innogy SE’s activities is on offering existing and potential customers innovative and sustainable products and services which enable them to use energy more efficiently and improve their quality of life. "
+    user: "[Dr. Carsten Stöcker](https://twitter.com/CarstenStoecker) is the Machine Economy Innovation Lighthouse Lead at innogy SE, and a co-founder of “Genesis of Things.” He is a physicist by training with a Ph.D. from University of Aachen. He also serves as a Council Member of [Global Future Network](https://www.weforum.org/communities/global-future-councils) for the World Economic Forum. Prior to joining innogy SE, Dr. Stöcker worked for the [German Aerospace Center (DLR)](http://www.dlr.de/) and [Accenture GmbH](https://www.accenture.com)."
+    company: "[innogy SE](www.innogy.com) is an European energy company. With its three business areas of Renewables, Grid & Infra¬structure as well as Retail, it addresses the requirements of a modern, decarbonised, decentralised and digital world. The focus of innogy SE’s activities is on offering existing and potential customers innovative and sustainable products and services which enable them to use energy more efficiently and improve their quality of life. "
 ---
 
 ## Background
@@ -57,7 +55,7 @@ Additionally, with the transparency the digital product memory is providing, via
 
 - ID numbers are written on to BigchainDB, giving physical pieces a digital product memory. Storing digital product memory in BigchainDB allows for querying.
 - BigchainDB allows for the blockchain-ifying of other databases and has no single native language, meaning existing query languages can be used.
-- Scalable infrastructure enables authentificated IoT data from their smart meteres and batteries to be stored into the database to put [their] algorithms into the database.
+- Scalable infrastructure enables authentificated IoT data from their smart meters and batteries to be stored into the database to put their algorithms into the database.
 
 ## Looking ahead
 

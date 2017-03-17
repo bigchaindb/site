@@ -19,8 +19,8 @@ bitmaplogo: logo-benben.png
 fullstudy: benben.pdf
 
 about:
-    user: "Daniel is the cofounder and COO of BenBen. He was introduced to the blockchain in 2011 while working at Bitbox, one of North America’s first Bitcoin exchanges. From there Daniel cofounded the College Cryptocurrency Network (now the Blockchain Education Network) to  ll the educational gap on Blockchain at University campuses. He is based in Accra leading product development, partnerships and client integration at BenBen."
-    company: "BenBen is a team of motivated engineers and innovators dedicated to improving government technology in Ghana, BenBen is a digital land database that leverages blockchain technology to provide fast easy access to trusted land content. Focusing on land and property management, BenBen aims to create a reliable land information and transactions system by coupling the latest in geomatic services with blockchain technology."
+    user: "Daniel is the cofounder and COO of BenBen. He was introduced to the blockchain in 2011 while working at Bitbox, one of North America’s first Bitcoin exchanges. From there Daniel cofounded the College Cryptocurrency Network (now the [Blockchain Education Network](https://blockchainedu.org)) to fill the educational gap on Blockchain at University campuses. He is based in Accra leading product development, partnerships and client integration at BenBen."
+    company: "[BenBen](http://benben.com.gh) is a team of motivated engineers and innovators dedicated to improving government technology in Ghana, BenBen is a digital land database that leverages blockchain technology to provide fast easy access to trusted land content. Focusing on land and property management, BenBen aims to create a reliable land information and transactions system by coupling the latest in geomatic services with blockchain technology."
 ---
 
 ## Background
@@ -39,7 +39,7 @@ Utilizing blockchain technology, BenBen is creating a top-of-stack land registry
 
 ## How BigchainDB is helping
 
-- BigchainDB has worked with BenBen to provide solutions and guidance around the integration of IPFS for document storage and the construction of a blockchain database using BigchainDB technology.
+- BigchainDB has worked with BenBen to provide solutions and guidance around the integration of [IPFS](https://ipfs.io) for document storage and the construction of a blockchain database using BigchainDB technology.
 - In so doing, BigchainDB has facilitated the agile development of the BenBen product - essentially supplying all of the technological and development tools.
 - By leveraging BigchainDB, BenBen will allow for the management of data, enable reporting, smart land transactions, queries and analytics.
 - BigchainDB’s scalability facilitates the database to hold all attributed data including zone, acreage, usage, ownership, occupation and more.
