@@ -6,6 +6,12 @@
     .section-header {
         margin-bottom: 0;
     }
+
+    .section-description {
+        margin-bottom: $spacer * 2;
+        padding-bottom: $spacer * 2;
+        border-bottom: 2px solid lighten($gray-dark, 5%);
+    }
 }
 
 //
