@@ -1,0 +1,8 @@
+---
+---
+
+User-agent: *
+
+Disallow: /usecases/*.pdf$
+
+Sitemap: {{ site.url }}/sitemap.xml
