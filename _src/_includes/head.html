@@ -58,7 +58,7 @@
     {% include twittercards.html %}
 
     <!-- Prevent search indexing for some pages or non-production builds -->
-    {% if jekyll.environment != 'livedeploy' or page.sitemap == false %}
+    {% if jekyll.environment != 'production' or page.sitemap == false  %}
     <meta name="robots" content="noindex, nofollow">
     {% endif %}
 
