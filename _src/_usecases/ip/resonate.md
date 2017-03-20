@@ -14,7 +14,6 @@ quote:
 company: Resonate
 slug: resonate
 industry: Intellectual Property
-bitmaplogo: logo-resonate.png
 
 fullstudy: resonate.pdf
 

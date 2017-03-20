@@ -70,14 +70,15 @@ js: page-usecases.min.js
                     {% if industry.usecase == usecase.slug %}
                     <article class="featuredusecase">
 
-                        {% if usecase.bitmaplogo %}
-                            <img class="featuredusecase__logo" src="/assets/img/{{ usecase.bitmaplogo }}" />
-                        {% else %}
-                            <svg class="featuredusecase__logo">
-                                <use xlink:href="/assets/img/sprite.svg#logo-{{ usecase.slug }}"></use>
-                            </svg>
-                        {% endif %}
-
+                        <a class="featuredusecase__logo" href="{{ usecase.url }}">
+                            {% if usecase.bitmaplogo %}
+                                <img src="/assets/img/{{ usecase.bitmaplogo }}" />
+                            {% else %}
+                                <svg>
+                                    <use xlink:href="/assets/img/sprite.svg#logo-{{ usecase.slug }}"></use>
+                                </svg>
+                            {% endif %}
+                        </a>
 
                         <div class="featuredusecase__content">
                             <h1 class="featuredusecase__title"><a href="{{ usecase.url }}">{{ usecase.title }}</a></h1>

@@ -65,28 +65,49 @@
 }
 
 .featuredusecase__logo {
-    width: 80px;
-    max-width: 80px;
-    max-height: 60px;
-    height: auto;
-    opacity: .5;
-    margin-bottom: $spacer / 2;
-    align-self: flex-start; // work around stretched images flexbox bug
-    fill: #fff;
+    box-shadow: none;
+    transition: .2s ease-out;
+    display: block;
+
+    &:hover,
+    &:focus {
+        background: none;
+
+        svg {
+            fill: $brand-main-green;
+        }
+    }
 
     @media ($screen-sm) {
         flex: 0 0 20%;
-        margin-left: $spacer;
-        width: 120px;
-        max-width: 120px;
-        max-height: 90px;
-        height: auto;
         order: 2;
+        margin-left: 5%;
+    }
+
+    img,
+    svg {
+        width: 80px;
+        max-width: 80px;
+        max-height: 60px;
+        height: auto;
+        margin-bottom: $spacer / 2;
+        opacity: .6;
+        align-self: flex-start; // work around stretched images flexbox bug
+        fill: $brand-main-blue-light;
+        transition: .2s ease-out;
+
+        @media ($screen-sm) {
+            width: 120px;
+            max-width: 120px;
+            max-height: 90px;
+            height: auto;
+            margin-bottom: 0;
+        }
     }
 }
 
 .featuredusecase__content {
-    flex: 0 0 80%;
+    flex: 0 0 75%;
 }
 
 .featuredusecase__title {
