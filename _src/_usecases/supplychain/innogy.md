@@ -26,7 +26,7 @@ about:
 
 [innogy SE](www.innogy.com), a large, multi-faceted energy company based dominantly in Europe, focuses on renewables, grids & infrastructure and retail.
 
-Blockchain technology is utilitzed for, among other things:
+Blockchain technology is utilized for, among other things:
 
 - the logging of so-called “smart meter data”
 - the creation of peer-to-peer energy cooperatives
