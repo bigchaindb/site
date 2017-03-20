@@ -25,7 +25,8 @@ var onError = function(error) {
 
 // 'development' is just default, production overrides are triggered
 // by adding the production flag to the gulp command e.g. `gulp build --production`
-var isProduction = ($.util.env.production === true ? true : false);
+var isProduction = ($.util.env.production === true ? true : false),
+    isStaging    = ($.util.env.staging === true ? true : false);
 
 
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -116,6 +117,9 @@ gulp.task('jekyll', function(cb) {
     if (isProduction) {
         process.env.JEKYLL_ENV = 'production';
         var jekyll_options = 'jekyll build';
+    } else if (isStaging) {
+        process.env.JEKYLL_ENV = 'staging';
+        var jekyll_options = 'jekyll build';
     } else {
         process.env.JEKYLL_ENV = 'development';
         var jekyll_options = 'jekyll build --incremental --drafts --future';
@@ -134,7 +138,7 @@ gulp.task('jekyll', function(cb) {
 //
 gulp.task('html', function() {
     return gulp.src(DIST + '/**/*.html')
-            .pipe($.if(isProduction, $.htmlmin({
+            .pipe($.if(isProduction || isStaging, $.htmlmin({
             collapseWhitespace: true,
             conservativeCollapse: true,
             removeComments: true,
@@ -157,9 +161,9 @@ gulp.task('css', function() {
         .pipe($.sourcemaps.init())
         .pipe($.sass().on('error', $.sass.logError))
         .pipe($.autoprefixer({ browsers: COMPATIBILITY }))
-        .pipe($.if(isProduction, $.cssmin()))
+        .pipe($.if(isProduction || isStaging, $.cssmin()))
         .pipe($.if(!isProduction, $.sourcemaps.write()))
-        .pipe($.if(isProduction, $.header(BANNER, { pkg: pkg })))
+        .pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))
         .pipe($.rename({ suffix: '.min' }))
         .pipe(gulp.dest(DIST + 'assets/css/'))
         .pipe(browser.stream());
@@ -176,9 +180,9 @@ gulp.task('js', function() {
     ])
     .pipe($.sourcemaps.init())
     .pipe($.include())
-    .pipe($.if(isProduction, $.uglify())).on('error', onError)
-    .pipe($.if(!isProduction, $.sourcemaps.write()))
-    .pipe($.if(isProduction, $.header(BANNER, { pkg: pkg })))
+    .pipe($.if(isProduction || isStaging, $.uglify())).on('error', onError)
+    .pipe($.if(!isProduction || !isStaging, $.sourcemaps.write()))
+    .pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))
     .pipe($.rename({suffix: '.min'}))
     .pipe(gulp.dest(DIST + 'assets/js/'));
 });
@@ -189,7 +193,7 @@ gulp.task('js', function() {
 //
 gulp.task('svg', function() {
     return gulp.src(SRC + '_assets/images/**/*.svg')
-        .pipe($.if(isProduction, $.imagemin({
+        .pipe($.if(isProduction || isStaging, $.imagemin({
             svgoPlugins: [{
                 removeRasterImages: true
             }]
@@ -204,7 +208,7 @@ gulp.task('svg', function() {
 //
 gulp.task('images', function() {
     return gulp.src(SRC + '_assets/images/**/*')
-        .pipe($.if(isProduction, $.imagemin({
+        .pipe($.if(isProduction || isStaging, $.imagemin({
             optimizationLevel: 3, // png
             progressive: true, // jpg
             interlaced: true, // gif
@@ -239,7 +243,7 @@ gulp.task('videos', function() {
 //
 gulp.task('rev', function() {
     // globbing is slow so do everything conditionally for faster dev build
-    if (isProduction) {
+    if (isProduction || isStaging) {
         return gulp.src(DIST + '/assets/**/*.{css,js,png,jpg,jpeg,svg,eot,ttf,woff,woff2}')
             .pipe($.rev())
             .pipe(gulp.dest(DIST + '/assets/'))
@@ -256,7 +260,7 @@ gulp.task('rev', function() {
 //
 gulp.task('rev:replace', function() {
     // globbing is slow so do everything conditionally for faster dev build
-    if (isProduction) {
+    if (isProduction || isStaging) {
         var manifest = gulp.src(DIST + '/assets/rev-manifest.json');
 
         return gulp.src(DIST + '/**/*.{html,xml,txt,json,css,js}')
@@ -326,7 +330,7 @@ gulp.task('default', ['build', 'server'], function() {
 gulp.task('build', function(done) {
 
     $.util.log($.util.colors.gray("         ------------------------------------------"));
-    $.util.log($.util.colors.green('                Building ' + ($.util.env.production ? 'production' : 'dev') + ' version...'));
+    $.util.log($.util.colors.green('                Building ' + ($.util.env.production ? 'production' : $.util.env.staging ? 'staging' : 'dev') + ' version...'));
     $.util.log($.util.colors.gray("         ------------------------------------------"));
 
     runSequence(

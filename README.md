@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.com/ascribe/bigchain-website.svg?token=3psqw6c8KMDqfdGQ2x6d&branch=master)](https://travis-ci.com/ascribe/bigchain-website)
 
-[Live](https://www.bigchaindb.com) | [Beta](http://beta.bigchaindb.com) | [Gamma](http://gamma.bigchaindb.com) | [Styleguide](https://www.bigchaindb.com/styleguide/)
+[Live](https://www.bigchaindb.com) | [Styleguide](https://www.bigchaindb.com/styleguide/) | [Beta](http://beta.bigchaindb.com) | [Gamma](http://gamma.bigchaindb.com)
 
 ## Development
 
@@ -69,14 +69,16 @@ AWS_PROFILE=bigchain gulp deploy --live
 
 In case that you get authentication errors or need an alternative way to authenticate with AWS, check out the [AWS documentation](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html).
 
-### Production build & beta deployment
+### Staging build & beta deployment
+
+The staging build is essentially a full production build but it prevents search engine indexing & Google Analytics tracking.
 
 ```bash
 # make sure your local npm packages & gems are up to date
 npm update && bundle update
 
-# make production build in /_dist
-gulp build --production
+# make staging build in /_dist
+gulp build --staging
 
 # deploy contents of /_dist to beta
 gulp deploy --beta
@@ -85,6 +87,9 @@ gulp deploy --beta
 There's also a second beta deployment target called gamma under http://gamma.bigchaindb.com:
 
 ```bash
+# build preventing search engine indexing & Google Analytics tracking
+gulp build --staging
+
 # deploy contents of /_dist to gamma
 gulp deploy --gamma
 ```

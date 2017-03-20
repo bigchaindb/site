@@ -8,7 +8,27 @@ echo "              Starting build "
 echo "============================================="
 echo "$(tput sgr0)" # reset
 
+##
+## check for pull request against master
+##
+if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
+
+    gulp build --staging
+
+
+##
+## check for master push which is no pull request
+##
+elif [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+
     gulp build --production
+
+else
+
+    gulp build --production
+
+fi;
+
 
 echo "$(tput setaf 64)" # green
 echo "---------------------------------------------"
