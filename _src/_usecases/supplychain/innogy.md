@@ -19,7 +19,7 @@ fullstudy: innogy.pdf
 
 about:
     user: "Dr. Carsten Stöcker is the Machine Economy Innovation Lighthouse Lead at innogy SE, and a co-founder of Genesis of Things. He is a physicist by training with a PhD from University of Aachen. He also serves as a Council Member of Global Future Network for the World Economic Forum. Prior to joining innogy SE, Dr. Stöcker worked for the German Aerospace Center (DLR) and Accenture GmbH."
-    company: "innogy SE is an European energy company. With its three business areas of Renewables, Grid & Infrastructure as well as Retail, it addresses the requirements of a modern, decarbonized, decentralized and digital world. The focus of innogy SE’s activities is on offering existing and potential customers innovative and sustainable products and services which enable them to use energy more efficiently and improve their quality of life. "
+    company: "innogy SE is an European energy company. With its three business areas of renewables, grid & infrastructure as well as retail, it addresses the requirements of a modern, decarbonized, decentralized and digital world. The focus of innogy SE’s activities is on offering existing and potential customers innovative and sustainable products and services which enable them to use energy more efficiently and improve their quality of life. "
 ---
 
 ## Background
