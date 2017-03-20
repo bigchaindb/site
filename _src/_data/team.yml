@@ -62,7 +62,7 @@
   linkedin: gregmcm
 
 - name:     Dimitri de Jonghe
-  position: Developer
+  position: Application Director
   image:    team-dimitri.jpg
   twitter:  DimitriDeJonghe
   facebook: dimitri.jonghe
@@ -100,18 +100,10 @@
   linkedin: sylvainbellemare
 
 - name:     Tim Daubenschütz
-  position: Developer
+  position: Product Manager
   image:    team-tim.jpg
   twitter:  TimDaub
   github:   TimDaub
-
-- name:     Brett Sun
-  position: Developer
-  image:    team-brett.jpg
-  facebook: R1SINGSUN
-  twitter:  sohkai
-  github:   SohKai
-  linkedin: brettsun
 
 - name:     Wrigley the Buffalo
   position: Community Manager
