@@ -61,3 +61,13 @@
 .partner__logo--mongodb {
     transform: translateY(.3rem);
 }
+
+.partner__logo--innogy {
+    transform: scale(1.4);
+
+    .stroke {
+        fill: none;
+        stroke: $brand-main-blue-light;
+        stroke-width: 4px;
+    }
+}
