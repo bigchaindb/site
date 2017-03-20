@@ -56,7 +56,7 @@ cta:
             <div class="grid grid--full grid--gutters grid-small--half grid--top">
 
                 <div class="grid__col">
-                    <h1 class="content__about__title">About the user</h1>
+                    <h1 class="content__about__title">&nbsp;</h1>
                     {{ page.about.user | markdownify }}
                 </div>
 
@@ -75,7 +75,7 @@ cta:
 
             {% if page.fullstudy %}
             <div class="grid__col">
-                <a href="{{ page.fullstudy }}" download rel="external">Download case study (pdf)</a>
+                <a href="../{{ page.fullstudy }}" download rel="external">Download case study (pdf)</a>
             </div>
             {% endif %}
 

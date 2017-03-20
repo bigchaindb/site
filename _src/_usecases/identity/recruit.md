@@ -9,7 +9,7 @@ header: hero-recruit.jpg
 quote:
     copy: "We could have implemented the decentralized technology ourselves with the help of the open source community, but the support and expertise provided by BigchainDB changed the whole process and made it more efficient."
     name: Takeshi Nanato
-    org: Senior Architect Recruit Technologies
+    org: Senior Architect, Recruit Technologies
     image: takeshi-nanato.jpg
 
 company: Recruit Technologies
@@ -19,8 +19,8 @@ industry: Identity
 fullstudy: recruit.pdf
 
 about:
-    user: "Takeshi Nanato is a Senior Architect at [Recruit Technologies Co. Ltd.](http://recruit-tech.co.jp) Residing in Berlin, he focuses on building technical collaborations between Recruit and internet startups and managing and fostering the international entrepreneurship program for young Japanese engineers and developers. He also works in R&D for blockchain technologies and how to adopt the technology mainly to existing B2C services."
-    company: "Founded in 1960, [Recruit Holdings Co.](http://www.recruit-rgf.com) is a leading information services and human resources company in Japan. Through a wide range of services, the Recruit Group is focused on a variety of areas, including recruitment advertising, employment placement, staffing, education, housing and real estate, bridal, travel, dining, beauty, automobiles and others. The Recruit Group has more than 30,000 employees and operates all over the world."
+    user: "Takeshi Nanato is a Senior Architect at Recruit Technologies Co. Ltd. Residing in Berlin, he focuses on building technical collaborations between Recruit and internet startups and managing and fostering the international entrepreneurship program for young Japanese engineers and developers. He also works in R&D for blockchain technologies and how to adopt the technology mainly to existing B2C services."
+    company: "Founded in 1960, Recruit Holdings Co. is a leading information services and human resources company in Japan. Through a wide range of services, the Recruit Group is focused on a variety of areas, including recruitment advertising, employment placement, staffing, education, housing and real estate, bridal, travel, dining, beauty, automobiles and others. The Recruit Group has more than 30,000 employees and operates all over the world."
 ---
 
 ## Background
@@ -44,12 +44,12 @@ Using HR data as the pilot, the purpose of these tests is to investigate the pos
 
 - A public blockchain database allows third parties to connect and share data in a secure manner.
 
-## How BigchainDB is helping
+## How BigchainDB is Helping
 
-A CV sharing web platform [was built with the ascribe API](https://www.ascribe.io/annoucements/recruit-technologies-applies-blockchain-technology-to-the-hr-industry-through-strategic-alliance-with-ascribe/) as a first step and then stored on BigchainDB. BigchainDB is providing the scalability needed for all of Recruit Technologies’s data, a feature lacking in traditional blockchains. Having all data written onto BigchainDB also greatly reduces their own security costs.
+A CV sharing web platform was built with the [ascribe API](https://www.ascribe.io) as a first step and then stored on BigchainDB. BigchainDB is providing the scalability needed for all of Recruit Technologies’s data, a feature lacking in traditional blockchains. Having all data written onto BigchainDB also greatly reduces their own security costs.
 
 By leveraging BigchainDB’s technology, fraud is easily detectable, making it easier to address and reduce fraud on a large scale and in turn benefit their customers.
 
-## Looking ahead
+## Looking Ahead
 
 A platform for more detailed university and high school transcripts is being looked at as a potential next step. Recording the maintenance status of cars and sharing the data between owners and dealerships is also currently being explored.
