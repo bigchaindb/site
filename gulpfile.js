@@ -161,7 +161,7 @@ gulp.task('css', function() {
         .pipe($.sourcemaps.init())
         .pipe($.sass().on('error', $.sass.logError))
         .pipe($.autoprefixer({ browsers: COMPATIBILITY }))
-        .pipe($.if(isProduction || isStaging, $.cssmin()))
+        .pipe($.if(isProduction || isStaging, $.cleanCss()))
         .pipe($.if(!isProduction, $.sourcemaps.write()))
         .pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))
         .pipe($.rename({ suffix: '.min' }))
