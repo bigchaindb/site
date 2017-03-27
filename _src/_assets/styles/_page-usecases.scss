@@ -152,6 +152,12 @@
             max-width: 66%;
         }
     }
+
+    .testimonial__avatar {
+        width: 7rem;
+        height: 7rem;
+        margin-top: $spacer;
+    }
 }
 
 .header--usecase {
