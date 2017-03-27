@@ -3,13 +3,12 @@
 // load plugins
 const $ = require('gulp-load-plugins')()
 
-// manually require modules that won"t get picked up by gulp-load-plugins
-const gulp = require('gulp'),
-      del = require('del'),
-      pkg = require('./package.json'),
-      parallelize = require('concurrent-transform'),
-      browser = require('browser-sync').create(),
-      spawn = require('child_process').spawn
+// manually import modules that won't get picked up by gulp-load-plugins
+import { src, dest, watch, parallel, series } from 'gulp'
+import del from 'del'
+import pkg from './package.json'
+import parallelize from 'concurrent-transform'
+import browser from 'browser-sync'
 
 // handle errors
 const onError = (error) => {
@@ -73,71 +72,34 @@ const SPRITECONFIG = {
 // code banner
 const BANNER = [
     '/**',
-    ' ** <%= pkg.name %> v<%= pkg.version %>',
+    ' ** <%= pkg.name %>',
     ' ** <%= pkg.description %>',
     ' ** <%= pkg.homepage %>',
     ' **',
     ' ** <%= pkg.author.name %> <<%= pkg.author.email %>>',
-    ' **',
-    ' ** ',
-    ' ** <%= pkg.repository.url %> ',
     ' **/',
     ''
 ].join('\n')
 
 
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-// gulp tasks
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-//
-// Full build
-//
-// `gulp build` is the development build
-// `gulp build --production` is the production build
-//
-gulp.task('build', gulp.series(
-    buildBanner, clean, jekyll,
-    gulp.parallel(html, css, js, images, fonts, videos, svg),
-    rev, revReplace
-))
-
-function buildBanner(done) {
-    console.log($.util.colors.gray("         ------------------------------------------"))
-    console.log($.util.colors.green('                Building ' + ($.util.env.production ? 'production' : $.util.env.staging ? 'staging' : 'dev') + ' version...'))
-    console.log($.util.colors.gray("         ------------------------------------------"))
-
-    done()
-}
-
-
-//
-// Build site, run server, and watch for file changes
-//
-gulp.task('default', gulp.series('build', server, watch))
-
-
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-// Functions
+// Tasks
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 //
 // Delete build artifacts
 //
-function clean(done) {
-    return del([
+export const clean = () =>
+    del([
         DIST + '**/*',
         DIST + '.*' // delete all hidden files
     ])
-
-    done()
-}
 
 
 //
 // Jekyll
 //
-function jekyll(done) {
+export const jekyll = (done) => {
 
     browser.notify('Compiling Jekyll')
 
@@ -152,179 +114,211 @@ function jekyll(done) {
         var jekyll_options = 'jekyll build --incremental --drafts --future'
     }
 
-    const jekyll = spawn('bundle', ['exec', jekyll_options], { stdio: 'inherit' })
+    let spawn  = require('child_process').spawn,
+        jekyll = spawn('bundle', ['exec', jekyll_options], { stdio: 'inherit' })
 
-    return jekyll
-        .on('error', (error) => onError() )
-        .on('close', done)
-};
+    jekyll.on('error', (error) => onError() ).on('close', done)
+}
 
 
 //
 // HTML
 //
-function html() {
-    return gulp.src(DIST + '/**/*.html')
-            .pipe($.if(isProduction || isStaging, $.htmlmin({
-            collapseWhitespace: true,
-            conservativeCollapse: true,
-            removeComments: true,
-            useShortDoctype: true,
-            collapseBooleanAttributes: true,
-            removeRedundantAttributes: true,
-            removeEmptyAttributes: true,
-            minifyJS: true,
-            minifyCSS: true
-        })))
-        .pipe(gulp.dest(DIST))
-};
+export const html = () => src(DIST + '**/*.html')
+    .pipe($.if(isProduction || isStaging, $.htmlmin({
+        collapseWhitespace: true,
+        conservativeCollapse: true,
+        removeComments: true,
+        useShortDoctype: true,
+        collapseBooleanAttributes: true,
+        removeRedundantAttributes: true,
+        removeEmptyAttributes: true,
+        minifyJS: true,
+        minifyCSS: true
+    })))
+    .pipe(dest(DIST))
 
 
 //
 // Styles
 //
-function css() {
-    return gulp.src(SRC + '_assets/styles/bigchain.scss')
-        .pipe($.sourcemaps.init())
-        .pipe($.sass().on('error', $.sass.logError))
-        .pipe($.autoprefixer({ browsers: COMPATIBILITY }))
-        .pipe($.if(isProduction || isStaging, $.cleanCss()))
-        .pipe($.if(!isProduction, $.sourcemaps.write()))
-        .pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))
-        .pipe($.rename({ suffix: '.min' }))
-        .pipe(gulp.dest(DIST + 'assets/css/'))
-        .pipe(browser.stream())
-};
+export const css = () => src(SRC + '_assets/styles/bigchain.scss')
+    .pipe($.if(!isProduction || !isStaging, $.sourcemaps.init()))
+    .pipe($.sass().on('error', $.sass.logError))
+    .pipe($.autoprefixer({ browsers: COMPATIBILITY }))
+    .pipe($.if(isProduction || isStaging, $.cleanCss()))
+    .pipe($.if(!isProduction || !isStaging, $.sourcemaps.write()))
+    .pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))
+    .pipe($.rename({ suffix: '.min' }))
+    .pipe(dest(DIST + 'assets/css/'))
+    .pipe(browser.stream())
 
 
 //
 // JavaScript
 //
-function js() {
-    return gulp.src([
+const js = () =>
+    src([
         SRC + '_assets/javascripts/bigchain.js',
         SRC + '_assets/javascripts/page-*.js'
     ])
-    .pipe($.sourcemaps.init())
-    .pipe($.include())
+    .pipe($.if(!isProduction || !isStaging, $.sourcemaps.init()))
+    .pipe($.include()).on('error', onError)
     .pipe($.if(isProduction || isStaging, $.uglify())).on('error', onError)
     .pipe($.if(!isProduction || !isStaging, $.sourcemaps.write()))
     .pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))
     .pipe($.rename({suffix: '.min'}))
-    .pipe(gulp.dest(DIST + 'assets/js/'))
-};
+    .pipe(dest(DIST + 'assets/js/'))
 
 
 //
 // SVG sprite
 //
-function svg() {
-    return gulp.src(SRC + '_assets/images/**/*.svg')
-        .pipe($.if(isProduction || isStaging, $.imagemin({
-            svgoPlugins: [{
-                removeRasterImages: true
-            }]
-        })))
-        .pipe($.svgSprite(SPRITECONFIG))
-        .pipe(gulp.dest(DIST + 'assets/img/'))
-}
+export const svg = () => src(SRC + '_assets/images/**/*.svg')
+    .pipe($.if(isProduction || isStaging, $.imagemin({
+        svgoPlugins: [{ removeRasterImages: true }]
+    })))
+    .pipe($.svgSprite(SPRITECONFIG))
+    .pipe(dest(DIST + 'assets/img/'))
 
 
 //
 // Copy Images
 //
-function images() {
-    return gulp.src(SRC + '_assets/images/**/*')
-        .pipe($.if(isProduction || isStaging, $.imagemin({
-            optimizationLevel: 3, // png
-            progressive: true, // jpg
-            interlaced: true, // gif
-            multipass: true, // svg
-            svgoPlugins: [{ removeViewBox: false }]
-        })))
-        .pipe(gulp.dest(DIST + 'assets/img/'))
-}
+export const images = () => src(SRC + '_assets/images/**/*')
+    .pipe($.if(isProduction || isStaging, $.imagemin({
+        optimizationLevel: 4, // png
+        progressive: true, // jpg
+        interlaced: true, // gif
+        multipass: true, // svg
+        svgoPlugins: [{ removeViewBox: false }]
+    })))
+    .pipe(dest(DIST + 'assets/img/'))
 
 
 //
 // Copy Fonts
 //
-function fonts() {
-    return gulp.src(SRC + '_assets/fonts/**/*')
-        .pipe($.rename({dirname: ''}))
-        .pipe(gulp.dest(DIST + 'assets/fonts/'))
-}
+export const fonts = () => src(SRC + '_assets/fonts/**/*')
+    .pipe($.rename({dirname: ''}))
+    .pipe(dest(DIST + 'assets/fonts/'))
 
 
 //
 // Copy Videos
 //
-function videos() {
-    return gulp.src(SRC + '_assets/videos/**/*')
-        .pipe(gulp.dest(DIST + 'assets/videos/'))
-}
+export const videos = () => src(SRC + '_assets/videos/**/*')
+    .pipe(dest(DIST + 'assets/videos/'))
+
 
 //
 // Revision static assets
 //
-function rev(done) {
+export const rev = (done) => {
     // globbing is slow so do everything conditionally for faster dev build
-    if (isProduction || isStaging) {
-        return gulp.src(DIST + '/assets/**/*.{css,js,png,jpg,jpeg,svg,eot,ttf,woff,woff2}')
+    if (isProduction) {
+        return src(DIST + 'assets/**/*.{css,js,png,jpg,jpeg,svg,eot,ttf,woff,woff2}')
             .pipe($.rev())
-            .pipe(gulp.dest(DIST + '/assets/'))
+            .pipe(dest(DIST + 'assets/'))
             // output rev manifest for next replace task
             .pipe($.rev.manifest())
-            .pipe(gulp.dest(DIST + '/assets/'))
-        }
-
+            .pipe(dest(DIST + 'assets/'))
+    }
     done()
-};
+}
 
 
 //
 // Replace all links to assets in files
 // from a manifest file
 //
-function revReplace(done) {
+export const revReplace = (done) => {
     // globbing is slow so do everything conditionally for faster dev build
-    if (isProduction || isStaging) {
-        var manifest = gulp.src(DIST + '/assets/rev-manifest.json');
+    if (isProduction) {
+        let manifest = src(DIST + 'assets/rev-manifest.json')
 
-        return gulp.src(DIST + '/**/*.{html,xml,txt,json,css,js}')
+        return src(DIST + '**/*.{html,css,js}')
             .pipe($.revReplace({ manifest: manifest }))
-            .pipe(gulp.dest(DIST))
+            .pipe(dest(DIST))
     }
-
     done()
-};
+}
 
 
 //
 // Dev Server
 //
-function server(done) {
+export const server = (done) => {
     browser.init({
         server: DIST,
         port: PORT,
         reloadDebounce: 2000
     })
-
     done()
-};
+}
 
 
 //
 // Watch for file changes
 //
-function watch() {
-    gulp.watch(SRC + '_assets/styles/**/*.scss').on('all', gulp.series(css))
-    gulp.watch(SRC + '_assets/javascripts/**/*.js').on('all', gulp.series(js, browser.reload))
-    gulp.watch(SRC + '_assets/images/**/*.{png,jpg,jpeg,gif,webp}').on('all', gulp.series(images, browser.reload))
-    gulp.watch(SRC + '_assets/images/**/*.{svg}').on('all', gulp.series(svg, browser.reload))
-    gulp.watch(SRC + '_assets/videos/**/*.{mp4,webm}').on('all', gulp.series(videos, browser.reload))
-    gulp.watch([SRC + '**/*.{html,xml,json,txt,md,yml}', './_config.yml', SRC + '_includes/svg/*']).on('all', gulp.series('build', browser.reload))
+export const watchSrc = () => {
+    watch(SRC + '_assets/styles/**/*.scss').on('all', series(css))
+    watch(SRC + '_assets/javascripts/**/*.js').on('all', series(js, browser.reload))
+    watch(SRC + '_assets/images/**/*.{png,jpg,jpeg,gif,webp}').on('all', series(images, browser.reload))
+    watch(SRC + '_assets/images/**/*.{svg}').on('all', series(svg, browser.reload))
+    watch(SRC + '_assets/videos/**/*.{mp4,webm}').on('all', series(videos, browser.reload))
+    watch([SRC + '**/*.{html,xml,json,txt,md,yml}', './*.yml', SRC + '_includes/svg/*']).on('all', series('build', browser.reload))
 }
+
+
+//
+// Build banner
+//
+const buildBanner = (done) => {
+    console.log($.util.colors.gray("         ------------------------------------------"))
+    console.log($.util.colors.green('                Building ' + ($.util.env.production ? 'production' : $.util.env.staging ? 'staging' : 'dev') + ' version...'))
+    console.log($.util.colors.gray("         ------------------------------------------"))
+
+    done()
+}
+
+
+//
+// Deploy banner
+//
+const deployBanner = (done) => {
+    if (($.util.env.live || $.util.env.beta || $.util.env.gamma) === true ) {
+        console.log($.util.colors.gray("        ------------------------------------------"))
+        console.log($.util.colors.green('                    Deploying to ' + ($.util.env.live ? 'Live' : $.util.env.beta ? 'Beta' : 'Gamma') + '... '))
+        console.log($.util.colors.gray("        ------------------------------------------"))
+    } else {
+        console.log($.util.colors.red('\nHold your horses! You need to specify a deployment target like so: gulp deploy --beta. Possible targets are: --live, --beta, --gamma\n'))
+    }
+    done()
+}
+
+
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+// Collection tasks
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+//
+// Full build
+//
+// `gulp build` is the development build
+// `gulp build --production` is the production build
+//
+export const build = series(buildBanner, clean, jekyll, parallel(html, css, js, images, fonts, videos, svg), rev, revReplace)
+
+//
+// Build site, run server, and watch for file changes
+//
+// `gulp dev`
+//
+export const dev = series(build, server, watchSrc)
+
+// Set `gulp dev` as default: `gulp`
+export default dev
 
 
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -336,45 +330,35 @@ function watch() {
 // gulp deploy --beta
 // gulp deploy --gamma
 //
-gulp.task('deploy', (done) => {
-
-    if (($.util.env.live || $.util.env.beta || $.util.env.gamma) === true ) {
-        console.log($.util.colors.gray("        ------------------------------------------"))
-        console.log($.util.colors.green('                    Deploying to ' + ($.util.env.live ? 'Live' : $.util.env.beta ? 'Beta' : 'Gamma') + '... '))
-        console.log($.util.colors.gray("        ------------------------------------------"))
-    } else {
-        console.log($.util.colors.red('\nHold your horses! You need to specify a deployment target like so: gulp deploy --beta. Possible targets are: --live, --beta, --gamma\n'))
-
-        done()
-
-        return
-    }
+export const s3 = () => {
 
     // create publisher, define config
     if ($.util.env.live === true) {
         var publisher = $.awspublish.create({
-                params: { "Bucket": S3BUCKET },
-                "accessKeyId": process.env.AWS_ACCESS_KEY,
-                "secretAccessKey": process.env.AWS_SECRET_KEY,
-                "region": S3REGION
+            params: { 'Bucket': S3BUCKET },
+            'accessKeyId': process.env.AWS_ACCESS_KEY,
+            'secretAccessKey': process.env.AWS_SECRET_KEY,
+            'region': S3REGION
         })
     } else if ($.util.env.beta === true) {
         var publisher = $.awspublish.create({
-                params: { "Bucket": S3BUCKET_BETA },
-                "accessKeyId": process.env.AWS_BETA_ACCESS_KEY,
-                "secretAccessKey": process.env.AWS_BETA_SECRET_KEY,
-                "region": S3REGION_BETA
+            params: { 'Bucket': S3BUCKET_BETA },
+            'accessKeyId': process.env.AWS_BETA_ACCESS_KEY,
+            'secretAccessKey': process.env.AWS_BETA_SECRET_KEY,
+            'region': S3REGION_BETA
         })
     } else if ($.util.env.gamma === true) {
         var publisher = $.awspublish.create({
-                params: { "Bucket": S3BUCKET_GAMMA },
-                "accessKeyId": process.env.AWS_GAMMA_ACCESS_KEY,
-                "secretAccessKey": process.env.AWS_GAMMA_SECRET_KEY,
-                "region": S3REGION_GAMMA
+            params: { 'Bucket': S3BUCKET_GAMMA },
+            'accessKeyId': process.env.AWS_GAMMA_ACCESS_KEY,
+            'secretAccessKey': process.env.AWS_GAMMA_SECRET_KEY,
+            'region': S3REGION_GAMMA
         })
+    } else {
+        return
     }
 
-    return gulp.src(DIST + '**/*')
+    return src(DIST + '**/*')
         .pipe($.awspublishRouter({
             cache: {
                 // cache for 5 minutes by default
@@ -426,4 +410,7 @@ gulp.task('deploy', (done) => {
         .pipe($.awspublish.reporter({
             states: ['create', 'update', 'delete']
         }))
-})
+}
+
+// `gulp deploy`
+export const deploy = series(deployBanner, s3)
