@@ -6,7 +6,7 @@ description: BenBen is addressing problems in government technology in Ghana, wi
 header: hero-benben.jpg
 
 quote:
-    copy: BDB and IPFS are the first blockchain as a service companies. Before you only had the option of using a product and now there’s a service aspect to facilitate all this.
+    copy: BigchainDB allows us to manage land titles and transactions the way we want, something that no other blockchain can do.
     name: Daniel Bloch
     org: Co-Founder & COO, BenBen
     image: daniel-bloch.jpg
@@ -25,25 +25,32 @@ about:
 
 ## Background
 
-[BenBen](http://benben.com.gh)’s founders, Daniel Bloch and Emmanuel Noah were early true believers in Bitcoin and blockchain technology. Both worked at Bitbox, the second Bitcoin exchange in North America, at its inception while at the University of Michigan in 2013. Daniel also cofounded the Blockchain Education Network, a US nonprofit that still exists.
+[BenBen](http://benben.com.gh)’s founders, Daniel Bloch and Emmanuel Noah were early true believers in Bitcoin and blockchain technology. Both worked at Bitbox, the second Bitcoin exchange in North America, at its inception while at the University of Michigan in 2013. Daniel also cofounded the Blockchain Education Network.
 
 While attending an event at the University of Kenya, they became aware of the land and property rights issues endemic to much of Africa and focused their efforts on addressing these in Ghana.
 
 ## Challenges
 
-It is virtually impossible to collateralize property rights in Ghana because there is no meaningful registry of land ownership. The lack of a registry meant payments could never be facilitated. Land records that are recorded, sit in a centralized database with no additional benefits than a paper registry. Payment transactions are not accurately recorded. This results in an ongoing cycle of poverty, in which much of the population is never able to emerge, due to unattainable property rights and the  financial leverage and credit such rights generate.
+Land records are stored in a centralized database with no additional benefits other than being a paper registry. It is virtually impossible to collateralize property rights in Ghana because the paper registry system is unenforceable in court. Because of unenforceability, banks won’t accept land as collateral. This situation leaves millions without the possibility of leveraging their property to get loans and rely on the rule of law for protection – continuing the ongoing cycle of poverty for much of the population.
 
 ## Solution
 
-Utilizing blockchain technology, BenBen is creating a top-of-stack land registry CRM tool and verification platform for  financial institutions that provides verified data related to transactions. BenBen will work with these institutions to update current registries and enable smart transactions and private keys in order to allow for an automated chain of property transactions between all parties.
+BenBen is creating a top-of-stack land registry and verification platform for financial institutions. This platform captures transactions and verifies the data. BenBen works with financial institutions to update current registries, enable smart transactions and distribute private keys for clients - to allow an automated and trusted property transactions between all parties.
 
 ## How BigchainDB is Helping
 
-- BigchainDB has worked with BenBen to provide solutions and guidance around the integration of [IPFS](https://ipfs.io) for document storage and the construction of a blockchain database using BigchainDB technology.
-- In so doing, BigchainDB has facilitated the agile development of the BenBen product - essentially supplying all of the technological and development tools.
-- By leveraging BigchainDB, BenBen will allow for the management of data, enable reporting, smart land transactions, queries and analytics.
-- BigchainDB’s scalability facilitates the database to hold all attributed data including zone, acreage, usage, ownership, occupation and more.
+Using blockchain technology provided by BigchainDB, it’s possible to build a land registry and a history of transactions that can be verified.
+BigchainDB underpins the BenBen land registry in several ways:
+
+- Provides a globally accessible database to store land titles and transactions
+- High capacity and throughput for millions of records
+- Data immutability that brings trust and auditability to the records
+- Query technology that enables quick retrieval transaction histories
+- Interoperability with [IPFS](https://ipfs.io), to store large files and media
+
+BigchainDB facilitated the agile development of the BenBen product - supplying all of the technological and development tools to build the platform.
+
 
 ## Looking Ahead
 
-The BenBen team is in conversations with organizations in Nigeria, Mozambique, and Colombia to identify potential markets where the same system could be launched after Ghana.
+The BenBen team is in conversations with organizations in Nigeria, Mozambique, and Colombia to identify markets where the same system could be launched after Ghana.

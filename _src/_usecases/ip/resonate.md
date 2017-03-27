@@ -2,7 +2,7 @@
 layout: usecase
 
 title: Own the Music You Stream with Resonate
-description: "Resonate is a new music streaming cooperative supported by blockchain technology, owned by music makers and the listeners who love them."
+description: "Resonate is a music streaming cooperative owned by music makers and the listeners who love them, supported by blockchain technology."
 header: hero-resonate.jpg
 
 quote:
@@ -18,36 +18,35 @@ industry: Intellectual Property
 fullstudy: resonate.pdf
 
 about:
-    user: "As a web developer since the 90’s, Peter Harris has built hundreds of sites, working with numerous musicians from struggling artists to mid-level bands and platinum-selling superstars. Simultaneous to his day job as web developer, Peter also experimented as a DJ and electronica producer. Finding many web and music publishing platforms lacking, this combination of background and insight is what led to the fundamental features being offered via Resonate."
-    company: "Resonate is the world’s first streaming music cooperative with a totally new listening model called “stream to own.” Only paying for what you play, making a seamless transition from casual listening into becoming a dedicated fan. Resonate is a cooperative owned by the musicians, indie labels, fans and workers that build it."
+    user: "As a web developer since the 90’s, Peter Harris has built hundreds of sites, working with numerous musicians from struggling artists to mid-level bands and platinum-selling superstars. Simultaneous to his day job as web developer, Peter experimented as a DJ and electronica producer. Finding many web and music publishing platforms lacking, this combination of background and insight is what led to the fundamental features being offered via Resonate."
+    company: "Resonate is the world’s first streaming music cooperative with a totally new listening model called “stream to own.” Only pay for what you play, making a seamless transition from casual listening into becoming a dedicated fan. Resonate is a cooperative owned by the musicians, indie labels, fans and workers that build it."
 ---
 
 ## Background
 
-[Peter Harris](https://resonate.is/profile/1/), a web developer and an electronic DJ and producer, always felt something was missing as both a music creator and fan.
+[Peter Harris](https://resonate.is/profile/1/), a web developer, an electronic DJ and producer, he has had moments of clarity into seeing the future. In the early days of the web, he became convinced that all content would be distributed through the internet. His second moment of clarity comes with the rise of blockchain.
 
-A moment of clarity in the early days of the internet, made it clear all content would be distributed through the internet. He had a second moment of clarity with the rise of blockchain in the summer of 2014. He saw a chance and opportunity to move away from power hunger centers of commerce and build a new form of commerce and interaction. While researching payment models and royalties, he saw a huge disparity in the rates which inspired the stream to own concept.
+As both a music creator and fan, he’s always felt that the system was unfair. Control is in the hands of the corporations and labels, who sign artists and then pay a fraction of the proceeds back to the them. Streaming music has only worsened this dynamic. Peter sees the opportunity to give power and control back to the creators and their fans.
 
 ## Challenges
 
-- The current business models with both streaming and downloading do not serve the needs of the content creators.
-- The relationship between corporations and labels are based on rigid contracts that don’t benefit the artists.
-- Musicians and fans are shut of out the process as to how platforms run, operate and function.
+- Streaming and downloading business models don’t reward content creators.
+- Corporations and labels enforce rigid contracts that don’t benefit the artists.
+- Musicians and fans are shut out on how platforms run, operate and function.
 
 ## Solution
 
-Utilizing blockchain technology and a democratic cooperative process means one member, one share, one vote. By building a metadata database and using micropayments, anyone can see exactly what was played and what needs to get paid in a very transparent manner.
+What if users could pay for streaming music knowing that the proceeds go directly to the artists? Resonate is a music streaming cooperative that allows listeners to “pay as you stream” until you own the song. It’s a totally new listening model called “stream to own.” Only pay for what you play, making a seamless transition from casual listening into becoming a dedicated fan. Resonate is a cooperative owned by the musicians, indie labels, fans and workers that build it.
 
 ## How BigchainDB is Helping
 
-[Resonate](https://resonate.is/) is using [COALA IP](https://www.coalaip.org), a community-driven protocol for licensing intellectual property on the blockchain, written by a working group led by BigchainDB.
+Using blockchain technology provided by BigchainDB, it’s possible to build a database of artists and songs, track who listens, and set up cost-effective micropayment channels so that artists can be rewarded and listeners can show their love.
 
-With COALA IP, the original content and authors are listed on the blockchain. Collaborating with other partners at [Envoke](https://envoke.org) allows us to extend that value beyond our own network.
+BigchainDB underpins [Resonate](https://resonate.is/) in several ways:
 
-BigchainDB’s ability to process massive amounts of data at high transaction speed facilitates the micropayments needed to support Resonate’s cooperative business model. Payments that can take years to process with traditional, more manual processes could be done instantly thanks to systems like BigchainDB.
-
-Resonate’s value proposition to the music world is transparency which is facilitated by BigchainDB’s ability to put the history of what gets played and what gets paid into an immutable ledger as transactions which is publicly accessible to all.
-
-## Looking Ahead
-
-Content with multiple contributors and covers will also be supported to facilitate more efficient payment systems and collaboration. Localization features will also be built into the platform.
+- Provides a globally accessible database to store artists, songs, licensing terms and royalty payout rules.
+- Extremely cost-effective micropayment technology that lets artists keep most of the streaming proceeds
+- Fast recording and matching of usage that lets artists get paid in real-time.
+- Supports the [COALA IP](https://www.coalaip.org) protocol, a community-driven standard for licensing intellectual property.
+- Supports [Envoke](https://envoke.org), a consortium of music industry stakeholders.
+- Transparent and trusted usage reports that are auditable.

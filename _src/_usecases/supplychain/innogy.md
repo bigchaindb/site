@@ -2,7 +2,7 @@
 layout: usecase
 
 title: "innogy’s Digital Product Memory - “Every Product Has a Story”"
-description: "Innogy’s project Genesis of Things leads to a future where we know the exact provenance and authenticity of everything we touch, see, feel and taste, and thus the ability to solve some of the many problems in today’s global supply chains."
+description: "The Digital Product Memory project leads to a future where we know the exact provenance and authenticity of everything we touch, see, feel and taste – and in the process, solve many of the problems in today’s global supply chains."
 header: hero-innogy.jpg
 
 quote:
@@ -19,44 +19,40 @@ fullstudy: innogy.pdf
 
 about:
     user: "Dr. Carsten Stöcker is the Machine Economy Innovation Lighthouse Lead at innogy SE, and a co-founder of Genesis of Things. He is a physicist by training with a PhD from University of Aachen. He also serves as a Council Member of Global Future Network for the World Economic Forum. Prior to joining innogy SE, Dr. Stöcker worked for the German Aerospace Center (DLR) and Accenture GmbH."
-    company: "innogy SE is an European energy company. With its three business areas of renewables, grid & infrastructure as well as retail, it addresses the requirements of a modern, decarbonized, decentralized and digital world. The focus of innogy SE’s activities is on offering existing and potential customers innovative and sustainable products and services which enable them to use energy more efficiently and improve their quality of life. "
+    company: "innogy SE is an European energy company. With its three business areas of renewables, grid & infrastructure as well as retail, it addresses the requirements of a modern, decarbonized, decentralized and digital world. The focus of innogy SE’s activities is on offering existing and potential customers innovative and sustainable products and services which enable them to use energy more efficiently and improve their quality of life."
 ---
 
 ## Background
 
-[innogy SE](www.innogy.com), a large, multi-faceted energy company based dominantly in Europe, focuses on renewables, grids & infrastructure and retail.
+[innogy SE](www.innogy.com) is an energy company that is building solutions for a modern, decarbonized, decentralized and digital world. Innogy is based in Germany and focuses on renewables, grids & infrastructure and retail. Innogy is exploring the use of blockchain technologies all lines of business.
 
-Blockchain technology is utilized for, among other things:
-
-- the logging of so-called “smart meter data”
-- the creation of peer-to-peer energy cooperatives
-- energy wholesaling
-- confirmation, settlement, and billing
-- “blockchainifying” micro-grids and energy flexibilities, such as batteries
-
-As part of the Genesis of Things a a trusted, encrypted and open platform for the entire 3D printing supply chain is build up on blockchain technology. This approach allows Intellectual Property (IP) to scale globally and stay protected; each printed product has its own ID and digital product memory.
+One of the projects, the Digital Product Memory seeks to give every product a story. innogy’s Digital Product Memory project leads to a future where we know the exact provenance and authenticity of everything we touch, see, feel and taste – and in the process, solve many of the problems in today’s global supply chains.
 
 ## Challenges
 
-Current supply chain management is lacking efficiencies due to disparate component parts lacking provenance, traceability, and interoperability.
+The global flow of goods has never been greater. Many of the processes designed to manage these flows are manual, paper-based, error-prone and vulnerable to fraud. This means that consumers have almost no way to check the trace the history, check provenance, or verify authenticity the the products that they buy. In today’s world, where consumers make choices based on moral, political and economic values, it matters where a product comes from, how it’s made and what’s happened to it.
 
 ## Solution
 
-By adding digital product memory to the component parts of items in the supply chain, a host of benefits emerge. For instance, each product receives a cryptographically secure ID and a digital product memory, which enables:
+With today’s real-time information systems, global internet connectivity and rapidly advancing sensor technology – there’s no reason why we can’t track each individual product from the moment of inception until it reaches the end consumer.
 
-- Proof authenticity and ownership,
-- Back-to-birth traceability of a product
-- The ability to “talk” with each other
-- The optimization of the entire product life cycle - Future reproduction
+This is the vision of the Digital Product Memory – to give each product a story – from the moment of inception until it completes its useful life.
 
-Additionally, with the transparency the digital product memory is providing, via immutable data records stored in BigchainDB, the “trust tax” in supply chains can be radically reduced.
+A Digital Product Memory facilitates:
+
+- Verification of authenticity and provenance
+- Proof of ownership
+- Lifecycle traceability
+
 
 ## How BigchainDB is Helping
 
-- ID numbers are written on to BigchainDB, giving physical pieces a digital product memory. Storing digital product memory in BigchainDB allows for querying.
-- BigchainDB allows for the blockchainifying of other databases and has no single native language, meaning existing query languages can be used.
-- Scalable infrastructure enables authenticated IoT data from their smart meters and batteries to be stored into the database to put their algorithms into the database.
+Using blockchain technology provided by BigchainDB, it’s possible to build a database of products and their entire history so that provenance, authenticity and ownership can be verified.
 
-## Looking Ahead
+BigchainDB underpins the Digital Product Memory in several ways:
 
-The Genesis of Things project envisions a future where everyone has access to manufacturing assets, open designs and supply chain data. The next step is to scale and market the digital product memory which leads to interoperability of trusted data records along the supply chain.
+- Provides a globally accessible database to store products and their digital histories
+- High capacity and throughput for millions of sensors and products
+- Data immutability that brings trust and auditability to the records
+- Query technology that enables quick retrieval product histories
+- Supports micropayment channels to enable machine-to-machine commerce

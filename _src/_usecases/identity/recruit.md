@@ -2,7 +2,7 @@
 layout: usecase
 
 title: Verified Educational Credentials with Recruit Technologies
-description: Recruit Technologies is applying blockchain technology to the human resources to increase transparency and reduce fraudulent documents.
+description: Recruit Technologies is building a platform to verify HR credentials.
 
 header: hero-recruit.jpg
 
@@ -20,36 +20,36 @@ fullstudy: recruit.pdf
 
 about:
     user: "Takeshi Nanato is a Senior Architect at Recruit Technologies Co. Ltd. Residing in Berlin, he focuses on building technical collaborations between Recruit and internet startups and managing and fostering the international entrepreneurship program for young Japanese engineers and developers. He also works in R&D for blockchain technologies and how to adopt the technology mainly to existing B2C services."
-    company: "Founded in 1960, Recruit Holdings Co. is a leading information services and human resources company in Japan. Through a wide range of services, the Recruit Group is focused on a variety of areas, including recruitment advertising, employment placement, staffing, education, housing and real estate, bridal, travel, dining, beauty, automobiles and others. The Recruit Group has more than 30,000 employees and operates all over the world."
+    company: "Founded in 1960, Recruit Holdings Co. is a leading information services and human resources company in Japan. Through a wide range of services, the Recruit Group provides services in a variety of areas, including recruitment advertising, employment placement, staffing, education, housing and real estate, bridal, travel, dining, beauty, automobiles and others. The Recruit Group has more than 30,000 employees and operates all over the world."
 ---
 
 ## Background
 
-[Recruit Technologies](http://recruit-tech.co.jp) is a subsidiary company of [Recruit Holdings Co.](http://www.recruit-rgf.com), a leading information services and human resources company in Japan.
-
-Focusing on efforts on IT and R&D, Recruit Technologies explores new technologies and trends.
-Using HR data as the pilot, the purpose of these tests is to investigate the possibilities and practical uses of how blockchain can be applied to the sector. A prototype resume authentication database for job hunters and employers alike is the first phase.
+[Recruit Technologies](http://recruit-tech.co.jp) is a Japanese information services and human resources company. Using HR data, Recruit investigated the possibility and practical uses for blockchain in the HR sector. They built a prototype resume authentication database for job seekers and employers.
 
 ## Challenges
 
-- Fraud within HR can manifest in several ways including forged or altered documentation to completely falsified documents like transcripts and employment records. Translated documents are also high risk as many are mistranslated, intentionally or otherwise, to misrepresent or mislead the original context.
-
-- The process of applying for jobs online is manual and time-consuming for job seekers having to upload CVs and transcripts is inefficient.
-
-- Companies have no way to verify documents they receive from applicants.
+- Companies can’t easily verify credentials from the flood of applicants
+- Job seekers must upload documents and credentials in manual and time-consuming ways
+- Document fraud (forged, altered, falsified or misleading documents) is hard to detect and increases the risks for employers
 
 ## Solution
 
-- While sharing personal data with the user is seen as a competitive advantage to Recruit Technologies, the data needs to be maintained via very strict security operations that traditionally come at a huge cost. With blockchain technology allows for data to be encrypted and secure while also accessible and verifiable.
-
-- A public blockchain database allows third parties to connect and share data in a secure manner.
+- A secure, trusted platform that holds applicant credentials
+- A verification process to check HR credentials
+- The ability to easily share credentials with employers
 
 ## How BigchainDB is Helping
 
-A CV sharing web platform was built with the [ascribe API](https://www.ascribe.io) as a first step and then stored on BigchainDB. BigchainDB is providing the scalability needed for all of Recruit Technologies’s data, a feature lacking in traditional blockchains. Having all data written onto BigchainDB also greatly reduces their own security costs.
+Using blockchain technology provided by BigchainDB, it’s possible to build a database of applicants and their documents so that credentials can be verified and shared seamlessly, increasing trust amongst all parties and reducing the risks for everyone.
 
-By leveraging BigchainDB’s technology, fraud is easily detectable, making it easier to address and reduce fraud on a large scale and in turn benefit their customers.
+BigchainDB underpins the Recruit platform in several ways:
 
-## Looking Ahead
+- Provides a globally accessible database to store applicants and their documents
+- High capacity and throughput for millions of records and documents
+- Interoperability with IPFS, to store large files and media
+- Data immutability that brings trust and auditability to the records
+- Query technology that enables quick retrieval records and documents
+- Reduced security and liability in managing private applicant data
 
-A platform for more detailed university and high school transcripts is being looked at as a potential next step. Recording the maintenance status of cars and sharing the data between owners and dealerships is also currently being explored.
+By leveraging BigchainDB’s technology, fraud more easily detectable and manageable on a large scale.

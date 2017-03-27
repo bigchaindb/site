@@ -1,20 +1,20 @@
 
 - name: Intellectual Property
-  description: Blockchain technology can help via easy and secure attribution and licensing, transparent audit trails regarding who owns what. By storing metadata on BigchainDB, you can query based on things like creator, title and more.
+  description: Blockchain technology helps secure attribution and authorship. It also makes it easy to license work, track usage and provide transparent audit trails for all stakeholders.
   icon: icon-industry-ip
   usecase: resonate
 
 - name: Identity
-  description: On the internet, siloed, walled gardens lock up your personal data. This means it’s often next to impossible to take your data with you if you want to leave or even to gain visibility at all into what is stored where. Blockchain technology enables sovereign personal data. With things like medical records and HR credentials, the original source can be signed and easily verifiable.
+  description: Blockchain technology gives control back to you. On the internet, siloed, walled gardens lock up your personal data. This means it’s next to impossible to port your data if you want to leave or to gain visibility into what is stored where. Blockchain technology enables sovereign personal data, a new way to manage your identity, medical records, and credentials.
   icon: icon-industry-identity
   usecase: recruit-technologies
 
 - name: Supply chain
-  description: Blockchain technology can add transparency to the global supply chain, something that currently is lacking efficiencies due to an absence of provenance and traceability. By being both decentralized and immutable, all products can be given a clear record of its history and verifiable authenticity, reducing fraud and in turn reducing insurance costs.
+  description: Blockchain technologies are trust and transparency machines. This is a feature sorely lacking in global supply chains. Blockchain technology offers the promising of increased transparency and provenance to the global supply chain. In the future, every single product will have a clear record of its history and verifiable authenticity.
   icon: icon-industry-supplychain
   usecase: innogy
 
 - name: Government
-  description: Transparency is easy to implement if you use blockchain technology from the beginning and this could be applied directly to tax dollars, giving transparency into where money is being spent, reducing costs and the opportunity for corruption. Governments could leverage blockchain technology for land registries, personal and public records, patents and more.
+  description: Blockchain technology can help to improve the efficiency and services of government. Blockchain technologies can be applied in every area of government – identity services, inland revenue, company formation and land registration. Having transparency in government services offers the promise of reduced corruption, stronger land and property rights, efficient taxation, and sovereign personal identity.
   icon: icon-industry-government
   usecase: benben
