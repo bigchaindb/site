@@ -2,7 +2,7 @@
 layout: usecase
 
 title: Blockchain Powered Land Registry in Ghana with BenBen
-description: BenBen is addressing problems in government technology in Ghana, with a focus on land and property ownership rights, management and issues.
+description: BenBen is building a land registry in Ghana to help lock in property rights for citizens.
 header: hero-benben.jpg
 
 quote:
@@ -20,7 +20,7 @@ fullstudy: benben.pdf
 
 about:
     user: "Daniel is the cofounder and COO of BenBen. He was introduced to the blockchain in 2011 while working at Bitbox, one of North America’s first Bitcoin exchanges. From there Daniel cofounded the College Cryptocurrency Network (now the Blockchain Education Network) to fill the educational gap on Blockchain at University campuses. He is based in Accra leading product development, partnerships and client integration at BenBen."
-    company: "BenBen is a team of motivated engineers and innovators dedicated to improving government technology in Ghana, BenBen is a digital land database that leverages blockchain technology to provide fast easy access to trusted land content. Focusing on land and property management, BenBen aims to create a reliable land information and transactions system by coupling the latest in geomatic services with blockchain technology."
+    company: "BenBen is a team of motivated engineers and innovators dedicated to improving government technology in Ghana. BenBen is a digital land database that leverages blockchain technology to provide fast easy access to trusted land content. Focusing on land and property management, BenBen aims to create a reliable land information and transactions system by coupling the latest in geomatic services with blockchain technology."
 ---
 
 ## Background

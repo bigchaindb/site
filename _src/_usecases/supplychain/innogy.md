@@ -1,8 +1,8 @@
 ---
 layout: usecase
 
-title: "innogy’s Digital Product Memory - “Every Product Has a Story”"
-description: "The Digital Product Memory project leads to a future where we know the exact provenance and authenticity of everything we touch, see, feel and taste – and in the process, solve many of the problems in today’s global supply chains."
+title: "“Every Product Has a Story” - innogy’s Digital Product Memory"
+description: "innogy is leading the charge to reveal every product's story. Their Digital Product Memory project leads to a future where we know the exact provenance and authenticity of everything we touch, see, feel and taste – and in the process, solve many of the problems in today’s global supply chains."
 header: hero-innogy.jpg
 
 quote:
