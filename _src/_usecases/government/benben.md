@@ -16,8 +16,6 @@ slug: benben
 industry: Government
 bitmaplogo: logo-benben.png
 
-fullstudy: benben.pdf
-
 about:
     user: "Daniel is the cofounder and COO of BenBen. He was introduced to the blockchain in 2011 while working at Bitbox, one of North America’s first Bitcoin exchanges. From there Daniel cofounded the College Cryptocurrency Network (now the Blockchain Education Network) to fill the educational gap on Blockchain at University campuses. He is based in Accra leading product development, partnerships and client integration at BenBen."
     company: "BenBen is a team of motivated engineers and innovators dedicated to improving government technology in Ghana. BenBen is a digital land database that leverages blockchain technology to provide fast easy access to trusted land content. Focusing on land and property management, BenBen aims to create a reliable land information and transactions system by coupling the latest in geomatic services with blockchain technology."

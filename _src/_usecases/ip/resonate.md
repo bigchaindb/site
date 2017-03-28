@@ -15,8 +15,6 @@ company: Resonate
 slug: resonate
 industry: Intellectual Property
 
-fullstudy: resonate.pdf
-
 about:
     user: "As a web developer since the 90’s, Peter Harris has built hundreds of sites, working with numerous musicians from struggling artists to mid-level bands and platinum-selling superstars. Simultaneous to his day job as web developer, Peter experimented as a DJ and electronica producer. Finding many web and music publishing platforms lacking, this combination of background and insight is what led to the fundamental features being offered via Resonate."
     company: "Resonate is the world’s first streaming music cooperative with a totally new listening model called “stream to own.” Only pay for what you play, making a seamless transition from casual listening into becoming a dedicated fan. Resonate is a cooperative owned by the musicians, indie labels, fans and workers that build it."
