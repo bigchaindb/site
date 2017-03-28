@@ -216,7 +216,7 @@ export const videos = () => src(SRC + '_assets/videos/**/*')
 //
 export const rev = (done) => {
     // globbing is slow so do everything conditionally for faster dev build
-    if (isProduction) {
+    if (isProduction || isStaging) {
         return src(DIST + 'assets/**/*.{css,js,png,jpg,jpeg,svg,eot,ttf,woff,woff2}')
             .pipe($.rev())
             .pipe(dest(DIST + 'assets/'))
@@ -234,7 +234,7 @@ export const rev = (done) => {
 //
 export const revReplace = (done) => {
     // globbing is slow so do everything conditionally for faster dev build
-    if (isProduction) {
+    if (isProduction || isStaging) {
         let manifest = src(DIST + 'assets/rev-manifest.json')
 
         return src(DIST + '**/*.{html,css,js}')
