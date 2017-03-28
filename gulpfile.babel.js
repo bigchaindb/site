@@ -9,6 +9,7 @@ import del from 'del'
 import pkg from './package.json'
 import parallelize from 'concurrent-transform'
 import browser from 'browser-sync'
+import critical from 'critical'
 
 // handle errors
 const onError = (error) => {
@@ -152,6 +153,30 @@ export const css = () => src(SRC + '_assets/styles/bigchain.scss')
     .pipe($.rename({ suffix: '.min' }))
     .pipe(dest(DIST + 'assets/css/'))
     .pipe(browser.stream())
+
+// inline critical-path CSS
+export const criticalCss = (done) => {
+    if (isProduction || isStaging) {
+        critical.generate({
+            base: DIST,
+            src: 'index.html',
+            dest: 'index.html',
+            inline: true,
+            minify: true,
+            dimensions: [{
+                height: 320,
+                width: 640
+            }, {
+                height: 600,
+                width: 800
+            }, {
+                height: 900,
+                width: 1360
+            }]
+        })
+    }
+    done()
+}
 
 
 //
@@ -308,7 +333,7 @@ const deployBanner = (done) => {
 // `gulp build` is the development build
 // `gulp build --production` is the production build
 //
-export const build = series(buildBanner, clean, jekyll, parallel(html, css, js, images, fonts, videos, svg), rev, revReplace)
+export const build = series(buildBanner, clean, jekyll, parallel(html, css, js, images, fonts, videos, svg), rev, revReplace, criticalCss)
 
 //
 // Build site, run server, and watch for file changes
