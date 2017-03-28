@@ -42,8 +42,8 @@
     // the bottom line
     &:after {
         content: "";
-        height: 1px;
-        width: 5rem;
+        height: 2px;
+        width: 3rem;
         display: block;
         margin: ($spacer * 2) auto 0 auto;
         background: $gray;

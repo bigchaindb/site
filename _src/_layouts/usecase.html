@@ -1,0 +1,91 @@
+---
+layout: base
+
+cta:
+    title: Meet BigchainDB
+    description: The scalable blockchain database
+    button: Get started
+---
+
+<header role="banner" class="header header--usecase" {% if page.header %}style="background-image:url('/assets/img/{{ page.header }}')"{% endif %}>
+
+    {% include menu-main.html %}
+
+    <div class="row">
+        <h1 class="header__title">
+            <span class="header__label">{{ page.industry }}</span>
+            {% if page.bitmaplogo %}
+                <img class="header__logo" src="/assets/img/{{ page.bitmaplogo }}" />
+            {% else %}
+                <svg class="header__logo">
+                    <use xlink:href="/assets/img/sprite.svg#logo-{{ page.slug }}"></use>
+                </svg>
+            {% endif %}
+
+            {{ page.title }}
+        </h1>
+    </div>
+</header>
+
+<section role="main" class="section content content--page content--usecase">
+
+    <div class="row">
+
+        <p class="section-description">{{ page.description }}</p>
+
+        {% if page.quote %}
+            <figure class="testimonial">
+                <blockquote class="testimonial__quote">{{ page.quote.copy }}</blockquote>
+
+                <figcaption class="testimonial__caption">
+                    <img class="testimonial__avatar" src="/assets/img/{{ page.quote.image }}">
+                    <cite class="testimonial__cite">
+                        <span class="testimonial__name">{{ page.quote.name }}</span>
+                        <span class="testimonial__org">{{ page.quote.org }}</span>
+                    </cite>
+                </figcaption>
+            </figure>
+        {% endif %}
+
+        {{ content }}
+
+    </div>
+
+    <aside class="content__about">
+        <div class="row">
+            <div class="grid grid--full grid--gutters grid-small--half grid--top">
+
+                <div class="grid__col">
+                    <h1 class="content__about__title">&nbsp;</h1>
+                    {{ page.about.user | markdownify }}
+                </div>
+
+                <div class="grid__col">
+                    <h1 class="content__about__title">About {{ page.company }}</h1>
+                    {{ page.about.company | markdownify }}
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+    <aside class="actionbar">
+
+        <div class="grid grid--full grid-small--half grid--top">
+
+            {% if page.fullstudy %}
+            <div class="grid__col">
+                <a href="../{{ page.fullstudy }}" download rel="external">Download case study (pdf)</a>
+            </div>
+            {% endif %}
+
+            <div class="grid__col">
+                <a class="link-back" href="/usecases/">&lt; Back to use cases</a>
+            </div>
+        </div>
+
+    </aside>
+
+</section>
+
+{% include sections/section-cta.html %}

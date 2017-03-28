@@ -4,8 +4,20 @@
 
         <div class="grid grid--full grid-small--half grid--gutters grid--center">
             <div class="grid__col">
-                <h1 class="newsletter__title">Get updates delivered to your inbox</h1>
-                <p class="newsletter__text">No more than one email per month. We're busy too.</p>
+                <h1 class="newsletter__title">
+                    {% if page.newsletter.title %}
+                        {{ page.newsletter.title }}
+                    {% else %}
+                        Get updates delivered to your inbox
+                    {% endif %}
+                </h1>
+                <p class="newsletter__text">
+                    {% if page.newsletter.text %}
+                        {{ page.newsletter.text }}
+                    {% else %}
+                        No more than one email per month. We're busy too.
+                    {% endif %}
+                </p>
             </div>
             <div class="grid__col">
 

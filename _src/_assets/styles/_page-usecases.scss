@@ -1,0 +1,221 @@
+.page-usecases {
+
+}
+
+.section--intro {
+    .section-header {
+        margin-bottom: 0;
+    }
+
+    .section-description {
+        margin-bottom: $spacer * 2;
+        padding-bottom: $spacer * 2;
+        border-bottom: 2px solid lighten($gray-dark, 5%);
+    }
+}
+
+//
+// Industry section
+//
+.section--industry {
+
+    .section-header {
+        margin-bottom: $spacer * 2;
+
+        .icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: $spacer / 3;
+        }
+    }
+
+    .section-title,
+    .section-description {
+        text-align: left;
+    }
+
+    .section-title {
+        @extend .h3;
+        margin-top: 0;
+        margin-bottom: $spacer * 2;
+
+        &:after {
+            margin-left: 0;
+        }
+    }
+
+    &:nth-child(even) {
+        @extend .background--darker;
+
+        .featuredusecase {
+            border-top-color: $gray-dark;
+        }
+    }
+}
+
+.featuredusecase {
+    border-top: 2px solid lighten($gray-dark, 5%);
+    padding-top: $spacer * 2;
+    margin-top: $spacer * 2;
+
+    @media ($screen-sm) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.featuredusecase__logo {
+    box-shadow: none;
+    transition: .2s ease-out;
+    display: block;
+
+    &:hover,
+    &:focus {
+        background: none;
+
+        svg {
+            fill: $brand-main-green;
+        }
+    }
+
+    @media ($screen-sm) {
+        flex: 0 0 20%;
+        order: 2;
+        margin-left: 5%;
+    }
+
+    img,
+    svg {
+        width: 80px;
+        max-width: 80px;
+        max-height: 60px;
+        height: auto;
+        margin-bottom: $spacer / 2;
+        opacity: .6;
+        align-self: flex-start; // work around stretched images flexbox bug
+        fill: $brand-main-blue-light;
+        transition: .2s ease-out;
+
+        @media ($screen-sm) {
+            width: 120px;
+            max-width: 120px;
+            max-height: 90px;
+            height: auto;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.featuredusecase__content {
+    flex: 0 0 75%;
+}
+
+.featuredusecase__title {
+    @extend .h4;
+    margin-top: 0;
+    margin-bottom: $spacer;
+
+    a {
+        color: $brand-main-green;
+        box-shadow: none;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+}
+
+
+//
+// Single use case page
+//
+.content--usecase {
+    padding-top: $spacer * 4;
+    padding-bottom: 0;
+
+    > .row {
+        > h2 {
+            @extend .h3;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .testimonial {
+        @extend .large;
+        margin: $spacer * 4 auto;
+
+        @media ($screen-sm) {
+            max-width: 66%;
+        }
+    }
+
+    .testimonial__avatar {
+        width: 5rem;
+        height: 5rem;
+        margin-top: $spacer;
+    }
+}
+
+.header--usecase {
+    .header__logo {
+        width: 140px;
+        max-height: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: $spacer;
+        fill: #fff;
+    }
+
+    .header__label {
+        display: block;
+        color: $brand-main-blue-light;
+        font-size: $font-size-lg;
+        margin-bottom: $spacer * 2;
+    }
+}
+
+.content__about {
+    margin-top: $spacer * 4;
+    background: $gray-darker;
+    padding-top: $spacer * 3;
+    padding-bottom: $spacer;
+}
+
+.content__about__title {
+    @extend .h4;
+    margin-top: 0;
+    margin-bottom: $spacer;
+}
+
+.actionbar {
+    a {
+        display: block;
+        padding: ($spacer * 2) $spacer;
+        background: $brand-main-green;
+        text-align: center;
+        box-shadow: none;
+        font-family: $btn-font-family;
+        text-transform: uppercase;
+        color: $brand-main-blue-dark;
+
+        &:hover,
+        &:focus {
+            background: lighten($brand-main-green, 5%);
+        }
+
+        &.link-back {
+            background: $brand-main-blue-dark;
+            color: #fff;
+
+            &:hover,
+            &:focus {
+                background: lighten($brand-main-blue-dark, 5%);
+            }
+        }
+    }
+}
