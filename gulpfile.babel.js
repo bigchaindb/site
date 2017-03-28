@@ -211,13 +211,12 @@ export const svg = () => src(SRC + '_assets/images/**/*.svg')
 // Copy Images
 //
 export const images = () => src(SRC + '_assets/images/**/*')
-    .pipe($.if(isProduction || isStaging, $.imagemin({
-        optimizationLevel: 5, // png
-        progressive: true, // jpg
-        interlaced: true, // gif
-        multipass: true, // svg
-        svgoPlugins: [{ removeViewBox: false }]
-    })))
+    .pipe($.if(isProduction || isStaging, $.imagemin([
+    	$.imagemin.gifsicle({ interlaced: true }),
+    	$.imagemin.jpegtran({ progressive: true }),
+    	$.imagemin.optipng({ optimizationLevel: 5 }),
+    	$.imagemin.svgo({plugins: [{ removeViewBox: true }]})
+    ])))
     .pipe(dest(DIST + 'assets/img/'))
 
 
