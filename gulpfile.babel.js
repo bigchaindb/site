@@ -191,7 +191,7 @@ const js = () =>
     .pipe($.include()).on('error', onError)
     .pipe($.if(isProduction || isStaging, $.uglify())).on('error', onError)
     .pipe($.if(!isProduction || !isStaging, $.sourcemaps.write()))
-    .pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))
+    //.pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))
     .pipe($.rename({suffix: '.min'}))
     .pipe(dest(DIST + 'assets/js/'))
 
@@ -212,7 +212,7 @@ export const svg = () => src(SRC + '_assets/images/**/*.svg')
 //
 export const images = () => src(SRC + '_assets/images/**/*')
     .pipe($.if(isProduction || isStaging, $.imagemin({
-        optimizationLevel: 4, // png
+        optimizationLevel: 5, // png
         progressive: true, // jpg
         interlaced: true, // gif
         multipass: true, // svg
