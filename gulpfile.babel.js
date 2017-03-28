@@ -144,11 +144,11 @@ export const html = () => src(DIST + '**/*.html')
 // Styles
 //
 export const css = () => src(SRC + '_assets/styles/bigchain.scss')
-    .pipe($.if(!isProduction || !isStaging, $.sourcemaps.init()))
+    .pipe($.if(!(isProduction || isStaging), $.sourcemaps.init()))
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.autoprefixer({ browsers: COMPATIBILITY }))
     .pipe($.if(isProduction || isStaging, $.cleanCss()))
-    .pipe($.if(!isProduction || !isStaging, $.sourcemaps.write()))
+    .pipe($.if(!(isProduction || isStaging), $.sourcemaps.write()))
     .pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))
     .pipe($.rename({ suffix: '.min' }))
     .pipe(dest(DIST + 'assets/css/'))
@@ -187,11 +187,11 @@ const js = () =>
         SRC + '_assets/javascripts/bigchain.js',
         SRC + '_assets/javascripts/page-*.js'
     ])
-    .pipe($.if(!isProduction || !isStaging, $.sourcemaps.init()))
+    .pipe($.if(!(isProduction || isStaging), $.sourcemaps.init()))
     .pipe($.include()).on('error', onError)
     .pipe($.if(isProduction || isStaging, $.uglify())).on('error', onError)
-    .pipe($.if(!isProduction || !isStaging, $.sourcemaps.write()))
-    //.pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))
+    .pipe($.if(!(isProduction || isStaging), $.sourcemaps.write()))
+    .pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))
     .pipe($.rename({suffix: '.min'}))
     .pipe(dest(DIST + 'assets/js/'))
 
