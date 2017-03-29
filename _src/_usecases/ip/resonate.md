@@ -4,6 +4,7 @@ layout: usecase
 title: Own the Music You Stream with Resonate
 description: "Resonate is a music streaming cooperative owned by music makers and the listeners who love them, supported by blockchain technology."
 header: hero-resonate.jpg
+image: hero-resonate.jpg
 
 quote:
     copy: "Looking at the Bitcoin blockchain, it was clear it wouldn’t be able to handle Resonate’s use case. We met BigchainDB and realized, oh wait, they’ve solved this problem."

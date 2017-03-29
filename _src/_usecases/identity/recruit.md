@@ -5,6 +5,7 @@ title: Verified Educational Credentials with Recruit Technologies
 description: Recruit Technologies is building a platform to verify HR credentials.
 
 header: hero-recruit.jpg
+image: hero-recruit.jpg
 
 quote:
     copy: "We could have implemented the decentralized technology ourselves with the help of the open source community, but the support and expertise provided by BigchainDB changed the whole process and made it more efficient."

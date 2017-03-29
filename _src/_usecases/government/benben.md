@@ -4,6 +4,7 @@ layout: usecase
 title: Blockchain Powered Land Registry in Ghana with BenBen
 description: BenBen is building a land registry in Ghana to help lock in property rights for citizens.
 header: hero-benben.jpg
+image: hero-benben.jpg
 
 quote:
     copy: BigchainDB allows us to manage land titles and transactions the way we want, something that no other blockchain can do.
