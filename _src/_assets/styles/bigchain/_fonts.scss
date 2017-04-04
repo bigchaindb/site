@@ -4,11 +4,21 @@
 // bigchain.io
 //
 @font-face {
-    font-family: 'Noto Sans';
-    src: local('Noto Sans Regular'),
-         url('/assets/fonts/NotoSans-Regular.woff2') format('woff2'),
-         url('/assets/fonts/NotoSans-Regular.woff') format('woff'),
-         url('/assets/fonts/NotoSans-Regular.ttf') format('truetype');
+    font-family: 'Nunito';
+    src: local('Nunito Regular'),
+         url('/assets/fonts/Nunito-Regular.woff2') format('woff2'),
+         url('/assets/fonts/Nunito-Regular.woff') format('woff'),
+         url('/assets/fonts/Nunito-Regular.ttf') format('truetype');
     font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: local('Nunito SemiBold'),
+         url('/assets/fonts/Nunito-SemiBold.woff2') format('woff2'),
+         url('/assets/fonts/Nunito-SemiBold.woff') format('woff'),
+         url('/assets/fonts/Nunito-SemiBold.ttf') format('truetype');
+    font-weight: 600;
     font-style: normal;
 }
