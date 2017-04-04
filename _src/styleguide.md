@@ -94,11 +94,9 @@ Logo can be used with a base class and modifier classes for size & color:
 
 ## Typography
 
-The main branding typeface is **Noto Sans Regular**, used for all headings and buttons. Noto Sans is open source and free to download and use.
+The main branding typeface is **Nunito**, used for all text. Nunito is open source and free to download and use.
 
-<a class="btn btn-secondary btn-sm" href="http://www.google.com/get/noto/#sans-lgc">Download Noto Sans</a>
-
-For body copy we're using the system installed font **Avenir Next** on Mac OS X & iOS and **Arial** on Windows. Linux will just use the default sans-serif typeface, e.g. on Ubuntu this should be **Bitstream Vera Sans**.
+<a class="btn btn-primary" href="https://www.fontsquirrel.com/fonts/nunito">Download Nunito</a>
 
 ### Body Copy
 

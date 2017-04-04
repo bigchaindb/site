@@ -49,6 +49,7 @@ textarea {
     line-height: inherit;
 }
 
+
 //
 // Links
 //
@@ -238,7 +239,7 @@ blockquote {
 
 cite {
     @extend .bold, .small;
-    font-style: italic;
+    font-style: normal;
 }
 
 // Addresses

@@ -17,10 +17,8 @@
 }
 
 .menu__link {
-    @extend .small;
     display: inline-block;
     padding: $spacer ($spacer / 2);
-    text-transform: uppercase;
     box-shadow: none;
     position: relative;
     line-height: 1;
@@ -204,6 +202,7 @@
     }
 
     .menu__link {
+        @extend .small;
         padding: ($spacer / 2);
         color: $gray-light;
 
@@ -252,7 +251,7 @@
     &,
     small,
     .menu__link {
-        @extend .small;
+        @extend .mini;
         color: $gray;
     }
 }

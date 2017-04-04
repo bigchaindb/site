@@ -31,10 +31,9 @@ $brand-danger:            #c9726a !default;
 //
 // Typography
 //
-$font-family-noto:         'Muli', 'Noto Sans', 'Helvetica Neue', 'Arial', sans-serif  !default;
-$font-family-avenir:       'Muli', 'Avenir Next', 'Helvetica Neue', 'Arial', sans-serif !default;
-$font-family-monospace:     Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:          $font-family-noto !default;
+$font-family-nunito:        'Nunito', 'Avenir Next', 'Helvetica Neue', 'Arial', sans-serif !default;
+$font-family-monospace:     Menlo, Monaco, Consolas, 'Courier New', monospace !default;
+$font-family-base:          $font-family-nunito !default;
 
 $font-weight-light:         300 !default;
 $font-weight-normal:        400 !default;
@@ -46,8 +45,8 @@ $font-size-root-lg:         18px !default;
 
 $font-size-base:            1rem !default;
 $font-size-lg:              1.25rem !default;
-$font-size-sm:              0.8rem !default;
-$font-size-xs:              0.65rem !default;
+$font-size-sm:              0.85rem !default;
+$font-size-xs:              0.7rem !default;
 
 $font-size-h1:              2.5rem !default;
 $font-size-h2:              2rem !default;
@@ -58,7 +57,7 @@ $font-size-h6:              0.85rem !default;
 
 $line-height:               1.5 !default;
 
-$headings-font-family:      $font-family-noto !default;
+$headings-font-family:      inherit !default;
 $headings-font-weight:      $font-weight-normal !default;
 $headings-line-height:      1.2 !default;
 $headings-color:            $brand-main-blue-light !default;
@@ -139,13 +138,13 @@ $table-border-color:            $gray !default;
 //
 // Buttons
 //
-$btn-font-family:                $font-family-noto;
-$btn-font-weight:                $font-weight-normal !default;
+$btn-font-family:                inherit;
+$btn-font-weight:                $font-weight-bold !default;
 
 $btn-padding-x:                  2rem !default;
 $btn-padding-y:                  .5rem !default;
 
-$btn-primary-color:              #fff !default;
+$btn-primary-color:              $brand-main-blue !default;
 $btn-primary-bg:                 $brand-primary !default;
 
 $btn-secondary-color:            #fff !default;
@@ -190,7 +189,7 @@ $btn-border-radius-xs:           $border-radius-xs !default;
 //
 // Forms
 //
-$input-font:                     $font-family-avenir !default;
+$input-font:                     inherit !default;
 $input-font-weight:              $font-weight-normal !default;
 
 $input-padding-x:                .5rem !default;
