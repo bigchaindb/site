@@ -46,55 +46,14 @@ sitemap: false
     {% endfor %}
 </div>
 
-## Logo
-
-Logo can be used with a base class and modifier classes for size & color:
-
-- `logo`: default logo
-- `logo--sm`: small version
-- `logo--full`: full width version
-- `logo--white`: complete white version
-- `logo--white--green`: white & green version
-
-<svg class="logo logo--sm" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
-
-<svg class="logo" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
-
-<svg class="logo logo--full" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
-
-<svg class="logo logo--sm logo--white--green" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
-
-<svg class="logo logo--white--green" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
-
-<svg class="logo logo--full logo--white--green" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
-
-<svg class="logo logo--sm logo--white" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
-
-<svg class="logo logo--white" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
-
-<svg class="logo logo--full logo--white" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
-
-```html
-<svg class="logo logo--sm" aria-labelledby="title">
-    <title>Logo Bigchain</title>
-    <use xlink:href="/assets/img/sprite.svg#logo"></use>
-</svg>
-
-<svg class="logo" aria-labelledby="title">
-    <title>Logo Bigchain</title>
-    <use xlink:href="/assets/img/sprite.svg#logo"></use>
-</svg>
-
-<svg class="logo logo--full" aria-labelledby="title">
-    <title>Logo Bigchain</title>
-    <use xlink:href="/assets/img/sprite.svg#logo"></use>
-</svg>
-```
-
 
 ## Typography
 
-The main branding typeface is **Nunito**, used for all text. Nunito is open source and free to download and use.
+The main branding typeface is [**Nunito**](https://fonts.google.com/specimen/Nunito), used for all text. Nunito is open source and free to download and use.
+
+<div class="typeface">Nunito Regular</div>
+
+<div class="typeface bold">Nunito SemiBold</div>
 
 <a class="btn btn-primary" href="https://www.fontsquirrel.com/fonts/nunito">Download Nunito</a>
 
@@ -149,6 +108,52 @@ Donec *ullamcorper nulla* non metus auctor fringilla. Duis mollis, est non commo
 1. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
 2. Est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
 3. Maecenas sed diam eget risus varius blandit sit amet non magna.
+
+
+## Logo
+
+Logo can be used with a base class and modifier classes for size & color:
+
+- `logo`: default logo
+- `logo--sm`: small version
+- `logo--full`: full width version
+- `logo--white`: complete white version
+- `logo--white--green`: white & green version
+
+<svg class="logo logo--sm" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--full" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--sm logo--white--green" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--white--green" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--full logo--white--green" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--sm logo--white" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--white" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+<svg class="logo logo--full logo--white" aria-labelledby="title"><title>Logo Bigchain</title><use xlink:href="/assets/img/sprite.svg#logo"></use></svg>
+
+```html
+<svg class="logo logo--sm" aria-labelledby="title">
+    <title>Logo Bigchain</title>
+    <use xlink:href="/assets/img/sprite.svg#logo"></use>
+</svg>
+
+<svg class="logo" aria-labelledby="title">
+    <title>Logo Bigchain</title>
+    <use xlink:href="/assets/img/sprite.svg#logo"></use>
+</svg>
+
+<svg class="logo logo--full" aria-labelledby="title">
+    <title>Logo Bigchain</title>
+    <use xlink:href="/assets/img/sprite.svg#logo"></use>
+</svg>
+```
 
 
 ## Components
