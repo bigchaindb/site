@@ -43,7 +43,7 @@
     &:before {
         content: "“";
         font-size: 250%;
-        color: $gray;
+        color: $gray-light;
         line-height: 1;
         margin-left: -1rem;
     }
@@ -53,7 +53,7 @@
     align-self: flex-end;
     display: flex;
     align-items: center;
-    border-top: 2px solid $gray;
+    border-top: 2px solid $gray-light;
     padding-top: $spacer;
     position: relative;
 
@@ -68,7 +68,7 @@
         top: 0;
         border-width: .9rem .9rem 0 0;
         border-color: transparent;
-        border-top-color: $gray;
+        border-top-color: $gray-light;
     }
 }
 
@@ -79,14 +79,14 @@
     display: inline-block;
     margin-right: $spacer;
     border-radius: 50%;
-    border: 2px solid $gray;
+    border: 2px solid $gray-light;
 }
 
 .testimonial__cite {
     @extend .small;
     font-style: normal;
     flex: 1;
-    color: $gray-light;
+    color: $text-color;
 }
 
 .testimonial__name {

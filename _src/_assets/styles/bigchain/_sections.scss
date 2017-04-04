@@ -46,7 +46,7 @@
         width: 3rem;
         display: block;
         margin: ($spacer * 2) auto 0 auto;
-        background: $gray;
+        background: $gray-light;
     }
 }
 
@@ -79,15 +79,15 @@
 }
 
 .background--darker {
-    background: $gray-darker;
+    background: $gray-dark;
 }
 
 .background--light {
-    background: $gray-lightest;
+    background: $brand-main-gray-lighter;
 
     .section-title,
     p {
-        color: $gray;
+        color: $brand-main-gray;
     }
 }
 

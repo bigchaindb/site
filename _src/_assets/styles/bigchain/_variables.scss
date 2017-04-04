@@ -17,15 +17,14 @@ $brand-main-blue-light:   #BFE6EC !default;
 $brand-main-gray-light:   #CAD2DA !default;
 $brand-main-gray-lighter: #E8EBEF !default;
 
-// legacy
-$gray-darker:             darken($brand-main-gray, 25%) !default;
-$gray-dark:               darken($brand-main-gray, 20%) !default;
-$gray:                    $brand-main-gray !default;
 $gray-light:              lighten($brand-main-gray, 20%) !default;
-$gray-lighter:            $brand-main-gray-light !default;
-$gray-lightest:           $brand-main-gray-lighter !default;
+$gray-dark:               darken($brand-main-gray, 5%) !default;
+// legacy?
+$gray-darker:             darken($brand-main-gray, 15%) !default;
 
 $brand-primary:           $brand-main-green !default;
+
+// alerts
 $brand-success:           #388250 !default;
 $brand-info:              #3E91CE !default;
 $brand-warning:           #8E8E24 !default;
@@ -117,7 +116,7 @@ $gutter-space:              ($spacer * 2) !default;
 // Code
 //
 $code-color:                    $text-color !default;
-$code-bg:                       $gray-darker !default;
+$code-bg:                       $gray-dark !default;
 
 $kbd-color:                     $code-color !default;
 $kbd-bg:                        $code-bg !default;
@@ -137,7 +136,7 @@ $table-bg:                      $gray-darker !default;
 $table-bg-accent:               $gray-darker !default;
 
 $table-border-width:            1px !default;
-$table-border-color:            $gray !default;
+$table-border-color:            $gray-light !default;
 
 //
 // Buttons
@@ -152,7 +151,7 @@ $btn-primary-color:              $brand-main-blue !default;
 $btn-primary-bg:                 $brand-primary !default;
 
 $btn-secondary-color:            #fff !default;
-$btn-secondary-bg:               $brand-main-gray !default;
+$btn-secondary-bg:               $gray-light !default;
 
 $btn-blue-color:                 #fff !default;
 $btn-blue-bg:                    $brand-main-blue !default;
@@ -200,13 +199,13 @@ $input-padding-x:                .5rem !default;
 $input-padding-y:                0 !default;
 
 $input-bg:                       transparent !default;
-$input-bg-disabled:              $gray-darker !default;
+$input-bg-disabled:              $gray-dark !default;
 
 $input-color:                    $text-color !default;
-$input-border-color:             $gray !default;
+$input-border-color:             $gray-light !default;
 
-$input-border-focus:             $gray-light !default;
-$input-color-placeholder:        $gray !default;
+$input-border-focus:             $text-color !default;
+$input-color-placeholder:        $gray-light !default;
 
 
 //

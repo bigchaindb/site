@@ -220,12 +220,12 @@ ul {
 // Blockquotes
 //
 blockquote {
-    border-left: 3px solid $gray-lighter;
+    border-left: 3px solid $brand-main-gray-light;
     margin-left: 0;
     margin-top: $spacer;
     margin-bottom: $spacer;
     padding: ($spacer/2) $spacer;
-    color: $gray;
+    color: $brand-main-gray;
     font-style: italic;
 
     p,
