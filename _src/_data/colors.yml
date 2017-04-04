@@ -4,38 +4,23 @@
 #
 primary:
     - name: brand-main-green
-      hex: 54C695
-    - name: brand-main-violet
-      hex: B581CF
-    - name: gray-dark
-      hex: 445261
-    - name: brand-main-gray
-      hex: 70859B
+      hex: 39BA91
     - name: brand-main-blue
       hex: '074354'
+    - name: brand-main-gray
+      hex: 445261
     - name: brand-main-blue-dark
       hex: 101A25
+
+secondary:
+    - name: brand-main-violet
+      hex: B581CF
     - name: brand-main-blue-light
       hex: BFE6EC
-
-
-#
-# Grays
-#
-grays:
-    - name: gray-darker
-      hex: 2f3943
-    - name: gray-dark
-      hex: 445261
-    - name: gray
-      hex: 70859B
-    - name: gray-light
-      hex: ACB8C5
-    - name: gray-lighter
+    - name: brand-main-gray-light
       hex: CAD2DA
-    - name: gray-lightest
+    - name: brand-main-gray-lighter
       hex: E8EBEF
-
 
 #
 # Errors
