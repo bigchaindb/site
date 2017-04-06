@@ -6,3 +6,11 @@
         display: block;
     }
 }
+
+.partner__actions {
+    margin-top: $spacer * 2;
+    padding-top: $spacer * 2;
+    border-top: 1px solid lighten($gray-dark, 5%);
+    display: flex;
+    justify-content: space-between;
+}

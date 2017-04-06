@@ -20,15 +20,22 @@ cta:
 
 <section role="main" class="section content content--page content--partner">
 
+    {% assign slug =  page.title | downcase | remove: "." | replace: " ", "-" %}
+
     <div class="row row--narrow">
-        <svg class="partner__logo partner__logo--{{ page.name | downcase | remove: "." | replace: " ", "-" }}" aria-labelledby="title">
+        <svg class="partner__logo partner__logo--{{ slug }}" aria-labelledby="title">
             <title>{{ page.name }}</title>
-            <use xlink:href="/assets/img/sprite.svg#logo-{{ page.name | downcase | remove: "." | replace: " ", "-" }}"></use>
+            <use xlink:href="/assets/img/sprite.svg#logo-{{ slug }}"></use>
         </svg>
 
         {{ content }}
 
-        <a href="{{ page.link }}" rel="external">Visit {{ page.name }}</a>
+        <aside class="partner__actions">
+            {% if page.usecase %}
+                <a class="btn btn-sm btn-primary" href="/usecases/{{ page.usecase }}">See use case</a>
+            {% endif %}
+            <a href="{{ page.link }}" rel="external">Visit {{ page.name }}</a>
+        </aside>
     </div>
 
 </section>
