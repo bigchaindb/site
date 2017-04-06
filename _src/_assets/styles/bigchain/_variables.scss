@@ -17,10 +17,9 @@ $brand-main-blue-light:   #BFE6EC !default;
 $brand-main-gray-light:   #CAD2DA !default;
 $brand-main-gray-lighter: #E8EBEF !default;
 
+$gray:                    $brand-main-gray !default;
 $gray-light:              lighten($brand-main-gray, 20%) !default;
 $gray-dark:               darken($brand-main-gray, 5%) !default;
-// legacy?
-$gray-darker:             darken($brand-main-gray, 15%) !default;
 
 $brand-primary:           $brand-main-green !default;
 
@@ -132,8 +131,8 @@ $pre-scrollable-max-height:     340px !default;
 $table-cell-padding:            .75rem !default;
 $table-sm-cell-padding:         .3rem !default;
 
-$table-bg:                      $gray-darker !default;
-$table-bg-accent:               $gray-darker !default;
+$table-bg:                      $gray-dark !default;
+$table-bg-accent:               $gray-dark !default;
 
 $table-border-width:            1px !default;
 $table-border-color:            $gray-light !default;
