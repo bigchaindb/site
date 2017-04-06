@@ -1,0 +1,36 @@
+---
+layout: base
+
+cta:
+    title: Meet BigchainDB
+    description: The scalable blockchain database
+    button: Get started
+---
+
+<header role="banner" class="header header--partner" {% if page.header %}style="background-image:url('/assets/img/{{ page.header }}')"{% endif %}>
+
+    {% include menu-main.html %}
+
+    <div class="row">
+        <hgroup>
+            <h1 class="header__title">{{ page.name }}</h1>
+        </hgroup>
+    </div>
+</header>
+
+<section role="main" class="section content content--page content--partner">
+
+    <div class="row row--narrow">
+        <svg class="partner__logo partner__logo--{{ page.name | downcase | remove: "." | replace: " ", "-" }}" aria-labelledby="title">
+            <title>{{ page.name }}</title>
+            <use xlink:href="/assets/img/sprite.svg#logo-{{ page.name | downcase | remove: "." | replace: " ", "-" }}"></use>
+        </svg>
+
+        {{ content }}
+
+        <a href="{{ page.link }}" rel="external">Visit {{ page.name }}</a>
+    </div>
+
+</section>
+
+{% include sections/section-cta.html %}

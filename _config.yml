@@ -67,6 +67,9 @@ collections:
     usecases:
         output: true
         permalink: /:collection/:path/
+    partners:
+        output: true
+        permalink: /:collection/:path/
 
 
 # Plugins
