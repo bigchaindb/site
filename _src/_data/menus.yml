@@ -6,6 +6,8 @@ main:
       url: "/usecases/"
     - title: Whitepaper
       url: "/whitepaper/"
+    - title: Enterprise
+      url: "/enterprise/"
     - title: Community
       url: "/community/"
     - title: Docs

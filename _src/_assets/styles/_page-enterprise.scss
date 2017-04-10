@@ -6,3 +6,30 @@
 .page-enterprise {
 
 }
+
+.hero--enterprise {
+    background-image: none;
+
+    &,
+    .section-title,
+    .section-description {
+        text-align: left;
+    }
+
+    .section-description {
+        margin-bottom: $spacer * 2;
+    }
+
+    .hero__content {
+        margin-top: $spacer * 6;
+        margin-bottom: $spacer * 6;
+    }
+
+    @media ($screen-md) {
+        height: auto;
+
+        hgroup {
+            max-width: 66%;
+        }
+    }
+}
