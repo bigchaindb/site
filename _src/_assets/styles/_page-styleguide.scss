@@ -1,6 +1,14 @@
 
 .page-styleguide {
     .highlight { margin-bottom: ($spacer * 2) }
+
+    .typeface {
+        font-size: 7vw;
+
+        &.bold {
+            margin-bottom: $spacer * 2;
+        }
+    }
 }
 
 // color swatches
@@ -8,7 +16,7 @@
     padding: ($spacer / 2);
     margin-bottom: 5px;
     border-radius: $border-radius;
-    border: 1px solid $gray-darker;
+    border: 1px solid lighten($body-bg, 10%);
     min-height: 70px;
     text-align: center;
 
@@ -40,21 +48,16 @@
 
 
 // colors
-.brand-main-blue        { background: $brand-main-blue }
-.brand-main-blue-light  { background: $brand-main-blue-light }
-.brand-main-blue-dark   { background: $brand-main-blue-dark }
-.brand-main-gray        { background: $brand-main-gray }
-.brand-main-green       { background: $brand-main-green }
-.brand-main-violet      { background: $brand-main-violet }
+.brand-main-blue         { background: $brand-main-blue }
+.brand-main-blue-light   { background: $brand-main-blue-light }
+.brand-main-blue-dark    { background: $brand-main-blue-dark }
+.brand-main-gray         { background: $brand-main-gray }
+.brand-main-green        { background: $brand-main-green }
+.brand-main-violet       { background: $brand-main-violet }
+.brand-main-gray-light   { background: $brand-main-gray-light }
+.brand-main-gray-lighter { background: $brand-main-gray-lighter }
 
-.gray-darker            { background: $gray-darker }
-.gray-dark              { background: $gray-dark }
-.gray                   { background: $gray }
-.gray-light             { background: $gray-light }
-.gray-lighter           { background: $gray-lighter }
-.gray-lightest          { background: $gray-lightest }
-
-.brand-success          { background: $brand-success }
-.brand-info             { background: $brand-info }
-.brand-warning          { background: $brand-warning }
-.brand-danger           { background: $brand-danger }
+.brand-success           { background: $brand-success }
+.brand-info              { background: $brand-info }
+.brand-warning           { background: $brand-warning }
+.brand-danger            { background: $brand-danger }

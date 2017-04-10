@@ -7,21 +7,23 @@
 //
 // Colors
 //
+$brand-main-green:        #39BA91 !default;
 $brand-main-blue:         #074354 !default;
-$brand-main-blue-light:   #BFE6EC !default;
+$brand-main-gray:         #445261 !default;
 $brand-main-blue-dark:    #101A25 !default;
-$brand-main-green:        #54C695 !default;
-$brand-main-gray:         #70859B !default;
-$brand-main-violet:       #B581CF !default;
 
-$gray-darker:             darken($brand-main-gray, 25%) !default;
-$gray-dark:               darken($brand-main-gray, 20%) !default;
+$brand-main-violet:       #B581CF !default;
+$brand-main-blue-light:   #BFE6EC !default;
+$brand-main-gray-light:   #CAD2DA !default;
+$brand-main-gray-lighter: #E8EBEF !default;
+
 $gray:                    $brand-main-gray !default;
-$gray-light:              lighten($brand-main-gray, 20%) !default;
-$gray-lighter:            lighten($brand-main-gray, 30%) !default;
-$gray-lightest:           lighten($brand-main-gray, 40%) !default;
+$gray-light:              lighten($brand-main-gray, 35%) !default;
+$gray-dark:               darken($brand-main-gray, 5%) !default;
 
 $brand-primary:           $brand-main-green !default;
+
+// alerts
 $brand-success:           #388250 !default;
 $brand-info:              #3E91CE !default;
 $brand-warning:           #8E8E24 !default;
@@ -31,35 +33,33 @@ $brand-danger:            #c9726a !default;
 //
 // Typography
 //
-$font-family-noto:         'Noto Sans', 'Helvetica Neue', 'Arial', sans-serif  !default;
-$font-family-avenir:       'Avenir Next', 'Helvetica Neue', 'Arial', sans-serif !default;
-$font-family-monospace:     Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:          $font-family-avenir !default;
+$font-family-base:          'europa', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$font-family-monospace:     Menlo, Monaco, Consolas, 'Courier New', monospace !default;
 
 $font-weight-light:         300 !default;
 $font-weight-normal:        400 !default;
 $font-weight-bold:          600 !default;
 $font-weight-base:          $font-weight-normal !default;
 
-$font-size-root:            16px !default;
-$font-size-root-lg:         18px !default;
+$font-size-root:            18px !default;
+$font-size-root-lg:         20px !default;
 
 $font-size-base:            1rem !default;
-$font-size-lg:              1.25rem !default;
-$font-size-sm:              0.8rem !default;
-$font-size-xs:              0.65rem !default;
+$font-size-lg:              1.3rem !default;
+$font-size-sm:              0.85rem !default;
+$font-size-xs:              0.7rem !default;
 
-$font-size-h1:              2.5rem !default;
-$font-size-h2:              2rem !default;
-$font-size-h3:              1.5rem !default;
-$font-size-h4:              1.2rem !default;
+$font-size-h1:              2.7rem !default;
+$font-size-h2:              2.3rem !default;
+$font-size-h3:              2rem !default;
+$font-size-h4:              1.3rem !default;
 $font-size-h5:              $font-size-base !default;
 $font-size-h6:              0.85rem !default;
 
 $line-height:               1.5 !default;
 
-$headings-font-family:      $font-family-noto !default;
-$headings-font-weight:      $font-weight-normal !default;
+$headings-font-family:      inherit !default;
+$headings-font-weight:      $font-weight-light !default;
 $headings-line-height:      1.2 !default;
 $headings-color:            $brand-main-blue-light !default;
 
@@ -67,8 +67,8 @@ $headings-color:            $brand-main-blue-light !default;
 //
 // Scaffolding
 //
-$body-bg:                   $gray-dark !default;
-$text-color:                $gray-lightest !default;
+$body-bg:                   $brand-main-gray !default;
+$text-color:                $brand-main-gray-lighter !default;
 
 $link-color:                inherit !default;
 $link-hover-color:          #fff !default;
@@ -98,7 +98,7 @@ $line-height-xs:         1.2 !default;
 $border-radius:          .15rem !default;
 $border-radius-lg:       .2rem !default;
 $border-radius-sm:       .1rem !default;
-$border-radius-xs:       .05rem !default;
+$border-radius-xs:       .1rem !default;
 
 $component-active-color: #fff !default;
 $component-active-bg:    $brand-primary !default;
@@ -114,7 +114,7 @@ $gutter-space:              ($spacer * 2) !default;
 // Code
 //
 $code-color:                    $text-color !default;
-$code-bg:                       $gray-darker !default;
+$code-bg:                       $gray-dark !default;
 
 $kbd-color:                     $code-color !default;
 $kbd-bg:                        $code-bg !default;
@@ -130,31 +130,31 @@ $pre-scrollable-max-height:     340px !default;
 $table-cell-padding:            .75rem !default;
 $table-sm-cell-padding:         .3rem !default;
 
-$table-bg:                      $gray-darker !default;
-$table-bg-accent:               $gray-darker !default;
+$table-bg:                      $gray-dark !default;
+$table-bg-accent:               $gray-dark !default;
 
 $table-border-width:            1px !default;
-$table-border-color:            $gray !default;
+$table-border-color:            $gray-light !default;
 
 //
 // Buttons
 //
-$btn-font-family:                $font-family-noto;
-$btn-font-weight:                $font-weight-normal !default;
+$btn-font-family:                inherit;
+$btn-font-weight:                $font-weight-bold !default;
 
 $btn-padding-x:                  2rem !default;
 $btn-padding-y:                  .5rem !default;
 
-$btn-primary-color:              #fff !default;
+$btn-primary-color:              $brand-main-blue !default;
 $btn-primary-bg:                 $brand-primary !default;
 
-$btn-secondary-color:            #fff !default;
-$btn-secondary-bg:               $brand-main-gray !default;
+$btn-secondary-color:            $brand-main-blue !default;
+$btn-secondary-bg:               $gray-light !default;
 
-$btn-blue-color:                 #fff !default;
+$btn-blue-color:                 $brand-primary !default;
 $btn-blue-bg:                    $brand-main-blue !default;
 
-$btn-violet-color:               #fff !default;
+$btn-violet-color:               $brand-main-blue !default;
 $btn-violet-bg:                  $brand-main-violet !default;
 
 $btn-info-color:                 #fff !default;
@@ -190,20 +190,20 @@ $btn-border-radius-xs:           $border-radius-xs !default;
 //
 // Forms
 //
-$input-font:                     $font-family-avenir !default;
+$input-font:                     inherit !default;
 $input-font-weight:              $font-weight-normal !default;
 
 $input-padding-x:                .5rem !default;
 $input-padding-y:                0 !default;
 
 $input-bg:                       transparent !default;
-$input-bg-disabled:              $gray-darker !default;
+$input-bg-disabled:              $gray-dark !default;
 
 $input-color:                    $text-color !default;
-$input-border-color:             $gray !default;
+$input-border-color:             $gray-light !default;
 
-$input-border-focus:             $gray-light !default;
-$input-color-placeholder:        $gray !default;
+$input-border-focus:             $text-color !default;
+$input-color-placeholder:        $gray-light !default;
 
 
 //

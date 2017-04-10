@@ -9,7 +9,7 @@ sitemap: false
 
 ### Primary
 
-<div class="grid grid--gutters grid--full grid-medium--third">
+<div class="grid grid--gutters grid--full grid-medium--fit">
     {% for color in site.data.colors.primary %}
     <div class="grid__col">
         <div class="color {{ color.name }}">
@@ -20,10 +20,10 @@ sitemap: false
     {% endfor %}
 </div>
 
-### Grays
+### Secondary
 
-<div class="grid grid--gutters grid--full grid-medium--third">
-    {% for color in site.data.colors.grays %}
+<div class="grid grid--gutters grid--full grid-medium--fit">
+    {% for color in site.data.colors.secondary %}
     <div class="grid__col">
         <div class="color {{ color.name }}">
             <span class="color-meta color-name">${{ color.name }}</span>
@@ -35,7 +35,7 @@ sitemap: false
 
 ### Errors
 
-<div class="grid grid--gutters grid--full grid-medium--third">
+<div class="grid grid--gutters grid--full grid-medium--fit">
     {% for color in site.data.colors.errors %}
     <div class="grid__col">
         <div class="color {{ color.name }}">
@@ -45,6 +45,70 @@ sitemap: false
     </div>
     {% endfor %}
 </div>
+
+
+## Typography
+
+The main branding typeface is [**Europa**](http://www.europatype.com/articledetail/17), used for both text and headline. Europa is only [available from Typekit](https://typekit.com/fonts/europa) or as a paid download. Please consult a designer to assist you in using this font in your documents & presentations.
+
+<div class="typeface light">Europa Light</div>
+<div class="typeface">Europa Regular</div>
+<div class="typeface italic">Europa Regular Italic</div>
+<div class="typeface bold">Europa Bold</div>
+
+The light weight is only used for headlines from a certain size to retain readability on all screens. For the website this means only headings 1 - 3 are using light weight.
+
+### Body Copy
+
+Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis [parturient montes](#), nascetur ridiculus mus. Nullam id dolor id nibh **ultricies vehicula**.
+
+Donec *ullamcorper nulla* non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
+
+Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis [parturient montes](#), nascetur ridiculus mus. Nullam id dolor id nibh **ultricies vehicula**.
+
+
+<p class="large">Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus.</p>
+
+```html
+<p class="large">Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus.</p>
+```
+
+<small>Maecenas sed diam eget risus varius blandit sit amet non magna.</small>
+
+```html
+<small>Maecenas sed diam eget risus varius blandit sit amet non magna.</small>
+```
+
+<p class="mini">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+
+```html
+<p class="mini">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+```
+
+
+## Headings
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+
+## Lists
+
+* Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+* Est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+* Maecenas sed diam eget risus varius blandit sit amet non magna.
+
+1. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+2. Est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+3. Maecenas sed diam eget risus varius blandit sit amet non magna.
+
 
 ## Logo
 
@@ -90,67 +154,6 @@ Logo can be used with a base class and modifier classes for size & color:
     <use xlink:href="/assets/img/sprite.svg#logo"></use>
 </svg>
 ```
-
-
-## Typography
-
-The main branding typeface is **Noto Sans Regular**, used for all headings and buttons. Noto Sans is open source and free to download and use.
-
-<a class="btn btn-secondary btn-sm" href="http://www.google.com/get/noto/#sans-lgc">Download Noto Sans</a>
-
-For body copy we're using the system installed font **Avenir Next** on Mac OS X & iOS and **Arial** on Windows. Linux will just use the default sans-serif typeface, e.g. on Ubuntu this should be **Bitstream Vera Sans**.
-
-### Body Copy
-
-Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis [parturient montes](#), nascetur ridiculus mus. Nullam id dolor id nibh **ultricies vehicula**.
-
-Donec *ullamcorper nulla* non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
-
-```html
-<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis <a href="#">parturient montes</a>, nascetur ridiculus mus. Nullam id dolor id nibh <strong>ultricies vehicula</strong>.</p>
-
-<p>Donec <em>ullamcorper nulla</em> non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
-```
-
-<p class="large">Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus.</p>
-
-```html
-<p class="large">Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus.</p>
-```
-
-<small>Maecenas sed diam eget risus varius blandit sit amet non magna.</small>
-
-```html
-<small>Maecenas sed diam eget risus varius blandit sit amet non magna.</small>
-```
-
-<p class="mini">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-
-```html
-<p class="mini">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-```
-
-
-## Headings
-
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-
-## Lists
-
-* Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-* Est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-* Maecenas sed diam eget risus varius blandit sit amet non magna.
-
-1. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-2. Est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-3. Maecenas sed diam eget risus varius blandit sit amet non magna.
 
 
 ## Components

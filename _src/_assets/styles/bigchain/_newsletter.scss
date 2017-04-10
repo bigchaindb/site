@@ -19,7 +19,7 @@
     .grid { margin-bottom: 0; }
 
     .form-control {
-        border-color: $gray-darker;
+        border-color: $gray-dark;
 
         &:focus {
             border-color: #000;
@@ -48,5 +48,5 @@
 
 .newsletter__title,
 .newsletter__text {
-    color: $gray-darker;
+    color: $gray-dark;
 }

@@ -27,7 +27,7 @@
             content: counters(item, ".") " ";
             counter-increment: item;
             margin-right: $spacer;
-            color: $gray;
+            color: $brand-main-gray;
         }
     }
 }

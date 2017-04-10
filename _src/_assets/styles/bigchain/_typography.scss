@@ -39,6 +39,31 @@ body {
     font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 0, "dlig" 1;
 }
 
+
+//
+// Smoothly fade in all content after
+// fonts have loaded. Not quite useful,
+// but beautiful.
+//
+.hero,
+.header,
+.section,
+.content {
+    .row {
+        @extend .transition;
+
+        .wf-loading & {
+            opacity: 0;
+        }
+
+        .wf-active &,
+        .wf-inactive & {
+            opacity: 1;
+        }
+    }
+}
+
+
 // Reset fonts for relevant elements
 input,
 button,
@@ -48,6 +73,7 @@ textarea {
     font-size: inherit;
     line-height: inherit;
 }
+
 
 //
 // Links
@@ -75,12 +101,21 @@ a {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: $headings-font-family;
-    font-weight: $headings-font-weight;
     line-height: $headings-line-height;
     color: $headings-color;
 
     // remove old style numerals
     font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 0, "dlig" 1;
+
+    .wf-loading & {
+        font-weight: $font-weight-normal;
+    }
+
+    &,
+    .wf-active &,
+    .wf-inactive & {
+        font-weight: $headings-font-weight;
+    }
 }
 
 
@@ -88,15 +123,20 @@ h1, .h1,
 h2, .h2,
 h3, .h3 {
     margin-top: ($spacer * 2);
-    margin-bottom: $spacer;
+    margin-bottom: ($spacer * 2);
 }
 
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-    color: $gray-light;
     margin-top: $spacer;
-    margin-bottom: ($spacer / 2);
+    margin-bottom: $spacer;
+
+    &,
+    .wf-active &,
+    .wf-inactive & {
+        font-weight: $font-weight-normal;
+    }
 }
 
 h1, .h1 { font-size: $font-size-h1; }
@@ -137,6 +177,10 @@ strong,
 .strong,
 .bold {
     font-weight: $font-weight-bold;
+}
+
+.light {
+    font-weight: $font-weight-light;
 }
 
 // Alignment
@@ -219,12 +263,12 @@ ul {
 // Blockquotes
 //
 blockquote {
-    border-left: 3px solid $gray-lighter;
+    @extend .text-dimmed;
+    border-left: 3px solid $gray-light;
     margin-left: 0;
     margin-top: $spacer;
     margin-bottom: $spacer;
     padding: ($spacer/2) $spacer;
-    color: $gray;
     font-style: italic;
 
     p,
@@ -238,7 +282,7 @@ blockquote {
 
 cite {
     @extend .bold, .small;
-    font-style: italic;
+    font-style: normal;
 }
 
 // Addresses

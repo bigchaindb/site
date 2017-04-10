@@ -1,7 +1,7 @@
 
 .footer {
     @extend .background--darker;
-    border-top: 1px solid $gray;
     color: $gray-light;
+    padding-top: $spacer * 3;
     padding-bottom: 0;
 }

@@ -33,7 +33,7 @@
     }
 
     .comment {
-        color: $gray;
+        color: $brand-main-gray;
     }
 
     .deps {
@@ -80,7 +80,7 @@ $frame-border-radius:   $border-radius;
         height: $frame-height-mobile;
         border-top-left-radius: $frame-border-radius;
         border-top-right-radius: $frame-border-radius;
-        background: linear-gradient(to bottom, $gray-dark 0%, $gray-darker 100%);
+        background: linear-gradient(to bottom, $gray-dark 0%, $gray-dark 100%);
         margin-top: -($frame-height-mobile);
 
         @media (min-width: $screen-sm-min) {

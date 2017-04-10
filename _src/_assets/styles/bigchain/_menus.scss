@@ -4,29 +4,25 @@
     z-index: 10;
     width: 100%;
     align-self: flex-start;
-
-    .grid__col {
-        text-align: center;
-
-        @media ($screen-md) {
-            text-align: left;
-
-            &:last-child { text-align: right; }
-        }
-    }
+    text-align: left;
 }
 
 .menu__link {
-    @extend .small;
     display: inline-block;
     padding: $spacer ($spacer / 2);
-    text-transform: uppercase;
     box-shadow: none;
     position: relative;
     line-height: 1;
 
+    &:first-child {
+        padding-left: 0;
+    }
+
     @media ($screen-md) {
-        padding: ($spacer * 2) $spacer;
+        &,
+        &:first-child {
+            padding: ($spacer * 2) $spacer;
+        }
     }
 
     // link line
@@ -60,26 +56,22 @@
 }
 
 .menu__logo {
-    display: block;
+    display: inline-block;
     box-shadow: none;
     padding-top: $spacer;
-    vertical-align: middle;
 
     @media ($screen-md) {
         padding-top: 0;
-        display: inline-block;
+        vertical-align: middle;
     }
 
     svg {
         @extend .transition;
         opacity: .8;
-        margin-left: auto;
-        margin-right: auto;
+        display: inline;
 
         @media ($screen-md) {
             display: inline-block;
-            margin-left: 0;
-            margin-right: 0;
         }
     }
 
@@ -92,13 +84,16 @@
 }
 
 .menu__hiring {
-    color: lighten($brand-main-green, 15%);
+    @extend .small;
+    color: $brand-main-green;
     box-shadow: none;
     padding: $spacer ($spacer / 4);
     display: inline-block;
+    float: right;
 
     @media ($screen-md) {
         margin-left: $spacer;
+        float: none;
     }
 
     &:hover,
@@ -113,9 +108,9 @@
 
     .icon {
         @extend .transition;
-        width: 1rem;
-        height: 1rem;
-        stroke: lighten($brand-main-green, 15%);
+        width: $font-size-sm;
+        height: $font-size-sm;
+        stroke: $brand-main-green;
         stroke-width: 1.5;
         margin-bottom: -1px;
     }
@@ -129,7 +124,7 @@
 .menu--main {
     background: rgba($brand-main-blue-dark, .35);
     backdrop-filter: saturate(150%) blur(10px);
-    border-bottom: 1px solid rgba($gray, .9);
+    border-bottom: 1px solid rgba($brand-main-gray, .5);
     padding-top: ($spacer / 2);
     padding-bottom: ($spacer / 2);
 
@@ -167,6 +162,7 @@
     margin-right: -$gutter-space / 2;
     padding-left: $gutter-space / 2;
     padding-right: $gutter-space / 2;
+    text-align: center;
 
     &::-webkit-scrollbar { display: none; }
 
@@ -175,6 +171,7 @@
         padding: 0;
         white-space: normal;
         overflow: visible;
+        text-align: right;
     }
 }
 
@@ -204,12 +201,14 @@
     }
 
     .menu__link {
-        padding: ($spacer / 2);
-        color: $gray-light;
+        @extend .small;
+        padding: ($spacer / 2) ($spacer / 4);
+        color: $text-color;
 
         @media ($screen-sm) {
             display: block;
             text-align: left;
+            padding: ($spacer / 2);
         }
 
         // hide link line
@@ -223,7 +222,7 @@
 
 
 .footer__copyright {
-    border-top: 1px solid $gray-dark;
+    border-top: 1px solid $brand-main-gray;
     text-align: center;
     display: block;
     margin-top: ($spacer * 2);
@@ -245,15 +244,15 @@
             padding: 0 $spacer;
         }
 
-        &:first-child { margin-left: ($spacer/2); }
+        &:first-child { margin-left: ($spacer / 2); }
         &:last-child { padding-right: 0; }
     }
 
     &,
     small,
     .menu__link {
-        @extend .small;
-        color: $gray;
+        @extend .mini;
+        color: $gray-light;
     }
 }
 
@@ -292,8 +291,11 @@
 
 
 .menu--sub {
-    text-align: center;
-    background: $gray-darker;
+    background: $gray-dark;
+
+    .menu-overflow {
+        text-align: center;
+    }
 
     .icon {
         width: 1rem;
