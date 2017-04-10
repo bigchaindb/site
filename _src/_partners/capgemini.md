@@ -1,7 +1,7 @@
 ---
 layout: partner
 
-name: Capgemini
+title: Capgemini
 link: https://www.capgemini.com
 ---
 

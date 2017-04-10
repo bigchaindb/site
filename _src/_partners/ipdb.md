@@ -1,7 +1,7 @@
 ---
 layout: partner
 
-name: IPDB
+title: IPDB
 link: https://ipdb.foundation
 header: hero-ipdb.jpg
 ---

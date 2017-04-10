@@ -1,7 +1,7 @@
 ---
 layout: partner
 
-name: MongoDB
+title: MongoDB
 link: https://www.mongodb.com
 ---
 

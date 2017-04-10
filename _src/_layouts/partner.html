@@ -13,7 +13,7 @@ cta:
 
     <div class="row">
         <hgroup>
-            <h1 class="header__title">{{ page.name }}</h1>
+            <h1 class="header__title">{{ page.title }}</h1>
         </hgroup>
     </div>
 </header>
@@ -24,7 +24,7 @@ cta:
 
     <div class="row row--narrow">
         <svg class="partner__logo partner__logo--{{ slug }}" aria-labelledby="title">
-            <title>{{ page.name }}</title>
+            <title>{{ page.title }}</title>
             <use xlink:href="/assets/img/sprite.svg#logo-{{ slug }}"></use>
         </svg>
 
@@ -34,7 +34,7 @@ cta:
             {% if page.usecase %}
                 <a class="btn btn-sm btn-primary" href="/usecases/{{ page.usecase }}">See use case</a>
             {% endif %}
-            <a href="{{ page.link }}" rel="external">Visit {{ page.name }}</a>
+            <a href="{{ page.link }}" rel="external">Visit {{ page.title }}</a>
         </aside>
     </div>
 

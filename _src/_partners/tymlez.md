@@ -1,7 +1,7 @@
 ---
 layout: partner
 
-name: Tymlez
+title: Tymlez
 link: http://www.tymlez.com
 ---
 

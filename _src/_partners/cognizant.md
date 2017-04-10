@@ -1,7 +1,7 @@
 ---
 layout: partner
 
-name: Cognizant
+title: Cognizant
 link: https://www.cognizant.com
 ---
 

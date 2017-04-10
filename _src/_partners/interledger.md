@@ -1,7 +1,7 @@
 ---
 layout: partner
 
-name: Interledger
+title: Interledger
 link: https://interledger.org
 ---
 

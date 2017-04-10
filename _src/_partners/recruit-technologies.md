@@ -1,7 +1,7 @@
 ---
 layout: partner
 
-name: Recruit Technologies
+title: Recruit Technologies
 link: http://recruit-tech.co.jp
 usecase: /identity/recruit/
 header: hero-recruit.jpg
