@@ -17,13 +17,13 @@ slug: innogy
 industry: Supply chain
 
 about:
-    user: "Dr. Carsten Stöcker is the Machine Economy Innovation Lighthouse Lead at innogy SE, and a co-founder of Genesis of Things. He is a physicist by training with a PhD from University of Aachen. He also serves as a Council Member of Global Future Network for the World Economic Forum. Prior to joining innogy SE, Dr. Stöcker worked for the German Aerospace Center (DLR) and Accenture GmbH."
+    user: "Dr. Carsten Stöcker is the Machine Economy Innovation Lighthouse Lead at innogy SE, and a co-founder of Genesis of Things. He is a physicist by training with a PhD from University of Aachen. He also serves as a Council Member of Global Future Network for the World Economic Forum. Prior to joining innogy SE, Dr. Stöcker worked for the German Aerospace Center (DLR) and Accenture GmbH."
     company: "innogy SE is an European energy company. With its three business areas of renewables, grid & infrastructure as well as retail, it addresses the requirements of a modern, decarbonized, decentralized and digital world. The focus of innogy SE’s activities is on offering existing and potential customers innovative and sustainable products and services which enable them to use energy more efficiently and improve their quality of life."
 ---
 
 ## Background
 
-[innogy SE](www.innogy.com) is an energy company that is building solutions for a modern, decarbonized, decentralized and digital world. Innogy is based in Germany and focuses on renewables, grids & infrastructure and retail. Innogy is exploring the use of blockchain technologies all lines of business.
+[innogy SE](https://www.innogy.com) is an energy company that is building solutions for a modern, decarbonized, decentralized and digital world. Innogy is based in Germany and focuses on renewables, grids & infrastructure and retail. Innogy is exploring the use of blockchain technologies all lines of business.
 
 One of the projects, the Digital Product Memory seeks to give every product a story. innogy’s Digital Product Memory project leads to a future where we know the exact provenance and authenticity of everything we touch, see, feel and taste – and in the process, solve many of the problems in today’s global supply chains.
 
