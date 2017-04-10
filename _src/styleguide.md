@@ -49,13 +49,14 @@ sitemap: false
 
 ## Typography
 
-The main branding typeface is [**Nunito**](https://fonts.google.com/specimen/Nunito), used for all text. Nunito is open source and free to download and use.
+The main branding typeface is [**Europa**](http://www.europatype.com/articledetail/17), used for both text and headline. Europa is only [available from Typekit](https://typekit.com/fonts/europa) or as a paid download. Please consult a designer to assist you in using this font in your documents & presentations.
 
-<div class="typeface">Nunito Regular</div>
+<div class="typeface light">Europa Light</div>
+<div class="typeface">Europa Regular</div>
+<div class="typeface italic">Europa Regular Italic</div>
+<div class="typeface bold">Europa Bold</div>
 
-<div class="typeface bold">Nunito SemiBold</div>
-
-<a class="btn btn-primary" href="https://www.fontsquirrel.com/fonts/nunito">Download Nunito</a>
+The light weight is only used for headlines from a certain size to retain readability on all screens. For the website this means only headings 1 - 3 are using light weight.
 
 ### Body Copy
 
@@ -63,11 +64,8 @@ Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatib
 
 Donec *ullamcorper nulla* non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
 
-```html
-<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis <a href="#">parturient montes</a>, nascetur ridiculus mus. Nullam id dolor id nibh <strong>ultricies vehicula</strong>.</p>
+Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis [parturient montes](#), nascetur ridiculus mus. Nullam id dolor id nibh **ultricies vehicula**.
 
-<p>Donec <em>ullamcorper nulla</em> non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
-```
 
 <p class="large">Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus.</p>
 
@@ -97,6 +95,8 @@ Donec *ullamcorper nulla* non metus auctor fringilla. Duis mollis, est non commo
 ### Heading 3
 
 #### Heading 4
+
+##### Heading 5
 
 
 ## Lists

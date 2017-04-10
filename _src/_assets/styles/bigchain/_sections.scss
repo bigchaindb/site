@@ -52,7 +52,6 @@
 
 .section-description {
     font-size: $font-size-lg;
-    line-height: $line-height-lg;
     margin-bottom: 0;
 
     + .section-description {
@@ -101,7 +100,6 @@
 //
 .background--photo {
     @extend .color-overlay;
-    text-shadow: 0 1px 0 rgba(0,0,0,.1);
 
     // background
     background: url('../img/hero-berlin.jpg') no-repeat top center;

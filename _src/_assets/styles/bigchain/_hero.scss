@@ -68,17 +68,26 @@ $menu-height-md: 66px;
     // intro animation
     .section-title,
     .btn {
-        @extend .animation-slide-in-from-bottom;
-        animation-duration: 1s;
-        animation-fill-mode: backwards;
+        .wf-active &,
+        .wf-inactive & {
+            @extend .animation-slide-in-from-bottom;
+            animation-duration: 1s;
+            animation-fill-mode: backwards;
+        }
     }
 
     .btn {
-        animation-delay: .5s;
+        .wf-active &,
+        .wf-inactive & {
+            animation-delay: .5s;
+        }
     }
 
     .btn-link {
-        animation-delay: .8s;
+        .wf-active &,
+        .wf-inactive & {
+            animation-delay: .8s;
+        }
     }
 }
 

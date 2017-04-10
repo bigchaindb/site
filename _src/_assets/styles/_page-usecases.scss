@@ -12,7 +12,7 @@
     .section-description {
         margin-bottom: $spacer * 2;
         padding-bottom: $spacer * 2;
-        border-bottom: 2px solid lighten($gray-dark, 5%);
+        border-bottom: 2px solid lighten($gray-dark, 10%);
     }
 }
 
@@ -50,13 +50,13 @@
         @extend .background--darker;
 
         .featuredusecase {
-            border-top-color: $gray-dark;
+            border-top-color: lighten($gray-dark, 5%);
         }
     }
 }
 
 .featuredusecase {
-    border-top: 2px solid lighten($gray-dark, 5%);
+    border-top: 2px solid lighten($gray-dark, 10%);
     padding-top: $spacer * 2;
     margin-top: $spacer * 2;
 
@@ -202,7 +202,6 @@
         text-align: center;
         box-shadow: none;
         font-family: $btn-font-family;
-        text-transform: uppercase;
         color: $brand-main-blue-dark;
 
         &:hover,

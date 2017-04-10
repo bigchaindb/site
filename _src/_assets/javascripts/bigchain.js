@@ -38,7 +38,7 @@ jQuery(function($) {
     //
     // Automatically add header links to all Markdown headings
     //
-    $('.content--page--markdown h1, .content--page--markdown h2').each(function(i, el) {
+    $('.content--page--markdown h1:not(#heading-1), .content--page--markdown h2:not(#heading-2)').each(function(i, el) {
         var $el, icon, id;
         $el = $(el);
         id = $el.attr('id');

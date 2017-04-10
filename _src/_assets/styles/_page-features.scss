@@ -29,15 +29,17 @@
 }
 
 .feature__title {
-    font-size: $font-size-h4;
+    @extend .h4;
+    color: $brand-main-blue-light;
     margin-top: 0;
     margin-bottom: ($spacer / 3);
 }
 
 .feature__text {
-    // @extend .text-dimmed;
+    @extend .text-dimmed;
     margin-bottom: 0;
 }
+
 .feture_roadmap {
   padding: 1rem 0 0 0;
 }

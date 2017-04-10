@@ -18,7 +18,7 @@ $brand-main-gray-light:   #CAD2DA !default;
 $brand-main-gray-lighter: #E8EBEF !default;
 
 $gray:                    $brand-main-gray !default;
-$gray-light:              lighten($brand-main-gray, 20%) !default;
+$gray-light:              lighten($brand-main-gray, 35%) !default;
 $gray-dark:               darken($brand-main-gray, 5%) !default;
 
 $brand-primary:           $brand-main-green !default;
@@ -33,7 +33,7 @@ $brand-danger:            #c9726a !default;
 //
 // Typography
 //
-$font-family-base:         'europa', 'canada-type-gibson', 'Nunito', 'Avenir Next', 'Helvetica Neue', 'Arial', sans-serif !default;
+$font-family-base:          'europa', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 $font-family-monospace:     Menlo, Monaco, Consolas, 'Courier New', monospace !default;
 
 $font-weight-light:         300 !default;
@@ -41,11 +41,11 @@ $font-weight-normal:        400 !default;
 $font-weight-bold:          600 !default;
 $font-weight-base:          $font-weight-normal !default;
 
-$font-size-root:            17px !default;
-$font-size-root-lg:         19px !default;
+$font-size-root:            18px !default;
+$font-size-root-lg:         20px !default;
 
 $font-size-base:            1rem !default;
-$font-size-lg:              1.25rem !default;
+$font-size-lg:              1.3rem !default;
 $font-size-sm:              0.85rem !default;
 $font-size-xs:              0.7rem !default;
 
@@ -59,7 +59,7 @@ $font-size-h6:              0.85rem !default;
 $line-height:               1.5 !default;
 
 $headings-font-family:      inherit !default;
-$headings-font-weight:      $font-weight-normal !default;
+$headings-font-weight:      $font-weight-light !default;
 $headings-line-height:      1.2 !default;
 $headings-color:            $brand-main-blue-light !default;
 
@@ -98,7 +98,7 @@ $line-height-xs:         1.2 !default;
 $border-radius:          .15rem !default;
 $border-radius-lg:       .2rem !default;
 $border-radius-sm:       .1rem !default;
-$border-radius-xs:       .05rem !default;
+$border-radius-xs:       .1rem !default;
 
 $component-active-color: #fff !default;
 $component-active-bg:    $brand-primary !default;
@@ -148,13 +148,13 @@ $btn-padding-y:                  .5rem !default;
 $btn-primary-color:              $brand-main-blue !default;
 $btn-primary-bg:                 $brand-primary !default;
 
-$btn-secondary-color:            #fff !default;
+$btn-secondary-color:            $brand-main-blue !default;
 $btn-secondary-bg:               $gray-light !default;
 
-$btn-blue-color:                 #fff !default;
+$btn-blue-color:                 $brand-primary !default;
 $btn-blue-bg:                    $brand-main-blue !default;
 
-$btn-violet-color:               #fff !default;
+$btn-violet-color:               $brand-main-blue !default;
 $btn-violet-bg:                  $brand-main-violet !default;
 
 $btn-info-color:                 #fff !default;
