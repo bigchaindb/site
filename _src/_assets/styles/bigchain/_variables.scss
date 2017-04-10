@@ -33,27 +33,26 @@ $brand-danger:            #c9726a !default;
 //
 // Typography
 //
-$font-family-nunito:        'Nunito', 'Avenir Next', 'Helvetica Neue', 'Arial', sans-serif !default;
+$font-family-base:         'europa', 'canada-type-gibson', 'Nunito', 'Avenir Next', 'Helvetica Neue', 'Arial', sans-serif !default;
 $font-family-monospace:     Menlo, Monaco, Consolas, 'Courier New', monospace !default;
-$font-family-base:          $font-family-nunito !default;
 
 $font-weight-light:         300 !default;
 $font-weight-normal:        400 !default;
 $font-weight-bold:          600 !default;
 $font-weight-base:          $font-weight-normal !default;
 
-$font-size-root:            16px !default;
-$font-size-root-lg:         18px !default;
+$font-size-root:            17px !default;
+$font-size-root-lg:         19px !default;
 
 $font-size-base:            1rem !default;
 $font-size-lg:              1.25rem !default;
 $font-size-sm:              0.85rem !default;
 $font-size-xs:              0.7rem !default;
 
-$font-size-h1:              2.5rem !default;
-$font-size-h2:              2rem !default;
-$font-size-h3:              1.5rem !default;
-$font-size-h4:              1.2rem !default;
+$font-size-h1:              2.7rem !default;
+$font-size-h2:              2.3rem !default;
+$font-size-h3:              2rem !default;
+$font-size-h4:              1.3rem !default;
 $font-size-h5:              $font-size-base !default;
 $font-size-h6:              0.85rem !default;
 
