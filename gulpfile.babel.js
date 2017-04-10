@@ -275,7 +275,6 @@ export const watchSrc = () => {
     watch(SRC + '_assets/javascripts/**/*.js').on('all', series(js, browser.reload))
     watch(SRC + '_assets/images/**/*.{png,jpg,jpeg,gif,webp}').on('all', series(images, browser.reload))
     watch(SRC + '_assets/images/**/*.{svg}').on('all', series(svg, browser.reload))
-    watch(SRC + '_assets/videos/**/*.{mp4,webm}').on('all', series(videos, browser.reload))
     watch([SRC + '**/*.{html,xml,json,txt,md,yml}', './*.yml', SRC + '_includes/svg/*']).on('all', series('build', browser.reload))
 }
 
