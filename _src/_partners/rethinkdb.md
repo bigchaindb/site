@@ -1,7 +1,7 @@
 ---
 layout: partner
 
-name: ReThinkDB
+title: ReThinkDB
 link: https://www.rethinkdb.com
 ---
 

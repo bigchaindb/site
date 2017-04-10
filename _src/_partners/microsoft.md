@@ -1,7 +1,7 @@
 ---
 layout: partner
 
-name: Microsoft
+title: Microsoft
 link: https://www.microsoft.com
 ---
 

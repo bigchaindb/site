@@ -1,7 +1,7 @@
 ---
 layout: partner
 
-name: Monax
+title: Monax
 link: https://monax.io
 ---
 

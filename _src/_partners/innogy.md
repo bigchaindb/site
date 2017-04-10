@@ -1,7 +1,7 @@
 ---
 layout: partner
 
-name: innogy SE
+title: innogy SE
 link: https://www.innogy.com/
 usecase: /supplychain/innogy/
 header: hero-innogy.jpg

@@ -1,7 +1,7 @@
 ---
 layout: partner
 
-name: Tangent90
+title: Tangent90
 link: http://www.tangent90.co.uk
 ---
 
