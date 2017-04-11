@@ -13,7 +13,6 @@ quote:
     image: carsten-stoecker.jpg
 
 company: innogy SE
-slug: innogy
 industry: Supply chain
 
 about:

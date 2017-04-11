@@ -13,7 +13,6 @@ quote:
     image: daniel-bloch.jpg
 
 company: BenBen
-slug: benben
 industry: Government
 bitmaplogo: logo-benben.png
 

@@ -13,14 +13,12 @@
 
             {% for partner in partners_sorted %}
 
-                {% assign slug =  partner.title | downcase | remove: "." | replace: " ", "-" %}
-
                 <div class="grid__col grid__col--1">
 
                     <a class="partner" href="{{ partner.link }}">
-                        <svg class="partner__logo partner__logo--{{ slug }}" aria-labelledby="title">
-                            <title>{{ partner.name }}</title>
-                            <use xlink:href="/assets/img/sprite.svg#logo-{{ slug }}"></use>
+                        <svg class="partner__logo partner__logo--{{ partner.slug }}" aria-labelledby="title">
+                            <title>{{ partner.title }}</title>
+                            <use xlink:href="/assets/img/sprite.svg#logo-{{ partner.slug }}"></use>
                         </svg>
                     </a>
 

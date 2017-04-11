@@ -20,12 +20,10 @@ cta:
 
 <section role="main" class="section content content--page content--partner">
 
-    {% assign slug =  page.title | downcase | remove: "." | replace: " ", "-" %}
-
     <div class="row row--narrow">
-        <svg class="partner__logo partner__logo--{{ slug }}" aria-labelledby="title">
+        <svg class="partner__logo partner__logo--{{ page.slug }}" aria-labelledby="title">
             <title>{{ page.title }}</title>
-            <use xlink:href="/assets/img/sprite.svg#logo-{{ slug }}"></use>
+            <use xlink:href="/assets/img/sprite.svg#logo-{{ page.slug }}"></use>
         </svg>
 
         {{ content }}

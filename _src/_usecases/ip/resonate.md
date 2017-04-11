@@ -13,7 +13,6 @@ quote:
     image: peter-harris.jpg
 
 company: Resonate
-slug: resonate
 industry: Intellectual Property
 
 about:
