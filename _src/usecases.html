@@ -2,12 +2,12 @@
 layout: page
 
 title: Use Cases
+tagline: Where blockchains and databases meet
 description: For blockchain technology to go mainstream, it needs scale. At BigchainDB, we’ve taken care of that for you.
 
 image: photo4.jpg
 
 intro:
-    title: Where blockchains and databases meet
     description: "BigchainDB is for developers and organizations looking for a scalable, queryable database with blockchain characteristics such as decentralization, immutability and the ability to treat anything stored in the database as an asset. Whether it’s atoms, bits or bytes of value, any real-world blockchain application needs scale and performance. A perfect fit for BigchainDB."
     addition: "We’re still in the early days of the decentralization movement and while all of the industries below are being disrupted in one way or another, there’s an abundance of opportunity within each."
     contact:
@@ -24,17 +24,16 @@ js: page-usecases.min.js
 <section class="section section--intro">
     <div class="row">
         <header class="section-header">
-            <h1 class="section-title">{{ page.intro.title }}</h1>
-                <p class="section-description">{{ page.intro.description }}</p>
+            <p class="section-description">{{ page.intro.description }}</p>
 
-                <div class="grid grid--full grid-small--half grid--gutters grid--top text-left">
-                    <div class="grid__col">
-                        {{ page.intro.addition }}
-                    </div>
-                    <div class="grid__col">
-                        <p><strong>{{ page.intro.contact.text }}</strong> <br><a href="{{ page.intro.contact.link }}">{{ page.intro.contact.action }}</a></p>
-                    </div>
+            <div class="grid grid--full grid-small--half grid--gutters grid--top text-left">
+                <div class="grid__col">
+                    {{ page.intro.addition }}
                 </div>
+                <div class="grid__col">
+                    <p><strong>{{ page.intro.contact.text }}</strong> <br><a href="{{ page.intro.contact.link }}">{{ page.intro.contact.action }}</a></p>
+                </div>
+            </div>
         </header>
     </div>
 </section>

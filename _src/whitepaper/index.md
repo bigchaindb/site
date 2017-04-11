@@ -2,6 +2,7 @@
 layout: page
 
 title: Whitepaper
+tagline: "BigchainDB: A Scalable Blockchain Database"
 description: 'This paper describes BigchainDB. BigchainDB fills a gap in the decentralization ecosystem: a decentralized database, at scale. It is capable of 1 million writes per second throughput, storing petabytes of data, and sub-second latency.'
 
 image: photo3.jpg
@@ -14,8 +15,6 @@ whitepaper:
         - file: bigchaindb-whitepaper.pdf
           button: Download PDF
 ---
-
-## BigchainDB: A Scalable Blockchain Database
 
 *by <br>Trent McConaghy, Rodolphe Marques, Andreas Müller, Dimitri De Jonghe, Troy McConaghy, Greg McMullen, Ryan Henderson, Sylvain Bellemare, Alberto Granzotto*
 
