@@ -11,6 +11,7 @@ import browser      from 'browser-sync'
 import critical     from 'critical'
 import fs           from 'fs'
 import yaml         from 'js-yaml'
+import request      from 'request'
 
 // get all the configs: `pkg` and `site`
 import pkg from './package.json'
