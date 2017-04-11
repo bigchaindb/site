@@ -30,6 +30,7 @@
     "critical": "^0.8.4",
     "cross-spawn": "^5.1.0",
     "del": "^2.0.2",
+    "fs": "0.0.1-security",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^3.0.1",
     "gulp-awspublish": "^3.0.0",
@@ -51,7 +52,9 @@
     "gulp-sourcemaps": "^2.4.1",
     "gulp-svg-sprite": "^1.2.9",
     "gulp-uglify": "^2.0.1",
-    "gulp-util": "^3.0.6"
+    "gulp-util": "^3.0.6",
+    "js-yaml": "^3.8.3",
+    "request": "^2.81.0"
   },
   "engines": {
     "node": ">=5.0.0"

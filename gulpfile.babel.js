@@ -5,11 +5,16 @@ const $ = require('gulp-load-plugins')()
 
 // manually import modules that won't get picked up by gulp-load-plugins
 import { src, dest, watch, parallel, series } from 'gulp'
-import del from 'del'
+import del          from 'del'
+import parallelize  from 'concurrent-transform'
+import browser      from 'browser-sync'
+import critical     from 'critical'
+import fs           from 'fs'
+import yaml         from 'js-yaml'
+
+// get all the configs: `pkg` and `site`
 import pkg from './package.json'
-import parallelize from 'concurrent-transform'
-import browser from 'browser-sync'
-import critical from 'critical'
+const site = yaml.safeLoad(fs.readFileSync('./_config.yml'))
 
 // handle errors
 const onError = (error) => {
@@ -48,8 +53,8 @@ const PORT = 1337
 const COMPATIBILITY = ['last 2 versions', 'Chrome >= 30', 'Safari >= 6.1', 'Firefox >= 35', 'Opera >= 32', 'iOS >= 8', 'Android >= 4', 'ie >= 10']
 
 // paths
-const SRC      = '_src/',
-      DIST     = '_dist/'
+const SRC      = site.source + '/',
+      DIST     = site.destination + '/'
 
 // deployment
 const S3BUCKET         = 'www.bigchaindb.com',
@@ -420,5 +425,37 @@ export const s3 = () => {
         }))
 }
 
+
+//
+// Ping search engines on live deployment
+//
+export const seo = (done) => {
+
+    const googleUrl = 'http://www.google.com/webmasters/tools/ping?sitemap=',
+          bingUrl   = 'http://www.bing.com/webmaster/ping.aspx?siteMap='
+
+    const response = (error, response) => {
+        if (error) {
+            $.util.log($.util.colors.red(error))
+        } else {
+            $.util.log($.util.colors.gray('Status:', response && response.statusCode))
+
+            if (response.statusCode === 200) {
+                $.util.log($.util.colors.green('Successfully notified'))
+            }
+        }
+    }
+
+    if ($.util.env.live === true) {
+        request(googleUrl + site.url + '/sitemap.xml', response)
+        request(bingUrl + site.url + '/sitemap.xml', response)
+    }
+
+    done()
+}
+
+
+//
 // `gulp deploy`
-export const deploy = series(deployBanner, s3)
+//
+export const deploy = series(deployBanner, s3, seo)
