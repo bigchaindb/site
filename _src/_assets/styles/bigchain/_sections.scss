@@ -14,8 +14,8 @@
     }
 
     @media ($screen-sm) {
-        padding-top: ($spacer * 6);
-        padding-bottom: ($spacer * 6);
+        padding-top: ($spacer * 5);
+        padding-bottom: ($spacer * 5);
     }
 }
 
@@ -53,6 +53,7 @@
 .section-description {
     font-size: $font-size-lg;
     margin-bottom: 0;
+    color: $brand-main-gray-lighter;
 
     + .section-description {
         margin-top: $spacer;
