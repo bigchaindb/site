@@ -132,6 +132,8 @@
 //
 @mixin grid-columns() {
     > .grid__col {
+        max-width: none;
+
         &.grid__col--1 { flex: 0 0 16%; }
         &.grid__col--2 { flex: 0 0 33.3%; }
         &.grid__col--3 { flex: 0 0 50%; }

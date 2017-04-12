@@ -11,7 +11,7 @@
 <div class="tab-content">
 
     <div class="tab-pane active" id="individual" role="tabpanel">
-        <form id="form-cla-individuals" class="form-cla js-parsley" action="//formspree.io/{{ site.email.cla }}" method="POST">
+        <form id="form-cla-individuals" class="form form--cla js-parsley" action="//formspree.io/{{ site.email.cla }}" method="POST">
             <p class="form-group">
                 <input class="form-control" type="text" id="name" name="name" required>
                 <label class="form-label" for="name">Your Full Name</label>
@@ -36,7 +36,7 @@
                 Agreed and accepted: By clicking and accepting this Agreement, I represent and warrant that I have authority to bind the entity named above (if applicable) to the terms and conditions of this Agreement.
             </p>
             <div class="form-group checkbox">
-                <label class="text-dimmed">
+                <label>
                     <input class="agree" type="checkbox" value="agreement" name="agreement" required>
                     I have read and agree to the <a href="/cla/individual/">terms of this Agreement</a>
                 </label>
@@ -70,7 +70,7 @@
     </div>
 
     <div class="tab-pane" id="entity" role="tabpanel">
-        <form id="form-cla-entities" class="form-cla js-parsley" action="//formspree.io/{{ site.email.cla }}" method="POST" accept-charset="UTF-8">
+        <form id="form-cla-entities" class="form form--cla js-parsley" action="//formspree.io/{{ site.email.cla }}" method="POST" accept-charset="UTF-8">
             <p class="form-group">
                 <input class="form-control" type="text" id="org-entity" name="org" required>
                 <label class="form-label" for="org-entity">Name of organization, foundation, company or other entity</label>
@@ -91,7 +91,7 @@
                 Agreed and accepted: By clicking and accepting this Agreement, I represent and warrant that I have authority to bind the entity named above (if applicable) to the terms and conditions of this Agreement.
             </p>
             <div class="form-group checkbox">
-                <label class="text-dimmed">
+                <label>
                     <input class="agree" type="checkbox" value="agreement" name="agreement" required>
                     I have read and agree to the <a href="/cla/entity/">terms of this Agreement</a>
                 </label>

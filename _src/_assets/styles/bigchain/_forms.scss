@@ -3,6 +3,11 @@
 // ---
 // bigchain.io
 //
+.form {
+    padding: ($spacer * 1.5) ($spacer * 2.5);
+    background: $gray-dark;
+    border-radius: $border-radius;
+}
 
 .form-control {
     @extend .transition;
@@ -150,7 +155,7 @@ select.form-control {
     margin-bottom: ($spacer * .75);
 
     label {
-        padding-left: 1.25rem;
+        padding-left: 1.75rem;
         margin-bottom: 0;
         cursor: pointer;
         // When there's no labels, don't position the input.
@@ -166,7 +171,7 @@ select.form-control {
 .checkbox-inline input[type="checkbox"] {
     position: absolute;
     margin-bottom: -0.25rem;
-    margin-left: -1.25rem;
+    margin-left: -1.75rem;
     margin-right: 0.25rem;
 
     // reset styling, then style
