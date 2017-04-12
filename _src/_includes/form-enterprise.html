@@ -3,61 +3,75 @@
 
     <div class="grid grid--full grid-small--half">
 
-        <p class="form-group grid__col">
-            <input class="form-control" type="text" id="name" name="name" required>
-            <label class="form-label" for="name">Name</label>
-        </p>
-        <p class="form-group grid__col">
-            <input class="form-control" type="text" id="company" name="company" required>
-            <label class="form-label" for="company">Company</label>
-        </p>
-        <p class="form-group grid__col">
-            <input class="form-control" type="email" id="email" name="_replyto" required>
-            <label class="form-label" for="email">Email</label>
-        </p>
-        <p class="form-group grid__col">
-            <input class="form-control" type="tel" id="phone" name="phone" required>
-            <label class="form-label" for="phone">Phone</label>
-        </p>
-        <p class="form-group grid__col">
-            <input class="form-control" type="text" id="country" name="country" required>
-            <label class="form-label" for="country">Country</label>
-        </p>
-        <p class="form-group grid__col">
-            <select class="form-control" id="industry" name="industry">
-                <option>Automotive</option>
-                <option>Banking</option>
-                <option>Consulting</option>
-                <option>Data</option>
-                <option>Energy</option>
-                <option>Government</option>
-                <option>Healthcare</option>
-                <option>Identity &amp; Security</option>
-                <option>Insurance</option>
-                <option>Information Technology</option>
-                <option>Logistics &amp; Shipping</option>
-                <option>Manufacturing</option>
-                <option>Media &amp; Content</option>
-                <option>Other</option>
-            </select>
-            <label class="form-label" for="industry">Industry</label>
-        </p>
-
-        <p class="form-group grid__col">
-            <select class="form-control" id="interest" name="interest">
-                <option>Education</option>
-                <option>Partnership</option>
-                <option>Proof-of-Concept / Prototype / Pilot</option>
-                <option>Implementation</option>
-                <option>BigchainDB Enterprise Subscription</option>
-            </select>
-            <label class="form-label" for="interest">Interested in</label>
-        </p>
-
+        <div class="grid__col">
+            <p class="form-group">
+                <input class="form-control" type="text" id="name" name="name" required>
+                <label class="form-label" for="name">Name</label>
+            </p>
+        </div>
+        <div class="grid__col">
+            <p class="form-group">
+                <input class="form-control" type="text" id="company" name="company" required>
+                <label class="form-label" for="company">Company</label>
+            </p>
+        </div>
+        <div class="grid__col">
+            <p class="form-group">
+                <input class="form-control" type="email" id="email" name="_replyto" required>
+                <label class="form-label" for="email">Email</label>
+            </p>
+        </div>
+        <div class="grid__col">
+            <p class="form-group">
+                <input class="form-control" type="tel" id="phone" name="phone" required>
+                <label class="form-label" for="phone">Phone</label>
+            </p>
+        </div>
+        <div class="grid__col">
+            <p class="form-group">
+                <input class="form-control" type="text" id="country" name="country" required>
+                <label class="form-label" for="country">Country</label>
+            </p>
+        </div>
+        <div class="grid__col">
+            <p class="form-group">
+                <select class="form-control" id="industry" name="industry" required data-required="true">
+                    <option value="">Industry</option>
+                    <option value="Automotive">Automotive</option>
+                    <option value="Banking">Banking</option>
+                    <option value="Consulting">Consulting</option>
+                    <option value="Data">Data</option>
+                    <option value="Energy">Energy</option>
+                    <option value="Government">Government</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Identity">Identity &amp; Security</option>
+                    <option value="Insurance">Insurance</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Logistics">Logistics &amp; Shipping</option>
+                    <option value="Manufacturing">Manufacturing</option>
+                    <option value="Media">Media &amp; Content</option>
+                    <option value="other">Other</option>
+                </select>
+                <label class="form-label" for="industry">Industry</label>
+            </p>
+        </div>
+        <div class="grid__col">
+            <p class="form-group">
+                <select class="form-control" id="interest" name="interest" required data-required="true">
+                    <option value="">Interested in</option>
+                    <option value="Education">Education</option>
+                    <option value="Partnership">Partnership</option>
+                    <option value="Prototype">Proof-of-Concept / Prototype / Pilot</option>
+                    <option value="Implementation">Implementation</option>
+                    <option value="BigchainDB Enterprise Edition">BigchainDB Enterprise Subscription</option>
+                </select>
+                <label class="form-label" for="interest">Interested in</label>
+            </p>
+        </div>
     </div>
 
     <p class="form-group">
-        <textarea class="form-control" id="comment" name="comment" rows="4" required></textarea>
+        <textarea class="form-control" id="comment" name="comment" rows="1"></textarea>
         <label class="form-label" for="comment">Comments</label>
     </p>
     <p class="form-group">

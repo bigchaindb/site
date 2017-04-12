@@ -1,5 +1,8 @@
 
 //=include parsleyjs/dist/parsley.js
+//=include ../../../../node_modules/textarea-autogrow/textarea-autogrow.js
+//=include ../../../../node_modules/tether/dist/js/tether.js
+//=include ../../../../node_modules/tether-select/dist/js/select.js
 
 var Forms = (function(w, d, $) {
 
@@ -37,6 +40,17 @@ var Forms = (function(w, d, $) {
                     }
                 })
             })
+        },
+        initAutogrow: function() {
+            if (_config.form.find('textarea').length) {
+                var textarea = document.querySelector('textarea')
+                var growingTextarea = new Autogrow(textarea)
+            }
+        },
+        initSelect: function(el) {
+            Select.init({
+                className: 'select-theme-bigchaindb'
+            })
         }
     }
 
@@ -44,6 +58,8 @@ var Forms = (function(w, d, $) {
         init: function() {
             _private.formValidation()
             _private.formEmptyValidation()
+            _private.initAutogrow()
+            _private.initSelect()
         }
     }
 

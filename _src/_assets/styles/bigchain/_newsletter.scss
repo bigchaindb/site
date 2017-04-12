@@ -44,6 +44,7 @@
 .newsletter__title {
     @extend .h5;
     margin-top: 0;
+    margin-bottom: $spacer / 4;
 }
 
 .newsletter__title,
