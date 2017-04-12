@@ -1,0 +1,87 @@
+
+<form id="form-enterprise" class="form form--enterprise js-parsley" action="" method="POST" accept-charset="UTF-8">
+
+    <div class="grid grid--full grid-small--half">
+
+        <p class="form-group grid__col">
+            <input class="form-control" type="text" id="name" name="name" required>
+            <label class="form-label" for="name">Name</label>
+        </p>
+        <p class="form-group grid__col">
+            <input class="form-control" type="text" id="company" name="company" required>
+            <label class="form-label" for="company">Company</label>
+        </p>
+        <p class="form-group grid__col">
+            <input class="form-control" type="email" id="email" name="_replyto" required>
+            <label class="form-label" for="email">Email</label>
+        </p>
+        <p class="form-group grid__col">
+            <input class="form-control" type="tel" id="phone" name="phone" required>
+            <label class="form-label" for="phone">Phone</label>
+        </p>
+        <p class="form-group grid__col">
+            <input class="form-control" type="text" id="country" name="country" required>
+            <label class="form-label" for="country">Country</label>
+        </p>
+        <p class="form-group grid__col">
+            <select class="form-control" id="industry" name="industry">
+                <option>Automotive</option>
+                <option>Banking</option>
+                <option>Consulting</option>
+                <option>Data</option>
+                <option>Energy</option>
+                <option>Government</option>
+                <option>Healthcare</option>
+                <option>Identity &amp; Security</option>
+                <option>Insurance</option>
+                <option>Information Technology</option>
+                <option>Logistics &amp; Shipping</option>
+                <option>Manufacturing</option>
+                <option>Media &amp; Content</option>
+                <option>Other</option>
+            </select>
+            <label class="form-label" for="industry">Industry</label>
+        </p>
+
+        <p class="form-group grid__col">
+            <select class="form-control" id="interest" name="interest">
+                <option>Education</option>
+                <option>Partnership</option>
+                <option>Proof-of-Concept / Prototype / Pilot</option>
+                <option>Implementation</option>
+                <option>BigchainDB Enterprise Subscription</option>
+            </select>
+            <label class="form-label" for="interest">Interested in</label>
+        </p>
+
+    </div>
+
+    <p class="form-group">
+        <textarea class="form-control" id="comment" name="comment" rows="4" required></textarea>
+        <label class="form-label" for="comment">Comments</label>
+    </p>
+    <p class="form-group">
+        <input class="btn btn-primary" type="submit" value="Send">
+    </p>
+
+    <div class="alert alert-success animation-slide-in-from-bottom hide">
+        <svg class="alert__icon icon icon-success">
+            <use xlink:href="/assets/img/sprite.svg#icon-success"></use>
+        </svg>
+        <p>
+            <strong class="alert__title">Great to hear you’re interested!</strong>
+            We’ll get in touch soon.
+        </p>
+    </div>
+    <div class="alert alert-danger hide">
+        <svg class="alert__icon icon icon-fail">
+            <use xlink:href="/assets/img/sprite.svg#icon-fail"></use>
+        </svg>
+        <p>
+            <strong class="alert__title">Ops, there was an error</strong>
+            Would you mind trying again?
+        </p>
+    </div>
+
+    <input type="hidden" name="_subject" value="New contact form submission" />
+</form>
