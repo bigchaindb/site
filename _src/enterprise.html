@@ -4,6 +4,31 @@ layout: base
 title: Enterprise
 
 js: page-enterprise.min.js
+
+hero:
+    title: "Bring the best of blockchain to your enterprise with BigchainDB."
+    description: "From ideation to production, BigchainDB has the team and technology to deploy enterprise-grade applications and platforms for businesses looking to build the tools of tomorrow."
+    cta:
+        - name: Get in touch
+          link: "#contact"
+          scroll: true
+        - name: Download one-pager
+          link: ""
+
+intro:
+    title: "Blockchain technology that scales"
+    description: "Blockchain systems share a single source of truth for data and assets, backed by privacy and security guarantees. Yet traditional blockchains lack the scale and speed that most enterprises need. BigchainDB takes a different approach, one that starts with a big data distributed database and then adds blockchain characteristics. The result is linear scaling, high throughput and low latency. <br><br>No other decentralized blockchain database has the advantages of scale, queryability and performance in one package."
+    benefits:
+    - title: "Ensure Interoperability"
+      description: "Unlock and integrate data from existing legacy systems."
+    - title: "Reduce costs"
+      description: "Transparency reduces costs for recalls, liability, loss and fraud."
+    - title: "Create new business models"
+      description: "Build collaborative data-centric ecosystems that unleash latent value."
+    - title: "Automate Processes"
+      description: "Real-time data triggers business logic"
+    - title: "Share the Story"
+      description: "Trust and identity out-of-the-box with verifiable audit trails, provenance and tracking"
 ---
 
 <header class="hero hero--enterprise">
@@ -12,39 +37,79 @@ js: page-enterprise.min.js
 
     <div class="hero__content row row--wide">
         <hgroup>
-            <h1 class="section-title">Take your enterprise to the next level with blockchain technology that scales.</h1>
-            <p class="section-description">From ideation to production, BigchainDB has the team and technology to deploy enterprise-grade applications and platforms for businesses looking to build the tools of tomorrow.</p>
-            <a href="#" class="btn btn-primary">Get in touch</a> <a href="#" class="btn btn-secondary">Download one-pager</a>
+            <h1 class="section-title">{{ page.hero.title }}</h1>
+            <p class="section-description">{{ page.hero.description }}</p>
+
+            {% for cta in page.hero.cta %}
+                <a class="btn {% if cta.scroll %}scroll{% endif %}" href="{{ cta.link }}">{{ cta.name }}</a>
+            {% endfor %}
         </hgroup>
     </div>
 
 </header>
 
-<section class="section">
-    <div class="row row--wide">
+<section class="section section--enterpriseintro">
+    <div class="row">
         <header class="section-header">
-            <h1 class="section-title">Better than traditional databases in every way</h1>
-            <p class="section-description">Using BigchainDB in enterprises makes so much sense because this and that and this.</p>
+            <h1 class="section-title">{{ page.intro.title }}</h1>
+            <p class="section-description">{{ page.intro.description }}</p>
         </header>
 
-        <div class="section-intro__main grid grid--full grid-small--half grid--gutters">
-            <div class="grid__col">
-                <h3>Speed up processes</h3>
-                <p>Unlock data from existing systems and share it.</p>
-            </div>
-            <div class="grid__col">
-                <h3>Reduce costs</h3>
-                <p>Transparency reduces costs for recalls, liability, loss and fraud.</p>
-            </div>
-            <div class="grid__col">
-                <h3>Create new business models</h3>
-                <p>Blockchains enable collaborative ecosystems that unleash latent value from shared data.</p>
-            </div>
+        <div class="grid grid--full grid-small--half grid--gutters">
+            {% for benefit in page.intro.benefits %}
+                <div class="grid__col">
+                    <div class="feature">
+                        <svg class="feature__icon icon">
+                            <use xlink:href="/assets/img/sprite.svg#icon-cat"></use>
+                        </svg>
+                        <div class="feature__detail">
+                            <h1 class="feature__title">{{ benefit.title }}</h1>
+                            <p class="feature__text">{{ benefit.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
+
     </div>
 </section>
 
-<section class="section section--enterprisecontact">
+<section class="section section--enterprisepartners background--darker">
+    <div class="row">
+        <header class="section-header">
+            <h1 class="section-title">Proudly trusted by</h1>
+            <p class="section-description">La la la.</p>
+        </header>
+    </div>
+
+    <div class="row row--wide">
+        <article class="grid grid--full grid-small--half grid-medium--fit grid-medium--columns grid--justifycenter grid--gutters">
+
+            {% assign partners_sorted = (site.partners | sort: 'date')  %}
+
+            {% for partner in partners_sorted %}
+
+                <div class="grid__col grid__col--1">
+
+                    <a class="partner" href="{{ partner.link }}">
+                        <svg class="partner__logo partner__logo--{{ partner.slug }}" aria-labelledby="title">
+                            <title>{{ partner.title }}</title>
+                            <use xlink:href="/assets/img/sprite.svg#logo-{{ partner.slug }}"></use>
+                        </svg>
+                    </a>
+
+                </div>
+
+            {% endfor %}
+
+        </article>
+
+    </div>
+
+    </div>
+</section>
+
+<section class="section section--enterprisecontact" id="contact">
     <div class="row">
         <header class="section-header">
             <h1 class="section-title">Get in touch</h1>

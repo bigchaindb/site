@@ -32,6 +32,34 @@
             max-width: 66%;
         }
     }
+
+    .btn {
+        @extend .btn-secondary;
+        min-width: 240px;
+
+        &:first-of-type {
+            @extend .btn-primary;
+            margin-right: $spacer;
+        }
+    }
+}
+
+.section--enterpriseintro {
+    .section-description {
+
+    }
+
+    .feature {
+        display: block;
+    }
+
+    .feature__icon {
+        margin-top: 0;
+        margin-bottom: $spacer / 3;
+        width: 2rem;
+        height: 2rem;
+        stroke-width: 1px;
+    }
 }
 
 .form--enterprise {

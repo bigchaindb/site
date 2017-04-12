@@ -39,6 +39,16 @@ $menu-height-md: 66px;
     }
 }
 
+    // intro animation
+    .section-title,
+    .section-description,
+    .hero__action {
+        .wf-active &,
+        .wf-inactive & {
+            @extend .animation-slide-in-from-bottom;
+            animation-fill-mode: backwards;
+        }
+    }
 
 //
 // intro animation

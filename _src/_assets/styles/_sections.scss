@@ -32,6 +32,10 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    .text-left & {
+        text-align: left;
+    }
 }
 
 .section-title {
@@ -47,6 +51,12 @@
         display: block;
         margin: ($spacer * 2) auto 0;
         background: $gray-light;
+    }
+
+    .text-left & {
+        &:after {
+            margin-left: 0;
+        }
     }
 }
 
