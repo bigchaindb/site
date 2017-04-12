@@ -2,6 +2,34 @@
     @extend .background--photo;
 }
 
+// intro animation
+.header__title,
+.header__description,
+.header__logo,
+.header__label {
+    .wf-active &,
+    .wf-inactive & {
+        @extend .animation-slide-in-from-bottom;
+        animation-fill-mode: backwards;
+    }
+}
+
+.header__description,
+.header__logo {
+    .wf-active &,
+    .wf-inactive & {
+        animation-delay: .3s;
+    }
+}
+
+.header__btn,
+.header__label {
+    .wf-active &,
+    .wf-inactive & {
+        animation-delay: .5s;
+    }
+}
+
 .header__title {
     position: relative;
     z-index: 1;

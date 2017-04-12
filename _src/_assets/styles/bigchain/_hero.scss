@@ -71,7 +71,6 @@ $menu-height-md: 66px;
         .wf-active &,
         .wf-inactive & {
             @extend .animation-slide-in-from-bottom;
-            animation-duration: 1s;
             animation-fill-mode: backwards;
         }
     }

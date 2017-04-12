@@ -12,7 +12,7 @@ cta:
     {% include menu-main.html %}
 
     <div class="row">
-        <h1 class="header__title">
+        <hgroup>
             <span class="header__label">{{ page.industry }}</span>
             {% if page.bitmaplogo %}
                 <img class="header__logo" src="/assets/img/{{ page.bitmaplogo }}" />
@@ -22,8 +22,8 @@ cta:
                 </svg>
             {% endif %}
 
-            {{ page.title }}
-        </h1>
+            <h1 class="header__title">{{ page.title }}</h1>
+        </hgroup>
     </div>
 </header>
 

@@ -167,6 +167,14 @@
 }
 
 .header--usecase {
+    hgroup {
+        margin-top: ($spacer * 5);
+    }
+
+    .header__title {
+        padding-top: 0;
+    }
+
     .header__logo {
         width: 140px;
         max-height: 100px;
@@ -178,6 +186,7 @@
     }
 
     .header__label {
+        text-align: center;
         display: block;
         color: $brand-main-blue-light;
         font-size: $font-size-lg;
