@@ -248,11 +248,23 @@ Logo can be used with a base class and modifier classes for size & color:
 <div class="alert alert-danger"><strong class="alert__title">Lucas ipsum</strong> Lucas ipsum dolor sit amet kenobi ubese yaka weequay aka trioculus</div>
 
 ```html
-<div class="alert alert-success"><strong class="alert__title">Lucas ipsum</strong>Lucas ipsum dolor sit amet kenobi ubese yaka weequay aka trioculus</div>
+<div class="alert alert-success">
+    <strong class="alert__title">Lucas ipsum</strong>
+    Lucas ipsum dolor sit amet kenobi ubese yaka weequay aka trioculus
+</div>
 
-<div class="alert alert-info"><strong class="alert__title">Lucas ipsum</strong>Lucas ipsum dolor sit amet kenobi ubese yaka weequay aka trioculus</div>
+<div class="alert alert-info">
+    <strong class="alert__title">Lucas ipsum</strong>
+    Lucas ipsum dolor sit amet kenobi ubese yaka weequay aka trioculus
+</div>
 
-<div class="alert alert-warning"><strong class="alert__title">Lucas ipsum</strong>Lucas ipsum dolor sit amet kenobi ubese yaka weequay aka trioculus</div>
+<div class="alert alert-warning">
+    <strong class="alert__title">Lucas ipsum</strong>
+    Lucas ipsum dolor sit amet kenobi ubese yaka weequay aka trioculus
+</div>
 
-<div class="alert alert-danger"><strong class="alert__title">Lucas ipsum</strong>Lucas ipsum dolor sit amet kenobi ubese yaka weequay aka trioculus</div>
+<div class="alert alert-danger">
+    <strong class="alert__title">Lucas ipsum</strong>
+    Lucas ipsum dolor sit amet kenobi ubese yaka weequay aka trioculus
+</div>
 ```

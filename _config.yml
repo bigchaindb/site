@@ -45,15 +45,8 @@ permalink:              /:title/
 # --------------------
 markdown:               redcarpet
 
-kramdown:
-    input: GFM
-    extensions:
-        - autolink
-        - footnotes
-        - smart
-
 redcarpet:
-    extensions:         ['autolink', 'smart', 'hard_wrap', 'with_toc_data']
+    extensions:         ['no_intra_emphasis', 'autolink', 'tables', 'smart', 'hard_wrap', 'fenced_code_blocks', 'strikethrough', 'highlight', 'quote', 'footnotes', 'with_toc_data', 'space_after_headers', 'superscript', 'lax_spacing']
 
 
 # Generator

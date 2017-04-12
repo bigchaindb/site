@@ -9,6 +9,7 @@ pre,
 samp {
     font-family: $font-family-monospace;
     font-size: .75rem;
+    hyphens: none;
 }
 
 // Inline code
@@ -46,19 +47,22 @@ pre {
     background-color: $pre-bg;
     border-radius: $border-radius;
 
+    // make 'em scrollable
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    max-height: $pre-scrollable-max-height;
+
     // Account for some code outputs that place code tags in pre tags
     code {
         padding: 0;
         font-size: inherit;
         color: inherit;
-        white-space: pre-wrap;
+        white-space: pre;
+        overflow-wrap: normal;
+        word-wrap: normal;
+        word-break: normal;
+        overflow: auto;
         background-color: transparent;
         border-radius: 0;
     }
-}
-
-// Enable scrollable blocks of code
-.pre-scrollable {
-    max-height: $pre-scrollable-max-height;
-    overflow-y: scroll;
 }
