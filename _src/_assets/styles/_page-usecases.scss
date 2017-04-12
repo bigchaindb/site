@@ -31,7 +31,7 @@
         .icon {
             width: 48px;
             height: 48px;
-            margin-bottom: $spacer / 3;
+            margin-bottom: $spacer / 2;
         }
     }
 
@@ -41,7 +41,7 @@
     }
 
     .section-title {
-        @extend .h3;
+        @extend .h2;
         margin-top: 0;
         margin-bottom: $spacer * 2;
 
@@ -117,7 +117,7 @@
 }
 
 .featuredusecase__title {
-    @extend .h4;
+    @extend .h3;
     margin-top: 0;
     margin-bottom: $spacer;
 

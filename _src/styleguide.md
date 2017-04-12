@@ -56,7 +56,7 @@ The main branding typeface is [**Europa**](http://www.europatype.com/articledeta
 <div class="typeface italic">Europa Regular Italic</div>
 <div class="typeface bold">Europa Bold</div>
 
-The light weight is only used for headlines from a certain size to retain readability on all screens. For the website this means only headings 1 - 3 are using light weight.
+The light weight is only used for headlines from a certain size to retain readability on all screens. For the website this means only headings 1 - 4 are using light weight.
 
 ### Body Copy
 
@@ -97,6 +97,8 @@ Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatib
 #### Heading 4
 
 ##### Heading 5
+
+###### Heading 6
 
 
 ## Lists

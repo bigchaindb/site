@@ -131,7 +131,10 @@ h5, .h5,
 h6, .h6 {
     margin-top: $spacer;
     margin-bottom: $spacer;
+}
 
+h5, .h5,
+h6, .h6 {
     &,
     .wf-active &,
     .wf-inactive & {
@@ -177,6 +180,11 @@ strong,
 .strong,
 .bold {
     font-weight: $font-weight-bold;
+}
+
+em,
+.italic {
+    font-style: italic;
 }
 
 .light {

@@ -35,7 +35,7 @@
 }
 
 .section-title {
-    font-size: $font-size-h2;
+    @extend .h2;
     margin-top: 0;
     margin-bottom: ($spacer * 2);
 
