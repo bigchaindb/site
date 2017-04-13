@@ -35,7 +35,12 @@
         </div>
         <div class="grid__col">
             <p class="form-group">
-                <input class="form-control" type="text" id="country" name="country" required>
+                <select class="form-control" id="country" name="country" required data-required="true">
+                    <option value="">&nbsp;</option>
+                    {% for country in site.data.countries %}
+                        <option value="{{ country.abbreviation }}">{{ country.country }}</option>
+                    {% endfor %}
+                </select>
                 <label class="form-label" for="country">Country</label>
             </p>
         </div>
