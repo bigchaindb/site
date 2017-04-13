@@ -29,6 +29,10 @@ intro:
       description: "Real-time data triggers business logic"
     - title: "Share the Story"
       description: "Trust and identity out-of-the-box with verifiable audit trails, provenance and tracking"
+
+partners:
+    title: "Proudly Trusted By"
+    description: "La la la"
 ---
 
 <header class="hero hero--enterprise">
@@ -74,40 +78,7 @@ intro:
     </div>
 </section>
 
-<section class="section section--enterprisepartners background--darker">
-    <div class="row">
-        <header class="section-header">
-            <h1 class="section-title">Proudly trusted by</h1>
-            <p class="section-description">La la la.</p>
-        </header>
-    </div>
-
-    <div class="row row--wide">
-        <article class="grid grid--full grid-small--half grid-medium--fit grid-medium--columns grid--justifycenter grid--gutters">
-
-            {% assign partners_sorted = (site.partners | sort: 'date')  %}
-
-            {% for partner in partners_sorted %}
-
-                <div class="grid__col grid__col--1">
-
-                    <a class="partner" href="{{ partner.link }}">
-                        <svg class="partner__logo partner__logo--{{ partner.slug }}" aria-labelledby="title">
-                            <title>{{ partner.title }}</title>
-                            <use xlink:href="/assets/img/sprite.svg#logo-{{ partner.slug }}"></use>
-                        </svg>
-                    </a>
-
-                </div>
-
-            {% endfor %}
-
-        </article>
-
-    </div>
-
-    </div>
-</section>
+{% include sections/section-partners.html %}
 
 <section class="section section--enterpriseedition background--photo">
     <div class="row row--wide">

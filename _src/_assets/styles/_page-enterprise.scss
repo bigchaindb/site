@@ -4,7 +4,12 @@
 // bigchaindb.com
 //
 .page-enterprise {
-
+    .section--partners {
+        @extend .background--darker;
+        .partner {
+            pointer-events: none;
+        }
+    }
 }
 
 .hero--enterprise {
