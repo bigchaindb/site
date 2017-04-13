@@ -58,11 +58,20 @@
 }
 
 .partner__logo--innogy {
-    transform: scale(1.4);
+    transform: scale(1.5);
 
     .stroke {
         fill: none;
         stroke: $brand-main-blue-light;
         stroke-width: 4px;
     }
+}
+
+.partner__logo--porsche {
+    transform: scale(1.3);
+    transform-origin: top center;
+}
+
+.partner__logo--volkswagen {
+    transform: scale(1.1);
 }
