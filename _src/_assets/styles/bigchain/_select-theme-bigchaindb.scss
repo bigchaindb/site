@@ -176,6 +176,7 @@
     }
 
     + .form-label {
-        visibility: hidden;
+        //visibility: hidden;
+        pointer-events: none;
     }
 }

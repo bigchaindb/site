@@ -42,7 +42,7 @@
         <div class="grid__col">
             <p class="form-group">
                 <select class="form-control" id="industry" name="industry" required data-required="true">
-                    <option value="">Industry</option>
+                    <option value="">&nbsp;</option>
                     <option value="Automotive">Automotive</option>
                     <option value="Banking">Banking</option>
                     <option value="Consulting">Consulting</option>
@@ -64,7 +64,7 @@
         <div class="grid__col">
             <p class="form-group">
                 <select class="form-control" id="interest" name="interest" required data-required="true">
-                    <option value="">Interested in</option>
+                    <option value="">&nbsp;</option>
                     <option value="Education">Education</option>
                     <option value="Partnership">Partnership</option>
                     <option value="Prototype">Proof-of-Concept / Prototype / Pilot</option>
@@ -79,6 +79,9 @@
     <p class="form-group">
         <textarea class="form-control" id="comment" name="comment" rows="1"></textarea>
         <label class="form-label" for="comment">Comments</label>
+    </p>
+    <p class="form-group text-dimmed mini">
+        Fields marked with an <span class="required">*</span> are required.
     </p>
     <p class="form-group">
         <input class="btn btn-primary" type="submit" value="Send">

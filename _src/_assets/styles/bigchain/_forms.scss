@@ -54,9 +54,33 @@
         cursor: disabled;
     }
 
+    //
+    // required indicator after the label
+    //
+    &:required,
+    &[required] {
+        + .form-label,
+        + .select-target + .form-label {
+            &:after {
+                content: "*";
+                @extend .required;
+            }
+        }
+    }
+
     .background--photo & {
         border-bottom-color: rgba(#fff, .5);
     }
+}
+
+
+//
+// required indicator
+//
+.required {
+    color: $brand-main-violet;
+    padding-left: .1rem;
+    padding-right: .1rem;
 }
 
 
