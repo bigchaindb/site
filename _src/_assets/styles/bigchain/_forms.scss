@@ -60,7 +60,7 @@
     &:required,
     &[required] {
         + .form-label,
-        + .select-target + .form-label {
+        + .select2-container--bigchaindb + .form-label {
             &:after {
                 content: "*";
                 @extend .required;

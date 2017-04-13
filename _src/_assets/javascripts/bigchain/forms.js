@@ -1,8 +1,7 @@
 
 //=include parsleyjs/dist/parsley.js
 //=include ../../../../node_modules/textarea-autogrow/textarea-autogrow.js
-//=include ../../../../node_modules/tether/dist/js/tether.js
-//=include ../../../../node_modules/tether-select/dist/js/select.js
+//=include ../../../../node_modules/select2/dist/js/select2.js
 
 var Forms = (function(w, d, $) {
 
@@ -48,9 +47,10 @@ var Forms = (function(w, d, $) {
             }
         },
         initSelect: function(el) {
-            Select.init({
-                className: 'select-theme-bigchaindb'
-            })
+            _config.form.find('select').select2({
+                minimumResultsForSearch: 15,
+                theme: 'bigchaindb'
+            });
         }
     }
 
