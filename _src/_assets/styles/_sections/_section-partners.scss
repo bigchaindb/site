@@ -1,14 +1,8 @@
-.section--partners {
-    .grid__col {
-        padding-right: $gutter-space;
-    }
-}
-
 .partner {
     text-align: center;
     display: block;
     box-shadow: none;
-    max-width: 150px;
+    max-width: 120px;
     margin: auto;
 
     &:hover,
@@ -31,7 +25,11 @@
     fill: $brand-main-blue-light;
     fill-opacity: .6;
     max-width: 100%;
-    height: 40px; // need to hardcode some size to overwrite browser's default 150px height for SVGs
+    height: 20px; // need to hardcode some size to overwrite browser's default 150px height for SVGs
+
+    @media ($screen-sm) {
+        height: 30px;
+    }
 }
 
 
@@ -68,8 +66,10 @@
 }
 
 .partner__logo--porsche {
-    transform: scale(1.3);
-    transform-origin: top center;
+    @media ($screen-sm) {
+        transform: scale(1.3);
+        transform-origin: top center;
+    }
 }
 
 .partner__logo--volkswagen {

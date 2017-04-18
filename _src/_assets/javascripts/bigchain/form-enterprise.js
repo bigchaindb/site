@@ -57,10 +57,10 @@ var FormEnterprise = (function(w, d, $) {
 
     app = {
         init: function() {
-            _private.formSubmit();
+            _private.formSubmit()
         }
     };
 
     return app;
 
-})(window, document, jQuery);
+})(window, document, jQuery)

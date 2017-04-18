@@ -76,4 +76,4 @@ gems:
 
 jekyll_get:
     data: countries
-    json: 'https://restcountries.eu/rest/v2/all?fields=name;alpha2Code'
+    json: 'https://raw.githubusercontent.com/mledoze/countries/master/dist/countries.json'

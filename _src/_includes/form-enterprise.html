@@ -38,7 +38,7 @@
                 <select class="form-control" id="country" name="country" required data-required="true">
                     <option value="">&nbsp;</option>
                     {% for country in site.data.countries %}
-                        <option value="{{ country.alpha2Code }}">{{ country.name }}</option>
+                        <option value="{{ country.cca2 }}">{{ country.name.common }}</option>
                     {% endfor %}
                 </select>
                 <label class="form-label" for="country">Country</label>
