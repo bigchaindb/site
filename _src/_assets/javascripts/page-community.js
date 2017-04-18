@@ -1,12 +1,10 @@
 
 //=include is-in-viewport/lib/isInViewport.js
-//=include bigchain/testimonials.js
 //=include bigchain/newsletter.js
 
 jQuery(function($) {
 
     Newsletter.init()
-    Testimonials.init()
 
     var wrigley     = $('#wrigley'),
         wrigleyArm  = wrigley.find('#arm'),
