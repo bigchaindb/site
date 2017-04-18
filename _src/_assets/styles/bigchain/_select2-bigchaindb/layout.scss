@@ -36,9 +36,14 @@
     }
 
     .select2-search--dropdown {
+        padding: 0;
+
         .select2-search__field {
-            @extend .form-control;
-            border-bottom: 1px solid $input-border-color !important;
+            @extend .form-control, .form-control--sm;
+            padding-left: $spacer;
+            padding-right: $spacer;
+            border-bottom: none !important;
+            background: rgba($input-border-color, .2);
         }
     }
 
@@ -64,7 +69,8 @@
 
     .select2-results__option {
         line-height: 1;
-        padding: $input-padding-x 1em $input-padding-x 1em;
+        padding: $input-padding-x $spacer $input-padding-x $spacer;
+        margin-bottom: 0;
         display: block;
         cursor: pointer;
         white-space: nowrap;

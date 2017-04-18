@@ -73,6 +73,11 @@
     }
 }
 
+.form-control--sm {
+    padding: $input-padding-x-sm $input-padding-y-sm;
+    font-size: $font-size-sm;
+}
+
 
 //
 // required indicator
