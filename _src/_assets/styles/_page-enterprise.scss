@@ -33,8 +33,10 @@
     @media ($screen-md) {
         height: auto;
 
-        hgroup {
+        .section-subtitle,
+        .section-description {
             max-width: 66%;
+            margin-left: 0;
         }
     }
 

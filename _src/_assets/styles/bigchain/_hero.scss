@@ -37,10 +37,23 @@ $menu-height-md: 66px;
 
         &::after { display: none; }
     }
+
+    .section-subtitle {
+        font-size: $font-size-h4;
+
+        @media ($screen-sm) {
+            font-size: $font-size-h3;
+        }
+
+        @media ($screen-md) {
+            font-size: $font-size-h2;
+        }
+    }
 }
 
     // intro animation
     .section-title,
+    .section-subtitle,
     .section-description,
     .hero__action {
         .wf-active &,
