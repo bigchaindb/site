@@ -72,3 +72,8 @@ collections:
 gems:
     - jekyll-sitemap
     - jekyll-redirect-from
+
+
+jekyll_get:
+    data: countries
+    json: 'https://restcountries.eu/rest/v2/all?fields=name;alpha2Code'
