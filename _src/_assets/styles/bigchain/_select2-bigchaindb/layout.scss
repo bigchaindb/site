@@ -10,6 +10,7 @@
         background: $gray-dark;
         color: $input-color;
         font-family: inherit;
+        font-size: $font-size-sm;
 
         // resets
         border: none;
@@ -39,7 +40,7 @@
         padding: 0;
 
         .select2-search__field {
-            @extend .form-control, .form-control--sm;
+            @extend .form-control;
             padding-left: $spacer;
             padding-right: $spacer;
             border-bottom: none !important;
@@ -68,7 +69,6 @@
     }
 
     .select2-results__option {
-        line-height: 1;
         padding: $input-padding-x $spacer $input-padding-x $spacer;
         margin-bottom: 0;
         display: block;
@@ -76,11 +76,6 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-
-        // assume first item is always the empty placeholder
-        &:first-child {
-            display: none;
-        }
 
         &[role=group] {
             padding: 0;
@@ -95,31 +90,31 @@
         }
 
         .select2-results__option {
-            padding-left: 1em;
+            padding-left: $spacer;
 
             .select2-results__group {
                 padding-left: 0;
             }
 
             .select2-results__option {
-                margin-left: -1em;
-                padding-left: 2em;
+                margin-left: -$spacer;
+                padding-left: $spacer * 2;
 
                 .select2-results__option {
-                    margin-left: -2em;
-                    padding-left: 3em;
+                    margin-left: -($spacer * 2);
+                    padding-left: $spacer * 3;
 
                     .select2-results__option {
-                        margin-left: -3em;
-                        padding-left: 4em;
+                        margin-left: -($spacer * 3);
+                        padding-left: $spacer * 4;
 
                         .select2-results__option {
-                            margin-left: -4em;
-                            padding-left: 5em;
+                            margin-left: -($spacer * 4);
+                            padding-left: $spacer * 5;
 
                             .select2-results__option {
-                                margin-left: -5em;
-                                padding-left: 6em;
+                                margin-left: -($spacer * 5);
+                                padding-left: $spacer * 6;
                             }
                         }
                     }

@@ -49,7 +49,8 @@ var Forms = (function(w, d, $) {
         initSelect: function(el) {
             _config.form.find('select').select2({
                 minimumResultsForSearch: 15,
-                theme: 'bigchaindb'
+                theme: 'bigchaindb',
+                placeholder: '\xa0' // that's &nbsp;
             });
         }
     }

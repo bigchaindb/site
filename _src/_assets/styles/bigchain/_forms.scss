@@ -4,10 +4,14 @@
 // bigchain.io
 //
 .form {
-    padding: ($spacer * 1.5) ($spacer * 2.5);
+    padding: $spacer;
     background: $gray-dark;
     border-radius: $border-radius;
     margin-bottom: $spacer;
+
+    @media ($screen-sm) {
+        padding: ($spacer * 1.5) ($spacer * 2.5);
+    }
 }
 
 .form-control {
