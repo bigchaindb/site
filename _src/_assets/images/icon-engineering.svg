@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="19" viewBox="0 0 24 19">
+  <g>
+    <path d="M23.5 16.5C23.5 17.604 22.605 18.5 21.5 18.5L2.5 18.5C1.396 18.5.5 17.604.5 16.5L.5 2.5C.5 1.396 1.396.5 2.5.5L21.5.5C22.605.5 23.5 1.396 23.5 2.5L23.5 16.5zM.5 5.5L23.5 5.5"/>
+    <circle cx="4" cy="3" r="1"/>
+    <circle cx="7" cy="3" r="1"/>
+    <circle cx="10" cy="3" r="1"/>
+    <polyline stroke="currentColor" points="5.5 9.5 8 12 5.5 14.5"/>
+    <path stroke="currentColor" d="M11.5,12.5 L15.5,12.5"/>
+  </g>
+</svg>

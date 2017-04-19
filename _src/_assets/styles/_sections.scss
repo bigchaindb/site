@@ -65,7 +65,8 @@
     margin-bottom: 0;
     color: $brand-main-gray-lighter;
 
-    + .section-description {
+    + .section-description,
+    + p {
         margin-top: $spacer;
     }
 }
@@ -121,7 +122,7 @@
 
     .feature__icon {
         stroke: darken($brand-main-green, 15%);
-        color: darken($brand-main-green, 15%);
+        color: $brand-main-violet;
     }
 
     .feature__title {

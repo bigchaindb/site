@@ -27,18 +27,25 @@ intro:
     features:
         - title: "Scale &amp; performance"
           description: "La la la...for high-throughput use cases."
+          icon: icon-cat
         - title: "Asset issuance and transfer"
           description: "La la la... in a flexible JSON data format."
+          icon: icon-cat
         - title: "Federation consensus model"
           description: "Energy efficient federation consensus mechanism with the option for pluggable consensus."
+          icon: icon-nodes
         - title: "Asset level permissioning &amp; privacy"
           description: "La la la"
+          icon: icon-cat
         - title: "Interoperability"
           description: "Interoperability with Ethereum, IPFS, Bitcoin and other protocols such as the Interledger Protocol (ILP), IPLD, COALA IP and COALA SC."
+          icon: icon-cat
         - title: "Queryability &amp; indexing"
           description: "Leverage efficient big data query capabilities out of the box."
+          icon: icon-search
         - title: "Monitoring"
           description: "Monitoring tools for nodes, caretakers and networks."
+          icon: icon-monitoring
 
 support:
     title: "Hands-on enterprise support by the best"
@@ -46,10 +53,13 @@ support:
     features:
         - title: "Training"
           description: "La la la..."
-        - title: "Use Case Development"
+          icon: icon-education
+        - title: "Use case development"
           description: "La la la..."
-        - title: "Application Engineering &amp; Deployment"
+          icon: icon-blueprint
+        - title: "Application engineering"
           description: "La la la..."
+          icon: icon-engineering
 
 contact:
     title: "Get started now"
@@ -80,16 +90,15 @@ contact:
         <header class="section-header text-left">
             <h1 class="section-title">{{ page.intro.title }}</h1>
             <p class="section-description">{{ page.intro.description }}</p>
+            <p>{{ page.intro.text }}</p>
         </header>
-
-        <p>{{ page.intro.text }}</p>
 
         <div class="grid grid--full grid-small--half grid--gutters">
             {% for feature in page.intro.features %}
                 <div class="grid__col">
                     <div class="feature">
                         <svg class="feature__icon icon">
-                            <use xlink:href="/assets/img/sprite.svg#icon-cat"></use>
+                            <use xlink:href="/assets/img/sprite.svg#{{ feature.icon }}"></use>
                         </svg>
                         <div class="feature__detail">
                             <h1 class="feature__title">{{ feature.title }}</h1>
@@ -114,7 +123,7 @@ contact:
 </section>
 
 <section class="section section--enterprisesupport background--green">
-    <div class="row row--wide">
+    <div class="row">
 
         <header class="section-header text-left">
             <h1 class="section-title">{{ page.support.title }}</h1>
@@ -126,7 +135,7 @@ contact:
                 <div class="grid__col">
                     <div class="feature">
                         <svg class="feature__icon icon">
-                            <use xlink:href="/assets/img/sprite.svg#icon-cat"></use>
+                            <use xlink:href="/assets/img/sprite.svg#{{ feature.icon }}"></use>
                         </svg>
                         <div class="feature__detail">
                             <h1 class="feature__title">{{ feature.title }}</h1>

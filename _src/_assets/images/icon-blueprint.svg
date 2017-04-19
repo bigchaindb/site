@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g>
+    <polygon points="23.5 23.479 23.5 3.656 16.53 .5 7.578 3.636 .5 .5 .52 20.323 7.562 23.458 16.53 20.323"/>
+    <polygon stroke="currentColor" points="2.5 3.927 2.5 18.984 7.562 20.989 16.53 17.984 21.5 19.942 21.5 5.396 16.53 2.979 7.578 5.979"/>
+    <path stroke="currentColor" d="M14.5,8.958 L14.5,3.66"/>
+    <polyline stroke="currentColor" points="2.5 14.328 7.656 16.216 11.5 14.896 11.5 19.67" stroke-linecap="round"/>
+    <polyline stroke="currentColor" points="14.5 18.665 14.5 13.958 16.417 13.042 21.5 15" stroke-linecap="round"/>
+    <polyline stroke="currentColor" points="2.5 7.926 7.5 9.927 11.468 8.927"/>
+    <path stroke="currentColor" d="M4.5 8.727L4.5 6.958M8.5 9.675L8.5 7.958M6.5 9.526L6.5 7.958"/>
+  </g>
+</svg>
