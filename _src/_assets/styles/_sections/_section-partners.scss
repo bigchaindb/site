@@ -30,7 +30,8 @@
 //
 .partner__logo--interledger,
 .partner__logo--iso,
-.partner__logo--din {
+.partner__logo--din,
+.partner__logo--tata {
     transform: scale(1.2);
 }
 
@@ -56,4 +57,12 @@
 
 .partner__logo--volkswagen {
     transform: scale(1.1);
+}
+
+.partner__logo--hp-enterprise {
+    transform: scale(1.6);
+
+    @media ($screen-sm) {
+        transform: scale(1.4);
+    }
 }
