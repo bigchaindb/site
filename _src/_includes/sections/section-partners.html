@@ -50,21 +50,19 @@ partners:
             {% for partner in partners_sorted %}
                 <div class="grid__col grid__col--1">
 
-                    {% if page.partners.logos %}
                     <span class="partner">
-                        <svg class="partner__logo partner__logo--{{ partner }}" aria-labelledby="title">
-                            <title>{{ partner }}</title>
-                            <use xlink:href="/assets/img/sprite.svg#logo-{{ partner }}"></use>
-                        </svg>
-                    </span>
-                    {% else %}
-                        <a class="partner" href="{{ partner.link }}">
+                        {% if page.partners.logos %}
+                            <svg class="partner__logo partner__logo--{{ partner }}" aria-labelledby="title">
+                                <title>{{ partner }}</title>
+                                <use xlink:href="/assets/img/sprite.svg#logo-{{ partner }}"></use>
+                            </svg>
+                        {% else %}
                             <svg class="partner__logo partner__logo--{{ partner.slug }}" aria-labelledby="title">
                                 <title>{{ partner.title }}</title>
                                 <use xlink:href="/assets/img/sprite.svg#logo-{{ partner.slug }}"></use>
                             </svg>
-                        </a>
-                    {% endif %}
+                        {% endif %}
+                    </span>
 
                 </div>
 

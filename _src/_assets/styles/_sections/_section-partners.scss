@@ -4,16 +4,6 @@
     box-shadow: none;
     max-width: 120px;
     margin: auto;
-
-    &:hover,
-    &:focus {
-        background: none;
-
-        .partner__logo {
-            fill: $brand-main-green;
-            fill-opacity: 1;
-        }
-    }
 }
 
 
@@ -21,7 +11,6 @@
 // All logos
 //
 .partner__logo {
-    @include transition;
     fill: $brand-main-blue-light;
     fill-opacity: .6;
     max-width: 100%;
