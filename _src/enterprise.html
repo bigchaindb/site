@@ -6,34 +6,54 @@ title: Enterprise
 js: page-enterprise.min.js
 
 hero:
-    title: "Performance, scale and geared for builders."
-    subtitle: "Bring the best of blockchain to your enterprise."
-    description: "From ideation to production, BigchainDB has the team and technology to deploy enterprise-grade applications and platforms for businesses looking to build the tools of tomorrow."
+    title: "A fast blockchain database for data driven applications."
+    description: "BigchainDB enables industry leaders to build performant &amp; scalable enterprise applications, platforms, and networks."
     cta:
-        - name: Get in touch
+        - name: Get started now
           link: "#contact"
           scroll: true
         - name: Download one-pager
           link: ""
 
-intro:
-    title: "Blockchain technology that scales"
-    description: "Blockchain systems share a single source of truth for data and assets, backed by privacy and security guarantees. Yet traditional blockchains lack the scale and speed that most enterprises need. BigchainDB takes a different approach, one that starts with a big data distributed database and then adds blockchain characteristics. The result is linear scaling, high throughput and low latency. <br><br>No other decentralized blockchain database has the advantages of scale, queryability and performance in one package."
-    benefits:
-    - title: "Ensure Interoperability"
-      description: "Unlock and integrate data from existing legacy systems."
-    - title: "Reduce costs"
-      description: "Transparency reduces costs for recalls, liability, loss and fraud."
-    - title: "Create new business models"
-      description: "Build collaborative data-centric ecosystems that unleash latent value."
-    - title: "Automate Processes"
-      description: "Real-time data triggers business logic"
-    - title: "Share the Story"
-      description: "Trust and identity out-of-the-box with verifiable audit trails, provenance and tracking"
-
 partners:
-    title: "Proudly Trusted By"
-    description: "La la la"
+    title: "Trusted by leading global companies"
+    description: "We work with partners who are deploying data-centric blockchain applications for automotive, energy, identity, IoT, intellectual property and supply chain use cases."
+
+intro:
+    title: "Designed for data-centric, high-transaction use cases."
+    description: "Whether you’re a system architect, a developer or a database specialist, BigchainDB offers the performance, scale and tooling to help you create the future."
+    text: "Traditional blockchains lack the scale and speed that most enterprises require. BigchainDB takes a different approach, one that starts with a big data distributed database and then adds blockchain characteristics. The result is linear scaling, high throughput and low latency, making data-centric and high volume use cases a breeze."
+    text2: "BigchainDB puts data at the forefront, making it the only decentralized blockchain database giving enterprises the advantages of scale, queryability and performance in one package."
+    features:
+        - title: "Scale &amp; performance"
+          description: "La la la...for high-throughput use cases."
+        - title: "Asset issuance and transfer"
+          description: "La la la... in a flexible JSON data format."
+        - title: "Federation consensus model"
+          description: "Energy efficient federation consensus mechanism with the option for pluggable consensus."
+        - title: "Asset level permissioning &amp; privacy"
+          description: "La la la"
+        - title: "Interoperability"
+          description: "Interoperability with Ethereum, IPFS, Bitcoin and other protocols such as the Interledger Protocol (ILP), IPLD, COALA IP and COALA SC."
+        - title: "Queryability &amp; Indexing"
+          description: "Leverage efficient big data query capabilities out of the box."
+        - title: "Monitoring"
+          description: "Monitoring tools for nodes, caretakers and networks."
+
+support:
+    title: "Hands-on enterprise support by the best"
+    description: "From ideation to production, we have the team and technology to deploy enterprise-grade applications and platforms for businesses looking to build the tools of tomorrow."
+    features:
+        - title: "Training"
+          description: "La la la..."
+        - title: "Use Case Development"
+          description: "La la la..."
+        - title: "Application Engineering &amp; Deployment"
+          description: "La la la..."
+
+contact:
+    title: "Get started now"
+    description: "Ready to start building with BigchainDB? Enter your details below and we'll be in touch right away."
 ---
 
 <header class="hero hero--enterprise">
@@ -43,7 +63,6 @@ partners:
     <div class="hero__content row row--wide">
         <hgroup>
             <h1 class="section-title">{{ page.hero.title }}</h1>
-            <h2 class="section-subtitle">{{ page.hero.subtitle }}</h2>
             <p class="section-description">{{ page.hero.description }}</p>
 
             {% for cta in page.hero.cta %}
@@ -54,23 +73,64 @@ partners:
 
 </header>
 
-<section class="section section--enterpriseintro">
+{% include sections/section-partners.html %}
+
+<section class="section section--enterpriseintro background--darker">
     <div class="row">
-        <header class="section-header">
+        <header class="section-header text-left">
             <h1 class="section-title">{{ page.intro.title }}</h1>
             <p class="section-description">{{ page.intro.description }}</p>
         </header>
 
+        <p>{{ page.intro.text }}</p>
+
         <div class="grid grid--full grid-small--half grid--gutters">
-            {% for benefit in page.intro.benefits %}
+            {% for feature in page.intro.features %}
                 <div class="grid__col">
                     <div class="feature">
                         <svg class="feature__icon icon">
                             <use xlink:href="/assets/img/sprite.svg#icon-cat"></use>
                         </svg>
                         <div class="feature__detail">
-                            <h1 class="feature__title">{{ benefit.title }}</h1>
-                            <p class="feature__text">{{ benefit.description }}</p>
+                            <h1 class="feature__title">{{ feature.title }}</h1>
+                            <p class="feature__text">{{ feature.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <p class="large text-center">{{ page.intro.text2 }}</p>
+
+        <p class="text-center">
+            {% for cta in page.hero.cta %}
+                {% if forloop.first %}
+                    <a class="btn btn-primary scroll" href="{{ cta.link }}">{{ cta.name }}</a>
+                {% endif %}
+            {% endfor %}
+        </p>
+
+    </div>
+</section>
+
+<section class="section section--enterprisesupport background--green">
+    <div class="row row--wide">
+
+        <header class="section-header text-left">
+            <h1 class="section-title">{{ page.support.title }}</h1>
+            <p class="section-description">{{ page.support.description }}</p>
+        </header>
+
+        <div class="grid grid--full grid-small--third grid--gutters">
+            {% for feature in page.support.features %}
+                <div class="grid__col">
+                    <div class="feature">
+                        <svg class="feature__icon icon">
+                            <use xlink:href="/assets/img/sprite.svg#icon-cat"></use>
+                        </svg>
+                        <div class="feature__detail">
+                            <h1 class="feature__title">{{ feature.title }}</h1>
+                            <p class="feature__text">{{ feature.description }}</p>
                         </div>
                     </div>
                 </div>
@@ -80,30 +140,11 @@ partners:
     </div>
 </section>
 
-{% include sections/section-partners.html %}
-
-<section class="section section--enterpriseedition background--photo">
-    <div class="row row--wide">
-
-        <div class="grid grid--full grid-small--half grid-medium--fit grid-medium--columns grid--gutters">
-            <div class="grid__col grid__col--4">
-                <header class="section-header text-left">
-                    <h1 class="section-title">BigchainDB Enterprise Edition</h1>
-                    <p class="section-description">Flexible options to bundle BigchainDB with the support, consultation and implementation you need to succeed.</p>
-                </header>
-            </div>
-            <div class="grid__col grid__col--2">
-            </div>
-        </div>
-
-    </div>
-</section>
-
 <section class="section section--enterprisecontact" id="contact">
     <div class="row">
         <header class="section-header">
-            <h1 class="section-title">Get in touch</h1>
-            <p class="section-description">La la la.</p>
+            <h1 class="section-title">{{ page.contact.title }}</h1>
+            <p class="section-description">{{ page.contact.description }}</p>
         </header>
 
         {% include form-enterprise.html %}

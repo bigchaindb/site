@@ -5,10 +5,21 @@
 //
 .page-enterprise {
     .section--partners {
-        @extend .background--darker;
         .partner {
             pointer-events: none;
         }
+    }
+
+    .feature {
+        display: block;
+    }
+
+    .feature__icon {
+        margin-top: 0;
+        margin-bottom: $spacer / 3;
+        width: 2rem;
+        height: 2rem;
+        stroke-width: 1px;
     }
 }
 
@@ -33,7 +44,7 @@
     @media ($screen-md) {
         height: auto;
 
-        .section-subtitle,
+        .section-title,
         .section-description {
             max-width: 66%;
             margin-left: 0;
@@ -52,20 +63,8 @@
 }
 
 .section--enterpriseintro {
-    .section-description {
-
-    }
-
-    .feature {
-        display: block;
-    }
-
-    .feature__icon {
-        margin-top: 0;
-        margin-bottom: $spacer / 3;
-        width: 2rem;
-        height: 2rem;
-        stroke-width: 1px;
+    .btn {
+        margin-top: $spacer * 2;
     }
 }
 

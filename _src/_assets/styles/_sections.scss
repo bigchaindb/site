@@ -105,6 +105,34 @@
     background: $brand-main-gray;
 }
 
+.background--green {
+    background: $brand-main-green;
+
+    .section-title,
+    p {
+        color: $brand-main-blue;
+    }
+
+    .section-title {
+        &:after {
+            background: darken($brand-main-green, 10%);
+        }
+    }
+
+    .feature__icon {
+        stroke: darken($brand-main-green, 15%);
+        color: darken($brand-main-green, 15%);
+    }
+
+    .feature__title {
+        color: $brand-main-blue;
+    }
+
+    .feature__text {
+        color: $brand-main-gray-lighter;
+    }
+}
+
 
 //
 // Photo background
