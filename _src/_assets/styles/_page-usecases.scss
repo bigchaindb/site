@@ -165,6 +165,12 @@
         }
     }
 
+    .testimonial__quote {
+        &:before {
+            margin-left: -1.3rem;
+        }
+    }
+
     .testimonial__avatar {
         width: 5rem;
         height: 5rem;

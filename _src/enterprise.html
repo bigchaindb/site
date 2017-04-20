@@ -24,6 +24,11 @@ intro:
     description: "Whether you’re a system architect, a developer or a database specialist, BigchainDB offers the performance, scale and tooling to help you create the future."
     text: "Traditional blockchains lack the scale and speed that most enterprises require. BigchainDB takes a different approach, one that starts with a big data distributed database and then adds blockchain characteristics. The result is linear scaling, high throughput and low latency, making data-centric and high volume use cases a breeze."
     text2: "BigchainDB puts data at the forefront, making it the only decentralized blockchain database giving enterprises the advantages of scale, queryability and performance in one package."
+    quote:
+        copy: "It takes me one day to build on BigchainDB what it took me 30 days to build on Bitcoin."
+        name: Thomas Fürstner
+        org: CEO Riddle & Code
+        image: thomas-fuerstner.jpg
     features:
         - title: "Scale &amp; performance"
           description: "La la la...for high-throughput use cases."
@@ -114,6 +119,19 @@ contact:
         <header class="section-header text-left">
             <h1 class="section-title">{{ page.intro.title }}</h1>
             <p class="section-description">{{ page.intro.description }}</p>
+
+            <figure class="testimonial">
+                <blockquote class="testimonial__quote">{{ page.intro.quote.copy }}</blockquote>
+
+                <figcaption class="testimonial__caption">
+                    <img class="testimonial__avatar" src="/assets/img/{{ page.intro.quote.image }}">
+                    <cite class="testimonial__cite">
+                        <span class="testimonial__name">{{ page.intro.quote.name }}</span>
+                        <span class="testimonial__org">{{ page.intro.quote.org }}</span>
+                    </cite>
+                </figcaption>
+            </figure>
+
             <p>{{ page.intro.text }}</p>
         </header>
 

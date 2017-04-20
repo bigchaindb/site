@@ -56,6 +56,21 @@
 }
 
 .section--enterpriseintro {
+    .testimonial {
+        @extend .large;
+        margin: $spacer * 4 auto;
+
+        @media ($screen-sm) {
+            max-width: 66%;
+        }
+    }
+
+    .testimonial__quote {
+        &:before {
+            margin-left: -1.3rem;
+        }
+    }
+
     .btn {
         margin-top: $spacer * 2;
     }
