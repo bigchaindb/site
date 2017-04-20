@@ -48,20 +48,9 @@
             <p class="form-group">
                 <select class="form-control" id="industry" name="industry" required data-required="true">
                     <option value="">&nbsp;</option>
-                    <option value="Automotive">Automotive</option>
-                    <option value="Banking">Banking</option>
-                    <option value="Consulting">Consulting</option>
-                    <option value="Data">Data</option>
-                    <option value="Energy">Energy</option>
-                    <option value="Government">Government</option>
-                    <option value="Healthcare">Healthcare</option>
-                    <option value="Identity">Identity &amp; Security</option>
-                    <option value="Insurance">Insurance</option>
-                    <option value="Information Technology">Information Technology</option>
-                    <option value="Logistics">Logistics &amp; Shipping</option>
-                    <option value="Manufacturing">Manufacturing</option>
-                    <option value="Media">Media &amp; Content</option>
-                    <option value="other">Other</option>
+                    {% for industry in page.contact.industries %}
+                        <option value="{{ industry }}">{{ industry }}</option>
+                    {% endfor %}
                 </select>
                 <label class="form-label" for="industry">Industry</label>
             </p>
@@ -70,11 +59,9 @@
             <p class="form-group">
                 <select class="form-control" id="interest" name="interest" required data-required="true">
                     <option value="">&nbsp;</option>
-                    <option value="Education">Education</option>
-                    <option value="Partnership">Partnership</option>
-                    <option value="Prototype">Proof-of-Concept / Prototype / Pilot</option>
-                    <option value="Implementation">Implementation</option>
-                    <option value="BigchainDB Enterprise Edition">BigchainDB Enterprise Subscription</option>
+                    {% for interest in page.contact.interests %}
+                        <option value="{{ interest }}">{{ interest }}</option>
+                    {% endfor %}
                 </select>
                 <label class="form-label" for="interest">Interested in</label>
             </p>

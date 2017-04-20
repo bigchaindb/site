@@ -121,8 +121,8 @@
     }
 
     .feature__icon {
-        stroke: darken($brand-main-green, 15%);
-        color: $brand-main-violet;
+        stroke: $brand-main-blue;
+        color: $brand-main-gray-lighter;
     }
 
     .feature__title {
