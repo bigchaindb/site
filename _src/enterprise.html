@@ -153,14 +153,6 @@ contact:
 
         <p class="large text-center">{{ page.intro.text2 }}</p>
 
-        <p class="text-center">
-            {% for cta in page.hero.cta %}
-                {% if forloop.first %}
-                    <a class="btn btn-primary scroll" href="{{ cta.link }}">{{ cta.name }}</a>
-                {% endif %}
-            {% endfor %}
-        </p>
-
     </div>
 </section>
 
@@ -186,6 +178,10 @@ contact:
                     </div>
                 </div>
             {% endfor %}
+        </div>
+
+        <div class="actions">
+            <a class="btn btn-blue" href="#contact">Get started now</a>
         </div>
 
     </div>
