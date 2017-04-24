@@ -1,20 +1,12 @@
 
 <form id="form-enterprise" class="form form--enterprise js-parsley" action="//formspree.io/{{ site.email.enterprise }}" method="POST" accept-charset="UTF-8">
 
-    <div class="grid grid--full grid-small--half">
+    <p class="form-group">
+        <input class="form-control" type="text" id="name" name="name" required>
+        <label class="form-label" for="name">Full Name</label>
+    </p>
 
-        <div class="grid__col">
-            <p class="form-group">
-                <input class="form-control" type="text" id="name_first" name="name_first" required>
-                <label class="form-label" for="name_first">First Name</label>
-            </p>
-        </div>
-        <div class="grid__col">
-            <p class="form-group">
-                <input class="form-control" type="text" id="name_last" name="name_last" required>
-                <label class="form-label" for="name_last">Last Name</label>
-            </p>
-        </div>
+    <div class="grid grid--full grid-small--half">
         <div class="grid__col">
             <p class="form-group">
                 <input class="form-control" type="text" id="company" name="company" required>
