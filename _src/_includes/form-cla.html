@@ -11,11 +11,23 @@
 <div class="tab-content">
 
     <div class="tab-pane active" id="individual" role="tabpanel">
-        <form id="form-cla-individuals" class="form-cla js-parsley" action="//formspree.io/{{ site.email.cla }}" method="POST">
-            <p class="form-group">
-                <input class="form-control" type="text" id="name" name="name" required>
-                <label class="form-label" for="name">Your Name</label>
-            </p>
+        <form id="form-cla-individuals" class="form--cla js-parsley" action="//formspree.io/{{ site.email.cla }}" method="POST">
+
+            <div class="grid grid--full grid-small--half">
+                <div class="grid__col">
+                    <p class="form-group">
+                        <input class="form-control" type="text" id="name_first" name="name_first" required>
+                        <label class="form-label" for="name_first">Your First Name</label>
+                    </p>
+                </div>
+                <div class="grid__col">
+                    <p class="form-group">
+                        <input class="form-control" type="text" id="name_last" name="name_last" required>
+                        <label class="form-label" for="name_last">Your Last Name</label>
+                    </p>
+                </div>
+            </div>
+
             <p class="form-group">
                 <input class="form-control" type="email" id="email" name="_replyto" required>
                 <label class="form-label" for="email">Your Email</label>
@@ -70,7 +82,7 @@
     </div>
 
     <div class="tab-pane" id="entity" role="tabpanel">
-        <form id="form-cla-entities" class="form-cla js-parsley" action="//formspree.io/{{ site.email.cla }}" method="POST" accept-charset="UTF-8">
+        <form id="form-cla-entities" class="form--cla js-parsley" action="//formspree.io/{{ site.email.cla }}" method="POST" accept-charset="UTF-8">
             <p class="form-group">
                 <input class="form-control" type="text" id="org-entity" name="org" required>
                 <label class="form-label" for="org-entity">Name of organization, foundation, company or other entity</label>
