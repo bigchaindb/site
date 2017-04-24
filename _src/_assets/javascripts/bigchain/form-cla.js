@@ -6,11 +6,11 @@ var FormCla = (function(w, d, $) {
     var app, _private, _config;
 
     _config = {
-        form:         $('.form-cla'),
-        formCheckbox: $('.form-cla').find('.agree'),
-        formBtn:      $('.form-cla').find('.btn'),
-        formURL:      $('.form-cla').attr('action'),
-        formMethod:   $('.form-cla').attr('method')
+        form:         $('.form--cla'),
+        formCheckbox: $('.form--cla').find('.agree'),
+        formBtn:      $('.form--cla').find('.btn'),
+        formURL:      $('.form--cla').attr('action'),
+        formMethod:   $('.form--cla').attr('method')
     };
 
     _private = {
