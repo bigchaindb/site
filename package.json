@@ -43,7 +43,6 @@
     "critical": "^0.8.4",
     "cross-spawn": "^5.1.0",
     "del": "^2.0.2",
-    "fs": "0.0.1-security",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-awspublish": "^3.0.0",
