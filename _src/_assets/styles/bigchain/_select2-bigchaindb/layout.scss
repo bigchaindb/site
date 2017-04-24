@@ -79,6 +79,7 @@
 
         &[role=group] {
             padding: 0;
+            border-bottom: 2px dashed $gray;
         }
 
         &[aria-disabled=true] {
@@ -89,12 +90,17 @@
             background-color: transparent;
         }
 
+        .select2-results__group {
+            padding: 6px;
+            padding-bottom: 0;
+            cursor: default;
+            display: block;
+
+            &:empty { display: none; }
+        }
+
         .select2-results__option {
             padding-left: $spacer;
-
-            .select2-results__group {
-                padding-left: 0;
-            }
 
             .select2-results__option {
                 margin-left: -$spacer;
@@ -126,11 +132,5 @@
     .select2-results__option--highlighted[aria-selected] {
         background-color: $component-active-bg;
         color: $component-active-color;
-    }
-
-    .select2-results__group {
-        cursor: default;
-        display: block;
-        padding: 6px;
     }
 }

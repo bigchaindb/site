@@ -47,11 +47,11 @@ var Forms = (function(w, d, $) {
             }
         },
         initSelect: function(el) {
-            _config.form.find('select').select2({
-                minimumResultsForSearch: 15,
-                theme: 'bigchaindb',
-                placeholder: '\xa0' // that's &nbsp;
-            });
+            $.fn.select2.defaults.set('minimumResultsForSearch', '15')
+            $.fn.select2.defaults.set('theme', 'bigchaindb')
+            $.fn.select2.defaults.set('placeholder', '\xa0') // that's &nbsp;
+
+            _config.form.find('select').select2();
         }
     }
 
