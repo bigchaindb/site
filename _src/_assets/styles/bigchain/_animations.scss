@@ -26,6 +26,26 @@ $timing-bounce:         cubic-bezier(0,1.02,.32,1.34); // easeOutBack, modified:
 //
 // Custom animations
 //
+@mixin animation-fade-in {
+    animation: fade-in .2s $timing-default;
+}
+
+.animation-fade-in {
+    @include animation-fade-in;
+
+    &.paused {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes fade-in {
+    0%   {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 // smooooothly slide in from bottom
 @mixin animation-slide-in-from-bottom {

@@ -30,6 +30,10 @@ address:
     city:               Berlin
     country:            Germany
 
+release:
+    version: "0.10"
+    post: https://blog.bigchaindb.com/bigchaindb-version-0-10-released-9684fdb2a8ff
+
 # Track all the things
 # --------------------
 analyticsID:            UA-60614729-8
