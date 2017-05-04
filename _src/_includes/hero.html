@@ -5,10 +5,30 @@
     <div class="hero__content row">
         <hgroup>
             <h1 class="section-title">{{ page.tagline }}</h1>
-            <a href="https://docs.bigchaindb.com/projects/server/en/latest/quickstart.html" class="btn btn-primary">Quick Start</a>
+            <a href="https://docs.bigchaindb.com/projects/server/en/latest/quickstart.html" class="hero__action btn btn-primary">Quick Start</a>
         </hgroup>
-
-        <a href="#features" class="scroll btn btn-link btn-sm">Learn More <svg class="icon"><use xlink:href="/assets/img/sprite.svg#icon-caret"></use></svg></a>
     </div>
+
+    <aside class="hero__community">
+        <div class="row">
+            <a class="btn btn-text btn-sm" href="{{ site.release.post }}" rel="external">Latest release: {{ site.release.version }}</a>
+
+            <a class="social-link btn btn-text btn-sm js-social-link" href="https://github.com/{{ site.github.org }}/{{ site.github.repo }}" title="Star {{ site.github.org }}/{{ site.github.repo }} on GitHub">
+                <svg class="icon icon--social icon--github" aria-labelledby="title">
+                    <title>GitHub</title>
+                    <use xlink:href="/assets/img/sprite.svg#github"></use>
+                </svg> Star <span class="stargazers" id="stargazers"></span>
+            </a>
+
+            <a class="social-link btn btn-text btn-sm js-social-link" href="https://twitter.com/{{ site.twitter }}" title="Follow {{ site.twitter }} on Twitter">
+                <svg class="icon icon--social icon--twitter" aria-labelledby="title">
+                    <title>Twitter</title>
+                    <use xlink:href="/assets/img/sprite.svg#twitter"></use>
+                </svg> Follow
+            </a>
+        </div>
+    </aside>
+
+    <a class="hero__more scroll btn btn-link btn-sm" href="#features">Learn More <svg class="icon"><use xlink:href="/assets/img/sprite.svg#icon-caret"></use></svg></a>
 
 </header>

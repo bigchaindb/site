@@ -38,36 +38,9 @@ $menu-height-md: 66px;
         &:after { display: none }
     }
 
-    .btn-link {
-        color: #fff;
-        opacity: .8;
-        position: absolute;
-        bottom: $spacer;
-        left: 0;
-        right: 0;
-        width: 100%;
-        display: none;
-
-        @media ($screen-md) {
-            display: block;
-        }
-
-        &:hover,
-        &:focus { opacity: 1; }
-
-        // the caret
-        .icon {
-            width: 12px;
-            height: 12px;
-            stroke: #fff;
-            display: block;
-            margin: auto;
-        }
-    }
-
     // intro animation
     .section-title,
-    .btn {
+    .hero__action {
         .wf-active &,
         .wf-inactive & {
             @extend .animation-slide-in-from-bottom;
@@ -75,26 +48,100 @@ $menu-height-md: 66px;
         }
     }
 
-    .btn {
+    .hero__action {
         .wf-active &,
         .wf-inactive & {
             animation-delay: .5s;
         }
     }
 
-    .btn-link {
+    .hero__community,
+    .hero__more {
         .wf-active &,
         .wf-inactive & {
+            @extend .animation-fade-in;
+            animation-fill-mode: backwards;
             animation-delay: .8s;
         }
     }
 }
 
+
 .hero__content {
+    margin-top: $spacer * 2;
     margin-bottom: $spacer * 4;
 
     @media ($screen-md) {
         align-self: flex-start;
+        margin-top: $spacer * 4;
         margin-bottom: 0;
+    }
+}
+
+
+.hero__community {
+    align-self: flex-end;
+    width: 100%;
+
+    // resemble menu background
+    background: rgba($brand-main-blue-dark, .35);
+    backdrop-filter: saturate(150%) blur(10px);
+    border-top: 1px solid rgba($brand-main-gray, .5);
+    border-bottom: 1px solid rgba($brand-main-gray, .5);
+
+    .btn {
+        font-weight: $font-weight-normal;
+        box-shadow: none;
+        background: none;
+        opacity: .8;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+
+        &:first-child {
+            display: block;
+
+            @media ($screen-sm) {
+                display: inline-block;
+            }
+        }
+    }
+
+    .stargazers {
+        font-size: .6rem;
+        line-height: 1;
+        background: rgba($brand-main-gray-lighter, .15);
+        padding: .1rem .3rem;
+        border-radius: 1rem;
+        margin-top: -.1rem;
+        display: inline;
+    }
+}
+
+
+.hero__more {
+    color: #fff;
+    opacity: .8;
+    align-self: flex-end;
+    margin-bottom: $spacer;
+    width: 100%;
+    display: none;
+
+    @media ($screen-md) {
+        display: block;
+    }
+
+    &:hover,
+    &:focus { opacity: 1; }
+
+    // the caret
+    .icon {
+        width: 12px;
+        height: 12px;
+        stroke: #fff;
+        display: block;
+        margin: auto;
     }
 }
