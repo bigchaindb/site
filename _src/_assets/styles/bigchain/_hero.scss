@@ -51,7 +51,7 @@ $menu-height-md: 66px;
     .hero__action {
         .wf-active &,
         .wf-inactive & {
-            animation-delay: .4s;
+            animation-delay: .5s;
         }
     }
 
@@ -61,7 +61,7 @@ $menu-height-md: 66px;
         .wf-inactive & {
             @extend .animation-fade-in;
             animation-fill-mode: backwards;
-            animation-delay: .6s;
+            animation-delay: .8s;
         }
     }
 }
@@ -98,6 +98,11 @@ $menu-height-md: 66px;
         &:focus {
             opacity: 1;
         }
+    }
+
+    .stargazers {
+        @extend .mini;
+        font-weight: $font-weight-light;
     }
 }
 
