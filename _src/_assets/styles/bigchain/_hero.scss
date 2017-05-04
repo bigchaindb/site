@@ -83,8 +83,8 @@ $menu-height-md: 66px;
     align-self: flex-end;
     width: 100%;
 
-    // resemble menu background
-    background: rgba($brand-main-blue-dark, .35);
+    // resemble menu background, but a bit darker background
+    background: rgba($brand-main-blue-dark, .6);
     backdrop-filter: saturate(150%) blur(10px);
     border-top: 1px solid rgba($brand-main-gray, .5);
     border-bottom: 1px solid rgba($brand-main-gray, .5);
