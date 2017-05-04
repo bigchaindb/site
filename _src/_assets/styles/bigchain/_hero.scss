@@ -68,6 +68,7 @@ $menu-height-md: 66px;
 
 
 .hero__content {
+    margin-top: $spacer * 2;
     margin-bottom: $spacer * 4;
 
     @media ($screen-md) {
@@ -79,7 +80,6 @@ $menu-height-md: 66px;
 
 
 .hero__community {
-    margin-top: $spacer * 2;
     align-self: flex-end;
     width: 100%;
 
@@ -90,6 +90,7 @@ $menu-height-md: 66px;
     border-bottom: 1px solid rgba($brand-main-gray, .5);
 
     .btn {
+        font-weight: $font-weight-normal;
         box-shadow: none;
         background: none;
         opacity: .8;
@@ -98,11 +99,24 @@ $menu-height-md: 66px;
         &:focus {
             opacity: 1;
         }
+
+        &:first-child {
+            display: block;
+
+            @media ($screen-sm) {
+                display: inline-block;
+            }
+        }
     }
 
     .stargazers {
-        @extend .mini;
-        font-weight: $font-weight-light;
+        font-size: .6rem;
+        line-height: 1;
+        background: rgba($brand-main-gray-lighter, .15);
+        padding: .1rem .3rem;
+        border-radius: 1rem;
+        margin-top: -.1rem;
+        display: inline;
     }
 }
 
