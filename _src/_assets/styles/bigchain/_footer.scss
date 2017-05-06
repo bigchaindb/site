@@ -3,5 +3,8 @@
     @extend .background--darker;
     color: $gray-light;
     padding-top: $spacer * 3;
-    padding-bottom: 0;
+
+    &.section {
+        padding-bottom: 0;
+    }
 }
