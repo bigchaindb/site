@@ -5,7 +5,7 @@
 //
 
 .btn {
-    @extend .transition;
+    @include transition;
     display: inline-block;
     font-family: $btn-font-family;
     font-weight: $btn-font-weight;
@@ -14,7 +14,7 @@
     vertical-align: middle;
     cursor: pointer;
     user-select: none;
-    border: none;
+    border: 0;
     box-shadow: none;
     @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height, $btn-border-radius);
 
@@ -31,6 +31,7 @@
         transform: translateY(0);
         box-shadow: 0 1px 2px rgba($brand-main-blue-dark, .3);
     }
+
     &.disabled,
     &:disabled {
         opacity: 0.45;
@@ -59,24 +60,31 @@ fieldset[disabled] a.btn {
 .btn-primary {
     @include button-variant($btn-primary-color, $btn-primary-bg);
 }
+
 .btn-secondary {
     @include button-variant($btn-secondary-color, $btn-secondary-bg);
 }
+
 .btn-blue {
     @include button-variant($btn-blue-color, $btn-blue-bg);
 }
+
 .btn-violet {
     @include button-variant($btn-violet-color, $btn-violet-bg);
 }
+
 .btn-info {
     @include button-variant($btn-info-color, $btn-info-bg);
 }
+
 .btn-success {
     @include button-variant($btn-success-color, $btn-success-bg);
 }
+
 .btn-warning {
     @include button-variant($btn-warning-color, $btn-warning-bg);
 }
+
 .btn-danger {
     @include button-variant($btn-danger-color, $btn-danger-bg);
 }
@@ -90,6 +98,7 @@ fieldset[disabled] a.btn {
     font-weight: normal;
     color: $link-color;
     border-radius: 0;
+
     &,
     &:active,
     &.active,
@@ -97,6 +106,7 @@ fieldset[disabled] a.btn {
         background-color: transparent;
         box-shadow: none;
     }
+
     &,
     &:hover,
     &:focus,
@@ -104,8 +114,6 @@ fieldset[disabled] a.btn {
         border-color: transparent;
         box-shadow: none;
         background: none;
-    }
-    &:disabled {
     }
 }
 
@@ -122,6 +130,7 @@ fieldset[disabled] a.btn {
         height: $font-size-lg;
     }
 }
+
 .btn-sm {
     // line-height: ensure proper height of button next to small input
     @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
@@ -131,6 +140,7 @@ fieldset[disabled] a.btn {
         height: $font-size-sm;
     }
 }
+
 .btn-xs {
     // line-height: ensure proper height of button next to small input
     @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-xs, $line-height-xs, $btn-border-radius-xs);
@@ -147,12 +157,12 @@ fieldset[disabled] a.btn {
 .btn-block {
     display: block;
     width: 100%;
+
+    + .btn-block {
+        margin-top: 5px;
+    }
 }
 
-// Vertically space out multiple block buttons
-.btn-block + .btn-block {
-    margin-top: 5px;
-}
 
 // Specificity overrides
 input[type="submit"],

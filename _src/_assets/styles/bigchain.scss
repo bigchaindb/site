@@ -5,60 +5,56 @@
 //
 
 // Normalize all the things
-@import '../../../node_modules/normalize-css/normalize';
-@import '../../../node_modules/normalize-opentype.css/normalize-opentype.scss';
+@import 'normalize-css/normalize';
+@import 'normalize-opentype.css/normalize-opentype.scss';
 
 // Variables & Mixins
-@import 'bigchain/_variables';
-@import 'bigchain/_mixins';
+@import 'bigchain/variables';
+@import 'bigchain/mixins';
+@import 'bigchain/animations';
 
 // Components
-@import 'bigchain/_typography';
-@import 'bigchain/_animations';
-@import 'bigchain/_tables';
-@import 'bigchain/_buttons';
-@import 'bigchain/_forms';
-@import 'bigchain/_input-group';
-@import 'bigchain/_logo';
-@import 'bigchain/_icons';
-@import 'bigchain/_grid';
-@import 'bigchain/_media';
-@import 'bigchain/_sections';
-@import 'bigchain/_menus';
-@import 'bigchain/_tabs';
-@import 'bigchain/_alerts';
-@import 'bigchain/_code';
-@import 'bigchain/_syntax';
-@import 'bigchain/_hero';
-@import 'bigchain/_header';
-@import 'bigchain/_footer';
-@import 'bigchain/_team';
-@import 'bigchain/_timeline';
-@import 'bigchain/_terminal';
-@import 'bigchain/_utilities';
+@import 'bigchain/typography';
+@import 'bigchain/tables';
+@import 'bigchain/buttons';
+@import 'bigchain/forms';
+@import 'bigchain/input-group';
+@import 'bigchain/logo';
+@import 'bigchain/icons';
+@import 'bigchain/grid';
+@import 'bigchain/media';
+@import 'bigchain/menus';
+@import 'bigchain/tabs';
+@import 'bigchain/alerts';
+@import 'bigchain/code';
+@import 'bigchain/syntax';
+@import 'bigchain/hero';
+@import 'bigchain/header';
+@import 'bigchain/footer';
+@import 'bigchain/team';
+@import 'bigchain/timeline';
+@import 'bigchain/terminal';
+@import 'bigchain/utilities';
 
 // Content types
-@import 'bigchain/_content-page';
-@import 'bigchain/_comments';
-@import 'bigchain/_toc';
-@import 'bigchain/_newsletter';
-@import 'bigchain/_testimonials';
+@import 'bigchain/content-page';
+@import 'bigchain/comments';
+@import 'bigchain/toc';
+@import 'bigchain/newsletter';
+@import 'bigchain/testimonials';
 
 // Section specific styles
-@import '_sections/section-cta-whitepaper';
-@import '_sections/section-cta-features';
-@import '_sections/section-cta-community';
-@import '_sections/section-partners';
+@import 'sections';
 
 // specific page styles
-@import '_page-front';
-@import '_page-whitepaper';
-@import '_page-404';
-@import '_page-styleguide';
-@import '_page-about';
-@import '_page-features';
-@import '_page-usecases';
-@import '_page-community';
-@import '_page-contact';
-@import '_page-cla';
-@import '_page-partners';
+@import 'page-front';
+@import 'page-whitepaper';
+@import 'page-404';
+@import 'page-styleguide';
+@import 'page-about';
+@import 'page-features';
+@import 'page-usecases';
+@import 'page-community';
+@import 'page-contact';
+@import 'page-cla';
+@import 'page-partners';

@@ -107,3 +107,15 @@ gulp build --production
 # deploy contents of /_dist to live
 gulp deploy --live
 ```
+
+## Coding conventions
+
+### (S)CSS
+
+Follows [Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css). Lint with [scss-lint](https://github.com/brigade/scss-lint).
+
+Rule exceptions:
+
+- indentation: 4 spaces
+- use single quotes
+- allow single line rule sets

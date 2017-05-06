@@ -10,7 +10,7 @@
 }
 
 .section-community {
-    @extend .text-center;
+    text-align: center;
     position: relative;
     // make room for wrigely
     padding-bottom: 200px;
@@ -31,7 +31,7 @@
     .social-link {
         &,
         .icon {
-            @extend .transition;
+            @include transition;
         }
 
         box-shadow: none;
@@ -131,19 +131,19 @@
 }
 
 @keyframes wrigley-wink {
-    0%   { transform: rotate(0); }
-    25%, 50%  { transform: rotate(-20deg); }
+    0% { transform: rotate(0); }
+    25%, 50% { transform: rotate(-20deg); }
     30%, 100% { transform: rotate(0); }
 }
 
 @keyframes wrigley-head-nod {
-    0%   { transform: rotate(0); }
-    25%, 50%  { transform: rotate(-2deg); }
+    0% { transform: rotate(0); }
+    25%, 50% { transform: rotate(-2deg); }
     30%, 100% { transform: rotate(0); }
 }
 
 @keyframes wrigley-blink {
-    0%   { transform: scaleY(1); }
-    50%  { transform: scaleY(0); }
+    0% { transform: scaleY(1); }
+    50% { transform: scaleY(0); }
     100% { transform: scaleY(1); }
 }

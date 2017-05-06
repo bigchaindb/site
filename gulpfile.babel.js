@@ -151,7 +151,9 @@ export const html = () => src(DIST + '**/*.html')
 //
 export const css = () => src(SRC + '_assets/styles/bigchain.scss')
     .pipe($.if(!(isProduction || isStaging), $.sourcemaps.init()))
-    .pipe($.sass().on('error', $.sass.logError))
+    .pipe($.sass({
+        includePaths: ['node_modules']
+    }).on('error', $.sass.logError))
     .pipe($.autoprefixer({ browsers: COMPATIBILITY }))
     .pipe($.if(isProduction || isStaging, $.cleanCss()))
     .pipe($.if(!(isProduction || isStaging), $.sourcemaps.write()))
@@ -188,13 +190,15 @@ export const criticalCss = (done) => {
 //
 // JavaScript
 //
-const js = () =>
+export const js = () =>
     src([
         SRC + '_assets/javascripts/bigchain.js',
         SRC + '_assets/javascripts/page-*.js'
     ])
     .pipe($.if(!(isProduction || isStaging), $.sourcemaps.init()))
-    .pipe($.include()).on('error', onError)
+    .pipe($.include({
+        includePaths: ['node_modules', SRC + '_assets/javascripts']
+    })).on('error', onError)
     .pipe($.if(isProduction || isStaging, $.uglify())).on('error', onError)
     .pipe($.if(!(isProduction || isStaging), $.sourcemaps.write()))
     .pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))

@@ -1,6 +1,6 @@
 
 $timing-default:        ease-out;
-$timing-bounce:         cubic-bezier(0,1.02,.32,1.34); // easeOutBack, modified: http://cubic-bezier.com/#0,1.02,.32,1.34
+$timing-bounce:         cubic-bezier(0, 1.02, .32, 1.34); // easeOutBack, modified: http://cubic-bezier.com/#0,1.02,.32,1.34
 
 //
 // Transitions
@@ -39,9 +39,10 @@ $timing-bounce:         cubic-bezier(0,1.02,.32,1.34); // easeOutBack, modified:
 }
 
 @keyframes fade-in {
-    0%   {
+    0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -61,10 +62,11 @@ $timing-bounce:         cubic-bezier(0,1.02,.32,1.34); // easeOutBack, modified:
 }
 
 @keyframes slide-in-from-bottom {
-    0%   {
+    0% {
         opacity: 0;
         transform: translateY(50px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);

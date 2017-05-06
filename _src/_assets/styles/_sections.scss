@@ -3,7 +3,7 @@
     padding-top: ($spacer * 3);
     padding-bottom: ($spacer * 3);
 
-    &:last-child { border-bottom: none; }
+    &:last-child { border-bottom: 0; }
 
     // use this so animated elements coming in from outside of screen
     // don't affect layout
@@ -40,12 +40,12 @@
     margin-bottom: ($spacer * 2);
 
     // the bottom line
-    &:after {
-        content: "";
+    &::after {
+        content: '';
         height: 2px;
         width: 3rem;
         display: block;
-        margin: ($spacer * 2) auto 0 auto;
+        margin: ($spacer * 2) auto 0;
         background: $gray-light;
     }
 }
@@ -100,7 +100,7 @@
 // Photo background
 //
 .background--photo {
-    @extend .color-overlay;
+    @include color-overlay;
 
     // background
     background: url('../img/hero-berlin.jpg') no-repeat top center;
@@ -112,7 +112,7 @@
     }
 
     .section-title {
-        &:after {
+        &::after {
             background: rgba($brand-main-blue-light, .5);
         }
     }
@@ -123,3 +123,12 @@
         color: #fff;
     }
 }
+
+
+//
+// Specific sections
+//
+@import '_sections/section-cta-whitepaper';
+@import '_sections/section-cta-features';
+@import '_sections/section-cta-community';
+@import '_sections/section-partners';

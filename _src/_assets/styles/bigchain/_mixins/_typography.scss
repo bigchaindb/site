@@ -1,0 +1,35 @@
+@mixin text-bold {
+    font-weight: $font-weight-bold;
+}
+
+@mixin text-light {
+    font-weight: $font-weight-light;
+}
+
+@mixin text-large {
+    font-size: floor((100% * $font-size-lg / $font-size-base));
+}
+
+@mixin text-small {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-normal;
+}
+
+@mixin text-mini {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-normal;
+}
+
+@mixin text-lead {
+    font-size: $font-size-lg;
+    color: $headings-color;
+    line-height: $line-height-lg;
+}
+
+@mixin text-dimmed {
+    color: $gray-light;
+}
+
+.text-dimmed {
+    @include text-dimmed;
+}

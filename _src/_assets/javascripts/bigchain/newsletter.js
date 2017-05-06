@@ -1,5 +1,5 @@
 
-//=include ../vendor/jquery.ajaxchimp.js
+//=include vendor/jquery.ajaxchimp.js
 
 var Newsletter = (function(w, d, $) {
 

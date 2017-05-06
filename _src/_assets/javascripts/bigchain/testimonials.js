@@ -1,5 +1,5 @@
 
-//=include ../../../../node_modules/is-in-viewport/lib/isInViewport.js
+//=include is-in-viewport/lib/isInViewport.js
 
 var Testimonials = (function(w, d, $) {
 

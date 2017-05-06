@@ -45,7 +45,7 @@
         margin-top: 0;
         margin-bottom: $spacer * 2;
 
-        &:after {
+        &::after {
             margin-left: 0;
         }
     }

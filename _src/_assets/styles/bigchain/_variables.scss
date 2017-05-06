@@ -7,15 +7,15 @@
 //
 // Colors
 //
-$brand-main-green:        #39BA91 !default;
+$brand-main-green:        #39ba91 !default;
 $brand-main-blue:         #074354 !default;
 $brand-main-gray:         #445261 !default;
-$brand-main-blue-dark:    #101A25 !default;
+$brand-main-blue-dark:    #101a25 !default;
 
-$brand-main-violet:       #B581CF !default;
-$brand-main-blue-light:   #BFE6EC !default;
-$brand-main-gray-light:   #CAD2DA !default;
-$brand-main-gray-lighter: #E8EBEF !default;
+$brand-main-violet:       #b581cf !default;
+$brand-main-blue-light:   #bfe6ec !default;
+$brand-main-gray-light:   #cad2da !default;
+$brand-main-gray-lighter: #e8ebef !default;
 
 $gray:                    $brand-main-gray !default;
 $gray-light:              lighten($brand-main-gray, 35%) !default;
@@ -25,8 +25,8 @@ $brand-primary:           $brand-main-green !default;
 
 // alerts
 $brand-success:           #388250 !default;
-$brand-info:              #3E91CE !default;
-$brand-warning:           #8E8E24 !default;
+$brand-info:              #3e91ce !default;
+$brand-warning:           #8e8e24 !default;
 $brand-danger:            #c9726a !default;
 
 
@@ -46,8 +46,8 @@ $font-size-root-lg:         20px !default;
 
 $font-size-base:            1rem !default;
 $font-size-lg:              1.3rem !default;
-$font-size-sm:              0.85rem !default;
-$font-size-xs:              0.7rem !default;
+$font-size-sm:              .85rem !default;
+$font-size-xs:              .7rem !default;
 
 $font-size-h1:              2.7rem !default;
 $font-size-h2:              2.3rem !default;

@@ -21,7 +21,7 @@
     text-align: center;
 
     &,
-    .color-meta { @extend .transition; }
+    .color-meta { @include transition; }
 
     .color-meta {
         display: block;
@@ -48,16 +48,16 @@
 
 
 // colors
-.brand-main-blue         { background: $brand-main-blue }
-.brand-main-blue-light   { background: $brand-main-blue-light }
-.brand-main-blue-dark    { background: $brand-main-blue-dark }
-.brand-main-gray         { background: $brand-main-gray }
-.brand-main-green        { background: $brand-main-green }
-.brand-main-violet       { background: $brand-main-violet }
-.brand-main-gray-light   { background: $brand-main-gray-light }
-.brand-main-gray-lighter { background: $brand-main-gray-lighter }
+.brand-main-blue         { background: $brand-main-blue; }
+.brand-main-blue-light   { background: $brand-main-blue-light; }
+.brand-main-blue-dark    { background: $brand-main-blue-dark; }
+.brand-main-gray         { background: $brand-main-gray; }
+.brand-main-green        { background: $brand-main-green; }
+.brand-main-violet       { background: $brand-main-violet; }
+.brand-main-gray-light   { background: $brand-main-gray-light; }
+.brand-main-gray-lighter { background: $brand-main-gray-lighter; }
 
-.brand-success           { background: $brand-success }
-.brand-info              { background: $brand-info }
-.brand-warning           { background: $brand-warning }
-.brand-danger            { background: $brand-danger }
+.brand-success           { background: $brand-success; }
+.brand-info              { background: $brand-info; }
+.brand-warning           { background: $brand-warning; }
+.brand-danger            { background: $brand-danger; }

@@ -4,16 +4,16 @@
     background-image: url('/assets/img/fail-cat.gif');
     background-size: cover;
     background-position: center center;
-    @extend .color-overlay;
+    @include color-overlay;
 
-    &:before {
+    &::before {
         z-index: -1;
     }
 
     .header {
         background: none;
 
-        &:before { display: none; }
+        &::before { display: none; }
     }
 
     .header__title {
@@ -21,12 +21,12 @@
         padding-bottom: 0;
 
         // the bottom line
-        &:after {
-            content: "";
+        &::after {
+            content: '';
             height: 1px;
             width: 5rem;
             display: block;
-            margin: ($spacer * 2) auto 0 auto;
+            margin: ($spacer * 2) auto 0;
             background: $brand-main-gray-light;
         }
     }

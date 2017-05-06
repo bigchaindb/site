@@ -1,5 +1,5 @@
 
-//=include ../../../../node_modules/parsleyjs/dist/parsley.js
+//=include parsleyjs/dist/parsley.js
 
 var Forms = (function(w, d, $) {
 

@@ -18,8 +18,8 @@
 
 .section-intro__main {
     @extend .text-center;
-    margin-top: $spacer;
     margin-bottom: $spacer * 4;
+    margin-top: $spacer;
 
     h3 {
         @extend .h4;
@@ -29,7 +29,7 @@
     }
 
     sub {
-        font-size: 0.85rem;
+        font-size: .85rem;
     }
 
     .icon {
@@ -38,8 +38,6 @@
         margin-bottom: $spacer;
     }
 }
-
-.section-intro__detail {}
 
 .section-quickstart__title {
     @extend .h3;

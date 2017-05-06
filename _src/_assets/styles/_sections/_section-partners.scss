@@ -2,11 +2,6 @@
     .grid__col {
         padding-right: $gutter-space;
     }
-    @media ($screen-md) {
-        .grid__col {
-
-        }
-    }
 }
 
 .partner {
@@ -32,7 +27,7 @@
 // All logos
 //
 .partner__logo {
-    @extend .transition;
+    @include transition;
     fill: $brand-main-blue-light;
     fill-opacity: .6;
     max-width: 100%;
