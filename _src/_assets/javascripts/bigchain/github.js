@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const url = 'https://bigchaindb-github.now.sh'
 
     function injectData(data) {
-        let repos = data
+        const repos = data
 
         // just grab the first item of array
         // should always be bigchaindb/bigchaindb cause of ordering by most stars
