@@ -7,8 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // just grab the first item of array
         // should always be bigchaindb/bigchaindb cause of ordering by most stars
-        stars = repos[0].stars
-        document.getElementById('stargazers').innerText = stars
+        const repo = repos[0]
+        const stars = repo.stars
+        const release = repo.release
+
+        document.getElementById('stars').innerText = stars
+        document.getElementById('release').innerText = release
     }
 
     if (self.fetch) { // feature detection
