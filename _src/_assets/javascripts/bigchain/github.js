@@ -15,7 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const release = repo.release
 
         document.getElementById('stars').innerText = stars
+        document.getElementById('stars').style.opacity = 1
         document.getElementById('release').innerText = release
+        document.getElementById('release').style.opacity = 1
     }
 
     fetch(url)

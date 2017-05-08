@@ -99,7 +99,7 @@ $menu-height-md: 66px;
         font-weight: $font-weight-normal;
         box-shadow: none;
         background: none;
-        opacity: .8;
+        opacity: .95;
 
         &:hover,
         &:focus {
@@ -113,16 +113,32 @@ $menu-height-md: 66px;
                 display: inline-block;
             }
         }
+
+        .icon {
+            transform: translateY(1px);
+        }
     }
 
-    .stargazers {
+    .stars,
+    .release {
+        display: inline-block;
+        opacity: 0;
+        transition: opacity .2s ease-out;
+    }
+
+    .stars {
         font-size: .6rem;
-        line-height: 1;
         background: rgba($brand-main-gray-lighter, .15);
         padding: .1rem .3rem;
         border-radius: 1rem;
-        margin-top: -.1rem;
-        display: inline;
+        display: inline-block;
+        transform: translateY(-1px);
+        min-width: 34px; // approx. width with 4 numbers
+    }
+
+    .release {
+        @include text-bold;
+        min-width: 44px;
     }
 }
 
