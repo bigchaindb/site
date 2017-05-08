@@ -1,32 +1,56 @@
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
 
-    var s = document.createElement('script'),
-        t = document.createElement('script'),
-        githubApiUrl = 'https://api.github.com/repos/',
-        owner = 'bigchaindb',
-        repo = 'bigchaindb';
+    const url = 'https://bigchaindb-github.now.sh'
 
-    s.async = true;
-    s.src = githubApiUrl + owner + '/' + repo + '?callback=' + owner + '.getGitHubRepoInfo';
+    function injectData(data) {
+        let repos = data
 
-    t.async = true;
-    t.src = githubApiUrl + owner + '/' + repo + '/releases/latest?callback=' + owner + '.getGitHubReleaseInfo';
+        // just grab the first item of array
+        // should always be bigchaindb/bigchaindb cause of ordering by most stars
+        stars = repos[0].stars
+        document.getElementById('stargazers').innerText = stars
+    }
 
-    window[owner] = window[owner] || {};
-    window[owner].getGitHubRepoInfo = function(response) {
+    if (self.fetch) { // feature detection
 
-        var stargazers = response.data.stargazers_count;
+        fetch(url)
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(data) {
+                injectData(data)
+            })
+            .catch(function(error) {
+                console.log(error)
+            })
 
-        document.getElementById('stargazers').innerText = stargazers;
-    };
+    } else { // fallback mainly for Safari, Fetch API only works in Safari 10.1+
 
-    window[owner].getGitHubReleaseInfo = function(response) {
+        // https://mathiasbynens.be/notes/xhr-responsetype-json
+        var getJSON = function(url) {
+            return new Promise(function(resolve, reject) {
+                var xhr = new XMLHttpRequest()
+                xhr.open('get', url, true)
+                xhr.responseType = 'json'
+                xhr.onload = function() {
+                    var status = xhr.status
+                    if (status == 200) {
+                    	resolve(xhr.response)
+                    } else {
+                    	reject(status)
+                    }
+                }
+                xhr.send()
+            })
+        }
 
-        var version = response.data.tag_name;
+        getJSON(url)
+            .then(function(data) {
+                injectData(data)
+            }, function(status) {
+                console.log(status)
+            })
 
-        document.getElementById('version').innerText = version;
-    };
+    }
 
-    document.getElementsByTagName('HEAD')[0].appendChild(s);
-    document.getElementsByTagName('HEAD')[0].appendChild(t);
-}());
+})
