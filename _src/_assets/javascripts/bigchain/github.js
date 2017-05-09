@@ -1,32 +1,34 @@
-(function() {
 
-    var s = document.createElement('script'),
-        t = document.createElement('script'),
-        githubApiUrl = 'https://api.github.com/repos/',
-        owner = 'bigchaindb',
-        repo = 'bigchaindb';
+//include whatwg-fetch/fetch.js
 
-    s.async = true;
-    s.src = githubApiUrl + owner + '/' + repo + '?callback=' + owner + '.getGitHubRepoInfo';
+document.addEventListener('DOMContentLoaded', function() {
 
-    t.async = true;
-    t.src = githubApiUrl + owner + '/' + repo + '/releases/latest?callback=' + owner + '.getGitHubReleaseInfo';
+    const url = 'https://bigchaindb-github.now.sh'
 
-    window[owner] = window[owner] || {};
-    window[owner].getGitHubRepoInfo = function(response) {
+    function injectData(data) {
+        const repos = data
 
-        var stargazers = response.data.stargazers_count;
+        // just grab the first item of array
+        // should always be bigchaindb/bigchaindb cause of ordering by most stars
+        const repo = repos[0]
+        const stars = repo.stars
+        const release = repo.release
 
-        document.getElementById('stargazers').innerText = stargazers;
-    };
+        document.getElementById('stars').innerText = stars
+        document.getElementById('stars').style.opacity = 1
+        document.getElementById('release').innerText = release
+        document.getElementById('release').style.opacity = 1
+    }
 
-    window[owner].getGitHubReleaseInfo = function(response) {
+    fetch(url)
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(data) {
+            injectData(data)
+        })
+        .catch(function(error) {
+            console.log(error)
+        })
 
-        var version = response.data.tag_name;
-
-        document.getElementById('version').innerText = version;
-    };
-
-    document.getElementsByTagName('HEAD')[0].appendChild(s);
-    document.getElementsByTagName('HEAD')[0].appendChild(t);
-}());
+})
