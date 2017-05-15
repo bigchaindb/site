@@ -50,9 +50,6 @@ console.log("")
 // Port to use for the development server
 const PORT = 1337
 
-// Browsers to target when prefixing CSS
-const COMPATIBILITY = ['last 2 versions', 'Chrome >= 30', 'Safari >= 6.1', 'Firefox >= 35', 'Opera >= 32', 'iOS >= 8', 'Android >= 4', 'ie >= 10']
-
 // paths
 const SRC      = site.source + '/',
       DIST     = site.destination + '/'
@@ -154,7 +151,7 @@ export const css = () => src(SRC + '_assets/styles/bigchain.scss')
     .pipe($.sass({
         includePaths: ['node_modules']
     }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({ browsers: COMPATIBILITY }))
+    .pipe($.autoprefixer())
     .pipe($.if(isProduction || isStaging, $.cleanCss()))
     .pipe($.if(!(isProduction || isStaging), $.sourcemaps.write()))
     .pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))

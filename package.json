@@ -13,6 +13,16 @@
     "start": "gulp",
     "build": "gulp build --production"
   },
+  "browserslist": [
+    "last 2 versions",
+    "Chrome >= 30",
+    "Safari >= 6.1",
+    "Firefox >= 35",
+    "Opera >= 32",
+    "iOS >= 8",
+    "Android >= 4",
+    "ie >= 10"
+  ],
   "dependencies": {
     "is-in-viewport": "^3.0.0",
     "jquery": "^3.1.1",
@@ -33,7 +43,7 @@
     "del": "^2.0.2",
     "fs": "0.0.1-security",
     "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-autoprefixer": "^3.0.1",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-awspublish": "^3.0.0",
     "gulp-awspublish-router": "^0.1.1",
     "gulp-clean-css": "^3.0.4",
