@@ -1,7 +1,7 @@
 
 //=include parsleyjs/dist/parsley.js
-//=include ../../../../node_modules/textarea-autogrow/textarea-autogrow.js
-//=include ../../../../node_modules/select2/dist/js/select2.js
+//=include textarea-autogrow/textarea-autogrow.js
+//=include select2/dist/js/select2.js
 
 var Forms = (function(w, d, $) {
 
