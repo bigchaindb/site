@@ -65,6 +65,13 @@ $menu-height-md: 66px;
     }
 }
 
+.hero .section-description {
+    .wf-active &,
+    .wf-inactive & {
+        animation-delay: .3s;
+    }
+}
+
 .hero__action {
     .wf-active &,
     .wf-inactive & {

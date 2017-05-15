@@ -105,7 +105,7 @@ contact:
             <p class="section-description">{{ page.hero.description }}</p>
 
             {% for cta in page.hero.cta %}
-                <a class="btn {% if cta.scroll %}scroll{% endif %}" href="{{ cta.link }}">{{ cta.name }}</a>
+                <a class="btn hero__action {% if cta.scroll %}scroll{% endif %}" href="{{ cta.link }}">{{ cta.name }}</a>
             {% endfor %}
         </hgroup>
     </div>
