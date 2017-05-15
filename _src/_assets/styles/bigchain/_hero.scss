@@ -7,7 +7,7 @@
 $menu-height-md: 66px;
 
 .hero {
-    @extend .background--photo;
+    @include background--photo();
     background-image: url('../img/hero-berlin.jpg');
     text-align: center;
     overflow: hidden;

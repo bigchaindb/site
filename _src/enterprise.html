@@ -3,6 +3,7 @@ layout: base
 
 title: Enterprise
 
+image: hero-enterprise.jpg
 js: page-enterprise.min.js
 
 hero:
@@ -95,7 +96,7 @@ contact:
 
 ---
 
-<header class="hero hero--enterprise">
+<header class="hero hero--enterprise" {% if page.image %}style="background-image:url('/assets/img/{{ page.image }}')"{% endif %}>
 
     {% include menu-main.html %}
 

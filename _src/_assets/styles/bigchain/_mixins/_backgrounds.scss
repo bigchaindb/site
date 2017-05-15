@@ -1,0 +1,84 @@
+//
+// Backgrounds
+//
+.background--blue {
+    background: $brand-main-blue;
+}
+
+.background--darker {
+    background: $gray-dark;
+}
+
+.background--light {
+    background: $brand-main-gray-lighter;
+
+    .section-title,
+    p {
+        color: $brand-main-gray;
+    }
+}
+
+.background--gray {
+    background: $brand-main-gray;
+}
+
+.background--green {
+    background: $brand-main-green;
+
+    .section-title,
+    p {
+        color: $brand-main-blue;
+    }
+
+    .section-title {
+        &:after {
+            background: darken($brand-main-green, 10%);
+        }
+    }
+
+    .feature__icon {
+        stroke: $brand-main-blue;
+        color: $brand-main-gray-lighter;
+    }
+
+    .feature__title {
+        color: $brand-main-blue;
+    }
+
+    .feature__text {
+        color: $brand-main-gray-lighter;
+    }
+}
+
+
+//
+// Photo background
+//
+@mixin background--photo() {
+    @include color-overlay;
+
+    // background
+    background: url('../img/hero-berlin.jpg') no-repeat top center;
+    background-size: cover;
+
+    .row * {
+        position: relative;
+        z-index: 5;
+    }
+
+    .section-title {
+        &::after {
+            background: rgba($brand-main-blue-light, .5);
+        }
+    }
+
+    .section-title,
+    .section-description,
+    .header__title {
+        color: #fff;
+    }
+}
+
+.background--photo {
+    @include background--photo();
+}
