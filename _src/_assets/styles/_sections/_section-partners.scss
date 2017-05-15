@@ -2,7 +2,7 @@
     text-align: center;
     display: block;
     box-shadow: none;
-    max-width: 120px;
+    max-width: 100px;
     margin: auto;
 }
 
@@ -28,10 +28,7 @@
 // using transforms so we don't affect layout
 // or have to hardcode any sizes
 //
-.partner__logo--interledger,
-.partner__logo--iso,
-.partner__logo--din,
-.partner__logo--tata {
+.partner__logo--interledger {
     transform: scale(1.2);
 }
 
@@ -56,13 +53,9 @@
 }
 
 .partner__logo--volkswagen {
-    transform: scale(1.1);
+    transform: scale(1.5);
 }
 
-.partner__logo--hp-enterprise {
-    transform: scale(1.6);
-
-    @media ($screen-sm) {
-        transform: scale(1.4);
-    }
+.partner__logo--sicpa {
+    transform: scale(1.8);
 }
