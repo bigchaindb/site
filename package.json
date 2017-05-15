@@ -13,6 +13,16 @@
     "start": "gulp",
     "build": "gulp build --production"
   },
+  "browserslist": [
+    "last 2 versions",
+    "Chrome >= 30",
+    "Safari >= 6.1",
+    "Firefox >= 35",
+    "Opera >= 32",
+    "iOS >= 8",
+    "Android >= 4",
+    "ie >= 10"
+  ],
   "dependencies": {
     "is-in-viewport": "^3.0.0",
     "jquery": "^3.1.1",
