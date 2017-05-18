@@ -142,6 +142,8 @@
 }
 
 .form--enterprise {
+    background: darken($brand-main-blue, 5%);
+
     .grid {
         @media ($screen-sm) {
             justify-content: space-between;
