@@ -7,14 +7,12 @@ image: hero-enterprise.jpg
 js: page-enterprise.min.js
 
 hero:
-    title: "A fast blockchain database for data driven applications."
+    title: "A fast blockchain database for data driven enterprise applications"
     description: "BigchainDB enables industry leaders to build performant &amp; scalable enterprise applications, platforms, and networks."
     cta:
-        - name: Get started now
+        - name: Get in touch
           link: "#contact"
           scroll: true
-        - name: Download one-pager
-          link: ""
 
 partners:
     title: "Trusted by leading global companies"
@@ -23,52 +21,39 @@ partners:
 intro:
     title: "Designed for data-centric, high-transaction use cases."
     description: "Whether you’re a system architect, a developer or a database specialist, BigchainDB offers the performance, scale and tooling to help you create the future."
+    title2: "Decentralized, secure and immutable. At Scale."
     text: "Traditional blockchains lack the scale and speed that most enterprises require. BigchainDB takes a different approach, one that starts with a big data distributed database and then adds blockchain characteristics. The result is linear scaling, high throughput and low latency, making data-centric and high volume use cases a breeze."
-    text2: "BigchainDB puts data at the forefront, making it the only decentralized blockchain database. It combines the all-important advantages of scale, queryability and performance of traditional databases with the distributed, secure and immutable nature of blockchain technology into one package."
-    quote:
-        copy: "It takes me one day to build on BigchainDB what it took me 30 days to build on Bitcoin."
-        name: Thomas Fürstner
-        org: CEO Riddle & Code
-        image: thomas-fuerstner.jpg
+    text2: "Only BigchainDB combines the all-important advantages of scale, queryability and performance of traditional databases with the distributed, secure and immutable nature of blockchain technology into one package."
     features:
-        - title: "Scale &amp; performance"
-          description: "Inherits the performance and scalability of the underlying database substrate. Customers can choose their preferred database substrate to minimize integration and interoperability barriers."
-          icon: icon-scaling
-        - title: "Asset issuance and transfer"
-          description: "Create assets using the widely accepted JSON format while maintaining the ability to add metadata to each asset with each transaction."
-          icon: icon-diamond
-        - title: "Federation consensus model"
-          description: "Efficient federation consensus mechanism allows for fast transaction confirmation within a trusted permissioned network."
-          icon: icon-nodes
-        - title: "Asset level permissioning &amp; privacy"
-          description: "Circuit inspired crypto-conditions allow business logic automation and value transfer. If/Then simple contracts can be triggered with multisig, time and hash locks."
-          icon: icon-group
-        - title: "Interoperability"
-          description: "Interoperability with Ethereum, IPFS, Bitcoin and other protocols such as the Interledger Protocol (ILP), IPLD, COALA IP and COALA SC."
+        - title: "Easy to build with"
+          description: "Build applications that speak directly to BigchainDB using our set of drivers and APIs. A powerfully simple and quick way to prototype."
+          icon: icon-wrench
+        - title: "Interoperability by design"
+          description: "Interoperability with Ethereum, IPFS, Bitcoin and other protocols such as the Interledger Protocol (ILP), IPLD, COALA IP and COALA SC mean that enterprises can develop their applications knowing that their work is future-proofed."
           icon: icon-plug
-        - title: "Queryability &amp; indexing"
-          description: "Leverage efficient big data query capabilities out of the box to search and retrieve transactions and metadata."
-          icon: icon-search
-        - title: "Monitoring"
-          description: "Monitoring tools for nodes, caretakers and permissioned networks, to allow each stakeholder to gain transparency."
-          icon: icon-monitoring
-        - title: "Easy Integration"
-          description: "Build serverless applications with JavaScript that speak directly to BigchainDB, a powerfully simple and quick way to prototype."
-          icon: icon-monitoring
+
+testimonial:
+    copy: "It takes me one day to build on BigchainDB what it took me 30 days to build on Bitcoin."
+    name: Thomas Fürstner
+    org: CEO Riddle & Code
+    image: thomas-fuerstner.jpg
 
 support:
-    title: "Hands-on production support by the best"
-    description: "From ideation to production, we have the team and technology to deploy enterprise-grade applications and platforms for businesses looking to build the tools of tomorrow."
+    title: "Hands-on production support"
+    description: "From ideation to production, we have the team and technology to help you build enterprise-grade applications and platforms."
     features:
         - title: "Ideation"
+          description: "Have some ideas but don’t know where to start? We run a 1-day workshop to help you better understand blockchain technologies and let you drill-down into the right use cases that bring the biggest benefit."
           icon: icon-education
         - title: "Use case development"
+          description: "You have a specific idea for a blockchain application? We help you build a detailed business and technical architecture that lets you move forward with confidence."
           icon: icon-blueprint
         - title: "Application engineering"
+          description: "The idea is clear. Now you need help to build a prototype to show your superiors. We can work to your needs, budget and timeline to get a demo into your hands that will  impress."
           icon: icon-engineering
 
 contact:
-    title: "Get started now"
+    title: "Get in touch"
     description: "Ready to start building with BigchainDB? Enter your details below and we'll be in touch right away."
 
     interests:
@@ -102,6 +87,12 @@ contact:
 
     <div class="hero__content row row--wide">
         <hgroup>
+            <div class="logo-enterprise">
+                <svg class="logo logo--white">
+                    <use xlink:href="/assets/img/sprite.svg#logo"></use>
+                </svg>
+                <span class="logo-enterprise--text">Enterprise</span>
+            </div>
             <h1 class="section-title">{{ page.hero.title }}</h1>
             <p class="section-description">{{ page.hero.description }}</p>
 
@@ -121,19 +112,11 @@ contact:
             <h1 class="section-title">{{ page.intro.title }}</h1>
             <p class="section-description">{{ page.intro.description }}</p>
 
-            <figure class="testimonial">
-                <blockquote class="testimonial__quote">{{ page.intro.quote.copy }}</blockquote>
-
-                <figcaption class="testimonial__caption">
-                    <img class="testimonial__avatar" src="/assets/img/{{ page.intro.quote.image }}">
-                    <cite class="testimonial__cite">
-                        <span class="testimonial__name">{{ page.intro.quote.name }}</span>
-                        <span class="testimonial__org">{{ page.intro.quote.org }}</span>
-                    </cite>
-                </figcaption>
-            </figure>
+            <h2>{{ page.intro.title2 }}</h2>
 
             <p>{{ page.intro.text }}</p>
+
+            <p>{{ page.intro.text2 }}</p>
         </header>
 
         <div class="grid grid--full grid-small--half grid--gutters">
@@ -152,18 +135,36 @@ contact:
             {% endfor %}
         </div>
 
-        <p class="large text-center">{{ page.intro.text2 }}</p>
+    </div>
+</section>
 
+<section class="section section--enterprisetestimonial background--blue">
+    <div class="row">
+        <figure class="testimonial">
+            <blockquote class="testimonial__quote">{{ page.testimonial.copy }}</blockquote>
+
+            <figcaption class="testimonial__caption">
+                <img class="testimonial__avatar" src="/assets/img/{{ page.testimonial.image }}">
+                <cite class="testimonial__cite">
+                    <span class="testimonial__name">{{ page.testimonial.name }}</span>
+                    <span class="testimonial__org">{{ page.testimonial.org }}</span>
+                </cite>
+            </figcaption>
+        </figure>
     </div>
 </section>
 
 <section class="section section--enterprisesupport background--green">
     <div class="row">
 
-        <header class="section-header text-left">
+        <header class="section-header">
             <h1 class="section-title">{{ page.support.title }}</h1>
             <p class="section-description">{{ page.support.description }}</p>
         </header>
+
+    </div>
+
+    <div class="row row--wide">
 
         <div class="grid grid--full grid-small--third grid--gutters">
             {% for feature in page.support.features %}
@@ -182,7 +183,7 @@ contact:
         </div>
 
         <div class="actions">
-            <a class="btn btn-blue" href="#contact">Get started now</a>
+            <a class="btn btn-blue" href="#contact">Get in touch</a>
         </div>
 
     </div>

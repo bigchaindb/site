@@ -4,10 +4,10 @@ main:
       url: "/features/"
     - title: Use Cases
       url: "/usecases/"
-    - title: Enterprise
-      url: "/enterprise/"
     - title: Community
       url: "/community/"
+    - title: Enterprise
+      url: "/enterprise/"
     - title: Docs
       url: https://docs.bigchaindb.com/
 

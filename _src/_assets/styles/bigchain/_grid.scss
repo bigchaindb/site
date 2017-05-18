@@ -36,7 +36,7 @@
 }
 
 .row {
-    max-width: calc(#{$screen-md-min} - #{$gutter-space * 2});
+    max-width: calc(50em - #{$gutter-space * 2});
     margin-left: auto;
     margin-right: auto;
     padding-left: ($gutter-space / 2);

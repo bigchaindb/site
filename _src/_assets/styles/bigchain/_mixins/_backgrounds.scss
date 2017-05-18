@@ -25,28 +25,35 @@
 .background--green {
     background: $brand-main-green;
 
+    &,
     .section-title,
+    .section-description,
     p {
         color: $brand-main-blue;
     }
 
     .section-title {
-        &:after {
+        &::after {
             background: darken($brand-main-green, 10%);
         }
     }
 
     .feature__icon {
         stroke: $brand-main-blue;
-        color: $brand-main-gray-lighter;
+        color: $brand-main-violet;
     }
 
     .feature__title {
         color: $brand-main-blue;
+
+        // the bottom line
+        &::after {
+            background: darken($brand-main-green, 5%);
+        }
     }
 
     .feature__text {
-        color: $brand-main-gray-lighter;
+        opacity: .75;
     }
 }
 

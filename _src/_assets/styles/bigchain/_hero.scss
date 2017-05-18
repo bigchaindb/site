@@ -57,7 +57,8 @@ $menu-height-md: 66px;
 //
 .hero .section-title,
 .hero .section-description,
-.hero__action {
+.hero__action,
+.logo-enterprise {
     .wf-active &,
     .wf-inactive & {
         @include animation-slide-in-from-bottom;
