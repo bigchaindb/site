@@ -1,0 +1,42 @@
+.ipdb {
+    text-align: center;
+    background: linear-gradient(-45deg, #114656 0%, #062e38 100%);
+    overflow: hidden;
+
+    a {
+        font-weight: $font-weight-light;
+        color: rgba(#fff, .7);
+        display: block;
+        box-shadow: none;
+        padding: $spacer;
+
+        &:hover {
+            background: none;
+            color: #fff;
+        }
+    }
+}
+
+.ipdb__content {
+    display: inline-block;
+    position: relative;
+}
+
+.ipdb-rocket {
+    fill: #fff;
+    position: absolute;
+    right: 0;
+    top: -.5rem;
+    width: 4rem;
+    height: 2.8rem;
+    opacity: .3;
+
+    @media ($screen-sm) {
+        opacity: 1;
+        right: -5rem;
+    }
+
+    @media ($screen-md) {
+
+    }
+}
