@@ -33,12 +33,6 @@ intro:
           description: "Interoperability with Ethereum, IPFS, Bitcoin and other protocols such as the Interledger Protocol (ILP), IPLD, COALA IP and COALA SC mean that enterprises can develop their applications knowing that their work is future-proofed."
           icon: icon-plug
 
-testimonial:
-    copy: "It takes me one day to build on BigchainDB what it took me 30 days to build on Bitcoin."
-    name: Thomas Fürstner
-    org: CEO Riddle & Code
-    image: thomas-fuerstner.jpg
-
 support:
     title: "Hands-on production support"
     description: "From ideation to production, we have the team and technology to help you build enterprise-grade applications and platforms."
@@ -141,14 +135,15 @@ contact:
 
 <section class="section section--enterprisetestimonial">
     <div class="row">
+
         <figure class="testimonial">
-            <blockquote class="testimonial__quote">{{ page.testimonial.copy }}</blockquote>
+            <blockquote class="testimonial__quote">{{ site.data.testimonials.set4[0].quote }}</blockquote>
 
             <figcaption class="testimonial__caption">
-                <img class="testimonial__avatar" src="/assets/img/{{ page.testimonial.image }}">
+                <img class="testimonial__avatar" src="/assets/img/{{ site.data.testimonials.set4[0].image }}">
                 <cite class="testimonial__cite">
-                    <span class="testimonial__name">{{ page.testimonial.name }}</span>
-                    <span class="testimonial__org">{{ page.testimonial.org }}</span>
+                    <span class="testimonial__name">{{ site.data.testimonials.set4[0].name }}</span>
+                    <span class="testimonial__org">{{ site.data.testimonials.set4[0].org }}</span>
                 </cite>
             </figcaption>
         </figure>
