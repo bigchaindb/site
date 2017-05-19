@@ -23,8 +23,8 @@ set1:
 
 set2:
     - name: Brian Fabian Crain
-      org: Eris Industries Limited
-      link: https://erisindustries.com/
+      org: Monax
+      link: https://monax.io
       image: brian-fabian-crain.jpg
       quote: BigchainDB is a daring attempt to create a highly scalable blockchain design
         by one of the best teams in the industry.
@@ -48,16 +48,28 @@ set3:
       image: adi-ben-ari.png
       quote: An amazing piece of work that elegantly addresses some of the biggest challenges
         that we’re all facing.
+    - name: Thor Pettersen
+      org: Internet Music
+      link: https://newinternet.media
+      image: thor-pettersen.jpg
+      quote: "I regard BigchainDB as one of the most important blockchain developments. They are bridging the gap between blockchain and the NOSQL/database world, combining the all-important search and retrieve of metadata with the distributed, secure and immutable nature of blockchain technology."
+    - name: Carsten Stöcker
+      org: RWE Innovation
+      link: http://www.rwe.com/
+      image: carsten-stoecker.jpg
+      quote: "BigchainDB is a now signature milestone: a nicely scalable blockchainified
+        database that powers decentralized processing platforms. We are excited to be
+        working with the BigchainDB team."
+
+set4:
+    - name: Thomas Fürstner
+      org: CEO Riddle & Code
+      link: http://riddleandcode.com
+      image: thomas-fuerstner.jpg
+      quote: "It takes me one day to build on BigchainDB what it took me 30 days to build on Bitcoin."
     - name: Jutta Steiner
       org: Ethcore
       link: https://ethcore.io
       image: jutta-steiner.jpg
       quote: ascribe has begun tracing their path in that direction with a blockchain
         whose storage can scale without drastically compromising on decentralisation.
-    - name: Carsten Stöcker
-      org: RWE Innovation
-      link: http://www.rwe.com/
-      image: carsten-stoecker.jpg
-      quote: 'BigchainDB is a now signature milestone: a nicely scalable blockchainified
-        database that powers decentralized processing platforms. We are excited to be
-        working with the BigchainDB team.'
