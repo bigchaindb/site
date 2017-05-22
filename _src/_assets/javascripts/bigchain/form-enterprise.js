@@ -35,7 +35,7 @@ var FormEnterprise = (function(w, d, $) {
 
                             // send GA event
                             if (!_dntEnabled()) {
-                                //GoogleAnalytics.gaEventContactSuccess();
+                                GoogleAnalytics.gaEventEnterpriseSuccess();
                             }
                         },
                         error: function(err) {
@@ -46,7 +46,7 @@ var FormEnterprise = (function(w, d, $) {
 
                             // send GA event
                             if (!_dntEnabled()) {
-                                //GoogleAnalytics.gaEventContactError();
+                                GoogleAnalytics.gaEventEnterpriseError();
                             }
                         }
                     });

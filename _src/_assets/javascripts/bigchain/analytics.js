@@ -157,6 +157,14 @@ var GoogleAnalytics = (function(w,d,$) {
         },
         gaEventClaError: function() {
             ga('send', 'event', 'cla', 'cla_form', 'error');
+        },
+
+        // Enterprise form
+        gaEventEnterpriseSuccess: function() {
+            ga('send', 'event', 'enterprise', 'enterprise_form', 'success');
+        },
+        gaEventEnterpriseError: function() {
+            ga('send', 'event', 'enterprise', 'enterprise_form', 'error');
         }
     };
 
