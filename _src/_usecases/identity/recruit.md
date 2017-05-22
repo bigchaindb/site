@@ -16,6 +16,7 @@ quote:
 company: Recruit Technologies
 slug: recruit-technologies
 industry: Identity
+pdf: recruit.pdf
 
 about:
     user: "Takeshi Nanato is a Senior Architect at Recruit Technologies Co. Ltd. Residing in Berlin, he focuses on building technical collaborations between Recruit and internet startups and managing and fostering the international entrepreneurship program for young Japanese engineers and developers. He also works in R&D for blockchain technologies and how to adopt the technology mainly to existing B2C services."
