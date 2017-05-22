@@ -15,6 +15,7 @@ quote:
 company: BenBen
 industry: Government
 bitmaplogo: logo-benben.png
+pdf: benben.pdf
 
 about:
     user: "Daniel is the cofounder and COO of BenBen. He was introduced to the blockchain in 2011 while working at Bitbox, one of North America’s first Bitcoin exchanges. From there Daniel cofounded the College Cryptocurrency Network (now the Blockchain Education Network) to fill the educational gap on Blockchain at University campuses. He is based in Accra leading product development, partnerships and client integration at BenBen."

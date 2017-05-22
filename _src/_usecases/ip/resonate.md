@@ -14,6 +14,7 @@ quote:
 
 company: Resonate
 industry: Intellectual Property
+pdf: resonate.pdf
 
 about:
     user: "As a web developer since the 90’s, Peter Harris has built hundreds of sites, working with numerous musicians from struggling artists to mid-level bands and platinum-selling superstars. Simultaneous to his day job as web developer, Peter experimented as a DJ and electronica producer. Finding many web and music publishing platforms lacking, this combination of background and insight is what led to the fundamental features being offered via Resonate."
