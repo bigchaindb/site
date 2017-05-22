@@ -2,6 +2,12 @@
     .header {
         background-position: bottom center;
     }
+
+    .section-header {
+        .icon {
+            stroke-width: 2;
+        }
+    }
 }
 
 .section--intro {
@@ -156,6 +162,12 @@
 
         @media ($screen-sm) {
             max-width: 66%;
+        }
+    }
+
+    .testimonial__quote {
+        &:before {
+            margin-left: -1.3rem;
         }
     }
 

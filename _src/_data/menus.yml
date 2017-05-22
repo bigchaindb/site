@@ -4,14 +4,16 @@ main:
       url: "/features/"
     - title: Use Cases
       url: "/usecases/"
-    - title: Whitepaper
-      url: "/whitepaper/"
     - title: Community
       url: "/community/"
+    - title: Enterprise
+      url: "/enterprise/"
     - title: Docs
       url: https://docs.bigchaindb.com/
 
 secondary:
+    - title: Whitepaper
+      url: "/whitepaper/"
     - title: About
       url: "/about/"
     - title: Contact

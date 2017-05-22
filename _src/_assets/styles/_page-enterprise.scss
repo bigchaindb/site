@@ -1,0 +1,157 @@
+//
+// Page: enterprise
+// ---
+// bigchaindb.com
+//
+.page-enterprise {
+    // Different Features unit layout
+    .feature {
+        display: block;
+    }
+
+    .feature__title {
+        margin-bottom: $spacer;
+
+        // the bottom line
+        &::after {
+            content: '';
+            height: 2px;
+            width: 3rem;
+            display: block;
+            margin-top: $spacer * $line-height;
+        }
+    }
+
+    .feature__text {
+        opacity: .75;
+    }
+
+    .feature__icon {
+        margin-top: 0;
+        margin-bottom: $spacer / 6;
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+}
+
+.hero--enterprise {
+    .logo-enterprise {
+        margin-bottom: $spacer * 2;
+
+        .logo,
+        .logo-enterprise--text {
+            opacity: .5;
+        }
+    }
+
+    .section-title {
+        .wf-active &,
+        .wf-inactive & {
+            animation-delay: .2s;
+        }
+    }
+
+    .section-description {
+        margin-bottom: $spacer * 2;
+
+        .wf-active &,
+        .wf-inactive & {
+            animation-delay: .4s;
+        }
+    }
+
+    .hero__action {
+        .wf-active &,
+        .wf-inactive & {
+            animation-delay: .6s;
+        }
+    }
+
+    .hero__content {
+        margin-top: $spacer * 6;
+        margin-bottom: $spacer * 6;
+    }
+
+    @media ($screen-md) {
+        .section-title,
+        .section-description {
+            max-width: 66%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .btn {
+        @extend .btn-secondary;
+        min-width: 220px;
+
+        &:first-of-type {
+            @extend .btn-primary;
+            margin-right: $spacer;
+        }
+    }
+}
+
+.section--enterpriseintro {
+    .grid,
+    .feature {
+        margin-bottom: 0;
+    }
+
+    .btn {
+        margin-top: $spacer * 2;
+    }
+
+    h2 {
+        @extend .h3;
+        margin-bottom: $spacer;
+    }
+
+    .feature__title {
+        // the bottom line
+        &::after {
+            background: rgba($gray-light, .4);
+        }
+    }
+}
+
+.section--enterprisetestimonial {
+    .testimonial {
+        @extend .large;
+        margin: 0 auto;
+
+        @media ($screen-sm) {
+            max-width: 66%;
+        }
+    }
+
+    .testimonial__quote {
+        &::before {
+            margin-left: -1.3rem;
+        }
+    }
+}
+
+.section--enterprisesupport {
+    .actions {
+        text-align: center;
+        margin-top: $spacer * 2;
+        padding-top: $spacer * 2;
+        border-top: 1px solid darken($brand-main-green, 5%);
+    }
+}
+
+.form--enterprise {
+    background: darken($brand-main-blue, 5%);
+
+    .grid {
+        @media ($screen-sm) {
+            justify-content: space-between;
+        }
+    }
+    .grid__col {
+        @media ($screen-sm) {
+            flex-basis: 48%;
+        }
+    }
+}

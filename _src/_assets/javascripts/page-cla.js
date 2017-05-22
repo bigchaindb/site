@@ -5,5 +5,5 @@
 jQuery(function($) {
 
     // init form
-    FormCla.init();
+    FormCla.init()
 });

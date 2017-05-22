@@ -1,11 +1,8 @@
-<svg version="1.1"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60">
-    <g>
-    	<circle stroke="currentColor" cx="11" cy="49" r="10"/>
-    	<circle stroke="currentColor" cx="49" cy="49" r="10"/>
-    	<circle stroke="currentColor" cx="30" cy="11" r="10"/>
-    	<line x1="25.5" y1="19.9" x2="15.5" y2="40.1"/>
-    	<line x1="34.5" y1="19.9" x2="44.5" y2="40.1"/>
-    	<line x1="21" y1="49" x2="39" y2="49"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25">
+  <g>
+    <circle stroke="currentColor" cx="4.5" cy="19.501" r="4"/>
+    <circle stroke="currentColor" cx="19.5" cy="19.501" r="4"/>
+    <circle stroke="currentColor" cx="12" cy="4.501" r="4"/>
+    <path d="M8.5 19.501L15.5 19.501M13.984 7.953L17.914 15.827M10 8.001L6.087 15.827"/>
+  </g>
 </svg>

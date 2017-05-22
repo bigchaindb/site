@@ -1,5 +1,5 @@
 
-<form id="form-contact" class="js-parsley" action="//formspree.io/{{ site.email.contact }}" method="POST" accept-charset="UTF-8">
+<form id="form-contact" class="form js-parsley" action="//formspree.io/{{ site.email.contact }}" method="POST" accept-charset="UTF-8">
     <p class="form-group">
         <input class="form-control" type="text" id="name" name="name" required>
         <label class="form-label" for="name">Your Name</label>
@@ -11,6 +11,9 @@
     <p class="form-group">
         <textarea class="form-control" id="comment" name="comment" rows="1" required></textarea>
         <label class="form-label" for="comment">Your Message</label>
+    </p>
+    <p class="form-group text-dimmed mini">
+        Fields marked with an <span class="required">*</span> are required.
     </p>
     <p class="form-group">
         <input class="btn btn-primary" type="submit" value="Send">

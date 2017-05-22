@@ -1,0 +1,198 @@
+---
+layout: base
+
+title: Enterprise
+
+header: hero-enterprise.jpg
+image: share-image-enterprise.jpg
+js: page-enterprise.min.js
+
+hero:
+    title: "A fast blockchain database for data driven enterprise applications"
+    description: "BigchainDB enables industry leaders to build performant &amp; scalable enterprise applications, platforms, and networks."
+    cta:
+        - name: Get in touch
+          link: "#contact"
+          scroll: true
+
+partners:
+    title: "Trusted by leading global companies"
+    description: "We work with partners who are deploying data-centric blockchain applications for automotive, energy, identity, IoT, intellectual property and supply chain use cases."
+
+intro:
+    title: "Designed for data-centric, high-transaction use cases."
+    description: "Whether you’re a system architect, a developer or a database specialist, BigchainDB offers the performance, scale and tooling to help you create the future."
+    title2: "Decentralized, secure and immutable. At Scale."
+    text: "Traditional blockchains lack the scale and speed that most enterprises require. BigchainDB takes a different approach, one that starts with a big data distributed database and then adds blockchain characteristics. The result is linear scaling, high throughput and low latency, making data-centric and high volume use cases a breeze."
+    text2: "Only BigchainDB combines the all-important advantages of scale, queryability and performance of traditional databases with the distributed, secure and immutable nature of blockchain technology into one package."
+    features:
+        - title: "Easy to build with"
+          description: "Build applications that speak directly to BigchainDB using our set of drivers and APIs. A powerfully simple and quick way to prototype."
+          icon: icon-wrench
+        - title: "Interoperability by design"
+          description: "Interoperability with Ethereum, IPFS, Bitcoin and other protocols such as the Interledger Protocol (ILP), IPLD, COALA IP and COALA SC mean that enterprises can develop their applications knowing that their work is future-proofed."
+          icon: icon-plug
+
+support:
+    title: "Hands-on production support"
+    description: "From ideation to production, we have the team and technology to help you build enterprise-grade applications and platforms."
+    features:
+        - title: "Ideation"
+          description: "Have some ideas but don’t know where to start? We run a 1-day workshop to help you better understand blockchain technologies and let you drill-down into the right use cases that bring the biggest benefit."
+          icon: icon-education
+        - title: "Use case development"
+          description: "You have a specific idea for a blockchain application? We help you build a detailed business and technical architecture that lets you move forward with confidence."
+          icon: icon-blueprint
+        - title: "Application engineering"
+          description: "The idea is clear. Now you need help to build a prototype to show your superiors. We can work to your needs, budget and timeline to get a demo into your hands that will  impress."
+          icon: icon-engineering
+
+contact:
+    title: "Get in touch"
+    description: "Ready to start building with BigchainDB? Enter your details below and we'll be in touch right away."
+
+    interests:
+        - Training
+        - Partnership
+        - Proof-of-concept / prototype / pilot
+        - Production support
+        - Other
+
+    industries:
+        - Automotive
+        - Banking
+        - Consulting
+        - Data
+        - Energy
+        - Government
+        - Healthcare
+        - Identity & security
+        - Insurance
+        - Information technology
+        - Logistics & shipping
+        - Manufacturing
+        - Media & content
+        - Other
+
+---
+
+<header class="hero hero--enterprise" {% if page.header %}style="background-image:url('/assets/img/{{ page.header }}')"{% endif %}>
+
+    {% include menu-main.html %}
+
+    <div class="hero__content row row--wide">
+        <hgroup>
+            <div class="logo-enterprise">
+                <svg class="logo logo--white">
+                    <use xlink:href="/assets/img/sprite.svg#logo"></use>
+                </svg>
+                <span class="logo-enterprise--text">Enterprise</span>
+            </div>
+            <h1 class="section-title">{{ page.hero.title }}</h1>
+            <p class="section-description">{{ page.hero.description }}</p>
+
+            {% for cta in page.hero.cta %}
+                <a class="btn hero__action {% if cta.scroll %}scroll{% endif %}" href="{{ cta.link }}">{{ cta.name }}</a>
+            {% endfor %}
+        </hgroup>
+    </div>
+
+</header>
+
+{% include sections/section-partners.html %}
+
+<section class="section section--enterpriseintro background--darker">
+    <div class="row">
+        <header class="section-header text-left">
+            <h1 class="section-title">{{ page.intro.title }}</h1>
+            <p class="section-description">{{ page.intro.description }}</p>
+
+            <h2>{{ page.intro.title2 }}</h2>
+
+            <p>{{ page.intro.text }}</p>
+
+            <p>{{ page.intro.text2 }}</p>
+        </header>
+
+        <div class="grid grid--full grid-small--half grid--gutters">
+            {% for feature in page.intro.features %}
+                <div class="grid__col">
+                    <div class="feature">
+                        <svg class="feature__icon icon">
+                            <use xlink:href="/assets/img/sprite.svg#{{ feature.icon }}"></use>
+                        </svg>
+                        <div class="feature__detail">
+                            <h1 class="feature__title">{{ feature.title }}</h1>
+                            <p class="feature__text">{{ feature.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
+<section class="section section--enterprisetestimonial">
+    <div class="row">
+
+        <figure class="testimonial">
+            <blockquote class="testimonial__quote">{{ site.data.testimonials.set4[0].quote }}</blockquote>
+
+            <figcaption class="testimonial__caption">
+                <img class="testimonial__avatar" src="/assets/img/{{ site.data.testimonials.set4[0].image }}">
+                <cite class="testimonial__cite">
+                    <span class="testimonial__name">{{ site.data.testimonials.set4[0].name }}</span>
+                    <span class="testimonial__org">{{ site.data.testimonials.set4[0].org }}</span>
+                </cite>
+            </figcaption>
+        </figure>
+    </div>
+</section>
+
+<section class="section section--enterprisesupport background--green">
+    <div class="row">
+
+        <header class="section-header">
+            <h1 class="section-title">{{ page.support.title }}</h1>
+            <p class="section-description">{{ page.support.description }}</p>
+        </header>
+
+    </div>
+
+    <div class="row row--wide">
+
+        <div class="grid grid--full grid-small--third grid--gutters">
+            {% for feature in page.support.features %}
+                <div class="grid__col">
+                    <div class="feature">
+                        <svg class="feature__icon icon">
+                            <use xlink:href="/assets/img/sprite.svg#{{ feature.icon }}"></use>
+                        </svg>
+                        <div class="feature__detail">
+                            <h1 class="feature__title">{{ feature.title }}</h1>
+                            <p class="feature__text">{{ feature.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="actions">
+            <a class="btn btn-blue" href="#contact">Get in touch</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="section section--enterprisecontact background--blue" id="contact">
+    <div class="row">
+        <header class="section-header">
+            <h1 class="section-title">{{ page.contact.title }}</h1>
+            <p class="section-description">{{ page.contact.description }}</p>
+        </header>
+
+        {% include form-enterprise.html %}
+
+    </div>
+</section>

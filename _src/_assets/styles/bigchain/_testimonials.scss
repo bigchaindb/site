@@ -42,6 +42,7 @@
     // quote characters
     &:before {
         content: "“";
+        font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
         font-size: 250%;
         color: $gray-light;
         line-height: 1;

@@ -210,7 +210,7 @@ Logo can be used with a base class and modifier classes for size & color:
 
 ### Forms
 
-<form class="js-parsley" action="#">
+<form class="form js-parsley" action="#">
     <div class="form-group">
         <input class="form-control" type="text" id="name" name="name" required>
         <label class="form-label" for="name">Your Name</label>
@@ -219,13 +219,42 @@ Logo can be used with a base class and modifier classes for size & color:
         <input class="form-control" type="email" id="email" name="email">
         <label class="form-label" for="email">Your Email</label>
     </div>
+    <div class="form-group">
+        <input class="form-control" type="tel" id="phone" name="phone">
+        <label class="form-label" for="phone">Your Phone</label>
+    </div>
+    <div class="form-group">
+        <select class="form-control" id="select" name="select" required data-required="true">
+            <option value="">&nbsp;</option>
+            <option value="Automotive">Automotive</option>
+            <option value="Banking">Banking</option>
+            <option value="Consulting">Consulting</option>
+            <option value="Data">Data</option>
+            <option value="Automotive">Automotive</option>
+            <option value="Banking">Banking</option>
+            <option value="Consulting">Consulting</option>
+            <option value="Data">Data</option>
+            <option value="Automotive">Automotive</option>
+            <option value="Banking">Banking</option>
+            <option value="Consulting">Consulting</option>
+            <option value="Data">Data</option>
+        </select>
+        <label class="form-label" for="industry">Industry</label>
+    </div>
+    <div class="form-group">
+        <textarea class="form-control" id="comment" name="comment" rows="1"></textarea>
+        <label class="form-label" for="comment">Autogrowing textarea</label>
+    </div>
+    <p class="form-group text-dimmed mini">
+        Fields marked with an <span class="required">*</span> are required.
+    </p>
     <div class="form-group">
         <input class="btn btn-primary" type="submit" value="Submit">
     </div>
 </form>
 
 ```html
-<form class="js-parsley" action="#">
+<form class="form js-parsley" action="#">
     <div class="form-group">
         <input class="form-control" type="text" id="name" name="name" required>
         <label class="form-label" for="name">Your Name</label>
@@ -234,6 +263,28 @@ Logo can be used with a base class and modifier classes for size & color:
         <input class="form-control" type="email" id="email" name="email">
         <label class="form-label" for="email">Your Email</label>
     </div>
+    <div class="form-group">
+        <input class="form-control" type="tel" id="phone" name="phone">
+        <label class="form-label" for="phone">Your Phone</label>
+    </div>
+    <div class="form-group">
+        <select class="form-control" id="select" name="select" required data-required="true">
+            <option value="">&nbsp;</option>
+            <option value="Automotive">Automotive</option>
+            <option value="Banking">Banking</option>
+            <option value="Consulting">Consulting</option>
+            <option value="Data">Data</option>
+            ...
+        </select>
+        <label class="form-label" for="industry">Industry</label>
+    </div>
+    <div class="form-group">
+        <textarea class="form-control" id="comment" name="comment" rows="1"></textarea>
+        <label class="form-label" for="comment">Autogrowing textarea</label>
+    </div>
+    <p class="form-group text-dimmed mini">
+        Fields marked with an <span class="required">*</span> are required.
+    </p>
     <div class="form-group">
         <input class="btn btn-primary" type="submit" value="Submit">
     </div>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18">
+  <g transform="translate(0 1)" >
+    <polygon points="12.767 9.533 23.499 4.934 12.767 .334 2.034 4.934"/>
+    <polyline points="6.634 7.233 6.634 12.6 12.767 15.666 18.9 12.6 18.9 7.233"/>
+    <path stroke="currentColor" d="M2,4.93355029 L2,10.2998373"/>
+    <polyline stroke="currentColor" points="2.034 10.3 .501 14.9 3.567 14.9 2.034 10.3"/>
+  </g>
+</svg>

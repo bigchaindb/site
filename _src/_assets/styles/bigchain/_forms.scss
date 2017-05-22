@@ -3,6 +3,16 @@
 // ---
 // bigchain.io
 //
+.form {
+    padding: $spacer;
+    background: $gray-dark;
+    border-radius: $border-radius;
+    margin-bottom: $spacer;
+
+    @media ($screen-sm) {
+        padding: ($spacer * 1.5) ($spacer * 2.5);
+    }
+}
 
 .form-control {
     @extend .transition;
@@ -11,9 +21,8 @@
     appearance: none;
     padding: $input-padding-x $input-padding-y;
     font-family: $input-font;
-    font-weight: $font-weight-bold;
+    font-weight: $input-font-weight;
     font-size: $font-size-base;
-    line-height: $line-height;
     color: $input-color;
     background: none;
     border: none;
@@ -49,9 +58,38 @@
         cursor: disabled;
     }
 
+    //
+    // required indicator after the label
+    //
+    &:required,
+    &[required] {
+        + .form-label,
+        + .select2-container--bigchaindb + .form-label {
+            &:after {
+                content: "*";
+                @extend .required;
+            }
+        }
+    }
+
     .background--photo & {
         border-bottom-color: rgba(#fff, .5);
     }
+}
+
+.form-control--sm {
+    padding: $input-padding-x-sm $input-padding-y-sm;
+    font-size: $font-size-sm;
+}
+
+
+//
+// required indicator
+//
+.required {
+    color: $brand-main-violet;
+    padding-left: .1rem;
+    padding-right: .1rem;
 }
 
 
@@ -75,6 +113,11 @@
     color: $input-color-placeholder;
     transform-origin: left;
 
+    // hide on selects
+    select + & {
+        visibility: hidden;
+    }
+
     .background--photo & {
         color: rgba(#fff, .5);
     }
@@ -87,7 +130,7 @@
     &:invalid:not(.is-empty) ~ .form-label,
     //&.parsley-error ~ .form-label,
     &.parsley-success ~ .form-label {
-        transform: translate3d(0, -(($spacer / 1.5) + $input-padding-x), 0) scale(.7);
+        transform: translate3d(0, -($spacer + $input-padding-x), 0) scale(.7);
         color: $input-border-focus;
     }
 }
@@ -110,6 +153,32 @@
 }
 
 
+
+//
+// Text areas
+//
+textarea.form-control {
+    // Leave resizing to js
+    // https://github.com/CodingAspect/Textarea-Autogrow#usage
+    resize: none;
+    box-sizing: content-box;
+}
+
+
+//
+// Selects
+//
+select.form-control {
+    color: $input-color-placeholder;
+    font-weight: $input-font-weight;
+
+    &:focus::-ms-value {
+        color: $input-color;
+        background-color: $input-bg;
+    }
+}
+
+
 //
 // Checkboxes and radios
 //
@@ -120,7 +189,7 @@
     margin-bottom: ($spacer * .75);
 
     label {
-        padding-left: 1.25rem;
+        padding-left: 1.75rem;
         margin-bottom: 0;
         cursor: pointer;
         // When there's no labels, don't position the input.
@@ -136,7 +205,7 @@
 .checkbox-inline input[type="checkbox"] {
     position: absolute;
     margin-bottom: -0.25rem;
-    margin-left: -1.25rem;
+    margin-left: -1.75rem;
     margin-right: 0.25rem;
 
     // reset styling, then style
@@ -223,7 +292,7 @@ input[type="checkbox"] {
 .form-control {
 
     // Success style
-    &:valid:not(.is-empty),
+    &:valid:not(.is-empty):not(select),
     &.parsley-success {
         &,
         &:focus {
@@ -254,7 +323,7 @@ input[type="checkbox"] {
     position: absolute;
     left: 0;
     bottom: 0;
-    font-size: $font-size-sm;
+    font-size: $font-size-xs;
 
     &,
     li { color: $brand-danger; }

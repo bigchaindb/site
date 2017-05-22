@@ -29,7 +29,9 @@
     "normalize-css": ">=2.3.1",
     "normalize-opentype.css": ">=0.2.4",
     "parsleyjs": "^2.0.7",
+    "select2": "^4.0.3",
     "svg4everybody": "^2.0.0",
+    "textarea-autogrow": "^1.0.0",
     "vivus": "^0.4.0",
     "whatwg-fetch": "^2.0.3"
   },
@@ -41,7 +43,6 @@
     "critical": "^0.8.4",
     "cross-spawn": "^5.1.0",
     "del": "^2.0.2",
-    "fs": "0.0.1-security",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-awspublish": "^3.0.0",

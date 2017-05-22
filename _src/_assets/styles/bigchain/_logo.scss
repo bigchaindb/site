@@ -27,6 +27,10 @@
     color: $brand-main-green;
 }
 
+.logo--dark {
+    fill: $brand-main-blue-dark;
+}
+
 
 //
 // size modifiers
@@ -43,9 +47,28 @@
 }
 
 
-//
-// color modifiers
-//
-.logo--dark {
-    fill: $brand-main-blue-dark;
+.logo-enterprise {
+    .logo {
+        @extend .logo--sm;
+        display: inline-block;
+    }
+}
+
+.logo-enterprise--text {
+    font-size: $font-size-h3 * 1.05;
+    display: inline-block;
+    color: #fff;
+    padding-left: $spacer;
+    position: relative;
+    top: -3px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: $spacer / 3;
+        width: 1px;
+        height: 100%;
+        background: $brand-main-violet;
+        display: block;
+    }
 }

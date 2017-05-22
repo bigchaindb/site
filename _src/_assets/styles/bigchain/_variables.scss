@@ -79,7 +79,7 @@ $link-hover-bg:             rgba($brand-primary, .8) !default;
 // Responsive breakpoints
 //
 $screen-sm-min:             40em !default;
-$screen-md-min:             50em !default;
+$screen-md-min:             58em !default;
 $screen-lg-min:             85em !default;
 
 $screen-sm:                 'min-width: #{$screen-sm-min}';
@@ -100,7 +100,7 @@ $border-radius-lg:       .2rem !default;
 $border-radius-sm:       .1rem !default;
 $border-radius-xs:       .1rem !default;
 
-$component-active-color: #fff !default;
+$component-active-color: $brand-main-blue !default;
 $component-active-bg:    $brand-primary !default;
 
 
@@ -195,6 +195,9 @@ $input-font-weight:              $font-weight-normal !default;
 
 $input-padding-x:                .5rem !default;
 $input-padding-y:                0 !default;
+
+$input-padding-x-sm:             .5rem !default;
+$input-padding-y-sm:             0 !default;
 
 $input-bg:                       transparent !default;
 $input-bg-disabled:              $gray-dark !default;

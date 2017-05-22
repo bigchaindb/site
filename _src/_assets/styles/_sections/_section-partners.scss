@@ -1,25 +1,9 @@
-.section-partners {
-    .grid__col {
-        padding-right: $gutter-space;
-    }
-}
-
 .partner {
     text-align: center;
     display: block;
     box-shadow: none;
-    max-width: 150px;
+    max-width: 100px;
     margin: auto;
-
-    &:hover,
-    &:focus {
-        background: none;
-
-        .partner__logo {
-            fill: $brand-main-green;
-            fill-opacity: 1;
-        }
-    }
 }
 
 
@@ -27,11 +11,14 @@
 // All logos
 //
 .partner__logo {
-    @include transition;
     fill: $brand-main-blue-light;
     fill-opacity: .6;
     max-width: 100%;
-    height: 40px; // need to hardcode some size to overwrite browser's default 150px height for SVGs
+    height: 20px; // need to hardcode some size to overwrite browser's default 150px height for SVGs
+
+    @media ($screen-sm) {
+        height: 30px;
+    }
 }
 
 
@@ -41,28 +28,34 @@
 // using transforms so we don't affect layout
 // or have to hardcode any sizes
 //
-.partner__logo--ipdb {
-    transform: scale(1.2);
-}
-
 .partner__logo--interledger {
     transform: scale(1.2);
 }
 
-.partner__logo--rethinkdb {
-    transform: translateY(.4rem);
-}
-
-.partner__logo--mongodb {
-    transform: translateY(.3rem);
+.partner__logo--recruit-technologies {
+    transform: translateY(-.3rem);
 }
 
 .partner__logo--innogy {
-    transform: scale(1.4);
+    transform: scale(1.6);
 
     .stroke {
         fill: none;
         stroke: $brand-main-blue-light;
         stroke-width: 4px;
     }
+}
+
+.partner__logo--porsche {
+    @media ($screen-sm) {
+        transform: scale(1.2);
+    }
+}
+
+.partner__logo--volkswagen {
+    transform: scale(1.5);
+}
+
+.partner__logo--sicpa {
+    transform: scale(1.8);
 }

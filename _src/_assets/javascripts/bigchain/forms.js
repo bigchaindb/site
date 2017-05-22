@@ -1,5 +1,7 @@
 
 //=include parsleyjs/dist/parsley.js
+//=include textarea-autogrow/textarea-autogrow.js
+//=include select2/dist/js/select2.js
 
 var Forms = (function(w, d, $) {
 
@@ -37,6 +39,19 @@ var Forms = (function(w, d, $) {
                     }
                 })
             })
+        },
+        initAutogrow: function() {
+            if (_config.form.find('textarea').length) {
+                var textarea = document.querySelector('textarea')
+                var growingTextarea = new Autogrow(textarea)
+            }
+        },
+        initSelect: function(el) {
+            $.fn.select2.defaults.set('minimumResultsForSearch', '15')
+            $.fn.select2.defaults.set('theme', 'bigchaindb')
+            $.fn.select2.defaults.set('placeholder', '\xa0') // that's &nbsp;
+
+            _config.form.find('select').select2();
         }
     }
 
@@ -44,6 +59,8 @@ var Forms = (function(w, d, $) {
         init: function() {
             _private.formValidation()
             _private.formEmptyValidation()
+            _private.initAutogrow()
+            _private.initSelect()
         }
     }
 

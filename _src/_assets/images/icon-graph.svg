@@ -1,19 +1,17 @@
-<svg version="1.1"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60">
-    <g>
-    	<line class="st0" x1="1" y1="59" x2="59" y2="59"/>
-    	<rect x="5" y="47" class="st0" width="8" height="12"/>
-    	<rect x="19" y="33" class="st0" width="8" height="26"/>
-    	<rect x="33" y="39" class="st0" width="8" height="20"/>
-    	<rect x="47" y="21" class="st0" width="8" height="38"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path d="M0.5,23.5 L23.5,23.5"/>
+    <rect width="3" height="5" x="1.5" y="18.5"/>
+    <rect width="3" height="10" x="7.5" y="13.5"/>
+    <rect width="3" height="8" x="13.5" y="15.5"/>
+    <rect width="3" height="15" x="19.5" y="8.5"/>
+
     <g stroke="currentColor">
-        <circle class="st0" cx="53" cy="4" r="3"/>
-        <circle class="st0" cx="38" cy="22" r="3"/>
-        <circle class="st0" cx="23" cy="16" r="3"/>
-        <circle class="st0" cx="8" cy="29" r="3"/>
-        <line class="st0" x1="10.3" y1="27" x2="20.7" y2="18"/>
-        <line class="st0" x1="25.8" y1="17.1" x2="35.2" y2="20.9"/>
-        <line class="st0" x1="39.9" y1="19.7" x2="51.1" y2="6.3"/>
+        <circle cx="3" cy="11.5" r="1"/>
+        <circle cx="9" cy="6.5" r="1"/>
+        <circle cx="15" cy="8.5" r="1"/>
+        <circle cx="21" cy="1.5" r="1"/>
+        <path d="M3.769,10.86 L8.232,7.139"/>
+        <path d="M9.945,6.815 L14.08,8.193"/>
+        <path d="M20.35,2.258 L15.65,7.74"/>
     </g>
 </svg>

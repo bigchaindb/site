@@ -32,6 +32,10 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    .text-left & {
+        text-align: left;
+    }
 }
 
 .section-title {
@@ -48,6 +52,12 @@
         margin: ($spacer * 2) auto 0;
         background: $gray-light;
     }
+
+    .text-left & {
+        &:after {
+            margin-left: 0;
+        }
+    }
 }
 
 .section-description {
@@ -55,7 +65,8 @@
     margin-bottom: 0;
     color: $brand-main-gray-lighter;
 
-    + .section-description {
+    + .section-description,
+    + p {
         margin-top: $spacer;
     }
 }
@@ -72,63 +83,10 @@
 
 
 //
-// Section backgrounds
-//
-.background--blue {
-    background: $brand-main-blue;
-}
-
-.background--darker {
-    background: $gray-dark;
-}
-
-.background--light {
-    background: $brand-main-gray-lighter;
-
-    .section-title,
-    p {
-        color: $brand-main-gray;
-    }
-}
-
-.background--gray {
-    background: $brand-main-gray;
-}
-
-
-//
-// Photo background
-//
-.background--photo {
-    @include color-overlay;
-
-    // background
-    background: url('../img/hero-berlin.jpg') no-repeat top center;
-    background-size: cover;
-
-    .row * {
-        position: relative;
-        z-index: 5;
-    }
-
-    .section-title {
-        &::after {
-            background: rgba($brand-main-blue-light, .5);
-        }
-    }
-
-    .section-title,
-    .section-description,
-    .header__title {
-        color: #fff;
-    }
-}
-
-
-//
 // Specific sections
 //
 @import '_sections/section-cta-whitepaper';
 @import '_sections/section-cta-features';
 @import '_sections/section-cta-community';
+@import '_sections/section-cta-enterprise';
 @import '_sections/section-partners';

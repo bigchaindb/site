@@ -3,21 +3,16 @@
 //=include jquery/dist/jquery.js
 
 //=include bigchain/analytics.js
-//=include bigchain/forms.js
 //=include bigchain/dnt.js
 
-//=include bigchain/form-contact.js
-//=include bigchain/newsletter.js
-
+//=include bigchain/forms.js
 
 jQuery(function($) {
 
     //
-    // init modules
+    // init global modules
     //
-    Forms.init();
-    FormContact.init();
-    Newsletter.init();
+    Forms.init()
 
     if (!_dntEnabled()) {
         GoogleAnalytics.init();

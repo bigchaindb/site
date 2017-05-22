@@ -1,26 +1,68 @@
-<section class="section section-partners">
+<!--
+//////////////////////////////////
+HEADS UP!
+
+By default, this section spits out all partners added to the `_partners` collection.
+You can limit those on a per-page basis by defining a partners.logos array in the YAML front
+matter like so:
+
+partners:
+    title: "Proudly Trusted By"
+    description: "La la la"
+    logos:
+        - innogy
+        - mongodb
+        - microsoft
+//////////////////////////////////
+-->
+
+<section class="section section--partners">
     <div class="row">
         <header class="section-header">
-            <h1 class="section-title">Partners</h1>
-            <p class="section-description">We are proud to partner and collaborate with</p>
+            <h1 class="section-title">
+                {% if page.partners.title %}
+                    {{ page.partners.title }}
+                {% else %}
+                    Partners
+                {% endif %}
+            </h1>
+            <p class="section-description">
+                {% if page.partners.description %}
+                    {{ page.partners.description }}
+                {% else %}
+                    We are proud to partner and collaborate with
+                {% endif %}
+            </p>
         </header>
     </div>
 
     <div class="row row--wide">
-        <article class="grid grid--full grid-small--half grid-medium--fit grid-medium--columns grid--justifycenter grid--gutters">
+        <article class="grid grid--half grid-medium--fit grid-medium--columns grid--justifycenter grid--gutters">
 
-            {% assign partners_sorted = (site.partners | sort: 'date')  %}
+            {% if page.partners.logos %}
+                {% assign partners_sorted = page.partners.logos  %}
+            {% else %}
+                {% assign partners_sorted = (site.partners | sort: 'date')  %}
+            {% endif %}
+
+            {% assign partners_page = page.partners %}
 
             {% for partner in partners_sorted %}
-
                 <div class="grid__col grid__col--1">
 
-                    <a class="partner" href="{{ partner.link }}">
-                        <svg class="partner__logo partner__logo--{{ partner.slug }}" aria-labelledby="title">
-                            <title>{{ partner.title }}</title>
-                            <use xlink:href="/assets/img/sprite.svg#logo-{{ partner.slug }}"></use>
-                        </svg>
-                    </a>
+                    <span class="partner">
+                        {% if page.partners.logos %}
+                            <svg class="partner__logo partner__logo--{{ partner }}" aria-labelledby="title">
+                                <title>{{ partner }}</title>
+                                <use xlink:href="/assets/img/sprite.svg#logo-{{ partner }}"></use>
+                            </svg>
+                        {% else %}
+                            <svg class="partner__logo partner__logo--{{ partner.slug }}" aria-labelledby="title">
+                                <title>{{ partner.title }}</title>
+                                <use xlink:href="/assets/img/sprite.svg#logo-{{ partner.slug }}"></use>
+                            </svg>
+                        {% endif %}
+                    </span>
 
                 </div>
 

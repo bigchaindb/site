@@ -1,24 +1,8 @@
-<svg version="1.1"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60">
-    <g>
-    	<rect x="1" y="11" class="st0" width="58" height="16"/>
-    	<polyline class="st0" points="1,11 11,1 49,1 59,11 	"/>
-    	<path class="st0" d="M1,43v11c0,2.8,2.2,5,5,5h48c2.8,0,5-2.2,5-5V43"/>
-        <polyline class="st0" points="59,27 59,43 1,43 1,27"/>
-    </g>
-    <g stroke="currentColor">
-        <circle class="st0" cx="9" cy="19" r="4"/>
-        <circle class="st0" cx="35" cy="19" r="2"/>
-        <circle class="st0" cx="43" cy="19" r="2"/>
-        <circle class="st0" cx="51" cy="19" r="2"/>
-
-        <circle class="st0" cx="9" cy="35" r="4"/>
-        <circle class="st0" cx="35" cy="35" r="2"/>
-        <circle class="st0" cx="43" cy="35" r="2"/>
-        <circle class="st0" cx="51" cy="35" r="2"/>
-        <circle class="st0" cx="35" cy="51" r="2"/>
-        <circle class="st0" cx="43" cy="51" r="2"/>
-        <circle class="st0" cx="51" cy="51" r="2"/>
-        <circle class="st0" cx="9" cy="51" r="4"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+    <path d="M21.5 6.5C21.5 7.051 21.053 7.5 20.5 7.5L1.5 7.5C.947 7.5.5 7.051.5 6.5L.5 1.5C.5.948.947.5 1.5.5L20.5.5C21.053.5 21.5.948 21.5 1.5L21.5 6.5zM8 5.5L18 5.5M8 3.5L18 3.5"/>
+    <circle stroke="currentColor" cx="4" cy="4" r="1"/>
+    <path d="M21.5 13.5C21.5 14.051 21.053 14.5 20.5 14.5L1.5 14.5C.947 14.5.5 14.051.5 13.5L.5 8.5C.5 7.948.947 7.5 1.5 7.5L20.5 7.5C21.053 7.5 21.5 7.948 21.5 8.5L21.5 13.5zM8 12.5L18 12.5M8 10.5L18 10.5"/>
+    <circle stroke="currentColor" cx="4" cy="11" r="1"/>
+    <path d="M21.5 20.5C21.5 21.051 21.053 21.5 20.5 21.5L1.5 21.5C.947 21.5.5 21.051.5 20.5L.5 15.5C.5 14.948.947 14.5 1.5 14.5L20.5 14.5C21.053 14.5 21.5 14.948 21.5 15.5L21.5 20.5zM8 19.5L18 19.5M8 17.5L18 17.5"/>
+    <circle stroke="currentColor" cx="4" cy="18" r="1"/>
 </svg>

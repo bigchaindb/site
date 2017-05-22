@@ -7,7 +7,7 @@
 $menu-height-md: 66px;
 
 .hero {
-    @extend .background--photo;
+    @include background--photo();
     background-image: url('../img/hero-berlin.jpg');
     text-align: center;
     overflow: hidden;
@@ -37,6 +37,18 @@ $menu-height-md: 66px;
 
         &::after { display: none; }
     }
+
+    .section-subtitle {
+        font-size: $font-size-h4;
+
+        @media ($screen-sm) {
+            font-size: $font-size-h3;
+        }
+
+        @media ($screen-md) {
+            font-size: $font-size-h2;
+        }
+    }
 }
 
 
@@ -44,11 +56,20 @@ $menu-height-md: 66px;
 // intro animation
 //
 .hero .section-title,
-.hero__action {
+.hero .section-description,
+.hero__action,
+.logo-enterprise {
     .wf-active &,
     .wf-inactive & {
         @include animation-slide-in-from-bottom;
         animation-fill-mode: backwards;
+    }
+}
+
+.hero .section-description {
+    .wf-active &,
+    .wf-inactive & {
+        animation-delay: .3s;
     }
 }
 
