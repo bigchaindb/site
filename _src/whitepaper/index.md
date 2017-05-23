@@ -8,12 +8,14 @@ description: 'This paper describes BigchainDB. BigchainDB fills a gap in the dec
 image: photo3.jpg
 
 whitepaper:
-    title: Full Whitepaper
-    text: Download the full whitepaper.
-    updated: 2016-06-08
+    title: Whitepaper downloads
+    text: The whitepaper is no longer a living document. Significant changes made since June 8, 2016 are noted in an Addendum attached at the end.
+    updated: 2017-05-23
     files:
         - file: bigchaindb-whitepaper.pdf
-          button: Download PDF
+          button: Download whitepaper (pdf)
+        - file: bigchaindb-primer.pdf
+          button: Download primer (pdf)
 ---
 
 *by <br>Trent McConaghy, Rodolphe Marques, Andreas Müller, Dimitri De Jonghe, Troy McConaghy, Greg McMullen, Ryan Henderson, Sylvain Bellemare, Alberto Granzotto*
