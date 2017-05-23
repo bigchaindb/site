@@ -9,4 +9,5 @@ end
 
 group :jekyll_plugins do
     gem 'hash-joiner'
+    gem 'simple-rss'
 end

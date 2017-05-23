@@ -1,0 +1,24 @@
+<section class="section section--blog background--light">
+    <div class="row row--wide">
+        <header class="section-header">
+            <h1 class="section-title">Hot off the blog</h1>
+        </header>
+
+        <div class="grid grid--full grid-medium--fit grid--gutters">
+            {% for article in site.blog | limit: 3 %}
+                <div class="grid__col">
+                    <a class="article article--{{ article.title | downcase | truncatewords: 3, '' | replace: ' ', '-' }}" href="{{ article.link }}">
+
+                        <!-- <img src="{{ article.image }}" alt="{{ article.title }}"> -->
+
+                        <h1 class="article__title">
+                            {{ article.title }}
+                        </h1>
+                        <p>{{ article.description }}</p>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
