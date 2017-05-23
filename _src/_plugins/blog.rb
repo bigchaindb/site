@@ -14,24 +14,25 @@ module Jekyll
 
           rss_items = SimpleRSS.parse open('https://blog.bigchaindb.com/feed/')
 
-          # Create a new on-the-fly Jekyll collection called "blog"
-          jekyll_items = Jekyll::Collection.new(site, 'blog')
-          site.collections['blog'] = jekyll_items
+          # Create a new on-the-fly Jekyll collection called "articles"
+          jekyll_items = Jekyll::Collection.new(site, 'articles')
+          site.collections['articles'] = jekyll_items
 
           # Add fake virtual documents to the collection
           rss_items.items.each do |item|
-             title = item.title
-             description = item.description
-             link = item.link
-             image = item.media_content_url
-             path = "_rss/" + title.to_s.gsub(':','_') + ".md"
-             path = site.in_source_dir(path)
-             doc = Jekyll::Document.new(path, site: site, collection: jekyll_items)
-             doc.data['title'] = title
-             doc.data['description'] = description
-             doc.data['link'] = link
-             doc.data['image'] = image
-             jekyll_items.docs << doc
+            title = item.title
+            link = item.link
+
+            # Medium hack: get first image in content, then get smaller image size
+            image = item.content_encoded[/img.*?src="(.*?)"/i,1].gsub(/max\/(.*)\//, "max/500/")
+
+            path = '_articles/' + title.to_s.gsub(':','_') + '.md'
+            path = site.in_source_dir(path)
+            doc = Jekyll::Document.new(path, site: site, collection: jekyll_items)
+            doc.data['title'] = title
+            doc.data['link'] = link
+            doc.data['image'] = image
+            jekyll_items.docs << doc
           end
 
        end

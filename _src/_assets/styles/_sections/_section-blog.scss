@@ -3,9 +3,31 @@
 }
 
 .article {
+    @include color-overlay;
+    @include transition;
+    background-size: cover;
+    background-position: center;
+    padding: $spacer;
+    border-radius: $border-radius;
+    overflow: hidden;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    min-height: 7rem;
 
+    &:hover,
+    &:focus {
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 2px 5px rgba($brand-main-blue-dark, .2);
+        transform: translateY(-1px);
+    }
 }
 
 .article__title {
-    @extend .h6;
+    @extend .h6, .transition;
+    margin: 0;
+    color: #fff;
+    position: relative;
+    z-index: 1;
 }
