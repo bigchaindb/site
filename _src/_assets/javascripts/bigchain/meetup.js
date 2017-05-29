@@ -12,8 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const name = nextEvent.name
         const link = nextEvent.link
         const date = nextEvent.time
+        const element = document.getElementsByClassName('js-social-link--meetup')[0]
 
         console.log(nextEvent)
+
+        document.getElementsByClassName('meetup-title')[0].innerText = 'Next meetup: ' + name
+        document.getElementsByClassName('meetup-title')[0].style.opacity = 1
+        document.getElementsByClassName('js-social-link--meetup')[0].href = link
     }
 
     fetch(url)

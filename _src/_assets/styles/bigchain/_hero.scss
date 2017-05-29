@@ -141,7 +141,8 @@ $menu-height-md: 66px;
     }
 
     .stars,
-    .release {
+    .release,
+    .meetup-title {
         display: inline-block;
         opacity: 0;
         transition: opacity .2s ease-out;
@@ -160,6 +161,9 @@ $menu-height-md: 66px;
     .release {
         @include text-bold;
         min-width: 44px;
+    }
+
+    .meetup-title {
     }
 }
 
