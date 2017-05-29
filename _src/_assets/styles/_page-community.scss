@@ -34,6 +34,7 @@
             @include transition;
         }
 
+        display: inline-block;
         box-shadow: none;
         padding: $btn-padding-y-sm $btn-padding-x-sm;
 
@@ -71,6 +72,13 @@
                 stroke: $brand-primary;
             }
         }
+    }
+
+    .social-link__title {
+        @include text-small;
+        color: $brand-primary;
+        display: block;
+        text-align: center;
     }
 }
 

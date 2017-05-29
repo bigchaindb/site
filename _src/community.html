@@ -16,55 +16,24 @@ quotes: set3
         <header class="section-header">
             <p class="section-description">There are many ways you can contribute to the BigchainDB project, some very easy and others more involved. We welcome all potential contributors, so we ask that everyone participating abide by some simple guidelines.</p>
 
-            <a href="https://github.com/{{ site.github.org }}/bigchaindb/blob/master/CONTRIBUTING.md" class="btn btn-primary btn-sm">Read The Guidelines</a>
+            <a href="{{ site.social.github.url }}/{{ site.social.github.repo }}/blob/master/CONTRIBUTING.md" class="btn btn-primary btn-sm">Read The Guidelines</a>
         </header>
 
         <div class="grid grid--full grid-small--fit grid--gutters">
             <div class="grid__col">
                 <h1>Follow</h1>
                 <p>Follow us for the latest updates</p>
-                <a class="social-link js-social-link" href="https://gitter.im/{{ site.gitter }}" title="Gitter">
-                    <svg class="icon icon--social icon--gitter" aria-labelledby="title">
-                        <title>Gitter</title>
-                        <use xlink:href="/assets/img/sprite.svg#gitter"></use>
-                    </svg>
-                </a>
-                <a class="social-link js-social-link" href="https://github.com/{{ site.github.org }}" title="GitHub">
-                    <svg class="icon icon--social icon--github" aria-labelledby="title">
-                        <title>GitHub</title>
-                        <use xlink:href="/assets/img/sprite.svg#github"></use>
-                    </svg>
-                </a>
-                <a class="social-link js-social-link" href="https://twitter.com/{{ site.twitter }}" title="Twitter">
-                    <svg class="icon icon--social icon--twitter" aria-labelledby="title">
-                        <title>Twitter</title>
-                        <use xlink:href="/assets/img/sprite.svg#twitter"></use>
-                    </svg>
-                </a>
-                <a class="social-link js-social-link" href="https://medium.com/{{ site.medium }}" title="Medium">
-                    <svg class="icon icon--social icon--blog" aria-labelledby="title">
-                        <title>Medium</title>
-                        <use xlink:href="/assets/img/sprite.svg#medium"></use>
-                    </svg>
-                </a>
-                <a class="social-link js-social-link" href="https://www.meetup.com/{{ site.meetup }}" title="Meetup">
-                    <svg class="icon icon--social icon--meetup" aria-labelledby="title">
-                        <title>Meetup</title>
-                        <use xlink:href="/assets/img/sprite.svg#meetup"></use>
-                    </svg>
-                </a>
-                <a class="social-link js-social-link" href="https://www.linkedin.com/company/{{ site.linkedin }}" title="LinkedIn">
-                    <svg class="icon icon--social icon--linkedin" aria-labelledby="title">
-                        <title>LinkedIn</title>
-                        <use xlink:href="/assets/img/sprite.svg#linkedin"></use>
-                    </svg>
-                </a>
-                <a class="social-link js-social-link" href="https://www.youtube.com/channel/{{ site.youtube }}" title="YouTube">
-                    <svg class="icon icon--social icon--youtube" aria-labelledby="title">
-                        <title>YouTube</title>
-                        <use xlink:href="/assets/img/sprite.svg#youtube"></use>
-                    </svg>
-                </a>
+
+                {% for link in site.social %}
+                    <a class="social-link js-social-link" href="{{ link[1].url }}" title="{{ link[1].title }}">
+                        <svg class="icon icon--social icon--{{ link[0] }}" aria-labelledby="title">
+                            <title>{{ link.title }}</title>
+                            <use xlink:href="/assets/img/sprite.svg#{{ link[0] }}"></use>
+                        </svg>
+                        <span class="social-link__title">{{ link[1].title }}</span>
+                    </a>
+                {% endfor %}
+
             </div>
         </div>
 
