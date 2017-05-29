@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const element = document.getElementsByClassName('js-social-link--meetup')[0]
         const elementTitle = document.getElementsByClassName('meetup-title')[0]
 
-        elementTitle.innerText = date + ': ' + name
+        elementTitle.innerHTML = '<span class="hero__community__label">' + date + '</span> ' + '<strong>' + name + '</strong>'
         elementTitle.style.opacity = 1
         element.href = link
     }

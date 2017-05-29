@@ -148,6 +148,10 @@ $menu-height-md: 66px;
         transition: opacity .2s ease-out;
     }
 
+    strong {
+        font-weight: $font-weight-normal;
+    }
+
     .stars {
         font-size: .6rem;
         background: rgba($brand-main-gray-lighter, .15);
@@ -159,12 +163,12 @@ $menu-height-md: 66px;
     }
 
     .release {
-        @include text-bold;
         min-width: 44px;
     }
+}
 
-    .meetup-title {
-    }
+.hero__community__label {
+    opacity: .5;
 }
 
 
