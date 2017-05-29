@@ -12,17 +12,30 @@ email:
     cla_cc:             sylvain@bigchaindb.com
     enterprise:         ikytz6br@robot.zapier.com
 
-twitter:                BigchainDB
-facebook:               BigchainDB
-github:
-    org:                bigchaindb
-    repo:               bigchaindb
-medium:                 the-bigchaindb-blog
-googlegroup:            bigchaindb
-gitter:                 bigchaindb/bigchaindb
-disqus:                 bigchain
-linkedin:               bigchaindb
-youtube:                UCh0Y3p3kJ9oyz9CRgZaO05w
+social:
+    gitter:
+        title: Gitter
+        url:   https://gitter.im/bigchaindb/bigchaindb
+    github:
+        title: GitHub
+        url:   https://github.com/bigchaindb
+        org:   bigchaindb
+        repo:  bigchaindb
+    twitter:
+        title: Twitter
+        url:   https://twitter.com/bigchaindb
+    medium:
+        title: Blog
+        url:   https://blog.bigchaindb.com
+    meetup:
+        title: Meetup
+        url:   https://www.meetup.com/BigchainDB-IPDB-Meetup
+    linkedin:
+        title: LinkedIn
+        url:   https://www.linkedin.com/company/bigchaindb
+    youtube:
+        title: YouTube
+        url:   https://www.youtube.com/channel/UCh0Y3p3kJ9oyz9CRgZaO05w
 
 address:
     company:            BigchainDB GmbH

@@ -10,21 +10,27 @@
     </div>
 
     <aside class="hero__community">
-        <div class="row">
-            <a class="btn btn-text btn-sm" href="https://github.com/{{ site.github.org }}/{{ site.github.repo }}/releases/latest" rel="external">Latest release: <span class="release" id="release"></span></a>
+        <div class="row row--wide">
+            <a class="btn btn-text btn-sm" href="{{ site.social.github.url }}/{{ site.social.github.repo }}/releases/latest" rel="external"><span class="hero__community__label">Latest release</span> <strong class="release" id="release"></strong></a>
 
-            <a class="social-link btn btn-text btn-sm js-social-link" href="https://github.com/{{ site.github.org }}/{{ site.github.repo }}" title="Star {{ site.github.org }}/{{ site.github.repo }} on GitHub">
+            <a class="social-link btn btn-text btn-sm js-social-link" href="{{ site.social.github.url }}/{{ site.social.github.repo }}" title="Star {{ site.social.github.org }}/{{ site.social.github.repo }} on GitHub">
                 <svg class="icon icon--social icon--github" aria-labelledby="title">
                     <title>GitHub</title>
                     <use xlink:href="/assets/img/sprite.svg#github"></use>
                 </svg> Star <span class="stars" id="stars"></span>
             </a>
 
-            <a class="social-link btn btn-text btn-sm js-social-link" href="https://twitter.com/{{ site.twitter }}" title="Follow {{ site.twitter }} on Twitter">
+            <a class="social-link btn btn-text btn-sm js-social-link" href="https://twitter.com/{{ site.twitter }}" title="Follow on Twitter">
                 <svg class="icon icon--social icon--twitter" aria-labelledby="title">
                     <title>Twitter</title>
                     <use xlink:href="/assets/img/sprite.svg#twitter"></use>
                 </svg> Follow
+            </a>
+
+            <a class="social-link btn btn-text btn-sm js-social-link js-social-link--meetup" href="https://www.meetup.com/BigchainDB-IPDB-Meetup/">
+                <svg class="icon icon--social icon--meetup">
+                    <use xlink:href="/assets/img/sprite.svg#meetup"></use>
+                </svg> <span class="meetup-title">BigchainDB &amp; IPDB Meetup</span>
             </a>
         </div>
     </aside>
