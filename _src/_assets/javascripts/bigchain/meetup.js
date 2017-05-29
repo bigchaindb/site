@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    const url = 'https://api.meetup.com/BigchainDB-IPDB-Meetup/events'
+    const url = 'https://bigchaindb-meetups.now.sh'
 
     function injectData(data) {
         const events = data
@@ -11,14 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const nextEvent = events[0]
         const name = nextEvent.name
         const link = nextEvent.link
-        const date = nextEvent.time
+        const date = new Date(nextEvent.time).toLocaleDateString('en-us', { month: 'short', day: 'numeric' })
         const element = document.getElementsByClassName('js-social-link--meetup')[0]
+        const elementTitle = document.getElementsByClassName('meetup-title')[0]
 
-        console.log(nextEvent)
-
-        document.getElementsByClassName('meetup-title')[0].innerText = 'Next meetup: ' + name
-        document.getElementsByClassName('meetup-title')[0].style.opacity = 1
-        document.getElementsByClassName('js-social-link--meetup')[0].href = link
+        elementTitle.innerText = date + ': ' + name
+        elementTitle.style.opacity = 1
+        element.href = link
     }
 
     fetch(url)
