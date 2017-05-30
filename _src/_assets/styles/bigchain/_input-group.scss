@@ -29,7 +29,6 @@
     // Jankily prevent input button groups from wrapping with `white-space` and
     // `font-size` in combination with `inline-block` on buttons.
     font-size: 0;
-    white-space: nowrap;
 
     > .btn {
         margin-top: 0 !important;
@@ -49,6 +48,7 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
+
 .input-group .form-control:not(:first-child),
 .input-group-btn:not(:first-child) > .btn,
 .input-group-btn:not(:first-child) > .btn-group > .btn,

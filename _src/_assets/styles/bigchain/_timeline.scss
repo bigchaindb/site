@@ -10,7 +10,7 @@
     // actual timeline line
     &:before {
         @media ($screen-sm) {
-            content: "";
+            content: '';
             width: 400%;
             margin-left: -200%;
             height: 1px;
@@ -37,7 +37,7 @@
 
     // data point
     &:after {
-        content: "";
+        content: '';
         width: .5rem;
         height: .5rem;
         border-radius: 50%;
@@ -51,7 +51,6 @@
     @extend .small;
     opacity: .5;
 }
-
 
 .timeline__entry--future {
     opacity: .7;

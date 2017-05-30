@@ -4,7 +4,7 @@
 
     // color overlay
     &:before {
-        content: "";
+        content: '';
         width: 100%;
         height: 100%;
         position: absolute;
@@ -17,7 +17,7 @@
         z-index: 0;
     }
 
-    .row { z-index: 1 }
+    .row { z-index: 1; }
 }
 
 .color-overlay {

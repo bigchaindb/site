@@ -1,3 +1,7 @@
 {
-    "extends": "stylelint-config-bigchaindb"
+    "extends": "stylelint-config-bigchaindb",
+    rules: {
+        "selector-no-type": null,
+        "selector-no-qualifying-type": null
+    }
 }

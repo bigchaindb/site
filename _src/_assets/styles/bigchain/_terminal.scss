@@ -12,7 +12,7 @@
 
     code {
         padding: $spacer;
-        color:#fdce93;
+        color: #fdce93;
         display: block;
         word-break: break-all;
         word-wrap: break-word;
@@ -23,12 +23,13 @@
         display: block;
 
         &:before {
-            content: "$";
+            content: '$';
             color: $code-bg;
             margin-right: $spacer;
         }
+
         &.comment {
-            &:before { opacity: 0 }
+            &:before { opacity: 0; }
         }
     }
 
@@ -74,7 +75,7 @@ $frame-border-radius:   $border-radius;
 
     // title bar
     &:before {
-        content: "";
+        content: '';
         display: block;
         width: 100%;
         height: $frame-height-mobile;
@@ -91,25 +92,24 @@ $frame-border-radius:   $border-radius;
 
     // knobs
     &:after {
-        content: "";
+        content: '';
         width: 6px;
         height: 6px;
         position: absolute;
         left: 6px;
         top: 4px;
-
-        background: #F55E4A;
+        background: #f55e4a;
         border-radius: 50%;
 
         // second & third knob
-        box-shadow: 10px 0 0 #F7CA44, 20px 0 0 #48C54D;
+        box-shadow: 10px 0 0 #f7ca44, 20px 0 0 #48c54d;
 
         @media (min-width: $screen-sm-min) {
             width: 9px;
             height: 9px;
             left: 9px;
             top: 6px;
-            box-shadow: 15px 0 0 #F7CA44, 30px 0 0 #48C54D;
+            box-shadow: 15px 0 0 #f7ca44, 30px 0 0 #48c54d;
         }
     }
 }

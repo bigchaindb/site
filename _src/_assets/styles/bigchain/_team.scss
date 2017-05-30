@@ -4,15 +4,11 @@
 // bigchaindb.com
 //
 
-// Base class
-.team {}
-
 .team__image {
     @extend .img--responsive;
     background: $brand-main-gray;
     width: 230px;
     clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
-
 }
 
 .team__name {
@@ -22,7 +18,7 @@
 
     // the bottom line
     &:after {
-        content: "";
+        content: '';
         height: 1px;
         width: 3rem;
         display: block;
@@ -62,7 +58,6 @@
         outline: 0;
         transform: none;
     }
-
 
     .icon {
         fill: $brand-primary;

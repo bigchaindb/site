@@ -102,9 +102,11 @@
     #arm {
         transform-origin: right;
     }
+
     #head {
         transform-origin: center;
     }
+
     #eye {
         transform-origin: center;
     }
@@ -122,12 +124,15 @@
         #eye {
             &.paused { animation: none; }
         }
+
         #arm {
             animation: wrigley-wink 1s ease-in-out;
         }
+
         #head {
             animation: wrigley-head-nod 1s ease-in-out;
         }
+
         #eye {
             &.is-ready {
                 animation: wrigley-blink .3s ease-in-out forwards;
@@ -135,19 +140,26 @@
             }
         }
     }
-
 }
 
 @keyframes wrigley-wink {
     0% { transform: rotate(0); }
-    25%, 50% { transform: rotate(-20deg); }
-    30%, 100% { transform: rotate(0); }
+
+    25%,
+    50% { transform: rotate(-20deg); }
+
+    30%,
+    100% { transform: rotate(0); }
 }
 
 @keyframes wrigley-head-nod {
     0% { transform: rotate(0); }
-    25%, 50% { transform: rotate(-2deg); }
-    30%, 100% { transform: rotate(0); }
+
+    25%,
+    50% { transform: rotate(-2deg); }
+
+    30%,
+    100% { transform: rotate(0); }
 }
 
 @keyframes wrigley-blink {

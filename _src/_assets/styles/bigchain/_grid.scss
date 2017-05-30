@@ -61,19 +61,19 @@
 // Alignment per row
 //
 .grid--top {
-    align-items: flex-start
+    align-items: flex-start;
 }
 
 .grid--bottom {
-    align-items: flex-end
+    align-items: flex-end;
 }
 
 .grid--center {
-    align-items: center
+    align-items: center;
 }
 
 .grid--justifycenter {
-    justify-content: center
+    justify-content: center;
 }
 
 
@@ -81,15 +81,15 @@
 // Alignment per cell
 //
 .grid__col--top {
-    align-self: flex-start
+    align-self: flex-start;
 }
 
 .grid__col--bottom {
-    align-self: flex-end
+    align-self: flex-end;
 }
 
 .grid__col--center {
-    align-self: center
+    align-self: center;
 }
 
 
@@ -100,11 +100,11 @@
     margin: -($gutter-space) 0 $gutter-space (-($gutter-space));
 
     > .grid__col {
-        padding: $gutter-space 0 0 $gutter-space;;
+        padding: $gutter-space 0 0 $gutter-space;
     }
 }
 
-.grid--gutters{
+.grid--gutters {
     @include grid-gutters();
 }
 
@@ -170,15 +170,19 @@
     .grid-small--columns {
         @include grid-columns();
     }
+
     .grid-small--fit {
         > .grid__col { flex: 1; }
     }
-    .grid-small--full{
+
+    .grid-small--full {
         > .grid__col { flex: 0 0 100%; }
     }
+
     .grid-small--third {
         > .grid__col { flex: 0 0 33.3%; }
     }
+
     .grid-small--half {
         > .grid__col {
             flex: 0 0 50%;
@@ -191,15 +195,19 @@
     .grid-medium--columns {
         @include grid-columns();
     }
+
     .grid-medium--fit {
-        > .grid__col { flex: 1 }
+        > .grid__col { flex: 1; }
     }
+
     .grid-medium--full {
         > .grid__col { flex: 0 0 100%; }
     }
+
     .grid-medium--third {
         > .grid__col { flex: 0 0 33.3%; }
     }
+
     .grid-medium--half {
         > .grid__col {
             flex: 0 0 50%;
@@ -212,15 +220,19 @@
     .grid-large--columns {
         @include grid-columns();
     }
+
     .grid-large--fit {
         > .grid__col { flex: 1; }
     }
+
     .grid-large--full {
         > .grid__col { flex: 0 0 100%; }
     }
+
     .grid-large--third {
         > .grid__col { flex: 0 0 33.3%; }
     }
+
     .grid-large--half {
         > .grid__col {
             flex: 0 0 50%;

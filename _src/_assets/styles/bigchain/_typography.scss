@@ -27,7 +27,6 @@ body {
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
-
     text-rendering: optimizeLegibility;
     // Controversial! But prevents text flickering in
     // Safari/Firefox when animations are running
@@ -35,7 +34,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 
     // remove old style numerals
-    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 0, "dlig" 1;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1, 'pnum' 1, 'tnum' 0, 'onum' 0, 'lnum' 0, 'dlig' 1;
 }
 
 
@@ -103,7 +102,7 @@ h1, h2, h3, h4, h5, h6,
     color: $headings-color;
 
     // remove old style numerals
-    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 0, "dlig" 1;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1, 'pnum' 1, 'tnum' 0, 'onum' 0, 'lnum' 0, 'dlig' 1;
 
     .wf-loading & {
         font-weight: $font-weight-normal;
@@ -140,13 +139,23 @@ h6, .h6 {
     }
 }
 
-h1, .h1 { font-size: $font-size-h1; }
-h2, .h2 { font-size: $font-size-h2; }
-h3, .h3 { font-size: $font-size-h3; }
-h4, .h4 { font-size: $font-size-h4; }
-h5, .h5 { font-size: $font-size-h5; }
-h6, .h6 { font-size: $font-size-h6; }
-// scss-lint:enable SingleLinePerSelector
+h1,
+.h1 { font-size: $font-size-h1; }
+
+h2,
+.h2 { font-size: $font-size-h2; }
+
+h3,
+.h3 { font-size: $font-size-h3; }
+
+h4,
+.h4 { font-size: $font-size-h4; }
+
+h5,
+.h5 { font-size: $font-size-h5; }
+
+h6,
+.h6 { font-size: $font-size-h6; }
 
 
 //
@@ -190,11 +199,11 @@ em,
 
 // Alignment
 // scss-lint:disable SpaceBeforeBrace
-.text-left    { text-align: left; }
-.text-right   { text-align: right; }
-.text-center  { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
 .text-justify { text-align: justify; }
-.text-nowrap  { white-space: nowrap; }
+.text-nowrap { white-space: nowrap; }
 // scss-lint:enable SpaceBeforeBrace
 
 .lead {
@@ -253,7 +262,6 @@ ul {
         padding-left: 5px;
         padding-right: 5px;
     }
-
 }
 
 

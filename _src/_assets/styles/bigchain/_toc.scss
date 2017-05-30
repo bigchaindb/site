@@ -1,14 +1,14 @@
 
 .toc {
     &,
-    ol { counter-reset: item;}
+    ol { counter-reset: item; }
 
     &,
     li { padding-left: 0; }
 
     &:before {
         @extend .h1;
-        content: "Table Of Contents";
+        content: 'Table Of Contents';
         display: block;
         border-bottom: 1px solid $brand-main-blue-light;
         padding-bottom: $spacer;
@@ -24,7 +24,7 @@
 
         // custom numbers
         &:before {
-            content: counters(item, ".") " ";
+            content: counters(item, '.') ' ';
             counter-increment: item;
             margin-right: $spacer;
             color: $brand-main-gray;

@@ -16,6 +16,7 @@
     user-select: none;
     border: 0;
     box-shadow: none;
+
     @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height, $btn-border-radius);
 
     &:hover,
@@ -34,7 +35,7 @@
 
     &.disabled,
     &:disabled {
-        opacity: 0.45;
+        opacity: .45;
         box-shadow: none;
         cursor: not-allowed;
         pointer-events: none;
@@ -95,7 +96,7 @@ fieldset[disabled] a.btn {
 //
 // Make a button look and behave like a link
 .btn-link {
-    font-weight: normal;
+    font-weight: $font-weight-normal;
     color: $link-color;
     border-radius: 0;
 
@@ -165,9 +166,9 @@ fieldset[disabled] a.btn {
 
 
 // Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
     &.btn-block {
         width: 100%;
     }
