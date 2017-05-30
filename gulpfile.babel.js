@@ -13,6 +13,11 @@ import fs           from 'fs'
 import yaml         from 'js-yaml'
 import request      from 'request'
 
+// required to get our mix of old and ES6+ js to work with ugify-js 3
+import uglifyjs     from 'uglify-es'
+import composer     from 'gulp-uglify/composer'
+const minify = composer(uglifyjs, console)
+
 // get all the configs: `pkg` and `site`
 import pkg from './package.json'
 const site = yaml.safeLoad(fs.readFileSync('./_config.yml'))
@@ -196,7 +201,7 @@ export const js = () =>
     .pipe($.include({
         includePaths: ['node_modules', SRC + '_assets/javascripts']
     })).on('error', onError)
-    .pipe($.if(isProduction || isStaging, $.uglify())).on('error', onError)
+    .pipe($.if(isProduction || isStaging, minify())).on('error', onError)
     .pipe($.if(!(isProduction || isStaging), $.sourcemaps.write()))
     .pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))
     .pipe($.rename({suffix: '.min'}))
