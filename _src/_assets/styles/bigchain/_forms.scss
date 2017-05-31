@@ -54,6 +54,7 @@
         // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
         opacity: 1;
     }
+
     &:disabled {
         cursor: disabled;
     }
@@ -66,9 +67,43 @@
         + .form-label,
         + .select2-container--bigchaindb + .form-label {
             &:after {
-                content: "*";
                 @extend .required;
+                content: '*';
             }
+        }
+    }
+
+    // the active state
+    &:focus ~ .form-label,
+    &:valid:not(.is-empty) ~ .form-label,
+    &:invalid:not(.is-empty) ~ .form-label,
+    //&.parsley-error ~ .form-label,
+    &.parsley-success ~ .form-label {
+        transform: translate3d(0, -($spacer + $input-padding-x), 0) scale(.7);
+        color: $input-border-focus;
+    }
+
+
+    //
+    // Form Validation States
+    //
+
+    // Success style
+    &:valid:not(.is-empty):not(select),
+    &.parsley-success {
+        &,
+        &:focus {
+            border-color: $brand-success;
+        }
+    }
+
+    // Error style
+    &:invalid:not(.is-empty),
+    &.parsley-error {
+        &,
+        &:focus {
+            border-color: $brand-danger;
+            color: $brand-danger;
         }
     }
 
@@ -123,18 +158,6 @@
     }
 }
 
-.form-control {
-    // the active state
-    &:focus ~ .form-label,
-    &:valid:not(.is-empty) ~ .form-label,
-    &:invalid:not(.is-empty) ~ .form-label,
-    //&.parsley-error ~ .form-label,
-    &.parsley-success ~ .form-label {
-        transform: translate3d(0, -($spacer + $input-padding-x), 0) scale(.7);
-        color: $input-border-focus;
-    }
-}
-
 
 //
 // Form groups
@@ -151,7 +174,6 @@
         }
     }
 }
-
 
 
 //
@@ -197,21 +219,26 @@ select.form-control {
             position: static;
         }
     }
+
+    &.disabled {
+        label {
+            cursor: not-allowed;
+        }
+    }
 }
 
-.radio input[type="radio"],
-.radio-inline input[type="radio"],
-.checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"] {
+.radio input[type='radio'],
+.radio-inline input[type='radio'],
+.checkbox input[type='checkbox'],
+.checkbox-inline input[type='checkbox'] {
     position: absolute;
-    margin-bottom: -0.25rem;
+    margin-bottom: -.25rem;
     margin-left: -1.75rem;
-    margin-right: 0.25rem;
+    margin-right: .25rem;
 
     // reset styling, then style
-    -webkit-appearance:button;
+    appearance: button;
     background: none;
-
     width: 1.3rem;
     height: 1.3rem;
     border-radius: $border-radius;
@@ -228,8 +255,8 @@ select.form-control {
     }
 }
 
-.radio input[type="radio"],
-.radio-inline input[type="radio"] {
+.radio input[type='radio'],
+.radio-inline input[type='radio'] {
     border-radius: 50%;
 }
 
@@ -248,66 +275,27 @@ select.form-control {
     margin-bottom: 0;
     vertical-align: middle;
     cursor: pointer;
+
+    &.disabled {
+        cursor: not-allowed;
+    }
 }
+
 .radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
     margin-top: 0;
-    margin-left: 0.75rem;
+    margin-left: .75rem;
 }
 
 // Apply same disabled cursor tweak as for inputs
 // Some special care is needed because <label>s don't inherit their parent's `cursor`.
 //
 // Note: Neither radios nor checkboxes can be readonly.
-input[type="radio"],
-input[type="checkbox"] {
+input[type='radio'],
+input[type='checkbox'] {
     &:disabled,
     &.disabled {
         cursor: not-allowed;
-    }
-}
-
-// These classes are used directly on <label>s
-.radio-inline,
-.checkbox-inline {
-    &.disabled {
-        cursor: not-allowed;
-    }
-}
-
-// These classes are used on elements with <label> descendants
-.radio,
-.checkbox {
-    &.disabled {
-        label {
-            cursor: not-allowed;
-        }
-    }
-}
-
-
-//
-// Form Validation States
-//
-.form-control {
-
-    // Success style
-    &:valid:not(.is-empty):not(select),
-    &.parsley-success {
-        &,
-        &:focus {
-            border-color: $brand-success;
-        }
-    }
-
-    // Error style
-    &:invalid:not(.is-empty),
-    &.parsley-error {
-        &,
-        &:focus {
-            border-color: $brand-danger;
-            color: $brand-danger;
-        }
     }
 }
 
@@ -334,6 +322,6 @@ input[type="checkbox"] {
 }
 
 @keyframes errors-list-show {
-    from { transform: translate3d(0,0,0); }
-    to   { transform: translate3d(0,( $font-size-sm + ($spacer / 4)),0); }
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(0, ( $font-size-sm + ($spacer / 4)), 0); }
 }

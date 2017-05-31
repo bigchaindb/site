@@ -77,16 +77,16 @@
         overflow: hidden;
         text-overflow: ellipsis;
 
-        &[role=group] {
+        &[role='group'] {
             padding: 0;
             border-bottom: 2px dashed $gray;
         }
 
-        &[aria-disabled=true] {
+        &[aria-disabled='true'] {
             color: #999;
         }
 
-        &[aria-selected=true] {
+        &[aria-selected='true'] {
             background-color: transparent;
         }
 

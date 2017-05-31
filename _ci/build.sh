@@ -4,6 +4,21 @@ set -e;
 
 echo "$(tput setaf 136)"
 echo "============================================="
+echo "              Starting tests "
+echo "============================================="
+echo "$(tput sgr0)" # reset
+
+npm test
+
+echo "$(tput setaf 64)" # green
+echo "---------------------------------------------"
+echo "           ✓ done testing"
+echo "---------------------------------------------"
+echo "$(tput sgr0)" # reset
+
+
+echo "$(tput setaf 136)"
+echo "============================================="
 echo "              Starting build "
 echo "============================================="
 echo "$(tput sgr0)" # reset

@@ -11,11 +11,13 @@
         color: $color !important;
         background-color: $active-background;
     }
+
     &:active {
         color: $color !important;
         background: darken($background, 2%);
         transition: none;
     }
+
     &.disabled,
     &:disabled {
         &:focus {

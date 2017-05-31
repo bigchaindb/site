@@ -3,6 +3,7 @@
 > The fabulous cat of blockchain websites.
 
 [![Build Status](https://travis-ci.com/ascribe/bigchain-website.svg?token=3psqw6c8KMDqfdGQ2x6d&branch=master)](https://travis-ci.com/ascribe/bigchain-website)
+[![css bigchaindb](https://img.shields.io/badge/css-bigchaindb-39BA91.svg)](https://github.com/bigchaindb/stylelint-config-bigchaindb)
 <img src="http://forthebadge.com/images/badges/powered-by-electricity.svg" height="20"/>
 <img src="http://forthebadge.com/images/badges/as-seen-on-tv.svg" height="20"/>
 <img src="http://forthebadge.com/images/badges/uses-badges.svg" height="20"/>
@@ -25,6 +26,7 @@
     * [Production build &amp; live deployment](#production-build--live-deployment)
 * [Coding conventions](#coding-conventions)
     * [(S)CSS](#scss)
+    * [JavaScript](#javascript)
 * [Authors](#authors)
 
 ## Development
@@ -137,13 +139,19 @@ gulp deploy --live
 
 ### (S)CSS
 
-Follows [Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css). Lint with [scss-lint](https://github.com/brigade/scss-lint).
+Follows [stylelint-config-bigchaindb](https://github.com/bigchaindb/stylelint-config-bigchaindb) which itself extends [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard).
 
-Rule exceptions:
+Lint with [stylelint](https://stylelint.io) in your editor or run:
 
-- indentation: 4 spaces
-- use single quotes
-- allow single line rule sets
+```bash
+npm test
+```
+
+### JavaScript
+
+It's a wild mess right now between old school vanilla js, jQuery and some ES2015 features. Don't bother with the old stuff unless dependency updates break it.
+
+New js should follow [eslint-config-ascribe](https://github.com/ascribe/javascript). Linting in this repo is not setup for it yet.
 
 ## Authors
 

@@ -21,11 +21,6 @@
     }
 }
 
-.testimonial__quote,
-.testimonial__caption {
-
-}
-
 .testimonial__quote {
     // blockquote reset
     margin: 0;
@@ -41,8 +36,8 @@
 
     // quote characters
     &:before {
-        content: "“";
-        font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+        content: '“';
+        font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-size: 250%;
         color: $gray-light;
         line-height: 1;
@@ -60,7 +55,7 @@
 
     // speech triangle
     &:before {
-        content: "";
+        content: '';
         position: absolute;
         width: 0;
         height: 0;

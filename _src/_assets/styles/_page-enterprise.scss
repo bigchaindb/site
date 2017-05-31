@@ -13,7 +13,7 @@
         margin-bottom: $spacer;
 
         // the bottom line
-        &::after {
+        &:after {
             content: '';
             height: 2px;
             width: 3rem;
@@ -109,7 +109,7 @@
 
     .feature__title {
         // the bottom line
-        &::after {
+        &:after {
             background: rgba($gray-light, .4);
         }
     }
@@ -126,7 +126,7 @@
     }
 
     .testimonial__quote {
-        &::before {
+        &:before {
             margin-left: -1.3rem;
         }
     }
@@ -149,6 +149,7 @@
             justify-content: space-between;
         }
     }
+
     .grid__col {
         @media ($screen-sm) {
             flex-basis: 48%;

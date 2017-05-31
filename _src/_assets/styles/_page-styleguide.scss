@@ -1,6 +1,6 @@
 
 .page-styleguide {
-    .highlight { margin-bottom: ($spacer * 2) }
+    .highlight { margin-bottom: ($spacer * 2); }
 
     .typeface {
         font-size: 7vw;
@@ -35,7 +35,7 @@
     &:hover {
         background: #444 !important;
 
-        .color-meta { opacity: 1 }
+        .color-meta { opacity: 1; }
     }
 }
 

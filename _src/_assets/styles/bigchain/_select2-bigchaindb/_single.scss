@@ -10,7 +10,7 @@
     .select2-selection__clear {
         cursor: pointer;
         float: right;
-        font-weight: bold;
+        font-weight: $font-weight-bold;
     }
 
     .select2-selection__placeholder {
@@ -30,14 +30,14 @@
 
         &:before,
         &:after {
-            content: "";
+            content: '';
             display: block;
             position: absolute;
             margin: auto;
             right: 0;
             height: 0;
             width: 0;
-            border: 0.263em solid transparent;
+            border: .263em solid transparent;
         }
 
         &:before {
@@ -56,7 +56,7 @@
     }
 }
 
-&[dir="rtl"] {
+&[dir='rtl'] {
     .select2-selection--single {
         .select2-selection__clear {
             float: left;
@@ -76,14 +76,6 @@
 
         .select2-selection__clear {
             display: none;
-        }
-    }
-}
-
-&.select2-container--open {
-    .select2-selection--single {
-        .select2-selection__arrow {
-
         }
     }
 }

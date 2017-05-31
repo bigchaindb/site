@@ -35,7 +35,7 @@ $menu-height-md: 66px;
             font-size: $font-size-h1;
         }
 
-        &::after { display: none; }
+        &:after { display: none; }
     }
 
     .section-subtitle {

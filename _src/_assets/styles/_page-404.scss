@@ -1,19 +1,19 @@
 
 .page-404 {
+    @include color-overlay;
     position: relative;
     background-image: url('/assets/img/fail-cat.gif');
     background-size: cover;
     background-position: center center;
-    @include color-overlay;
 
-    &::before {
+    &:before {
         z-index: -1;
     }
 
     .header {
         background: none;
 
-        &::before { display: none; }
+        &:before { display: none; }
     }
 
     .header__title {
@@ -21,7 +21,7 @@
         padding-bottom: 0;
 
         // the bottom line
-        &::after {
+        &:after {
             content: '';
             height: 1px;
             width: 5rem;
@@ -52,6 +52,6 @@
     }
 
     .menu--footer {
-        a { color: #fff }
+        a { color: #fff; }
     }
 }
