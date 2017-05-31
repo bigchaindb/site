@@ -94,7 +94,8 @@ a {
 //
 // Headings
 //
-// scss-lint:disable SingleLinePerSelector
+
+/* stylelint-disable selector-list-comma-newline-after  */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: $headings-font-family;
@@ -139,24 +140,14 @@ h6, .h6 {
     }
 }
 
-h1,
-.h1 { font-size: $font-size-h1; }
+h1, .h1 { font-size: $font-size-h1; }
+h2, .h2 { font-size: $font-size-h2; }
+h3, .h3 { font-size: $font-size-h3; }
+h4, .h4 { font-size: $font-size-h4; }
+h5, .h5 { font-size: $font-size-h5; }
+h6, .h6 { font-size: $font-size-h6; }
 
-h2,
-.h2 { font-size: $font-size-h2; }
-
-h3,
-.h3 { font-size: $font-size-h3; }
-
-h4,
-.h4 { font-size: $font-size-h4; }
-
-h5,
-.h5 { font-size: $font-size-h5; }
-
-h6,
-.h6 { font-size: $font-size-h6; }
-
+/* stylelint-enable */
 
 //
 // Body text
@@ -198,13 +189,11 @@ em,
 }
 
 // Alignment
-// scss-lint:disable SpaceBeforeBrace
 .text-left { text-align: left; }
 .text-right { text-align: right; }
 .text-center { text-align: center; }
 .text-justify { text-align: justify; }
 .text-nowrap { white-space: nowrap; }
-// scss-lint:enable SpaceBeforeBrace
 
 .lead {
     @include text-lead;

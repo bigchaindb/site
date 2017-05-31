@@ -62,7 +62,7 @@
     position: relative;
     top: -3px;
 
-    &::before {
+    &:before {
         content: '';
         position: absolute;
         left: $spacer / 3;

@@ -33,6 +33,10 @@
 }
 
 // output by Kramdown
+
+/* stylelint-disable selector-no-id  */
 #markdown-toc {
     @extend .toc;
 }
+
+/* stylelint-enable  */

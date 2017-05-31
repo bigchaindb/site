@@ -73,6 +73,40 @@
         }
     }
 
+    // the active state
+    &:focus ~ .form-label,
+    &:valid:not(.is-empty) ~ .form-label,
+    &:invalid:not(.is-empty) ~ .form-label,
+    //&.parsley-error ~ .form-label,
+    &.parsley-success ~ .form-label {
+        transform: translate3d(0, -($spacer + $input-padding-x), 0) scale(.7);
+        color: $input-border-focus;
+    }
+
+
+    //
+    // Form Validation States
+    //
+
+    // Success style
+    &:valid:not(.is-empty):not(select),
+    &.parsley-success {
+        &,
+        &:focus {
+            border-color: $brand-success;
+        }
+    }
+
+    // Error style
+    &:invalid:not(.is-empty),
+    &.parsley-error {
+        &,
+        &:focus {
+            border-color: $brand-danger;
+            color: $brand-danger;
+        }
+    }
+
     .background--photo & {
         border-bottom-color: rgba(#fff, .5);
     }
@@ -121,18 +155,6 @@
 
     .background--photo & {
         color: rgba(#fff, .5);
-    }
-}
-
-.form-control {
-    // the active state
-    &:focus ~ .form-label,
-    &:valid:not(.is-empty) ~ .form-label,
-    &:invalid:not(.is-empty) ~ .form-label,
-    //&.parsley-error ~ .form-label,
-    &.parsley-success ~ .form-label {
-        transform: translate3d(0, -($spacer + $input-padding-x), 0) scale(.7);
-        color: $input-border-focus;
     }
 }
 
@@ -215,9 +237,8 @@ select.form-control {
     margin-right: .25rem;
 
     // reset styling, then style
-    -webkit-appearance: button;
+    appearance: button;
     background: none;
-
     width: 1.3rem;
     height: 1.3rem;
     border-radius: $border-radius;
@@ -275,32 +296,6 @@ input[type='checkbox'] {
     &:disabled,
     &.disabled {
         cursor: not-allowed;
-    }
-}
-
-
-//
-// Form Validation States
-//
-.form-control {
-
-    // Success style
-    &:valid:not(.is-empty):not(select),
-    &.parsley-success {
-        &,
-        &:focus {
-            border-color: $brand-success;
-        }
-    }
-
-    // Error style
-    &:invalid:not(.is-empty),
-    &.parsley-error {
-        &,
-        &:focus {
-            border-color: $brand-danger;
-            color: $brand-danger;
-        }
     }
 }
 

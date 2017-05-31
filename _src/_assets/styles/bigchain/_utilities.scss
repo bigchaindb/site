@@ -4,6 +4,8 @@
 // bigchaindb.com
 //
 
+/* stylelint-disable declaration-no-important  */
+
 .invisible {
     visibility: hidden !important;
 }
@@ -11,6 +13,8 @@
 .hide {
     display: none !important;
 }
+
+/* stylelint-enable */
 
 .text-hide {
     font: '0/0' a;

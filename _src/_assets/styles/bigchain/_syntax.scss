@@ -1,6 +1,7 @@
 
 // https://github.com/richleland/pygments-css/blob/master/zenburn.css
 
+/* stylelint-disable */
 .highlight pre {
     color: #fdce93;
     background-color: $code-bg;
@@ -290,3 +291,5 @@
 .highlight .il {
     color: #8cd0d3;
 }
+
+/* stylelint-enable */
