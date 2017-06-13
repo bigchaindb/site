@@ -1,8 +1,10 @@
 ---
 layout: partner
 
-title: Microsoft
-link: https://www.microsoft.com
+title: Microsoft Azure
+link: https://azure.microsoft.com
 ---
 
-Microsoft Corporation is a technology company headquartered in Redmond, Washington, that develops, manufactures, licenses, supports and sells computer software, consumer electronics and personal computers and services. Its best known software products are the Microsoft Windows line of operating systems, Microsoft Office office suite, and Internet Explorer and Edge web browsers.
+Founded in 1975, Microsoft is the worldwide leader in software, services, devices and solutions that help people and businesses realize their full potential.
+
+Microsoft Azure is the cloud services operating system that serves as the development, service hosting, and service management environment for the Azure Services Platform. Microsoft Azure provides developers on-demand compute and storage to create, host and manage scalable and available web applications through Microsoft data centers.

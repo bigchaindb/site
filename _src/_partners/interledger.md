@@ -5,4 +5,4 @@ title: Interledger
 link: https://interledger.org
 ---
 
-Interledger is an open suite of protocols for connecting ledgers of all types: from digital wallets and national payment systems to blockchains and beyond. This will make it easy to transact with anyone, no matter where we live or what type of money we use. Sending value will be as easy as sending information is today. This is the vision of the Internet of Value.
+Interledger and the Interledger Protocol (ILP)  make it easy to send and receive money, no matter what ledger you or the recipient are on. By connecting different payment networks, no global coordinating system or blockchain is needed.  It uses ledger provided escrow—conditional locking of funds—to allow secure payments through untrusted connectors.
