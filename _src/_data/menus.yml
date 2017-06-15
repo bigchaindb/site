@@ -14,20 +14,22 @@ main:
 secondary:
     - title: Whitepaper
       url: "/whitepaper/"
+    - title: Blog
+      url: https://blog.bigchaindb.com
     - title: About
       url: "/about/"
     - title: Contact
       url: "/contact/"
-    - title: Blog
-      url: https://blog.bigchaindb.com
 
 community:
+    - title: Gitter
+      url: https://gitter.im/bigchaindb/bigchaindb
     - title: GitHub
       url: https://github.com/bigchaindb
     - title: Twitter
       url: https://twitter.com/BigchainDB
-    - title: Gitter
-      url: https://gitter.im/bigchaindb/bigchaindb
+    - title: Meetup
+      url: https://www.meetup.com/BigchainDB-IPDB-Meetup
 
 legal:
     - title: Terms

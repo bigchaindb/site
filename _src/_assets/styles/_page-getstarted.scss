@@ -1,15 +1,10 @@
 //
-// Page: Community
+// Page: Get started
 // ---
 // bigchaindb.com
 //
-.page-community {
-    .header {
-        background-position: center top;
-    }
-}
 
-.section-community {
+.section--community {
     text-align: center;
     position: relative;
     // make room for wrigely
@@ -33,7 +28,6 @@
         .icon {
             @include transition;
         }
-
         display: inline-block;
         box-shadow: none;
         padding: $btn-padding-y-sm $btn-padding-x-sm;
