@@ -1,11 +1,11 @@
 ---
 main:
+    - title: Get started
+      url: "/start/"
     - title: Features
       url: "/features/"
     - title: Use Cases
       url: "/usecases/"
-    - title: Community
-      url: "/community/"
     - title: Enterprise
       url: "/enterprise/"
     - title: Docs
