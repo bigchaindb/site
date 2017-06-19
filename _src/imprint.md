@@ -4,11 +4,12 @@ layout: page
 title: Imprint
 ---
 
-### Registered Address
+### BigchainDB GmbH
 
-BigchainDB GmbH
 Wichertstr. 14a
 10439 Berlin
+Germany
+USt-IdNr. DE296647599
 
 ### Contact
 
@@ -22,7 +23,6 @@ Email: bruce@bigchaindb.com
 
 Commercial Court: Berlin Charlottenburg
 Register Number: 160856
-Quelle: http://www.e-recht24.de/
 
 ### Haftungsausschluss (Disclaimer)
 
