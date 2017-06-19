@@ -83,7 +83,7 @@ collections:
 
 # Plugins
 # --------------------
-plugins:
+gems:
     - jekyll-sitemap
     - jekyll-redirect-from
 
