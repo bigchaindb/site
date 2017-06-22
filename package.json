@@ -25,6 +25,7 @@
     "ie >= 10"
   ],
   "dependencies": {
+    "bigchaindb-driver": "^0.1.1",
     "is-in-viewport": "^3.0.0",
     "jquery": "^3.2.1",
     "normalize-css": "^2.3.1",

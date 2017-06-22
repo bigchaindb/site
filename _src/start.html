@@ -21,10 +21,10 @@ redirect_from:
         <div class="grid grid--full grid-small--half grid--gutters">
             <div class="grid__col">
                 <h4>Request</h4>
-                <form class="form form--transaction" action="" method="post">
+                <form id="form-transaction" class="form form--transaction js-parsley">
                     <p class="form-group">
-                        <input class="form-control" type="text" name="message" required>
-                        <label class="form-label" for="message">Add a message</label>
+                        <input id="message" class="form-control" type="text" name="message" required>
+                        <label class="form-label" for="message">Message</label>
                     </p>
                     <p class="form-group">
                         A transaction can contain a digital asset along with a message. Type something to be sent along the asset.
