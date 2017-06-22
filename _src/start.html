@@ -10,10 +10,29 @@ redirect_from:
     - /community/
 ---
 
+<section class="section section--firsttransaction">
+    <div class="row">
+        <header class="section-header">
+            <h1 class="section-title">Get your first transaction into BigchainDB</h1>
+            <p class="section-description">Never wrote something into a blockchain? Now’s your chance: add your message and send off your first transaction to BigchainDB running within IPDB.</p>
+        </header>
+    </div>
+    <div class="row row--wide">
+        <div class="grid grid--full grid-small--half grid--gutters">
+            <div class="grid__col">
+                <h3>Request</h3>
+            </div>
+            <div class="grid__col">
+                <h3>Response</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="section section--architecture">
     <div class="row">
         <header class="section-header">
-            <p class="section-description">Get started quickly by installing BigchainDB.</p>
+            <p class="section-description">Architecture overview</p>
         </header>
     </div>
     <div class="row">
@@ -35,30 +54,122 @@ redirect_from:
 </nav>
 
 <section class="section section--server" id="server">
-    <div class="row">
-
+    <div class="row row--wide">
+        <header class="section-header text-left">
+            <h1 class="section-title">Get Server</h1>
+        </header>
+    </div>
+    <div class="row row--wide">
+        <div class="grid grid--full grid-small--half grid--gutters">
+            <div class="grid__col">
+                <h3>IPDB: the public BigchainDB network</h3>
+                <p>No need for any installation. Sign up and connect instantly, we handle running a BigchainDB production node for you.</p>
+                <a class="btn btn-primary" href="">Get IPDB</a>
+            </div>
+            <div class="grid__col">
+                <h3>BigchainDB Server</h3>
+                <p>If you want to run your own BigchainDB instance you can either install on Linux or with Docker on any system.</p>
+                <a class="btn btn-secondary" href="">Install BigchainDB Server</a>
+            </div>
+        </div>
     </div>
 </section>
 
 <section class="section section--drivers background--darker" id="drivers">
-    <div class="row">
-        <a class="driver" href="https://github.com/bigchaindb/bigchaindb-driver">
-            <h2 class="driver__title">Python</h2>
-            <svg class="driver__logo">
-                <use></use>
-            </svg>
+    <div class="row row--wide">
+        <header class="section-header text-left">
+            <h1 class="section-title">Get Drivers &amp; Tools</h1>
+        </header>
+    </div>
+    <div class="row row--wide">
+        <h3>BigchainDB in your language</h3>
+        <p>Get one of the drivers to connect to IPDB or your BigchainDB server instance.</p>
+    </div>
+    <div class="row row--wide">
+        <h3>Officially supported drivers</h3>
+        <div class="grid grid--full grid-small--half grid-medium--fit grid--gutters">
 
-            <p class="driver__meta">
-                <span class="driver__repo">bigchaindb-driver</span>
-                <span class="driver__version">v0.1.1</span>
-            </p>
-        </a>
+            {% for driver in site.data.drivers.official %}
+            <div class="grid__col">
+                <a class="driver" href="https://github.com/bigchaindb/{{ driver.repo }}">
+                    <h2 class="driver__title">{{ driver.title }}</h2>
+                    <svg class="driver__logo">
+                        <use></use>
+                    </svg>
+
+                    <p class="driver__meta">
+                        <span class="driver__repo">{{ driver.repo }}</span>
+                        <span class="driver__version">{{ driver.version }}</span>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <div class="row row--wide">
+        <h3>Officially supported tools</h3>
+        <div class="grid grid--full grid-small--half grid-medium--fit grid--gutters">
+
+            {% for driver in site.data.drivers.tools %}
+            <div class="grid__col">
+                <a class="driver" href="https://github.com/bigchaindb/{{ driver.repo }}">
+                    <h2 class="driver__title">{{ driver.title }}</h2>
+
+                    <p class="driver__meta">
+                        <span class="driver__repo">{{ driver.repo }}</span>
+                        <span class="driver__version">{{ driver.version }}</span>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <div class="row row--wide">
+        <h3>Community supported drivers</h3>
+        <div class="grid grid--full grid-small--half grid-medium--fit grid--gutters">
+
+            {% for driver in site.data.drivers.community %}
+            <div class="grid__col">
+                <a class="driver driver--community" href="https://github.com/bigchaindb/{{ driver.repo }}">
+                    <svg class="driver__logo">
+                        <use></use>
+                    </svg>
+                    <h2 class="driver__title">{{ driver.title }}</h2>
+
+                    <p class="driver__meta">
+                        <span class="driver__repo">{{ driver.repo }}</span>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+
+        </div>
     </div>
 </section>
 
-<section class="section section--docs" id="docs">
+<section class="section section--docs background--light" id="docs">
     <div class="row">
-
+        <header class="section-header">
+            <h1 class="section-title">Next Up</h1>
+            <p class="section-description">Dive into our documentation or learn or code.</p>
+        </header>
+    </div>
+    <div class="row">
+        <div class="grid grid--full grid-small--fit grid--gutters">
+            <div class="grid__col">
+                <h3>Tutorials</h3>
+            </div>
+            <div class="grid__col">
+                <h3>Code examples</h3>
+            </div>
+            <div class="grid__col">
+                <h3>Documentation</h3>
+            </div>
+        </div>
     </div>
 </section>
 

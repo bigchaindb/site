@@ -1,0 +1,41 @@
+official:
+    - title: Python
+      repo: bigchaindb-driver
+      version: v0.2.2
+
+    - title: JavaScript
+      repo: js-bigchaindb-driver
+      version: v0.1.1
+
+    - title: CLI
+      repo: bdb-transaction-cli
+      version: v0.2.2
+
+community:
+    - title: Haskell
+      repo: bigchaindb-hs
+
+    - title: Ruby
+      repo: bigchaindb_ruby
+
+    - title: Go
+      repo: bigchaindb-driver-golang
+
+    - title: Java
+      repo: bigchaindb-java
+
+    - title: Swift
+      repo: bigchaindb-swift
+
+tools:
+    - title: Crypto-Conditions
+      repo: cryptoconditions
+      version: v0.5.1
+
+    - title: ILP ledger plugin
+      repo: ilp-plugin-bigchaindb
+      version: v0.1.1
+
+    - title: COALA IP ledger plugin
+      repo: pycoalaip-bigchaindb
+      version: v0.0.4

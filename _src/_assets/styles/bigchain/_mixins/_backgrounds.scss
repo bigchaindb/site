@@ -13,7 +13,10 @@
     background: $brand-main-gray-lighter;
 
     .section-title,
-    p {
+    p,
+    h1,
+    h2,
+    h3 {
         color: $brand-main-gray;
     }
 }
