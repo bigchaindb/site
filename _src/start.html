@@ -176,12 +176,36 @@ redirect_from:
 <section class="section section--community" id="community">
     <div class="row">
         <header class="section-header">
-            <h1 class="section-title">Get Involved</h1>
+            <h1 class="section-title">Get involved in the community</h1>
             <p class="section-description">There are many ways you can contribute to the BigchainDB project, some very easy and others more involved. We welcome all potential contributors, so we ask that everyone participating abide by some simple guidelines.</p>
-
-            <a href="{{ site.social.github.url }}/{{ site.social.github.repo }}/blob/master/CONTRIBUTING.md" class="btn btn-primary btn-sm">Read The Guidelines</a>
         </header>
+    </div>
 
+    <div class="row community__actions">
+        <div class="grid grid--full grid-small--fit grid--gutters">
+            <div class="grid__col">
+                <h5>Chat on Gitter</h5>
+                <p>Start a chat with us on Gitter.</p>
+                <a href="{{ site.social.gitter.url }}" class="btn btn-primary btn-sm">
+                    Chat on Gitter
+                </a>
+            </div>
+            <div class="grid__col">
+                <h5>Open an issue</h5>
+                <p>So you found a bug? Report it!</p>
+                <a href="{{ site.social.github.url }}/{{ site.social.github.repo }}" class="btn btn-primary btn-sm">
+                    Open issue
+                </a>
+            </div>
+            <div class="grid__col">
+                <h5>Guidelines</h5>
+                <p>Read up on our community guidelines.</p>
+                <a href="{{ site.social.github.url }}/{{ site.social.github.repo }}/blob/master/CONTRIBUTING.md" class="btn btn-primary btn-sm">Read Guidelines</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
         <div class="grid grid--full grid-small--fit grid--gutters">
             <div class="grid__col">
                 <h1>Follow</h1>
@@ -199,10 +223,7 @@ redirect_from:
 
             </div>
         </div>
-
     </div>
-
-    {% include svg/wrigley-with-stage.svg %}
 
 </section>
 
