@@ -20,10 +20,40 @@ redirect_from:
     <div class="row row--wide">
         <div class="grid grid--full grid-small--half grid--gutters">
             <div class="grid__col">
-                <h3>Request</h3>
+                <h4>Request</h4>
+                <form class="form form--transaction" action="" method="post">
+                    <p class="form-group">
+                        <input class="form-control" type="text" name="message" required>
+                        <label class="form-label" for="message">Add a message</label>
+                    </p>
+                    <p class="form-group">
+                        A transaction can contain a digital asset along with a message. Type something to be sent along the asset.
+                    </p>
+                    <a class="btn btn-primary" href="">Off you go</a>
+                </form>
             </div>
             <div class="grid__col">
-                <h3>Response</h3>
+                <h4>Response</h4>
+                <div class="waiting">
+                    <pre>
+<code class="waiting">Beep, boop, waiting for your input...</code>
+                    </pre>
+                </div>
+
+                <div class="response highlight hide">
+                    <pre>
+<code class="waiting">Beep, boop, waiting for your input...</code>
+<code class="language-json">{
+  "asset": {
+    "data": {
+      "msg": "Blockchain all the things!"
+    }
+  },
+  "id": "04c00267af82c161b4bf2ad4a47d1ddbfeb47eef1a14b8d51",
+  ...</code>
+</pre>
+                </div>
+                <p class="hide">Nicely done! You have just created an asset, sent it along in a signed transaction and retrieved the result of that transaction. Phew.</p>
             </div>
         </div>
     </div>
@@ -56,7 +86,7 @@ redirect_from:
 <section class="section section--server" id="server">
     <div class="row row--wide">
         <header class="section-header text-left">
-            <h1 class="section-title">Get Server</h1>
+            <h1 class="section-title section-title--numbered"><span>1</span> Server</h1>
         </header>
     </div>
     <div class="row row--wide">
@@ -78,12 +108,9 @@ redirect_from:
 <section class="section section--drivers background--darker" id="drivers">
     <div class="row row--wide">
         <header class="section-header text-left">
-            <h1 class="section-title">Get Drivers &amp; Tools</h1>
+            <h1 class="section-title section-title--numbered"><span>2</span> Drivers &amp; Tools</h1>
+            <p class="section-description">Get one of the drivers to connect to IPDB or your BigchainDB server instance.</p>
         </header>
-    </div>
-    <div class="row row--wide">
-        <h3>BigchainDB in your language</h3>
-        <p>Get one of the drivers to connect to IPDB or your BigchainDB server instance.</p>
     </div>
     <div class="row row--wide">
         <h3>Officially supported drivers</h3>
@@ -152,13 +179,13 @@ redirect_from:
 </section>
 
 <section class="section section--docs background--light" id="docs">
-    <div class="row">
+    <div class="row row--wide">
         <header class="section-header">
-            <h1 class="section-title">Next Up</h1>
+            <h1 class="section-title section-title--numbered"><span>3</span> Next Up</h1>
             <p class="section-description">Dive into our documentation or learn or code.</p>
         </header>
     </div>
-    <div class="row">
+    <div class="row row--wide">
         <div class="grid grid--full grid-small--fit grid--gutters">
             <div class="grid__col">
                 <h3>Tutorials</h3>
@@ -176,7 +203,7 @@ redirect_from:
 <section class="section section--community" id="community">
     <div class="row">
         <header class="section-header">
-            <h1 class="section-title">Get involved in the community</h1>
+            <h1 class="section-title section-title--numbered"><span>4</span> Community</h1>
             <p class="section-description">There are many ways you can contribute to the BigchainDB project, some very easy and others more involved. We welcome all potential contributors, so we ask that everyone participating abide by some simple guidelines.</p>
         </header>
     </div>
@@ -208,7 +235,7 @@ redirect_from:
     <div class="row">
         <div class="grid grid--full grid-small--fit grid--gutters">
             <div class="grid__col">
-                <h1>Follow</h1>
+                <h5>Follow</h5>
                 <p>Follow us for the latest updates</p>
 
                 {% for link in site.social %}

@@ -4,6 +4,61 @@
 // bigchaindb.com
 //
 
+.waiting {
+    pre {
+        min-height: 254px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-style: italic;
+        border: 1px solid $gray-dark;
+        background: none;
+    }
+}
+
+.response {
+    pre {
+
+    }
+}
+
+.section-title--numbered {
+    span {
+        text-align: center;
+        display: block;
+        margin: auto;
+        margin-bottom: $spacer / 2;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        font-size: $font-size-lg;
+        background: red;
+        vertical-align: .4rem;
+        background: $headings-color;
+        color: $gray;
+        font-weight: 400;
+        line-height: 3rem;
+    }
+
+    .text-left & {
+        span {
+            display: inline-block;
+            margin: 0;
+        }
+    }
+
+    .background--light & {
+        span {
+            background: $gray-light;
+            color: #fff;
+        }
+    }
+
+    &:after {
+        display: none;
+    }
+}
+
 .driver {
     padding: $spacer;
     background: rgba($brand-main-blue-light, .15);
