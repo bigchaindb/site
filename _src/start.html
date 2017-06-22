@@ -26,7 +26,7 @@ redirect_from:
                         <input id="message" class="form-control" type="text" name="message" required>
                         <label class="form-label" for="message">Message</label>
                     </p>
-                    <p class="form-group">
+                    <p class="form-group message">
                         A transaction can contain a digital asset along with a message. Type something to be sent along the asset.
                     </p>
                     <a class="btn btn-primary" id="post" href="#">Off you go</a>
@@ -52,7 +52,9 @@ redirect_from:
   ...</code>
 </pre>
                 </div>
-                <p class="hide">Nicely done! You have just created an asset, sent it along in a signed transaction and retrieved the result of that transaction. Phew.</p>
+
+                <p class="message message--success hide">Nicely done! You have just created an asset, sent it along in a signed transaction and retrieved the result of that transaction. Phew.</p>
+                <p class="message message--fail hide">Shenanigans! Something's off. Would you mind trying again?</p>
             </div>
         </div>
     </div>

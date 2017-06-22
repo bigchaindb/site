@@ -46,6 +46,8 @@ window.addEventListener('DOMContentLoaded', function domload(event){
         const waiting = document.getElementsByClassName('waiting')[0]
         const response = document.getElementsByClassName('response')[0]
         const output = document.getElementsByClassName('output')[0]
+        const messageSuccess = document.getElementsByClassName('message--success')[0]
+        const messageFail = document.getElementsByClassName('message--fail')[0]
 
         conn.postTransaction(txSigned)
             .then(() => {
@@ -59,6 +61,7 @@ window.addEventListener('DOMContentLoaded', function domload(event){
 
                 waiting.classList.add('hide')
                 response.classList.remove('hide')
+                messageFail.classList.remove('hide')
 
                 const outputContent = reason.status + ' ' +  reason.statusText
                 output.textContent = outputContent
