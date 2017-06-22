@@ -30,6 +30,7 @@ window.addEventListener('DOMContentLoaded', function domload(event){
         const alice = new driver.Ed25519Keypair()
         const tx = driver.Transaction.makeCreateTransaction(
             { assetMessage: message },
+            { metaDataMessage: 'hello' },
             [ driver.Transaction.makeOutput(
                     driver.Transaction.makeEd25519Condition(alice.publicKey))
             ],
