@@ -18,8 +18,14 @@
 
 .response {
     pre {
-
+        border: 1px solid $gray-dark;
+        background: none;
     }
+}
+
+.form--transaction {
+    padding-left: $spacer * 1.5;
+    padding-right: $spacer * 1.5;
 }
 
 .section-title--numbered {

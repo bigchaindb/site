@@ -43,11 +43,24 @@ window.addEventListener('DOMContentLoaded', function domload(event){
             app_key: APP_KEY
         })
 
+        const waiting = document.getElementsByClassName('waiting')[0]
+        const response = document.getElementsByClassName('response')[0]
+        const output = document.getElementsByClassName('output')[0]
+
         conn.postTransaction(txSigned)
             .then(() => {
-                const output = document.getElementById('output')
-                const outputContent = conn.getStatus(txSigned.id)
+                waiting.classList.add('hide')
+                response.classList.remove('hide')
 
+                const outputContent = conn.getStatus(txSigned.id)
+                output.textContent = outputContent
+            }, reason => { // Error!
+                console.log(reason)
+
+                waiting.classList.add('hide')
+                response.classList.remove('hide')
+
+                const outputContent = reason.status + ' ' +  reason.statusText
                 output.textContent = outputContent
             })
             .then((res) => console.log('Transaction status:', res.status))
