@@ -24,13 +24,11 @@ window.addEventListener('DOMContentLoaded', function domload(event){
     const messageInput = document.getElementById('message')
 
     // quick form validation
-    postButton.classList.add('disabled')
-
     messageInput.addEventListener('input', function() {
         if (messageInput.value === '') {
-            postButton.classList.add('disabled')
+            postButton.setAttribute('disabled', '')
         } else {
-            postButton.classList.remove('disabled')
+            postButton.removeAttribute('disabled')
         }
     })
 
@@ -60,6 +58,7 @@ window.addEventListener('DOMContentLoaded', function domload(event){
         const output = document.getElementsByClassName('output')[0]
         const messageSuccess = document.getElementsByClassName('message--success')[0]
         const messageFail = document.getElementsByClassName('message--fail')[0]
+        const transactionLink = document.getElementsByClassName('transaction-link')[0]
 
         conn.postTransaction(txSigned)
             .then((response) => {
@@ -71,6 +70,8 @@ window.addEventListener('DOMContentLoaded', function domload(event){
 
                 const outputContent = JSON.stringify(response, null, 4) // indented with 4 spaces
                 output.textContent = outputContent
+
+                transactionLink.href = 'https://test.ipdb.io/api/v1/transactions/' + response.id
 
             }, reason => { // Error!
                 console.log(reason)

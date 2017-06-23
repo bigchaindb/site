@@ -29,7 +29,7 @@ redirect_from:
                     <p class="form-group message">
                         A transaction can contain a digital asset along with a message. Type something to be sent along the asset.
                     </p>
-                    <a class="btn btn-primary" id="post" href="#">Off you go</a>
+                    <button class="btn btn-primary" id="post" disabled>Off you go</button>
                 </form>
             </div>
             <div class="grid__col">
@@ -53,7 +53,12 @@ redirect_from:
 </pre>
                 </div>
 
-                <p class="message message--success hide">Nicely done! You have just created an asset, sent it along in a signed transaction and retrieved the result of that transaction. Phew.</p>
+                <div class="message message--success hide">
+                    <p>
+                        Nicely done! You have just created an asset, sent it along in a signed transaction and retrieved the result of that transaction. Phew.
+                    </p>
+                    <p><a class="transaction-link" href="https://test.ipdb.io/api/v1/transactions/">Check out your transaction on IPDB</a></p>
+                </div>
                 <p class="message message--fail hide">Shenanigans! Something's off. Would you mind trying again?</p>
             </div>
         </div>
