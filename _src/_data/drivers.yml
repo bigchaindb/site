@@ -2,24 +2,30 @@ official:
     - title: Python
       repo: bigchaindb-driver
       version: v0.2.2
+      icon: logo-python
 
     - title: JavaScript
       repo: js-bigchaindb-driver
       version: v0.1.1
+      icon: logo-js
 
     - title: CLI
       repo: bdb-transaction-cli
       version: v0.2.2
+      icon: logo-cli
 
 community:
     - title: Haskell
       repo: bigchaindb-hs
+      icon: logo-haskell
 
     - title: Ruby
       repo: bigchaindb_ruby
+      icon: logo-ruby
 
     - title: Go
       repo: bigchaindb-driver-golang
+      icon: logo-go
 
     - title: Java
       repo: bigchaindb-java

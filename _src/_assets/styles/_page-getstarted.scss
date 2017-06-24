@@ -69,8 +69,7 @@
 .driver {
     padding: $spacer;
     background: rgba($brand-main-blue-light, .15);
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
+    border-radius: $border-radius;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -78,13 +77,23 @@
 
     &:hover,
     &:focus {
+        background: $brand-primary;
+        box-shadow: 0 1px 4px rgba($brand-main-blue-dark, .4);
+        transform: translateY(-1px);
+
         .driver__title {
             color: #fff;
         }
 
         .driver__logo {
-            background: #fff;
+            fill: #fff;
         }
+    }
+
+    &:active {
+        outline: 0;
+        transform: translateY(0);
+        box-shadow: 0 1px 2px rgba($brand-main-blue-dark, .3);
     }
 }
 
@@ -97,7 +106,7 @@
 .driver__logo {
     width: 2rem;
     height: 2rem;
-    background: $brand-primary;
+    fill: $brand-primary;
 }
 
 .driver__title {
@@ -205,4 +214,21 @@
     border-bottom: 1px solid $gray-dark;
     margin-bottom: $spacer * 3;
     padding-bottom: $spacer * 3;
+
+    h5 {
+        margin-top: $spacer / 2;
+        margin-bottom: $spacer / 4;
+    }
+
+    .icon {
+        width: 2rem;
+        height: 2rem;
+        fill: $brand-main-blue-dark;
+        opacity: .6;
+    }
+
+    .icon--gitter {
+        stroke: $brand-main-blue-dark;
+        stroke-width: 2;
+    }
 }
