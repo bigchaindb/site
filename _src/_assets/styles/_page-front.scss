@@ -5,7 +5,8 @@
 //
 
 .page-front {
-    .section--partners {
+    .section--partners,
+    .section-testimonials {
         @extend .background--darker;
     }
 }
@@ -13,6 +14,11 @@
 .section-intro {
     .section-header {
         margin-bottom: $spacer * 2;
+    }
+
+    p:last-child {
+        margin-top: $spacer * 4;
+        margin-bottom: 0;
     }
 }
 
@@ -37,9 +43,6 @@
         margin: auto;
         margin-bottom: $spacer;
     }
-}
 
-.section-quickstart__title {
-    @extend .h3;
-    margin-top: 0;
+
 }
