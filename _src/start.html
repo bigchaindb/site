@@ -97,7 +97,7 @@ redirect_from:
         </header>
     </div>
 
-    <aside class="starbase">
+    <aside class="starbase starbase--server">
         <div class="row row--wide">
             <figure class="starbase__image">
                 <img class="img--responsive" src="/assets/img/starbase.svg" alt="Starbase" width="1071" height="328">
@@ -105,18 +105,18 @@ redirect_from:
         </div>
     </aside>
 
-    <section class="serverchoice">
+    <section class="choice">
         <div class="row row--wide">
             <div class="grid grid--full grid-small--half grid--gutters">
                 <div class="grid__col">
                     <span class="pretitle">Managed</span>
-                    <h2 class="serverchoice__title">IPDB: the public BigchainDB network</h2>
+                    <h2 class="choice__title">IPDB: the public BigchainDB network</h2>
                     <p>No need for any installation. Sign up and connect instantly, we handle running a BigchainDB production node for you.</p>
                     <a class="btn btn-primary" href="">Get IPDB</a>
                 </div>
                 <div class="grid__col">
                     <span class="pretitle">Self-hosted</span>
-                    <h2 class="serverchoice__title">BigchainDB Server</h2>
+                    <h2 class="choice__title">BigchainDB Server</h2>
                     <p>If you want to run your own BigchainDB instance you can either install on Linux or with Docker on any system.</p>
                     <a class="btn btn-secondary" href="">Install BigchainDB Server</a>
                 </div>
@@ -126,7 +126,7 @@ redirect_from:
 
 </section>
 
-<section class="section section--drivers" id="drivers">
+<section class="section section--drivers background--darker" id="drivers">
     <div class="row row--wide">
         <header class="section-header text-left">
             <h1 class="section-title section-title--numbered"><span>2</span> Drivers &amp; Tools</h1>
@@ -142,81 +142,81 @@ redirect_from:
         </div>
     </aside>
 
-    <div class="row row--wide">
+    <section class="choice">
+        <div class="row row--wide">
 
-        <div class="grid grid--full grid-small--half grid--gutters">
-            <div class="grid__col">
+            <div class="grid grid--full grid-small--half grid--gutters">
+                <div class="grid__col">
 
-                <h3>Official drivers</h3>
+                    <h3 class="choice__title">Official drivers</h3>
 
-                <div class="grid grid--full grid-small--half grid--gutters">
+                    <div class="grid grid--full grid-small--half grid--gutters">
 
-                    {% for driver in site.data.drivers.official %}
-                    <div class="grid__col">
-                        <a class="driver" href="https://github.com/bigchaindb/{{ driver.repo }}">
-                            <h2 class="driver__title">{{ driver.title }}</h2>
-                            <svg class="driver__logo">
-                                <use xlink:href="/assets/img/sprite.svg#{{ driver.icon }}"></use>
-                            </svg>
+                        {% for driver in site.data.drivers.official %}
+                        <div class="grid__col">
+                            <a class="driver" href="https://github.com/bigchaindb/{{ driver.repo }}">
+                                <h2 class="driver__title">{{ driver.title }}</h2>
+                                <svg class="driver__logo">
+                                    <use xlink:href="/assets/img/sprite.svg#{{ driver.icon }}"></use>
+                                </svg>
 
-                            <p class="driver__meta">
-                                <span class="driver__repo">{{ driver.repo }}</span>
-                                <span class="driver__version">{{ driver.version }}</span>
-                            </p>
-                        </a>
+                                <p class="driver__meta">
+                                    <span class="driver__repo">{{ driver.repo }}</span>
+                                    <span class="driver__version">{{ driver.version }}</span>
+                                </p>
+                            </a>
+                        </div>
+                        {% endfor %}
+
                     </div>
-                    {% endfor %}
 
                 </div>
+                <div class="grid__col">
 
-            </div>
-            <div class="grid__col">
+                    <h3 class="choice__title">Official tools</h3>
+                    <div class="grid grid--full grid-small--half grid--gutters">
 
-                <h3>Official tools</h3>
-                <div class="grid grid--full grid-small--half grid--gutters">
+                        {% for driver in site.data.drivers.tools %}
+                        <div class="grid__col">
+                            <a class="driver" href="https://github.com/bigchaindb/{{ driver.repo }}">
+                                <h2 class="driver__title">{{ driver.title }}</h2>
 
-                    {% for driver in site.data.drivers.tools %}
-                    <div class="grid__col">
-                        <a class="driver" href="https://github.com/bigchaindb/{{ driver.repo }}">
-                            <h2 class="driver__title">{{ driver.title }}</h2>
+                                <p class="driver__meta">
+                                    <span class="driver__repo">{{ driver.repo }}</span>
+                                    <span class="driver__version">{{ driver.version }}</span>
+                                </p>
+                            </a>
+                        </div>
+                        {% endfor %}
 
-                            <p class="driver__meta">
-                                <span class="driver__repo">{{ driver.repo }}</span>
-                                <span class="driver__version">{{ driver.version }}</span>
-                            </p>
-                        </a>
                     </div>
-                    {% endfor %}
-
                 </div>
 
             </div>
         </div>
 
+        <div class="row row--wide">
+            <h3 class="choice__title">Community drivers</h3>
+            <div class="grid grid--half grid-medium--fit grid--gutters">
 
-    </div>
+                {% for driver in site.data.drivers.community %}
+                <div class="grid__col">
+                    <a class="driver driver--community" href="{{ driver.link }}">
+                        <svg class="driver__logo">
+                            <use xlink:href="/assets/img/sprite.svg#{{ driver.icon }}"></use>
+                        </svg>
+                        <h2 class="driver__title">{{ driver.title }}</h2>
 
-    <div class="row row--wide">
-        <h3>Community drivers</h3>
-        <div class="grid grid--half grid-medium--fit grid--gutters">
+                        <p class="driver__meta">
+                            <span class="driver__repo">{{ driver.repo }}</span>
+                        </p>
+                    </a>
+                </div>
+                {% endfor %}
 
-            {% for driver in site.data.drivers.community %}
-            <div class="grid__col">
-                <a class="driver driver--community" href="{{ driver.link }}">
-                    <svg class="driver__logo">
-                        <use xlink:href="/assets/img/sprite.svg#{{ driver.icon }}"></use>
-                    </svg>
-                    <h2 class="driver__title">{{ driver.title }}</h2>
-
-                    <p class="driver__meta">
-                        <span class="driver__repo">{{ driver.repo }}</span>
-                    </p>
-                </a>
             </div>
-            {% endfor %}
-
         </div>
-    </div>
+    </section>
 </section>
 
 <section class="section section--docs background--light" id="docs">

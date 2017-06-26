@@ -38,7 +38,7 @@
         height: 3rem;
         border-radius: 50%;
         font-size: $font-size-lg;
-        vertical-align: 0.4rem;
+        vertical-align: .4rem;
         background: $headings-color;
         color: $gray;
         font-weight: 400;
@@ -69,6 +69,10 @@
 //
 .section--server {
     padding-bottom: 0;
+
+    .btn {
+        margin-top: $spacer / 2;
+    }
 }
 
 .starbase {
@@ -101,7 +105,7 @@
         position: relative;
         z-index: 1;
         margin-bottom: -1.45%;
-        opacity: 0.7;
+        opacity: .7;
     }
 
     // surface layer
@@ -112,24 +116,16 @@
         left: -5%;
         right: -5%;
         bottom: 0;
-        background: #5d6f82;
+        background: lighten($gray, 8%);
         height: 24%;
         width: calc(100vw + 10%);
     }
 }
 
 .starbase--drivers {
-    margin-bottom: $spacer * 2;
-
-    // horizon layer
-    &:before {
-        background: darken($gray, 3%);
-    }
-
     .starbase__image {
         // surface layer
         &:before {
-            background: lighten($gray, 2%);
             height: 37%;
         }
 
@@ -140,15 +136,16 @@
     }
 }
 
-.serverchoice {
-    background: #536476;
+.choice {
+    background: lighten($gray, 3%);
     padding-top: $spacer * 4;
     padding-bottom: $spacer * 4;
 }
 
-.serverchoice__title {
+.choice__title {
     font-size: $font-size-h3;
     margin-top: 0;
+    margin-bottom: $spacer * $line-height;
 
     // the bottom line
     &:after {
@@ -156,7 +153,7 @@
         height: 2px;
         width: 3rem;
         display: block;
-        margin: ($spacer * 2) 0 0;
+        margin: ($spacer * $line-height) 0 0;
         background: $gray-light;
     }
 }
@@ -166,6 +163,14 @@
 
     img {
         max-width: 45rem;
+    }
+}
+
+.section--drivers {
+    padding-bottom: 0;
+
+    .choice__title {
+        margin-bottom: $spacer * 2;
     }
 }
 
@@ -231,7 +236,7 @@
 }
 
 .driver__version {
-    opacity: 0.75;
+    opacity: .75;
 }
 
 .driver--community {
