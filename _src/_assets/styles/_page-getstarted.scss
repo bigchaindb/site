@@ -95,12 +95,14 @@
 }
 
 .starbase__image {
-    display: block;
+    display: flex;
+    align-items: flex-end;
 
     img {
         position: relative;
         z-index: 1;
-        margin-bottom: -1.8%;
+        margin-bottom: -1.45%;
+        opacity: .7;
     }
 
     // surface layer
@@ -114,6 +116,28 @@
         background: #5d6f82;
         height: 24%;
         width: calc(100vw + 10%);
+    }
+}
+
+.starbase--drivers {
+    margin-bottom: $spacer * 2;
+
+    // horizon layer
+    &:before {
+        background: darken($gray, 3%);
+    }
+
+    .starbase__image {
+        // surface layer
+        &:before {
+            background: lighten($gray, 2%);
+            height: 37%;
+        }
+
+        img {
+            min-height: 15rem;
+            margin-bottom: -6.5%;
+        }
     }
 }
 
@@ -218,9 +242,16 @@
     .driver__title {
         width: 100%;
         margin-bottom: 0;
+        font-size: $font-size-base;
+    }
+
+    .driver__repo {
+        font-size: $font-size-xs;
     }
 
     .driver__logo {
+        width: 1.5rem;
+        height: 1.5rem;
         margin-bottom: $spacer / 2;
     }
 }
