@@ -1,7 +1,7 @@
 ---
 main:
     - title: Get started
-      url: "/start/"
+      url: "/getstarted/"
     - title: Features
       url: "/features/"
     - title: Use Cases
