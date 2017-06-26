@@ -1,3 +1,5 @@
+//=require gumshoe/dist/js/gumshoe.js
+
 //=include bigchain/smoothscroll.js
 //=include bigchain/newsletter.js
 
@@ -7,11 +9,41 @@ jQuery(function($) {
     // init modules
     //
     Newsletter.init()
+
 })
+
+
+//
+// Sticky nav
+//
+const menu = document.getElementsByClassName('menu--sub')[0]
+
+if ( window.innerWidth >= 768 ) {
+    const offset = menu.offsetTop
+
+    window.addEventListener('scroll', function() {
+        if (offset < window.pageYOffset) {
+            menu.classList.add('sticky')
+        } else {
+            menu.classList.remove('sticky')
+        }
+    }, false)
+}
+
+
+//
+// Scrollspy
+//
+gumshoe.init()
+
+
+//
+// BigchainDB transaction tool
+//
 
 //=include bigchaindb-driver/dist/browser/bigchaindb-driver.window.min.js
 
-window.addEventListener('DOMContentLoaded', function domload(event){
+window.addEventListener('DOMContentLoaded', function domload(event) {
     window.removeEventListener('DOMContentLoaded', domload, false)
 
     const driver = window.BigchainDB
@@ -38,14 +70,11 @@ window.addEventListener('DOMContentLoaded', function domload(event){
         const message = messageInput.value
 
         const alice = new driver.Ed25519Keypair()
-        const tx = driver.Transaction.makeCreateTransaction(
-            { assetMessage: message },
-            { metaDataMessage: message },
-            [ driver.Transaction.makeOutput(
-                    driver.Transaction.makeEd25519Condition(alice.publicKey))
-            ],
-            alice.publicKey
-        )
+        const tx = driver.Transaction.makeCreateTransaction({
+            assetMessage: message
+        }, {
+            metaDataMessage: message
+        }, [driver.Transaction.makeOutput(driver.Transaction.makeEd25519Condition(alice.publicKey))], alice.publicKey)
         const txSigned = driver.Transaction.signTransaction(tx, alice.privateKey)
 
         const conn = new driver.Connection(API_PATH, {
@@ -60,30 +89,28 @@ window.addEventListener('DOMContentLoaded', function domload(event){
         const messageFail = document.getElementsByClassName('message--fail')[0]
         const transactionLink = document.getElementsByClassName('transaction-link')[0]
 
-        conn.postTransaction(txSigned)
-            .then((response) => {
-                waiting.classList.add('hide')
-                responseArea.classList.remove('hide')
-                messageSuccess.classList.remove('hide')
+        conn.postTransaction(txSigned).then((response) => {
+            waiting.classList.add('hide')
+            responseArea.classList.remove('hide')
+            messageSuccess.classList.remove('hide')
 
-                console.log(response)
+            console.log(response)
 
-                const outputContent = JSON.stringify(response, null, 4) // indented with 4 spaces
-                output.textContent = outputContent
+            const outputContent = JSON.stringify(response, null, 4) // indented with 4 spaces
+            output.textContent = outputContent
 
-                transactionLink.href = 'https://test.ipdb.io/api/v1/transactions/' + response.id
+            transactionLink.href = 'https://test.ipdb.io/api/v1/transactions/' + response.id
 
-            }, reason => { // Error!
-                console.log(reason)
+        }, reason => { // Error!
+            console.log(reason)
 
-                waiting.classList.add('hide')
-                responseArea.classList.remove('hide')
-                messageFail.classList.remove('hide')
+            waiting.classList.add('hide')
+            responseArea.classList.remove('hide')
+            messageFail.classList.remove('hide')
 
-                const outputContent = reason.status + ' ' +  reason.statusText
-                output.textContent = outputContent
-            })
-            .then((res) => console.log('Transaction status:', res.status))
+            const outputContent = reason.status + ' ' + reason.statusText
+            output.textContent = outputContent
+        }).then((res) => console.log('Transaction status:', res.status))
 
     }, false)
 }, false)

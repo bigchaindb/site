@@ -33,13 +33,12 @@
     span {
         text-align: center;
         display: block;
-        margin: auto;
-        margin-bottom: $spacer / 2;
+        margin: auto auto $spacer / 2;
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
         font-size: $font-size-lg;
-        vertical-align: .4rem;
+        vertical-align: 0.4rem;
         background: $headings-color;
         color: $gray;
         font-weight: 400;
@@ -102,7 +101,7 @@
         position: relative;
         z-index: 1;
         margin-bottom: -1.45%;
-        opacity: .7;
+        opacity: 0.7;
     }
 
     // surface layer
@@ -179,8 +178,8 @@
     justify-content: space-between;
     box-shadow: none;
 
-    &:hover,
-    &:focus {
+    &:focus,
+    &:hover {
         background: $brand-primary;
         box-shadow: 0 1px 4px rgba($brand-main-blue-dark, .4);
         transform: translateY(-1px);
@@ -232,7 +231,7 @@
 }
 
 .driver__version {
-    opacity: .75;
+    opacity: 0.75;
 }
 
 .driver--community {
@@ -256,11 +255,20 @@
     }
 }
 
+//
+// Section: Docs
+//
+
+//
+// Section: Community
+//
 .section--community {
     text-align: center;
 
     .section-header {
-        .section-description { margin-bottom: ($spacer * 2); }
+        .section-description {
+            margin-bottom: ($spacer * 2);
+        }
     }
 
     .grid h1 {
@@ -277,8 +285,8 @@
         box-shadow: none;
         padding: $btn-padding-y-sm $btn-padding-x-sm;
 
-        &:hover,
-        &:focus {
+        &:focus,
+        &:hover {
             background: none;
 
             .icon {
@@ -342,4 +350,18 @@
         stroke: $brand-main-blue-dark;
         stroke-width: 2;
     }
+}
+
+//
+// Sticky sub menu
+//
+body {
+    position: relative;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }

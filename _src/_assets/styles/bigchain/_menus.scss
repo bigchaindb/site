@@ -289,9 +289,9 @@
     display: inline-block;
 }
 
-
 .menu--sub {
     background: $gray-dark;
+    border-bottom: 1px solid $gray;
 
     .menu-overflow {
         text-align: center;
