@@ -66,11 +66,83 @@
 }
 
 //
-// Section: architecture
+// Section: server
 //
-.section--architecture {
-    .architecture {
-        text-align: center;
+.section--server {
+    padding-bottom: 0;
+}
+
+.starbase {
+    position: relative;
+    margin-top: -($spacer * 2);
+
+    // horizon layer
+    &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: #445261;
+        clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .row {
+        position: relative;
+    }
+}
+
+.starbase__image {
+    display: block;
+
+    img {
+        position: relative;
+        z-index: 1;
+        margin-bottom: -1.8%;
+    }
+
+    // surface layer
+    &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        left: -5%;
+        right: -5%;
+        bottom: 0;
+        background: #5d6f82;
+        height: 24%;
+        width: calc(100vw + 10%);
+    }
+}
+
+.serverchoice {
+    background: #536476;
+    padding-top: $spacer * 4;
+    padding-bottom: $spacer * 4;
+}
+
+.serverchoice__title {
+    font-size: $font-size-h3;
+    margin-top: 0;
+
+    // the bottom line
+    &:after {
+        content: '';
+        height: 2px;
+        width: 3rem;
+        display: block;
+        margin: ($spacer * 2) 0 0;
+        background: $gray-light;
+    }
+}
+
+.architecture {
+    text-align: center;
+
+    img {
+        max-width: 45rem;
     }
 }
 
