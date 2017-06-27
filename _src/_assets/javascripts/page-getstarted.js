@@ -104,6 +104,8 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
             postButton.classList.add('disabled')
             postButton.style.opacity = 0
 
+            //=include bigchain/nyan.js
+
         }, reason => { // Error!
             console.log(reason)
 
