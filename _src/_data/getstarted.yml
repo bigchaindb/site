@@ -8,7 +8,7 @@ firsttransaction:
     message:
         label: "Type a message"
         button: "Off you go"
-        request: "A transaction can contain a digital asset along with a message. Type something to be sent along the asset."
+        request: "A transaction can contain a digital asset along with a message. Type something above to be sent along the asset."
         response: "Nicely done! You have just created an asset, sent it along in a signed transaction and retrieved the result of that transaction. Phew."
 
 

@@ -7,8 +7,15 @@
 .section--firsttransaction {
     overflow: visible;
 
-    h4 {
-        margin-bottom: $spacer * 2.5;
+    .section-title {
+        font-size: $font-size-h3;
+        text-align: left;
+        margin-top: $spacer * 3;
+        margin-bottom: $spacer * 3;
+
+        &:after {
+            display: none;
+        }
     }
 }
 
@@ -16,11 +23,21 @@
     // mnml frm
     background: none;
     padding: 0;
+
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .form-group:first-child {
+        margin-top: 0;
+    }
 }
 
 .form--transaction__content {
     border: none;
     padding: 0;
+    width: 100%;
 }
 
 .waiting {
