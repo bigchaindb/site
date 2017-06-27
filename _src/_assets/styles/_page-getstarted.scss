@@ -365,8 +365,12 @@ body {
 }
 
 .sticky {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
+
+    @supports (position: sticky) {
+        position: sticky;
+    }
 }
