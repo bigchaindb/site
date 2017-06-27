@@ -46,6 +46,7 @@ drivers:
 docs:
     title: "Documentation"
     description: "Dive into our documentation or learn or code."
+    button: "See all documentation"
     categories:
 
         - title: "Tutorials"

@@ -91,10 +91,6 @@
         background: #445261;
         clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
     }
-
-    .row {
-        position: relative;
-    }
 }
 
 .starbase__image {
@@ -105,7 +101,7 @@
         position: relative;
         z-index: 1;
         margin-bottom: -1.45%;
-        opacity: .7;
+        width: 100%;
     }
 
     // surface layer
@@ -263,6 +259,15 @@
 //
 // Section: Docs
 //
+.section--docs {
+
+}
+
+.docs__actions {
+    border-top: 1px solid lighten($gray-light, 20%);
+    padding-top: $spacer * 2;
+}
+
 .docs__title {
     @extend .h3;
     margin-top: 0;
