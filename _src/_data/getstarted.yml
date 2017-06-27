@@ -1,0 +1,91 @@
+
+# ----------------------------
+# Section: First transaction
+# ----------------------------
+
+firsttransaction:
+    title:
+    description:
+
+
+# ----------------------------
+# Section: Server
+# ----------------------------
+
+server:
+    title: "Server"
+    description: "Server is cool but what you really want is IPDB. Install, installation"
+    ipdb:
+        pretitle: "Managed"
+        title: "IPDB: the public BigchainDB network"
+        description: "No need for any installation. Sign up and connect instantly, we handle running a BigchainDB production node for you."
+        button: "Get IPDB"
+    bdb:
+        pretitle: "Self-hosted"
+        title: "BigchainDB Server"
+        description: "If you want to run your own BigchainDB instance you can either install on Linux or with Docker on any system."
+        button: "Install BigchainDB Server"
+
+
+# ----------------------------
+# Section: Drivers
+# ----------------------------
+
+drivers:
+    title: "Drivers & tools"
+    description: "Get one of the drivers to connect to IPDB or your BigchainDB server instance."
+    title_official: "Official drivers"
+    title_tools: "Official tools"
+    title_community: "Community drivers"
+
+
+# ----------------------------
+# Section: Docs
+# ----------------------------
+
+docs:
+    title: "Documentation"
+    description: "Dive into our documentation or learn or code."
+    categories:
+
+        - title: "Tutorials"
+          items:
+            - title:
+              link:
+
+        - title: "Code examples"
+          items:
+              - title: "Kyber"
+                link: "https://github.com/bigchaindb/kyber"
+
+        - title: "Reference"
+          items:
+              - title: "HTTP API Reference"
+                link: "https://docs.bigchaindb.com/projects/server/en/latest/http-client-server-api.html"
+              - title: "Server Command Line Interface (CLI)"
+                link: "https://docs.bigchaindb.com/projects/server/en/latest/server-reference/bigchaindb-cli.html"
+              - title: "Server Configuration Settings"
+                link: "https://docs.bigchaindb.com/projects/server/en/latest/server-reference/configuration.html"
+              - title: "WebSocket Event Stream API"
+                link: "https://docs.bigchaindb.com/projects/server/en/latest/websocket-event-stream-api.html"
+
+
+# ----------------------------
+# Section: Community
+# ----------------------------
+
+community:
+    title: "Community"
+    description: "There are many ways you can contribute to the BigchainDB project, some very easy and others more involved. We welcome all potential contributors, so we ask that everyone participating abide by some simple guidelines."
+    gitter:
+        text: "Start a chat with us on Gitter."
+        button: "Chat on Gitter"
+    github:
+        text: "So you found a bug? Report it!"
+        button: "Open an issue"
+    guidelines:
+        text: "Read up on our community guidelines."
+        button: "Read Guidelines"
+    follow:
+        title: "Follow"
+        description: "Follow us for the latest updates"

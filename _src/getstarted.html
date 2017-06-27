@@ -11,6 +11,8 @@ redirect_from:
     - /start/
 ---
 
+{% assign content =  site.data.getstarted %}
+
 <section class="section section--firsttransaction">
     <div class="row">
         <header class="section-header">
@@ -74,10 +76,10 @@ redirect_from:
 <nav class="menu--sub" data-gumshoe-header>
     <div class="row row--wide">
         <div class="menu-overflow" data-gumshoe>
-            <a class="menu__link scroll" href="#server">Server</a>
-            <a class="menu__link scroll" href="#drivers">Drivers &amp; Tools</a>
-            <a class="menu__link scroll" href="#docs">Documentation</a>
-            <a class="menu__link scroll" href="#community">Community</a>
+            <a class="menu__link scroll" href="#server">{{ content.server.title }}</a>
+            <a class="menu__link scroll" href="#drivers">{{ content.drivers.title }}</a>
+            <a class="menu__link scroll" href="#docs">{{ content.docs.title }}</a>
+            <a class="menu__link scroll" href="#community">{{ content.community.title }}</a>
         </div>
     </div>
 </nav>
@@ -93,8 +95,8 @@ redirect_from:
 <section class="section section--server background--darker" id="server">
     <div class="row row--wide">
         <header class="section-header text-left">
-            <h1 class="section-title section-title--numbered"><span>1</span> Server</h1>
-            <p class="section-description">Server is cool but what you really want is IPDB. Install, installation</p>
+            <h1 class="section-title section-title--numbered"><span>1</span> {{ content.server.title }}</h1>
+            <p class="section-description">{{ content.server.description }}</p>
         </header>
     </div>
 
@@ -110,16 +112,16 @@ redirect_from:
         <div class="row row--wide">
             <div class="grid grid--full grid-small--half grid--gutters">
                 <div class="grid__col">
-                    <span class="pretitle">Managed</span>
-                    <h2 class="choice__title">IPDB: the public BigchainDB network</h2>
-                    <p>No need for any installation. Sign up and connect instantly, we handle running a BigchainDB production node for you.</p>
-                    <a class="btn btn-primary" href="">Get IPDB</a>
+                    <span class="pretitle">{{ content.server.ipdb.pretitle }}</span>
+                    <h2 class="choice__title">{{ content.server.ipdb.title }}</h2>
+                    <p>{{ content.server.ipdb.description }}</p>
+                    <a class="btn btn-primary" href="">{{ content.server.ipdb.button }}</a>
                 </div>
                 <div class="grid__col">
-                    <span class="pretitle">Self-hosted</span>
-                    <h2 class="choice__title">BigchainDB Server</h2>
-                    <p>If you want to run your own BigchainDB instance you can either install on Linux or with Docker on any system.</p>
-                    <a class="btn btn-secondary" href="">Install BigchainDB Server</a>
+                    <span class="pretitle">{{ content.server.bdb.pretitle }}</span>
+                    <h2 class="choice__title">{{ content.server.bdb.title }}</h2>
+                    <p>{{ content.server.bdb.description }}</p>
+                    <a class="btn btn-secondary" href="">{{ content.server.bdb.button }}</a>
                 </div>
             </div>
         </div>
@@ -130,8 +132,8 @@ redirect_from:
 <section class="section section--drivers background--darker" id="drivers">
     <div class="row row--wide">
         <header class="section-header text-left">
-            <h1 class="section-title section-title--numbered"><span>2</span> Drivers &amp; Tools</h1>
-            <p class="section-description">Get one of the drivers to connect to IPDB or your BigchainDB server instance.</p>
+            <h1 class="section-title section-title--numbered"><span>2</span> {{ content.drivers.title }}</h1>
+            <p class="section-description">{{ content.drivers.description }}</p>
         </header>
     </div>
 
@@ -149,7 +151,7 @@ redirect_from:
             <div class="grid grid--full grid-small--half grid--gutters">
                 <div class="grid__col">
 
-                    <h3 class="choice__title">Official drivers</h3>
+                    <h3 class="choice__title">{{ content.drivers.title_official }}</h3>
 
                     <div class="grid grid--full grid-small--half grid--gutters">
 
@@ -174,7 +176,7 @@ redirect_from:
                 </div>
                 <div class="grid__col">
 
-                    <h3 class="choice__title">Official tools</h3>
+                    <h3 class="choice__title">{{ content.drivers.title_tools }}</h3>
                     <div class="grid grid--full grid-small--half grid--gutters">
 
                         {% for driver in site.data.drivers.tools %}
@@ -197,7 +199,7 @@ redirect_from:
         </div>
 
         <div class="row row--wide">
-            <h3 class="choice__title">Community drivers</h3>
+            <h3 class="choice__title">{{ content.drivers.title_community }}</h3>
             <div class="grid grid--half grid-medium--fit grid--gutters">
 
                 {% for driver in site.data.drivers.community %}
@@ -223,21 +225,26 @@ redirect_from:
 <section class="section section--docs background--light" id="docs">
     <div class="row row--wide">
         <header class="section-header">
-            <h1 class="section-title section-title--numbered"><span>3</span> Next Up</h1>
-            <p class="section-description">Dive into our documentation or learn or code.</p>
+            <h1 class="section-title section-title--numbered"><span>3</span> {{ content.docs.title }}</h1>
+            <p class="section-description">{{ content.docs.description }}</p>
         </header>
     </div>
     <div class="row row--wide">
         <div class="grid grid--full grid-small--fit grid--gutters">
-            <div class="grid__col">
-                <h3>Tutorials</h3>
-            </div>
-            <div class="grid__col">
-                <h3>Code examples</h3>
-            </div>
-            <div class="grid__col">
-                <h3>Documentation</h3>
-            </div>
+
+            {% for category in content.docs.categories %}
+
+                <div class="grid__col">
+                    <h2 class="docs__title">{{ category.title }}</h2>
+                    <ul class="docs__list">
+                        {% for item in category.items %}
+                        <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            {% endfor %}
+
         </div>
     </div>
 </section>
@@ -245,8 +252,8 @@ redirect_from:
 <section class="section section--community" id="community">
     <div class="row">
         <header class="section-header">
-            <h1 class="section-title section-title--numbered"><span>4</span> Community</h1>
-            <p class="section-description">There are many ways you can contribute to the BigchainDB project, some very easy and others more involved. We welcome all potential contributors, so we ask that everyone participating abide by some simple guidelines.</p>
+            <h1 class="section-title section-title--numbered"><span>4</span> {{ content.community.title }}</h1>
+            <p class="section-description">{{ content.community.description }}</p>
         </header>
     </div>
 
@@ -256,26 +263,22 @@ redirect_from:
                 <svg class="icon icon--social icon--gitter">
                     <use xlink:href="/assets/img/sprite.svg#gitter"></use>
                 </svg>
-                <h5>Chat on Gitter</h5>
-                <p>Start a chat with us on Gitter.</p>
-                <a href="{{ site.social.gitter.url }}" class="btn btn-primary btn-sm">
-                    Chat on Gitter
-                </a>
+                <p>{{ content.community.gitter.text }}</p>
+                <a href="{{ site.social.gitter.url }}" class="btn btn-primary btn-sm">{{ content.community.gitter.button }}</a>
             </div>
             <div class="grid__col">
                 <svg class="icon icon--social icon--github">
                     <use xlink:href="/assets/img/sprite.svg#github"></use>
                 </svg>
-                <h5>Open an issue</h5>
-                <p>So you found a bug? Report it!</p>
-                <a href="{{ site.social.github.url }}/{{ site.social.github.repo }}" class="btn btn-primary btn-sm">
-                    Open issue
-                </a>
+                <p>{{ content.community.github.text }}</p>
+                <a href="{{ site.social.github.url }}/{{ site.social.github.repo }}" class="btn btn-primary btn-sm">{{ content.community.github.button }}</a>
             </div>
             <div class="grid__col">
-                <h5>Guidelines</h5>
-                <p>Read up on our community guidelines.</p>
-                <a href="{{ site.social.github.url }}/{{ site.social.github.repo }}/blob/master/CONTRIBUTING.md" class="btn btn-primary btn-sm">Read Guidelines</a>
+                <svg class="icon icon--social icon--github">
+                    <use xlink:href="/assets/img/sprite.svg#icon-book"></use>
+                </svg>
+                <p>{{ content.community.guidelines.text }}</p>
+                <a href="{{ site.social.github.url }}/{{ site.social.github.repo }}/blob/master/CONTRIBUTING.md" class="btn btn-primary btn-sm">{{ content.community.guidelines.button }}</a>
             </div>
         </div>
     </div>
@@ -283,8 +286,8 @@ redirect_from:
     <div class="row">
         <div class="grid grid--full grid-small--fit grid--gutters">
             <div class="grid__col">
-                <h5>Follow</h5>
-                <p>Follow us for the latest updates</p>
+                <h5>{{ content.community.follow.title }}</h5>
+                <p>{{ content.community.follow.description }}</p>
 
                 {% for link in site.social %}
                     <a class="social-link js-social-link" href="{{ link[1].url }}" title="{{ link[1].title }}">
