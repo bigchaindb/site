@@ -397,4 +397,15 @@ body {
     @supports (position: sticky) {
         position: sticky;
     }
+
+    .menu__link {
+        @media ($screen-sm) {
+            padding-top: $spacer;
+            padding-bottom: $spacer;
+
+            &:after {
+                bottom: $spacer / 2;
+            }
+        }
+    }
 }

@@ -290,8 +290,21 @@
 }
 
 .menu--sub {
-    background: $gray-dark;
-    border-bottom: 1px solid $gray;
+    @include transition;
+    background: rgba(lighten($gray, 30%), .85);
+    backdrop-filter: saturate(200%) blur(10px);
+
+    a {
+        color: $gray-dark;
+
+        &:after {
+            background: darken($gray-dark, 10%);
+        }
+
+        &.active {
+            color: darken($gray-dark, 10%);
+        }
+    }
 
     .menu-overflow {
         text-align: center;
@@ -304,5 +317,6 @@
         margin-right: $spacer / 6;
         margin-bottom: -2px;
         stroke-width: 3px;
+        color: $gray;
     }
 }

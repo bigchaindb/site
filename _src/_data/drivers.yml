@@ -15,20 +15,20 @@ official:
       icon: logo-cli
 
 community:
-    - title: Haskell
-      repo: bigchaindb-hs
-      icon: logo-haskell
-      link: https://github.com/bigchaindb/bigchaindb-hs
-
     - title: Ruby
       repo: bigchaindb_ruby
       icon: logo-ruby
       link: https://github.com/LicenseRocks/bigchaindb_ruby
 
+    - title: Haskell
+      repo: bigchaindb-hs
+      icon: logo-haskell
+      link: https://github.com/bigchaindb/bigchaindb-hs
+
     - title: Go
-      repo: bigchaindb-driver-golang
+      repo: envoke
       icon: logo-go
-      link: https://github.com/krish7919/bigchaindb-driver-golang
+      link: https://github.com/zbo14/envoke/blob/master/bigchain/bigchain.go
 
     - title: Java
       repo: bigchaindb-java-driver
