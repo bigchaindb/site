@@ -5,9 +5,22 @@
 //
 
 .section--firsttransaction {
-    .grid__col {
+    overflow: visible;
 
+    h4 {
+        margin-bottom: $spacer * 2.5;
     }
+}
+
+.form--transaction {
+    // mnml frm
+    background: none;
+    padding: 0;
+}
+
+.form--transaction__content {
+    border: none;
+    padding: 0;
 }
 
 .waiting {
@@ -39,20 +52,7 @@
 }
 
 .message {
-    color: #fff;
-}
-
-.form--transaction {
-    min-height: 340px;
-    padding-left: $spacer * 1.5;
-    padding-right: $spacer * 1.5;
-    display: flex;
-    align-items: center;
-}
-
-.form--transaction__content {
-    border: none;
-    padding: 0;
+    font-size: $font-size-base;
 }
 
 .section-title--numbered {
@@ -101,6 +101,11 @@
     }
 }
 
+//
+// All your star bases belong to us
+//
+// .starbase--server is the baseline
+//
 .starbase {
     position: relative;
     margin-top: -($spacer * 2);
@@ -139,26 +144,51 @@
         display: block;
         left: -5%;
         right: -5%;
-        bottom: 0;
+        bottom: auto;
         background: lighten($gray, 8%);
         height: 24%;
-        width: calc(100vw + 10%);
+        width: calc(100vw + 5%);
     }
 }
 
 // Drivers starbase
-// All magic numbers, gonna wing that visually
+// All magic numbers, gonna wing it visually
 .starbase--drivers {
-    min-height: 15rem;
+    min-height: 12rem;
 
     .starbase__image {
+        // surface layer
+        &:before {
+            height: 40%;
+        }
+
+        img {
+            margin-bottom: -.5%;
+        }
+    }
+}
+
+// Intro starbase
+// All magic numbers, gonna wing it visually
+.starbase--intro {
+    min-height: 10rem;
+    margin-top: -($spacer * 8);
+    margin-bottom: 2%;
+
+    @media ($screen-sm) {
+        margin-bottom: 4%;
+    }
+
+    .starbase__image {
+        margin-top: -($spacer * 8);
+
         // surface layer
         &:before {
             height: 35%;
         }
 
         img {
-            margin-bottom: -.5%;
+            margin-bottom: -1%;
         }
     }
 }
