@@ -104,6 +104,8 @@
 .starbase {
     position: relative;
     margin-top: -($spacer * 2);
+    display: flex;
+    align-items: flex-end;
 
     // horizon layer
     &:before {
@@ -144,16 +146,19 @@
     }
 }
 
+// Drivers starbase
+// All magic numbers, gonna wing that visually
 .starbase--drivers {
+    min-height: 15rem;
+
     .starbase__image {
         // surface layer
         &:before {
-            height: 37%;
+            height: 35%;
         }
 
         img {
-            min-height: 15rem;
-            margin-bottom: -6.5%;
+            margin-bottom: -.5%;
         }
     }
 }
@@ -286,7 +291,7 @@
 // Section: Docs
 //
 .section--docs {
-
+    text-align: center;
 }
 
 .docs__actions {
@@ -301,6 +306,7 @@
 
 .docs__list {
     padding-left: 0;
+    text-align: left;
 
     li {
         display: block;
