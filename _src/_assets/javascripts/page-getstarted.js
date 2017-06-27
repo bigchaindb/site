@@ -96,10 +96,13 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
 
             console.log(response)
 
-            const outputContent = JSON.stringify(response, null, 4) // indented with 4 spaces
+            const outputContent = JSON.stringify(response, null, 2) // indented with 2 spaces
             output.textContent = outputContent
 
             transactionLink.href = 'https://test.ipdb.io/api/v1/transactions/' + response.id
+
+            postButton.classList.add('disabled')
+            postButton.style.opacity = 0
 
         }, reason => { // Error!
             console.log(reason)

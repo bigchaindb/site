@@ -14,29 +14,27 @@ redirect_from:
 {% assign content =  site.data.getstarted %}
 
 <section class="section section--firsttransaction">
-    <div class="row">
-        <header class="section-header">
-            <h1 class="section-title">Get your first transaction into BigchainDB</h1>
-            <p class="section-description">Never wrote something into a blockchain? Now’s your chance: add your message and send off your first transaction to BigchainDB running within IPDB.</p>
-        </header>
-    </div>
+
     <div class="row row--wide">
         <div class="grid grid--full grid-small--half grid--gutters">
             <div class="grid__col">
-                <h4>Request</h4>
+                <h4>Get your first transaction into BigchainDB</h4>
                 <form id="form-transaction" class="form form--transaction js-parsley">
-                    <p class="form-group">
-                        <input id="message" class="form-control" type="text" name="message" required>
-                        <label class="form-label" for="message">Message</label>
-                    </p>
-                    <p class="form-group message">
-                        A transaction can contain a digital asset along with a message. Type something to be sent along the asset.
-                    </p>
-                    <button class="btn btn-primary" id="post" disabled>Off you go</button>
+                    <fieldset class="form--transaction__content">
+                        <p class="form-group">
+                            <input id="message" class="form-control" type="text" name="message" required>
+                            <label class="form-label" for="message">Message</label>
+                        </p>
+                        <p class="form-group message">
+                            A transaction can contain a digital asset along with a message. Type something to be sent along the asset.
+                        </p>
+                        <button class="btn btn-primary" id="post" disabled>Off you go</button>
+                    </fieldset>
+
                 </form>
             </div>
             <div class="grid__col">
-                <h4>Response</h4>
+                <h4>&nbsp;</h4>
                 <div class="waiting">
                     <pre>
 <code class="waiting">Beep, boop, waiting for your input...</code>
@@ -65,11 +63,6 @@ redirect_from:
                 <p class="message message--fail hide">Shenanigans! Something's off. Would you mind trying again?</p>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <header class="section-header">
-            <p class="section-description">Simple, eh?</p>
-        </header>
     </div>
 </section>
 
