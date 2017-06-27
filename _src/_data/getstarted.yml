@@ -51,11 +51,17 @@ docs:
 
         - title: "Tutorials"
           items:
-            - title:
-              link:
+              - title: "Set Up & Run a Dev/Test Node"
+                link: "https://docs.bigchaindb.com/projects/server/en/latest/dev-and-test/setup-run-node.html"
+              - title: "Production Deployment Template"
+                link: "https://docs.bigchaindb.com/projects/server/en/latest/production-deployment-template/index.html"
 
         - title: "Code examples"
           items:
+              - title: "Basic Usage Examples"
+                link: "https://docs.bigchaindb.com/projects/py-driver/en/latest/usage.html"
+              - title: "Handcrafting Transactions"
+                link: "https://docs.bigchaindb.com/projects/py-driver/en/latest/handcraft.html"
               - title: "Kyber"
                 link: "https://github.com/bigchaindb/kyber"
 
@@ -63,6 +69,8 @@ docs:
           items:
               - title: "HTTP API Reference"
                 link: "https://docs.bigchaindb.com/projects/server/en/latest/http-client-server-api.html"
+              - title: "Data Models"
+                link: "https://docs.bigchaindb.com/projects/server/en/latest/data-models/index.html"
               - title: "Server Command Line Interface (CLI)"
                 link: "https://docs.bigchaindb.com/projects/server/en/latest/server-reference/bigchaindb-cli.html"
               - title: "Server Configuration Settings"

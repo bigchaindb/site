@@ -20,6 +20,8 @@ intro:
           icon: "icon-nodes"
         - title: "Immutability"
           icon: "icon-castle"
+        - title: "Scaling"
+          icon: "icon-scaling"
         - title: "Native Assets"
           icon: "icon-diamond"
     text: "BigchainDB allows developers and enterprise to deploy blockchain proof-of-concepts, platforms and applications with a scalable blockchain database, supporting a wide range of industries and use cases."
@@ -34,7 +36,9 @@ intro:
             <h1 class="section-title">{{ page.intro.title }}</h1>
             <p class="section-description lead">{{ page.intro.description }}</p>
         </header>
+    </div>
 
+    <div class="row row--wide">
         <div class="section-intro__main grid grid--full grid-small--fit grid--gutters">
             {% for feature in page.intro.keyfeatures %}
             <div class="grid__col">
@@ -45,14 +49,15 @@ intro:
             </div>
             {% endfor %}
         </div>
+    </div>
 
+    <div class="row">
         <p class="large text-center">{{ page.intro.text }}</p>
 
         <p class="text-center">
             <a class="btn btn-primary" href="/features/">{{ page.intro.button }}</a>
         </p>
     </div>
-
 </section>
 
 {% include sections/section-testimonials.html %}
