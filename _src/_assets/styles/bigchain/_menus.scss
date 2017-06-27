@@ -338,33 +338,33 @@
         margin-right: .2rem;
         margin-left: -1.2rem;
     }
+}
 
-    &.sticky {
-        background: rgba(lighten($gray, 30%), .85);
-        backdrop-filter: saturate(200%) blur(10px);
-        box-shadow: 0 2px 6px rgba($gray-dark, .4);
+.menu--sub.sticky {
+    background: rgba(lighten($gray, 30%), .85);
+    backdrop-filter: saturate(200%) blur(10px);
+    box-shadow: 0 2px 6px rgba($gray-dark, .4);
 
-        // fake less padding and smaller menu bar
-        // for performant and smoooth transition
-        transform: translate3d(0, -2rem, 0);
+    // fake less padding and smaller menu bar
+    // for performant and smoooth transition
+    transform: translate3d(0, -2rem, 0);
 
-        .menu__link {
-            @media ($screen-sm) {
-                transform: scale(.85) translate3d(0, .6rem, 0);
-                transform-origin: bottom;
+    .menu__link {
+        @media ($screen-sm) {
+            transform: scale(.85) translate3d(0, .6rem, 0);
+            transform-origin: bottom;
+        }
+
+        &.active {
+            color: $headings-color;
+
+            .number {
+                background: $headings-color;
+                color: $gray;
             }
 
-            &.active {
-                color: $headings-color;
-
-                .number {
-                    background: $headings-color;
-                    color: $gray;
-                }
-
-                &:after {
-                    background: $headings-color;
-                }
+            &:after {
+                background: $headings-color;
             }
         }
     }
