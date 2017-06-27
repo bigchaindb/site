@@ -418,32 +418,3 @@
         opacity: .8;
     }
 }
-
-//
-// Sticky sub menu
-//
-body {
-    position: relative;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-
-    @supports (position: sticky) {
-        position: sticky;
-    }
-
-    .menu__link {
-        @media ($screen-sm) {
-            padding-top: $spacer;
-            padding-bottom: $spacer;
-
-            &:after {
-                bottom: $spacer / 2;
-            }
-        }
-    }
-}
