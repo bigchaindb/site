@@ -85,12 +85,14 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
         const waiting = document.getElementsByClassName('waiting')[0]
         const responseArea = document.getElementsByClassName('response')[0]
         const output = document.getElementsByClassName('output')[0]
+        const messageInitial = document.getElementsByClassName('message')[0]
         const messageSuccess = document.getElementsByClassName('message--success')[0]
         const messageFail = document.getElementsByClassName('message--fail')[0]
         const transactionLink = document.getElementsByClassName('transaction-link')[0]
 
         conn.postTransaction(txSigned).then((response) => {
             waiting.classList.add('hide')
+            messageInitial.classList.add('hide')
             responseArea.classList.remove('hide')
             messageSuccess.classList.remove('hide')
 
@@ -104,7 +106,7 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
             postButton.classList.add('disabled')
             postButton.style.opacity = 0
 
-            //=include bigchain/nyan.js
+            responseArea.children[0].classList.add('nyan')
 
         }, reason => { // Error!
             console.log(reason)
