@@ -71,6 +71,48 @@
     font-size: $font-size-base;
 }
 
+.code-example {
+    @include transition;
+    opacity: .5;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    .nav-link,
+    pre {
+        font-size: $font-size-xs;
+    }
+
+    .nav-tabs {
+        border-bottom-color: $gray-light;
+    }
+
+    .nav-link {
+        padding-top: $spacer / 4;
+        padding-bottom: $spacer / 4;
+        margin-bottom: -2px;
+
+        &:hover,
+        &:focus {
+            background: none;
+        }
+
+        &.active {
+            border-bottom: 2px solid $gray-light;
+        }
+    }
+
+    pre {
+        background: none;
+        padding: $spacer * 1.5 0;
+    }
+}
+
+.code-example__message {
+    font-weight: $font-weight-bold;
+}
+
 .section-title--numbered {
     span {
         text-align: center;

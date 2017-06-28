@@ -43,6 +43,76 @@ redirect_from:
                     </fieldset>
 
                 </form>
+
+                <aside class="code-example">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#curl" data-toggle="tab" role="tab">cURL</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#python" data-toggle="tab" role="tab">Python</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nodejs" data-toggle="tab" role="tab">Node.js</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+
+                        <div class="tab-pane active" id="curl" role="tabpanel">
+{% capture curl %}
+```bash
+curl -X "POST" "https://test.ipdb.io/api/v1/transactions/" \
+     -d $'{ message: "Blockchain all the things!" }'
+```
+{% endcapture %}{{ curl | markdownify }}
+                        </div>
+
+                        <div class="tab-pane highlight" id="python" role="tabpanel">
+{% capture python %}
+```python
+from bigchaindb_driver import BigchainDB
+from bigchaindb_driver.crypto import generate_keypair
+
+bdb = BigchainDB('https://test.ipdb.io/api/v1/')
+
+alice = generate_keypair()
+
+tx = bdb.transactions.prepare(
+    metadata={ "message": "Blockchain all the things!" }
+)
+
+txSigned = bdb.transactions.fulfill(
+    tx,
+    private_keys=alice.private_key
+)
+
+bdb.transactions.send(txSigned)
+```
+{% endcapture %}{{ python | markdownify }}
+                        </div>
+
+                        <div class="tab-pane highlight" id="nodejs" role="tabpanel">
+{% capture nodejs %}
+```js
+const driver = require('bigchaindb-driver')
+const conn = new driver.Connection('https://test.ipdb.io/api/v1/')
+const alice = new driver.Ed25519Keypair()
+
+const tx = driver.Transaction.makeCreateTransaction(
+    { message: "Blockchain all the things!" }
+)
+
+const txSigned = driver.Transaction.signTransaction(tx, alice.privateKey)
+
+conn.postTransaction(txSigned)
+```
+{% endcapture %}{{ nodejs | markdownify }}
+                        </div>
+
+                    </div>
+                </aside>
+
             </div>
             <div class="grid__col">
                 <div class="waiting">

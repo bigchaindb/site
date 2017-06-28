@@ -1,5 +1,6 @@
 //=require gumshoe/dist/js/gumshoe.js
 
+//=include bigchain/tab.js
 //=include bigchain/smoothscroll.js
 //=include bigchain/newsletter.js
 
@@ -55,12 +56,32 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
     const postButton = document.getElementById('post')
     const messageInput = document.getElementById('message')
 
-    // quick form validation
+    // nasty jquery inside of here, YOLO
+    $(".highlight code:contains('Blockchain all the things!')").html(function(_, html) {
+        return html.replace(/(Blockchain all the things!)/g, '<strong class="code-example__message">$1</strong>');
+    })
+
+    const codeMessages = document.querySelectorAll('.code-example__message')
+
+    function updateMessage(content) {
+        for (var codeMessage of codeMessages) {
+            codeMessage.textContent = content
+        }
+    }
+    // empty default message
+    updateMessage('')
+
+    // quick form validation, live update code example with user input
     messageInput.addEventListener('input', function() {
         if (messageInput.value === '') {
             postButton.setAttribute('disabled', '')
+            // empty message again
+            updateMessage('')
         } else {
             postButton.removeAttribute('disabled')
+
+            // update code message
+            updateMessage(messageInput.value)
         }
     })
 
