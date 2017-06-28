@@ -15,27 +15,31 @@ jQuery(function($) {
 
 
 //
-// Sticky nav
-//
-const menu = document.getElementsByClassName('menu--sub')[0]
-
-if ( window.innerWidth >= 768 ) {
-    const offset = menu.offsetTop
-
-    window.addEventListener('scroll', function() {
-        if (offset < window.pageYOffset) {
-            menu.classList.add('sticky')
-        } else {
-            menu.classList.remove('sticky')
-        }
-    }, false)
-}
-
-
-//
 // Scrollspy
 //
 gumshoe.init()
+
+
+//
+// Sticky nav
+//
+function stickyNav() {
+    const menu = document.getElementsByClassName('menu--sub')[0]
+
+    if ( window.innerWidth >= 768 ) {
+        const offset = menu.offsetTop
+
+        window.addEventListener('scroll', function() {
+            if (offset < window.pageYOffset) {
+                menu.classList.add('sticky')
+            } else {
+                menu.classList.remove('sticky')
+            }
+        }, false)
+    }
+}
+
+stickyNav()
 
 
 //
