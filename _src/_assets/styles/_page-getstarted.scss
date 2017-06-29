@@ -5,12 +5,10 @@
 //
 
 .section--firsttransaction {
-    overflow: visible;
-
     .section-title {
         font-size: $font-size-h3;
         text-align: left;
-        margin-top: $spacer * 2;
+        margin-top: 0;
         margin-bottom: $spacer * 2;
 
         &:after {
@@ -220,26 +218,6 @@
 
         img {
             margin-bottom: -.5%;
-        }
-    }
-}
-
-// Intro starbase
-// All magic numbers, gonna wing it visually
-.starbase--intro {
-    min-height: 10rem;
-    margin-top: -($spacer * 8);
-
-    .starbase__image {
-        margin-top: -($spacer * 12);
-
-        // surface layer
-        &:before {
-            height: 35%;
-        }
-
-        img {
-            margin-bottom: -1%;
         }
     }
 }
