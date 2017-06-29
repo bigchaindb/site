@@ -25,6 +25,10 @@ social:
         title:  Twitter
         handle: bigchaindb
         url:    https://twitter.com/bigchaindb
+    facebook:
+        title:  Facebook
+        handle: bigchaindb
+        url:    https://www.facebook.com/BigchainDB/
     medium:
         title:  Blog
         url:    https://blog.bigchaindb.com
