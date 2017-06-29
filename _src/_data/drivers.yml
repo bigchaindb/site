@@ -35,10 +35,6 @@ community:
       link: https://github.com/mgrand/bigchaindb-java-driver
       icon: logo-java
 
-    - title: Swift
-      repo: bigchaindb-swift
-      icon: logo-swift
-
 tools:
     - title: Crypto-Conditions
       repo: cryptoconditions
