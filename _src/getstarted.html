@@ -147,14 +147,6 @@ conn.postTransaction(txSigned)
     </div>
 </nav>
 
-<!-- <section class="section section--architecture">
-    <div class="row row--wide">
-        <figure class="architecture">
-            <img class="img--responsive" src="/assets/img/architecture.svg" alt="BigchainDB Overview">
-        </figure>
-    </div>
-</section> -->
-
 <section class="section section--server background--darker" id="server">
     <div class="row row--wide">
         <header class="section-header text-left">
@@ -358,6 +350,7 @@ conn.postTransaction(txSigned)
                 <p>{{ content.community.follow.description }}</p>
 
                 {% for link in site.social %}
+                    {% unless link[1].title == 'Gitter' %}
                     <a class="social-link js-social-link" href="{{ link[1].url }}" title="{{ link[1].title }}">
                         <svg class="icon icon--social icon--{{ link[0] }}" aria-labelledby="title">
                             <title>{{ link.title }}</title>
@@ -365,6 +358,7 @@ conn.postTransaction(txSigned)
                         </svg>
                         <span class="social-link__title">{{ link[1].title }}</span>
                     </a>
+                    {% endunless %}
                 {% endfor %}
 
             </div>
