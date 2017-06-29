@@ -1,15 +1,15 @@
 
 # ----------------------------
-# Section: First transaction
+# Section: First Transaction
 # ----------------------------
 
 firsttransaction:
-    title: "Get your first transaction into BigchainDB"
+    title: "Get your first transaction sent to BigchainDB"
     message:
         label: "Type a message"
         button: "Off you go"
         request: "A transaction can contain a digital asset along with a message. Type something above to be sent along the asset."
-        response: "Nicely done! You have just created an asset, sent it along in a signed transaction and retrieved the result of that transaction. Phew."
+        response: "Nicely done! You have just created an asset, sent it in a signed transaction and retrieved the result of that transaction. Phew."
 
 
 
@@ -19,16 +19,16 @@ firsttransaction:
 
 server:
     title: "Server"
-    description: "Server is cool but what you really want is IPDB. Install, installation"
+    description: "With the BigchainDB Server, there are a few node options. If you don't want to host your own, IPDB is what you're looking for."
     ipdb:
         pretitle: "Managed"
-        title: "IPDB: the public BigchainDB network"
-        description: "No need for any installation. Sign up and connect instantly, we handle running a BigchainDB production node for you."
+        title: "IPDB: The Public BigchainDB Network"
+        description: "No installation needed. Sign up and connect instantly, we handle running a BigchainDB production node for you."
         button: "Get IPDB"
     bdb:
-        pretitle: "Self-hosted"
+        pretitle: "Self-Hosted"
         title: "BigchainDB Server"
-        description: "If you want to run your own BigchainDB instance you can either install on Linux or with Docker on any system."
+        description: "If you want to run your own BigchainDB instance, you can either get set up on Linux or with Docker on any system."
         button: "Install BigchainDB Server"
 
 
@@ -37,8 +37,8 @@ server:
 # ----------------------------
 
 drivers:
-    title: "Drivers & tools"
-    description: "Get one of the drivers to connect to IPDB or your BigchainDB server instance."
+    title: "Drivers & Tools"
+    description: "Clone or download one of the drivers below to connect to IPDB or your BigchainDB node."
     title_official: "Official drivers"
     title_tools: "Official tools"
     title_community: "Community drivers"
@@ -50,8 +50,8 @@ drivers:
 
 docs:
     title: "Documentation"
-    description: "Dive into our documentation or learn or code."
-    button: "See all documentation"
+    description: "Dive into our documentation with tutorials, examples, terminology, references and more."
+    button: "See All Documentation"
     categories:
 
         - title: "Tutorials"
@@ -61,7 +61,7 @@ docs:
               - title: "Production Deployment Template"
                 link: "https://docs.bigchaindb.com/projects/server/en/latest/production-deployment-template/index.html"
 
-        - title: "Code examples"
+        - title: "Code Examples"
           items:
               - title: "Basic Usage Examples"
                 link: "https://docs.bigchaindb.com/projects/py-driver/en/latest/usage.html"
@@ -70,9 +70,9 @@ docs:
               - title: "Kyber"
                 link: "https://github.com/bigchaindb/kyber"
 
-        - title: "Reference"
+        - title: "Quick References"
           items:
-              - title: "HTTP API Reference"
+              - title: "HTTP API"
                 link: "https://docs.bigchaindb.com/projects/server/en/latest/http-client-server-api.html"
               - title: "Data Models"
                 link: "https://docs.bigchaindb.com/projects/server/en/latest/data-models/index.html"
@@ -92,14 +92,14 @@ community:
     title: "Community"
     description: "There are many ways you can contribute to the BigchainDB project, some very easy and others more involved. We welcome all potential contributors, so we ask that everyone participating abide by some simple guidelines."
     gitter:
-        text: "Start a chat with us on Gitter."
+        text: "Join the conversation or chat directly with us."
         button: "Chat on Gitter"
     github:
-        text: "So you found a bug? Report it!"
-        button: "Open an issue"
+        text: "Looking to contribute? Found a bug? Open an issue."
+        button: "Head to GitHub"
     guidelines:
         text: "Read up on our community guidelines."
         button: "Read Guidelines"
     follow:
         title: "Follow"
-        description: "Follow us for the latest updates"
+        description: "Follow us for the latest news, updates and announcements."
