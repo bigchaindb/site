@@ -30,7 +30,8 @@
     // `font-size` in combination with `inline-block` on buttons.
     font-size: 0;
 
-    > .btn {
+    > .btn,
+    .form-group:last-of-type & > .btn {
         margin-top: 0;
     }
 }
