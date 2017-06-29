@@ -46,6 +46,7 @@ stickyNav()
 // BigchainDB transaction tool
 //
 
+// makes this file huuuuge, consider loading this as additional request
 //=include bigchaindb-driver/dist/browser/bigchaindb-driver.window.min.js
 
 window.addEventListener('DOMContentLoaded', function domload(event) {
