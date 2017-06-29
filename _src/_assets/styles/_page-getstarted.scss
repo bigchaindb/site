@@ -9,6 +9,7 @@
         font-size: $font-size-h3;
         margin-top: -($spacer * 2);
         margin-bottom: $spacer * 3;
+        text-align: left;
 
         &:after {
             display: none;
@@ -160,6 +161,7 @@
     margin-top: -($spacer * 2);
     display: flex;
     align-items: flex-end;
+    opacity: .7;
 
     // horizon layer
     &:before {

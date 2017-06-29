@@ -7,13 +7,13 @@ layout: base
     {% include menu-main.html %}
 
     <div class="row">
-        <h1 class="header__title">
+        <div class="header__content">
             {% if page.tagline %}
-                {{ page.tagline }}
+                <h1 class="header__tagline">{{ page.tagline }}
             {% else %}
-                {{ page.title }}
+                <h1 class="header__title">{{ page.title }}</h1>
             {% endif %}
-        </h1>
+        </div>
     </div>
 </header>
 
