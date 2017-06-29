@@ -10,7 +10,7 @@
 }
 
 .background--light {
-    background: $brand-main-gray-lighter;
+    background: $brand-main-gray-light;
 
     .section-title,
     p,
@@ -18,6 +18,10 @@
     h2,
     h3 {
         color: $brand-main-gray;
+    }
+
+    a {
+        color: darken($brand-main-gray, 10%);
     }
 }
 

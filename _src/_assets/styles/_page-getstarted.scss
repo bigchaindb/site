@@ -349,18 +349,24 @@
 //
 // Section: Docs
 //
-.section--docs {
-    text-align: center;
-}
-
 .docs__actions {
-    border-top: 1px solid lighten($gray-light, 20%);
+    border-top: 1px solid darken($brand-main-gray-light, 5%);
     padding-top: $spacer * 2;
 }
 
 .docs__title {
-    @extend .h3;
+    @extend .h5;
     margin-top: 0;
+
+    // the bottom line
+    &:after {
+        content: '';
+        height: 2px;
+        width: 2rem;
+        display: block;
+        margin-top: $spacer;
+        background: $gray-light;
+    }
 }
 
 .docs__list {
@@ -370,17 +376,6 @@
     li {
         display: block;
         padding-left: 0;
-    }
-
-    a {
-        color: $brand-primary;
-        box-shadow: none;
-
-        &:hover,
-        &:focus {
-            box-shadow: inset 0 -2px 0 $brand-primary;
-            background: transparent;
-        }
     }
 }
 
