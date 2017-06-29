@@ -1,6 +1,5 @@
 .nyan {
     position: relative;
-    background: rgba(#144f8d, .5);
 
     &:before {
         content: '';
@@ -9,11 +8,11 @@
         right: 0;
         top: 0;
         bottom: 0;
-        background: url('../img/nyan2.gif') no-repeat left center;
+        background: url('../img/nyan.gif') no-repeat left center;
         background-size: 50%;
         z-index: 0;
         opacity: 0;
-        animation: nyan-fadein .6s ease-out forwards;
+        animation: nyan-appear .6s ease-out forwards;
     }
 
     code {
@@ -22,12 +21,14 @@
     }
 }
 
-@keyframes nyan-fadein {
+@keyframes nyan-appear {
     0% {
         opacity: 0;
+        transform: translate3d(-5rem, 0, 0);
     }
 
     100% {
         opacity: .4;
+        transform: translate3d(0, 0, 0);
     }
 }
