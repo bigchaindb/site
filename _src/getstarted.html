@@ -87,7 +87,7 @@ redirect_from:
 {% capture curl %}
 ```bash
 curl -X "POST" "https://test.ipdb.io/api/v1/transactions/" \
--d $'{ message: "Blockchain all the things!" }'
+     -d $'{ message: "Blockchain all the things!" }'
 ```
 {% endcapture %}{{ curl | markdownify }}
                 </div>
@@ -103,12 +103,12 @@ bdb = BigchainDB('https://test.ipdb.io/api/v1/')
 alice = generate_keypair()
 
 tx = bdb.transactions.prepare(
-metadata={ "message": "Blockchain all the things!" }
+    metadata={ "message": "Blockchain all the things!" }
 )
 
 txSigned = bdb.transactions.fulfill(
-tx,
-private_keys=alice.private_key
+    tx,
+    private_keys=alice.private_key
 )
 
 bdb.transactions.send(txSigned)
@@ -124,7 +124,7 @@ const conn = new driver.Connection('https://test.ipdb.io/api/v1/')
 const alice = new driver.Ed25519Keypair()
 
 const tx = driver.Transaction.makeCreateTransaction(
-{ message: "Blockchain all the things!" }
+    { message: "Blockchain all the things!" }
 )
 
 const txSigned = driver.Transaction.signTransaction(tx, alice.privateKey)
