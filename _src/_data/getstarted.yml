@@ -4,7 +4,7 @@
 # ----------------------------
 
 firsttransaction:
-    title: "Get your first transaction sent to BigchainDB"
+    title: "Let's write a message into a planetary blockchain database"
     message:
         label: "Type a message"
         button: "Off you go"
