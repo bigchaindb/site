@@ -56,7 +56,7 @@
         font-style: italic;
         border: 1px solid $gray-dark;
         background: none;
-        overflow-x: hidden;
+        overflow: hidden;
 
         @media ($screen-sm) {
             min-height: 340px;
@@ -121,6 +121,8 @@
         background: none;
         padding: $spacer * 1.5 0 0;
         margin-bottom: 0;
+        overflow-y: hidden;
+        overflow-x: auto;
     }
 }
 
