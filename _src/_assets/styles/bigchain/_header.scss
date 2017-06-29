@@ -3,8 +3,13 @@
 }
 
 .header__content {
-    padding: ($spacer * 4) 0;
+    padding: ($spacer * 3) 0;
     text-align: center;
+
+    @media ($screen-sm) {
+        padding-top: ($spacer * 4);
+        padding-bottom: ($spacer * 4);
+    }
 }
 
 // intro animation
