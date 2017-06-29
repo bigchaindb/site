@@ -121,8 +121,12 @@
         background: none;
         padding: $spacer * 1.5 0 0;
         margin-bottom: 0;
-        overflow-y: hidden;
+        overflow-y: auto;
         overflow-x: auto;
+    }
+
+    .highlight .p {
+        color: lighten(#41706f, 25%);
     }
 }
 
