@@ -11,6 +11,14 @@ js: page-contact.min.js
     <div class="row row--wide">
         <div class="grid grid--full grid-medium--columns grid--gutters">
             <div class="grid__col grid__col--4">
+                <p>Have a technical question? Head to
+                    <a href="{{ site.social.gitter.url }}">
+                        <svg class="icon icon--social icon--gitter">
+                            <use xlink:href="/assets/img/sprite.svg#gitter"></use>
+                        </svg> Gitter
+                    </a> to chat directly with our developers.
+                </p>
+
                 {% include/form-contact.html %}
             </div>
             <div class="grid__col grid__col--2">

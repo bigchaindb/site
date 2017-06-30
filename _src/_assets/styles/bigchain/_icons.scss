@@ -18,8 +18,9 @@
     fill: $text-color;
     margin-bottom: -2px;
 
-    .icon--gitter {
+    &.icon--gitter {
         stroke: $text-color;
+        stroke-width: 2px;
     }
 }
 
