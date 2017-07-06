@@ -86,20 +86,20 @@ redirect_from:
 from bigchaindb_driver import BigchainDB
 from bigchaindb_driver.crypto import generate_keypair
 
-bdb = BigchainDB('https://test.ipdb.io/api/v1/')
 
+bdb = BigchainDB(
+    'https://test.ipdb.io/api/v1/',
+    headers={'app_id': 'Get one from developers.ipdb.io',
+             'app_key': 'Same as app_id'})
 alice = generate_keypair()
-
 tx = bdb.transactions.prepare(
-    metadata={ "message": "Blockchain all the things!" }
-)
-
-txSigned = bdb.transactions.fulfill(
+    operation='CREATE',
+    signers=alice.public_key,
+    asset={'data': {'message': 'Blockchain all the things!'}})
+signed_tx = bdb.transactions.fulfill(
     tx,
-    private_keys=alice.private_key
-)
-
-bdb.transactions.send(txSigned)
+    private_keys=alice.private_key)
+bdb.transactions.send(signed_tx)
 ```
 {% endcapture %}{{ python | markdownify }}
                 </div>
@@ -108,15 +108,20 @@ bdb.transactions.send(txSigned)
 {% capture nodejs %}
 ```js
 const driver = require('bigchaindb-driver')
-const conn = new driver.Connection('https://test.ipdb.io/api/v1/')
+
+
 const alice = new driver.Ed25519Keypair()
-
+const conn = new driver.Connection(
+    'https://test.ipdb.io/api/v1/',
+    { app_id: 'Get one from developers.ipdb.io',
+      app_key: 'Same as app_id' })
 const tx = driver.Transaction.makeCreateTransaction(
-    { message: "Blockchain all the things!" }
-)
-
+    { message: 'Blockchain all the things!' },
+    null,
+    [ driver.Transaction.makeOutput(
+        driver.Transaction.makeEd25519Condition(alice.publicKey))],
+    alice.publicKey)
 const txSigned = driver.Transaction.signTransaction(tx, alice.privateKey)
-
 conn.postTransaction(txSigned)
 ```
 {% endcapture %}{{ nodejs | markdownify }}

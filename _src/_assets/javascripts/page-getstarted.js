@@ -69,8 +69,9 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
     const codeMessages = document.querySelectorAll('.code-example__message')
 
     function updateMessage(content) {
+        const escapedContent = content.replace(/'/g, "\\'")
         for (var codeMessage of codeMessages) {
-            codeMessage.textContent = content
+            codeMessage.textContent = escapedContent
         }
     }
     // empty default message
