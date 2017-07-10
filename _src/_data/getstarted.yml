@@ -4,12 +4,12 @@
 # ----------------------------
 
 firsttransaction:
-    title: "Let's write a message into a planetary blockchain database"
+    title: "Send your first transaction"
     message:
         label: "Type a message"
         button: "Off you go"
-        request: "A transaction can contain a digital asset containing a message. Type something above to be sent in the asset."
-        response: "Nicely done! You have just created an asset, sent it in a signed transaction and received the response. Phew."
+        request: "Your message will be wrapped in an asset and sent with the transaction."
+        response: "Nicely done! You have just created an asset and sent it in a signed transaction."
 
 
 
@@ -18,12 +18,12 @@ firsttransaction:
 # ----------------------------
 
 server:
-    title: "Server"
-    description: "With the BigchainDB Server, there are a few node options. If you don't want to host your own, IPDB is what you're looking for."
+    title: "Network"
+    description: "Roll out your own BigchainDB network, or let IPDB take care of this for you."
     ipdb:
         pretitle: "Managed"
         title: "IPDB: The Public BigchainDB Network"
-        description: "No installation needed. Sign up and connect instantly, we handle running a BigchainDB production node for you."
+        description: "No installation needed. Sign up and connect instantly, the IPDB caretakers will handle running a BigchainDB network for you."
         button: "Get IPDB"
         link: "https://developers.ipdb.io"
     bdb:
