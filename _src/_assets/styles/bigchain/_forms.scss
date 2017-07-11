@@ -309,8 +309,8 @@ input[type='checkbox'] {
 .parsley-errors-list {
     @extend .list-unstyled;
     position: absolute;
-    left: 0;
-    bottom: 0;
+    right: 0;
+    bottom: $spacer * 1.2;
     font-size: $font-size-xs;
 
     &,

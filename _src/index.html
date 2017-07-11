@@ -5,11 +5,31 @@ tagline:    'Meet BigchainDB. <br>The scalable blockchain database.'
 
 front_page: true
 quotes: set1
+ipdb: true
 
 js: page-front.min.js
 
 redirect_from:
     - /partners/
+
+
+intro:
+    title: "This is BigchainDB"
+    description: "With high throughput, sub-second latency and powerful functionality to automate business processes, BigchainDB looks, acts and feels like a database with added blockchain characteristics."
+    keyfeatures:
+        - title: "Decentralization"
+          icon: "icon-nodes"
+        - title: "Query"
+          icon: "icon-search"
+        - title: "Immutability"
+          icon: "icon-castle"
+        - title: "Scaling"
+          icon: "icon-scaling"
+        - title: "Native Assets"
+          icon: "icon-diamond"
+    text: "BigchainDB allows developers and enterprise to deploy blockchain proof-of-concepts, platforms and applications with a scalable blockchain database, supporting a wide range of industries and use cases."
+    button1: "All Features"
+    button2: "Get Started"
 ---
 
 {% include hero.html %}
@@ -17,48 +37,37 @@ redirect_from:
 <section id="features" class="section section-intro">
     <div class="row">
         <header class="section-header">
-            <h1 class="section-title">This is BigchainDB</h1>
-            <p class="section-description lead">
-              With high throughput, sub-second latency and powerful functionality to automate business processes, BigchainDB looks, acts and feels like a database with added blockchain characteristics.
-            </p>
+            <h1 class="section-title">{{ page.intro.title }}</h1>
+            <p class="section-description lead">{{ page.intro.description }}</p>
         </header>
-
-        <div class="section-intro__main grid grid--full grid-small--fit grid--gutters">
-            <div class="grid__col">
-                <svg class="icon">
-                    <use xlink:href="/assets/img/sprite.svg#icon-nodes"></use>
-                </svg>
-                <h3>Decentralization</h3>
-            </div>
-            <div class="grid__col">
-                <svg class="icon">
-                    <use xlink:href="/assets/img/sprite.svg#icon-castle"></use>
-                </svg>
-                <h3>Immutability</h3>
-            </div>
-            <div class="grid__col">
-                <svg class="icon">
-                    <use xlink:href="/assets/img/sprite.svg#icon-diamond"></use>
-                </svg>
-                <h3>Native Assets</h3>
-            </div>
-        </div>
-
-        <p class="large text-center">
-          BigchainDB allows developers and enterprise to deploy blockchain proof-of-concepts, platforms and applications with a scalable blockchain database, supporting a wide range of industries and use cases.
-        </p>
     </div>
 
+    <div class="row row--wide">
+        <div class="section-intro__main grid grid--full grid-small--fit grid--gutters">
+            {% for feature in page.intro.keyfeatures %}
+            <div class="grid__col">
+                <svg class="icon">
+                    <use xlink:href="/assets/img/sprite.svg#{{ feature.icon }}"></use>
+                </svg>
+                <h3>{{ feature.title }}</h3>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="row">
+        <p class="large text-center">{{ page.intro.text }}</p>
+
+        <p class="text-center">
+            <a class="btn btn-primary" href="/features/">{{ page.intro.button1 }}</a> <a class="btn btn-secondary" href="/getstarted/">{{ page.intro.button2 }}</a>
+        </p>
+    </div>
 </section>
-
-{% include sections/section-partners.html %}
-
-{% include sections/section-cta-enterprise.html %}
 
 {% include sections/section-testimonials.html %}
 
-{% include sections/section-cta-features.html %}
+{% include sections/section-cta-enterprise.html %}
+
+{% include sections/section-partners.html %}
 
 {% include sections/section-blog.html %}
-
-{% include ipdb.html %}

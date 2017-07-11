@@ -199,6 +199,15 @@ em,
     @include text-lead;
 }
 
+.pretitle {
+    @extend .h6;
+    display: block;
+    margin: 0;
+    margin-bottom: $spacer;
+    color: $text-color;
+    opacity: .6;
+}
+
 //
 // Lists
 //

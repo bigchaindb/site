@@ -35,6 +35,7 @@
 @import 'bigchain/team';
 @import 'bigchain/timeline';
 @import 'bigchain/terminal';
+@import 'bigchain/nyan';
 @import 'bigchain/utilities';
 
 // Content types
@@ -49,13 +50,13 @@
 
 // specific page styles
 @import 'page-front';
+@import 'page-getstarted';
 @import 'page-whitepaper';
 @import 'page-404';
 @import 'page-styleguide';
 @import 'page-about';
 @import 'page-features';
 @import 'page-usecases';
-@import 'page-community';
 @import 'page-contact';
 @import 'page-cla';
 @import 'page-partners';

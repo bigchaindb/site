@@ -116,7 +116,6 @@
     }
 }
 
-
 //
 // Main menu overlaying a dark background image
 // in front page hero or page headers
@@ -220,7 +219,6 @@
     }
 }
 
-
 .footer__copyright {
     border-top: 1px solid $brand-main-gray;
     text-align: center;
@@ -256,7 +254,6 @@
     }
 }
 
-
 //
 // ERDF logo
 //
@@ -289,9 +286,27 @@
     display: inline-block;
 }
 
-
+//
+// On-page sub menu
+//
 .menu--sub {
-    background: $gray-dark;
+    @include transition;
+    transform: translate3d(0, 0, 0);
+    background: lighten($gray, 30%);
+
+    .menu__link {
+        color: $gray-dark;
+        margin-left: $spacer;
+        margin-right: $spacer;
+
+        &:after {
+            background: darken($gray-dark, 10%);
+        }
+
+        &.active {
+            color: darken($gray-dark, 10%);
+        }
+    }
 
     .menu-overflow {
         text-align: center;
@@ -303,6 +318,72 @@
         vertical-align: baseline;
         margin-right: $spacer / 6;
         margin-bottom: -2px;
-        stroke-width: 3px;
+        stroke-width: 4px; // that's weird
+        color: $gray;
+        stroke: $gray-dark;
+    }
+
+    .number {
+        text-align: center;
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        font-size: $font-size-xs;
+        vertical-align: .1rem;
+        background: $gray;
+        color: $gray-light;
+        font-weight: $font-weight-bold;
+        line-height: 1rem;
+        margin-right: .2rem;
+        margin-left: -1.2rem;
+    }
+}
+
+.menu--sub.sticky {
+    background: rgba(lighten($gray, 30%), .85);
+    backdrop-filter: saturate(200%) blur(10px);
+    box-shadow: 0 2px 6px rgba($gray-dark, .4);
+
+    // fake less padding and smaller menu bar
+    // for performant and smoooth transition
+    transform: translate3d(0, -2rem, 0);
+
+    .menu__link {
+        @media ($screen-sm) {
+            transform: scale(.85) translate3d(0, .6rem, 0);
+            transform-origin: bottom;
+        }
+
+        &.active {
+            color: $headings-color;
+
+            .number {
+                background: $headings-color;
+                color: $gray;
+            }
+
+            &:after {
+                background: $headings-color;
+            }
+        }
+    }
+}
+
+//
+// Sticky sub menu
+//
+body {
+    position: relative;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+    @supports (position: sticky) {
+        position: sticky;
     }
 }

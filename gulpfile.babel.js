@@ -211,7 +211,7 @@ export const js = () =>
 //
 // SVG sprite
 //
-export const svg = () => src(SRC + '_assets/images/**/*.svg')
+export const svg = () => src(SRC + '_assets/images/*.svg')
     .pipe($.if(isProduction || isStaging, $.imagemin({
         svgoPlugins: [{ removeRasterImages: true }]
     })))

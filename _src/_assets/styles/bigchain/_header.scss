@@ -1,9 +1,17 @@
 .header {
     @extend .background--photo;
+    background-image: url('../img/header-berlin.jpg');
+    background-position: center bottom;
+}
+
+.header__content {
+    padding: ($spacer * 3) 0;
+    text-align: center;
 }
 
 // intro animation
 .header__title,
+.header__tagline,
 .header__description,
 .header__logo,
 .header__label {
@@ -30,10 +38,15 @@
     }
 }
 
-.header__title {
+.header__title,
+.header__tagline {
     position: relative;
     z-index: 1;
     text-align: center;
     margin: 0;
-    padding: ($spacer * 5) 0;
+}
+
+.header__tagline {
+    font-size: $font-size-h3;
+    color: #fff;
 }

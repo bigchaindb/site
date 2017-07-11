@@ -1,0 +1,34 @@
+.nyan {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: url('../img/nyan.gif') no-repeat left center;
+        background-size: 50%;
+        z-index: 0;
+        opacity: 0;
+        animation: nyan-appear .6s ease-out forwards;
+    }
+
+    code {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@keyframes nyan-appear {
+    0% {
+        opacity: 0;
+        transform: translate3d(-5rem, 0, 0);
+    }
+
+    100% {
+        opacity: .4;
+        transform: translate3d(0, 0, 0);
+    }
+}
