@@ -53,9 +53,8 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
     window.removeEventListener('DOMContentLoaded', domload, false)
 
     const driver = window.BigchainDB
-    const API_PATH = 'https://test.ipdb.io/api/v1/'
-    const APP_ID = 'b563bf22'
-    const APP_KEY = 'fd639614dcf8ee90a8c51a013ac11fb0'
+    // const API_PATH = 'https://ipdb-proxy-obyvvvijdi.now.sh/api/v1/'
+    const API_PATH = 'https://ipdb-proxy-cmpyydtxja.now.sh/api/v1/'
 
     const form = document.getElementById('form-transaction')
     const postButton = document.getElementById('post')
@@ -97,17 +96,14 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
         const message = messageInput.value
 
         const alice = new driver.Ed25519Keypair()
-        const tx = driver.Transaction.makeCreateTransaction({
-            assetMessage: message
-        }, {
-            metaDataMessage: message
-        }, [driver.Transaction.makeOutput(driver.Transaction.makeEd25519Condition(alice.publicKey))], alice.publicKey)
+        const tx = driver.Transaction.makeCreateTransaction(
+            { message: message },
+            null,
+            [driver.Transaction.makeOutput(driver.Transaction.makeEd25519Condition(alice.publicKey))],
+            alice.publicKey)
         const txSigned = driver.Transaction.signTransaction(tx, alice.privateKey)
 
-        const conn = new driver.Connection(API_PATH, {
-            app_id: APP_ID,
-            app_key: APP_KEY
-        })
+        const conn = new driver.Connection(API_PATH)
 
         const waiting = document.getElementsByClassName('waiting')[0]
         const responseArea = document.getElementsByClassName('response')[0]
@@ -128,7 +124,7 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
             const outputContent = JSON.stringify(response, null, 2) // indented with 2 spaces
             output.textContent = outputContent
 
-            transactionLink.href = 'https://test.ipdb.io/api/v1/transactions/' + response.id
+            transactionLink.href = 'https://main.ipdb.io/api/v1/transactions/' + response.id
 
             postButton.classList.add('disabled')
             postButton.style.opacity = 0

@@ -25,7 +25,7 @@
     "ie >= 10"
   ],
   "dependencies": {
-    "bigchaindb-driver": "^0.1.2",
+    "bigchaindb-driver": "~0.3.0",
     "gumshoe": "github:cferdinandi/gumshoe",
     "is-in-viewport": "^3.0.0",
     "jquery": "^3.2.1",
