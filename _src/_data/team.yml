@@ -107,5 +107,5 @@
 
 - name:     Wrigley the Buffalo
   position: Community Manager
-  image:    wrigley-avatar.svg
+  image:    nosprite/wrigley-avatar.svg
   github:   wrigley
