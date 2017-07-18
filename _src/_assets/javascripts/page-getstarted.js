@@ -4,6 +4,8 @@
 //=include bigchain/smoothscroll.js
 //=include bigchain/newsletter.js
 
+const ipdbUrl = 'https://test.ipdb.io'
+
 jQuery(function($) {
 
     //
@@ -123,7 +125,7 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
             const outputContent = JSON.stringify(response, null, 2) // indented with 2 spaces
             output.textContent = outputContent
 
-            transactionLink.href = 'https://test.ipdb.io/api/v1/transactions/' + response.id
+            transactionLink.href = ipdbUrl + '/api/v1/transactions/' + response.id
 
             postButton.classList.add('disabled')
             postButton.style.opacity = 0

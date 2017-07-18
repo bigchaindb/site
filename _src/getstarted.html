@@ -60,7 +60,7 @@ redirect_from:
 
                 <div class="message message--success alert alert--success hide">
                     <p>{{ content.firsttransaction.message.response }}</p>
-                    <p><a class="transaction-link" href="https://test.ipdb.io/api/v1/transactions/">Check out your transaction on IPDB</a></p>
+                    <p><a class="transaction-link" href="{{ site.ipdb_api_url }}/api/v1/transactions/">Check out your transaction on IPDB</a></p>
                 </div>
                 <p class="message message--fail alert alert--warning hide">Shenanigans! Something's off. Would you mind trying again?</p>
             </div>
@@ -88,7 +88,7 @@ from bigchaindb_driver.crypto import generate_keypair
 
 
 bdb = BigchainDB(
-    'https://test.ipdb.io/api/v1/',
+    '{{ site.ipdb_api_url }}/api/v1/',
     headers={'app_id': 'Get one from developers.ipdb.io',
              'app_key': 'Same as app_id'})
 alice = generate_keypair()
@@ -112,7 +112,7 @@ const driver = require('bigchaindb-driver')
 
 const alice = new driver.Ed25519Keypair()
 const conn = new driver.Connection(
-    'https://test.ipdb.io/api/v1/',
+    '{{ site.ipdb_api_url }}/api/v1/',
     { app_id: 'Get one from developers.ipdb.io',
       app_key: 'Same as app_id' })
 const tx = driver.Transaction.makeCreateTransaction(
