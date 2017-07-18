@@ -5,6 +5,7 @@
 name:                   BigchainDB
 description:            'The scalable blockchain database.'
 url:                    https://www.bigchaindb.com
+ipdb_api_url:           https://test.ipdb.io
 
 email:
     contact:            contact@bigchaindb.com
