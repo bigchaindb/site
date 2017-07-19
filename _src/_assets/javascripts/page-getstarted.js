@@ -55,7 +55,7 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
     window.removeEventListener('DOMContentLoaded', domload, false)
 
     const driver = window.BigchainDB
-    const API_PATH = 'https://ipdb-proxy-dwahwzxwga.now.sh/api/v1/'
+    const API_PATH = 'http://bigchaindb-getting-started.westeurope.cloudapp.azure.com:9984/api/v1/'
 
     const form = document.getElementById('form-transaction')
     const postButton = document.getElementById('post')
