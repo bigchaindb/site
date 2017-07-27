@@ -9,9 +9,11 @@ ipdb_api_url:           https://test.ipdb.io
 
 email:
     contact:            contact@bigchaindb.com
+    contact_cc:         kamal@bigchaindb.com
     cla:                troy@ascribe.io
     cla_cc:             sylvain@bigchaindb.com
     enterprise:         ikytz6br@robot.zapier.com
+    enterprise_cc:      kamal@bigchaindb.com
 
 social:
     gitter:
