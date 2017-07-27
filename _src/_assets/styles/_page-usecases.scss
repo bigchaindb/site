@@ -177,8 +177,10 @@
 }
 
 .header--usecase {
+    padding-bottom: $spacer * 4;
+
     hgroup {
-        margin-top: ($spacer * 5);
+        margin-top: ($spacer * 3);
     }
 
     .header__title {
@@ -200,7 +202,6 @@
         display: block;
         color: $brand-main-blue-light;
         font-size: $font-size-lg;
-        margin-bottom: $spacer * 2;
     }
 }
 
