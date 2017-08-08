@@ -33,7 +33,7 @@
     "normalize-opentype.css": "^0.2.4",
     "parsleyjs": "^2.7.2",
     "select2": "^4.0.3",
-    "svg4everybody": "^2.1.8",
+    "svg4everybody": "^2.1.9",
     "textarea-autogrow": "^1.0.0",
     "vivus": "^0.4.1",
     "whatwg-fetch": "^2.0.3"
@@ -41,7 +41,7 @@
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-preset-es2015": "^6.24.1",
-    "browser-sync": ">=2.10.0",
+    "browser-sync": "^2.18.13",
     "concurrent-transform": "^1.0.0",
     "critical": "^0.8.4",
     "cross-spawn": "^5.1.0",
@@ -51,7 +51,7 @@
     "gulp-awspublish": "^3.0.0",
     "gulp-awspublish-router": "^0.1.1",
     "gulp-clean-css": "^3.7.0",
-    "gulp-cli": "^1.2.2",
+    "gulp-cli": "^1.4.0",
     "gulp-concat": "^2.6.0",
     "gulp-header": "^1.8.9",
     "gulp-htmlmin": "^3.0.0",
@@ -68,12 +68,12 @@
     "gulp-svg-sprite": "^1.3.7",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.6",
-    "js-yaml": "^3.9.0",
+    "js-yaml": "^3.9.1",
     "request": "^2.81.0",
     "stylelint": "^8.0.0",
-    "stylelint-config-bigchaindb": "^1.0.0",
+    "stylelint-config-bigchaindb": "^1.1.3",
     "stylelint-config-standard": "^17.0.0",
-    "uglify-es": "^3.0.25"
+    "uglify-es": "^3.0.27"
   },
   "engines": {
     "node": ">=7.0.0"
