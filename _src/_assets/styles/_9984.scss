@@ -71,7 +71,14 @@ $font-family-silkscreen:    silkscreennormal, monospace !default;
     color: $brand-9984-04;
     background: $brand-9984-01;
     padding: $spacer / 5 $spacer / 4;
-    margin-left: $spacer / 2;
+    display: block;
+    margin-top: $spacer / 2;
+
+    @media ($screen-sm) {
+        display: inline;
+        margin-top: 0;
+        margin-left: $spacer / 2;
+    }
 }
 
 .divider--9984 {
