@@ -1,8 +1,7 @@
-
-$brand-9984-01:                  #ec008c !default;
-$brand-9984-02:                  #f7931d !default;
-$brand-9984-03:                  #161d21 !default;
-$brand-9984-04:                  #e6e6e6 !default;
+$brand-9984-01:             #ec008c !default;
+$brand-9984-02:             #f7931d !default;
+$brand-9984-03:             #161d21 !default;
+$brand-9984-04:             #e6e6e6 !default;
 $font-family-silkscreen:    silkscreennormal, monospace !default;
 
 
@@ -16,18 +15,24 @@ $font-family-silkscreen:    silkscreennormal, monospace !default;
     font-style: normal;
 }
 
+
 .banner--ninenine {
     text-align: center;
     background: $brand-9984-03;
     font-family: $font-family-silkscreen;
     font-weight: $font-weight-normal;
     font-style: normal;
-    padding-top: $spacer / 2;
-    padding-bottom: $spacer / 2;
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+
+    @media ($screen-sm) {
+        padding-top: $spacer / 2;
+        padding-bottom: $spacer / 2;
+    }
 
     &,
     .divider--9984,
-    .divider--slashes,
+    .divider--9984slashes,
     .ninenine__action {
         transition: .15s ease-out;
     }
@@ -48,14 +53,9 @@ $font-family-silkscreen:    silkscreennormal, monospace !default;
     }
 }
 
-.ninenine__content {
-    display: inline-block;
-    position: relative;
-}
 
 .ninenine__title,
-.ninenine__meta,
-.ninenine__tagline {
+.ninenine__meta {
     font-size: .8rem;
     line-height: $line-height;
     margin: 0;
@@ -65,6 +65,7 @@ $font-family-silkscreen:    silkscreennormal, monospace !default;
         font-style: normal;
     }
 }
+
 
 .ninenine__action {
     box-shadow: none;
@@ -81,10 +82,12 @@ $font-family-silkscreen:    silkscreennormal, monospace !default;
     }
 }
 
+
 .divider--9984 {
     color: $brand-9984-01;
 }
 
-.divider--slashes {
+
+.divider--9984slashes {
     color: $brand-9984-02;
 }
