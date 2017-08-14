@@ -24,6 +24,7 @@
     * [Prerequisite: authentication](#prerequisite-authentication)
     * [Staging build &amp; beta deployment](#staging-build--beta-deployment)
     * [Production build &amp; live deployment](#production-build--live-deployment)
+* [IPFS snapshots](#ipfs-snapshots)
 * [Coding conventions](#coding-conventions)
     * [(S)CSS](#scss)
     * [JavaScript](#javascript)
@@ -133,6 +134,25 @@ gulp build --production
 
 # deploy contents of /_dist to live
 gulp deploy --live
+```
+
+## IPFS snapshots
+
+While the site isn't hosted on IPFS, we upload selected snapshots to it and keep a history of those hashes in the `versions` folder. By prepending every hash with e.g. `https://ipfs.io/ipfs/` you can see all those versions.
+
+To add a snapshot of the full site to IPFS manually run the `ipfs.sh` script:
+
+```bash
+./ipfs.sh
+```
+
+This will run a staging build, adds all contents of the output folder to IPFS and keeps track of this version via its IPFS hash in the `versions` folder.
+
+Right now, this requires a running `ipfs daemon` on your machine before executing the script. On macOS it's as simple as:
+
+```bash
+brew install ipfs
+ipfs daemon
 ```
 
 ## Coding conventions
