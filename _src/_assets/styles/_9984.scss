@@ -1,0 +1,93 @@
+$brand-9984-01:             #ec008c !default;
+$brand-9984-02:             #f7931d !default;
+$brand-9984-03:             #161d21 !default;
+$brand-9984-04:             #e6e6e6 !default;
+$font-family-silkscreen:    silkscreennormal, monospace !default;
+
+
+@font-face {
+    font-family: silkscreennormal;
+    // stylelint-disable declaration-colon-newline-after
+    src: url('../fonts/slkscr-webfont.woff2') format('woff2'),
+        url('../fonts/slkscr-webfont.woff') format('woff');
+    // stylelint-enable
+    font-weight: $font-weight-normal;
+    font-style: normal;
+}
+
+
+.banner--ninenine {
+    text-align: center;
+    background: $brand-9984-03;
+    font-family: $font-family-silkscreen;
+    font-weight: $font-weight-normal;
+    font-style: normal;
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+
+    @media ($screen-sm) {
+        padding-top: $spacer / 2;
+        padding-bottom: $spacer / 2;
+    }
+
+    &,
+    .divider--9984,
+    .divider--9984slashes,
+    .ninenine__action {
+        transition: .15s ease-out;
+    }
+
+    &:hover,
+    &:focus {
+        background: $brand-9984-01;
+
+        .divider--9984,
+        .divider--slashes {
+            color: $brand-9984-04;
+        }
+
+        .ninenine__action {
+            background: $brand-9984-04;
+            color: $brand-9984-01;
+        }
+    }
+}
+
+
+.ninenine__title,
+.ninenine__meta {
+    font-size: .8rem;
+    line-height: $line-height;
+    margin: 0;
+    color: $brand-9984-04;
+
+    em {
+        font-style: normal;
+    }
+}
+
+
+.ninenine__action {
+    box-shadow: none;
+    color: $brand-9984-04;
+    background: $brand-9984-01;
+    padding: $spacer / 5 $spacer / 4;
+    display: block;
+    margin-top: $spacer / 2;
+
+    @media ($screen-sm) {
+        display: inline;
+        margin-top: 0;
+        margin-left: $spacer / 2;
+    }
+}
+
+
+.divider--9984 {
+    color: $brand-9984-01;
+}
+
+
+.divider--9984slashes {
+    color: $brand-9984-02;
+}
