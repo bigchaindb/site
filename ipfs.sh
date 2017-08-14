@@ -3,7 +3,7 @@
 # Script to put current build output onto IPFS.
 # adapted from https://github.com/kremalicious/ipfs-hosting/blob/master/deploy.sh
 #
-# requires ipfs to be installed and running `ipfs daemon`
+# requires IPFS to be installed, and running `ipfs daemon`
 
 FOLDER="./_dist"
 IPFSLOCAL="http://localhost:8080"
@@ -25,11 +25,6 @@ echo
 
 # add to versions/history
 cat <<EOF >> versions/history
-$HASH
-EOF
-
-# overwrite versions/current
-cat <<EOF > versions/current
 $HASH
 EOF
 
