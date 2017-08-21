@@ -17,25 +17,6 @@
   twitter:  Zimmtstern_7
   linkedin: simonschwerin
 
-- name:     Bruce Pon
-  position: CEO
-  image:    team-bruce.jpg
-  twitter:  BrucePon
-  linkedin: ponbruce
-
-- name:     Trent McConaghy
-  position: CTO
-  image:    team-trent.jpg
-  twitter:  trentmc0
-  facebook: trent.mcconaghy
-  linkedin: trentmc
-  github:   trentmc
-
-- name:     Masha McConaghy
-  position: CMO
-  image:    team-masha.jpg
-  linkedin: mashamc
-
 - name:     Alberto Granzotto
   position: Developer
   image:    team-alberto.jpg
