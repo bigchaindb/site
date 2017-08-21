@@ -1,0 +1,24 @@
+---
+layout: page
+
+title: Frequently answered questions
+---
+
+<section class="section section--faq">
+    <div class="row">
+
+        <div class="faq-contents">
+            {% for faq in site.data.faq %}
+                <h1 class="faq-contents__title"><a href="#{{ faq.question | downcase | replace: ' ','-' | replace: '?', '' }}">{{ faq.question }}</a></h1>
+            {% endfor %}
+        </div>
+
+        <div class="faq">
+            {% for faq in site.data.faq %}
+                <h1 class="faq__question" id="{{ faq.question | downcase | replace: ' ','-' | replace: '?', '' }}">{{ faq.question }}</h1>
+                <div class="faq__answer">{{ faq.answer | markdownify }}</div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>

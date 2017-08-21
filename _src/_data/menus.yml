@@ -12,6 +12,8 @@ main:
       url: https://docs.bigchaindb.com/
 
 secondary:
+    - title: FAQ
+      url: "/faq/"
     - title: Whitepaper
       url: "/whitepaper/"
     - title: Blog

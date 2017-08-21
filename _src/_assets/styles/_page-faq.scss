@@ -1,0 +1,18 @@
+.faq {
+    padding-top: $spacer * 3;
+}
+
+.faq__question {
+    font-size: $font-size-h4;
+}
+
+.faq__answer {
+
+}
+
+.faq-contents__title {
+    font-size: $font-size-h5;
+    margin-top: $spacer / 2;
+    margin-bottom: $spacer / 2;
+    color: $brand-main-gray-lighter;
+}
