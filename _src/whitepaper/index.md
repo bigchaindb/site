@@ -6,6 +6,7 @@ tagline: "BigchainDB: A Scalable Blockchain Database"
 description: 'This paper describes BigchainDB. BigchainDB fills a gap in the decentralization ecosystem: a decentralized database, at scale. It is capable of 1 million writes per second throughput, storing petabytes of data, and sub-second latency.'
 
 image: photo3.jpg
+header: photo3.jpg
 
 whitepaper:
     title: Whitepaper downloads
