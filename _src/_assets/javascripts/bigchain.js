@@ -1,6 +1,7 @@
 
 //=include svg4everybody/dist/svg4everybody.js
 //=include jquery/dist/jquery.js
+//=include smooth-scroll/dist/js/smooth-scroll.js
 
 //=include bigchain/analytics.js
 //=include bigchain/dnt.js
@@ -20,6 +21,14 @@ jQuery(function($) {
 
 
     //
+    // init Smooth Scroll
+    //
+    var scroll = new SmoothScroll('a[data-scroll]', {
+        easing: 'easeOutQuint'
+    });
+
+
+    //
     // Open all external links in new window
     //
     $('a').not('[href*="mailto:"]').each(function () {
@@ -33,7 +42,7 @@ jQuery(function($) {
     //
     // Automatically add header links to all Markdown headings
     //
-    $('.content--page--markdown h1:not(#heading-1), .content--page--markdown h2:not(#heading-2)').each(function(i, el) {
+    $('.content--page--markdown h1:not(#heading-1), .content--page--markdown h2:not(#heading-2), .faq__question').each(function(i, el) {
         var $el, icon, id;
         $el = $(el);
         id = $el.attr('id');
