@@ -5,6 +5,6 @@ User-agent: *
 
 Disallow: /usecases/*.pdf$
 Disallow: /mediakit/
-Disallow: /mediakit-bigchaindb.zip
+Disallow: /mediakit.zip
 
 Sitemap: {{ site.url }}/sitemap.xml
