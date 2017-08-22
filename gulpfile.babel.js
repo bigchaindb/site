@@ -246,7 +246,7 @@ export const mediakit = () => src([
         SRC + 'mediakit/**/*'],
         { base: SRC }
     )
-    .pipe($.zip('mediakit-bigchaindb.zip'))
+    .pipe($.zip('mediakit.zip'))
     .pipe(dest(DIST))
 
 
