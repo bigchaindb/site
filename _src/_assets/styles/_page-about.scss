@@ -44,6 +44,10 @@
     .brand--dark & {
         background: rgba($gray-light, .75);
     }
+
+    .brand--square & {
+        padding: $spacer * 1.2 $spacer * 2;
+    }
 }
 
 .brand__logo__download {
@@ -51,6 +55,7 @@
 
     a {
         font-size: $font-size-sm;
-        margin-left: $spacer;
+        margin-left: $spacer / 2;
+        margin-right: $spacer / 2;
     }
 }

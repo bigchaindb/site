@@ -14,7 +14,7 @@ mediakit:
     title: Media Kit
     description: Get our full media kit in one handy package.
     download: Download media kit (zip)
-    link: /assets/brand/mediakit-bigchaindb.zip
+    link: /mediakit-bigchaindb.zip
 ---
 
 ## Our story

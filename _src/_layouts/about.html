@@ -25,6 +25,12 @@ layout: base
 
                 <div class="grid__col grid__col--1-3">
 
+                    <aside class="widget widget--mediakit">
+                        <h2 class="widget__title">{{ page.mediakit.title }}</h2>
+                        <p>{{ page.mediakit.description }}</p>
+                        <a href="{{ page.mediakit.link }}">{{ page.mediakit.download }}</a>
+                    </aside>
+
                     <aside class="widget widget--logo">
                         <h2 class="widget__title">{{ page.brand.title }}</h2>
                         <p>{{ page.brand.description }}</p>
@@ -37,10 +43,9 @@ layout: base
                                 </svg>
                             </figure>
                             <p class="brand__logo__download">
-                                <a href="/assets/brand/logo-bigchaindb.svg" download>SVG</a>
-                                <a href="/assets/brand/logo-bigchaindb.png" download>PNG</a>
+                                <a href="/assets/brand/mediakit/logo/logo-bigchaindb.svg" download>SVG</a>
+                                <a href="/assets/brand/mediakit/logo/logo-bigchaindb.png" download>PNG</a>
                             </p>
-
                         </div>
 
                         <div class="brand brand--light">
@@ -51,17 +56,24 @@ layout: base
                                 </svg>
                             </figure>
                             <p class="brand__logo__download">
-                                <a href="/assets/brand/logo-bigchaindb-white.svg" download>SVG</a>
-                                <a href="/assets/brand/logo-bigchaindb-white.png" download>PNG</a>
+                                <a href="/assets/brand/mediakit/logo/logo-bigchaindb-white.svg" download>SVG</a>
+                                <a href="/assets/brand/mediakit/logo/logo-bigchaindb-white.png" download>PNG</a>
                             </p>
                         </div>
 
-                    </aside>
+                        <div class="brand brand--light brand--square">
+                            <figure class="brand__logo">
+                                <svg class="logo" aria-labelledby="title">
+                                    <title>Logo BigchainDB</title>
+                                    <use xlink:href="/assets/img/sprite.svg#logo-square"></use>
+                                </svg>
+                            </figure>
+                            <p class="brand__logo__download">
+                                <a href="/assets/brand/mediakit/logo/logo-bigchaindb-square.svg" download>SVG</a>
+                                <a href="/assets/brand/mediakit/logo/logo-bigchaindb-square.png" download>PNG</a>
+                            </p>
+                        </div>
 
-                    <aside class="widget widget--mediakit">
-                        <h2 class="widget__title">{{ page.mediakit.title }}</h2>
-                        <p>{{ page.mediakit.description }}</p>
-                        <a href="{{ page.mediakit.link }}">{{ page.mediakit.download }}</a>
                     </aside>
 
                 </div>

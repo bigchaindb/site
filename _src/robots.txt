@@ -4,5 +4,7 @@
 User-agent: *
 
 Disallow: /usecases/*.pdf$
+Disallow: /assets/mediakit/
+Disallow: /mediakit-bigchaindb.zip
 
 Sitemap: {{ site.url }}/sitemap.xml
