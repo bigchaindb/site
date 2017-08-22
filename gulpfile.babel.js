@@ -425,6 +425,11 @@ export const s3 = () => {
                     cacheTime: 0
                 },
 
+                // all zip files, not cached
+                '^.+\\.zip': {
+                    cacheTime: 0
+                },
+
                 // font mime types
                 '\.ttf$': {
                     key: '$&',
