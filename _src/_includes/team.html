@@ -1,7 +1,66 @@
+<div class="grid grid--full grid-small--half grid-medium--third grid--gutters text-center grid--founders">
+
+    {% assign founders = site.data.team.founders %}
+
+    {% for member in founders %}
+    <div class="grid__col">
+        <article class="team">
+            <img class="team__image" src="/assets/img/{{ member.image }}">
+            <h1 class="team__name">{{ member.name }}</h1>
+            <p class="team__position">{{ member.position }}</p>
+
+            <p class="team__social">
+
+                {% if member.twitter %}
+                    <a class="team__social__link" href="https://twitter.com/{{ member.twitter }}">
+                        <svg class="icon icon--social icon--twitter" aria-labelledby="title">
+                            <title>Twitter</title>
+                            <use xlink:href="/assets/img/sprite.svg#twitter"></use>
+                        </svg>
+                    </a>
+                {% endif %}
+                {% if member.facebook %}
+                    <a class="team__social__link" href="https://facebook.com/{{ member.facebook }}">
+                        <svg class="icon icon--social icon--facebook" aria-labelledby="title">
+                            <title>Facebook</title>
+                            <use xlink:href="/assets/img/sprite.svg#facebook"></use>
+                        </svg>
+                    </a>
+                {% endif %}
+                {% if member.github %}
+                    <a class="team__social__link" href="https://github.com/{{ member.github }}">
+                        <svg class="icon icon--social icon--github" aria-labelledby="title">
+                            <title>GitHub</title>
+                            <use xlink:href="/assets/img/sprite.svg#github"></use>
+                        </svg>
+                    </a>
+                {% endif %}
+                {% if member.linkedin %}
+                    <a class="team__social__link" href="https://www.linkedin.com/in/{{ member.linkedin }}">
+                        <svg class="icon icon--social icon--linkedin" aria-labelledby="title">
+                            <title>LinkedIn</title>
+                            <use xlink:href="/assets/img/sprite.svg#linkedin"></use>
+                        </svg>
+                    </a>
+                {% endif %}
+
+            </p>
+
+            <p class="team__bio">{{ member.bio }}</p>
+
+        </article>
+    </div>
+    {% endfor %}
+
+</div>
+
+<span class="team__bio__trigger">Show bios</span>
+
+
 
 <div class="grid grid--full grid-small--third grid-medium--columns grid--gutters text-center grid--team">
 
-    {% assign team = site.data.team | sort: 'name' %}
+    {% assign team = site.data.team.team | sort: 'name' %}
 
     {% for member in team %}
     <div class="grid__col grid__col--2">
