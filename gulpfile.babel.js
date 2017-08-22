@@ -240,18 +240,11 @@ export const fonts = () => src(SRC + '_assets/fonts/**/*')
 
 
 //
-// Copy mediakit
-//
-export const mediakit = () => src(SRC + '_assets/mediakit/**/*')
-    .pipe(dest(DIST + 'assets/mediakit/'))
-
-
-//
 // Zip up media kit
 //
-export const mediakitzip = () => src([
-        SRC + '_assets/mediakit/**/*'],
-        { base: SRC + '_assets/' }
+export const mediakit = () => src([
+        SRC + 'mediakit/**/*'],
+        { base: SRC }
     )
     .pipe($.zip('mediakit-bigchaindb.zip'))
     .pipe(dest(DIST))
@@ -353,7 +346,7 @@ const deployBanner = (done) => {
 // `gulp build` is the development build
 // `gulp build --production` is the production build
 //
-export const build = series(buildBanner, clean, jekyll, parallel(html, css, js, images, fonts, svg, mediakit, mediakitzip), rev, revReplace, criticalCss)
+export const build = series(buildBanner, clean, jekyll, parallel(html, css, js, images, fonts, svg, mediakit), rev, revReplace, criticalCss)
 
 //
 // Build site, run server, and watch for file changes
