@@ -59,3 +59,12 @@
 .partner__logo--sicpa {
     transform: scale(1.8);
 }
+
+.partner__logo--darfchain {
+    stroke: $brand-main-blue-light;
+    stroke-opacity: .6;
+
+    @media ($screen-sm) {
+        transform: scale(1.1);
+    }
+}
