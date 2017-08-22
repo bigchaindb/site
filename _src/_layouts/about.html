@@ -1,0 +1,83 @@
+---
+layout: base
+---
+
+<header role="banner" class="header" {% if page.image %}style="background-image:url('/assets/img/{{ page.image }}')"{% endif %}>
+
+    {% include menu-main.html %}
+
+    <div class="row">
+        <div class="header__content">
+            <h1 class="header__title">{{ page.title }}</h1>
+        </div>
+    </div>
+</header>
+
+<section role="main" class="content content--page">
+
+    <section class="section section--about">
+        <div class="row row--wide">
+            <div class="grid grid--full grid-medium--columns grid--gutters">
+
+                <div class="grid__col grid__col--2-3">
+                    {{ content }}
+                </div>
+
+                <div class="grid__col grid__col--1-3">
+
+                    <aside class="widget widget--logo">
+                        <h2 class="widget__title">{{ page.brand.title }}</h2>
+                        <p>{{ page.brand.description }}</p>
+
+                        <div class="brand brand--dark">
+                            <figure class="brand__logo">
+                                <svg class="logo logo--sm logo--color" aria-labelledby="title">
+                                    <title>Logo BigchainDB</title>
+                                    <use xlink:href="/assets/img/sprite.svg#logo"></use>
+                                </svg>
+                            </figure>
+                            <p class="brand__logo__download">
+                                <a href="/assets/brand/logo-bigchaindb.svg" download>SVG</a>
+                                <a href="/assets/brand/logo-bigchaindb.png" download>PNG</a>
+                            </p>
+
+                        </div>
+
+                        <div class="brand brand--light">
+                            <figure class="brand__logo">
+                                <svg class="logo logo--sm logo--white--green" aria-labelledby="title">
+                                    <title>Logo BigchainDB</title>
+                                    <use xlink:href="/assets/img/sprite.svg#logo"></use>
+                                </svg>
+                            </figure>
+                            <p class="brand__logo__download">
+                                <a href="/assets/brand/logo-bigchaindb-white.svg" download>SVG</a>
+                                <a href="/assets/brand/logo-bigchaindb-white.png" download>PNG</a>
+                            </p>
+                        </div>
+
+                    </aside>
+
+                    <aside class="widget widget--mediakit">
+                        <h2 class="widget__title">{{ page.mediakit.title }}</h2>
+                        <p>{{ page.mediakit.description }}</p>
+                        <a href="{{ page.mediakit.link }}">{{ page.mediakit.download }}</a>
+                    </aside>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--team">
+        <div class="row row--wide">
+            <h1 class="section-title">Team</h1>
+
+            {% include founders.html %}
+
+            {% include team.html %}
+        </div>
+    </section>
+
+</section>

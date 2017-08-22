@@ -1,3 +1,56 @@
 .section--team {
     padding-top: 0;
 }
+
+.section--about {
+    h2:first-of-type {
+        margin-top: 0;
+    }
+}
+
+.widget {
+    margin-top: $spacer * 4;
+
+    @media ($screen-sm) {
+        padding-left: $spacer * 2;
+
+        &:first-child {
+            margin-top: $spacer * 2.5;
+        }
+    }
+}
+
+.widget__title {
+    font-size: $font-size-h4;
+    margin-bottom: $spacer / 2;
+    margin-top: 0;
+}
+
+.brand {
+    margin-top: $spacer;
+
+    &:last-child {
+        margin-top: $spacer * 2;
+    }
+}
+
+.brand__logo {
+    padding: $spacer * 2;
+    border: 1px solid $gray-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .brand--dark & {
+        background: rgba($gray-light, .75);
+    }
+}
+
+.brand__logo__download {
+    text-align: center;
+
+    a {
+        font-size: $font-size-sm;
+        margin-left: $spacer;
+    }
+}

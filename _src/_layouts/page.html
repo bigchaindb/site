@@ -31,18 +31,6 @@ layout: base
 
 </section>
 
-{% if page.path contains "about" %}
-    <section class="section section--team section--founders">
-        <div class="row row--wide">
-            <h1 class="section-title">Team</h1>
-
-            {% include founders.html %}
-
-            {% include team.html %}
-        </div>
-    </section>
-{% endif %}
-
 {% if page.title == "Whitepaper" %}
     <section class="section section-whitepaper-download background--photo">
         <div class="row">
