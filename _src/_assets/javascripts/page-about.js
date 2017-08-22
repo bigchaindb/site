@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
             var item = bio[i]
             if (item.style.display == 'block') {
                 item.style.display = 'none'
-                trigger.innerHTML = 'Show bios'
+                trigger.innerHTML = '<span>+</span>Show bios'
             } else {
                 item.style.display = 'block'
-                trigger.innerHTML = 'Hide bios'
+                trigger.innerHTML = '<span>−</span>Hide bios'
             }
         }
     })

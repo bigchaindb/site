@@ -46,7 +46,7 @@
 
             </p>
 
-            <p class="team__bio">{{ member.bio }}</p>
+            <div class="team__bio">{{ member.bio | markdownify }}</div>
 
         </article>
     </div>
@@ -54,7 +54,7 @@
 
 </div>
 
-<span class="team__bio__trigger">Show bios</span>
+<div class="team__bio__trigger"><span>+</span>Show bios</div>
 
 
 
