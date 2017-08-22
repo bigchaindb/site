@@ -35,11 +35,11 @@
     "select2": "^4.0.3",
     "svg4everybody": "^2.1.9",
     "textarea-autogrow": "^1.0.0",
-    "vivus": "^0.4.1",
+    "vivus": "^0.4.2",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
-    "babel-core": "^6.25.0",
+    "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.18.13",
     "concurrent-transform": "^1.0.0",
@@ -64,7 +64,7 @@
     "gulp-rev": "^7.1.2",
     "gulp-rev-replace": "^0.4.2",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.1",
+    "gulp-sourcemaps": "^2.6.1",
     "gulp-svg-sprite": "^1.3.7",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.6",
@@ -73,7 +73,7 @@
     "stylelint": "^8.0.0",
     "stylelint-config-bigchaindb": "^1.1.3",
     "stylelint-config-standard": "^17.0.0",
-    "uglify-es": "^3.0.27"
+    "uglify-es": "^3.0.28"
   },
   "engines": {
     "node": ">=7.0.0"
