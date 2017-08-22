@@ -16,10 +16,15 @@ layout: base
 <section role="main" class="content content--page">
 
     <section class="section section--about">
+        <div class="row">
+            <header class="section-header">
+                <p class="section-description">{{ page.intro }}</p>
+            </header>
+        </div>
         <div class="row row--wide">
             <div class="grid grid--full grid-medium--columns grid--gutters">
 
-                <div class="grid__col grid__col--2-3">
+                <div class="grid__col grid__col--2-3 story">
                     {{ content }}
                 </div>
 
@@ -28,7 +33,7 @@ layout: base
                     <aside class="widget widget--mediakit">
                         <h2 class="widget__title">{{ page.mediakit.title }}</h2>
                         <p>{{ page.mediakit.description }}</p>
-                        <a href="{{ page.mediakit.link }}">{{ page.mediakit.download }}</a>
+                        <a class="btn btn-primary btn-sm" href="{{ page.mediakit.link }}">{{ page.mediakit.download }}</a>
                     </aside>
 
                     <aside class="widget widget--logo">
@@ -43,8 +48,8 @@ layout: base
                                 </svg>
                             </figure>
                             <p class="brand__logo__download">
-                                <a href="/mediakit/logo/logo-bigchaindb.svg" download>SVG</a>
-                                <a href="/mediakit/logo/logo-bigchaindb.png" download>PNG</a>
+                                <a class="btn btn-secondary btn-xs" href="/mediakit/logo/logo-bigchaindb.svg" download>SVG</a>
+                                <a class="btn btn-secondary btn-xs" href="/mediakit/logo/logo-bigchaindb.png" download>PNG</a>
                             </p>
                         </div>
 
@@ -56,8 +61,8 @@ layout: base
                                 </svg>
                             </figure>
                             <p class="brand__logo__download">
-                                <a href="/mediakit/logo/logo-bigchaindb-white.svg" download>SVG</a>
-                                <a href="/mediakit/logo/logo-bigchaindb-white.png" download>PNG</a>
+                                <a class="btn btn-secondary btn-xs" href="/mediakit/logo/logo-bigchaindb-white.svg" download>SVG</a>
+                                <a class="btn btn-secondary btn-xs" href="/mediakit/logo/logo-bigchaindb-white.png" download>PNG</a>
                             </p>
                         </div>
 
@@ -69,8 +74,8 @@ layout: base
                                 </svg>
                             </figure>
                             <p class="brand__logo__download">
-                                <a href="/mediakit/logo/logo-bigchaindb-square.svg" download>SVG</a>
-                                <a href="/mediakit/logo/logo-bigchaindb-square.png" download>PNG</a>
+                                <a class="btn btn-secondary btn-xs" href="/mediakit/logo/logo-bigchaindb-square.svg" download>SVG</a>
+                                <a class="btn btn-secondary btn-xs" href="/mediakit/logo/logo-bigchaindb-square.png" download>PNG</a>
                             </p>
                         </div>
 

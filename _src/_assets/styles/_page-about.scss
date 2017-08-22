@@ -3,19 +3,31 @@
 }
 
 .section--about {
+    padding-top: $spacer * 4;
+
+    .section-header {
+        margin-bottom: $spacer * 2;
+    }
+
     h2:first-of-type {
         margin-top: 0;
+    }
+
+    .story {
+        @media ($screen-md) {
+            padding-right: $spacer * 3;
+        }
     }
 }
 
 .widget {
-    margin-top: $spacer * 4;
+    margin-top: $spacer * 2;
+    padding: $spacer * 1.5;
+    background: rgba($brand-main-blue-dark, .15);
 
-    @media ($screen-sm) {
-        padding-left: $spacer * 2;
-
+    @media ($screen-md) {
         &:first-child {
-            margin-top: $spacer * 2.5;
+            margin-top: $spacer * 5;
         }
     }
 }
@@ -27,22 +39,22 @@
 }
 
 .brand {
-    margin-top: $spacer;
+    margin-top: $spacer * $line-height;
 
-    &:last-child {
-        margin-top: $spacer * 2;
+    &:first-child {
+        margin-top: 0;
     }
 }
 
 .brand__logo {
     padding: $spacer * 2;
-    border: 1px solid $gray-dark;
+    border: 1px solid rgba($gray-light, .25);
     display: flex;
     align-items: center;
     justify-content: center;
 
     .brand--dark & {
-        background: rgba($gray-light, .75);
+        background: $text-color;
     }
 
     .brand--square & {
@@ -52,10 +64,5 @@
 
 .brand__logo__download {
     text-align: center;
-
-    a {
-        font-size: $font-size-sm;
-        margin-left: $spacer / 2;
-        margin-right: $spacer / 2;
-    }
+    margin-bottom: 0;
 }
