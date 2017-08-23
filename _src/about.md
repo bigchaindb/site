@@ -17,7 +17,7 @@ mediakit:
     link: /mediakit.zip
 
 intro: >
-    In your time, yes, but nowadays shut up! Besides, these are adult stemcells, harvested from perfectly healthy adults whom I killed for their stemcells. Oh, but you can. But you may have to metaphorically make a deal with the devil. And by "devil", I mean Robot Devil. And by "metaphorically", I mean get your coat.
+    BigchainDB is scalable blockchain database offering decentralization, immutability and native assets. BigchainDB allows for the deployment of large-scale applications in a variety of use cases and industries from intellectual property and identity to supply chain, IoT and artificial intelligence. BigchainDB provides unique solutions for developers, start-ups and enterprises to successfully build their concepts, platforms and applications as big as they can dream.
 
 ---
 
