@@ -1,7 +1,6 @@
 //=require gumshoe/dist/js/gumshoe.js
 
 //=include bigchain/tab.js
-//=include bigchain/smoothscroll.js
 //=include bigchain/newsletter.js
 
 const ipdbUrl = 'https://test.ipdb.io'

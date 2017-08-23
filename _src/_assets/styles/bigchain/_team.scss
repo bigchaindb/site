@@ -3,7 +3,6 @@
 // ---
 // bigchaindb.com
 //
-
 .team__image {
     @extend .img--responsive;
     background: $brand-main-gray;
@@ -61,6 +60,57 @@
 
     .icon {
         fill: $brand-primary;
+    }
+}
+
+.team__bio {
+    text-align: left;
+    font-size: $font-size-sm;
+    margin-bottom: 0;
+    margin-top: $spacer;
+    display: none;
+    opacity: 0;
+    height: 0;
+    transition: .4s ease-out;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.team__bio__trigger {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    padding-top: $spacer;
+    border-top: 1px solid $gray-dark;
+    margin-top: $spacer * 3;
+    margin-bottom: $spacer * 2;
+    position: relative;
+    font-size: $font-size-sm;
+    color: $gray;
+
+    span {
+        width: 2rem;
+        height: 2rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -2rem;
+        background: $gray-dark;
+        color: $gray-light;
+        font-size: $font-size-lg;
+        line-height: 1.35;
+        transition: .15s ease-out;
+    }
+
+    &:hover {
+        border-top-color: darken($gray-dark, 5%);
+
+        span {
+            background: darken($gray-dark, 5%);
+            color: $brand-main-green;
+        }
     }
 }
 

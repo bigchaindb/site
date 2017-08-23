@@ -240,6 +240,17 @@ export const fonts = () => src(SRC + '_assets/fonts/**/*')
 
 
 //
+// Zip up media kit
+//
+export const mediakit = () => src([
+        SRC + 'mediakit/**/*'],
+        { base: SRC }
+    )
+    .pipe($.zip('mediakit.zip'))
+    .pipe(dest(DIST))
+
+
+//
 // Revision static assets
 //
 export const rev = (done) => {
@@ -335,7 +346,7 @@ const deployBanner = (done) => {
 // `gulp build` is the development build
 // `gulp build --production` is the production build
 //
-export const build = series(buildBanner, clean, jekyll, parallel(html, css, js, images, fonts, svg), rev, revReplace, criticalCss)
+export const build = series(buildBanner, clean, jekyll, parallel(html, css, js, images, fonts, svg, mediakit), rev, revReplace, criticalCss)
 
 //
 // Build site, run server, and watch for file changes
@@ -411,6 +422,11 @@ export const s3 = () => {
 
                 // all pdf files, not cached
                 '^.+\\.pdf': {
+                    cacheTime: 0
+                },
+
+                // all zip files, not cached
+                '^.+\\.zip': {
                     cacheTime: 0
                 },
 

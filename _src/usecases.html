@@ -44,7 +44,7 @@ js: page-usecases.min.js
     <div class="row row--wide">
         <div class="menu-overflow">
             {% for industry in site.data.industries %}
-                <a class="menu__link scroll" href="#{{ industry.name | downcase | replace: " ", "" }}">
+                <a class="menu__link" href="#{{ industry.name | downcase | replace: " ", "" }}" data-scroll>
                     <svg class="icon">
                         <use xlink:href="/assets/img/sprite.svg#{{ industry.icon }}"></use>
                     </svg>

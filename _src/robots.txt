@@ -4,5 +4,7 @@
 User-agent: *
 
 Disallow: /usecases/*.pdf$
+Disallow: /mediakit/
+Disallow: /mediakit.zip
 
 Sitemap: {{ site.url }}/sitemap.xml

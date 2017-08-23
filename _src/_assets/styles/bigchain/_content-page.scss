@@ -8,7 +8,8 @@
     }
 
     > h1,
-    h2 {
+    h2,
+    .faq__question {
         &:not(#heading-1):not(#heading-2) {
             border-bottom: 1px solid $brand-main-blue-light;
             padding-bottom: $spacer;
@@ -48,7 +49,7 @@
 
         .header-icon {
             font-style: normal;
-            font-size: 2rem;
+            font-size: $font-size-lg;
             color: $brand-primary;
         }
     }
