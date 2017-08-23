@@ -1,26 +1,71 @@
 - question: How does BigchainDB provide decentralized control?
-  answer: "The BigchainDB server software runs on each server in a cluster. One key requirement is that every node in the cluster should be owned and operated by a different person or organization. The degree of democracy or autocracy can vary and is something enforced by the organization overseeing the cluster. Ideally, the nodes should be located in many countries, legal jurisdictions and hosting providers, so an issue with one doesn’t affect them all. The only people who can create a valid transfer transaction are the people with the necessary private keys. Nobody else, including node operators, can do that: the power to transact is decentralized."
+  answer: |
+    The BigchainDB server software runs on each server in a cluster. One key requirement is that every node in the cluster should be owned and operated by a different person or organization.
+
+    The degree of democracy or autocracy can vary and is something enforced by the organization overseeing the cluster. Ideally, the nodes should be located in many countries, legal jurisdictions and hosting providers, so an issue with one doesn’t affect them all.
+
+    The only people who can create a valid transfer transaction are the people with the necessary private keys. Nobody else, including node operators, can do that: the power to transact is decentralized.
+
 
 - question: How is BigchainDB immutable?
-  answer: "Within BigchainDB, all data is copied to several different places. The higher the replication factor, set by the consortium, the more difficult it becomes to change or delete all replicas. All nodes also monitor all changes so if some unauthorized change happens, appropriate action can be taken. Cryptographic signatures and hashes are also extensively used. In BigchainDB, each transaction must be signed, each block is signed by the node that created it, and each vote is signed by the node that cast it."
+  answer: |
+    Within BigchainDB, all data is copied to several different places. The higher the replication factor, set by the consortium, the more difficult it becomes to change or delete all replicas. All nodes also monitor all changes so if some unauthorized change happens, appropriate action can be taken.
+
+    Cryptographic signatures and hashes are also extensively used. In BigchainDB, each transaction must be signed, each block is signed by the node that created it, and each vote is signed by the node that cast it.
+
 
 - question: How does BigchainDB provide Sybil tolerance?
-  answer: "BigchainDB is run within federations, where the governing organization behind the network knows and controls who they allow to operate the nodes. There’s no way for one entity to add additional nodes without the permission of the federation. Hosting diversity also protects against a Sybil attack. It prevents any one hosting company from taking control of a majority of nodes. If a hosting company did spin up a new node using the private key already in their hosting infrastructure, the database would have to be reconfigured, alerting the federation about the new node."
+  answer: |
+    BigchainDB is run within federations, where the governing organization behind the network knows and controls who they allow to operate the nodes. There’s no way for one entity to add additional nodes without the permission of the federation.
+
+    Hosting diversity also protects against a Sybil attack. It prevents any one hosting company from taking control of a majority of nodes. If a hosting company did spin up a new node using the private key already in their hosting infrastructure, the database would have to be reconfigured, alerting the federation about the new node.
+
 
 - question: What are Native Assets?
-  answer: "BigchainDB has a built-in concept of assets, along with built-in transaction validity checking. Every BigchainDB transaction is a JSON document with a data structure in which “assets” and “asset transfers” are first-class, fully-supported concepts. A transaction can be used to “create” an asset. A transaction can also be used to transfer an asset from one public key to another. In BigchainDB, the person who holds the private key associated with the current owner’s public key is the owner of the asset linked to that public key. BigchainDB makes sure that only the owner of an asset can transfer that asset. BigchainDB also allows more complicated ownership and control structures. For example, an asset transfer might be enabled if any two of three controllers allow it."
+  answer: |
+    BigchainDB has a built-in concept of assets, along with built-in transaction validity checking. Every BigchainDB transaction is a JSON document with a data structure in which “assets” and “asset transfers” are first-class, fully-supported concepts. A transaction can be used to “create” an asset. A transaction can also be used to transfer an asset from one public key to another.
+
+    In BigchainDB, the person who holds the private key associated with the current owner’s public key is the owner of the asset linked to that public key. BigchainDB makes sure that only the owner of an asset can transfer that asset.
+
+    BigchainDB also allows more complicated ownership and control structures. For example, an asset transfer might be enabled if any two of three controllers allow it.
+
 
 - question: Is BigchainDB Byzantine Fault Tolerant (BFT)?
-  answer: "BigchainDB is not currently BFT. It will be offered as an option in future releases with the expectation that turning it on will come at a cost to performance. Full BFT does not scale, and in most practical systems is not necessary. BigchainDB handles crashes and many arbitrary failures. BigchainDB takes a pragmatic approach to security and fault tolerance by adding many security features, including verification of every transaction by all federation nodes and immutability. All federations and nodes are advised to follow best-in-class security standards and regularly run internal tests."
+  answer: |
+    BigchainDB is not currently BFT. It will be offered as an option in future releases with the expectation that turning it on will come at a cost to performance. Full BFT does not scale, and in most practical systems is not necessary. BigchainDB handles crashes and many arbitrary failures.
+
+    BigchainDB takes a pragmatic approach to security and fault tolerance by adding many security features, including verification of every transaction by all federation nodes and immutability.
+
+    All federations and nodes are advised to follow best-in-class security standards and regularly run internal tests.
+
 
 - question: How do I try BigchainDB?
-  answer: "If you want to try BigchainDB, then you need a BigchainDB cluster to connect to. One option is to install a single-node BigchainDB cluster on your local machine. The [Quickstart](https://docs.bigchaindb.com/projects/server/en/latest/quickstart.html) page in the BigchainDB Server docs has installation instructions. Another option is to connect to an existing BigchainDB cluster, such as the IPDB Test Network. Once you have a BigchainDB cluster to connect to, you can communicate with it via the BigchainDB HTTP API and the WebSocket Event Stream API. To find a list of all tools and libraries, visit the [Get Started](https://www.bigchaindb.com/getstarted/) page."
+  answer: |
+    If you want to try BigchainDB, then you need a BigchainDB cluster to connect to.
+
+    One option is to install a single-node BigchainDB cluster on your local machine. The [Quickstart](https://docs.bigchaindb.com/projects/server/en/latest/quickstart.html) page in the BigchainDB Server docs has installation instructions.
+
+    Another option is to connect to an existing BigchainDB cluster, such as the [IPDB](https://ipdb.io) Test Network.
+
+    Once you have a BigchainDB cluster to connect to, you can communicate with it via the BigchainDB HTTP API and the WebSocket Event Stream API. To find a list of all tools and libraries, visit the [Get Started](https://www.bigchaindb.com/getstarted/#drivers) page.
+
 
 - question: Is there a public instance of BigchainDB?
-  answer: "[IPDB](https://ipdb.io) — the Interplanetary Database —is a public BigchainDB network. It’s made up of two parts: a blockchain database for the world computer and a foundation that guides it. If you’re not looking to set up your own federation, you can sign up for IPDB and connect instantly, no installation needed. The IPDB caretakers will handle running a BigchainDB network for you."
+  answer: |
+    [IPDB](https://ipdb.io) —the Interplanetary Database —is a public BigchainDB network. It’s made up of two parts: a blockchain database for the world computer and a foundation that guides it.
+
+    If you’re not looking to set up your own federation, you can sign up for IPDB and connect instantly, no installation needed. The IPDB caretakers will handle running a BigchainDB network for you.
+
 
 - question: Can I get a commercial license for BigchainDB?
-  answer: "BigchainDB has a few different models: consulting for education, ideation and use definition and development; the subscription model, a per node fee for enterprise software billed on an annual contract; or support packages based on a retainer rate. Get more information on BigchainDB’s [Enterprise](https://www.bigchaindb.com/enterprise/) page. "
+  answer: |
+    BigchainDB has a few different models:
+    * consulting for education, ideation and use definition and development
+    * the subscription model, a per node fee for enterprise software billed on an annual contract
+    * support packages based on a retainer rate
+
+    Get more information on BigchainDB’s [Enterprise](https://www.bigchaindb.com/enterprise/) page.
+
 
 # - question:
 #   answer: ""
