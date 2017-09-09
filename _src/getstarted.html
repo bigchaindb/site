@@ -89,7 +89,7 @@ from bigchaindb_driver.crypto import generate_keypair
 
 
 bdb = BigchainDB(
-    '{{ site.ipdb_api_url }}/api/v1/',
+    '{{ site.ipdb_api_url }}',
     headers={'app_id': 'Get one from developers.ipdb.io',
              'app_key': 'Same as app_id'})
 alice = generate_keypair()
