@@ -11,6 +11,7 @@ official:
 
     - title: Java
       repo: java-bigchaindb-driver
+      external: authenteq
       version: v0.1
       icon: logo-java
 
