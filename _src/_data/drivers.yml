@@ -15,6 +15,11 @@ official:
       icon: logo-cli
 
 community:
+    - title: Ruby (CLI wrapper)
+      repo: bigchaindb-ruby-client
+      icon: logo-ruby
+      link: https://github.com/nileshtrivedi/bigchaindb-ruby-client
+
     - title: Ruby
       repo: bigchaindb_ruby
       icon: logo-ruby
