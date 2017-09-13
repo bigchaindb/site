@@ -208,8 +208,15 @@ conn.postTransaction(txSigned)
                     <div class="grid grid--full grid-small--half grid--gutters">
 
                         {% for driver in site.data.drivers.official %}
+
+                        {% if driver.external %}
+                            {% capture url %}https://github.com/{{ driver.external }}/{{ driver.repo }}{% endcapture %}
+                        {% else %}
+                            {% capture url %}https://github.com/bigchaindb/{{ driver.repo }}{% endcapture %}
+                        {% endif %}
+
                         <div class="grid__col">
-                            <a class="driver" href="https://github.com/bigchaindb/{{ driver.repo }}">
+                            <a class="driver" href="{{ url }}">
                                 <h2 class="driver__title">{{ driver.title }}</h2>
                                 <svg class="driver__logo">
                                     <use xlink:href="/assets/img/sprite.svg#{{ driver.icon }}"></use>
