@@ -41,11 +41,6 @@ community:
       icon: logo-go
       link: https://github.com/zbo14/envoke/blob/master/bigchain/bigchain.go
 
-    - title: Java
-      repo: bigchaindb-java-driver
-      link: https://github.com/mgrand/bigchaindb-java-driver
-      icon: logo-java
-
 tools:
     - title: Crypto-Conditions
       repo: cryptoconditions
@@ -57,4 +52,4 @@ tools:
 
     - title: COALA IP ledger plugin
       repo: pycoalaip-bigchaindb
-      version: v0.0.4
+      version: v0.0.5
