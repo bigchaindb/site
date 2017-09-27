@@ -1,0 +1,44 @@
+.banner--ocean {
+    display: block;
+    box-shadow: none;
+    height: 100%;
+    background: #000;
+    padding-top: $spacer / 2;
+    padding-bottom: $spacer / 2;
+
+    &:hover,
+    &:focus {
+        background: #fff;
+
+        .ocean__title {
+            opacity: 1;
+            color: #000;
+        }
+
+        .ocean__logo {
+            fill: #000;
+        }
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.ocean__title {
+    font-size: .8rem;
+    margin: 0;
+    opacity: .8;
+    color: #fff;
+}
+
+.ocean__logo {
+    fill: #fff;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: $spacer / 4;
+    margin-bottom: -.4rem;
+    display: inline-block;
+}
