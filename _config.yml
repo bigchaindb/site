@@ -3,7 +3,7 @@
 # The Basics
 # --------------------
 name:                   BigchainDB
-description:            'The scalable blockchain database.'
+description:            'The scalable blockchain database powering IPDB.'
 url:                    https://www.bigchaindb.com
 ipdb_api_url:           https://test.ipdb.io
 

@@ -23,9 +23,10 @@ $menu-height-md: 66px;
         height: 100vh;
     }
 
-    .section-title {
+    .hero__title {
         color: #fff;
         font-size: $font-size-h3;
+        margin-bottom: $spacer;
 
         @media ($screen-sm) {
             font-size: $font-size-h2;
@@ -36,6 +37,15 @@ $menu-height-md: 66px;
         }
 
         &:after { display: none; }
+    }
+
+    .hero__subtitle {
+        font-size: $font-size-h4;
+        margin-top: 0;
+
+        @media ($screen-sm) {
+            font-size: $font-size-h3;
+        }
     }
 
     .section-subtitle {
@@ -55,8 +65,8 @@ $menu-height-md: 66px;
 //
 // intro animation
 //
-.hero .section-title,
-.hero .section-description,
+.hero__title,
+.hero__subtitle,
 .hero__action,
 .logo-enterprise {
     .wf-active &,
@@ -66,7 +76,7 @@ $menu-height-md: 66px;
     }
 }
 
-.hero .section-description {
+.hero__subtitle {
     .wf-active &,
     .wf-inactive & {
         animation-delay: .3s;
