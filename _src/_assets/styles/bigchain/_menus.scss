@@ -89,11 +89,9 @@
     box-shadow: none;
     padding: $spacer ($spacer / 4);
     display: inline-block;
-    float: right;
 
     @media ($screen-md) {
         margin-left: $spacer;
-        float: none;
     }
 
     &:hover,
@@ -126,6 +124,16 @@
     border-bottom: 1px solid rgba($brand-main-gray, .5);
     padding-top: ($spacer / 2);
     padding-bottom: ($spacer / 2);
+
+    .grid__col--2 {
+        display: flex;
+        justify-content: space-between;
+
+        @media ($screen-md) {
+            display: block;
+            white-space: nowrap;
+        }
+    }
 
     .menu__logo {
         margin-bottom: ($spacer / 2);
