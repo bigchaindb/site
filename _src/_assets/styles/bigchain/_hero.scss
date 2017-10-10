@@ -175,6 +175,28 @@ $menu-height-md: 66px;
     .release {
         min-width: 44px;
     }
+
+    .icon {
+        margin-right: .1rem;
+    }
+
+    .icon--gitter {
+        animation: gitterPulse 5s ease-out infinite;
+    }
+}
+
+@keyframes gitterPulse {
+    0% {
+        stroke: $brand-main-gray-light;
+    }
+
+    50% {
+        stroke: $brand-main-green;
+    }
+
+    100% {
+        stroke: $brand-main-gray-light;
+    }
 }
 
 .hero__community__label {
