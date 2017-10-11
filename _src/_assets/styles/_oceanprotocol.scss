@@ -1,40 +1,38 @@
-.banner--ocean {
+.oceanprotocol {
     display: block;
     box-shadow: none;
     height: 100%;
-    background: #000;
-    padding-top: $spacer / 2;
-    padding-bottom: $spacer / 2;
+    background: #141414;
+    padding-top: $spacer / 1.5;
+    padding-bottom: $spacer / 1.5;
 
     &:hover,
     &:focus {
-        background: #fff;
+        background: lighten(#141414, 5%);
 
-        .ocean__title {
+        .oceanprotocol__title {
             opacity: 1;
-            color: #000;
-        }
-
-        .ocean__logo {
-            fill: #000;
         }
     }
 
     .row {
         display: flex;
         align-items: center;
+        justify-content: center;
         height: 100%;
     }
 }
 
-.ocean__title {
-    font-size: .8rem;
+h1.oceanprotocol__title {
+    font-size: .85rem;
     margin: 0;
-    opacity: .8;
+    opacity: .7;
     color: #fff;
+    font-weight: $font-weight-bold;
+    transition: .2s ease-out;
 }
 
-.ocean__logo {
+.oceanprotocol__logo {
     fill: #fff;
     width: 1.2rem;
     height: 1.2rem;
