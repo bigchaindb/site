@@ -2,140 +2,70 @@
 layout: page
 
 title: Features
-description: 'Rather than trying to scale up blockchain technology, BigchainDB starts with a big data distributed database and then adds blockchain characteristics - decentralized control, immutability and the transfer of digital assets.'
+description: "Rather than trying to scale up blockchain technology, BigchainDB starts with a big data distributed database and then adds blockchain characteristics - decentralized control, immutability and the transfer of digital assets."
+
+features:
+     - title: "Native Support of Multiassets"
+       text: "With no native currency on BigchainDB, any asset, token or currency can be issued."
+       icon: "icon-diamond"
+     - title: "Customizable"
+       text: "Design your own private network with custom assets, transactions, permissions and transparency."
+       icon: "icon-settings"
+     - title: "Rich Permissioning"
+       text: "[Set permissions at transaction level](https://docs.bigchaindb.com/en/latest/permissions.html) to ensure a clear separation of duties and enforce selective access."
+       icon: "icon-group"
+     - title: "Federation Consensus Model"
+       text: "Decentralized control via a federation of voting nodes makes for a super-peer P2P network."
+       icon: "icon-diamond"
+     - title: "Open Source"
+       text: "[Open sourced](https://github.com/bigchaindb) to the community so that everyone can use it and build their own applications on top of it."
+       icon: "icon-tree"
+     - title: "Public or Private"
+       text: "Roll out your own public or private networks for specific industry use cases."
+       icon: "icon-lock"
+     - title: "Query"
+       text: "Leverage efficient big data query capabilities out of the box."
+       icon: "icon-search"
+     - title: "Petabytes Capacity"
+       text: "Store arbitrary asset and transaction metadata right in BigchainDB, not elsewhere."
+       icon: "icon-servers"
+       comingsoon: true
+     - title: "Linear Scaling"
+       text: "The more nodes added, the higher the throughput and the higher the storage capacity."
+       icon: "icon-scaling"
+       comingsoon: true
 
 quotes: set2
-
 js: page-features.min.js
 ---
 
 <section class="section section-features">
     <div class="row">
         <header class="section-header">
-            <p class="section-description">Rather than trying to scale up blockchain technology, BigchainDB starts with a big data distributed database and then adds blockchain characteristics - decentralized control, immutability and the transfer of digital assets.</p>
+            <p class="section-description">{{ page.description }}</p>
         </header>
     </div>
     <div class="row row--wide">
         <div class="grid grid--full grid-small--half grid--gutters grid--top">
+
+            {% for feature in page.features %}
             <div class="grid__col">
                 <div class="feature">
                     <svg class="feature__icon icon">
-                        <use xlink:href="/assets/img/sprite.svg#icon-graph"></use>
+                        <use xlink:href="/assets/img/sprite.svg#{{ feature.icon }}"></use>
                     </svg>
                     <div class="feature__detail">
-                        <h1 class="feature__title">Towards One Million Writes per Second</h1>
-                        <p class="feature__text">Each write is recorded on the blockchain database without the need for Merkle Trees or sidechains. Details in our <a href="/whitepaper/">whitepaper</a>, section 8.</p>
+                        <h1 class="feature__title">{{ feature.title }} {% if feature.comingsoon %}<span class="feature__title__comingsoon">Coming soon</span>{% endif %}</h1>
+                        <div class="feature__text">{{ feature.text | markdownify }}</div>
                     </div>
                 </div>
             </div>
-            <div class="grid__col">
-                <div class="feature">
-                    <svg class="feature__icon icon">
-                        <use xlink:href="/assets/img/sprite.svg#icon-diamond"></use>
-                    </svg>
-                    <div class="feature__detail">
-                        <h1 class="feature__title">Native Support of Multiassets</h1>
-                        <p class="feature__text">With no native currency on BigchainDB, any asset, token or currency can be issued.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid__col">
-                <div class="feature">
-                    <svg class="feature__icon icon">
-                        <use xlink:href="/assets/img/sprite.svg#icon-settings"></use>
-                    </svg>
-                    <div class="feature__detail">
-                        <h1 class="feature__title">Customizable</h1>
-                        <p class="feature__text">Design your own private network with custom assets, transactions, permissions and transparency.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid__col">
-                <div class="feature">
-                    <svg class="feature__icon icon">
-                        <use xlink:href="/assets/img/sprite.svg#icon-group"></use>
-                    </svg>
-                    <div class="feature__detail">
-                        <h1 class="feature__title">Rich Permissioning</h1>
-                        <p class="feature__text">Set permissions at transaction level to ensure a clear separation of duties and enforce selective access.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid__col">
-                <div class="feature">
-                    <svg class="feature__icon icon">
-                        <use xlink:href="/assets/img/sprite.svg#icon-nodes"></use>
-                    </svg>
-                    <div class="feature__detail">
-                        <h1 class="feature__title">Federation Consensus Model</h1>
-                        <p class="feature__text">Decentralized control via a federation of voting nodes makes for a super-peer P2P network.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid__col">
-                <div class="feature">
-                    <svg class="feature__icon icon">
-                        <use xlink:href="/assets/img/sprite.svg#icon-tree"></use>
-                    </svg>
-                    <div class="feature__detail">
-                        <h1 class="feature__title">Open Source</h1>
-                        <p class="feature__text"><a href="https://github.com/{{ site.github.org }}">Open sourced</a> to the community so that everyone can use it and build their own applications on top of it.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid__col">
-                <div class="feature">
-                    <svg class="feature__icon icon">
-                        <use xlink:href="/assets/img/sprite.svg#icon-lock"></use>
-                    </svg>
-                    <div class="feature__detail">
-                        <h1 class="feature__title">Public or Private</h1>
-                        <p class="feature__text">Roll out your own public or private networks for specific industry use cases.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid__col">
-                <div class="feature">
-                    <svg class="feature__icon icon">
-                        <use xlink:href="/assets/img/sprite.svg#icon-servers"></use>
-                    </svg>
-                    <div class="feature__detail">
-                        <h1 class="feature__title">Petabytes Capacity <span class="feature__title__comingsoon">Coming soon</span></h1>
-                        <p class="feature__text">Load up hashes, metadata and files onto the BigchainDB so every asset can reside on the blockchain database.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid__col">
-                <div class="feature">
-                    <svg class="feature__icon icon">
-                        <use xlink:href="/assets/img/sprite.svg#icon-search"></use>
-                    </svg>
-                    <div class="feature__detail">
-                        <h1 class="feature__title">Query</h1>
-                        <p class="feature__text">Leverage efficient big data query capabilities out of the box.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid__col">
-                <div class="feature">
-                    <svg class="feature__icon icon">
-                        <use xlink:href="/assets/img/sprite.svg#icon-scaling"></use>
-                    </svg>
-                    <div class="feature__detail">
-                        <h1 class="feature__title">Linear Scaling <span class="feature__title__comingsoon">Coming soon</span></h1>
-                        <p class="feature__text">The more nodes added, the higher the throughput and the higher the storage capacity.</p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
 
         </div>
 
         <p class="text-center features-roadmap" >
             <a href="https://github.com/bigchaindb/org/blob/master/ROADMAP.md" class="btn btn-primary">Our Roadmap</a>
-        </p>
-
-        <p class="text-center">
-            For more insight, read our <a href="/whitepaper/">whitepaper</a>.
         </p>
     </div>
 
