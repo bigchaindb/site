@@ -32,7 +32,7 @@
     "normalize-css": "^2.3.1",
     "normalize-opentype.css": "^0.2.4",
     "parsleyjs": "^2.7.2",
-    "select2": "^4.0.3",
+    "select2": "^4.0.5",
     "smooth-scroll": "^12.1.3",
     "svg4everybody": "^2.1.9",
     "textarea-autogrow": "^1.0.0",
@@ -40,7 +40,7 @@
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
-    "acorn": "^5.1.1",
+    "acorn": "^5.2.1",
     "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.18.13",
@@ -58,7 +58,7 @@
     "gulp-header": "^1.8.9",
     "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.3.0",
+    "gulp-imagemin": "^3.4.0",
     "gulp-include": "^2.0.2",
     "gulp-load-plugins": "^1.5.0",
     "gulp-rename": "^1.2.2",
@@ -73,10 +73,10 @@
     "gulp-zip": "^4.0.0",
     "js-yaml": "^3.9.1",
     "request": "^2.81.0",
-    "stylelint": "^8.0.0",
+    "stylelint": "^8.2.0",
     "stylelint-config-bigchaindb": "^1.1.3",
     "stylelint-config-standard": "^17.0.0",
-    "uglify-es": "^3.0.28"
+    "uglify-es": "^3.1.6"
   },
   "engines": {
     "node": ">=7.0.0"
