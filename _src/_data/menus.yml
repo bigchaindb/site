@@ -6,8 +6,8 @@ main:
       url: "/features/"
     - title: Use Cases
       url: "/usecases/"
-    - title: Enterprise
-      url: "/enterprise/"
+    - title: Guides
+      url: "/guides/"
     - title: Docs
       url: https://docs.bigchaindb.com/
 
@@ -16,10 +16,12 @@ secondary:
       url: "/faq/"
     - title: About
       url: "/about/"
-    - title: Whitepaper
-      url: "/whitepaper/"
     - title: Blog
       url: https://blog.bigchaindb.com
+    - title: Enterprise
+      url: "/enterprise/"
+    - title: Whitepaper
+      url: "/whitepaper/"
     - title: Contact
       url: "/contact/"
 

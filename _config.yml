@@ -90,6 +90,9 @@ collections:
     partners:
         output: true
         permalink: /:collection/:path/
+    guides:
+        output: true
+        permalink: /:collection/:path/
 
 
 # Plugins

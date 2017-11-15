@@ -1,0 +1,16 @@
+---
+layout: page
+
+title: Guides
+tagline: Get up to speed with BigchainDB & IPDB
+---
+
+{% for guide in site.guides %}
+
+<section class="section section--guide">
+    <div class="row">
+        <a href="{{ guide.url }}">{{ guide.title }}</a>
+    </div>
+</section>
+
+{% endfor %}
