@@ -7,6 +7,9 @@ description:            'The scalable blockchain database powering IPDB.'
 url:                    https://www.bigchaindb.com
 ipdb_api_url:           https://test.ipdb.io
 
+# set to `true` to make hiring link appear in main menu
+hiring:                 false
+
 email:
     contact:            contact@bigchaindb.com
     contact_cc:         "kamal@bigchaindb.com,ricardo@bigchaindb.com"
