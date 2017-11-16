@@ -1,0 +1,51 @@
+.content--guide {
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-weight: $font-weight-normal;
+    }
+
+    h1 {
+        font-size: $font-size-h2;
+    }
+
+    h2 {
+        font-size: $font-size-h3;
+    }
+
+    h3 {
+        font-size: $font-size-h4;
+    }
+}
+
+.guide {
+    height: 100%;
+
+    a {
+        display: block;
+        box-shadow: none;
+        background: $brand-main-blue-dark;
+        padding: $spacer * 1.5 $spacer * 2;
+        height: 100%;
+        border-radius: $border-radius;
+
+        &:hover,
+        &:focus {
+            background: $brand-primary;
+
+            * {
+                color: $brand-main-blue-dark;
+            }
+        }
+    }
+}
+
+.guide__title,
+h1.guide__title {
+    font-size: $font-size-h4;
+    font-weight: $font-weight-normal;
+    margin-bottom: $spacer;
+    margin-top: 0;
+    color: $brand-primary;
+}

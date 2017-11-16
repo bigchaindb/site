@@ -51,7 +51,7 @@ drivers:
 # ----------------------------
 
 docs:
-    title: "Documentation"
+    title: "Documentation & Examples"
     description: "Dive into our documentation with tutorials, examples, terminology, references and more."
     button: "See All Documentation"
     categories:

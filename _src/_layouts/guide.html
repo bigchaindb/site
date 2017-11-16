@@ -1,0 +1,52 @@
+---
+layout: base
+---
+
+<header role="banner" class="header" {% if page.header %}style="background-image:url('/assets/img/{{ page.header }}')" {%
+    endif %}>
+
+    {% include menu-main.html %}
+
+    <div class="row">
+        <div class="header__content">
+            <h1 class="header__title">{{ page.title }}</h1>
+        </div>
+    </div>
+</header>
+
+<section role="main" class="content content--page">
+
+    <div class="row content--page--markdown content--guide">
+        {% if page.description %}
+            <header class="section-header">
+                <p class="section-description">{{ page.description }}</p>
+            </header>
+        {% endif %}
+
+        {{ content }}
+    </div>
+</section>
+
+<section class="section">
+    <div class="row">
+        <header class="section-header">
+            <h1 class="section-title">More guides</h1>
+        </header>
+    </div>
+    <div class="row">
+        <div class="grid grid--full grid-small--half grid--gutters">
+            {% for guide in site.guides | limit: 4 %}
+            <div class="grid__col">
+                <article class="guide">
+                    <a href="{{ guide.url }}">
+                        <h1 class="guide__title">{{ guide.title }}</h1>
+                    </a>
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row text-center">
+        <a href="/guides/">All guides</a>
+    </div>
+</section>

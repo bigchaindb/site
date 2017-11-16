@@ -2,15 +2,26 @@
 layout: page
 
 title: Guides
-tagline: Get up to speed with BigchainDB & IPDB
 ---
 
-{% for guide in site.guides %}
-
-<section class="section section--guide">
+<section class="section section--guides">
     <div class="row">
-        <a href="{{ guide.url }}">{{ guide.title }}</a>
+        <header class="section-header">
+            <p class="section-description">These guides explain you how to get started and build apps with BigchainDB/IPDB</p>
+        </header>
+    </div>
+    <div class="row row--wide">
+        <div class="grid grid--full grid-small--half grid--gutters">
+            {% for guide in site.guides %}
+                <div class="grid__col">
+                    <article class="guide">
+                        <a href="{{ guide.url }}">
+                            <h1 class="guide__title">{{ guide.title }}</h1>
+                            <p class="guide__description">{{ guide.description }}</p>
+                        </a>
+                    </article>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </section>
-
-{% endfor %}
