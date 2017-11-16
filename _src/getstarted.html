@@ -290,6 +290,15 @@ conn.postTransaction(txSigned)
     </div>
     <div class="row row--wide">
         <div class="grid grid--full grid-small--fit grid--gutters">
+            
+                <div class="grid__col">
+                    <h2 class="docs__title">Guides</h2>
+                    <ul class="docs__list">
+                        {% for guide in site.guides %}
+                        <li><a href="/guides/{{ guide.title | slugify }}/">{{ guide.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
 
             {% for category in content.docs.categories %}
 
@@ -308,7 +317,8 @@ conn.postTransaction(txSigned)
     </div>
     <div class="row row--wide text-center">
         <div class="docs__actions">
-            <a class="btn btn-secondary" href="https://docs.bigchaindb.com">{{ content.docs.button }}</a>
+            <a class="btn btn-secondary" href="/guides">{{ content.docs.button_guides }}</a>
+            <a class="btn btn-secondary" href="https://docs.bigchaindb.com">{{ content.docs.button_documentation }}</a>
         </div>
     </div>
 </section>
