@@ -1,21 +1,32 @@
 .content--guide {
-    h1,
-    h2,
-    h3,
-    h4 {
-        font-weight: $font-weight-normal;
-    }
+    .content--page--markdown {
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: $font-weight-normal;
+        }
 
-    h1 {
-        font-size: $font-size-h2;
-    }
+        h2,
+        h3,
+        h4 {
+            text-align: left;
+            border: 0;
+            padding: 0;
+        }
 
-    h2 {
-        font-size: $font-size-h3;
-    }
+        h1 {
+            font-size: $font-size-h2;
+        }
 
-    h3 {
-        font-size: $font-size-h4;
+        h2 {
+            font-size: $font-size-h3;
+            margin-left: -1.25rem;
+        }
+
+        h3 {
+            font-size: $font-size-h4;
+        }
     }
 }
 

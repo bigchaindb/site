@@ -24,7 +24,6 @@ Important: Every concept will contain links to the tutorials, where this concept
 
 # Identity
 
-3.1.1 Description and definition
 What is a user in BDB? (public and private key pair)
 
 The first and most basic thing to understand in BigchainDB and Blockchain in general, is how a user is represented. While in traditional applications, a user is mapped as a username and a corresponding password, in BigchainDB, identity is represented as a combination of a public key (username) and private key (password).
@@ -38,7 +37,7 @@ Explain, that we don’t offer solutions for private/public key storage
 
 One of the main differences between private/public keys and usernames/passwords is that private keys are really only held by one user. There is no functionality that allows you to retrieve your private key, in case you lose it. Therefore, private keys need to be stored very safely. There is an entire industry focusing on providing solutions for safe storage of private keys. BigchainDB doesn’t offer a specific solution. It is the responsibility of the key holder to store it safely. A list of providers of safe key storage can be found here (insert link).
 
-Encrypting vs. Signing :
+## Encrypting vs. Signing
 
 When encrypting, you use their public key to write message and they use their private key to read it. Encryption helps ensure to protect sensitive data and preserve confidentiality and privacy
 
@@ -47,17 +46,18 @@ When signing, you use your private key to write message's signature, and they us
 Include Decentralized Identify specification => tbd on wednesday
 DIF will work on a broad array of identity initiatives, ranging from a system to move identity away from centralized actors and provide decentralized access to services, to integrating blockchain technology with biometrics, to a utility-like service that links business processes with blockchain-based timestamps as a way of proving the identity and actions of users across organizations
 
-3.1.2 Code example
+## Code example
+
 Creation of a public/private key pair in JS (and maybe Py)
 Show, how to generate key pairs from a seed
 In Js from a seedPhrase:
+
+```js
 const keypair = new BigchainDB.Ed25519Keypair(bip39.mnemonicToSeed(seedPhrase).slice(0,32))
+```
 
-Python :
+# Assets
 
-JS:
-3.2 Assets
-3.2.1 Description and definition
 What is an asset? => Link to docs for details (data model etc.)
 
 An asset can represent any physical or digital object from the real world. It can be a physical object like a car or a house or also a digital object like a customer order or an air mile. An asset can have one or multiple owners, but it can also be its own owner - think of e.g. an autonomous car or an IoT sensor that does transactions automatically. More information about the asset data model can be found here and here.
@@ -65,15 +65,19 @@ An asset can represent any physical or digital object from the real world. It ca
 How to move from a process to an asset-driven model? How to think with assets?
 What does an asset look like? (data model, graphical illustration)/How is an asset used in an application
 
+```js
 const assetdata = {
         'bicycle': {
                 'serial_number': 'abcd1234',
                 'manufacturer': 'Bicycle Inc.',
         }
 }
+```
 
 How to use the asset and metadata field in an application:
+
 Explain difference between mutable and immutable elements of assets (mutable field and metadata)
+
 BigchainDB is an immutable database. It means that every asset you create will be there forever. An asset in BigchainDB contains two fields, the “asset” and the “metadata”. The asset field (mandatory) is something that you can never modify once you create it while the metadata field (optional) you will be able to modify it.
 There are two possibilities to update an asset:
 Make a transaction, so the metadata field can be updated.
@@ -85,32 +89,56 @@ Schema
 Timestamp
 Values
 
-What types of assets exist?
+## What types of assets exist?
 
 As already mentioned several times, assets can represent any types of object. This implies that there are different “models” of what an asset can represent.
-an asset as a claim (simple create with a message)
+
+### an asset as a claim (simple create with a message)
+
 In the most traditional and simple case, an asset could represent an ownership claim of a piece of art, a research paper or a Smart Contract. In this case, an asset is a digital certificate that user XYZ owns asset XYZ.
-an asset as a token (divisible assets - create your token launch on bigchainDB)
+
+### an asset as a token (divisible assets - create your token launch on bigchainDB)
+
 Assets can also be divisible. This means that one asset can consist of different units. An asset can be divisible as many times as you wish.
 A token distribution event is a good example of a divisible asset in BigchainDB. You can do your own token distribution event on BigchainDB by issuing a divisible asset with a fixed supply of associated tokens.
-an asset as a versioned document (CRAB)
+
+### an asset as a versioned document (CRAB)
+
 An asset can also be a versioned document with the version state in the metadata field. The version of this document can be updated on a continuous base. Every time there is a new version of the document, it could be reflected in the metadata. The update would be a transfer transaction to the public key of the asset, where the transfer transaction contains the information about the version update in the metadata. For further information refer to (https://blog.bigchaindb.com/crab-create-retrieve-append-burn-b9f6d111f460)
-an asset as a time series (IOT devices that always append their latest value(s) as a TRANSFER, the current state is the unspent)
+
+### an asset as a time series (IOT devices that always append their latest value(s) as a TRANSFER, the current state is the unspent)
+
 An asset can also represent a time series of data. For instance, an IoT sensor records its own data. The IoT sensor is the asset and every submission of its data (e.g. temperature) is represented as a transfer transaction, where the metadata is updated with the latest temperature that the IoT sensor measured.
-an asset as finite state machine: each state transition is a transfer
+
+### an asset as finite state machine: each state transition is a transfer
+
 An asset can also represent a state machine where the state is represented in the metadata. Each time the machine changes it state, there is a transaction (possibility to listen to it with the websocket) changing the metadata to the state.
-An asset as a state (e.g. in smart contracts)
+
+### An asset as a state (e.g. in smart contracts)
+
 An asset can represent the functionality or security of a smart contract. Every time the smart contracts changes, there is a transaction reflecting the new functionalities and securities of the updated smart contract. (Ref to Jolocom project)
-an asset as a supply chain tracker of an object
+
+### an asset as a supply chain tracker of an object
+
 Every single product can have a clear record of its history and verifiable authenticity.
-an asset as a permission (RBAC)
+
+### an asset as a permission (RBAC)
+
 Assets could be also: roles, users, messages, (and anything which can have multiple instances in a scenario — vehicles, reports, and so on). (https://blog.bigchaindb.com/role-based-access-control-for-bigchaindb-assets-b7cada491997)
-an asset as an access control token (eg API's check BDB if there is a token assigned to your pubkey)
+
+### an asset as an access control token (eg API's check BDB if there is a token assigned to your pubkey)
+
 An
-an asset as an information channel (like the hashtag "#" on twitter - requires "link" - )
+
+### an asset as an information channel (like the hashtag "#" on twitter - requires "link" - )
+
 An
-3.2.2 Code example
+
+## Code example
+
 Creation of an asset using JS (and maybe Py)
+
+```js
 const txCreateAliceSimple = driver.Transaction.makeCreateTransaction(
         assetdata,
         metadata,
@@ -121,8 +149,11 @@ const txCreateAliceSimple = driver.Transaction.makeCreateTransaction(
         ],
         alice.publicKey
 )
+```
 
 Include other drivers: cli, jave, ORM, graphql
+
+```js
 bdbOrm.myModel
     .create({
         keypair: aliceKeypair,
@@ -139,10 +170,11 @@ bdbOrm.myModel
         */
         console.log(asset.id)
     })
-
+```
 
 
 Things to remark:
+
 - The number of inputs = outputs in transaction
 - Outputs as locks and inputs as keys that unlock them
 - In a transaction you just work with one and just one asset. This will have to be changed in the future for Ocean, as several assets are needed in a transaction.
@@ -151,25 +183,29 @@ Things to remark:
 
 # Output
 
-3.3.1 Description and definition
 What is an output? => Link to docs for details (data model etc.)
 Frame functionally to show logic: an output describes conditions to acquire ownership of asset, incl. Some examples
+
 What are the components of an output (conditions, amount etc.)?
 
-3.3.2 Code example
+## Code example
+
 Representation of an output in JS (and maybe Py)
 
 # Input
 
-3.4.1 Description and definition
 What is an input? => Lused ink to docs for details (data model etc.)
+
 How to “spend” an output:
-Either by transferring ownership right
-Or, by updating its metadata
+
+- Either by transferring ownership right
+- Or, by updating its metadata
+
 What does an input look like? (data model, graphical illustration)
 What are the components of an input (owners before, fulfillment etc.)?
 
-3.4.2 Code example
+## Code example
+
 Representation of an input in JS (and maybe Py)
 
 # Transactions
@@ -177,21 +213,27 @@ Representation of an input in JS (and maybe Py)
 What are transactions in BigchainDB?
 What types of transactions are there in BigchainDB
 Show big picture for application developers: convert business processes to asset-centric flow with creates, transfers, links
-3.5.1 CREATE transaction
-3.5.1.2 Description and definition
+
+## CREATE transaction
+
 What is a create transaction?
+
 Operations of transactions (what is a create transaction used for?)
 What does a create transaction look like? (data model, graphical illustration)
 What are the components of a create transaction (previous owner etc.)?
 
-3.5.1.2 Code example
+### Code example
+
 Representation of a create transaction in JS (and maybe Py)
-3.5.2 TRANSFER transaction
-3.5.2.1 Description and definition
+
+## TRANSFER transaction
+
 What is a transfer transaction?
+
 Operations of transactions (what is a transfer transaction used for?)
 What does a transfer transaction look like? (data model, graphical illustration)
 What are the components of a transfer transaction (Asset ID etc.)?
 
-3.5.1.2 Code example
+### Code example
+
 Representation of a create transaction in JS (and maybe Py)
