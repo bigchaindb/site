@@ -1,5 +1,5 @@
 ---
-layout: guide
+layout: guide 
 
 title: Tutorial&#58; Car Telemetry App 
 description: Build your own car telemetry application
