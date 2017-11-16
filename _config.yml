@@ -93,10 +93,6 @@ collections:
     guides:
         output: true
         permalink: /:collection/:path/
-    tutorials:
-        output: true
-        permalink: /:collection/:path/
-
 
 # Plugins
 # --------------------
