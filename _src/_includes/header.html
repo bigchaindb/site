@@ -1,5 +1,11 @@
-<header role="banner" class="header" {% if page.header %}style="background-image:url('/assets/img/{{ page.header }}')" {%
-    endif %}>
+<header role="banner" class="header"
+    {% if page.header %}
+        {% if page.path contains '_guides' %}
+        style="background-image:url('../{{ page.header }}')"
+        {% else %}
+        style="background-image:url('/assets/img/{{ page.header }}')"
+        {% endif %}
+    {% endif %}>
 
     {% include menu-main.html %}
 

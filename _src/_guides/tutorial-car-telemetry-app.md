@@ -3,7 +3,7 @@ layout: guide
 
 title: "Tutorial: Car Telemetry App"
 tagline: Learn how to build telemetry apps to track specific dynamic parameters of an asset.
-header: photo4.jpg
+header: header-car.jpg
 ---
 
 You will learn:

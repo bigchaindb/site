@@ -24,7 +24,7 @@ layout: base
                 {% unless page.id == guide.id %}
                     <div class="grid__col">
                         <article class="guide">
-                            <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('/assets/img/{{ guide.header }}')" {% endif %}>
+                            <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('../{{ guide.header }}')" {% endif %}>
                                 <h1 class="guide__title">{{ guide.title }}</h1>
                             </a>
                         </article>

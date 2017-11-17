@@ -11,7 +11,7 @@ tagline: "These guides explain you how to get started and build apps with Bigcha
             {% for guide in site.guides %}
                 <div class="grid__col">
                     <article class="guide">
-                        <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('/assets/img/{{ guide.header }}')" {% endif %}>
+                        <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('./{{ guide.header }}')" {% endif %}>
                             <h1 class="guide__title">{{ guide.title }}</h1>
                             <p class="guide__tagline">{{ guide.tagline }}</p>
                         </a>
