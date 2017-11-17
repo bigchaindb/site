@@ -1,20 +1,19 @@
 ---
 layout: guide
 
-title: Tutorial&#58; Car Telemetry App
-description: Build your own car telemetry application
+title: "Tutorial: Car Telemetry App"
+description: Learn how to build telemetry apps to track specific dynamic parameters of an asset.
 image: image.jpg
 ---
 
 You will learn:
 
 - How BDB can be used to build telemetry apps to track specific dynamic parameters of an asset
+- How to make a `CREATE` transaction to create a car. Assets as representation of real objects.
+- How asset metadata is updated. In BDB is possible to use `TRANSFER` transactions to change the state of an asset, in this case the mileage of a car.
 
-- How to make a CREATE transaction to create a car. Assets as representation of real objects.
+# Connect to IPDB
 
-- How asset metadata is updated. In BDB is possible to use TRANSFER transactions to change the state of an asset, in this case the mileage of a car.
-
-## Connect to IPDB
 ```js
 const API_PATH = 'https://test.ipdb.io/api/v1/'
 const conn = new BigchainDB.Connection(API_PATH, {
@@ -24,21 +23,21 @@ const conn = new BigchainDB.Connection(API_PATH, {
 ```
 
 
-## Create a key pair for Alice
+# Create a key pair for Alice
+
 Alice will be the owner of the car, and she will be the only one able to create the asset and update the mileage field.
+
 We can generate a keypair from a seed phrase, so we will just need to remember this seed phrase.
 
 ```js
 const alice = new BigchainDB.Ed25519Keypair(bip39.mnemonicToSeed('seedPhrase').slice(0,32))
 ```
 
+# Create and post the asset
 
-
-## Create and post the asset
 An asset in our case will represent an object in the real life. But it can represent a claim, a token, a version document, a finite state machine, etc.
+
 The asset will live in BigchainDB forever and there is not possibility to delete it.
-
-
 
 First we need to define the asset field that represents the car. It has a JSON format
 
@@ -89,13 +88,14 @@ function createCar() {
 }
 ```
 
-carOwner.publicKey can be considered as the Input for the transaction. When you sign a transaction in BigchainDB you have the rights for the next TRANSFER transactions that could be done with this asset. You always sign with a private key that is derivative from the seed phrase.
+`carOwner.publicKey` can be considered as the Input for the transaction. When you sign a transaction in BigchainDB you have the rights for the next TRANSFER transactions that could be done with this asset. You always sign with a private key that is derivative from the seed phrase.
+
 With the pollStatusAndFetchTransaction we check the status of the transaction every 0.5 seconds.
 
+Once a transaction ends up in a decided-valid block, that's it. There's no changing it, no deleting it. But you can use `TRANSFER` transactions (with their arbitrary metadata) to store whatever you like, including information that could be interpreted as changing an asset (if that's how you want it to be interpreted).
 
-
-Once a transaction ends up in a decided-valid block, that's it. There's no changing it, no deleting it. But you can use TRANSFER transactions (with their arbitrary metadata) to store whatever you like, including information that could be interpreted as changing an asset (if that's how you want it to be interpreted).
 We will use this feature to trace the mileage of the car.
+
 Before creating the transfer transaction, we search for the last transaction with the asset id, as we will update this last transaction.
 
 ```js
@@ -118,7 +118,9 @@ conn.listTransactions(assetId)
 
 })
 ```
-The listTransactions method of BigchainDB retrieves all of the create and transfer transaction with the asset id. Then we check for the inputs that have not been spent. In this tutorial we are just working with one input and one ouput for each transaction, so there should be just one input that has not been spent yet, the one belonging to the last transaction.
+
+The `listTransactions` method of BigchainDB retrieves all of the create and transfer transaction with the asset id. Then we check for the inputs that have not been spent. In this tutorial we are just working with one input and one ouput for each transaction, so there should be just one input that has not been spent yet, the one belonging to the last transaction.
+
 We now create the transfer transaction:
 
 ```js
