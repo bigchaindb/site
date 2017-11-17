@@ -39,20 +39,26 @@
     height: 100%;
 
     a {
+        @include color-overlay;
+        background-size: cover;
+        background-position: center;
         display: block;
         box-shadow: none;
-        background: $brand-main-blue-dark;
+        background-color: $brand-main-blue-dark;
         padding: $spacer * 2;
         height: 100%;
         border-radius: $border-radius;
 
+        &:before {
+            opacity: .9;
+        }
+
         &:hover,
         &:focus {
-            background: $brand-primary;
-
-            * {
-                color: $brand-main-blue-dark;
-            }
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 2px 5px rgba($brand-main-blue-dark, .2);
+            transform: translateY(-1px);
         }
     }
 
@@ -60,6 +66,12 @@
     .guide__title:only-child {
         margin-bottom: 0;
     }
+}
+
+.guide__title,
+.guide__tagline {
+    position: relative;
+    z-index: 1;
 }
 
 .guide__title,
@@ -110,4 +122,11 @@ li.toc-h2 {
 
 li.toc-h3 {
     display: none;
+}
+
+.header--guide {
+    .header__content {
+        padding-top: ($spacer * 5);
+        padding-bottom: ($spacer * 5);
+    }
 }

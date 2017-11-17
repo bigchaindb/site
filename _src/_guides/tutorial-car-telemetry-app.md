@@ -2,15 +2,15 @@
 layout: guide
 
 title: "Tutorial: Car Telemetry App"
-description: Learn how to build telemetry apps to track specific dynamic parameters of an asset.
-image: image.jpg
+tagline: Learn how to build telemetry apps to track specific dynamic parameters of an asset.
+header: photo4.jpg
 ---
 
 You will learn:
 
 - How BDB can be used to build telemetry apps to track specific dynamic parameters of an asset
 - How to make a `CREATE` transaction to create a car. Assets as representation of real objects.
-- How asset metadata is updated. In BDB is possible to use `TRANSFER` transactions to change the state of an asset, in this case the mileage of a car.
+- How asset metadata is updated. In BigchainDB it is possible to use `TRANSFER` transactions to change the state of an asset, in this case the mileage of a car.
 
 # Connect to IPDB
 
@@ -42,7 +42,7 @@ The asset will live in BigchainDB forever and there is not possibility to delete
 First we need to define the asset field that represents the car. It has a JSON format
 
 ```js
-const vehicle ={
+const vehicle = {
   value: '6sd8f68sd67',
   power: {
     engine: '2.5',

@@ -10,9 +10,9 @@
             {% for guide in site.guides limit: 4 %}
             <div class="grid__col">
                 <article class="guide">
-                    <a href="{{ guide.url }}">
+                    <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('/assets/img/{{ guide.header }}')" {% endif %}>
                         <h1 class="guide__title">{{ guide.title }}</h1>
-                        <p class="guide__description">{{ guide.description }}</p>
+                        <p class="guide__tagline">{{ guide.tagline }}</p>
                     </a>
                 </article>
             </div>

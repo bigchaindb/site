@@ -21,7 +21,7 @@
 }
 
 .article__title {
-    @extend .h6, .transition;
+    @extend .h5, .transition;
     margin: 0;
     color: #fff;
     position: relative;
