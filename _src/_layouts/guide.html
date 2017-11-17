@@ -23,7 +23,7 @@ layout: base
             </header>
         {% endif %}
 
-        {{ content }}
+        {{ content | toc }}
     </div>
 </section>
 
@@ -47,6 +47,6 @@ layout: base
         </div>
     </div>
     <div class="row text-center">
-        <a href="/guides/">All guides</a>
+        <a class="btn btn-secondary" href="/guides/">All guides</a>
     </div>
 </section>

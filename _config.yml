@@ -94,11 +94,19 @@ collections:
         output: true
         permalink: /:collection/:path/
 
+defaults:
+    - scope:
+        path: ""
+        type: guides
+      values:
+        toc: true
+
 # Plugins
 # --------------------
 plugins:
     - jekyll-sitemap
     - jekyll-redirect-from
+    - jekyll-toc
 
 
 jekyll_get:

@@ -7,27 +7,27 @@
     li { padding-left: 0; }
 
     &:before {
-        @extend .h1;
-        content: 'Table Of Contents';
+        @extend .h5;
+        content: 'Contents';
         display: block;
-        border-bottom: 1px solid $brand-main-blue-light;
-        padding-bottom: $spacer;
-        margin-bottom: ($spacer * 2);
-        text-align: center;
+        margin-top: 0;
     }
 
     li,
-    ol { margin: 0; }
+    ol,
+    ul { margin: 0; }
 
     li {
         display: block;
+    }
 
+    > li {
         // custom numbers
         &:before {
-            content: counters(item, '.') ' ';
+            content: counters(item, '.') '. ';
             counter-increment: item;
-            margin-right: $spacer;
-            color: $brand-main-gray;
+            margin-right: $spacer / 4;
+            color: $brand-main-gray-light;
         }
     }
 }
@@ -35,7 +35,8 @@
 // output by Kramdown
 
 /* stylelint-disable selector-no-id  */
-#markdown-toc {
+#markdown-toc,
+.section-nav {
     @extend .toc;
 }
 

@@ -65,3 +65,49 @@ h1.guide__title {
     margin-top: 0;
     color: $brand-primary;
 }
+
+//
+// TOC
+//
+.section-nav {
+    background: darken($brand-main-gray, 2%);
+    margin-bottom: $spacer * 2;
+    padding: $spacer;
+    border-radius: $border-radius;
+}
+
+.toc-entry {
+
+}
+
+li.toc-h1 {
+    margin-bottom: $spacer / 2;
+
+    // custom numbers
+    &:before {
+        font-size: $font-size-h5;
+        opacity: .5;
+    }
+
+    a {
+        @extend .h5;
+        margin: 0;
+        box-shadow: none;
+        color: $brand-primary;
+    }
+
+    ul {
+        padding-left: $spacer * 3;
+    }
+}
+
+li.toc-h2 {
+    a {
+        font-size: $font-size-base;
+        color: $text-color;
+    }
+}
+
+li.toc-h3 {
+    display: none;
+}

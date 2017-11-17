@@ -64,31 +64,7 @@ intro:
     </div>
 </section>
 
-<section class="section section--guides">
-    <div class="row">
-        <header class="section-header">
-            <h1 class="section-title">Guides</h1>
-            <p class="section-description">Complete these guides to learn about how to create apps in BigchainDB.</p>
-        </header>
-    </div>
-    <div class="row row--wide">
-        <div class="grid grid--full grid-small--half grid--gutters">
-            {% for guide in site.guides limit: 4 %}
-            <div class="grid__col">
-                <article class="guide">
-                    <a href="{{ guide.url }}">
-                        <h1 class="guide__title">{{ guide.title }}</h1>
-                        <p class="guide__description">{{ guide.description }}</p>
-                    </a>
-                </article>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-    <div class="row text-center">
-        <a class="btn btn-secondary" href="/guides/">All guides</a>
-    </div>
-</section>
+{% include sections/section-guides.html %}
 
 {% include sections/section-partners.html %}
 
