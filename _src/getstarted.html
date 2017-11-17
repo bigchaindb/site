@@ -87,7 +87,6 @@ redirect_from:
 from bigchaindb_driver import BigchainDB
 from bigchaindb_driver.crypto import generate_keypair
 
-
 bdb = BigchainDB(
     '{{ site.ipdb_api_url }}',
     headers={'app_id': 'Get credentials from developers.ipdb.io',
@@ -109,7 +108,6 @@ bdb.transactions.send(signed_tx)
 {% capture nodejs %}
 ```js
 const driver = require('bigchaindb-driver')
-
 
 const alice = new driver.Ed25519Keypair()
 const conn = new driver.Connection(
