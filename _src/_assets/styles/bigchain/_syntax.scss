@@ -29,7 +29,7 @@
 }
 
 .highlight .l {
-    color: #ccc;
+    color: $code-color;
 }
 
 .highlight .n {
@@ -41,7 +41,7 @@
 }
 
 .highlight .x {
-    color: #ccc;
+    color: $code-color;
 }
 
 .highlight .p {
@@ -70,7 +70,7 @@
 }
 
 .highlight .ge {
-    color: #ccc;
+    color: $code-color;
     font-style: italic;
 }
 
@@ -97,7 +97,7 @@
 }
 
 .highlight .gs {
-    color: #ccc;
+    color: $code-color;
     font-weight: bold;
 }
 
@@ -160,11 +160,11 @@
 }
 
 .highlight .no {
-    color: #ccc;
+    color: $code-color;
 }
 
 .highlight .nd {
-    color: #ccc;
+    color: $code-color;
 }
 
 .highlight .ni {
@@ -181,7 +181,7 @@
 }
 
 .highlight .nl {
-    color: #ccc;
+    color: $code-color;
 }
 
 .highlight .nn {
@@ -189,11 +189,11 @@
 }
 
 .highlight .nx {
-    color: #ccc;
+    color: $code-color;
 }
 
 .highlight .py {
-    color: #ccc;
+    color: $code-color;
 }
 
 .highlight .nt {
@@ -209,7 +209,7 @@
 }
 
 .highlight .w {
-    color: #ccc;
+    color: $code-color;
 }
 
 .highlight .mf {
