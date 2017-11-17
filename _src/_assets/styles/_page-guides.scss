@@ -16,16 +16,21 @@
         }
 
         h1 {
-            font-size: $font-size-h2;
+            font-size: $font-size-h3;
         }
 
         h2 {
-            font-size: $font-size-h3;
-            margin-left: -1.25rem;
+            font-size: $font-size-h4;
+            margin-bottom: ($spacer * 2);
+            margin-top: ($spacer * 2);
         }
 
         h3 {
-            font-size: $font-size-h4;
+            font-size: $font-size-base;
+            font-weight: $font-weight-bold;
+            color: #fff;
+            margin-bottom: $spacer;
+            margin-top: ($spacer * 2);
         }
     }
 }
@@ -76,34 +81,29 @@ h1.guide__title {
     border-radius: $border-radius;
 }
 
-.toc-entry {
-
-}
-
 li.toc-h1 {
-    margin-bottom: $spacer / 2;
-
     // custom numbers
     &:before {
-        font-size: $font-size-h5;
-        opacity: .5;
+        font-size: $font-size-base;
+        opacity: .6;
+        color: $brand-primary;
     }
 
     a {
-        @extend .h5;
+        font-size: $font-size-base;
         margin: 0;
         box-shadow: none;
         color: $brand-primary;
     }
 
     ul {
-        padding-left: $spacer * 3;
+        padding-left: $spacer * 2.6;
     }
 }
 
 li.toc-h2 {
     a {
-        font-size: $font-size-base;
+        font-size: $font-size-sm;
         color: $text-color;
     }
 }
