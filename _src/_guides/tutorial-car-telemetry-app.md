@@ -169,4 +169,4 @@ function updateMileage(assetId, mileageValue) {
 
 Once we have the last transaction we create the transfer transaction with the new metadata value. Is also needed an ouput which will be the Alice to preserve the ownership of the car and the index of the input being spending which is 0, as there is just one input. Then we sign the transaction and we send it to BigchainDB.
 
-That's it, we have created a car asset, and every time the car travels new kilometers the updateMileage should be called with the new value of it.
+That's it, we have created a car asset, and every time the car travels new kilometers the `updateMileage` should be called with the new value of it.
