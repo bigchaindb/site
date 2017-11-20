@@ -74,7 +74,7 @@ team:
       twitter:  TroyMc
 
     - name:     Wojciech Hupert
-      position: UX / UI Designer
+      position: UX/UI Designer
       image:    wojciech.jpg
       twitter:  WojciechHupert
       linkedin: wojciechhupert
@@ -137,13 +137,13 @@ team:
       linkedin: jernej-pregelj
 
     - name:     Ahmed Muawia Khan
-      position: Devops Engineer
+      position: DevOps Engineer
       image:    muawia.jpg
       twitter:  mobykhn
       linkedin: muawiakhan
 
     - name:     Shahbaz Nazir
-      position: Devops Engineer
+      position: DevOps Engineer
       image:    shahbaz.jpg
       github:   shahbazn
       twitter:  shahbaz_nazir
