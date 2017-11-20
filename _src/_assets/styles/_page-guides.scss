@@ -55,6 +55,10 @@
     }
 }
 
+.section--guides-more {
+    padding-top: 0;
+}
+
 .guide {
     height: 100%;
 
@@ -149,5 +153,19 @@ li.toc-h3 {
     .header__content {
         padding-top: ($spacer * 5);
         padding-bottom: ($spacer * 5);
+    }
+}
+
+.section--getstarted {
+    padding-bottom: 0;
+
+    .section-header {
+        margin-bottom: -($spacer * 3.5);
+        position: relative;
+        z-index: 10;
+
+        .btn {
+            margin-top: $spacer * 2;
+        }
     }
 }
