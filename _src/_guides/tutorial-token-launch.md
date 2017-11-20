@@ -8,16 +8,15 @@ header: header-token.jpg
 
 You will learn:
 
-- How BDB can be used to record the transactions made by a token distribution launch
-
+- How BigchainDB can be used to record the transactions made by a token distribution launch
 - How to use divisible assets on BigchainDB
 
-We show, how divisible assets work in BigchainDB by showing, how you could create your own token launch on BigchainDB. The token distribution is represented by divisible assets (tokens) linked to one specific application (company/network).
+We show how divisible assets work in BigchainDB by showing how you could create your own token launch on BigchainDB. The token distribution is represented by divisible assets (tokens) linked to one specific application (company/network).
 
 When creating a divisible asset in BigchainDB, the number of the sub-assets that you want to create should be specified.
 
-
 # Create divisible asset
+
 ```js
 const nTokens = 10000
 let tokensLeft
@@ -46,14 +45,12 @@ function tokenLaunch() {
 }
 ```
 
-We have decided to create 10000 tokens. For that there is an extra parameter to the makeOutput() function. Pay attention to give the function a String instead of a plain Number.
-With the tokenCreator keypair we indicate who the owner of the tokens will be.
-Once the transaction is accepted by BDB we update the value of the tokens left in the possesion of the creator.
-
+We have decided to create 10000 tokens. For that there is an extra parameter to the `makeOutput()` function. Pay attention to give the function a string instead of a plain number. With the `tokenCreator` keypair we indicate who the owner of the tokens will be. Once the transaction is accepted by BigchainDB we update the value of the tokens left in the possesion of the creator.
 
 Once the tokens are created we can start to spread it over our users.
 
 # Transfer tokens
+
 ```js
 const amountToSend = 200
 
