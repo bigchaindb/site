@@ -21,7 +21,7 @@ Start by installing the official [BigchainDB JavaScript driver](https://github.c
 npm i bigchaindb-driver
 ```
 
-Then include as a module and connect to IPDB or any BigchainDB node:
+Then, include that as a module and connect to IPDB or any BigchainDB node. Use the credentials below or create your own `app_id` and `app_key` on [IPDB](https://ipdb.io/#getstarted).
 
 ```js
 const BigchainDB = require('bigchaindb-driver')

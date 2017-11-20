@@ -6,18 +6,21 @@ tagline: Learn how to build a telemetry app to track specific dynamic parameters
 header: header-car.jpg
 learn: >
     - How BigchainDB can be used to build telemetry apps to track specific dynamic parameters of an asset
-    
+
     - How assets can be used to represent real objects on BigchainDB
 
     - How to make a `CREATE` transaction to digitally register an object on BigchainDB
-    
+
     - How asset metadata is updated by using `TRANSFER` transactions to change the state of an asset (the mileage of a car in our example)
 ---
-Hi there! Welcome to our first tutorial! For this tutorial, we assume that you are familiar with the BigchainDB primitives (assets, inputs, outputs, transactions etc.). If you are not, familiarize yourself here (insert link of key concepts). 
+
+Hi there! Welcome to our first tutorial! For this tutorial, we assume that you are familiar with the BigchainDB primitives (assets, inputs, outputs, transactions etc.). If you are not, familiarize yourself with [Key concepts of BigchainDB](../key-concepts-of-bigchaindb/).
 
 # About digital twins
 
-We are moving towards an era, where the internet of things is becoming real. Cars become more connected, devices equipped with sensors can communicate their data and objects become smarter and smarter. This triggers the need for a digital representation of these devices to store their data in a safe location and to have a complete audit trail of their activity. This is the core idea of the digital twin of an object. BigchainDB is an ideal solution to create digital twins of smart devices. In this tutorial, you will learn how to build a simple and basic version of a digital twin of your car, which allows its owner to store and update the mileage of the car.  
+We are moving towards an era, where the internet of things is becoming real. Cars become more connected, devices equipped with sensors can communicate their data and objects become smarter and smarter. This triggers the need for a digital representation of these devices to store their data in a safe location and to have a complete audit trail of their activity. This is the core idea of the digital twin of an object.
+
+BigchainDB is an ideal solution to create digital twins of smart devices. In this tutorial, you will learn how to build a simple and basic version of a digital twin of your car, which allows its owner to store and update the mileage of the car.
 
 Let's get started!
 
@@ -29,7 +32,7 @@ Start by installing the official [BigchainDB JavaScript driver](https://github.c
 npm i bigchaindb-driver
 ```
 
-Then, include that as a module and connect to IPDB or any BigchainDB node. Use the credentials below or create your own app_id and app_key (learn here how to do that: https://ipdb.io/#getstarted). 
+Then, include that as a module and connect to IPDB or any BigchainDB node. Use the credentials below or create your own `app_id` and `app_key` on [IPDB](https://ipdb.io/#getstarted).
 
 ```js
 const BigchainDB = require('bigchaindb-driver')
@@ -41,9 +44,9 @@ const conn = new BigchainDB.Connection(API_PATH, {
 })
 ```
 
-# Create a key pair 
+# Create a key pair
 
-In BigchainDB, users are represented as a private and public key pair. In our case, a key pair for Alice will be created. Alice will be the owner of the car, and she will be the only one able to create this specific asset and update the mileage of the car. 
+In BigchainDB, users are represented as a private and public key pair. In our case, a key pair for Alice will be created. Alice will be the owner of the car, and she will be the only one able to create this specific asset and update the mileage of the car.
 
 You can generate a key pair from a seed phrase, so you will just need to remember this particular seed phrase. The code below illustrates that.
 
@@ -68,7 +71,7 @@ const vehicle = {
 }
 ```
 
-As a next step, you need to generate a `CREATE´ transaction to link the defined asset to the user alice. To post this transaction in BigchainDB, first you need to create it, then sign it and then send it. There are different methods for each step:
+As a next step, you need to generate a `CREATE` transaction to link the defined asset to the user Alice. To post this transaction in BigchainDB, first you need to create it, then sign it and then send it. There are different methods for each step:
 
 ```js
 function createCar() {
@@ -106,13 +109,13 @@ Now, you have digitally registered the car on BigchainDB, respectively in our ca
 
 With the `pollStatusAndFetchTransaction` we check the status of the transaction every 0.5 seconds.
 
-Once a transaction ends up in a decided-valid block, it "edged into stone". There's no changing it, no deleting it. The asset is registered now and cannot be deleted. However, the usage of the metadata field allows you to do updates in the asset. For this, you can use `TRANSFER` transactions (with their arbitrary metadata) to store any type of information, including information that could be interpreted as changing an asset (if that's how you want it to be interpreted).
+Once a transaction ends up in a decided-valid block, it's "edged into stone". There's no changing it, no deleting it. The asset is registered now and cannot be deleted. However, the usage of the metadata field allows you to do updates in the asset. For this, you can use `TRANSFER` transactions (with their arbitrary metadata) to store any type of information, including information that could be interpreted as changing an asset (if that's how you want it to be interpreted).
 
-We will use this feature to update the mileage of the car. Note that by using `carOwner.publicKey` in the output of our create transaction, you have established that Alice will be the only person, who will be able to do an update, respectively a `TRANSFER´ transaction for this asset, since the usage of this output as an input in a separate transaction will require a signature with Alice’s private key. 
+We will use this feature to update the mileage of the car. Note that by using `carOwner.publicKey` in the output of our create transaction, you have established that Alice will be the only person, who will be able to do an update, respectively a `TRANSFER` transaction for this asset, since the usage of this output as an input in a separate transaction will require a signature with Alice’s private key.
 
 # Update of an asset on BigchainDB
 
-Since an update of the mileage of a car does not imply any change in the ownership, your transfer transaction will simply be a transfer transaction with the previous owner (Alice) as beneficiary, but with new metadata in the transaction. So, technically, Alice is transferring the car to herself and just adding additional, new information to that transaction. 
+Since an update of the mileage of a car does not imply any change in the ownership, your transfer transaction will simply be a transfer transaction with the previous owner (Alice) as beneficiary, but with new metadata in the transaction. So, technically, Alice is transferring the car to herself and just adding additional, new information to that transaction.
 
 Before creating the transfer transaction, you need to search for the last transaction with the asset id, as you will update this specific last transaction:
 
@@ -136,7 +139,7 @@ conn.listTransactions(assetId)
     })
 ```
 
-The `listTransactions` method of BigchainDB retrieves all of the create and transfer transactions with a specific asset id. Then, we check for the inputs that have not been spent yet. This indicates us, which was the last transaction. In this tutorial, we are just working with one input and one ouput for each transaction, so there should be just one input that has not been spent yet, namely the one belonging to the last transaction.
+The `listTransactions` method of BigchainDB retrieves all of the create and transfer transactions with a specific asset id. Then, we check for the inputs that have not been spent yet. This indicates us, which was the last transaction. In this tutorial, we are just working with one input and one output for each transaction, so there should be just one input that has not been spent yet, namely the one belonging to the last transaction.
 
 Based on that, we can now create the transfer transaction:
 
@@ -187,11 +190,13 @@ function updateMileage(assetId, mileageValue) {
 }
 ```
 
-Once you have the last transaction, you create the transfer transaction with the new metadata value of e.g. 55 km. 
-Note again that in the output of this transfer transaction we have `carOwner.publicKey´. This shows that Alice is not transferring the ownership of the car to anybody else, because she is still the only person who can use that output as an input in another transaction. Furthermore, the input being spent is 0, as there is just one input. 
+Once you have the last transaction, you create the transfer transaction with the new metadata value of e.g. 55 km.
+
+Note again that in the output of this transfer transaction we have `carOwner.publicKey`. This shows that Alice is not transferring the ownership of the car to anybody else, because she is still the only person who can use that output as an input in another transaction. Furthermore, the input being spent is 0, as there is just one input.
+
 So, finally you sign the transaction and send it to BigchainDB. You have now updated your asset and it is now recorded that your car has driven a distance of 55 km.
 
-That's it, we have created a car asset, and every time the car travels new kilometers the `updateMileage` will be called with the new value of it, which leads to a continuous update in the car mileage. 
+That's it, we have created a car asset, and every time the car travels new kilometers the `updateMileage` will be called with the new value of it, which leads to a continuous update in the car mileage.
 
-Congratulations! You have successfully finished your first BigchainDB tutorial. 
+Congratulations! You have successfully finished your first BigchainDB tutorial.
 
