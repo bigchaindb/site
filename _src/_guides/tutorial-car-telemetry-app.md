@@ -8,7 +8,7 @@ header: header-car.jpg
 
 You will learn:
 
-- How BDB can be used to build telemetry apps to track specific dynamic parameters of an asset
+- How BigchainDB can be used to build telemetry apps to track specific dynamic parameters of an asset
 - How to make a `CREATE` transaction to create a car. Assets as representation of real objects.
 - How asset metadata is updated. In BigchainDB it is possible to use `TRANSFER` transactions to change the state of an asset, in this case the mileage of a car.
 
@@ -22,7 +22,6 @@ const conn = new BigchainDB.Connection(API_PATH, {
 })
 ```
 
-
 # Create a key pair for Alice
 
 Alice will be the owner of the car, and she will be the only one able to create the asset and update the mileage field.
@@ -35,9 +34,7 @@ const alice = new BigchainDB.Ed25519Keypair(bip39.mnemonicToSeed('seedPhrase').s
 
 # Create and post the asset
 
-An asset in our case will represent an object in the real life. But it can represent a claim, a token, a version document, a finite state machine, etc.
-
-The asset will live in BigchainDB forever and there is not possibility to delete it.
+An asset in our case will represent an object in the real life. But it can represent a claim, a token, a version document, a finite state machine, etc. The asset will live in BigchainDB forever and there is no possibility to delete it.
 
 First we need to define the asset field that represents the car. It has a JSON format
 
@@ -52,7 +49,7 @@ const vehicle = {
 }
 ```
 
-To post a transaction in BDB, firs we need to create it, then sign it and then send it to BDB. There are different methods for each step:
+To post a transaction in BigchainDB, first we need to create it, then sign it and then send it. There are different methods for each step:
 
 ```js
 function createCar() {
@@ -86,7 +83,7 @@ function createCar() {
 }
 ```
 
-`carOwner.publicKey` can be considered as the Input for the transaction. When you sign a transaction in BigchainDB you have the rights for the next TRANSFER transactions that could be done with this asset. You always sign with a private key that is derivative from the seed phrase.
+`carOwner.publicKey` can be considered as the Input for the transaction. When you sign a transaction in BigchainDB you have the rights for the next `TRANSFER` transactions that could be done with this asset. You always sign with a private key that is derivative from the seed phrase.
 
 With the `pollStatusAndFetchTransaction` we check the status of the transaction every 0.5 seconds.
 
@@ -160,13 +157,13 @@ function updateMileage(assetId, mileageValue) {
                     conn.postTransaction(signedTransfer)
                         .then(() => conn.pollStatusAndFetchTransaction(signedTransfer.id))
                         .then(res => {
-                            console.log('Transfer Transaction ', signedTransfer.id, 'accepted','with ',mileageValue, 'km',)
+                            console.log('Transfer Transaction ', signedTransfer.id, 'accepted','with ', mileageValue, 'km',)
                         })
                 })
         })
 }
 ```
 
-Once we have the last transaction we create the transfer transaction with the new metadata value. Is also needed an ouput which will be the Alice to preserve the ownership of the car and the index of the input being spending which is 0, as there is just one input. Then we sign the transaction and we send it to BigchainDB.
+Once we have the last transaction we create the transfer transaction with the new metadata value. We also need an output to preserve the ownership of the car and the index of the input being spent. In this case that's Alice and the input being spent is 0, as there is just one input. Then we sign the transaction and we send it to BigchainDB.
 
 That's it, we have created a car asset, and every time the car travels new kilometers the `updateMileage` should be called with the new value of it.

@@ -7,7 +7,7 @@ header: image.jpg
 ---
 
 - Introduction: How do we structure data?
-- Explain asset-centric paradigm of bigchainDB
+- Explain asset-centric paradigm of BigchainDB
 - High-level components and relationship of components in a transaction => possibly illustrate with a graph, similar to CLI
 - Illustrate example we are going to use
 
