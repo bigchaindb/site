@@ -1,7 +1,7 @@
 founders:
     - name:     Bruce Pon
       position: CEO
-      image:    team-bruce.jpg
+      image:    bruce.jpg
       twitter:  BrucePon
       linkedin: ponbruce
       bio: |
@@ -11,7 +11,7 @@ founders:
 
     - name:     Trent McConaghy
       position: CTO
-      image:    team-trent.jpg
+      image:    trent.jpg
       twitter:  trentmc0
       facebook: trent.mcconaghy
       linkedin: trentmc
@@ -25,7 +25,7 @@ founders:
 
     - name:     Masha McConaghy
       position: CMO
-      image:    team-masha.jpg
+      image:    masha.jpg
       linkedin: mashamc
       bio: |
         Masha McConaghy, curator and researcher, is a co-founder and CMO at BigchainDB and ascribe.io, a service enabling immutable attribution for artists and clear provenance for digital and physical art.
@@ -38,86 +38,146 @@ founders:
 team:
     - name:     Daniel Lustig
       position: Administrative Assistant
-      image:    team-daniel.jpg
+      image:    daniel.jpg
       linkedin: daniel-lustig-852a408a
-
-    - name:     Krish Iyer
-      position: Developer
-      image:    team-krish.jpg
-      twitter:  krish7919
-      linkedin: krish7919
-      github:   krish7919
-
-    - name:     Simon Schwerin
-      position: Strategy & Business Development Intern
-      image:    team-simon.jpg
-      twitter:  Zimmtstern_7
-      linkedin: simonschwerin
 
     - name:     Alberto Granzotto
       position: Developer
-      image:    team-alberto.jpg
+      image:    alberto.jpg
       twitter:  vrde
       github:   vrde
 
     - name:     Rodolphe Marques
       position: Protocols
-      image:    team-rodolphe.jpg
+      image:    rodolphe.jpg
       twitter:  rodmar_
       github:   r-marques
       linkedin: rodolphemarques
 
     - name:     Greg McMullen
       position: CPO
-      image:    team-greg.jpg
+      image:    greg.jpg
       twitter:  gmcmullen
       linkedin: gregmcm
 
     - name:     Dimitri de Jonghe
       position: Application Director
-      image:    team-dimitri.jpg
+      image:    dimi.jpg
       twitter:  DimitriDeJonghe
       facebook: dimitri.jonghe
       github:   diminator
       linkedin: dimitridejonghe
 
-    - name:     Carly Sheridan
-      position: Director of Marketing and Communications
-      image:    team-carly.jpg
-      twitter:  _carlynoelle
-      linkedin: carlysheridan
-
     - name:     Troy McConaghy
       position: Developer
-      image:    team-troy.jpg
+      image:    troy.jpg
       twitter:  TroyMc
 
     - name:     Wojciech Hupert
-      position: UX / UI Designer
-      image:    team-wojciech.jpg
+      position: UX/UI Designer
+      image:    wojciech.jpg
       twitter:  WojciechHupert
       linkedin: wojciechhupert
 
     - name:     Kasia Kazimierczak
       position: Operations Manager
-      image:    team-kasia.jpg
-      linkedin: katarzyna-kazimierczak
+      image:    kasia.jpg
+      linkedin: katarzyna-kazimierczak-ll-m-65950879
 
     - name:     Sylvain Bellemare
       position: Developer
-      image:    team-sylvain.jpg
+      image:    sylvain.jpg
       twitter:  sbellem
       facebook: slvnb
       github:   sbellem
       linkedin: sylvainbellemare
 
     - name:     Tim Daubenschütz
-      position: Product Manager
-      image:    team-tim.jpg
+      position: VP Engineering
+      image:    tim.jpg
       twitter:  TimDaub
       github:   TimDaub
 
+    - name:     Matthias Kretschmann
+      position: Designer & Developer
+      image:    matthias.jpg
+      twitter:  kremalicious
+      github:   kremalicious
+
     - name:     Wrigley the Buffalo
       position: Community Manager
-      image:    nosprite/wrigley-avatar.svg
+      image:    wrigley-avatar.svg
       github:   wrigley
+
+    - name:     Don Gossen
+      position: Ocean Protocol
+      image:    don.jpg
+      linkedin: donald-gossen-40ab96
+
+    - name:     Cristina Pon
+      position: Marketing Director
+      image:    cristina.jpg
+      linkedin: cristinacenuse
+
+    - name:     Oana Ionescu
+      position: Ocean Protocol
+      image:    oana.jpg
+      linkedin: oanavoicu
+
+    - name:     Gautam Dhameja
+      position: Application Engineer
+      image:    gautam.jpg
+      twitter:  gautamdhameja
+      linkedin: gautamdhameja
+
+    - name:     Jernej Pregelj
+      position: Application Engineer
+      image:    jernej.jpg
+      twitter:  jernejpregelj
+      linkedin: jernej-pregelj
+
+    - name:     Ahmed Muawia Khan
+      position: DevOps Engineer
+      image:    muawia.jpg
+      twitter:  mobykhn
+      linkedin: muawiakhan
+
+    - name:     Shahbaz Nazir
+      position: DevOps Engineer
+      image:    shahbaz.jpg
+      github:   shahbazn
+      twitter:  shahbaz_nazir
+      linkedin: shahbaz-nazir-84766451
+
+    - name:     Morgan Sutherland
+      position: IPDB
+      image:    morgan.jpg
+      twitter:  msutherl
+      linkedin: morgansutherland
+
+    - name:     Sarah Vallon
+      position: Marketing
+      image:    sarah.jpg
+      linkedin: sarah-jean-vallon-b4603a65
+
+    - name:     Kamal Ved
+      position: Business Development
+      image:    kamal.jpg
+      linkedin: kamalved
+
+    - name:     Ricardo Garcia
+      position: Business Development
+      image:    ricardo.jpg
+      linkedin: ricardo-garcia-b226a6a9
+
+    - name:     Manuel Rodriguez
+      position: Application Engineer
+      image:    manuel.jpg
+      linkedin: manuel-rodr%C3%ADguez-18555a11a
+      github:   manolodewiner
+
+    - name:     Julian Leitloff
+      position: Ocean Protocol
+      image:    julian.jpg
+      linkedin: julian-leitloff
+      twitter:  julianleitloff

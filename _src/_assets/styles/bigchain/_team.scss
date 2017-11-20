@@ -8,6 +8,7 @@
     background: $brand-main-gray;
     width: 230px;
     clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    filter: grayscale(1);
 }
 
 .team__name {
@@ -118,7 +119,7 @@
 //
 // Grid redefinition: more spacious
 //
-$spacer-team: 4rem;
+$spacer-team: 3rem;
 
 .grid--team {
     margin: -($spacer-team) 0 $spacer-team (-($spacer-team));
