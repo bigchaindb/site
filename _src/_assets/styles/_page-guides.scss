@@ -1,5 +1,7 @@
 .content--guide {
     .content--page--markdown {
+        padding-top: $spacer * 4;
+
         h1,
         h2,
         h3,
@@ -31,6 +33,24 @@
             color: #fff;
             margin-bottom: $spacer;
             margin-top: ($spacer * 2);
+        }
+    }
+}
+
+.section-header--guide {
+    margin-bottom: $spacer * 3;
+
+    .section-description {
+        text-align: left;
+
+        h2 {
+            @extend .h5;
+            margin-top: 0;
+            font-size: $font-size-lg;
+        }
+
+        ul {
+            margin: 0;
         }
     }
 }
@@ -88,6 +108,7 @@ h1.guide__title {
 //
 .section-nav {
     background: darken($brand-main-gray, 2%);
+    margin-top: 0;
     margin-bottom: $spacer * 2;
     padding: $spacer;
     border-radius: $border-radius;

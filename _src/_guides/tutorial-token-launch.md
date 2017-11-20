@@ -4,12 +4,12 @@ layout: guide
 title: "Tutorial: Token distribution launch"
 tagline: Build a token launch with BigchainDB
 header: header-token.jpg
+
+learn: >
+    - How BigchainDB can be used to record the transactions made by a token distribution launch
+
+    - How to use divisible assets on BigchainDB
 ---
-
-You will learn:
-
-- How BigchainDB can be used to record the transactions made by a token distribution launch
-- How to use divisible assets on BigchainDB
 
 We show how divisible assets work in BigchainDB by showing how you could create your own token launch on BigchainDB. The token distribution is represented by divisible assets (tokens) linked to one specific application (company/network).
 

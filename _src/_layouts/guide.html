@@ -7,6 +7,15 @@ layout: base
 <section role="main" class="content content--page content--guide">
     <div class="row content--page--markdown">
 
+        {% if page.learn %}
+        <header class="section-header section-header--guide">
+            <div class="section-description">
+                <h2>You will learn</h2>
+                {{ page.learn | markdownify }}
+            </div>
+        </header>
+        {% endif %}
+
         {{ content | toc }}
 
     </div>

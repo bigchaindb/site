@@ -9,7 +9,7 @@
     &:before {
         @extend .h5;
         content: 'Contents';
-        font-size: $font-size-base;
+        font-size: $font-size-lg;
         display: block;
         margin-top: 0;
     }
