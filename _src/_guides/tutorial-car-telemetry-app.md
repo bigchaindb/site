@@ -12,9 +12,19 @@ learn: >
     - How asset metadata is updated. In BigchainDB it is possible to use `TRANSFER` transactions to change the state of an asset, in this case the mileage of a car.
 ---
 
-# Connect to IPDB
+# Setup
+
+Start by installing the official [BigchainDB JavaScript driver](https://github.com/bigchaindb/js-bigchaindb-driver):
+
+```bash
+npm i bigchaindb-driver
+```
+
+Then include as a module and connect to IPDB or any BigchainDB node:
 
 ```js
+const BigchainDB = require('bigchaindb-driver')
+
 const API_PATH = 'https://test.ipdb.io/api/v1/'
 const conn = new BigchainDB.Connection(API_PATH, {
     app_id: '2db4355b',
