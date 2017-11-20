@@ -102,9 +102,13 @@
 h1.guide__title {
     font-size: $font-size-h4;
     font-weight: $font-weight-normal;
-    margin-bottom: $spacer;
+    margin-bottom: $spacer / $line-height;
     margin-top: 0;
-    color: $brand-primary;
+    color: #fff;
+}
+
+.guide__tagline {
+    color: $brand-main-blue-light;
 }
 
 //
@@ -114,8 +118,16 @@ h1.guide__title {
     background: darken($brand-main-gray, 2%);
     margin-top: 0;
     margin-bottom: $spacer * 2;
-    padding: $spacer;
+    padding: $spacer * 1.5;
+    padding-bottom: $spacer * 2;
     border-radius: $border-radius;
+
+    a {
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
 }
 
 li.toc-h1 {
@@ -123,14 +135,14 @@ li.toc-h1 {
     &:before {
         font-size: $font-size-base;
         opacity: .6;
-        color: $brand-primary;
+        color: $brand-main-blue-light;
     }
 
     a {
         font-size: $font-size-base;
         margin: 0;
         box-shadow: none;
-        color: $brand-primary;
+        color: $brand-main-blue-light;
     }
 
     ul {
