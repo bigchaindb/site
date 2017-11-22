@@ -5,20 +5,18 @@
             <p class="section-description">Complete these guides to learn about how to create apps in BigchainDB.</p>
         </header>
     </div>
-    <div class="row row--wide">
-        <div class="grid grid--full grid-small--half grid--gutters">
-            {% for guide in site.guides limit: 4 %}
-            <div class="grid__col">
-                <article class="guide">
-                    <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('/guides/{{ guide.header }}')" {% endif %}>
-                        <h1 class="guide__title">{{ guide.title }}</h1>
-                        <p class="guide__tagline">{{ guide.tagline }}</p>
-                    </a>
-                </article>
-            </div>
-            {% endfor %}
-        </div>
+
+    <div class="row">
+        {% for guide in site.guides limit: 4 %}
+            <article class="guide">
+                <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('/guides/{{ guide.header }}')" {% endif %}>
+                    <h1 class="guide__title">{{ guide.title }}</h1>
+                    <p class="guide__tagline">{{ guide.tagline }}</p>
+                </a>
+            </article>
+        {% endfor %}
     </div>
+
     <div class="row text-center">
         <a class="btn btn-secondary" href="/guides/">All guides</a>
     </div>

@@ -69,9 +69,13 @@
         display: block;
         box-shadow: none;
         background-color: $brand-main-blue-dark;
-        padding: $spacer * 2;
+        padding: $spacer * 1.5;
         height: 100%;
         border-radius: $border-radius;
+
+        @media ($screen-sm) {
+            padding: $spacer * 3;
+        }
 
         &:before {
             opacity: .85;
@@ -87,8 +91,20 @@
     }
 
     p:last-child,
-    .guide__title:only-child {
+    .guide__title:only-child,
+    .guide__tagline,
+    .grid {
         margin-bottom: 0;
+    }
+
+    .section--guides & {
+        margin-bottom: $spacer * 2;
+
+        a {
+            @media ($screen-sm) {
+                padding: $spacer * 4;
+            }
+        }
     }
 }
 
