@@ -113,7 +113,7 @@ Now you have digitally registered the car on BigchainDB, respectively in our cas
 
 Once a transaction ends up in a decided-valid block, it's "edged into stone". There's no changing it, no deleting it. The asset is registered now and cannot be deleted. However, the usage of the metadata field allows you to do updates in the asset. For this, you can use `TRANSFER` transactions (with their arbitrary metadata) to store any type of information, including information that could be interpreted as changing an asset (if that's how you want it to be interpreted).
 
-We will use this feature to update the mileage of the car. Note that by using `carOwner.publicKey` as the issuer of the create transaction, you have established that Alice will be the only person who will be able to 'update' the metadata value, respectively a `TRANSFER` transaction for this asset, since the usage of this output as an input in a separate transaction will require a signature with Alice’s private key.
+We will use this feature to update the mileage of the car. Note that by using `carOwner.publicKey` as the issuer of the create transaction, you have established that Alice will be the only person able to update the metadata value, respectively a `TRANSFER` transaction for this asset. That's because the usage of this output as an input in a separate transaction will require a signature with Alice’s private key.
 
 # Update of an asset on BigchainDB
 
