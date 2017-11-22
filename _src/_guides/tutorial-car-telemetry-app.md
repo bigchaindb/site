@@ -105,11 +105,12 @@ function createCar() {
         .then(res => {
           document.body.innerHTML +='<h3>Transaction created</h3>';
           document.body.innerHTML +=txSigned.id
+          // txSigned.id corresponds to the asset id of the car
         })
 }
 ```
 
-Now you have digitally registered the car on BigchainDB, respectively in our case on IPDB. Note that the metadata field is used to record the mileage, which is currently set to 0.
+Now you have digitally registered the car on BigchainDB, respectively in our case on IPDB. `txSigned.id` is an id that uniquely identifies your asset. Note that the metadata field is used to record the mileage, which is currently set to 0.
 
 Once a transaction ends up in a decided-valid block, it's "edged into stone". There's no changing it, no deleting it. The asset is registered now and cannot be deleted. However, the usage of the metadata field allows you to do updates in the asset. For this, you can use `TRANSFER` transactions (with their arbitrary metadata) to store any type of information, including information that could be interpreted as changing an asset (if that's how you want it to be interpreted).
 
