@@ -2,14 +2,14 @@
 layout: guide
 
 title: "Tutorial: How to create a digital twin of your car"
-tagline: Build a telemetry app to track specific dynamic parameters of an asset, such as the mileage of a car.
+tagline: Build a telemetry app to digitally track the mileage of a car
 header: header-car.jpg
 learn: >
-    - How BigchainDB can be used to build telemetry apps to track specific dynamic parameters of an asset
+    - How BigchainDB can be used to record dynamic parameters of an asset 
 
     - How assets can be used on BigchainDB to represent real objects
 
-    - How to make a `CREATE` transaction to digitally register an object on BigchainDB
+    - How to make a `CREATE` transaction to digitally register an asset on BigchainDB
 
     - How asset metadata is updated by using `TRANSFER` transactions to change the state of an asset (the mileage of a car in our example)
 ---
@@ -32,7 +32,7 @@ Start by installing the official [BigchainDB JavaScript driver](https://github.c
 npm i bigchaindb-driver
 ```
 
-Then, include that as a module and connect to IPDB or any BigchainDB node. Use the credentials below or create your own `app_id` and `app_key` on [IPDB](https://ipdb.io/#getstarted).
+Then, include that as a module and connect to IPDB or any BigchainDB node. In the case of IPDB, create your own `app_id` and `app_key` on [IPDB](https://ipdb.io/#getstarted).
 
 ```js
 const BigchainDB = require('bigchaindb-driver')
@@ -113,7 +113,7 @@ Now you have digitally registered the car on BigchainDB, respectively in our cas
 
 Once a transaction ends up in a decided-valid block, it's "edged into stone". There's no changing it, no deleting it. The asset is registered now and cannot be deleted. However, the usage of the metadata field allows you to do updates in the asset. For this, you can use `TRANSFER` transactions (with their arbitrary metadata) to store any type of information, including information that could be interpreted as changing an asset (if that's how you want it to be interpreted).
 
-We will use this feature to update the mileage of the car. Note that by using `carOwner.publicKey` as the issuer of the create transaction, you have established that Alice will be the only person able to update the metadata value, respectively a `TRANSFER` transaction for this asset. That's because the usage of this output as an input in a separate transaction will require a signature with Alice’s private key.
+We will use this feature to update the mileage of the car. Note that by using `carOwner.publicKey` in the output of the create transaction, you have established that Alice will be the only person able to update the metadata value, respectively a `TRANSFER` transaction for this asset. That's because the usage of this output as an input in a separate transaction will require a signature with Alice’s private key.
 
 # Update of an asset on BigchainDB
 
@@ -143,7 +143,7 @@ conn.listTransactions(assetId)
     })
 ```
 
-The `listTransactions` method of BigchainDB retrieves all of the create and transfer transactions with a specific asset id. Then, we check for the inputs that have not been spent yet. This indicates the last transaction. In this tutorial, we are just working with one input and one output for each transaction, so there should be just one input that has not been spent yet, namely the one belonging to the last transaction.
+The `listTransactions` method of BigchainDB retrieves all of the create and transfer transactions with a specific asset id. Then, we check for the inputs that have not been spent yet. This indicates the last transaction. In this tutorial, we are just working with one input and one output for each transaction, so there should be just one input that has not been spent yet, namely the one belonging to the last transaction. 
 
 Based on that, we can now create the transfer transaction:
 
