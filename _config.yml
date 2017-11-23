@@ -100,6 +100,7 @@ defaults:
         type: guides
       values:
         toc: true
+        image: share-image-guides.png
 
 # Plugins
 # --------------------
