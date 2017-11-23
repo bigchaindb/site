@@ -6,7 +6,6 @@ tagline: Learn how to use divisible assets in BigchainDB for token distribution 
 header: header-token.jpg
 
 learn: >
-
     - How to use divisible assets on BigchainDB
 
     - How assets in BigchainDB can represent tokens
@@ -26,7 +25,9 @@ Note however, that we do not support ERC20 and no one has launched tokens on Big
 
 # Usage of divisible assets to create tokens
 
-BigchainDB supports divisible assets. A divisible asset is an asset that has a fixed number of sub-assets linked to it. These fixed sub-assets that are linked to it, represent your tokens. When creating a divisible asset in BigchainDB, the number of the sub-assets (tokens) that you want to create needs to be specified. That represents your fixed total supply of tokens. The code below illustrates how to create a divisible asset with 10000 tokens associated to it.
+BigchainDB supports divisible assets. A divisible asset is an asset that has a fixed number of sub-assets linked to it. These fixed sub-assets that are linked to it, represent your tokens. When creating a divisible asset in BigchainDB, the number of the sub-assets (tokens) that you want to create needs to be specified. That represents your fixed total supply of tokens.
+
+The code below illustrates how to create a divisible asset with 10 000 tokens associated to it.
 
 ```js
 const nTokens = 10000
@@ -56,7 +57,7 @@ function tokenLaunch() {
 }
 ```
 
-Now, we have minted 10000 tokens. For that there is an extra parameter to the `makeOutput()` function. Pay attention to give the function a string instead of a plain number. With the `tokenCreator` keypair we indicate who the owner of the tokens will be. Once the transaction is accepted by BigchainDB we update the value of the tokens left in the possesion of the creator.
+Now, we have minted 10 000 tokens. For that there is an extra parameter to the `makeOutput()` function. Pay attention to give the function a string instead of a plain number. With the `tokenCreator` keypair we indicate who the owner of the tokens will be. Once the transaction is accepted by BigchainDB we update the value of the tokens left in the possession of the creator.
 
 Once the tokens are created we can start to spread it over our users.
 
