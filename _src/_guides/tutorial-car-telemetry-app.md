@@ -4,6 +4,8 @@ layout: guide
 title: "Tutorial: How to create a digital twin of your car"
 tagline: Build a telemetry app to digitally track the mileage of a car
 header: header-car.jpg
+order: 2
+
 learn: >
     - How BigchainDB can be used to record dynamic parameters of an asset
 

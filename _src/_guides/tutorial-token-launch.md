@@ -4,6 +4,7 @@ layout: guide
 title: "Tutorial: How to launch your own token on BigchainDB"
 tagline: Learn how to use divisible assets in BigchainDB for token distribution events
 header: header-token.jpg
+order: 3
 
 learn: >
     - How to use divisible assets on BigchainDB

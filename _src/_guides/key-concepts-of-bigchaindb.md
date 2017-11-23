@@ -3,6 +3,7 @@ layout: guide
 
 title: Key concepts of BigchainDB
 tagline: Understand the transaction model of BigchainDB (identity, inputs, outputs, assets, transactions).
+order: 1
 ---
 
 - Introduction: How do we structure data?

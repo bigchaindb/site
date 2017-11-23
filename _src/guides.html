@@ -9,7 +9,8 @@ image: share-image-guides.png
 <section class="section section--guideslist">
     <div class="row row--wide">
         <div class="grid grid--full grid-small--half grid--gutters">
-            {% for guide in site.guides %}
+            {% assign guides = site.guides | sort: 'order' %}
+            {% for guide in guides %}
                 <div class="grid__col">
                     <article class="guide">
                         <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('./{{ guide.header }}')" {% endif %}>
