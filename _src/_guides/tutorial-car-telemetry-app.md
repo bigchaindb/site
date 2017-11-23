@@ -5,7 +5,7 @@ title: "Tutorial: How to create a digital twin of your car"
 tagline: Build a telemetry app to digitally track the mileage of a car
 header: header-car.jpg
 learn: >
-    - How BigchainDB can be used to record dynamic parameters of an asset 
+    - How BigchainDB can be used to record dynamic parameters of an asset
 
     - How assets can be used on BigchainDB to represent real objects
 
@@ -24,25 +24,7 @@ BigchainDB is an ideal solution to create digital twins of smart devices. In thi
 
 Let's get started!
 
-# Setup
-
-Start by installing the official [BigchainDB JavaScript driver](https://github.com/bigchaindb/js-bigchaindb-driver):
-
-```bash
-npm i bigchaindb-driver
-```
-
-Then, include that as a module and connect to IPDB or any BigchainDB node. In the case of IPDB, create your own `app_id` and `app_key` on [IPDB](https://ipdb.io/#getstarted).
-
-```js
-const BigchainDB = require('bigchaindb-driver')
-
-const API_PATH = 'https://test.ipdb.io/api/v1/'
-const conn = new BigchainDB.Connection(API_PATH, {
-    app_id: 'Get one from developers.ipdb.io',
-    app_key: 'Get one from developers.ipdb.io'
-})
-```
+{% include_relative _setup.md %}
 
 # Create a key pair
 
@@ -144,7 +126,7 @@ conn.listTransactions(assetId)
     })
 ```
 
-The `listTransactions` method of BigchainDB retrieves all of the create and transfer transactions with a specific asset id. Then, we check for the inputs that have not been spent yet. This indicates the last transaction. In this tutorial, we are just working with one input and one output for each transaction, so there should be just one input that has not been spent yet, namely the one belonging to the last transaction. 
+The `listTransactions` method of BigchainDB retrieves all of the create and transfer transactions with a specific asset id. Then, we check for the inputs that have not been spent yet. This indicates the last transaction. In this tutorial, we are just working with one input and one output for each transaction, so there should be just one input that has not been spent yet, namely the one belonging to the last transaction.
 
 Based on that, we can now create the transfer transaction:
 

@@ -8,42 +8,25 @@ header: header-token.jpg
 learn: >
 
     - How to use divisible assets on BigchainDB
-    
+
     - How assets in BigchainDB can represent tokens
-    
+
     - How tokens can be distributed to participants using TRANSFER transactions
-    
 ---
 
 Hi there! Welcome to our second tutorial about divisible assets. For this tutorial, we assume that you are familiar with the BigchainDB primitives (assets, inputs, outputs, transactions etc.). If you are not, familiarize yourself with [Key concepts of BigchainDB](../key-concepts-of-bigchaindb/).
 
 # About token distribution events
 
-In the last 12 months we have witnessed exponential growth in token distribution events. Most of them have been launched on Ethereum. Since we are experiencing rising interest in potential token launches on BigchainDB, this tutorial aims at showing a very simple approach on how to launch your own token on BigchainDB. Note however, that we do not support ERC20 and no one has launched tokens on BigchainDB yet. This tutorial just aims at showing one possible approach.  
+In the last 12 months we have witnessed exponential growth in token distribution events. Most of them have been launched on Ethereum. Since we are experiencing rising interest in potential token launches on BigchainDB, this tutorial aims at showing a very simple approach on how to launch your own token on BigchainDB.
 
-# Setup
+Note however, that we do not support ERC20 and no one has launched tokens on BigchainDB yet. This tutorial just aims at showing one possible approach.
 
-Start by installing the official [BigchainDB JavaScript driver](https://github.com/bigchaindb/js-bigchaindb-driver):
-
-```bash
-npm i bigchaindb-driver
-```
-
-Then, include that as a module and connect to IPDB or any BigchainDB node. In the case of IPDB, create your own `app_id` and `app_key` on [IPDB](https://ipdb.io/#getstarted).
-
-```js
-const BigchainDB = require('bigchaindb-driver')
-
-const API_PATH = 'https://test.ipdb.io/api/v1/'
-const conn = new BigchainDB.Connection(API_PATH, {
-    app_id: 'Get one from developers.ipdb.io',
-    app_key: 'Same as app_id'
-})
-```
+{% include_relative _setup.md %}
 
 # Usage of divisible assets to create tokens
 
-BigchainDB supports divisible assets. A divisible asset is an asset that has a fixed number of sub-assets linked to it. These fixed sub-assets that are linked to it, represent your tokens. When creating a divisible asset in BigchainDB, the number of the sub-assets (tokens) that you want to create needs to be specified. That represents your fixed total supply of tokens. The code below illustrates how to create a divisible asset with 10000 tokens associated to it. 
+BigchainDB supports divisible assets. A divisible asset is an asset that has a fixed number of sub-assets linked to it. These fixed sub-assets that are linked to it, represent your tokens. When creating a divisible asset in BigchainDB, the number of the sub-assets (tokens) that you want to create needs to be specified. That represents your fixed total supply of tokens. The code below illustrates how to create a divisible asset with 10000 tokens associated to it.
 
 ```js
 const nTokens = 10000
