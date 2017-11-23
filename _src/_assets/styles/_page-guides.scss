@@ -1,3 +1,25 @@
+.header--guides {
+    background: url('../img/nosprite/starbase-guides.svg') no-repeat center bottom;
+    background-size: contain;
+    padding-bottom: 17%;
+
+    &:before {
+        display: none;
+    }
+
+    > .row {
+        @extend .row--wide;
+    }
+
+    .header__tagline {
+        @media ($screen-sm) {
+            max-width: 40rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
 .content--guide {
     .content--page--markdown {
         padding-top: $spacer * 4;
@@ -66,6 +88,7 @@
         @include color-overlay;
         background-size: cover;
         background-position: center;
+        background-image: url('../img/hero-berlin.jpg');
         display: block;
         box-shadow: none;
         background-color: $brand-main-blue-dark;
