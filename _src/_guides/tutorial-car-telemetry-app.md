@@ -153,26 +153,28 @@ function updateMileage(assetId, mileageValue) {
             return txList.filter((tx) => inputTransactions.indexOf(tx.id) === -1)
         })
         .then((tx) => {
-            conn.getTransaction(tx[0].id)
-                .then((txCreated) => {
-                    const createTranfer = BigchainDB.Transaction.makeTransferTransaction(
-                        txCreated, {
-                            mileage: txCreated.metadata.mileage + mileageValue,
-                            units: 'km'
-                        }, [BigchainDB.Transaction.makeOutput(
-                            BigchainDB.Transaction.makeEd25519Condition(carOwner.publicKey))],
-                        0
-                    )
+            // As there is just one input
+            return conn.getTransaction(tx[0].id)
+        })
 
-                    // Sign with the owner of the car as she was the creator of the car
-                    const signedTransfer = BigchainDB.Transaction.signTransaction(createTranfer, carOwner.privateKey)
-                    return conn.postTransaction(signedTransfer)
-                })
-                .then((signedTransfer) => conn.pollStatusAndFetchTransaction(signedTransfer.id))
-                .then(res => {
-                    document.body.innerHTML += '<h3>Transfer Transaction created</h3>';
-                    document.body.innerHTML += res.id
-                })
+        .then((txCreated) => {
+            const createTranfer = BigchainDB.Transaction.makeTransferTransaction(
+                txCreated, {
+                    mileage: txCreated.metadata.mileage + mileageValue,
+                    units: 'km'
+                }, [BigchainDB.Transaction.makeOutput(
+                    BigchainDB.Transaction.makeEd25519Condition(carOwner.publicKey))],
+                0
+            )
+
+            // Sign with the owner of the car as she was the creator of the car
+            const signedTransfer = BigchainDB.Transaction.signTransaction(createTranfer, carOwner.privateKey)
+            return conn.postTransaction(signedTransfer)
+        })
+        .then((signedTransfer) => conn.pollStatusAndFetchTransaction(signedTransfer.id))
+        .then(res => {
+            document.body.innerHTML += '<h3>Transfer Transaction created</h3>';
+            document.body.innerHTML += res.id
         })
 }
 ```
