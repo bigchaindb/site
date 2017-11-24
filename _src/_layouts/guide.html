@@ -33,7 +33,7 @@ layout: base
                 {% unless page.id == guide.id %}
                     <div class="grid__col">
                         <article class="guide">
-                            <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('../{{ guide.header }}')" {% endif %}>
+                            <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('../{{ guide.header }}')"{% endif %}>
                                 <h1 class="guide__title">{{ guide.title }}</h1>
                             </a>
                         </article>
@@ -43,7 +43,7 @@ layout: base
         </div>
     </div>
     <div class="row text-center">
-        <a class="btn btn-secondary" href="/guides/">All guides</a>
+        <a class="btn btn-primary" href="/guides/">All guides</a>
     </div>
 </section>
 

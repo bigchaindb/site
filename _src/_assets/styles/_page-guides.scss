@@ -11,12 +11,24 @@
         @extend .row--wide;
     }
 
+    .header__content {
+        padding-top: ($spacer * 5);
+        padding-bottom: ($spacer * 5);
+    }
+
     .header__tagline {
         @media ($screen-sm) {
             max-width: 40rem;
             margin-left: auto;
             margin-right: auto;
         }
+    }
+}
+
+.header--guide {
+    .header__content {
+        padding-top: ($spacer * 5);
+        padding-bottom: ($spacer * 5);
     }
 }
 
@@ -45,13 +57,12 @@
 
         h2 {
             font-size: $font-size-h4;
-            margin-bottom: ($spacer * 2);
-            margin-top: ($spacer * 2);
+            margin-top: ($spacer * 2.5);
         }
 
         h3 {
             font-size: $font-size-base;
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-normal;
             color: #fff;
             margin-bottom: $spacer;
             margin-top: ($spacer * 2);
@@ -79,6 +90,13 @@
 
 .section--guides-more {
     padding-top: 0;
+    background: url('../img/nosprite/starbase-guides.svg') no-repeat center bottom;
+    background-size: contain;
+    padding-bottom: 25%;
+
+    .grid {
+        margin-top: -($spacer * 3);
+    }
 }
 
 .guide {
@@ -120,7 +138,8 @@
         margin-bottom: 0;
     }
 
-    .section--guides & {
+    .section--guides &,
+    .section--guideslist & {
         margin-bottom: $spacer * 2;
 
         a {
@@ -198,13 +217,6 @@ li.toc-h2 {
 
 li.toc-h3 {
     display: none;
-}
-
-.header--guide {
-    .header__content {
-        padding-top: ($spacer * 5);
-        padding-bottom: ($spacer * 5);
-    }
 }
 
 .section--getstarted {
