@@ -124,7 +124,7 @@ conn.listTransactions(assetId)
             })
         )
         // In our case there should be just one input that has not been spent with the assetId
-        return unspents = txList.filter((tx) => inputTransactions.indexOf(tx.id) === -1)
+        return txList.filter((tx) => inputTransactions.indexOf(tx.id) === -1)
     })
 ```
 
@@ -150,7 +150,7 @@ function updateMileage(assetId, mileageValue) {
                 })
             )
             // In our case there should be just one input not spend with the assetId
-            return unspents = txList.filter((tx) => inputTransactions.indexOf(tx.id) === -1)
+            return txList.filter((tx) => inputTransactions.indexOf(tx.id) === -1)
         })
         .then((tx) => {
             conn.getTransaction(tx[0].id)
@@ -168,10 +168,10 @@ function updateMileage(assetId, mileageValue) {
                     const signedTransfer = BigchainDB.Transaction.signTransaction(createTranfer, carOwner.privateKey)
                     return conn.postTransaction(signedTransfer)
                 })
-                .then(() => conn.pollStatusAndFetchTransaction(signedTransfer.id))
+                .then((signedTransfer) => conn.pollStatusAndFetchTransaction(signedTransfer.id))
                 .then(res => {
                     document.body.innerHTML += '<h3>Transfer Transaction created</h3>';
-                    document.body.innerHTML += signedTransfer.id
+                    document.body.innerHTML += res.id
                 })
         })
 }

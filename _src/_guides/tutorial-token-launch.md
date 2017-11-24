@@ -14,19 +14,19 @@ learn: >
     - How tokens can be distributed to participants using TRANSFER transactions
 ---
 
-Hi there! Welcome to our second tutorial about divisible assets. For this tutorial, we assume that you are familiar with the BigchainDB primitives (assets, inputs, outputs, transactions etc.). If you are not, familiarize yourself with the [Key concepts of BigchainDB](../key-concepts-of-bigchaindb/). We also assume that you have completed our [first tutorial](../tutorial-car-telemetry-app/).
+Hi there! Welcome to our next tutorial about divisible assets. For this tutorial, we assume that you are familiar with the BigchainDB primitives (assets, inputs, outputs, transactions etc.). If you are not, familiarize yourself with the [Key concepts of BigchainDB](../key-concepts-of-bigchaindb/). We also assume that you have completed our [first tutorial](../tutorial-car-telemetry-app/).
 
 # About token distribution events
 
 In the last 12 months we have witnessed exponential growth in token distribution events. Many of them have been launched on Ethereum. Since we are experiencing rising interest in potential token launches on BigchainDB, this tutorial aims at showing a very simple approach on how to launch your own token on BigchainDB.
 
-Note however, that we do not support ERC20 and no one has launched tokens on BigchainDB yet. This tutorial just aims at illustrating the usage of one building block, namely divisible assets. An actual token launch requires other components which are not discussed here. 
+This tutorial just aims at illustrating the usage of one building block, namely divisible assets. An actual token launch requires other components which are not discussed here.
 
 {% include_relative _setup.md %}
 
 # Usage of divisible assets to create tokens
 
-In BigchainDB, token generation can be represented as a divisible asset. A divisible asset is an asset that has a fixed number of sub-assets linked to it. This means that the create transaction for this asset has multiple outputs. The linked fixed sub-assets represent your tokens. When creating a divisible asset in BigchainDB, the number of the sub-assets (tokens) that you want to create needs to be specified in the beginning. That number represents your fixed total supply of tokens.
+In BigchainDB, a token generation can be represented as a divisible asset. A divisible asset is an asset that has a fixed number of sub-assets linked to it. This means that the create transaction contains more than that asset. The linked fixed sub-assets represent your tokens. When creating a divisible asset in BigchainDB, the number of the sub-assets (tokens) that you want to create needs to be specified in the beginning. That number represents your fixed total supply of tokens.
 
 The code below illustrates how to create a divisible asset with 10 000 tokens associated to it.
 
@@ -35,72 +35,93 @@ const nTokens = 10000
 let tokensLeft
 
 function tokenLaunch() {
-
+    // Construct a transaction payload
     const tx = BigchainDB.Transaction.makeCreateTransaction({
-            token: tokenName.value,
+            token: 'PPSO tokens',
             number_tokens: nTokens
-        }, {
+        },
+        // Metadata field, contains information about the transaction itself
+        // (can be `null` if not needed)
+        {
             datetime: new Date().toString()
-        }, [BigchainDB.Transaction.makeOutput(BigchainDB.Transaction.makeEd25519Condition(tokenCreator.publicKey), nTokens.toString())],
+        },
+        // Output. Divisible asset, include nTokens as parameter
+        [BigchainDB.Transaction.makeOutput(BigchainDB.Transaction.makeEd25519Condition(tokenCreator.publicKey), nTokens.toString())],
         tokenCreator.publicKey
     )
 
-    // Sign the transaction with private keys
+    // Sign the transaction with private key of the creator. Will be the owner of the asset
     const txSigned = BigchainDB.Transaction.signTransaction(tx, tokenCreator.privateKey)
 
+    // Send the transaction to BigchainDB
     conn.postTransaction(txSigned)
         .then(() => conn.pollStatusAndFetchTransaction(txSigned.id))
         .then(res => {
-            lastTx = txSigned.id
-            console.log('Create Transaction', txSigned, 'accepted')
             tokensLeft = nTokens
+            document.body.innerHTML ='<h3>Transaction created</h3>';
+            // txSigned.id corresponds to the asset id of the tokens
+            document.body.innerHTML +=txSigned.id
         })
 }
 ```
 
-With these commands, we have minted 10000 tokens. For that there is an extra parameter to the `makeOutput()` function. Pay attention to give the function a string instead of a plain number. With the `tokenCreator` keypair we indicate who the owner of the tokens will be. This could for instance be the foundation issuing the tokens. Once this transaction is accepted by BigchainDB, we update the value of the tokens left in the possesion of the creator. Right now, all the tokens created are associated with the public key of the creator (`tokenCreater.publicKey`).
+With these commands, you have minted 10000 tokens. For that give an extra parameter to the `makeOutput()` function. Pay attention to give the function a string instead of a plain number. With the `tokenCreator` keypair you indicate who will be the owner of the tokens. This could for instance be the foundation issuing the tokens. Once this transaction is accepted by BigchainDB, you update the value of the tokens left in the possession of the creator. Right now, all the tokens created are associated with the public key of the creator (`tokenCreater.publicKey`).
 
-Now that the tokens have been minted, we can start distributing them to the owners.
+Now that the tokens have been minted, you can start distributing them to the owners.
 
 # Distribute tokens
 
-Tokens can be transferred to an unlimited number of participants. In our example, we are now going to make a transfer transaction to transfer 200 tokens to a new user called John. For that, we first need to create a new user and then do the transfer. The code below shows that.
+Tokens can be transferred to an unlimited number of participants. In this example, you are now going to make a transfer transaction to transfer 200 tokens to a new user called John. For that, you first need to create a new user and then do the transfer. The code below shows that.
 
 ```js
 const amountToSend = 200
 
 function transferTokens() {
+    // Receiver of some tokens
     const newUser = new BigchainDB.Ed25519Keypair()
 
+    // Get outputs of the transactions belonging the token creator. false argument to retrieve not spent outputs
     conn.listOutputs(tokenCreator.publicKey, 'false')
         .then((txs) => {
-            conn.getTransaction(txs[0].transaction_id)
-                .then((tx) => {
-                    console.log('the search found', tx)
-
-                    const createTranfer = BigchainDB.Transaction.makeTransferTransaction(
-                        tx, {
-                            tranferTo: 'john'
-                        }, [BigchainDB.Transaction.makeOutput(
-                                BigchainDB.Transaction.makeEd25519Condition(tokenCreator.publicKey), (tokensLeft - amountToSend).toString()),
-                            BigchainDB.Transaction.makeOutput(
-                                BigchainDB.Transaction.makeEd25519Condition(newUser.publicKey), amountToSend)
-                        ],
-                        0
-                    )
-                    const signedTransfer = BigchainDB.Transaction.signTransaction(createTranfer, tokenCreator.privateKey)
-                    conn.postTransaction(signedTransfer)
-                        .then(() => conn.pollStatusAndFetchTransaction(signedTransfer.id))
-                        .then(res => {
-                            tokensLeft -= amountToSend
-                            console.log('Transfer Transaction', signedTransfer.id, 'accepted')
-                        })
-                })
+            return conn.getTransaction(txs[0].transaction_id)
         })
+        // Just one transaction with outputs not being spent by tokenCreator. So txs[0]
+        .then((tx) => {
+            // Create transfer transaction
+            const createTranfer = BigchainDB.Transaction.makeTransferTransaction(
+                tx,
+                // Metadata (optional)
+                {
+                    tranferTo: 'john',
+                    tokensLeft: tokensLeft
+                },
+                // Output. Two outputs
+                [BigchainDB.Transaction.makeOutput(
+                        BigchainDB.Transaction.makeEd25519Condition(tokenCreator.publicKey), (tokensLeft - amountToSend).toString()),
+                    BigchainDB.Transaction.makeOutput(
+                        BigchainDB.Transaction.makeEd25519Condition(newUser.publicKey), amountToSend)
+                ],
+                // Index of the input being spent
+                0
+            )
+
+            // Sign the transaction with the tokenCreator key
+            const signedTransfer = BigchainDB.Transaction.signTransaction(createTranfer, tokenCreator.privateKey)
+
+            return conn.postTransaction(signedTransfer)
+        })
+        .then((signedTransfer) => conn.pollStatusAndFetchTransaction(signedTransfer.id))
+        .then(res => {
+            // Update tokensLeft
+            tokensLeft -= amountToSend
+            document.body.innerHTML += '<h3>Transfer transaction created</h3>';
+            document.body.innerHTML += res.id
+        })
+
 }
 ```
 You have now transferred 200 tokens to the user John. You could repeat the same with multiple other users.
-With `listOutputs` using `false` as the second argument you retrieved all the outputs that were not spent yet. Then, you queried for that transaction and made a transfer to John with it. Note however, that there is also a transaction back to `tokenCreator.publicKey`. That is related to BigchainDB's transaction model. It is designed in a way that all of the inputs have to be spent in a transaction. That means that if we send part of the `tokensLeft` (200 tokens) to John, we have to send the rest (9800 tokens) back to the `tokenCreator` to preserve that amount.
+With `listOutputs` using `false` as the second argument you retrieved all the outputs, belonging to the user `tokenCreator`, that were not spent yet. There will be just one output that accomplish this characteristics as when you transfer tokens to some other user, you are spending this output and giving the ownership to the other user. Then, you queried for that transaction and made a transfer to John with it. Note however, that there is also a transaction back to `tokenCreator.publicKey`. That is related to BigchainDB's transaction model. It is designed in a way that all of the inputs have to be spent in a transaction. That means that if you send part of the `tokensLeft` (200 tokens) to John, you have to send the rest (9800 tokens) back to the `tokenCreator` to preserve that amount.
 
 Note that in our example, the supply of your tokens was fixed and cannot be changed anymore after creation. So, you would need to clearly define for yourself, how many tokens you will need. However, BigchainDB does offer the option of refillable, divisible assets that allow for a more dynamic token supply. You can learn more about that [here](https://github.com/bigchaindb/bigchaindb/issues/1741).
 
