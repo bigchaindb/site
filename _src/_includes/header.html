@@ -1,4 +1,4 @@
-<header role="banner" class="header header--{{ page.url | replace: '/','' }}"
+<header role="banner" class="header header--{{ page.url | replace: '/','' }} header--{{ page.layout }}"
     {% if page.header %}
         {% if page.path contains '_guides' %}
         style="background-image:url('../{{ page.header }}')"

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1188" height="281" viewBox="0 0 1188 281">
-  <g fill="none" fill-rule="evenodd">
+  <g fill="none" fill-rule="evenodd" opacity=".7">
     <polygon fill="#5D6F82" points="1188 73.5 0 73.5 0 0 1188 0" transform="translate(0 206)"/>
     <g transform="translate(46.883 .18)">
       <path fill="#093749" d="M51.0810302,279 C30.9357077,262.19217 20.8630464,253.788255 20.8630464,253.788255 C20.8630464,253.788255 44.3381201,253.819672 91.2882674,253.882507 L120.590004,279 L51.0810302,279 Z" opacity=".2" transform="matrix(-1 0 0 1 141.453 0)"/>
