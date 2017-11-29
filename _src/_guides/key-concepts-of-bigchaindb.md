@@ -31,11 +31,11 @@ Every concept that we describe (e.g. inputs, outputs etc.) has a more detailed d
 
 =>> Insert infographic here
 
-Find out more about the data model behind our transaction model [here.] (https://docs.bigchaindb.com/projects/server/en/latest/data-models/transaction-model.html) 
+Find out more about the data model behind our transaction model [here.](https://docs.bigchaindb.com/projects/server/en/latest/data-models/transaction-model.html) 
 
 # Asset
 
-An asset can represent any physical or digital object from the real world. It can be a physical object like a car or a house or also a digital object like a customer order or an air mile. An asset can have one or multiple owners, but it can also be its own owner - think of e.g. an autonomous car or an IoT sensor that does transactions automatically. More information about the asset data model can be found here (https://docs.bigchaindb.com/projects/server/en/latest/data-models/asset-model.html). An asset always contains the data that is immutable, like in our example the colour and the registration number of a bicycle. Depending on the context, an asset can represent many different things. 
+An asset can represent any physical or digital object from the real world. It can be a physical object like a car or a house or also a digital object like a customer order or an air mile. An asset can have one or multiple owners, but it can also be its own owner - think of e.g. an autonomous car or an IoT sensor that does transactions automatically. More information about the asset data model can be found [here](https://docs.bigchaindb.com/projects/server/en/latest/data-models/asset-model.html). An asset always contains the data that is immutable, like in our example the colour and the registration number of a bicycle. Depending on the context, an asset can represent many different things. 
 
 ### An asset as a claim
 
@@ -70,14 +70,14 @@ Conceptually, an input is a pointer to an output of a previous transaction. It s
 # Output
 
 A transaction output specifies the conditions that need to be fulfilled to acquire ownership of a specific asset. For instance: to transfer a bicycle, a person needs to sign the transaction with her private key. This also implicitly contains the information that the public key associated with that private key is the current owner of the asset. Learn more about the data model of outputs [here.](https://docs.bigchaindb.com/projects/server/en/latest/data-models/inputs-outputs.html#outputs)
-Note that a transaction can also have multiple outputs. These are called divisible assets. To learn more about divisible assets, complete our [tutorial.](../tutorial-token-launch/) The output can also contain complex conditions (e.g. multiple signatures of multiple people) to acquire ownership. You can learn more about these cryptoconditions [here.] ( https://docs.bigchaindb.com/projects/server/en/latest/data-models/conditions.html)
+Note that a transaction can also have multiple outputs. These are called divisible assets. To learn more about divisible assets, complete our [tutorial.](../tutorial-token-launch/) The output can also contain complex conditions (e.g. multiple signatures of multiple people) to acquire ownership. You can learn more about these cryptoconditions [here.]( https://docs.bigchaindb.com/projects/server/en/latest/data-models/conditions.html)
 
 # Metadata
 
-The metadata field allows to add additional data to a transaction. This can be any type of data, e.g. the age of a bicycle, the kilometers driven etc. The good thing about the metadata is that it can be updated and changed with every transaction, therefore in contrast to the data in the asset field, the metadata is mutable in every transaction. Additionally, with the release of BigchainDB 1.3, we introduced the ability to query for metadata. Read more about that on our [blog.] (https://blog.bigchaindb.com/bigchaindb-version-1-3-7940cc60c767)
+The metadata field allows to add additional data to a transaction. This can be any type of data, e.g. the age of a bicycle, the kilometers driven etc. The good thing about the metadata is that it can be updated and changed with every transaction, therefore in contrast to the data in the asset field, the metadata is mutable in every transaction. Additionally, with the release of BigchainDB 1.3, we introduced the ability to query for metadata. Read more about that on our [blog.](https://blog.bigchaindb.com/bigchaindb-version-1-3-7940cc60c767)
 
 # Transaction ID
 
 The ID of a transaction is a hash that identifies a transaction in a unique way. It contains all the information about the transaction in a hashed way. Find out more about the cryptography BigchainDB uses [here.] (https://docs.bigchaindb.com/projects/server/en/latest/appendices/cryptography.html#hashes)
 
-That's it! Now you are familiar with our transaction model and you are ready to complete our first [tutorial] (../tutorial-car-telemetry-app/) and get started on BigchainDB!
+That's it! Now you are familiar with our transaction model and you are ready to complete our first [tutorial](../tutorial-car-telemetry-app/) and get started on BigchainDB!
