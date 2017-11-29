@@ -8,7 +8,7 @@
 
     <div class="row">
         {% assign guides = site.guides | sort: 'order' %}
-        {% for guide in guides limit: 4 %}
+        {% for guide in guides limit: 3 %}
             <article class="guide">
                 <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('/guides/{{ guide.header }}')" {% endif %}>
                     <h1 class="guide__title">{{ guide.title }}</h1>
