@@ -2,25 +2,34 @@
 layout: guide
 
 title: Key concepts of BigchainDB
-tagline: Understand the transaction model of BigchainDB (identity, inputs, outputs, assets, transactions).
+tagline: Get familiar with the transaction model of BigchainDB (inputs, outputs, assets, transactions).
 order: 1
----
 
-- Introduction: How do we structure data?
-- Explain asset-centric paradigm of BigchainDB
-- High-level components and relationship of components in a transaction => possibly illustrate with a graph, similar to CLI
-- Illustrate example we are going to use
+learn: >
+    - How BigchainDB's transaction model works
+
+    - What the individual components in a transaction represent
+
+    - What a CREATE transaction is
+    
+    - What a TRANSFER transaction is
+---
+Hi there! Welcome to the hitchiker guides to BigchainDB. We are looking forward to introduce you to the world of BigchainDB and show you, how you can create apps on BigchainDB! However, before diving into the tutorials, you should familiarize yourself with our transaction model. It will be the basis for all upcoming tutorials and apps. This guide provides a gentle introduction to our transaction model. 
+
+# About our transaction model
 
 One of the most important aspects to understand about BigchainDB is how we structure our data. Traditional SQL databases structure data in tables, so the fundamental primitive is a table. NoSQL databases extend that by using other formats to structure data (e.g. JSON, key-values etc.). At BigchainDB, we structure data as assets. Our key principle is that everything can be represented as an asset. An asset can characterize any physical or digital object that you can think of (e.g. a car, a house, a data set or an intellectual property right).
 
-At it’s core, an asset is a JSON document containing information of a particular object (e.g. type of car, vehicle registration number etc.), representing that object in the digital world. An asset is usually owned by someone (user) and this ownership can be transferred to another person or entity in a transaction. A transaction has an input and an output. BigchainDB is therefore a system to digitally track ownership and transactions of ownership of assets. Ownership does not necessarily mean legal ownership. It can also be e.g. “temporary” ownership, such as a logistics company temporarily holding a product while transporting it to a warehouse and then “transferring” this temporary ownership to the warehouse. Sounds complicated? Don’t worry. That’s what this guide is here for.
+These assets can be registered on BigchainDB by users in CREATE transactions and transferred (or updated) to other users in TRANSFER transactions. 
 
-The only thing we want you to understand now, is that BigchainDB takes an asset-centric view and that our primitives are assets, inputs, outputs and transactions (more on that later). While traditionally, we design applications focusing on business processes (e.g. apps for booking & processing client orders, apps for tracking delivery of products etc.), in BigchainDB we don’t focus on processes, but on assets (e.g. a client order can be an asset that is then tracked across its entire lifecycle), which are transferred from one user to the next user. This influences much of how we build applications.
+While traditionally, we design applications focusing on business processes (e.g. apps for booking & processing client orders, apps for tracking delivery of products etc.), in BigchainDB we don’t focus on processes, but on assets (e.g. a client order can be an asset that is then tracked across its entire lifecycle), which are transferred from one user to the next user. This switch in perspective from a process-centric towards an asset-centric view influences much of how we build applications.
 
-Maybe insert graphic
-Maybe introduce an example that we can use for the entire section?
+# Visualization of our transaction model
 
-Important: Every concept will contain links to the tutorials, where this concept is used and possibly also to the docs or blogposts for more details
+This infographic will help you understanding what CREATE and TRANSFER transactions are and what the individual components of a transaction represent (inputs, outputs, assets, metadata etc.). We will be using a simple real-life example: Martina digitally registers her bicycle on BigchainDB in a CREATE transaction and after some time transfers this bicycle to Stefan in a TRANSFER transaction. 
+Every concept that we describe (e.g. inputs, outputs etc.) has a more detailed description in the subsequent sections. 
+
+=>> Insert infographic here
 
 # Identity
 
