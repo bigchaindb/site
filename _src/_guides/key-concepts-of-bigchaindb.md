@@ -11,35 +11,35 @@ learn: >
     - What the individual components in a transaction represent
 
     - What a CREATE transaction is
-    
+
     - What a TRANSFER transaction is
 ---
-Hi there! Welcome to the hitchiker guides to BigchainDB. We are looking forward to introduce you to the world of BigchainDB and show you, how you can create apps on BigchainDB! However, before diving into the tutorials, you should familiarize yourself with our transaction model. It will be the basis for all upcoming tutorials and apps. This guide provides a gentle introduction to our transaction model. 
+Hi there! Welcome to the hitchiker guides to BigchainDB. We are looking forward to introduce you to the world of BigchainDB and show you, how you can create apps on BigchainDB! However, before diving into the tutorials, you should familiarize yourself with our transaction model. It will be the basis for all upcoming tutorials and apps. This guide provides a gentle introduction to our transaction model.
 
 # About our transaction model
 
 One of the most important aspects to understand about BigchainDB is how we structure our data. Traditional SQL databases structure data in tables, so the fundamental primitive is a table. NoSQL databases extend that by using other formats to structure data (e.g. JSON, key-values etc.). At BigchainDB, we structure data as assets. Our key principle is that everything can be represented as an asset. An asset can characterize any physical or digital object that you can think of (e.g. a car, a house, a data set or an intellectual property right).
 
-These assets can be registered on BigchainDB by users in CREATE transactions and transferred (or updated) to other users in TRANSFER transactions. 
+These assets can be registered on BigchainDB by users in CREATE transactions and transferred (or updated) to other users in TRANSFER transactions.
 
 While traditionally, we design applications focusing on business processes (e.g. apps for booking & processing client orders, apps for tracking delivery of products etc.), in BigchainDB we don’t focus on processes, but on assets (e.g. a client order can be an asset that is then tracked across its entire lifecycle), which are transferred from one user to the next user. This switch in perspective from a process-centric towards an asset-centric view influences much of how we build applications.
 
 # Visualization of our transaction model
 
-This infographic will help you understanding what CREATE and TRANSFER transactions are and what the individual components of a transaction represent (inputs, outputs, assets, metadata etc.). We will be using a simple real-life example: Martina digitally registers her bicycle on BigchainDB in a CREATE transaction and after some time transfers this bicycle to Stefan in a TRANSFER transaction. 
-Every concept that we describe (e.g. inputs, outputs etc.) has a more detailed description in the subsequent sections. 
+This infographic will help you understanding what CREATE and TRANSFER transactions are and what the individual components of a transaction represent (inputs, outputs, assets, metadata etc.). We will be using a simple real-life example: Martina digitally registers her bicycle on BigchainDB in a CREATE transaction and after some time transfers this bicycle to Stefan in a TRANSFER transaction.
+Every concept that we describe (e.g. inputs, outputs etc.) has a more detailed description in the subsequent sections.
 
-=>> Insert infographic here
+![](/assets/img/graphic.png)
 
-Find out more about the data model behind our transaction model [here.](https://docs.bigchaindb.com/projects/server/en/latest/data-models/transaction-model.html) 
+Find out more about the data model behind our transaction model [here.](https://docs.bigchaindb.com/projects/server/en/latest/data-models/transaction-model.html)
 
 # Asset
 
-An asset can represent any physical or digital object from the real world. It can be a physical object like a car or a house or also a digital object like a customer order or an air mile. An asset can have one or multiple owners, but it can also be its own owner - think of e.g. an autonomous car or an IoT sensor that does transactions automatically. More information about the asset data model can be found [here](https://docs.bigchaindb.com/projects/server/en/latest/data-models/asset-model.html). An asset always contains the data that is immutable, like in our example the colour and the registration number of a bicycle. Depending on the context, an asset can represent many different things. 
+An asset can represent any physical or digital object from the real world. It can be a physical object like a car or a house or also a digital object like a customer order or an air mile. An asset can have one or multiple owners, but it can also be its own owner - think of e.g. an autonomous car or an IoT sensor that does transactions automatically. More information about the asset data model can be found [here](https://docs.bigchaindb.com/projects/server/en/latest/data-models/asset-model.html). An asset always contains the data that is immutable, like in our example the colour and the registration number of a bicycle. Depending on the context, an asset can represent many different things.
 
 ### An asset as a claim
 
-An asset can represent an ownership claim for a particular asset, e.g. it represents a claim that user XYZ owns the bicycle with the number XYZ. This can be valid for any type of ownership. 
+An asset can represent an ownership claim for a particular asset, e.g. it represents a claim that user XYZ owns the bicycle with the number XYZ. This can be valid for any type of ownership.
 
 ### An asset as a token
 
@@ -51,17 +51,17 @@ An asset can also be a versioned document with the version state in the metadata
 
 ### An asset as a time series
 
-An asset can also represent a time series of data. For instance, an IoT sensor records its own data. The IoT sensor is the asset and every submission of its data (e.g. temperature) is represented as an update in the metadata with the latest temperature that the IoT sensor measured. 
+An asset can also represent a time series of data. For instance, an IoT sensor records its own data. The IoT sensor is the asset and every submission of its data (e.g. temperature) is represented as an update in the metadata with the latest temperature that the IoT sensor measured.
 
 ### An asset as a finite state machine
 
-An asset can also be a state machine where the state is represented in the metadata. Each time the machine changes it state, there is a transaction (possibility to listen to it with the websocket) changing the metadata to the state. 
+An asset can also be a state machine where the state is represented in the metadata. Each time the machine changes it state, there is a transaction (possibility to listen to it with the websocket) changing the metadata to the state.
 
 ### An asset as a permission (RBAC)
 
 Assets could be also: roles, users, messages, (and anything which can have multiple instances in a scenario — vehicles, reports, and so on). Find more information on our [blog.](https://blog.bigchaindb.com/role-based-access-control-for-bigchaindb-assets-b7cada491997)
 
-As you can see, there are almost no limits with respect to what an asset can represent. 
+As you can see, there are almost no limits with respect to what an asset can represent.
 
 # Input
 
