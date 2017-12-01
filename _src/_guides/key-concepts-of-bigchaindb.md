@@ -26,7 +26,7 @@ While traditionally, we design applications focusing on business processes (e.g.
 This infographic will help you understanding what CREATE and TRANSFER transactions are and what the individual components of a transaction represent (inputs, outputs, assets, metadata etc.). We will be using a simple real-life example: Martina digitally registers her bicycle on BigchainDB in a CREATE transaction and after some time transfers this bicycle to Stefan in a TRANSFER transaction.
 Every concept that we describe (e.g. inputs, outputs etc.) has a more detailed description in the subsequent sections.
 
-![](/assets/img/graphic.png)
+![](../diagram.svg)
 
 The data model of transactions is explained in our [transaction model.](https://docs.bigchaindb.com/projects/server/en/latest/data-models/transaction-model.html)
 
