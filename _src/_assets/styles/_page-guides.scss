@@ -232,3 +232,13 @@ li.toc-h3 {
         }
     }
 }
+
+.image--create-transfer {
+    max-width: calc(100% + 1rem) !important; //stylelint-disable-line declaration-no-important
+    margin-left: -1rem;
+
+    @media ($screen-sm) {
+        max-width: calc(100% + 1.5rem) !important; //stylelint-disable-line declaration-no-important
+        margin-left: -1.5rem;
+    }
+}
