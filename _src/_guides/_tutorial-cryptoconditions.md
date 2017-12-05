@@ -1,8 +1,8 @@
 ---
 layout: guide
 
-title: "Tutorial: Pull request with different conditions for reviews"
-tagline: Create a pull request in GitHub using signatures for reviews, assignments and merges.
+title: "Tutorial: How to create a pull request with different conditions for reviews"
+tagline: Learn how to use crypto-conditions for pull requests in GitHub using signatures for reviews, assignments and merges.
 header: header-crypto.jpg
 order: 4
 
@@ -12,21 +12,20 @@ learn: >
 
 ---
 
-Hi there! Welcome to our next tutorial about divisible assets. For this tutorial, we assume that you are familiar with the BigchainDB primitives (assets, inputs, outputs, transactions etc.). If you are not, familiarize yourself with the [Key concepts of BigchainDB](../key-concepts-of-bigchaindb/). We also assume that you have completed our [first tutorial](../tutorial-car-telemetry-app/).
+Hi there! Welcome to our next tutorial about crypto-conditions. For this tutorial, we assume that you are familiar with the BigchainDB primitives (assets, inputs, outputs, transactions etc.). If you are not, familiarize yourself with the [Key concepts of BigchainDB](../key-concepts-of-bigchaindb/). We also assume that you have completed our [first tutorial](../tutorial-car-telemetry-app/) and have a basic understanding of [crypto-conditions.](https://the-ipdb-transaction-spec.readthedocs.io/en/latest/transaction-components/conditions.html) 
 
 
 # About GitHub issues and pull requests
 
-GitHub gives you the possibility nowadays of signing commits. Leveraging that, you could use cryptoconditions to create different conditions before merging a pull request. Let's imagine you belong to a very cool startup SmartAntsLabs based in Berlin that works with open-source projects. So you have discovered a bug and you want to report it. You create an issue, and you except a pull request to solve the issue. For that you expect the contribution for this pull request of the developer team. At least one of them should create a commit in the PR. Then once that happens and someone decide that the PL is ready he/she assign it to the QA team. In the QA team let's imagine there is needed 3 total votes. Then once that happens it could be send it to the production where just 1 signature out of 3 people who belong to this team is needed to merge the pull request.
+The interaction among developers on Github is a prime example of collaboration, where multiple parties usually need to coordinate, align and approve different suggestions. This makes it a useful example for the potential usage of a BigchainDB feature: crypto-conditions. Crypto-conditions are a tool that allows to design complex signature schemes, where multiple parties need to sign to approve, respectively trigger and event.
+Today, GitHub gives you the possibility of signing your commits before publishing that. Leveraging that, you could use crypto-conditions to create different conditions that need to be fulfilled before merging a pull request (PR). 
+For the sake of the tutorial, think of the following setting: let's imagine you belong to a very cool startup called "SmartAntsLabs" based in Berlin. The start-up works with open-source projects. Now you have discovered a bug and you want to report it. You create an issue on Github and you accept a PR to solve the issue. You expect the developer team to make a contribution to this PR. At least one of them should create a commit in the PR. Once that happens and the PR is ready, someone needs to assign it to the QA team. In the QA team let's imagine there is needed 3 total votes. Then once that happens it could be send it to the production where just 1 signature out of 3 people who belong to this team is needed to merge the pull request.
 
 {% include_relative _setup.md %}
 
-First of all we encourage you to have a look at cryptoconditions to understand them better
-(TODO: LINK)
-
-So first things first. You need to create an issue GitHub asset representation in BigchainDB. But it will have special conditions, as in the output you should indicate that just one signature (one private key) is needed in order to send the Pull request associated with it to the QA team. So imagine there are 3 developers in your SmartAntsLabs startup.
-
 # Create threshold-sha-256 condition
+
+So, first things first. Initially, you need to represent the Github issue as an asset in BigchainDB. But it will have special conditions, as in the output you should indicate that just one signature (one private key) is needed in order to send the Pull request associated with it to the QA team. So imagine there are 3 developers in your SmartAntsLabs startup.
 
 ```js
 //Users will be needed to create the cryptoconditions
