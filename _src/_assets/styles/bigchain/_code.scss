@@ -67,3 +67,47 @@ pre {
         border-radius: 0;
     }
 }
+
+//
+// Clipboard button
+//
+.highlight {
+    position: relative;
+
+    .btn--clipboard,
+    .success__text {
+        position: absolute;
+        top: .1rem;
+        right: .1rem;
+    }
+
+    .success__text {
+        top: 2rem;
+        right: -1.5rem;
+        font-size: $font-size-xs;
+    }
+}
+
+.btn--clipboard {
+    padding: 0 $spacer / 2;
+    box-shadow: none;
+    background: $brand-main-gray;
+    color: $brand-main-gray-light;
+    outline: 0;
+
+    svg {
+        fill: currentColor;
+        width: $font-size-sm;
+        height: $font-size-sm;
+    }
+
+    &:hover,
+    &:focus {
+        transform: none;
+        background: lighten($brand-main-gray, 5%);
+    }
+
+    &.success {
+        background: $brand-success;
+    }
+}

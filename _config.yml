@@ -101,6 +101,7 @@ defaults:
       values:
         toc: true
         image: share-image-guides.png
+        js: page-guides.min.js
 
 # Plugins
 # --------------------
