@@ -28,7 +28,7 @@ This infographic will help you understanding what `CREATE` and `TRANSFER` transa
 
 Every concept that we describe (e.g. inputs, outputs etc.) has a more detailed description in the subsequent sections.
 
-<img class="image--create-transfer" src="../diagram.svg" alt="BigchainDB CREATE and TRANSFER transactions" />
+<img class="image--create-transfer" src="../diagram.png" srcset="../diagram@2x.png 2x, ../diagram.png 1x" alt="BigchainDB CREATE and TRANSFER transactions" />
 
 The data model of transactions is explained in our [transaction model](https://the-ipdb-transaction-spec.readthedocs.io/en/latest/introduction.html).
 
