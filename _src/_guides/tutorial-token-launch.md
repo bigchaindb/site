@@ -37,7 +37,7 @@ let tokensLeft
 function tokenLaunch() {
     // Construct a transaction payload
     const tx = BigchainDB.Transaction.makeCreateTransaction({
-            token: 'PPSO tokens',
+            token: 'TT (Tutorial Tokens)',
             number_tokens: nTokens
         },
         // Metadata field, contains information about the transaction itself
@@ -121,7 +121,7 @@ function transferTokens() {
 }
 ```
 You have now transferred 200 tokens to the user John. You could repeat the same with multiple other users.
-With `listOutputs` using `false` as the second argument you retrieved all the outputs, belonging to the user `tokenCreator`, that were not spent yet. There will be just one output that accomplish this characteristics as when you transfer tokens to some other user, you are spending this output and giving the ownership to the other user. Then, you queried for that transaction and made a transfer to John with it. Note however, that there is also a transaction back to `tokenCreator.publicKey`. That is related to BigchainDB's transaction model. It is designed in a way that all of the inputs have to be spent in a transaction. That means that if you send part of the `tokensLeft` (200 tokens) to John, you have to send the rest (9800 tokens) back to the `tokenCreator` to preserve that amount.
+With `listOutputs` using `false` as the second argument you retrieved all the outputs, belonging to the user `tokenCreator`, that were not spent yet. There will be just one output that accomplish this characteristics as when you transfer tokens to some other user, you are spending this output and giving the ownership to the other user. Then, you queried for that transaction and made a transfer to John with it. Note however, that there is also a transaction back to `tokenCreator.publicKey`, as you need to 'give back change' due to BigchainDB's transaction model. It is designed in a way that all of the inputs have to be spent in a transaction. That means that if you send part of the `tokensLeft` (200 tokens) to John, you have to send the rest (9800 tokens) back to the `tokenCreator` to preserve that amount.
 
 Note that in our example, the supply of your tokens was fixed and cannot be changed anymore after creation. So, you would need to clearly define for yourself, how many tokens you will need. However, BigchainDB does offer the option of refillable, divisible assets that allow for a more dynamic token supply. You can learn more about that [here](https://github.com/bigchaindb/bigchaindb/issues/1741).
 
