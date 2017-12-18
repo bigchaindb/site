@@ -46,14 +46,16 @@ function tokenLaunch() {
             datetime: new Date().toString()
         },
         // Output. Divisible asset, include nTokens as parameter
-        [BigchainDB.Transaction.makeOutput(BigchainDB.Transaction.makeEd25519Condition(tokenCreator.publicKey), nTokens.toString())],
+        [BigchainDB.Transaction.makeOutput(BigchainDB.Transaction
+          .makeEd25519Condition(tokenCreator.publicKey), nTokens.toString())],
         tokenCreator.publicKey
     )
 
-    // Sign the transaction with private key of the creator. Will be the owner of the asset
-    const txSigned = BigchainDB.Transaction.signTransaction(tx, tokenCreator.privateKey)
+    // Sign the transaction with the private key of the token creator
+    const txSigned = BigchainDB.Transaction
+      .signTransaction(tx, tokenCreator.privateKey)
 
-    // Send the transaction to BigchainDB
+    // Send the transaction off to BigchainDB
     conn.postTransaction(txSigned)
         .then(() => conn.pollStatusAndFetchTransaction(txSigned.id))
         .then(res => {
@@ -77,44 +79,52 @@ Tokens can be transferred to an unlimited number of participants. In this exampl
 const amountToSend = 200
 
 function transferTokens() {
-    // Receiver of some tokens
+    // User who will receive of part of the tokens
     const newUser = new BigchainDB.Ed25519Keypair()
 
-    // Get outputs of the transactions belonging the token creator. false argument to retrieve not spent outputs
+    // Get outputs of the transactions belonging the token creator.
+    // false argument to retrieve not spent outputs
     conn.listOutputs(tokenCreator.publicKey, 'false')
         .then((txs) => {
+            // Just one transaction with outputs not being spent by tokenCreator.
+            // So txs[0]
             return conn.getTransaction(txs[0].transaction_id)
         })
-        // Just one transaction with outputs not being spent by tokenCreator. So txs[0]
         .then((tx) => {
             // Create transfer transaction
-            const createTranfer = BigchainDB.Transaction.makeTransferTransaction(
+            const createTranfer = BigchainDB.Transaction.makeTransferTransaction
+            (
                 tx,
                 // Metadata (optional)
                 {
                     tranferTo: 'john',
                     tokensLeft: tokensLeft
                 },
-                // Output. Two outputs
+                // Output. Two outputs. The hole input must be spent
                 [BigchainDB.Transaction.makeOutput(
-                        BigchainDB.Transaction.makeEd25519Condition(tokenCreator.publicKey), (tokensLeft - amountToSend).toString()),
+                        BigchainDB.Transaction
+                        .makeEd25519Condition(tokenCreator.publicKey),
+                        (tokensLeft - amountToSend).toString()),
                     BigchainDB.Transaction.makeOutput(
-                        BigchainDB.Transaction.makeEd25519Condition(newUser.publicKey), amountToSend)
+                        BigchainDB.Transaction
+                        .makeEd25519Condition(newUser.publicKey), amountToSend)
                 ],
                 // Index of the input being spent
                 0
             )
 
             // Sign the transaction with the tokenCreator key
-            const signedTransfer = BigchainDB.Transaction.signTransaction(createTranfer, tokenCreator.privateKey)
+            const signedTransfer = BigchainDB.Transaction
+            .signTransaction(createTranfer, tokenCreator.privateKey)
 
             return conn.postTransaction(signedTransfer)
         })
-        .then((signedTransfer) => conn.pollStatusAndFetchTransaction(signedTransfer.id))
+        .then((signedTransfer) => conn
+        .pollStatusAndFetchTransaction(signedTransfer.id))
         .then(res => {
             // Update tokensLeft
             tokensLeft -= amountToSend
-            document.body.innerHTML += '<h3>Transfer transaction created</h3>';
+            document.body.innerHTML += '<h3>Transfer transaction created</h3>'
             document.body.innerHTML += res.id
         })
 
