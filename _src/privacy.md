@@ -35,8 +35,6 @@ We will not share or sell the identifiable personal information we collect or ge
 ​
 We may share non-personal or aggregate information, such as usage statistics for the Site.
 ​
-We may share personal information with the [Interplanetary Database Foundation e.V.](https://ipdb.foundation) ("IPDB") for the purpose of allowing you to use the IPDB network. Information shared with IPDB will be subject to its [Privacy Policy](https://ipdb.foundation).
-​
 ### Cookies
 
 The Site uses Google Analytics, which provides us information about our users and how they use the Site. We use this information to make the Site better.

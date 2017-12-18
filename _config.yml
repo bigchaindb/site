@@ -5,7 +5,7 @@
 name:                   BigchainDB
 description:            'The scalable blockchain database.'
 url:                    https://www.bigchaindb.com
-ipdb_api_url:           https://test.bigchaindb.com
+bigchaindb_api_url:     https://test.bigchaindb.com
 
 # set to `true` to make hiring link appear in main menu
 hiring:                 false
