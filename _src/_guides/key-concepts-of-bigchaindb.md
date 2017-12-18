@@ -2,8 +2,7 @@
 layout: guide
 
 title: Key concepts of BigchainDB
-tagline: Get familiar with our transaction model 
-Assets, Inputs, Outputs, and Transactions
+tagline: "Get familiar with our transaction model (Assets, Inputs, Outputs, and Transactions)"
 order: 1
 
 learn: >
