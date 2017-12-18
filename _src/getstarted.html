@@ -90,7 +90,7 @@ from bigchaindb_driver.crypto import generate_keypair
 
 bdb = BigchainDB(
     '{{ site.ipdb_api_url }}',
-    headers={'app_id': 'Get credentials from developers.ipdb.io',
+    headers={'app_id': 'Get credentials from testnet.bigchaindb.com',
              'app_key': 'by signing up and going to your Applications screen'})
 alice = generate_keypair()
 tx = bdb.transactions.prepare(
@@ -114,7 +114,7 @@ const driver = require('bigchaindb-driver')
 const alice = new driver.Ed25519Keypair()
 const conn = new driver.Connection(
     '{{ site.ipdb_api_url }}/api/v1/',
-    { app_id: 'Get credentials from developers.ipdb.io',
+    { app_id: 'Get credentials from testnet.bigchaindb.com',
       app_key: 'by signing up and going to your Applications screen' })
 const tx = driver.Transaction.makeCreateTransaction(
     { message: 'Blockchain all the things!' },

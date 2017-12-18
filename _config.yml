@@ -3,9 +3,9 @@
 # The Basics
 # --------------------
 name:                   BigchainDB
-description:            'The scalable blockchain database powering IPDB.'
+description:            'The scalable blockchain database.'
 url:                    https://www.bigchaindb.com
-ipdb_api_url:           https://test.ipdb.io
+ipdb_api_url:           https://test.bigchaindb.com
 
 # set to `true` to make hiring link appear in main menu
 hiring:                 false
