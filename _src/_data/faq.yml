@@ -45,16 +45,14 @@
 
     One option is to install a single-node BigchainDB cluster on your local machine. The [Quickstart](https://docs.bigchaindb.com/projects/server/en/latest/quickstart.html) page in the BigchainDB Server docs has installation instructions.
 
-    Another option is to connect to an existing BigchainDB cluster, such as the [IPDB](https://ipdb.io) Test Network.
+    Another option is to connect to an existing BigchainDB cluster, such as the [BigchainDB Test Network](https://testnet.bigchaindb.com).
 
     Once you have a BigchainDB cluster to connect to, you can communicate with it via the BigchainDB HTTP API and the WebSocket Event Stream API. To find a list of all tools and libraries, visit the [Get Started](https://www.bigchaindb.com/getstarted/#drivers) page.
 
 
 - question: Is there a public instance of BigchainDB?
   answer: |
-    [IPDB](https://ipdb.io) —the Interplanetary Database —is a public BigchainDB network. It’s made up of two parts: a blockchain database for the world computer and a foundation that guides it.
-
-    If you’re not looking to set up your own federation, you can sign up for IPDB and connect instantly, no installation needed. The IPDB caretakers will handle running a BigchainDB network for you.
+    If you’re not looking to set up your own federation, you can sign up for [BigchainDB Test Network](https://testnet.bigchaindb.com) and connect instantly, no installation needed. We will handle running a BigchainDB network for you.
 
 
 - question: Can I get a commercial license for BigchainDB?
