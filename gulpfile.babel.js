@@ -242,10 +242,7 @@ export const fonts = () => src(SRC + '_assets/fonts/**/*')
 //
 // Zip up media kit
 //
-export const mediakit = () => src([
-        SRC + 'mediakit/**/*'],
-        { base: SRC }
-    )
+export const mediakit = () => src(SRC + 'mediakit/**/*', { base: SRC })
     .pipe($.zip('mediakit.zip'))
     .pipe(dest(DIST))
 
