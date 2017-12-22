@@ -343,7 +343,8 @@ const deployBanner = (done) => {
 // `gulp build` is the development build
 // `gulp build --production` is the production build
 //
-export const build = series(buildBanner, clean, jekyll, parallel(html, css, js, images, fonts, svg, mediakit), rev, revReplace, criticalCss)
+//export const build = series(buildBanner, clean, jekyll, parallel(html, css, js, images, fonts, svg, mediakit), rev, revReplace, criticalCss)
+export const build = series(buildBanner, clean, jekyll, parallel(html, css, js, images, fonts, svg), criticalCss)
 
 //
 // Build site, run server, and watch for file changes
