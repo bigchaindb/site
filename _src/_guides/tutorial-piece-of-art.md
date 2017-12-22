@@ -2,8 +2,8 @@
 ---
 layout: guide
 
-title: "Tutorial: How to create a digital track of a piece of art"
-tagline: Build a digital track of a famous paint that you own
+title: "Tutorial: How to create a digital record of a piece of art"
+tagline: Build a digital certificate of a famous painting that you own
 header: header-car.jpg
 order: 2
 
@@ -21,9 +21,9 @@ Hi there! Welcome to our first tutorial! For this tutorial, we assume that you a
 
 # About digital object
 
-We are moving towards an era where the Internet of Things is becoming real. Cars become more connected, devices equipped with sensors can communicate their data, and objects become smarter and smarter. This triggers the need for a digital representation of these devices to store their data in a safe location and to have a complete audit trail of their activity. This is the core idea of the digital twin of an object.
+We are moving towards an era where every physical object has a digital representation in a database. This can be in the form of a certificate, a simple entry in a database or another form of digital footprint. In the past, this used to be the paper trail associated with the purchase of a car, a painting or any other type of asset. Today, digital is slowly replacing analog in most aspects of our life. Thanks to advances in cryptography, we are reaching a point where even ownership claims of a specific object don't need to be a signed paper certificate anymore. This allows digitization to move to a new level. BigchainDB as a solution is suited perfectly to act as a digital asset registration and tracking tool.  
 
-BigchainDB is an ideal solution to create digital twins of smart devices. In this tutorial, you will learn how to build a simple and basic version of a digital twin of your car, which allows its owner to store and update the mileage of the car.
+Using the example of the digital registration of a famous painting you own, in this tutorial you will learn how to register an asset on BigchainDB and how to digitally transfer the ownership of this asset to someone else. The example is for illustrative purposes. For a real life application, there would be additional components that would need to be included. 
 
 Let's get started!
 
@@ -31,7 +31,7 @@ Let's get started!
 
 # Create a key pair
 
-In BigchainDB, users are represented as a private and public key pair. In our case, a key pair for Alice will be created. Alice will be the owner of the car, and she will be the only one able to update the mileage of the car. Using her public key, anyone can also verify that Alice is the creator of the car.
+Before starting, we need to create a user in BigchainDB. In BigchainDB, users are represented as a private and public key pair. In our case, a key pair for Alice will be created. Alice will be the owner of the painting, and she will be the only one able to make changes to the digital representation of the painting. Using her public key, anyone can also verify that Alice is the owner of the painting.
 
 You can generate a key pair from a seed phrase using the BIP39 library, so you will just need to remember this particular seed phrase. The code below illustrates that.
 
@@ -41,9 +41,9 @@ const alice = new BigchainDB.Ed25519Keypair(bip39.mnemonicToSeed('seedPhrase').s
 
 # Digital registration of an asset on BigchainDB
 
-After having generated a key pair, you can create transactions in BigchainDB, so you can start registering your paint in BigchainDB. This corresponds to an asset creation. In our case, an asset will represent an object in real life, namely a paint. This asset will live in BigchainDB forever and there is no possibility to delete it. This is the immutability property of blockchain technology.
+Now, let's assume that Alice is extremely lucky and gets to acquire the famous painting "Las Meninas" by the Spanish painter Diego Velázquez at a fantastic price during an auction held by the Spanish museum "museo nacional del prado". Now, she wants to ensure that she can digitally certify that she is the owner of this painting. For this reason, she wants to register the painting as an asset on BigchainDB to have an immutable claim. This corresponds to a CREATE transaction in BigchainDB. Using her key pair, Alice can create an asset on BigchainDB. In our case, the asset will represent an object in real life, namely the painting "Las Meninas". This asset will live in BigchainDB forever and there is no possibility to delete. 
 
-The first thing needed is the definition of the asset field that represents the car. It has a JSON format:
+The first step required is the definition of the asset field that represents the painting. This field contains the data about the asset that is immutable. It has a JSON format:
 
 ```js
 const paint = {
@@ -54,7 +54,7 @@ const paint = {
 }
 ```
 
-As a next step, you need to generate a `CREATE` transaction to link the defined asset to the user Alice. There are three steps to post this transaction in BigchainDB, first you create it, then sign it and then send it. There are different methods for each step:
+As a next step, you need to generate a `CREATE` transaction to link the defined asset to the user Alice. There are three steps to post this transaction in BigchainDB. First you create it, then sign it and then send it. There are different methods for each step. Here, we are illustrating one of them:
 
 ```js
 function createPaint() {
@@ -62,11 +62,10 @@ function createPaint() {
     const txCreateCar = BigchainDB.Transaction.makeCreateTransaction(
         // Asset field
         {
-            ...paint,
+            ...painting,
         },
         // Metadata field, contains information about the transaction itself
         // (can be `null` if not needed)
-        // Initialize the mileage with 0 km
         {
             datetime: new Date().toString(),
             location: 'Madrid',
@@ -81,7 +80,7 @@ function createPaint() {
         // Issuers
         alice.publicKey
     )
-    // The owner of the paint signs the transaction
+    // The owner of the painting signs the transaction
     const txSigned = BigchainDB.Transaction.signTransaction(txCreateCar,
         alice.privateKey)
 
@@ -92,19 +91,19 @@ function createPaint() {
         .then(res => {
           document.body.innerHTML +='<h3>Transaction created</h3>';
           document.body.innerHTML +=txSigned.id
-          // txSigned.id corresponds to the asset id of the car
+          // txSigned.id corresponds to the asset id of the painting
         })
 }
 ```
 
-Now you have digitally registered the car on BigchainDB, respectively in our case on IPDB. `txSigned.id` is an id that uniquely identifies your asset. Note that the metadata field is used to record values along with the transaction, as every transaction can have new metadata.
+Now Alice has digitally registered her painting on BigchainDB. `txSigned.id` is an id that uniquely identifies your asset. Note that the metadata field is used to record values along with the transaction, as every transaction can have new metadata. This is a field that can be different in every transaction. 
 
 Once a transaction ends up in a decided-valid block, it's "etched into stone". There's no changing it, no deleting it. The asset is registered now and cannot be deleted. However, the usage of the metadata field allows you to do updates in the asset. For this, you can use `TRANSFER` transactions (with their arbitrary metadata) to store any type of information, including information that could be interpreted as changing an asset (if that's how you want it to be interpreted).
 
 
 # Transfer an asset on BigchainDB
 
-Since an update of the mileage of a car does not imply any change in the ownership, your transfer transaction will simply be a transfer transaction with the previous owner (Alice) as beneficiary, but with new metadata in the transaction. So, technically, Alice is transferring the car to herself and just adding additional, new information to that transaction.
+Now, let's assume Alice has sold her painting in a good deal to someone else. Since an update of the mileage of a car does not imply any change in the ownership, your transfer transaction will simply be a transfer transaction with the previous owner (Alice) as beneficiary, but with new metadata in the transaction. So, technically, Alice is transferring the car to herself and just adding additional, new information to that transaction.
 
 Before creating the transfer transaction, you need to search for the last transaction with the asset id, as you will transfer this specific last transaction:
 
