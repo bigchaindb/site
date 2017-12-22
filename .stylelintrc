@@ -2,6 +2,7 @@
     "extends": "stylelint-config-bigchaindb",
     "rules": {
         "selector-max-id": 1,
-        "selector-no-qualifying-type": null
+        "selector-no-qualifying-type": null,
+        "no-descending-specificity": null
     }
 }
