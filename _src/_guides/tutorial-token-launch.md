@@ -45,7 +45,7 @@ function tokenLaunch() {
         {
             datetime: new Date().toString()
         },
-        // Output. Divisible asset, include nTokens as parameter
+        // Output: Divisible asset, include nTokens as parameter
         [BigchainDB.Transaction.makeOutput(BigchainDB.Transaction
           .makeEd25519Condition(tokenCreator.publicKey), nTokens.toString())],
         tokenCreator.publicKey
