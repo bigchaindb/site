@@ -8,18 +8,20 @@ header: header-car.jpg
 order: 2
 
 learn: >
-    - How BigchainDB can be used to record dynamic parameters of an asset
 
     - How assets can be used on BigchainDB to represent real objects
 
     - How to make a `CREATE` transaction to digitally register an asset on BigchainDB
 
-    - How asset to create `TRANSFER` transactions to change the ownership of an asset in BigchainDB
+    - How to create `TRANSFER` transactions to change the ownership of an asset in BigchainDB
+    
+    - How BigchainDB can be used to record dynamic parameters of an asset
+    
 ---
 
 Hi there! Welcome to our first tutorial! For this tutorial, we assume that you are familiar with the BigchainDB primitives (assets, inputs, outputs, transactions etc.). If you are not, familiarize yourself with [Key concepts of BigchainDB](../key-concepts-of-bigchaindb/).
 
-# About digital object
+# About digital representations of assets
 
 We are moving towards an era where every physical object has a digital representation in a database. This can be in the form of a certificate, a simple entry in a database or another form of digital footprint. In the past, this used to be the paper trail associated with the purchase of a car, a painting or any other type of asset. Today, digital is slowly replacing analog in most aspects of our life. Thanks to advances in cryptography, we are reaching a point where even ownership claims of a specific object don't need to be a signed paper certificate anymore. This allows digitization to move to a new level. BigchainDB as a solution is suited perfectly to act as a digital asset registration and tracking tool.  
 
@@ -41,7 +43,7 @@ const alice = new BigchainDB.Ed25519Keypair(bip39.mnemonicToSeed('seedPhrase').s
 
 # Digital registration of an asset on BigchainDB
 
-Now, let's assume that Alice is extremely lucky and gets to acquire the famous painting "Las Meninas" by the Spanish painter Diego Velázquez at a fantastic price during an auction held by the Spanish museum "museo nacional del prado". Now, she wants to ensure that she can digitally certify that she is the owner of this painting. For this reason, she wants to register the painting as an asset on BigchainDB to have an immutable claim. This corresponds to a CREATE transaction in BigchainDB. Using her key pair, Alice can create an asset on BigchainDB. In our case, the asset will represent an object in real life, namely the painting "Las Meninas". This asset will live in BigchainDB forever and there is no possibility to delete. 
+Now, let's assume that Alice is extremely lucky and gets to acquire the famous painting "Las Meninas" by the Spanish painter Diego Velázquez at a fantastic price during an auction held by the Spanish museum "museo nacional del prado". Now, she wants to ensure that she can digitally certify that she is the owner of this painting. For this reason, she wants to register the painting as an asset on BigchainDB to have an immutable claim. This corresponds to a CREATE transaction in BigchainDB. Using her key pair, Alice can create an asset on BigchainDB. In our case, the asset will represent an object in real life, namely the painting "Las Meninas". This asset will live in BigchainDB forever and there is no possibility to delete it. 
 
 The first step required is the definition of the asset field that represents the painting. This field contains the data about the asset that is immutable. It has a JSON format:
 
@@ -70,8 +72,8 @@ function createPaint() {
             datetime: new Date().toString(),
             location: 'Madrid',
             value: {
-              value_eur: '2500000€',
-              value_btc: '220',
+              value_eur: '25000000€',
+              value_btc: '2200',
             }
         },
         // Output. For this case we create a simple Ed25519 condition
@@ -96,26 +98,25 @@ function createPaint() {
 }
 ```
 
-Now Alice has digitally registered her painting on BigchainDB. `txSigned.id` is an id that uniquely identifies your asset. Note that the metadata field is used to record values along with the transaction, as every transaction can have new metadata. This is a field that can be different in every transaction. 
+Now Alice has digitally registered her painting on BigchainDB. Alice's public key appears in the output, specifying that she is the owner of the painting. `txSigned.id` is an id that uniquely identifies your asset (your asset id). Note that the metadata field is used to record values along with the transaction (e.g. the price of the painting). This is a field that can be different in every transaction (as every transaction can have different metadata, because e.g. the price of the painting changes).
 
 Once a transaction ends up in a decided-valid block, it's "etched into stone". There's no changing it, no deleting it. The asset is registered now and cannot be deleted. However, the usage of the metadata field allows you to do updates in the asset. For this, you can use `TRANSFER` transactions (with their arbitrary metadata) to store any type of information, including information that could be interpreted as changing an asset (if that's how you want it to be interpreted).
 
+# Transfer of an asset on BigchainDB
 
-# Transfer an asset on BigchainDB
+Now, let's assume Alice has sold her painting in a good deal to someone else and she wants to digitally reflect that transfer. In BigchainDB, this would correspond to a TRANSFER transaction. For this, you first need to create a new key pair for a new owner (
+(newOwner). For simplicity, this step is left out in the code below. 
 
-Now, let's assume Alice has sold her painting in a good deal to someone else. Since an update of the mileage of a car does not imply any change in the ownership, your transfer transaction will simply be a transfer transaction with the previous owner (Alice) as beneficiary, but with new metadata in the transaction. So, technically, Alice is transferring the car to herself and just adding additional, new information to that transaction.
+Now, before creating the transfer transaction, furthermore you need to search for the last transaction with the asset id of your painting, as you will transfer this specific last transaction:
 
-Before creating the transfer transaction, you need to search for the last transaction with the asset id, as you will transfer this specific last transaction:
-
-
-The `listTransactions` method of BigchainDB retrieves all of the create and transfer transactions with a specific asset id. Then, we check for the inputs that have not been spent yet. This indicates the last transaction. In this tutorial, we are just working with one input and one output for each transaction, so there should be just one input that has not been spent yet, namely the one belonging to the last transaction.
+The `listTransactions` command of BigchainDB retrieves all of the create and transfer transactions with a specific asset id. Then, we check for outputs that have not been spent yet. This indicates the last transaction, since all previous transactions have only outputs that have already been spent. In this tutorial, we are just working with one input and one output for each transaction, so there should be just one output that has not been spent yet, namely the one belonging to the last transaction.
 
 Based on that, we can now create the transfer transaction:
 
 ```js
 function transferOnwership(txCreated, newOwner) {
-    // Update the paint with a new
-    // First, we query for the asset paint that we created
+    // Update the painting with a new owner
+    // First, we query for the asset that we created
     const createTranfer = BigchainDB.Transaction.
     makeTransferTransaction(
         txCreated, {
@@ -140,10 +141,10 @@ function transferOnwership(txCreated, newOwner) {
 }
 ```
 
-Note again that in the output of this transfer transaction we have `newOwner.publicKey`. This shows that Alice is transferring the ownership of the Meninas to anybody else. Furthermore, the input being spent is 0, as there is just one input.
+Note again that in the output of this transfer transaction we have `newOwner.publicKey`. This shows that Alice has transferred the ownership of the Meninas to anybody else (newOwner). Furthermore, the input being spent is 0, as there is just one input. Additionally, note that the metadata field was used to update information about the painting (the price of the transaction, which increased to 30 mn. EUR etc.). 
 
-So, finally you sign the transaction and send it to BigchainDB. You have now updated your asset and it is now not anymore you who will be able to transfer again the paint.
+You have now updated your asset and it is now not anymore you who will be able to transfer the painting, because someone else is the owner.
 
-That's it, we have created a paint asset.
+That's it, we have created a digital representation of a painting and transferred the ownership to another user.
 
 Congratulations! You have successfully finished your first BigchainDB tutorial.
