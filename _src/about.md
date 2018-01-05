@@ -4,8 +4,6 @@ layout: about
 
 js: page-about.min.js
 
-ipdb: true
-
 brand:
     title: Brand Assets
     description: You don't have to use Google to get our logo.

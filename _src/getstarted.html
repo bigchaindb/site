@@ -2,7 +2,7 @@
 layout: page
 
 title: Get started
-description: "Explore drivers, tools &amp; documentation to get started with IPDB &amp; BigchainDB"
+description: "Explore drivers, tools &amp; documentation to get started with BigchainDB"
 tagline: "Explore drivers, tools &amp; documentation"
 
 image: share-image-getstarted.png
@@ -61,7 +61,7 @@ redirect_from:
 
                 <div class="message message--success alert alert--success hide">
                     <p>{{ content.firsttransaction.message.response }}</p>
-                    <p><a class="transaction-link" href="{{ site.ipdb_api_url }}/api/v1/transactions/">Check out your transaction on IPDB</a></p>
+                    <p><a class="transaction-link" href="{{ site.bigchaindb_api_url }}/api/v1/transactions/">Check out your transaction on BigchainDB Testnet</a></p>
                 </div>
                 <p class="message message--fail alert alert--warning hide">Shenanigans! Something's off. Would you mind trying again?</p>
             </div>
@@ -89,8 +89,8 @@ from bigchaindb_driver.crypto import generate_keypair
 
 
 bdb = BigchainDB(
-    '{{ site.ipdb_api_url }}',
-    headers={'app_id': 'Get credentials from developers.ipdb.io',
+    '{{ site.bigchaindb_api_url }}',
+    headers={'app_id': 'Get credentials from testnet.bigchaindb.com',
              'app_key': 'by signing up and going to your Applications screen'})
 alice = generate_keypair()
 tx = bdb.transactions.prepare(
@@ -113,8 +113,8 @@ const driver = require('bigchaindb-driver')
 
 const alice = new driver.Ed25519Keypair()
 const conn = new driver.Connection(
-    '{{ site.ipdb_api_url }}/api/v1/',
-    { app_id: 'Get credentials from developers.ipdb.io',
+    '{{ site.bigchaindb_api_url }}/api/v1/',
+    { app_id: 'Get credentials from testnet.bigchaindb.com',
       app_key: 'by signing up and going to your Applications screen' })
 const tx = driver.Transaction.makeCreateTransaction(
     { message: 'Blockchain all the things!' },
@@ -164,10 +164,10 @@ conn.postTransaction(txSigned)
         <div class="row row--wide">
             <div class="grid grid--full grid-small--half grid--gutters">
                 <div class="grid__col">
-                    <span class="pretitle">{{ content.server.ipdb.pretitle }}</span>
-                    <h2 class="choice__title">{{ content.server.ipdb.title }}</h2>
-                    <p>{{ content.server.ipdb.description }}</p>
-                    <a class="btn btn-primary" href="{{ content.server.ipdb.link }}">{{ content.server.ipdb.button }}</a>
+                    <span class="pretitle">{{ content.server.network.pretitle }}</span>
+                    <h2 class="choice__title">{{ content.server.network.title }}</h2>
+                    <p>{{ content.server.network.description }}</p>
+                    <a class="btn btn-primary" href="{{ content.server.network.link }}">{{ content.server.network.button }}</a>
                 </div>
                 <div class="grid__col">
                     <span class="pretitle">{{ content.server.bdb.pretitle }}</span>

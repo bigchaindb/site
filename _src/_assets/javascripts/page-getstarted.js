@@ -3,7 +3,9 @@
 //=include bigchain/tab.js
 //=include bigchain/newsletter.js
 
-const ipdbUrl = 'https://test.ipdb.io'
+const bigchaindbUrl = 'https://test.bigchaindb.com'
+const proxyUrl = 'https://getstarted.bigchaindb.com:4443'
+const apiPath = '/api/v1/'
 
 jQuery(function($) {
 
@@ -54,7 +56,7 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
     window.removeEventListener('DOMContentLoaded', domload, false)
 
     const driver = window.BigchainDB
-    const API_PATH = 'https://getstarted.ipdb.io:4443/api/v1/'
+    const API_PATH = proxyUrl + apiPath
 
     const form = document.getElementById('form-transaction')
     const postButton = document.getElementById('post')
@@ -124,7 +126,7 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
             const outputContent = JSON.stringify(response, null, 2) // indented with 2 spaces
             output.textContent = outputContent
 
-            transactionLink.href = ipdbUrl + '/api/v1/transactions/' + response.id
+            transactionLink.href = bigchaindbUrl + apiPath + 'transactions/' + response.id
 
             postButton.classList.add('disabled')
             postButton.style.opacity = 0
