@@ -25,7 +25,7 @@
     "ie >= 10"
   ],
   "dependencies": {
-    "bigchaindb-driver": "^0.3.0",
+    "bigchaindb-driver": "^3.2.0",
     "gumshoe": "github:cferdinandi/gumshoe",
     "is-in-viewport": "^3.0.0",
     "jquery": "^3.2.1",
@@ -43,7 +43,7 @@
     "acorn": "^5.3.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.23.2",
+    "browser-sync": "^2.23.3",
     "concurrent-transform": "^1.0.0",
     "critical": "^1.1.0",
     "cross-spawn": "^5.1.0",
@@ -76,7 +76,7 @@
     "stylelint": "^8.4.0",
     "stylelint-config-bigchaindb": "^1.2.0",
     "stylelint-config-standard": "^18.0.0",
-    "uglify-es": "^3.3.4"
+    "uglify-es": "^3.3.5"
   },
   "engines": {
     "node": ">=7.0.0"
