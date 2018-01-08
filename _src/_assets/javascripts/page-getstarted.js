@@ -4,7 +4,7 @@
 //=include bigchain/newsletter.js
 
 const bigchaindbUrl = 'https://test.ipdb.io'
-const proxyUrl = 'https://getstarted.bigchaindb.com:4443'
+const proxyUrl = 'https://getstarted.ipdb.io:4443'
 const apiPath = '/api/v1/'
 
 jQuery(function($) {
