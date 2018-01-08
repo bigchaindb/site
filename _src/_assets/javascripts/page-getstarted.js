@@ -3,7 +3,7 @@
 //=include bigchain/tab.js
 //=include bigchain/newsletter.js
 
-const bigchaindbUrl = 'https://test.bigchaindb.com'
+const bigchaindbUrl = 'https://test.ipdb.io'
 const proxyUrl = 'https://getstarted.bigchaindb.com:4443'
 const apiPath = '/api/v1/'
 
