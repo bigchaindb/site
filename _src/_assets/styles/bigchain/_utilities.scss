@@ -17,7 +17,7 @@
 /* stylelint-enable */
 
 .text-hide {
-    font: '0/0' a;
+    font: '0/0' a; // stylelint-disable-line font-family-no-missing-generic-family-keyword
     color: transparent;
     text-shadow: none;
     background-color: transparent;

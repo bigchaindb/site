@@ -30,12 +30,10 @@ If you use the contact forms or CLA form on our website, the information you sub
 If you want to sign the CLA form or contact us without using these forms, you can email contact@bigchaindb.com.
 ​
 ### How information is shared
-​
+
 We will not share or sell the identifiable personal information we collect or generate except as defined in this section.
 ​
 We may share non-personal or aggregate information, such as usage statistics for the Site.
-​
-We may share personal information with the [Interplanetary Database Foundation e.V.](https://ipdb.foundation) ("IPDB") for the purpose of allowing you to use the IPDB network. Information shared with IPDB will be subject to its [Privacy Policy](https://ipdb.foundation).
 ​
 ### Cookies
 
