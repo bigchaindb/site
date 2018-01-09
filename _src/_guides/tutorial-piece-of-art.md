@@ -133,7 +133,7 @@ function transferOwnership(txCreated, newOwner) {
         },
     )
 
-    // Sign with the owner of the paint (Alice)
+    // Sign with the key of the owner of the painting (Alice)
     const signedTransfer = BigchainDB.Transaction
         .signTransaction(createTranfer, alice.privateKey)
     conn.postTransaction(signedTransfer)
