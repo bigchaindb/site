@@ -33,6 +33,8 @@ The code below illustrates how to create a divisible asset with 10 000 tokens as
 ```js
 const nTokens = 10000
 let tokensLeft
+const tokenCreator = new BigchainDB
+.Ed25519Keypair(bip39.mnemonicToSeed('seedPhrase').slice(0,32))
 
 function tokenLaunch() {
     // Construct a transaction payload
@@ -78,6 +80,10 @@ Tokens can be transferred to an unlimited number of participants. In this exampl
 ```js
 const amountToSend = 200
 
+const newUser = new BigchainDB
+    .Ed25519Keypair(bip39.mnemonicToSeed('newUserseedPhrase')
+        .slice(0, 32))
+
 function transferTokens() {
     // User who will receive the 200 tokens
     const newUser = new BigchainDB.Ed25519Keypair()
@@ -86,41 +92,44 @@ function transferTokens() {
     // False argument to retrieve unspent outputs
     conn.listOutputs(tokenCreator.publicKey, 'false')
         .then((txs) => {
-            // Just one transaction available with outputs not being spent by tokenCreator
-            // Therefore, txs[0]
+            // Just one transaction available with outputs not being spent by
+            // tokenCreator. Therefore, txs[0]
             return conn.getTransaction(txs[0].transaction_id)
         })
-        .then((tx) => {
+        .then((txOutputs) => {
             // Create transfer transaction
-            const createTranfer = BigchainDB.Transaction.makeTransferTransaction
-            (
-                tx,
-                // Metadata (optional)
-                {
-                    tranfe_to: 'john',
-                    tokens_left: tokensLeft
-                },
-                // Transaction output: Two outputs, because the whole input must be spent
-                [BigchainDB.Transaction.makeOutput(
-                        BigchainDB.Transaction
-                        .makeEd25519Condition(tokenCreator.publicKey),
-                        (tokensLeft - amountToSend).toString()),
-                    BigchainDB.Transaction.makeOutput(
-                        BigchainDB.Transaction
-                        .makeEd25519Condition(newUser.publicKey), amountToSend)
-                ],
-                // Index of the input being spent
-                0
-            )
+            const createTranfer = BigchainDB.Transaction
+                .makeTransferTransaction(
+                    [{
+                        tx: txOutputs,
+                        output_index: 0
+                    }],
+                    // Transaction output: Two outputs, because the whole input
+                    // must be spent
+                    [BigchainDB.Transaction.makeOutput(
+                            BigchainDB.Transaction
+                            .makeEd25519Condition(tokenCreator.publicKey),
+                            (tokensLeft - amountToSend).toString()),
+                        BigchainDB.Transaction.makeOutput(
+                            BigchainDB.Transaction
+                            .makeEd25519Condition(newUser.publicKey),
+                            amountToSend)
+                    ],
+                    // Metadata (optional)
+                    {
+                        tranfe_to: 'john',
+                        tokens_left: tokensLeft
+                    }
+                )
 
             // Sign the transaction with the tokenCreator key
             const signedTransfer = BigchainDB.Transaction
-            .signTransaction(createTranfer, tokenCreator.privateKey)
+                .signTransaction(createTranfer, tokenCreator.privateKey)
 
             return conn.postTransaction(signedTransfer)
         })
         .then((signedTransfer) => conn
-        .pollStatusAndFetchTransaction(signedTransfer.id))
+            .pollStatusAndFetchTransaction(signedTransfer.id))
         .then(res => {
             // Update tokensLeft
             tokensLeft -= amountToSend
@@ -149,12 +158,11 @@ function combineTokens(transaction1, outputIndex1, transaction2, outputIndex2,
             tx: transaction2,
             output_index: outputIndex2
         }],
-        // Output: Two outputs, the whole input must be spent
+        // Output
         [BigchainDB.Transaction.makeOutput(
             BigchainDB.Transaction.makeEd25519Condition(
                 bestFriend.publicKey),
-            (totalTokens).toString())],
-        {
+            (totalTokens).toString())], {
             transfer_to: 'my best friend'
         }
     )
