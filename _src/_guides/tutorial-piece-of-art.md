@@ -48,11 +48,11 @@ Now, let's assume that Alice is extremely lucky and gets to acquire the famous p
 The first step required is the definition of the asset field that represents the painting. This field contains the data about the asset that is immutable. It has a JSON format:
 
 ```js
-const paint = {
-  name: 'Meninas',
-  author: 'Diego Rodríguez de Silva y Velázquez'
-  place: 'Madrid',
-  year: '1656'
+const painting = {
+    name: 'Meninas',
+    author: 'Diego Rodríguez de Silva y Velázquez'
+    place: 'Madrid',
+    year: '1656'
 }
 ```
 
@@ -72,8 +72,8 @@ function createPaint() {
             datetime: new Date().toString(),
             location: 'Madrid',
             value: {
-              value_eur: '25000000€',
-              value_btc: '2200',
+                value_eur: '25000000€',
+                value_btc: '2200',
             }
         },
         // Output. For this case we create a simple Ed25519 condition
@@ -88,12 +88,12 @@ function createPaint() {
 
     // Send the transaction off to BigchainDB
     conn.postTransaction(txSigned)
-        // Check the status of the transaction every 0.5 seconds.
+        // Check the status of the transaction
         .then(() => conn.pollStatusAndFetchTransaction(txSigned.id))
         .then(res => {
-          document.body.innerHTML +='<h3>Transaction created</h3>';
-          document.body.innerHTML +=txSigned.id
-          // txSigned.id corresponds to the asset id of the painting
+            document.body.innerHTML += '<h3>Transaction created</h3>';
+            document.body.innerHTML += txSigned.id
+            // txSigned.id corresponds to the asset id of the painting
         })
 }
 ```
@@ -104,39 +104,41 @@ Once a transaction ends up in a decided-valid block, it's "etched into stone". T
 
 # Transfer of an asset on BigchainDB
 
-Now, let's assume Alice has sold her painting in a good deal to someone else and she wants to digitally reflect that transfer. In BigchainDB, this would correspond to a TRANSFER transaction. For this, you first need to create a new key pair for a new owner (
-(newOwner). For simplicity, this step is left out in the code below.
+Now, let's assume Alice has sold her painting in a good deal to someone else and she wants to digitally reflect that transfer. In BigchainDB, this would correspond to a TRANSFER transaction. For this, you first need to create a new key pair for a new owner (newOwner). For simplicity, this step is left out in the code below.
 
-Now, before creating the transfer transaction, furthermore you need to search for the last transaction with the asset id of your painting, as you will transfer this specific last transaction:
-
-The `listTransactions` command of BigchainDB retrieves all of the create and transfer transactions with a specific asset id. Then, we check for outputs that have not been spent yet. This indicates the last transaction, since all previous transactions have only outputs that have already been spent. In this tutorial, we are just working with one input and one output for each transaction, so there should be just one output that has not been spent yet, namely the one belonging to the last transaction.
-
+The `getTransaction` method allows us to search for a transaction having its id, as we need the complete transaction to create a make transfer transaction.
 Based on that, we can now create the transfer transaction:
 
 ```js
-function transferOwnership(txCreated, newOwner) {
-
-    const createTranfer = BigchainDB.Transaction.
-    makeTransferTransaction(
-        // The output index 0 is the one that is being spent
-        [{
-            tx: txCreated,
-            output_index: 0
-        }], [BigchainDB.Transaction.makeOutput(
-            BigchainDB.Transaction.makeEd25519Condition(
-                newOwner.publicKey))] {
-            datetime: new Date().toString(),
-            value: {
-                value_eur: '30000000€',
-                value_btc: '2100',
-            }
-        },
-    )
-
-    // Sign with the key of the owner of the painting (Alice)
-    const signedTransfer = BigchainDB.Transaction
-        .signTransaction(createTranfer, alice.privateKey)
-    conn.postTransaction(signedTransfer)
+function transferOwnership(txCreatedID, newOwner) {
+    console.log('tttttt')
+    const newUser = new BigchainDB.Ed25519Keypair()
+    // Get transaction payload by ID
+    conn.getTransaction(txCreatedID)
+        .then((txCreated) => {
+            const createTranfer = BigchainDB.Transaction.
+            makeTransferTransaction(
+                // The output index 0 is the one that is being spent
+                [{
+                    tx: txCreated,
+                    output_index: 0
+                }],
+                [BigchainDB.Transaction.makeOutput(
+                    BigchainDB.Transaction.makeEd25519Condition(
+                        newOwner.publicKey))],
+                {
+                    datetime: new Date().toString(),
+                    value: {
+                        value_eur: '30000000€',
+                        value_btc: '2100',
+                    }
+                }
+            )
+            // Sign with the key of the owner of the painting (Alice)
+            const signedTransfer = BigchainDB.Transaction
+                .signTransaction(createTranfer, alice.privateKey)
+            return conn.postTransaction(signedTransfer)
+        })
         .then((signedTransfer) => conn
             .pollStatusAndFetchTransaction(signedTransfer.id))
         .then(res => {
