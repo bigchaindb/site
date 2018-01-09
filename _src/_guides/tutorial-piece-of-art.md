@@ -111,7 +111,6 @@ Based on that, we can now create the transfer transaction:
 
 ```js
 function transferOwnership(txCreatedID, newOwner) {
-    console.log('tttttt')
     const newUser = new BigchainDB.Ed25519Keypair()
     // Get transaction payload by ID
     conn.getTransaction(txCreatedID)
