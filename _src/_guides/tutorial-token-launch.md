@@ -133,8 +133,7 @@ function transferTokens() {
 You have now transferred 200 tokens to the user John. You could repeat the same with multiple other users.
 With `listOutputs` using `false` as the second argument you retrieved all the outputs belonging to the user `tokenCreator`, that were not spent yet. There will just be one output that fulfills these characteristics, because when you transfer tokens to another user, you are spending this output and giving the ownership to the other user. Then, you queried for that transaction and made a transfer to John with it. Note however, that there is also a transaction back to `tokenCreator.publicKey`, as you need to 'give back change' due to BigchainDB's transaction model. It is designed in a way that all of the inputs have to be spent in a transaction. That means that if you send part of the `tokensLeft` (200 tokens) to John, you have to send the rest (9800 tokens) back to the `tokenCreator` to preserve that amount.
 
-
-Imagine you have received several transactions of tokens and you want to combine all of the quantities and transfer to you best friend. That is possible as well
+Imagine now that you have received several transactions of tokens and you want to combine all of the balances and transfer them to another user (e.g. your best friend, who keeps some tokens in escrow). In BigchainDB, this is possible as well. The code below illustrates how to do that.
 
 ```js
 const amountToSend = 200
@@ -150,7 +149,7 @@ function combineTokens(transaction1, outputIndex1, transaction2, outputIndex2,
             tx: transaction2,
             output_index: outputIndex2
         }],
-        // Output. Two outputs. The hole input must be spent
+        // Output: Two outputs, the whole input must be spent
         [BigchainDB.Transaction.makeOutput(
             BigchainDB.Transaction.makeEd25519Condition(
                 bestFriend.publicKey),
@@ -169,7 +168,7 @@ function combineTokens(transaction1, outputIndex1, transaction2, outputIndex2,
 }
 ```
 
-You just made a transfer transaction combining two different transactions into one output. The `totalToken` quantity is needed which is the sum of the tokens of the two outputs being spent. As you have seen before if this quantity is not correct, the transaction will fail, as you literally need to spend all of the outputs in a transaction.
+You just made a transfer transaction combining two different transactions into one output. Note that the `totalTokens` quantity is a required variable. It is the sum of the tokens of the two outputs being spent. As you have seen before, if this quantity is not correct, the transaction will fail, as you literally need to spend all of the outputs in a transaction.
 `transaction1` and `transaction2` can look like the transaction `createTranfer` that you did before, then the `outputIndex1` and `outputIndex2` would be `0`.
 
 Note that in our example, the supply of your tokens was fixed and cannot be changed anymore after creation. So, you would need to clearly define for yourself, how many tokens you will need. However, BigchainDB does offer the option of refillable, divisible assets that allow for a more dynamic token supply. You can learn more about that [here](https://github.com/bigchaindb/bigchaindb/issues/1741).
