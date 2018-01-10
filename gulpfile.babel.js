@@ -445,6 +445,10 @@ export const s3 = () => {
                 "^.+$": "$&"
             }
         }))
+        // Make sure everything goes to the root '/'
+        .pipe($.rename(path => {
+            path.dirname = '/' + path.dirname
+        }))
         .pipe(parallelize(publisher.publish(), 100))
         .pipe(publisher.sync()) // delete files in bucket that are not in local folder
         .pipe($.awspublish.reporter({
