@@ -33,7 +33,7 @@ Let's get started!
 
 # Create a key pair
 
-Before starting, we need to create a user in BigchainDB. In BigchainDB, users are represented as a private and public key pair. In our case, a key pair for Alice will be created. Alice will be the owner of the painting, and she will be the only one able to make changes to the digital representation of the painting. Using her public key, anyone can also verify that Alice is the owner of the painting.
+Before starting, you need to create a user in BigchainDB. In BigchainDB, users are represented as a private and public key pair. In our case, a key pair for Alice will be created. Alice will be the owner of the painting, and she will be the only one able to make changes to the digital representation of the painting. Using her public key, anyone can also verify that Alice is the owner of the painting.
 
 You can generate a key pair from a seed phrase using the BIP39 library, so you will just need to remember this particular seed phrase. The code below illustrates that.
 
@@ -43,7 +43,7 @@ const alice = new BigchainDB.Ed25519Keypair(bip39.mnemonicToSeed('seedPhrase').s
 
 # Digital registration of an asset on BigchainDB
 
-Now, let's assume that Alice is extremely lucky and gets to acquire the famous painting "Las Meninas" by the Spanish painter Diego Velázquez at a fantastic price during an auction held by the Spanish museum "museo nacional del prado". Now, she wants to ensure that she can digitally certify that she is the owner of this painting. For this reason, she wants to register the painting as an asset on BigchainDB to have an immutable claim. This corresponds to a CREATE transaction in BigchainDB. Using her key pair, Alice can create an asset on BigchainDB. In our case, the asset will represent an object in real life, namely the painting "Las Meninas". This asset will live in BigchainDB forever and there is no possibility to delete it.
+Now, let's assume that Alice is extremely lucky and gets to acquire the famous painting "Las Meninas" by the Spanish painter Diego Velázquez at a fantastic price during an auction held by the Spanish museum "museo nacional del prado". Now, she wants to ensure that she can digitally certify that she is the owner of this painting. For this reason, she wants to register the painting as an asset on BigchainDB to have an immutable claim. This corresponds to a CREATE transaction in BigchainDB. Using her key pair, Alice can create an asset on BigchainDB. In your case, the asset will represent an object in real life, namely the painting "Las Meninas". This asset will live in BigchainDB forever and there is no possibility to delete it.
 
 The first step required is the definition of the asset field that represents the painting. This field contains the data about the asset that is immutable. It has a JSON format:
 
@@ -64,7 +64,7 @@ function createPaint() {
     const txCreatePaint = BigchainDB.Transaction.makeCreateTransaction(
         // Asset field
         {
-            ...painting,
+            painting,
         },
         // Metadata field, contains information about the transaction itself
         // (can be `null` if not needed)
@@ -106,7 +106,7 @@ Once a transaction ends up in a decided-valid block, it's "etched into stone". T
 
 Now, let's assume Alice has sold her painting in a good deal to someone else and she wants to digitally reflect that transfer. In BigchainDB, this would correspond to a TRANSFER transaction. For this, you first need to create a new key pair for a new owner (newOwner). For simplicity, this step is left out in the code below.
 
-The `getTransaction` method allows us to search for a transaction having its id, as we need the complete transaction to create a make transfer transaction.
+The `getTransaction` method allows us to search for a transaction having its id, as we need the complete transaction to make transfer transaction.
 Based on that, we can now create the transfer transaction:
 
 ```js
@@ -149,7 +149,7 @@ function transferOwnership(txCreatedID, newOwner) {
 
 Note again that in the output of this transfer transaction we have `newOwner.publicKey`. This shows that Alice has transferred the ownership of the Meninas to anybody else (newOwner). Furthermore, the input being spent is 0, as there is just one input. Additionally, note that the metadata field was used to update information about the painting (the price of the transaction, which increased to 30 mn. EUR etc.).
 
-You have now updated your asset and it is now not anymore you who will be able to transfer the painting, because someone else is now the owner.
+You have now updated your asset and it is now not anymore Alice who will be able to transfer the painting, because someone else is now the owner.
 
 That's it, we have created a digital representation of a painting and transferred the ownership to another user.
 
