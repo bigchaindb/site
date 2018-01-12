@@ -31,7 +31,7 @@ Let's get started!
 
 {% include_relative _setup.md %}
 
-# Create a key pair
+# Creation of a key pair
 
 Before starting, you need to create a user in BigchainDB. In BigchainDB, users are represented as a private and public key pair. In our case, a key pair for Alice will be created. Alice will be the owner of the painting, and she will be the only one able to make changes to the digital representation of the painting. Using her public key, anyone can also verify that Alice is the owner of the painting.
 
