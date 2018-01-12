@@ -75,7 +75,7 @@ With these commands, you have minted 10000 tokens. For that, give an extra param
 
 Now that the tokens have been minted, you can start distributing them to the owners.
 
-# Distribute tokens
+# Distribution of tokens
 
 Tokens can be transferred to an unlimited number of participants. In this example, you are now going to make a transfer transaction to transfer 200 tokens to a new user called John. For that, you first need to create a new user and then do the transfer. The code below shows that.
 
@@ -143,6 +143,8 @@ function transferTokens() {
 ```
 You have now transferred 200 tokens to the user John. You could repeat the same with multiple other users.
 With `listOutputs` using `false` as the second argument you retrieved all the outputs belonging to the user `tokenCreator`, that were not spent yet. There will just be one output that fulfills these characteristics, because when you transfer tokens to another user, you are spending this output and giving the ownership to the other user. Then, you queried for that transaction and made a transfer to John with it. Note however, that there is also a transaction back to `tokenCreator.publicKey`, as you need to 'give back change' due to BigchainDB's transaction model. It is designed in a way that all of the inputs have to be spent in a transaction. That means that if you send part of the `tokensLeft` (200 tokens) to John, you have to send the rest (9800 tokens) back to the `tokenCreator` to preserve that amount.
+
+# Combination of different BigchainDB transactions
 
 Imagine now that you have received several transactions of tokens and you want to combine all of the balances and transfer them to another user (e.g. your best friend, who keeps some tokens in escrow). In BigchainDB, this is possible as well. The code below illustrates how to do that.
 
