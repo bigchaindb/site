@@ -24,7 +24,7 @@ Traditionally, people design applications focusing on business processes (e.g. a
 
 # Visualization of our transaction model
 
-This infographic will help you understanding what `CREATE` and `TRANSFER` transactions are and what the individual components of a transaction represent (inputs, outputs, assets, metadata etc.). Lets use a simple real-life example: Martina digitally registers her bicycle on BigchainDB in a `CREATE` transaction. After some time, she transfers this bicycle to Stefan in a `TRANSFER` transaction.
+This infographic will help you understanding what `CREATE` and `TRANSFER` transactions are and what the individual components of a transaction represent (inputs, outputs, assets, metadata etc.). Let's use a simple real-life example: Martina digitally registers her bicycle on BigchainDB in a `CREATE` transaction. After some time, she transfers this bicycle to Stefan in a `TRANSFER` transaction.
 
 Every concept that we describe (e.g. inputs, outputs etc.) is discussed in further detail below. 
 
@@ -70,7 +70,7 @@ Conceptually, an input is a pointer to an output of a previous transaction. It s
 
 # Output
 
-A transaction output specifies the conditions that need to be fulfilled to change the ownership of a specific asset.. For instance: to transfer a bicycle, a person needs to sign the transaction with her private key. This also implicitly contains the information that the public key associated with that private key is the current owner of the asset. Learn more about the data model of outputs in our [output model](https://the-ipdb-transaction-spec.readthedocs.io/en/latest/transaction-components/outputs.html).
+A transaction output specifies the conditions that need to be fulfilled to change the ownership of a specific asset. For instance: to transfer a bicycle, a person needs to sign the transaction with his or her private key. This also implicitly contains the information that the public key associated with that private key is the current owner of the asset. Learn more about the data model of outputs in our [output model](https://the-ipdb-transaction-spec.readthedocs.io/en/latest/transaction-components/outputs.html).
 
 Note that a transaction can also have multiple outputs. These are called divisible assets. To learn more about divisible assets, complete our [tutorial.](../tutorial-token-launch/) The output can also contain complex conditions (e.g. multiple signatures of multiple people) to acquire ownership. Learn more about that in the data model for [crypto-conditions](https://the-ipdb-transaction-spec.readthedocs.io/en/latest/transaction-components/conditions.html).
 
