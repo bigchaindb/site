@@ -12,6 +12,8 @@ learn: >
     - How assets in BigchainDB can represent tokens
 
     - How tokens can be distributed to participants using TRANSFER transactions
+    
+    - How various BigchainDB transactions can be combined together
 ---
 
 Hi there! Welcome to our next tutorial about divisible assets. For this tutorial, we assume that you are familiar with the BigchainDB primitives (assets, inputs, outputs, transactions etc.). If you are not, familiarize yourself with the [Key concepts of BigchainDB](../key-concepts-of-bigchaindb/). We also assume that you have completed our [first tutorial](../tutorial-car-telemetry-app/).
@@ -117,7 +119,7 @@ function transferTokens() {
                     ],
                     // Metadata (optional)
                     {
-                        tranfe_to: 'john',
+                        transfer_to: 'john',
                         tokens_left: tokensLeft
                     }
                 )
@@ -177,7 +179,7 @@ function combineTokens(transaction1, outputIndex1, transaction2, outputIndex2,
 ```
 
 You just made a transfer transaction combining two different transactions into one output. Note that the `totalTokens` quantity is a required variable. It is the sum of the tokens of the two outputs being spent. As you have seen before, if this quantity is not correct, the transaction will fail, as you literally need to spend all of the outputs in a transaction.
-`transaction1` and `transaction2` can look like the transaction `createTranfer` that you did before, then the `outputIndex1` and `outputIndex2` would be `0`.
+`transaction1` and `transaction2` can look like the transaction `createTranfer` that you did before. In that case, the `outputIndex1` and `outputIndex2` would be `0`.
 
 Note that in our example, the supply of your tokens was fixed and cannot be changed anymore after creation. So, you would need to clearly define for yourself, how many tokens you will need. However, BigchainDB does offer the option of refillable, divisible assets that allow for a more dynamic token supply. You can learn more about that [here](https://github.com/bigchaindb/bigchaindb/issues/1741).
 
