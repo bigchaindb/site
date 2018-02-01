@@ -365,96 +365,91 @@ export default dev
 // gulp deploy --beta
 // gulp deploy --gamma
 //
-export const s3 = () => {
-
-    // create publisher, define config
-    if ($.util.env.live === true) {
-        var publisher = $.awspublish.create({
-            params: { 'Bucket': S3BUCKET },
-            'accessKeyId': process.env.AWS_ACCESS_KEY,
-            'secretAccessKey': process.env.AWS_SECRET_KEY,
-            'region': S3REGION
-        })
-    } else if ($.util.env.beta === true) {
-        var publisher = $.awspublish.create({
-            params: { 'Bucket': S3BUCKET_BETA },
-            'accessKeyId': process.env.AWS_BETA_ACCESS_KEY,
-            'secretAccessKey': process.env.AWS_BETA_SECRET_KEY,
-            'region': S3REGION_BETA
-        })
-    } else if ($.util.env.gamma === true) {
-        var publisher = $.awspublish.create({
-            params: { 'Bucket': S3BUCKET_GAMMA },
-            'accessKeyId': process.env.AWS_GAMMA_ACCESS_KEY,
-            'secretAccessKey': process.env.AWS_GAMMA_SECRET_KEY,
-            'region': S3REGION_GAMMA
-        })
-    } else {
-        return
-    }
-
-    return src(DIST + '**/*')
-        .pipe($.awspublishRouter({
-            cache: {
-                // cache for 5 minutes by default
-                cacheTime: 300
-            },
-            routes: {
-                // all static assets, cached & gzipped
-                '^assets/(?:.+)\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|ttf|eot|woff|woff2)$': {
-                    cacheTime: 2592000, // cache for 1 month
-                    gzip: true
-                },
-
-                // every other asset, cached
-                '^assets/.+$': {
-                    cacheTime: 2592000  // cache for 1 month
-                },
-
-                // all html files, not cached & gzipped
-                '^.+\\.html': {
-                    cacheTime: 0,
-                    gzip: true
-                },
-
-                // all pdf files, not cached
-                '^.+\\.pdf': {
-                    cacheTime: 0
-                },
-
-                // all zip files, not cached
-                '^.+\\.zip': {
-                    cacheTime: 0
-                },
-
-                // font mime types
-                '\.ttf$': {
-                    key: '$&',
-                    headers: { 'Content-Type': 'application/x-font-ttf' }
-                },
-                '\.woff$': {
-                    key: '$&',
-                    headers: { 'Content-Type': 'application/x-font-woff' }
-                },
-                '\.woff2$': {
-                    key: '$&',
-                    headers: { 'Content-Type': 'application/x-font-woff2' }
-                },
-
-                // pass-through for anything that wasn't matched by routes above, to be uploaded with default options
-                "^.+$": "$&"
-            }
-        }))
-        // Make sure everything goes to the root '/'
-        .pipe($.rename(path => {
-            path.dirname = '/' + path.dirname
-        }))
-        .pipe(parallelize(publisher.publish(), 100))
-        .pipe(publisher.sync()) // delete files in bucket that are not in local folder
-        .pipe($.awspublish.reporter({
-            states: ['create', 'update', 'delete']
-        }))
+// create publisher, define config
+if ($.util.env.live === true) {
+    var publisher = $.awspublish.create({
+        params: { 'Bucket': S3BUCKET },
+        'accessKeyId': process.env.AWS_ACCESS_KEY,
+        'secretAccessKey': process.env.AWS_SECRET_KEY,
+        'region': S3REGION
+    })
+} else if ($.util.env.beta === true) {
+    var publisher = $.awspublish.create({
+        params: { 'Bucket': S3BUCKET_BETA },
+        'accessKeyId': process.env.AWS_BETA_ACCESS_KEY,
+        'secretAccessKey': process.env.AWS_BETA_SECRET_KEY,
+        'region': S3REGION_BETA
+    })
+} else if ($.util.env.gamma === true) {
+    var publisher = $.awspublish.create({
+        params: { 'Bucket': S3BUCKET_GAMMA },
+        'accessKeyId': process.env.AWS_GAMMA_ACCESS_KEY,
+        'secretAccessKey': process.env.AWS_GAMMA_SECRET_KEY,
+        'region': S3REGION_GAMMA
+    })
 }
+
+export const s3 = () => src(DIST + '**/*')
+    .pipe($.awspublishRouter({
+        cache: {
+            // cache for 5 minutes by default
+            cacheTime: 300
+        },
+        routes: {
+            // all static assets, cached & gzipped
+            '^assets/(?:.+)\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|ttf|eot|woff|woff2)$': {
+                cacheTime: 2592000, // cache for 1 month
+                gzip: true
+            },
+
+            // every other asset, cached
+            '^assets/.+$': {
+                cacheTime: 2592000  // cache for 1 month
+            },
+
+            // all html files, not cached & gzipped
+            '^.+\\.html': {
+                cacheTime: 0,
+                gzip: true
+            },
+
+            // all pdf files, not cached
+            '^.+\\.pdf': {
+                cacheTime: 0
+            },
+
+            // all zip files, not cached
+            '^.+\\.zip': {
+                cacheTime: 0
+            },
+
+            // font mime types
+            '\.ttf$': {
+                key: '$&',
+                headers: { 'Content-Type': 'application/x-font-ttf' }
+            },
+            '\.woff$': {
+                key: '$&',
+                headers: { 'Content-Type': 'application/x-font-woff' }
+            },
+            '\.woff2$': {
+                key: '$&',
+                headers: { 'Content-Type': 'application/x-font-woff2' }
+            },
+
+            // pass-through for anything that wasn't matched by routes above, to be uploaded with default options
+            '^.+$': '$&'
+        }
+    }))
+    // Make sure everything goes to the root '/'
+    .pipe($.rename(path => {
+        path.dirname = '/' + path.dirname
+    }))
+    .pipe(parallelize(publisher.publish(), 100))
+    .pipe(publisher.sync()) // delete files in bucket that are not in local folder
+    .pipe($.awspublish.reporter({
+        states: ['create', 'update', 'delete']
+    }))
 
 
 //
