@@ -8,15 +8,15 @@ url:                    https://www.bigchaindb.com
 bigchaindb_api_url:     https://test.bigchaindb.com
 
 # set to `true` to make hiring link appear in main menu
-hiring:                 false
+hiring:                 true
 
 email:
     contact:            contact@bigchaindb.com
-    contact_cc:         "kamal@bigchaindb.com,ricardo@bigchaindb.com"
+    contact_cc:         "kamal@bigchaindb.com,ricardo@bigchaindb.com,gautam@bigchaindb.com"
     cla:                troy@ascribe.io
     cla_cc:             sylvain@bigchaindb.com
     enterprise:         ikytz6br@robot.zapier.com
-    enterprise_cc:      "kamal@bigchaindb.com,ricardo@bigchaindb.com"
+    enterprise_cc:      "kamal@bigchaindb.com,ricardo@bigchaindb.com,gautam@bigchaindb.com"
 
 social:
     gitter:
