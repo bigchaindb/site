@@ -56,8 +56,8 @@ console.log("")
 const PORT = 1337
 
 // paths
-const SRC      = site.source + '/',
-      DIST     = site.destination + '/'
+const SRC      = site.source,
+      DIST     = '_dist'
 
 // deployment
 const S3BUCKET         = 'www.bigchaindb.com',
@@ -100,8 +100,8 @@ const BANNER = [
 //
 export const clean = () =>
     del([
-        DIST + '**/*',
-        DIST + '.*' // delete all hidden files
+        DIST + '/**/*',
+        DIST + '/.*' // delete all hidden files
     ])
 
 
@@ -133,7 +133,7 @@ export const jekyll = (done) => {
 //
 // HTML
 //
-export const html = () => src(DIST + '**/*.html')
+export const html = () => src(DIST + '/**/*.html')
     .pipe($.if(isProduction || isStaging, $.htmlmin({
         collapseWhitespace: true,
         conservativeCollapse: true,
@@ -151,7 +151,7 @@ export const html = () => src(DIST + '**/*.html')
 //
 // Styles
 //
-export const css = () => src(SRC + '_assets/styles/bigchain.scss')
+export const css = () => src(SRC + '/_assets/styles/bigchain.scss')
     .pipe($.if(!(isProduction || isStaging), $.sourcemaps.init()))
     .pipe($.sass({
         includePaths: ['node_modules']
@@ -161,7 +161,7 @@ export const css = () => src(SRC + '_assets/styles/bigchain.scss')
     .pipe($.if(!(isProduction || isStaging), $.sourcemaps.write()))
     .pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))
     .pipe($.rename({ suffix: '.min' }))
-    .pipe(dest(DIST + 'assets/css/'))
+    .pipe(dest(DIST + '/assets/css/'))
     .pipe(browser.stream())
 
 // inline critical-path CSS
@@ -194,55 +194,55 @@ export const criticalCss = (done) => {
 //
 export const js = () =>
     src([
-        SRC + '_assets/javascripts/bigchain.js',
-        SRC + '_assets/javascripts/page-*.js'
+        SRC + '/_assets/javascripts/bigchain.js',
+        SRC + '/_assets/javascripts/page-*.js'
     ])
     .pipe($.if(!(isProduction || isStaging), $.sourcemaps.init()))
     .pipe($.include({
-        includePaths: ['node_modules', SRC + '_assets/javascripts']
+        includePaths: ['node_modules', SRC + '/_assets/javascripts']
     })).on('error', onError)
     .pipe($.if(isProduction || isStaging, minify())).on('error', onError)
     .pipe($.if(!(isProduction || isStaging), $.sourcemaps.write()))
     .pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))
     .pipe($.rename({suffix: '.min'}))
-    .pipe(dest(DIST + 'assets/js/'))
+    .pipe(dest(DIST + '/assets/js/'))
 
 
 //
 // SVG sprite
 //
-export const svg = () => src(SRC + '_assets/images/*.svg')
+export const svg = () => src(SRC + '/_assets/images/*.svg')
     .pipe($.if(isProduction || isStaging, $.imagemin({
         svgoPlugins: [{ removeRasterImages: true }]
     })))
     .pipe($.svgSprite(SPRITECONFIG))
-    .pipe(dest(DIST + 'assets/img/'))
+    .pipe(dest(DIST + '/assets/img/'))
 
 
 //
 // Copy Images
 //
-export const images = () => src(SRC + '_assets/images/**/*')
+export const images = () => src(SRC + '/_assets/images/**/*')
     .pipe($.if(isProduction || isStaging, $.imagemin([
     	$.imagemin.gifsicle({ interlaced: true }),
     	$.imagemin.jpegtran({ progressive: true }),
     	$.imagemin.optipng({ optimizationLevel: 5 }),
     	$.imagemin.svgo({plugins: [{ removeViewBox: true }]})
     ])))
-    .pipe(dest(DIST + 'assets/img/'))
+    .pipe(dest(DIST + '/assets/img/'))
 
 
 //
 // Copy Fonts
 //
-export const fonts = () => src(SRC + '_assets/fonts/**/*')
-    .pipe(dest(DIST + 'assets/fonts/'))
+export const fonts = () => src(SRC + '/_assets/fonts/**/*')
+    .pipe(dest(DIST + '/assets/fonts/'))
 
 
 //
 // Zip up media kit
 //
-export const mediakit = () => src(SRC + 'mediakit/**/*', { base: SRC })
+export const mediakit = () => src(SRC + '/mediakit/**/*', { base: SRC })
     .pipe($.zip('mediakit.zip'))
     .pipe(dest(DIST))
 
@@ -253,12 +253,12 @@ export const mediakit = () => src(SRC + 'mediakit/**/*', { base: SRC })
 export const rev = (done) => {
     // globbing is slow so do everything conditionally for faster dev build
     if (isProduction || isStaging) {
-        return src(DIST + 'assets/**/*.{css,js,png,jpg,jpeg,svg,eot,ttf,woff,woff2}')
+        return src(DIST + '/assets/**/*.{css,js,png,jpg,jpeg,svg,eot,ttf,woff,woff2}')
             .pipe($.rev())
-            .pipe(dest(DIST + 'assets/'))
+            .pipe(dest(DIST + '/assets/'))
             // output rev manifest for next replace task
             .pipe($.rev.manifest())
-            .pipe(dest(DIST + 'assets/'))
+            .pipe(dest(DIST + '/assets/'))
     }
     done()
 }
@@ -271,9 +271,9 @@ export const rev = (done) => {
 export const revReplace = (done) => {
     // globbing is slow so do everything conditionally for faster dev build
     if (isProduction || isStaging) {
-        let manifest = src(DIST + 'assets/rev-manifest.json')
+        let manifest = src(DIST + '/assets/rev-manifest.json')
 
-        return src(DIST + '**/*.{html,css,js}')
+        return src(DIST + '/**/*.{html,css,js}')
             .pipe($.revReplace({ manifest: manifest }))
             .pipe(dest(DIST))
     }
@@ -298,11 +298,11 @@ export const server = (done) => {
 // Watch for file changes
 //
 export const watchSrc = () => {
-    watch(SRC + '_assets/styles/**/*.scss').on('all', series(css))
-    watch(SRC + '_assets/javascripts/**/*.js').on('all', series(js, browser.reload))
-    watch(SRC + '_assets/images/**/*.{png,jpg,jpeg,gif,webp}').on('all', series(images, browser.reload))
-    watch(SRC + '_assets/images/**/*.{svg}').on('all', series(svg, browser.reload))
-    watch([SRC + '**/*.{html,xml,json,txt,md,yml}', './*.yml', SRC + '_includes/svg/*']).on('all', series('build', browser.reload))
+    watch(SRC + '/_assets/styles/**/*.scss').on('all', series(css))
+    watch(SRC + '/_assets/javascripts/**/*.js').on('all', series(js, browser.reload))
+    watch(SRC + '/_assets/images/**/*.{png,jpg,jpeg,gif,webp}').on('all', series(images, browser.reload))
+    watch(SRC + '/_assets/images/**/*.{svg}').on('all', series(svg, browser.reload))
+    watch([SRC + '/**/*.{html,xml,json,txt,md,yml}', './*.yml', SRC + '/_includes/svg/*']).on('all', series('build', browser.reload))
 }
 
 
@@ -365,91 +365,93 @@ export default dev
 // gulp deploy --beta
 // gulp deploy --gamma
 //
-// create publisher, define config
-if ($.util.env.live === true) {
-    var publisher = $.awspublish.create({
-        params: { 'Bucket': S3BUCKET },
-        'accessKeyId': process.env.AWS_ACCESS_KEY,
-        'secretAccessKey': process.env.AWS_SECRET_KEY,
-        'region': S3REGION
-    })
-} else if ($.util.env.beta === true) {
-    var publisher = $.awspublish.create({
-        params: { 'Bucket': S3BUCKET_BETA },
-        'accessKeyId': process.env.AWS_BETA_ACCESS_KEY,
-        'secretAccessKey': process.env.AWS_BETA_SECRET_KEY,
-        'region': S3REGION_BETA
-    })
-} else if ($.util.env.gamma === true) {
-    var publisher = $.awspublish.create({
-        params: { 'Bucket': S3BUCKET_GAMMA },
-        'accessKeyId': process.env.AWS_GAMMA_ACCESS_KEY,
-        'secretAccessKey': process.env.AWS_GAMMA_SECRET_KEY,
-        'region': S3REGION_GAMMA
-    })
+export const s3 = () => {
+    // create publisher, define config
+    if ($.util.env.live === true) {
+        var publisher = $.awspublish.create({
+            params: { 'Bucket': S3BUCKET },
+            'accessKeyId': process.env.AWS_ACCESS_KEY,
+            'secretAccessKey': process.env.AWS_SECRET_KEY,
+            'region': S3REGION
+        })
+    } else if ($.util.env.beta === true) {
+        var publisher = $.awspublish.create({
+            params: { 'Bucket': S3BUCKET_BETA },
+            'accessKeyId': process.env.AWS_BETA_ACCESS_KEY,
+            'secretAccessKey': process.env.AWS_BETA_SECRET_KEY,
+            'region': S3REGION_BETA
+        })
+    } else if ($.util.env.gamma === true) {
+        var publisher = $.awspublish.create({
+            params: { 'Bucket': S3BUCKET_GAMMA },
+            'accessKeyId': process.env.AWS_GAMMA_ACCESS_KEY,
+            'secretAccessKey': process.env.AWS_GAMMA_SECRET_KEY,
+            'region': S3REGION_GAMMA
+        })
+    }
+
+    return src(DIST + '/**/*')
+        .pipe($.awspublishRouter({
+            cache: {
+                // cache for 5 minutes by default
+                cacheTime: 300
+            },
+            routes: {
+                // all static assets, cached & gzipped
+                '^assets/(?:.+)\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|ttf|eot|woff|woff2)$': {
+                    cacheTime: 2592000, // cache for 1 month
+                    gzip: true
+                },
+
+                // every other asset, cached
+                '^assets/.+$': {
+                    cacheTime: 2592000  // cache for 1 month
+                },
+
+                // all html files, not cached & gzipped
+                '^.+\\.html': {
+                    cacheTime: 0,
+                    gzip: true
+                },
+
+                // all pdf files, not cached
+                '^.+\\.pdf': {
+                    cacheTime: 0
+                },
+
+                // all zip files, not cached
+                '^.+\\.zip': {
+                    cacheTime: 0
+                },
+
+                // font mime types
+                '.ttf$': {
+                    key: '$&',
+                    headers: { 'Content-Type': 'application/x-font-ttf' }
+                },
+                '.woff$': {
+                    key: '$&',
+                    headers: { 'Content-Type': 'application/x-font-woff' }
+                },
+                '.woff2$': {
+                    key: '$&',
+                    headers: { 'Content-Type': 'application/x-font-woff2' }
+                },
+
+                // pass-through for anything that wasn't matched by routes above, to be uploaded with default options
+                '^.+$': '$&'
+            }
+        }))
+        // Make sure everything goes to the root '/'
+        .pipe($.rename(path => {
+            path.dirname = '/' + path.dirname
+        }))
+        .pipe(parallelize(publisher.publish(), 100))
+        .pipe(publisher.sync()) // delete files in bucket that are not in local folder
+        .pipe($.awspublish.reporter({
+            states: ['create', 'update', 'delete']
+        }))
 }
-
-export const s3 = () => src(DIST + '**/*')
-    .pipe($.awspublishRouter({
-        cache: {
-            // cache for 5 minutes by default
-            cacheTime: 300
-        },
-        routes: {
-            // all static assets, cached & gzipped
-            '^assets/(?:.+)\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|ttf|eot|woff|woff2)$': {
-                cacheTime: 2592000, // cache for 1 month
-                gzip: true
-            },
-
-            // every other asset, cached
-            '^assets/.+$': {
-                cacheTime: 2592000  // cache for 1 month
-            },
-
-            // all html files, not cached & gzipped
-            '^.+\\.html': {
-                cacheTime: 0,
-                gzip: true
-            },
-
-            // all pdf files, not cached
-            '^.+\\.pdf': {
-                cacheTime: 0
-            },
-
-            // all zip files, not cached
-            '^.+\\.zip': {
-                cacheTime: 0
-            },
-
-            // font mime types
-            '\.ttf$': {
-                key: '$&',
-                headers: { 'Content-Type': 'application/x-font-ttf' }
-            },
-            '\.woff$': {
-                key: '$&',
-                headers: { 'Content-Type': 'application/x-font-woff' }
-            },
-            '\.woff2$': {
-                key: '$&',
-                headers: { 'Content-Type': 'application/x-font-woff2' }
-            },
-
-            // pass-through for anything that wasn't matched by routes above, to be uploaded with default options
-            '^.+$': '$&'
-        }
-    }))
-    // Make sure everything goes to the root '/'
-    .pipe($.rename(path => {
-        path.dirname = '/' + path.dirname
-    }))
-    .pipe(parallelize(publisher.publish(), 100))
-    .pipe(publisher.sync()) // delete files in bucket that are not in local folder
-    .pipe($.awspublish.reporter({
-        states: ['create', 'update', 'delete']
-    }))
 
 
 //
