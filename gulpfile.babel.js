@@ -57,15 +57,12 @@ const PORT = 1337
 
 // paths
 const SRC      = site.source,
-      DIST     = '_dist'
+      DIST     = site.destination
 
 // deployment
 const S3BUCKET         = 'www.bigchaindb.com',
-      S3REGION         = 'eu-central-1',
       S3BUCKET_BETA    = 'beta.bigchaindb.com',
-      S3REGION_BETA    = 'eu-central-1',
-      S3BUCKET_GAMMA   = 'gamma.bigchaindb.com',
-      S3REGION_GAMMA   = 'eu-central-1'
+      S3BUCKET_GAMMA   = 'gamma.bigchaindb.com'
 
 // SVG sprite
 const SPRITECONFIG = {
@@ -370,23 +367,23 @@ export const s3 = () => {
     if ($.util.env.live === true) {
         var publisher = $.awspublish.create({
             params: { 'Bucket': S3BUCKET },
-            'accessKeyId': process.env.AWS_ACCESS_KEY,
-            'secretAccessKey': process.env.AWS_SECRET_KEY,
-            'region': S3REGION
+            'accessKeyId': process.env.AWS_ACCESS_KEY_ID,
+            'secretAccessKey': process.env.AWS_SECRET_ACCESS_KEY,
+            'region': process.env.AWS_DEFAULT_REGION
         })
     } else if ($.util.env.beta === true) {
         var publisher = $.awspublish.create({
             params: { 'Bucket': S3BUCKET_BETA },
-            'accessKeyId': process.env.AWS_BETA_ACCESS_KEY,
-            'secretAccessKey': process.env.AWS_BETA_SECRET_KEY,
-            'region': S3REGION_BETA
+            'accessKeyId': process.env.AWS_ACCESS_KEY_ID,
+            'secretAccessKey': process.env.AWS_SECRET_ACCESS_KEY,
+            'region': process.env.AWS_DEFAULT_REGION
         })
     } else if ($.util.env.gamma === true) {
         var publisher = $.awspublish.create({
             params: { 'Bucket': S3BUCKET_GAMMA },
-            'accessKeyId': process.env.AWS_GAMMA_ACCESS_KEY,
-            'secretAccessKey': process.env.AWS_GAMMA_SECRET_KEY,
-            'region': S3REGION_GAMMA
+            'accessKeyId': process.env.AWS_ACCESS_KEY_ID,
+            'secretAccessKey': process.env.AWS_SECRET_ACCESS_KEY,
+            'region': process.env.AWS_DEFAULT_REGION
         })
     }
 
