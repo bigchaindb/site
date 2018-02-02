@@ -182,6 +182,9 @@ $menu-height-md: 66px;
 
     .icon--gitter {
         animation: gitterPulse 5s ease-out infinite;
+        stroke-linecap: square;
+        stroke-width: 2px;
+        fill: none;
     }
 }
 

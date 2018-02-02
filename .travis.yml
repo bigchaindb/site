@@ -9,17 +9,12 @@ cache:
 
 before_install:
     - nvm install 9
+    - pip install --user awscli
+    - export PATH=$PATH:$HOME/.local/bin
 
 before_script: "_ci/setup.sh"
 script: "_ci/build.sh"
 after_success: "_ci/deploy.sh"
-
-# deploy:
-#   skip_cleanup: true
-#   provider: script
-#   script: "_ci/deploy.sh"
-#   on:
-#     all_branches: true
 
 notifications:
     email: false

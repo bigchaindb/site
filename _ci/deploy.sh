@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+#
+# Required global environment variables:
+#
+# AWS_ACCESS_KEY_ID
+# AWS_SECRET_ACCESS_KEY
+# AWS_DEFAULT_REGION
+#
 
 set -e;
 
@@ -9,7 +16,6 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; th
 
     gulp deploy --beta;
 
-
 ##
 ## check for master push which is no pull request
 ##
@@ -19,18 +25,14 @@ elif [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; 
 
 else
 
-    echo "$(tput setaf 64)" # green
-    echo "---------------------------------------------"
+    echo "$(tput setaf 64)---------------------------------------------"
     echo "      ✓ nothing to deploy "
-    echo "---------------------------------------------"
-    echo "$(tput sgr0)" # reset
+    echo "---------------------------------------------$(tput sgr0)"
 
 fi;
 
-echo "$(tput setaf 64)" # green
-echo "---------------------------------------------"
+echo "$(tput setaf 64)---------------------------------------------"
 echo "         ✓ done deployment "
-echo "---------------------------------------------"
-echo "$(tput sgr0)" # reset
+echo "---------------------------------------------$(tput sgr0)"
 
 exit;
