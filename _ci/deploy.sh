@@ -7,7 +7,8 @@ set -e;
 ##
 if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
 
-    gulp deploy --beta;
+    #gulp deploy --beta;
+    aws s3 sync ./_dist s3://beta.bigchaindb.com --delete --acl public-read --sse
 
 
 ##
@@ -15,7 +16,8 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; th
 ##
 elif [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
-    gulp deploy --live;
+    #gulp deploy --live;
+    aws s3 sync ./_dist s3://www.bigchaindb.com --delete --acl public-read --sse
 
 else
 
