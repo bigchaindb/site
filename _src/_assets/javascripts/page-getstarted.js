@@ -96,6 +96,7 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
         e.preventDefault()
 
         const message = messageInput.value
+        postButton.classList.add('disabled')
 
         const alice = new driver.Ed25519Keypair()
         const tx = driver.Transaction.makeCreateTransaction(
@@ -128,7 +129,6 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
 
             transactionLink.href = bigchaindbUrl + apiPath + 'transactions/' + response.id
 
-            postButton.classList.add('disabled')
             postButton.style.opacity = 0
 
             responseArea.children[0].classList.add('nyan')
