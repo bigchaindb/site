@@ -37,22 +37,15 @@ founders:
 
 team:
     - name:     Daniel Lustig
-      position: Administrative Assistant
+      position: Operations Executive
       image:    daniel.jpg
       linkedin: daniel-lustig-852a408a
 
     - name:     Alberto Granzotto
-      position: Developer
+      position: Engineer
       image:    alberto.jpg
       twitter:  vrde
       github:   vrde
-
-    - name:     Rodolphe Marques
-      position: Protocols
-      image:    rodolphe.jpg
-      twitter:  rodmar_
-      github:   r-marques
-      linkedin: rodolphemarques
 
     - name:     Greg McMullen
       position: CPO
@@ -69,7 +62,7 @@ team:
       linkedin: dimitridejonghe
 
     - name:     Troy McConaghy
-      position: Developer
+      position: Engineer
       image:    troy.jpg
       twitter:  TroyMc
 
@@ -79,13 +72,8 @@ team:
       twitter:  WojciechHupert
       linkedin: wojciechhupert
 
-    - name:     Kasia Kazimierczak
-      position: Operations Manager
-      image:    kasia.jpg
-      linkedin: katarzyna-kazimierczak-ll-m-65950879
-
     - name:     Sylvain Bellemare
-      position: Developer
+      position: Engineer
       image:    sylvain.jpg
       twitter:  sbellem
       facebook: slvnb
@@ -99,7 +87,7 @@ team:
       github:   TimDaub
 
     - name:     Matthias Kretschmann
-      position: Designer & Developer
+      position: Designer & Engineer
       image:    matthias.jpg
       twitter:  kremalicious
       github:   kremalicious
@@ -108,22 +96,6 @@ team:
       position: Community Manager
       image:    wrigley-avatar.svg
       github:   wrigley
-
-    - name:     Don Gossen
-      position: Ocean Protocol
-      image:    don.jpg
-      linkedin: donald-gossen-40ab96
-
-    - name:     Cristina Pon
-      position: Marketing Director
-      image:    cristina.jpg
-      linkedin: cristinacenuse
-
-    - name:     Oana Ionescu
-      position: Ocean Protocol
-      image:    oana.jpg
-      twitter:  ODIonescu
-      linkedin: oanavoicu
 
     - name:     Gautam Dhameja
       position: Application Engineer
@@ -150,14 +122,8 @@ team:
       twitter:  shahbaz_nazir
       linkedin: shahbaz-nazir-84766451
 
-    - name:     Morgan Sutherland
-      position: IPDB
-      image:    morgan.jpg
-      twitter:  msutherl
-      linkedin: morgansutherland
-
     - name:     Kamal Ved
-      position: Business Development
+      position: Executive Director
       image:    kamal.jpg
       linkedin: kamalved
 
@@ -171,3 +137,13 @@ team:
       image:    manuel.jpg
       linkedin: manuel-rodr%C3%ADguez-18555a11a
       github:   manolodewiner
+
+    - name:     Katharina Grieß
+      position: Engineer
+      image:    katharina.jpg
+      github:   codegeschrei
+
+    - name:     Artur Gomer
+      position: Finance
+      image:    artur.jpg
+      linkedin: arturgomer
