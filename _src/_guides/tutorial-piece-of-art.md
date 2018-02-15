@@ -3,11 +3,10 @@ layout: guide
 
 title: "Tutorial: How to create a digital record of a piece of art"
 tagline: Build a digital certificate of a famous painting that you own
-header: header-car.jpg
+header: header-art.jpg
 order: 2
 
 learn: >
-
     - How assets can be used on BigchainDB to represent real objects
 
     - How to make a `CREATE` transaction to digitally register an asset on BigchainDB
@@ -22,7 +21,7 @@ Hi there! Welcome to our first tutorial! For this tutorial, we assume that you a
 
 # About digital representations of assets
 
-We are moving towards an era where every physical object has a digital representation in a database. This can be in the form of a certificate, a simple entry in a database or another form of digital footprint. In the past, this used to be the paper trail associated with the purchase of a car, a painting or any other type of asset. Today, digital is slowly replacing analog in most aspects of our life. Thanks to advances in cryptography, we are reaching a point where even ownership claims of a specific object don't need to be a signed paper certificate anymore. This allows digitization to move to a new level. BigchainDB as a solution is suited perfectly to act as a digital asset registration and tracking tool.  
+We are moving towards an era where every physical object has a digital representation in a database. This can be in the form of a certificate, a simple entry in a database or another form of digital footprint. In the past, this used to be the paper trail associated with the purchase of a car, a painting or any other type of asset. Today, digital is slowly replacing analog in most aspects of our life. Thanks to advances in cryptography, we are reaching a point where even ownership claims of a specific object don't need to be a signed paper certificate anymore. This allows digitization to move to a new level. BigchainDB as a solution is suited perfectly to act as a digital asset registration and tracking tool.
 
 Using the example of the digital registration of a famous painting you own, in this tutorial you will learn how to register an asset on BigchainDB and how to digitally transfer the ownership of this asset to someone else. The example is for illustrative purposes. For a real life application, there would be additional components that would need to be included.
 
