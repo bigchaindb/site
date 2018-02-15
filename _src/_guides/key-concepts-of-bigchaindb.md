@@ -26,15 +26,15 @@ Traditionally, people design applications focusing on business processes (e.g. a
 
 This infographic will help you understanding what `CREATE` and `TRANSFER` transactions are and what the individual components of a transaction represent (inputs, outputs, assets, metadata etc.). Let's use a simple real-life example: Martina digitally registers her bicycle on BigchainDB in a `CREATE` transaction. After some time, she transfers this bicycle to Stefan in a `TRANSFER` transaction.
 
-Every concept that we describe (e.g. inputs, outputs etc.) is discussed in further detail below. 
+Every concept that we describe (e.g. inputs, outputs etc.) is discussed in further detail below.
 
 <img class="image--create-transfer" src="../diagram.png" srcset="../diagram@2x.png 2x, ../diagram.png 1x" alt="BigchainDB CREATE and TRANSFER transactions" />
 
-The data model of transactions is explained in our [transaction model](https://the-ipdb-transaction-spec.readthedocs.io/en/latest/introduction.html).
+The data model of transactions is explained in our [transaction model](https://docs.bigchaindb.com/projects/server/en/latest/data-models/transaction-model.html).
 
 # Asset
 
-An asset can represent any physical or digital object. It can be a physical object like a car or a house. Or it can be a digital object like a customer order or an air mile. An asset can have one or multiple owners, but it can also be its own owner. Think of an autonomous car or an IoT sensor that does transactions automatically. More information about the asset data model can be found in our [asset model](https://the-ipdb-transaction-spec.readthedocs.io/en/latest/transaction-components/asset.html). An asset always contains data that is immutable. In our example, the color and the registration number of a bicycle is immutable data. 
+An asset can represent any physical or digital object. It can be a physical object like a car or a house. Or it can be a digital object like a customer order or an air mile. An asset can have one or multiple owners, but it can also be its own owner. Think of an autonomous car or an IoT sensor that does transactions automatically. More information about the asset data model can be found in our [asset model](https://docs.bigchaindb.com/projects/server/en/latest/data-models/asset-model.html). An asset always contains data that is immutable. In our example, the color and the registration number of a bicycle is immutable data.
 
 Depending on the context, an asset can represent many different things.
 
