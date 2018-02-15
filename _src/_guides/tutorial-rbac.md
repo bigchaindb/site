@@ -8,7 +8,6 @@ order: 4
 
 
 learn: >
-
     - How Role-based access controls work in BigchainDB
 ---
 
