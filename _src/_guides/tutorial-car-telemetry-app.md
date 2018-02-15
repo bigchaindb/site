@@ -144,7 +144,7 @@ gpsDID.myModel.create({
 ```
 
 
-Now you have digitally registered the parts of the car on BigchainDB, respectively in our case on IPDB.
+Now you have digitally registered the parts of the car on BigchainDB, respectively in our case on the BigchainDB test network.
 
 Once a transaction ends up in a decided-valid block, it's "etched into stone". There's no changing it, no deleting it. The asset is registered now and cannot be deleted. However, the usage of the metadata field allows you to append new information in the future.
 
