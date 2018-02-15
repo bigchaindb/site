@@ -2,8 +2,7 @@
 layout: page
 
 title: Whitepaper
-tagline: "BigchainDB: A Scalable Blockchain Database"
-description: 'This paper describes BigchainDB. BigchainDB fills a gap in the decentralization ecosystem: a decentralized database, at scale. It is capable of 1 million writes per second throughput, storing petabytes of data, and sub-second latency.'
+description: "We're working on a new whitepaper. Stay tuned for updates."
 
 image: photo3.jpg
 header: photo3.jpg
@@ -21,4 +20,4 @@ whitepaper:
           class: btn-link
 ---
 
-<div class="alert alert--warning"><div class="lead">We're working on a new white paper. Stay tuned for updates.</div></div>
+<div class="alert alert--info"><div class="lead text-center">We're working on a new whitepaper. Stay tuned for updates.</div></div>
