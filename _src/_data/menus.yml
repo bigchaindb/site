@@ -16,8 +16,6 @@ secondary:
       url: "/faq/"
     - title: About
       url: "/about/"
-    - title: Whitepaper
-      url: "/whitepaper/"
     - title: Blog
       url: https://blog.bigchaindb.com
     - title: Contact
