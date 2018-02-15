@@ -15,11 +15,6 @@ official:
       version: v0.1
       icon: logo-java
 
-    - title: CLI
-      repo: bdb-transaction-cli
-      version: v0.9
-      icon: logo-cli
-
 community:
     - title: Ruby (CLI wrapper)
       repo: bigchaindb-ruby-client
