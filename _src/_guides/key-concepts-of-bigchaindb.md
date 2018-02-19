@@ -66,13 +66,13 @@ As you can see, there are almost no limits with respect to what an asset can rep
 
 # Input
 
-Conceptually, an input is a pointer to an output of a previous transaction. It specifies to whom an asset belonged before and it provides a proof that the conditions required to transfer the ownership of that asset (e.g. a person needs to sign) are fulfilled. In a CREATE transaction, there is no previous owner, so an input in a CREATE transaction simply specifies who the person is that is registering the object (this is usually the same as the initial owner of the asset). In a TRANSFER transaction, an input contains a proof that the user is authorized to "spend" (transfer or update) this particular output. In practical terms, this means that with the input, a user is stating which asset (e.g. the bike) should be transferred. He also demonstrates that he or she is authorized to do the transfer of that asset. Learn more about the structure of inputs in our [input model](https://the-ipdb-transaction-spec.readthedocs.io/en/latest/transaction-components/inputs.html).
+Conceptually, an input is a pointer to an output of a previous transaction. It specifies to whom an asset belonged before and it provides a proof that the conditions required to transfer the ownership of that asset (e.g. a person needs to sign) are fulfilled. In a CREATE transaction, there is no previous owner, so an input in a CREATE transaction simply specifies who the person is that is registering the object (this is usually the same as the initial owner of the asset). In a TRANSFER transaction, an input contains a proof that the user is authorized to "spend" (transfer or update) this particular output. In practical terms, this means that with the input, a user is stating which asset (e.g. the bike) should be transferred. He also demonstrates that he or she is authorized to do the transfer of that asset. Learn more about the structure of inputs in our [input model](https://docs.bigchaindb.com/projects/server/en/latest/data-models/inputs-outputs.html#inputs).
 
 # Output
 
-A transaction output specifies the conditions that need to be fulfilled to change the ownership of a specific asset. For instance: to transfer a bicycle, a person needs to sign the transaction with his or her private key. This also implicitly contains the information that the public key associated with that private key is the current owner of the asset. Learn more about the data model of outputs in our [output model](https://the-ipdb-transaction-spec.readthedocs.io/en/latest/transaction-components/outputs.html).
+A transaction output specifies the conditions that need to be fulfilled to change the ownership of a specific asset. For instance: to transfer a bicycle, a person needs to sign the transaction with his or her private key. This also implicitly contains the information that the public key associated with that private key is the current owner of the asset. Learn more about the data model of outputs in our [output model](https://docs.bigchaindb.com/projects/server/en/latest/data-models/inputs-outputs.html#outputs).
 
-Note that a transaction can also have multiple outputs. These are called divisible assets. To learn more about divisible assets, complete our [tutorial.](../tutorial-token-launch/) The output can also contain complex conditions (e.g. multiple signatures of multiple people) to acquire ownership. Learn more about that in the data model for [crypto-conditions](https://the-ipdb-transaction-spec.readthedocs.io/en/latest/transaction-components/conditions.html).
+Note that a transaction can also have multiple outputs. These are called divisible assets. To learn more about divisible assets, complete our [tutorial.](../tutorial-token-launch/) The output can also contain complex conditions (e.g. multiple signatures of multiple people) to acquire ownership. Learn more about that in the data model for [crypto-conditions](https://docs.bigchaindb.com/projects/server/en/latest/data-models/conditions.html).
 
 # Metadata
 
@@ -80,6 +80,6 @@ The metadata field allows users to add additional data to a transaction. This ca
 
 # Transaction ID
 
-The ID of a transaction is a unique hash that identifies a transaction. It contains all the information about the transaction in a hashed way. Find out more about the cryptography BigchainDB uses [here.](https://the-ipdb-transaction-spec.readthedocs.io/en/latest/common-operations/crypto-hashes.html)
+The ID of a transaction is a unique hash that identifies a transaction. It contains all the information about the transaction in a hashed way. Find out more about the cryptography BigchainDB uses [here.](https://docs.bigchaindb.com/projects/server/en/latest/appendices/cryptography.html)
 
-That's it! Now you're familiar with our transaction model and ready to complete our first [tutorial](../tutorial-car-telemetry-app/) and get started on BigchainDB!
+That's it! Now you're familiar with our transaction model and ready to complete our first [tutorial](../tutorial-piece-of-art/) and get started on BigchainDB!
