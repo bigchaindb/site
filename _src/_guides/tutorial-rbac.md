@@ -11,12 +11,14 @@ learn: >
     - How Role-based access controls work in BigchainDB
 ---
 
-Hi there! Welcome to our next tutorial about Role-based access controls (RBACs) in BigchainDB. For this tutorial, we assume that you are familiar with the BigchainDB primitives (assets, inputs, outputs, transactions etc.). If you are not, familiarize yourself with the [Key concepts of BigchainDB](../key-concepts-of-bigchaindb/). We also assume that you have completed our [first tutorial](../tutorial-car-telemetry-app/).
+Hi there! Welcome to our next tutorial about Role-based access controls (RBAC) in BigchainDB. For this tutorial, we assume that you are familiar with the BigchainDB primitives (assets, inputs, outputs, transactions etc.). If you are not, familiarize yourself with the [Key concepts of BigchainDB](../key-concepts-of-bigchaindb/). We also assume that you have completed our [first tutorial](../tutorial-car-telemetry-app/).
 
-# About RBACs
-Role based access control is a way to restrict the system access to certain users. In BigchainDB this function enables the creation of hierarchies of role and permissions. Furthermore, users can be assigned roles to “act on behalf of” or “represent” other users or groups.
-In our case we propose different tribes where people have different roles, some can create proposals and some others can vote those proposals.
+# About RBAC
+Role based access control is a way to restrict the system access to certain users. In BigchainDB this function enables the creation of hierarchies of role and permissions as assets. Furthermore, users can be assigned roles to “act on behalf of” or “represent” other users or groups.
 
+In our example use-case scenario for this guide, we have different tribes or groups of users where they have different roles, users belonging to one tribe can create proposal assets and others can create vote assets on the BigchainDB blockchain.
+
+**Important note:** The BigchainDB RBAC module does not work out of the box in BigchainDB and a plugin [smart-assets](https://github.com/bigchaindb/bigchaindb-smart-assets) needs to be loaded with a specific [BigchainDB branch (kyber-master)](https://github.com/bigchaindb/bigchaindb/tree/kyber-master). The setup instructions are available in the [README.md](https://github.com/bigchaindb/bigchaindb-smart-assets/blob/master/README.md) of the smart-assets repository.
 
 {% include_relative _setup.md %}
 
@@ -224,3 +226,8 @@ So now simply create proposals and votes from different users. You will see how 
     document.body.innerHTML +=vote2.id
 }
 ```
+
+The concepts discussed in this guide can be found in detail on our [blog](https://blog.bigchaindb.com/role-based-access-control-for-bigchaindb-assets-b7cada491997).
+
+The demo code is available in [GitHub](
+https://github.com/bigchaindb/project-jannowitz/tree/master/rbac/demo).

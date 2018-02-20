@@ -81,20 +81,7 @@ After having generated key pairs (and identities), you can now create the actual
 
 These assets will now live in BigchainDB forever and there is no possibility to delete them. This is the immutability property of blockchain technology.
 
-You can start by creating the car asset. The first thing needed is the definition of the asset field that represents the car. It has a JSON format:
-
-```js
-const vehicle = {
-  value: '6sd8f68sd67',
-  power: {
-    engine: '2.5',
-    hp: '220 hp',
-  }
-  consumption: '10.8 l',
-}
-```
-
-As a next step, you need to generate a `CREATE` transaction that represents the user DID in BigchainDB as an asset. The user is a self-owned identity, so you will use Alice's keypair to create the `userDID`.
+For creating the first asset you can generate a `CREATE` transaction that represents the user DID in BigchainDB as an asset. The user is a self-owned identity, so you will use Alice's keypair to create the `userDID`.
 
 ```js
 userDID.myModel.create({
@@ -109,10 +96,24 @@ userDID.myModel.create({
         document.body.innerHTML +=asset.id
     })
 ```
-
 As you can see, by inheriting the Orm class it is very easy to create an asset in BigchainDB. The only thing needed is the keypair and the asset.
 The id property is set in the DID object. This is the unique identifier of this asset.
+
+In order to create the asset of the car you first need to define the asset field that represents the car. It has a JSON format:
+
+```js
+const vehicle = {
+  value: '6sd8f68sd67',
+  power: {
+    engine: '2.5',
+    hp: '220 hp',
+  }
+  consumption: '10.8 l',
+}
+```
+
 Now you can create the DID for the car. The owner of the car is Alice, and she is the one who can transfer this asset in the future, so the Alice keypair is needed to create this asset
+
 
 ```js
 carDID.myModel.create({
