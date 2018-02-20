@@ -1,14 +1,14 @@
 ---
 layout: guide
 
-title: "Tutorial: Role-based access controls in BigchainDB"
+title: "Tutorial: Role-based access control in BigchainDB"
 tagline: Learn how to assign different roles and permissions to different user types in BigchainDB
 header: header-rbac.jpg
 order: 4
 
 
 learn: >
-    - How Role-based access controls work in BigchainDB
+    - How Role-based access control works in BigchainDB
 ---
 
 Hi there! Welcome to our next tutorial about Role-based access controls (RBAC) in BigchainDB. For this tutorial, we assume that you are familiar with the BigchainDB primitives (assets, inputs, outputs, transactions etc.). If you are not, familiarize yourself with the [Key concepts of BigchainDB](../key-concepts-of-bigchaindb/). We also assume that you have completed our [first tutorial](../tutorial-car-telemetry-app/).
@@ -18,11 +18,9 @@ Role based access control is a way to restrict the system access to certain user
 
 In our example use-case scenario for this guide, we have different tribes or groups of users where they have different roles, users belonging to one tribe can create proposal assets and others can create vote assets on the BigchainDB blockchain.
 
-**Important note:** The BigchainDB RBAC module does not work out of the box in BigchainDB and a plugin [smart-assets](https://github.com/bigchaindb/bigchaindb-smart-assets) needs to be loaded with a specific [BigchainDB branch (kyber-master)](https://github.com/bigchaindb/bigchaindb/tree/kyber-master). The setup instructions are available in the [README.md](https://github.com/bigchaindb/bigchaindb-smart-assets/blob/master/README.md) of the smart-assets repository.
-
 {% include_relative _setup.md %}
 
-
+**Important note:** The BigchainDB RBAC module does not work out of the box in BigchainDB and a plugin [smart-assets](https://github.com/bigchaindb/bigchaindb-smart-assets) needs to be loaded with a specific [BigchainDB branch (kyber-master)](https://github.com/bigchaindb/bigchaindb/tree/kyber-master). The setup instructions are available in the [README.md](https://github.com/bigchaindb/bigchaindb-smart-assets/blob/master/README.md) of the smart-assets repository.
 
 Let's create the app. You will create an asset for Admin type which will act as the admin group for the app. Async/await functions will be used in this tutorial
 
