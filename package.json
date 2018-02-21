@@ -26,6 +26,7 @@
   ],
   "dependencies": {
     "bigchaindb-driver": "^3.2.0",
+    "clipboard": "^1.7.1",
     "gumshoe": "github:cferdinandi/gumshoe",
     "is-in-viewport": "^3.0.0",
     "jquery": "^3.3.1",

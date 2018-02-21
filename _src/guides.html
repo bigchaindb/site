@@ -1,0 +1,40 @@
+---
+layout: page
+
+title: The Hitchhiker Guides to BigchainDB
+tagline: "These guides explain you how to get started and build apps with BigchainDB"
+image: share-image-guides.png
+---
+
+<section class="section section--guideslist">
+    <div class="row">
+        {% assign guides = site.guides | sort: 'order' %}
+        {% for guide in guides %}
+            <article class="guide">
+                <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('./{{ guide.header }}')" {% endif %}>
+                    <h1 class="guide__title">{{ guide.title }}</h1>
+                    <p class="guide__tagline">{{ guide.tagline }}</p>
+                </a>
+            </article>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="section section--getstarted background--darker">
+    <div class="row row--wide">
+        <header class="section-header">
+            <h1 class="section-title">Get to know the BigchainDB universe</h1>
+            <div class="section-description">
+                <p>Explore drivers, tools & a lot more documentation.</p>
+                <a class="btn btn-primary" href="/getstarted/">Get started</a>
+            </div>
+        </header>
+    </div>
+    <aside class="starbase starbase--server">
+        <div class="row row--wide">
+            <figure class="starbase__image">
+                <img class="img--responsive" src="/assets/img/nosprite/starbase-server.svg" alt="Starbase" width="1111" height="343">
+            </figure>
+        </div>
+    </aside>
+</section>

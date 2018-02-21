@@ -20,8 +20,10 @@
     }
 }
 
-.article__title {
-    @extend .h6, .transition;
+.article__title,
+h1.article__title {
+    font-size: $font-size-h5;
+    font-weight: $font-weight-normal;
     margin: 0;
     color: #fff;
     position: relative;

@@ -1,0 +1,237 @@
+.header--guides {
+    background: url('../img/nosprite/starbase-guides.svg') no-repeat center bottom;
+    background-size: contain;
+    padding-bottom: 18%;
+
+    &:before {
+        display: none;
+    }
+
+    > .row {
+        @extend .row--wide;
+    }
+
+    .header__content {
+        padding-top: ($spacer * 5);
+        padding-bottom: ($spacer * 5);
+    }
+
+    .header__tagline {
+        @media ($screen-sm) {
+            max-width: 40rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.header--guide {
+    .header__content {
+        padding-top: ($spacer * 5);
+        padding-bottom: ($spacer * 5);
+    }
+}
+
+.content--guide {
+    .content--page--markdown {
+        padding-top: $spacer * 4;
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: $font-weight-normal;
+        }
+
+        h2,
+        h3,
+        h4 {
+            text-align: left;
+            border: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: $font-size-h3;
+        }
+
+        h2 {
+            font-size: $font-size-h4;
+            margin-top: ($spacer * 2.5);
+        }
+
+        h3 {
+            font-size: $font-size-base;
+            font-weight: $font-weight-normal;
+            color: #fff;
+            margin-bottom: $spacer;
+            margin-top: ($spacer * 2);
+        }
+    }
+}
+
+.section-header--guide {
+    margin-bottom: $spacer * 3;
+
+    .section-description {
+        text-align: left;
+
+        h2 {
+            @extend .h5;
+            margin-top: 0;
+            font-size: $font-size-lg;
+        }
+
+        ul {
+            margin: 0;
+        }
+    }
+}
+
+.section--guides-more {
+    padding-top: 0;
+}
+
+.guide {
+    height: 100%;
+
+    a {
+        @include color-overlay;
+        background-size: cover;
+        background-position: center;
+        background-image: url('../img/hero-berlin.jpg');
+        display: block;
+        box-shadow: none;
+        background-color: $brand-main-blue-dark;
+        padding: $spacer * 1.5;
+        height: 100%;
+        border-radius: $border-radius;
+
+        @media ($screen-sm) {
+            padding: $spacer * 3;
+        }
+
+        &:before {
+            opacity: .85;
+        }
+
+        &:hover,
+        &:focus {
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 2px 5px rgba($brand-main-blue-dark, .2);
+            transform: translateY(-1px);
+        }
+    }
+
+    p:last-child,
+    .guide__title:only-child,
+    .guide__tagline,
+    .grid {
+        margin-bottom: 0;
+    }
+
+    .section--guides &,
+    .section--guideslist & {
+        margin-bottom: $spacer * 2;
+
+        a {
+            @media ($screen-sm) {
+                padding: $spacer * 4;
+            }
+        }
+    }
+}
+
+.guide__title,
+.guide__tagline {
+    position: relative;
+    z-index: 1;
+}
+
+.guide__title,
+h1.guide__title {
+    font-size: $font-size-h4;
+    font-weight: $font-weight-normal;
+    margin-bottom: $spacer / $line-height;
+    margin-top: 0;
+    color: #fff;
+}
+
+.guide__tagline {
+    color: $brand-main-blue-light;
+}
+
+//
+// TOC
+//
+.section-nav {
+    background: darken($brand-main-gray, 2%);
+    margin-top: 0;
+    margin-bottom: $spacer * 2;
+    padding: $spacer * 1.5;
+    padding-bottom: $spacer * 2;
+    border-radius: $border-radius;
+
+    a {
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+}
+
+li.toc-h1 {
+    // custom numbers
+    &:before {
+        font-size: $font-size-base;
+        opacity: .6;
+        color: $brand-main-blue-light;
+    }
+
+    a {
+        font-size: $font-size-base;
+        margin: 0;
+        box-shadow: none;
+        color: $brand-main-blue-light;
+    }
+
+    ul {
+        padding-left: $spacer * 2.6;
+    }
+}
+
+li.toc-h2 {
+    a {
+        font-size: $font-size-sm;
+        color: $text-color;
+    }
+}
+
+li.toc-h3 {
+    display: none;
+}
+
+.section--getstarted {
+    padding-bottom: 0;
+
+    .section-header {
+        margin-bottom: -($spacer * 3.5);
+        position: relative;
+        z-index: 10;
+
+        .btn {
+            margin-top: $spacer * 2;
+        }
+    }
+}
+
+.image--create-transfer {
+    max-width: calc(100% + 1rem) !important; //stylelint-disable-line declaration-no-important
+    margin-left: -1rem;
+
+    @media ($screen-sm) {
+        max-width: calc(100% + 1.5rem) !important; //stylelint-disable-line declaration-no-important
+        margin-left: -1.5rem;
+    }
+}

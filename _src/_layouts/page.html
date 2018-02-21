@@ -2,20 +2,7 @@
 layout: base
 ---
 
-<header role="banner" class="header" {% if page.header %}style="background-image:url('/assets/img/{{ page.header }}')"{% endif %}>
-
-    {% include menu-main.html %}
-
-    <div class="row">
-        <div class="header__content">
-            {% if page.tagline %}
-                <h1 class="header__tagline">{{ page.tagline }}
-            {% else %}
-                <h1 class="header__title">{{ page.title }}</h1>
-            {% endif %}
-        </div>
-    </div>
-</header>
+{% include header.html %}
 
 <section role="main" class="content content--page">
 

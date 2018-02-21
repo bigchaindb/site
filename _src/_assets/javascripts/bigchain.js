@@ -23,7 +23,7 @@ jQuery(function($) {
     //
     // init Smooth Scroll
     //
-    var scroll = new SmoothScroll('a[data-scroll]', {
+    var scroll = new SmoothScroll('a[data-scroll], .toc-entry a', {
         easing: 'easeOutQuint'
     });
 

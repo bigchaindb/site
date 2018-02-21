@@ -51,17 +51,11 @@ drivers:
 # ----------------------------
 
 docs:
-    title: "Documentation"
-    description: "Dive into our documentation with tutorials, examples, terminology, references and more."
-    button: "See All Documentation"
+    title: "Guides & Documentation "
+    description: "Dive into our documentation with guides, examples, terminology, references and more."
+    button_documentation: "See All Documentation"
+    button_guides: "See All Guides"
     categories:
-
-        - title: "Tutorials"
-          items:
-              - title: "Set Up & Run a Dev/Test Node"
-                link: "https://docs.bigchaindb.com/projects/server/en/latest/dev-and-test/setup-run-node.html"
-              - title: "Production Deployment Template"
-                link: "https://docs.bigchaindb.com/projects/server/en/latest/production-deployment-template/index.html"
 
         - title: "Code Examples"
           items:

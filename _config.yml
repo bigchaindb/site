@@ -90,13 +90,25 @@ collections:
     partners:
         output: true
         permalink: /:collection/:path/
+    guides:
+        output: true
+        permalink: /:collection/:path/
 
+defaults:
+    - scope:
+        path: ""
+        type: guides
+      values:
+        toc: true
+        image: share-image-guides.png
+        js: page-guides.min.js
 
 # Plugins
 # --------------------
 plugins:
     - jekyll-sitemap
     - jekyll-redirect-from
+    - jekyll-toc
 
 
 jekyll_get:

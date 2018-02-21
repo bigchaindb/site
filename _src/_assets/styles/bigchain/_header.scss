@@ -1,18 +1,17 @@
 .header {
     @extend .background--photo;
     background-image: url('../img/header-berlin.jpg');
-    background-position: center bottom;
+    background-position: center center;
 }
 
 .header__content {
-    padding: ($spacer * 3) 0;
+    padding: ($spacer * 4) 0;
     text-align: center;
 }
 
 // intro animation
 .header__title,
 .header__tagline,
-.header__description,
 .header__logo,
 .header__label {
     .wf-active &,
@@ -22,7 +21,7 @@
     }
 }
 
-.header__description,
+.header__tagline,
 .header__logo {
     .wf-active &,
     .wf-inactive & {
@@ -46,7 +45,9 @@
     margin: 0;
 }
 
-.header__tagline {
-    font-size: $font-size-h3;
-    color: #fff;
+.header__tagline,
+h2.header__tagline {
+    font-size: $font-size-h4;
+    font-weight: $font-weight-normal;
+    margin-top: $spacer;
 }

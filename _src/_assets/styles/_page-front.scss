@@ -5,7 +5,8 @@
 //
 
 .page-front {
-    .section--partners,
+    .section--guides,
+    .section--blog,
     .section-testimonials {
         @extend .background--darker;
     }

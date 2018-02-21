@@ -1,0 +1,67 @@
+---
+layout: base
+---
+
+{% include header.html %}
+
+<section role="main" class="content content--page content--guide">
+    <div class="row content--page--markdown">
+
+        {% if page.learn %}
+        <header class="section-header section-header--guide">
+            <div class="section-description">
+                <h2>You will learn</h2>
+                {{ page.learn | markdownify }}
+            </div>
+        </header>
+        {% endif %}
+
+        {{ content | toc }}
+
+    </div>
+</section>
+
+<section class="section section--guides-more">
+    <div class="row">
+        <header class="section-header">
+            <h1 class="section-title">More guides</h1>
+        </header>
+    </div>
+    <div class="row row--wide">
+        <div class="grid grid--full grid-small--half grid-medium--third grid--gutters">
+            {% for guide in site.guides limit: 6 %}
+                {% unless page.id == guide.id %}
+                    <div class="grid__col">
+                        <article class="guide">
+                            <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('../{{ guide.header }}')"{% endif %}>
+                                <h1 class="guide__title">{{ guide.title }}</h1>
+                            </a>
+                        </article>
+                    </div>
+                {% endunless %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row text-center">
+        <a class="btn btn-primary" href="/guides/">All guides</a>
+    </div>
+</section>
+
+<section class="section section--getstarted background--darker">
+    <div class="row row--wide">
+        <header class="section-header">
+            <h1 class="section-title">Get to know the BigchainDB universe</h1>
+            <div class="section-description">
+                <p>Explore drivers, tools & a lot more documentation.</p>
+                <a class="btn btn-primary" href="/getstarted/">Get started</a>
+            </div>
+        </header>
+    </div>
+    <aside class="starbase starbase--server">
+        <div class="row row--wide">
+            <figure class="starbase__image">
+                <img class="img--responsive" src="/assets/img/nosprite/starbase-server.svg" alt="Starbase" width="1111" height="343">
+            </figure>
+        </div>
+    </aside>
+</section>
