@@ -29,7 +29,7 @@ Let's create the app. You will create an asset for Admin type which will act as 
 const nameSpace = 'rbac-bdb-tutorial'
 async function createApp(){
     // Generate keypair for admin instance
-    const admin1 = new driver.Ed25519Keypair()
+    const admin1 = new BigchainDB.Ed25519Keypair()
 
     // Create admin user type. This is the asset representing the group of
     // admins
@@ -67,20 +67,20 @@ The `createNewAsset` function looks like this
 ```js
 async function createNewAsset(keypair, asset, metadata) {
 
-    let condition = driver.Transaction.makeEd25519Condition(keypair.publicKey,
+    let condition = BigchainDB.Transaction.makeEd25519Condition(keypair.publicKey,
         true)
 
-    let output = driver.Transaction.makeOutput(condition)
+    let output = BigchainDB.Transaction.makeOutput(condition)
     output.public_keys = [keypair.publicKey]
 
-    const transaction = driver.Transaction.makeCreateTransaction(
+    const transaction = BigchainDB.Transaction.makeCreateTransaction(
         asset,
         metadata,
         [output],
         keypair.publicKey
     )
 
-    const txSigned = driver.Transaction.signTransaction(transaction,
+    const txSigned = BigchainDB.Transaction.signTransaction(transaction,
         keypair.privateKey)
     let tx
     await conn.postTransaction(txSigned)
@@ -97,9 +97,9 @@ You have just generated the admin type and app asset, so now you are able to cre
 ```js
 function createUsers() {
 
-    const user1 = new driver.Ed25519Keypair()
-    const user2 = new driver.Ed25519Keypair()
-    const user3 = new driver.Ed25519Keypair()
+    const user1 = new BigchainDB.Ed25519Keypair()
+    const user2 = new BigchainDB.Ed25519Keypair()
+    const user3 = new BigchainDB.Ed25519Keypair()
 
     const adminuser1Metadata = {
         event: 'User Assigned',

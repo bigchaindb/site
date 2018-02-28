@@ -44,6 +44,7 @@ So in our app, each object in the real world as the car, the telemetry box in th
 You will create a DID class that inherits from Orm BigchainDB driver, so DID objects will have all of the methods available in Orm. The `entity` represents the public key of the object itself.
 
 ```js
+const Orm = require('bigchaindb-orm')
 
 class DID extends Orm {
     constructor(entity) {
