@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const buttons = document.querySelectorAll('.highlight .btn--clipboard')
 
     buttons.forEach(button => {
-        const clipboard = new Clipboard(button, {
+        const clipboard = new ClipboardJS(button, {
             target: (trigger) => {
                 return trigger.nextElementSibling;
             }
