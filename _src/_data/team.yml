@@ -47,12 +47,6 @@ team:
       twitter:  vrde
       github:   vrde
 
-    - name:     Greg McMullen
-      position: CPO
-      image:    greg.jpg
-      twitter:  gmcmullen
-      linkedin: gregmcm
-
     - name:     Dimitri de Jonghe
       position: Application Director
       image:    dimi.jpg
