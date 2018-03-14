@@ -6,7 +6,7 @@ main:
       url: "/features/"
     - title: Use Cases
       url: "/usecases/"
-    - title: Guides
+    - title: Guide
       url: "/guides/"
     - title: Docs
       url: https://docs.bigchaindb.com/
