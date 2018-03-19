@@ -145,6 +145,14 @@ $menu-height-md: 66px;
             }
         }
 
+        &:visited {
+            .release:after {
+                // make it appear hidden by changing background-color
+                // cause modifiying display is not allowed for :visited
+                background-color: rgb(15, 40, 56);
+            }
+        }
+
         .icon {
             transform: translateY(1px);
         }
@@ -174,6 +182,17 @@ $menu-height-md: 66px;
 
     .release {
         min-width: 44px;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: .45rem;
+            height: .45rem;
+            border-radius: 50%;
+            background-color: saturate(adjust-hue($brand-main-green, -170%), 15%);
+            vertical-align: top;
+            margin-left: $spacer / 8;
+        }
     }
 
     .icon {
