@@ -15,4 +15,12 @@
       <ReplaceKeyPrefixWith>whitepaper/</ReplaceKeyPrefixWith>
     </Redirect>
   </RoutingRule>
+  <RoutingRule>
+    <Condition>
+      <KeyPrefixEquals>usecases/</KeyPrefixEquals>
+    </Condition>
+    <Redirect>
+      <ReplaceKeyPrefixWith>features/#usecases</ReplaceKeyPrefixWith>
+    </Redirect>
+  </RoutingRule>
 </RoutingRules>

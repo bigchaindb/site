@@ -106,4 +106,69 @@ js: page-features.min.js
     </div>
 </section>
 
+<section class="section section-usecases background--darker" id="usecases">
+    <div class="row">
+        <header class="section-header">
+            <h1 class="section-title">Use Cases</h1>
+            <p class="section-description">BigchainDB is for developers and organizations looking for a queryable database with blockchain characteristics such as decentralization, immutability and the ability to treat anything stored in the database as an asset. Whether it’s atoms, bits or bytes of value, any real-world blockchain application needs performance. A perfect fit for BigchainDB.</p>
+        </header>
+
+        <div class="grid grid--full grid-small--half grid--gutters grid--top text-left">
+            <div class="grid__col">
+                 We’re still in the early days of the decentralization movement and while all of the industries below are being disrupted in one way or another, there’s an abundance of opportunity within each.
+            </div>
+            <div class="grid__col">
+                <p>
+                    <strong>Building something with BigchainDB?</strong>
+                    <br>
+                    <a href="/contact/">We want to hear from you.</a>
+                </p>
+            </div>
+        </div>
+
+        {% for industry in site.data.industries %}
+        <section class="section section--industry" id="{{ industry.name | downcase | replace: " ", " " }}">
+
+            <header class="section-header">
+                <h1 class="section-title">
+                    <svg class="icon">
+                        <use xlink:href="/assets/img/sprite.svg#{{ industry.icon }}"></use>
+                    </svg>
+                    {{ industry.name }}
+                </h1>
+                <p class="section-description">{{ industry.description }}</p>
+            </header>
+
+            {% if industry.usecase %}
+                {% for usecase in site.usecases %}
+                    {% if industry.usecase == usecase.slug %}
+                        <article class="featuredusecase">
+                            <a class="featuredusecase__logo" href="{{ usecase.url }}">
+                                {% if usecase.bitmaplogo %}
+                                <img src="/assets/img/{{ usecase.bitmaplogo }}" /> {% else %}
+                                <svg>
+                                    <use xlink:href="/assets/img/sprite.svg#logo-{{ usecase.slug }}"></use>
+                                </svg>
+                                {% endif %}
+                            </a>
+
+                            <div class="featuredusecase__content">
+                                <h1 class="featuredusecase__title">
+                                    <a href="{{ usecase.url }}">{{ usecase.title }}</a>
+                                </h1>
+                                <p>{{ usecase.description }}</p>
+                                <a href="{{ usecase.url }}">Learn more</a>
+                            </div>
+                        </article>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </section>
+        {% endfor%}
+
+        </div>
+
+    </div>
+</section>
+
 {% include sections/section-newsletter.html %}

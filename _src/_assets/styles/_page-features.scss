@@ -40,7 +40,6 @@
     font-family: $headings-font-family;
     color: $gray-light;
     background: $gray-dark;
-
     display: inline-block;
     margin-left: ($spacer / 2);
     padding: ($spacer / 4) ($spacer / 2);
@@ -54,15 +53,6 @@
 
 .stacks__image {
     figcaption { margin: $spacer 0; }
-}
-
-.section-usecases {
-    .grid {
-        // manually center last column
-        .grid__col:last-child {
-            margin: auto;
-        }
-    }
 }
 
 .table--comparison {
@@ -89,6 +79,129 @@
 
         .icon-check {
             stroke: $brand-primary;
+        }
+    }
+}
+
+.section-usecases {
+    > .row {
+        > .section-header {
+            margin-bottom: 0;
+
+            > .section-description { // stylelint-disable-line selector-max-compound-selectors
+                margin-bottom: $spacer * 3;
+                padding-bottom: $spacer * 3;
+                border-bottom: 2px solid lighten($gray-dark, 10%);
+            }
+        }
+    }
+}
+
+//
+// Industry section
+//
+.section--industry {
+    &:first-child {
+        margin-top: $spacer * 4;
+    }
+
+    .section-header {
+        margin-bottom: $spacer * 2;
+
+        .icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: -($spacer / 3);
+            margin-right: $spacer / 2;
+            stroke-width: 2;
+        }
+    }
+
+    .section-title,
+    .section-description {
+        text-align: left;
+    }
+
+    .section-title {
+        @extend .h2;
+        margin-top: 0;
+        margin-bottom: $spacer * 2;
+
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.featuredusecase {
+    border-top: 2px solid lighten($gray-dark, 10%);
+    padding-top: $spacer * 2;
+    margin-top: $spacer * 2;
+
+    @media ($screen-sm) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.featuredusecase__logo {
+    box-shadow: none;
+    transition: .2s ease-out;
+    display: block;
+
+    &:hover,
+    &:focus {
+        background: none;
+
+        svg {
+            fill: $brand-main-green;
+        }
+    }
+
+    @media ($screen-sm) {
+        flex: 0 0 20%;
+        order: 2;
+        margin-left: 5%;
+    }
+
+    img,
+    svg {
+        width: 80px;
+        max-width: 80px;
+        max-height: 60px;
+        height: auto;
+        margin-bottom: $spacer / 2;
+        opacity: .6;
+        align-self: flex-start; // work around stretched images flexbox bug
+        fill: $brand-main-blue-light;
+        transition: .2s ease-out;
+
+        @media ($screen-sm) {
+            width: 120px;
+            max-width: 120px;
+            max-height: 90px;
+            height: auto;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.featuredusecase__content {
+    flex: 0 0 75%;
+}
+
+.featuredusecase__title {
+    @extend .h3;
+    margin-top: 0;
+    margin-bottom: $spacer;
+
+    a {
+        color: $brand-main-green;
+        box-shadow: none;
+
+        &:hover,
+        &:focus {
+            color: #fff;
         }
     }
 }
