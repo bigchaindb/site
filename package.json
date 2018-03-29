@@ -46,7 +46,7 @@
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.23.6",
     "concurrent-transform": "^1.0.0",
-    "critical": "^1.1.1",
+    "critical": "^1.2.1",
     "cross-spawn": "^6.0.5",
     "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
@@ -75,7 +75,7 @@
     "stylelint": "^9.1.3",
     "stylelint-config-bigchaindb": "^1.2.1",
     "stylelint-config-standard": "^18.2.0",
-    "uglify-es": "^3.3.9"
+    "uglify-es": "^3.3.10"
   },
   "engines": {
     "node": ">=7.0.0"
