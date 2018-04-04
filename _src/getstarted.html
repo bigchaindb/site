@@ -207,25 +207,21 @@ conn.postTransaction(txSigned)
 
                         {% for driver in site.data.drivers.official %}
 
-                        {% if driver.external %}
-                            {% capture url %}https://github.com/{{ driver.external }}/{{ driver.repo }}{% endcapture %}
-                        {% else %}
                             {% capture url %}https://github.com/bigchaindb/{{ driver.repo }}{% endcapture %}
-                        {% endif %}
 
-                        <div class="grid__col">
-                            <a class="driver" href="{{ url }}">
-                                <h2 class="driver__title">{{ driver.title }}</h2>
-                                <svg class="driver__logo">
-                                    <use xlink:href="/assets/img/sprite.svg#{{ driver.icon }}"></use>
-                                </svg>
+                            <div class="grid__col">
+                                <a class="driver" href="{{ url }}">
+                                    <h2 class="driver__title">{{ driver.title }}</h2>
+                                    <svg class="driver__logo">
+                                        <use xlink:href="/assets/img/sprite.svg#{{ driver.icon }}"></use>
+                                    </svg>
 
-                                <p class="driver__meta">
-                                    <span class="driver__repo">{{ driver.repo }}</span>
-                                    <span class="driver__version">{{ driver.version }}</span>
-                                </p>
-                            </a>
-                        </div>
+                                    <p class="driver__meta">
+                                        <span class="driver__repo">{{ driver.repo }}</span>
+                                        <span class="driver__version">{{ driver.version }}</span>
+                                    </p>
+                                </a>
+                            </div>
                         {% endfor %}
 
                     </div>
