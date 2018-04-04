@@ -186,8 +186,8 @@ $menu-height-md: 66px;
         &:after {
             content: '';
             display: inline-block;
-            width: .45rem;
-            height: .45rem;
+            width: .35rem;
+            height: .35rem;
             border-radius: 50%;
             background-color: saturate(adjust-hue($brand-main-green, -170%), 15%);
             vertical-align: top;
