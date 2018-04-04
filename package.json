@@ -38,7 +38,7 @@
     "svg4everybody": "^2.1.9",
     "textarea-autogrow": "^1.0.0",
     "vivus": "^0.4.3",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {
     "acorn": "^5.5.3",
@@ -46,7 +46,7 @@
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.23.6",
     "concurrent-transform": "^1.0.0",
-    "critical": "^1.2.1",
+    "critical": "^1.2.2",
     "cross-spawn": "^6.0.5",
     "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
@@ -72,7 +72,7 @@
     "gulp-zip": "^4.1.0",
     "js-yaml": "^3.11.0",
     "request": "^2.85.0",
-    "stylelint": "^9.1.3",
+    "stylelint": "^9.2.0",
     "stylelint-config-bigchaindb": "^1.2.1",
     "stylelint-config-standard": "^18.2.0",
     "uglify-es": "^3.3.10"
