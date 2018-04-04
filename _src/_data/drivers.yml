@@ -9,13 +9,11 @@ official:
       version: v0.3
       icon: logo-js
 
+community:
     - title: Java
       repo: java-bigchaindb-driver
-      external: authenteq
-      version: v0.1
+      link: https://github.com/authenteq/java-bigchaindb-driver
       icon: logo-java
-
-community:
     - title: Ruby (CLI wrapper)
       repo: bigchaindb-ruby-client
       icon: logo-ruby
