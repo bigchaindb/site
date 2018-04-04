@@ -76,6 +76,8 @@
 
     code {
         font-size: $font-size-xs;
+        word-break: break-all;
+        word-wrap: break-word;
     }
 }
 

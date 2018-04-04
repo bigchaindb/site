@@ -131,8 +131,6 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
 
             postButton.style.opacity = 0
 
-            responseArea.children[0].classList.add('nyan')
-
         }, reason => { // Error!
             console.log(reason)
 
