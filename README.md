@@ -1,9 +1,10 @@
 # [![site](media/repo-banner@2x.png)](https://www.bigchaindb.com)
 
-> The fabulous cat of blockchain websites.
+> 🦁 The fabulous cat of blockchain websites.
 
-[![Build Status](https://travis-ci.com/ascribe/bigchain-website.svg?token=3psqw6c8KMDqfdGQ2x6d&branch=master)](https://travis-ci.com/ascribe/bigchain-website)
+[![Build Status](https://travis-ci.org/bigchaindb/site.svg?branch=master)](https://travis-ci.org/bigchaindb/site)
 [![css bigchaindb](https://img.shields.io/badge/css-bigchaindb-39BA91.svg)](https://github.com/bigchaindb/stylelint-config-bigchaindb)
+[![js ascribe](https://img.shields.io/badge/js-ascribe-39BA91.svg)](https://github.com/ascribe/javascript)
 <img src="http://forthebadge.com/images/badges/powered-by-electricity.svg" height="20"/>
 <img src="http://forthebadge.com/images/badges/as-seen-on-tv.svg" height="20"/>
 <img src="http://forthebadge.com/images/badges/uses-badges.svg" height="20"/>
@@ -28,6 +29,7 @@
     * [(S)CSS](#scss)
     * [JavaScript](#javascript)
 * [Authors](#authors)
+* [License](#license)
 
 ## Development
 
@@ -54,7 +56,7 @@ yarn && bundle install
 
 ### Development build
 
-Spin up local dev server and livereloading watch task, reachable under [https://localhost:1337](https://localhost:1337):
+Spin up local dev server and livereloading watch task, reachable under [http://localhost:1337](http://localhost:1337):
 
 ```bash
 gulp
@@ -155,4 +157,22 @@ New js should follow [eslint-config-ascribe](https://github.com/ascribe/javascri
 
 ## Authors
 
-- Matthias Kretschmann ([@kremalicious](https://github.com/kremalicious)) - [BigchainDB](https://www.bigchaindb.com)
+- Matthias Kretschmann ([@kremalicious](https://github.com/kremalicious)) - [BigchainDB](https://www.bigchaindb.com) & [Ocean Protocol](https://oceanprotocol.com)
+
+## License
+
+```
+Copyright 2018 BigchainDB GmbH
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
