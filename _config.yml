@@ -92,7 +92,7 @@ collections:
         permalink: /:collection/:path/
     guides:
         output: true
-        permalink: /:collection/:path/
+        permalink: /developers/:collection/:path/
 
 defaults:
     - scope:
