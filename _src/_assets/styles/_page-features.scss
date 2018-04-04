@@ -1,13 +1,13 @@
 .feature {
     display: flex;
-    margin-bottom: $spacer;
+    margin-bottom: $spacer * 2;
 
     &:first-of-type { padding-top: 0; }
 }
 
 .feature__icon {
     flex: 0 0 15%;
-    margin-right: 5%;
+    margin-right: 3%;
     margin-top: 2px;
     margin-bottom: 0;
     width: 3rem;
@@ -15,7 +15,7 @@
 }
 
 .feature__detail {
-    flex: 0 0 80%;
+    flex: 0 0 82%;
 }
 
 .feature__title {
@@ -23,6 +23,8 @@
     color: $brand-main-blue-light;
     margin-top: 0;
     margin-bottom: ($spacer / 3);
+    display: flex;
+    align-items: center;
 }
 
 .feature__text {
@@ -35,16 +37,21 @@
     padding: 1rem 0 0;
 }
 
-.feature__title__comingsoon {
-    @extend .small;
+.feature__title__comingsoon,
+.feature__title__new {
     font-family: $headings-font-family;
+    font-size: $font-size-sm;
     color: $gray-light;
     background: $gray-dark;
     display: inline-block;
     margin-left: ($spacer / 2);
-    padding: ($spacer / 4) ($spacer / 2);
+    padding: ($spacer / 6) ($spacer / 2);
     border-radius: 2px;
-    vertical-align: middle;
+}
+
+.feature__title__new {
+    background: $brand-main-blue-light;
+    color: $brand-main-blue-dark;
 }
 
 .stacks__title {
