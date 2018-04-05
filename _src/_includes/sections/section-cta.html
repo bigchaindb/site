@@ -1,18 +1,12 @@
-{% if layout %}
-    {% assign context = layout %}
-{% else %}
-    {% assign context = page %}
-{% endif %}
-
-<section class="section section-cta section-cta--features background--photo text-center">
+<section class="section section-cta background--photo text-center">
     <div class="row">
         <header class="section-header">
-            <h1 class="section-title">{{ context.cta.title }}</h1>
-            <p class="section-description">{{ context.cta.description }}</p>
+            <h1 class="section-title">{{ page.cta.title }}</h1>
+            <p class="section-description">{{ page.cta.description }}</p>
         </header>
 
-        <a class="btn btn-primary" href="/">
-            {{ context.cta.button }}
+        <a class="btn btn-primary" href="{{ page.cta.button_link }}">
+            {{ page.cta.button }}
         </a>
     </div>
 </section>
