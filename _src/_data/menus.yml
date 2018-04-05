@@ -2,8 +2,6 @@
 main:
     - title: Features
       url: /features/
-    - title: Services
-      url: /services/
     - title: Developers
       url: /developers/getstarted/
       items:
@@ -13,6 +11,8 @@ main:
           url: /developers/guides/
         - title: Docs
           url: https://docs.bigchaindb.com/
+    - title: Services
+      url: /services/
 
 secondary:
     - title: FAQ
