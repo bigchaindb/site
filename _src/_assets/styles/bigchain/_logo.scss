@@ -51,13 +51,15 @@
     .logo {
         @extend .logo--sm;
         display: inline-block;
+        color: $brand-main-blue-light;
+        fill: $brand-main-blue-light;
     }
 }
 
 .logo-services--text {
-    font-size: $font-size-h3 * 1.05;
+    font-size: $font-size-h3 * 1.1;
     display: inline-block;
-    color: #fff;
+    color: $brand-main-blue-light;
     padding-left: $spacer;
     position: relative;
     top: -3px;
