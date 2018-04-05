@@ -26,6 +26,7 @@
   ],
   "dependencies": {
     "bigchaindb-driver": "^4.0.0",
+    "bootstrap": "^4.0.0",
     "clipboard": "^2.0.0",
     "gumshoe": "github:cferdinandi/gumshoe",
     "is-in-viewport": "^3.0.0",
@@ -33,6 +34,7 @@
     "normalize-css": "^2.3.1",
     "normalize-opentype.css": "^0.2.4",
     "parsleyjs": "^2.8.1",
+    "popper.js": "^1.14.3",
     "select2": "^4.0.5",
     "smooth-scroll": "^12.1.5",
     "svg4everybody": "^2.1.9",

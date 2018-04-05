@@ -1,0 +1,82 @@
+// The dropdown wrapper (`<div>`)
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    &:after {
+        content: '';
+        display: inline-block;
+        height: 0;
+        width: 0;
+        border: .3rem solid transparent;
+        border-top-color: inherit;
+        margin-bottom: -.2rem;
+    }
+}
+
+// The dropdown menu
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: $spacer / 4 0;
+    margin: 0;
+    font-size: $font-size-base;
+    color: $body-bg;
+    text-align: left;
+    list-style: none;
+    border-radius: $border-radius;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
+    background: $gray-dark;
+    background-clip: padding-box;
+    border: 0;
+    max-height: 20rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @media (max-width: 27rem), (max-height: 27rem) {
+        max-height: 11.25rem;
+    }
+}
+
+// Links, buttons, and more within the dropdown menu
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: $spacer / 2 $spacer;
+    clear: both;
+    font-weight: $font-weight-normal;
+    color: $brand-main-gray-light;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+    &.active {
+        background: $brand-main-gray-light;
+        color: $gray-dark;
+        text-decoration: none;
+    }
+}
+
+.dropdown-menu.show,
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown > .dropdown-toggle:active {
+    // Without this, clicking will make it sticky
+    pointer-events: none;
+}

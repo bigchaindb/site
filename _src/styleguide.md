@@ -3,6 +3,8 @@ layout: page
 
 title: Style Guide
 sitemap: false
+
+js: page-styleguide.min.js
 ---
 
 ## Colors
@@ -317,5 +319,32 @@ Logo can be used with a base class and modifier classes for size & color:
 <div class="alert alert--danger">
     <strong class="alert__title">Lucas ipsum</strong>
     Lucas ipsum dolor sit amet kenobi ubese yaka weequay aka trioculus
+</div>
+```
+
+### Dropdowns
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+<br />
+
+```html
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
 </div>
 ```

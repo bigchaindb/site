@@ -27,7 +27,28 @@
                             {% assign active = 'active' %}
                         {% endif %}
 
-                        <a class="menu__link {{ active }} js-tracking-menu" href="{{ link.url }}">{{ link.title }}</a>
+                        {% if link.items %}
+                            <div class="dropdown">
+                                <a  class="menu__link {{ active }} js-tracking-menu dropdown-toggle"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                    id="dropdownMenuButton"
+                                    href="{{ link.url }}">{{ link.title }}
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    {% for item in link.items %}
+                                         {% assign active = nil %}
+                                         {% if page.url contains item.url %}
+                                            {% assign active = 'active' %}
+                                        {% endif %}
+                                        <a class="dropdown-item {{ active }}" href="{{ item.url }}">{{ item.title }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% else %}
+                            <a class="menu__link {{ active }} js-tracking-menu" href="{{ link.url }}">{{ link.title }}</a>
+                        {% endif %}
 
                     {% endfor %}
                 </div>
