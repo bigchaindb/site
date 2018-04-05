@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.org/bigchaindb/site.svg?branch=master)](https://travis-ci.org/bigchaindb/site)
 [![css bigchaindb](https://img.shields.io/badge/css-bigchaindb-39BA91.svg)](https://github.com/bigchaindb/stylelint-config-bigchaindb)
 [![js ascribe](https://img.shields.io/badge/js-ascribe-39BA91.svg)](https://github.com/ascribe/javascript)
+[![Greenkeeper badge](https://badges.greenkeeper.io/bigchaindb/site.svg)](https://greenkeeper.io/)
 <img src="http://forthebadge.com/images/badges/powered-by-electricity.svg" height="20"/>
 <img src="http://forthebadge.com/images/badges/as-seen-on-tv.svg" height="20"/>
 <img src="http://forthebadge.com/images/badges/uses-badges.svg" height="20"/>
