@@ -34,6 +34,8 @@
 
 ## Development
 
+The whole website is a Jekyll based site with a Gulp-based build pipeline in front of it.
+
 You need to have the following tools installed on your development machine before moving on:
 
 - [node.js](http://nodejs.org/) & [npm](https://npmjs.org/)
@@ -47,12 +49,6 @@ Run the following command from the repository's root folder to install all depen
 
 ```bash
 npm i && bundle install
-```
-
-or
-
-```bash
-yarn && bundle install
 ```
 
 ### Development build
@@ -159,6 +155,7 @@ New js should follow [eslint-config-ascribe](https://github.com/ascribe/javascri
 ## Authors
 
 - Matthias Kretschmann ([@kremalicious](https://github.com/kremalicious)) - [BigchainDB](https://www.bigchaindb.com) & [Ocean Protocol](https://oceanprotocol.com)
+- [All the contributors](https://github.com/bigchaindb/site/graphs/contributors)
 
 ## License
 
