@@ -2,19 +2,33 @@
 layout: base
 
 title: Services
-description: "A fast blockchain database for data driven enterprise applications"
+description: "Hands-on consulting and production support"
 
 header: hero-enterprise.jpg
 image: share-image-enterprise.jpg
 js: page-enterprise.min.js
 
 hero:
-    title: "A fast blockchain database for data driven enterprise applications"
-    description: "BigchainDB enables industry leaders to build performant enterprise applications, platforms, and networks."
+    title: "Hands-on consulting and production support"
+    description: "From ideation to production, we have the team and technology to help you build enterprise-grade applications and platforms."
     cta:
         - name: Get in touch
           link: "#contact"
           scroll: true
+
+support:
+    title: "Hands-on production support"
+    description: "From ideation to production, we have the team and technology to help you build enterprise-grade applications and platforms."
+    features:
+        - title: "Ideation"
+          description: "Have some ideas but don’t know where to start? We run a 1-day workshop to help you better understand blockchain technologies and let you drill-down into the right use cases that bring the biggest benefit."
+          icon: icon-education
+        - title: "Use case development"
+          description: "You have a specific idea for a blockchain application? We help you build a detailed business and technical architecture that lets you move forward with confidence."
+          icon: icon-blueprint
+        - title: "Application engineering"
+          description: "The idea is clear. Now you need help to build a prototype to show your superiors. We can work to your needs, budget and timeline to get a demo into your hands that will impress."
+          icon: icon-engineering
 
 partners:
     title: "Trusted by leading global companies"
@@ -33,20 +47,6 @@ intro:
         - title: "Interoperability by design"
           description: "Interoperability with Ethereum, IPFS, Bitcoin and other protocols such as the Interledger Protocol (ILP), IPLD, COALA IP and COALA SC mean that enterprises can develop their applications knowing that their work is future-proofed."
           icon: icon-plug
-
-support:
-    title: "Hands-on production support"
-    description: "From ideation to production, we have the team and technology to help you build enterprise-grade applications and platforms."
-    features:
-        - title: "Ideation"
-          description: "Have some ideas but don’t know where to start? We run a 1-day workshop to help you better understand blockchain technologies and let you drill-down into the right use cases that bring the biggest benefit."
-          icon: icon-education
-        - title: "Use case development"
-          description: "You have a specific idea for a blockchain application? We help you build a detailed business and technical architecture that lets you move forward with confidence."
-          icon: icon-blueprint
-        - title: "Application engineering"
-          description: "The idea is clear. Now you need help to build a prototype to show your superiors. We can work to your needs, budget and timeline to get a demo into your hands that will  impress."
-          icon: icon-engineering
 
 contact:
     title: "Get in touch"
@@ -80,20 +80,20 @@ contact:
 
 ---
 
-<header class="hero hero--enterprise" {% if page.header %}style="background-image:url('/assets/img/{{ page.header }}')"{% endif %}>
+<header class="hero hero--services" {% if page.header %}style="background-image:url('/assets/img/{{ page.header }}')"{% endif %}>
 
     {% include menu-main.html %}
 
-    <div class="hero__content row row--wide">
+    <div class="hero__content row">
         <hgroup>
-            <div class="logo-enterprise">
+            <div class="logo-services">
                 <svg class="logo logo--white">
                     <use xlink:href="/assets/img/sprite.svg#logo"></use>
                 </svg>
-                <span class="logo-enterprise--text">Enterprise</span>
+                <span class="logo-services--text">Services</span>
             </div>
-            <h1 class="section-title">{{ page.hero.title }}</h1>
-            <p class="section-description">{{ page.hero.description }}</p>
+            <h1 class="hero__title">{{ page.hero.title }}</h1>
+            <h2 class="hero__subtitle">{{ page.hero.description }}</h2>
 
             {% for cta in page.hero.cta %}
                 <a class="btn hero__action" href="{{ cta.link }}" {% if cta.scroll %}data-scroll{% endif %}>{{ cta.name }}</a>
@@ -102,6 +102,32 @@ contact:
     </div>
 
 </header>
+
+<section class="section section--enterprisesupport background--green">
+    <div class="row row--wide">
+
+        <div class="grid grid--full grid-small--third grid--gutters">
+            {% for feature in page.support.features %}
+            <div class="grid__col">
+                <div class="feature">
+                    <svg class="feature__icon icon">
+                        <use xlink:href="/assets/img/sprite.svg#{{ feature.icon }}"></use>
+                    </svg>
+                    <div class="feature__detail">
+                        <h1 class="feature__title">{{ feature.title }}</h1>
+                        <p class="feature__text">{{ feature.description }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="actions">
+            <a class="btn btn-blue" href="#contact">Get in touch</a>
+        </div>
+
+    </div>
+</section>
 
 {% include sections/section-partners.html %}
 
@@ -151,41 +177,6 @@ contact:
                 </cite>
             </figcaption>
         </figure>
-    </div>
-</section>
-
-<section class="section section--enterprisesupport background--green">
-    <div class="row">
-
-        <header class="section-header">
-            <h1 class="section-title">{{ page.support.title }}</h1>
-            <p class="section-description">{{ page.support.description }}</p>
-        </header>
-
-    </div>
-
-    <div class="row row--wide">
-
-        <div class="grid grid--full grid-small--third grid--gutters">
-            {% for feature in page.support.features %}
-                <div class="grid__col">
-                    <div class="feature">
-                        <svg class="feature__icon icon">
-                            <use xlink:href="/assets/img/sprite.svg#{{ feature.icon }}"></use>
-                        </svg>
-                        <div class="feature__detail">
-                            <h1 class="feature__title">{{ feature.title }}</h1>
-                            <p class="feature__text">{{ feature.description }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-
-        <div class="actions">
-            <a class="btn btn-blue" href="#contact">Get in touch</a>
-        </div>
-
     </div>
 </section>
 

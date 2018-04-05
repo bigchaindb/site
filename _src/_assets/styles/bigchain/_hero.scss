@@ -4,7 +4,7 @@
 // bigchaindb.com
 //
 
-$menu-height-md: 66px;
+$menu-height-md: 90px;
 
 .hero {
     @include background--photo();
@@ -68,7 +68,7 @@ $menu-height-md: 66px;
 .hero__title,
 .hero__subtitle,
 .hero__action,
-.logo-enterprise {
+.logo-services {
     .wf-active &,
     .wf-inactive & {
         @include animation-slide-in-from-bottom;

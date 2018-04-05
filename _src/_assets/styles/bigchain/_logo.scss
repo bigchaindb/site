@@ -47,14 +47,14 @@
 }
 
 
-.logo-enterprise {
+.logo-services {
     .logo {
         @extend .logo--sm;
         display: inline-block;
     }
 }
 
-.logo-enterprise--text {
+.logo-services--text {
     font-size: $font-size-h3 * 1.05;
     display: inline-block;
     color: #fff;

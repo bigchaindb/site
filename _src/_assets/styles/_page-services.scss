@@ -3,7 +3,7 @@
 // ---
 // bigchaindb.com
 //
-.page-enterprise {
+.page-services {
     // Different Features unit layout
     .feature {
         display: block;
@@ -11,6 +11,7 @@
 
     .feature__title {
         margin-bottom: $spacer;
+        display: block;
 
         // the bottom line
         &:after {
@@ -34,51 +35,28 @@
     }
 }
 
-.hero--enterprise {
-    .logo-enterprise {
-        margin-bottom: $spacer * 2;
+.hero--services {
+    .logo-services {
+        margin-bottom: $spacer;
 
         .logo,
-        .logo-enterprise--text {
+        .logo-services--text {
             opacity: .5;
         }
     }
 
-    .section-title {
-        .wf-active &,
-        .wf-inactive & {
-            animation-delay: .2s;
-        }
-    }
-
-    .section-description {
+    .hero__subtitle {
         margin-bottom: $spacer * 2;
+        font-size: $font-size-h5;
 
-        .wf-active &,
-        .wf-inactive & {
-            animation-delay: .4s;
-        }
-    }
-
-    .hero__action {
-        .wf-active &,
-        .wf-inactive & {
-            animation-delay: .6s;
+        @media ($screen-sm) {
+            font-size: $font-size-h4;
         }
     }
 
     .hero__content {
-        margin-top: $spacer * 6;
+        margin-top: $spacer * 2;
         margin-bottom: $spacer * 6;
-    }
-
-    @media ($screen-md) {
-        .section-title,
-        .section-description {
-            max-width: 66%;
-            margin-left: auto;
-            margin-right: auto;
-        }
     }
 
     .btn {
