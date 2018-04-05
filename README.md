@@ -1,5 +1,7 @@
 # [![site](media/repo-banner@2x.png)](https://www.bigchaindb.com)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bigchaindb/site.svg)](https://greenkeeper.io/)
+
 > 🦁 The fabulous cat of blockchain websites.
 
 [![Build Status](https://travis-ci.org/bigchaindb/site.svg?branch=master)](https://travis-ci.org/bigchaindb/site)
