@@ -21,8 +21,6 @@ secondary:
       url: "/about/"
     - title: Blog
       url: https://blog.bigchaindb.com
-    - title: Enterprise
-      url: "/enterprise/"
     - title: Whitepaper
       url: "/whitepaper/"
     - title: Contact
