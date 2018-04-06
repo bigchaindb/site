@@ -12,7 +12,7 @@
             {% for guide in guides limit: 4 %}
                 <div class="grid__col">
                     <article class="guide">
-                        <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('/guides/{{ guide.header }}')" {% endif %}>
+                        <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('/developers/guides/{{ guide.header }}')" {% endif %}>
                             <h1 class="guide__title">{{ guide.title }}</h1>
                             <p class="guide__tagline">{{ guide.tagline }}</p>
                         </a>
