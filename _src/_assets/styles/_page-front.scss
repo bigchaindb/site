@@ -29,11 +29,15 @@
     margin-top: $spacer;
 
     h3 {
-        @extend .h5;
+        @extend .h6;
         display: block;
         margin-bottom: 0;
         margin-top: 0;
         hyphens: auto;
+
+        @media ($screen-sm) {
+            font-size: $font-size-h5;
+        }
     }
 
     sub {
