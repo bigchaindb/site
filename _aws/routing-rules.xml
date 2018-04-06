@@ -21,38 +21,25 @@
     </Condition>
     <Redirect>
       <ReplaceKeyPrefixWith>features/#usecases</ReplaceKeyPrefixWith>
+      <HttpRedirectCode>301</HttpRedirectCode>
     </Redirect>
   </RoutingRule>
   <RoutingRule>
     <Condition>
-      <KeyPrefixEquals>getstarted/</KeyPrefixEquals>
+      <KeyPrefixEquals>getstarted/index.html</KeyPrefixEquals>
     </Condition>
     <Redirect>
-      <ReplaceKeyPrefixWith>developers/getstarted</ReplaceKeyPrefixWith>
+      <ReplaceKeyPrefixWith>developers/getstarted/</ReplaceKeyPrefixWith>
+      <HttpRedirectCode>301</HttpRedirectCode>
     </Redirect>
   </RoutingRule>
   <RoutingRule>
     <Condition>
-      <KeyPrefixEquals>developers/</KeyPrefixEquals>
-    </Condition>
-    <Redirect>
-      <ReplaceKeyPrefixWith>developers/getstarted</ReplaceKeyPrefixWith>
-    </Redirect>
-  </RoutingRule>
-  <RoutingRule>
-    <Condition>
-      <KeyPrefixEquals>guide/</KeyPrefixEquals>
-    </Condition>
-    <Redirect>
-      <ReplaceKeyPrefixWith>developers/guide/</ReplaceKeyPrefixWith>
-    </Redirect>
-  </RoutingRule>
-  <RoutingRule>
-    <Condition>
-      <KeyPrefixEquals>guides/</KeyPrefixEquals>
+      <KeyPrefixEquals>guides/index.html</KeyPrefixEquals>
     </Condition>
     <Redirect>
       <ReplaceKeyPrefixWith>developers/guides/</ReplaceKeyPrefixWith>
+      <HttpRedirectCode>301</HttpRedirectCode>
     </Redirect>
   </RoutingRule>
   <RoutingRule>
@@ -61,6 +48,7 @@
     </Condition>
     <Redirect>
       <ReplaceKeyPrefixWith>services/</ReplaceKeyPrefixWith>
+      <HttpRedirectCode>301</HttpRedirectCode>
     </Redirect>
   </RoutingRule>
 </RoutingRules>
