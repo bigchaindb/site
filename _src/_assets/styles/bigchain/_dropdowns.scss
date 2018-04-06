@@ -5,6 +5,14 @@
 }
 
 .dropdown-toggle {
+    box-shadow: none;
+    cursor: default;
+
+    &:hover,
+    &:focus {
+        background: transparent;
+    }
+
     &:after {
         content: '';
         display: inline-block;
@@ -22,7 +30,7 @@
     top: 100%;
     left: 0;
     z-index: 10;
-    display: none;
+    display: block;
     float: left;
     min-width: 10rem;
     padding: $spacer / 4 0;
@@ -39,6 +47,10 @@
     max-height: 20rem;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    transition: .2s $timing-bounce;
+    opacity: 0;
+    transform: scale(1, 0);
+    transform-origin: top;
 
     @media (max-width: 27rem), (max-height: 27rem) {
         max-height: 11.25rem;
@@ -73,7 +85,8 @@
 
 .dropdown-menu.show,
 .dropdown:hover > .dropdown-menu {
-    display: block;
+    transform: scale(1, 1);
+    opacity: 1;
 }
 
 .dropdown > .dropdown-toggle:active {

@@ -17,9 +17,7 @@
 
     .select2-selection__placeholder {
         color: #999;
-
         margin-top: 5px;
-
         float: left;
     }
 
@@ -33,13 +31,10 @@
 
     .select2-selection__choice {
         background-color: #e4e4e4;
-
         border: 1px solid #aaa;
         border-radius: 4px;
         cursor: default;
-
         float: left;
-
         margin-right: 5px;
         margin-top: 5px;
         padding: 0 5px;
@@ -48,10 +43,8 @@
     .select2-selection__choice__remove {
         color: #999;
         cursor: pointer;
-
         display: inline-block;
         font-weight: $font-weight-bold;
-
         margin-right: 2px;
 
         &:hover {
