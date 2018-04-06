@@ -18,6 +18,7 @@
   <RoutingRule>
     <Condition>
       <KeyPrefixEquals>usecases/</KeyPrefixEquals>
+      <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
       <ReplaceKeyPrefixWith>features/#usecases</ReplaceKeyPrefixWith>
@@ -26,7 +27,8 @@
   </RoutingRule>
   <RoutingRule>
     <Condition>
-      <KeyPrefixEquals>getstarted/index.html</KeyPrefixEquals>
+      <KeyPrefixEquals>getstarted/</KeyPrefixEquals>
+      <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
       <ReplaceKeyPrefixWith>developers/getstarted/</ReplaceKeyPrefixWith>
@@ -35,7 +37,8 @@
   </RoutingRule>
   <RoutingRule>
     <Condition>
-      <KeyPrefixEquals>guides/index.html</KeyPrefixEquals>
+      <KeyPrefixEquals>guides/</KeyPrefixEquals>
+      <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
       <ReplaceKeyPrefixWith>developers/guides/</ReplaceKeyPrefixWith>
@@ -45,6 +48,7 @@
   <RoutingRule>
     <Condition>
       <KeyPrefixEquals>enterprise/</KeyPrefixEquals>
+      <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
       <ReplaceKeyPrefixWith>services/</ReplaceKeyPrefixWith>
