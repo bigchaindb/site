@@ -44,7 +44,7 @@
       <KeyPrefixEquals>guide/</KeyPrefixEquals>
     </Condition>
     <Redirect>
-      <ReplaceKeyPrefixWith>developers/guide</ReplaceKeyPrefixWith>
+      <ReplaceKeyPrefixWith>developers/guide/</ReplaceKeyPrefixWith>
     </Redirect>
   </RoutingRule>
   <RoutingRule>
@@ -52,7 +52,15 @@
       <KeyPrefixEquals>guides/</KeyPrefixEquals>
     </Condition>
     <Redirect>
-      <ReplaceKeyPrefixWith>developers/guides</ReplaceKeyPrefixWith>
+      <ReplaceKeyPrefixWith>developers/guides/</ReplaceKeyPrefixWith>
+    </Redirect>
+  </RoutingRule>
+  <RoutingRule>
+    <Condition>
+      <KeyPrefixEquals>enterprise/</KeyPrefixEquals>
+    </Condition>
+    <Redirect>
+      <ReplaceKeyPrefixWith>services/</ReplaceKeyPrefixWith>
     </Redirect>
   </RoutingRule>
 </RoutingRules>
