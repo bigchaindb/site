@@ -7,7 +7,7 @@
     text-align: left;
 
     .dropdown-menu {
-        position: absolute;
+        position: absolute !important; // stylelint-disable-line declaration-no-important
     }
 }
 
