@@ -84,12 +84,12 @@
 }
 
 .dropdown-menu.show,
-.dropdown:hover > .dropdown-menu {
+.dropdown--hover:hover > .dropdown-menu {
     transform: scale(1, 1);
     opacity: 1;
 }
 
-.dropdown > .dropdown-toggle:active {
+.dropdown--hover > .dropdown-toggle:active {
     // Without this, clicking will make it sticky
     pointer-events: none;
 }

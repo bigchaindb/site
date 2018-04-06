@@ -2,8 +2,8 @@
 //=include bootstrap/js/dist/util.js
 //=include bootstrap/js/dist/dropdown.js
 
-$('body').on('mouseenter mouseleave', '.dropdown', function(e) {
-    var _d = $(e.target).closest('.dropdown')
+$('body').on('mouseenter mouseleave', '.dropdown--hover', function(e) {
+    var _d = $(e.target).closest('.dropdown--hover')
 
     _d.addClass('show')
 
