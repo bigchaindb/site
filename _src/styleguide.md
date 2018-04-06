@@ -11,22 +11,9 @@ js: page-styleguide.min.js
 
 ### Primary
 
-<div class="grid grid--gutters grid--full grid-medium--fit">
+<div class="grid grid--gutters--small grid--full grid-small--half grid-medium--third">
     {% for color in site.data.colors.primary %}
-    <div class="grid__col">
-        <div class="color {{ color.name }}">
-            <span class="color-meta color-name">${{ color.name }}</span>
-            <span class="color-meta color-hex">#{{ color.hex }}</span>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-
-### Secondary
-
-<div class="grid grid--gutters grid--full grid-medium--fit">
-    {% for color in site.data.colors.secondary %}
-    <div class="grid__col">
+    <div class="grid__col grid__col--2">
         <div class="color {{ color.name }}">
             <span class="color-meta color-name">${{ color.name }}</span>
             <span class="color-meta color-hex">#{{ color.hex }}</span>
@@ -37,9 +24,9 @@ js: page-styleguide.min.js
 
 ### Errors
 
-<div class="grid grid--gutters grid--full grid-medium--fit">
+<div class="grid grid--gutters--small grid--full grid-small--half grid-medium--third">
     {% for color in site.data.colors.errors %}
-    <div class="grid__col">
+    <div class="grid__col grid__col--2">
         <div class="color {{ color.name }}">
             <span class="color-meta color-name">${{ color.name }}</span>
             <span class="color-meta color-hex">#{{ color.hex }}</span>

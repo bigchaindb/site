@@ -54,7 +54,7 @@ docs:
     title: "Guides & Documentation "
     description: "Dive into our documentation with guides, examples, terminology, references and more."
     button_documentation: "See All Documentation"
-    button_guides: "See All Guides"
+    button_guides: "See the Guide"
     categories:
 
         - title: "Code Examples"

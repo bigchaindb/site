@@ -9,7 +9,7 @@
     box-shadow: none;
     display: flex;
     align-items: center;
-    min-height: 7rem;
+    min-height: 8rem;
 
     &:hover,
     &:focus {
@@ -22,7 +22,7 @@
 
 .article__title,
 h1.article__title {
-    font-size: $font-size-h5;
+    font-size: $font-size-lg;
     font-weight: $font-weight-normal;
     margin: 0;
     color: #fff;

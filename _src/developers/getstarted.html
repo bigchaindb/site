@@ -205,7 +205,7 @@ conn.postTransactionSync(txSigned)
 
                     <h3 class="choice__title">{{ content.drivers.title_official }}</h3>
 
-                    <div class="grid grid--full grid-small--half grid--gutters">
+                    <div class="grid grid--full grid-medium--half grid--gutters--small">
 
                         {% for driver in site.data.drivers.official %}
 
@@ -232,7 +232,7 @@ conn.postTransactionSync(txSigned)
                 <div class="grid__col">
 
                     <h3 class="choice__title">{{ content.drivers.title_tools }}</h3>
-                    <div class="grid grid--full grid-small--half grid--gutters">
+                    <div class="grid grid--full grid-medium--half grid--gutters--small">
 
                         {% for driver in site.data.drivers.tools %}
                         <div class="grid__col">
@@ -254,8 +254,8 @@ conn.postTransactionSync(txSigned)
         </div>
 
         <div class="row row--wide">
-            <h3 class="choice__title">{{ content.drivers.title_community }}</h3>
-            <div class="grid grid--half grid-medium--fit grid--gutters">
+            <h3 class="choice__title choice__title--community">{{ content.drivers.title_community }}</h3>
+            <div class="grid grid--half grid-medium--fit grid--gutters--small">
 
                 {% for driver in site.data.drivers.community %}
                 <div class="grid__col">
@@ -328,7 +328,7 @@ conn.postTransactionSync(txSigned)
     </div>
 
     <div class="row community__actions">
-        <div class="grid grid--full grid-small--fit grid--gutters">
+        <div class="grid grid--full grid-small--fit grid--gutters--small">
             <div class="grid__col">
                 <svg class="icon icon--social icon--gitter">
                     <use xlink:href="/assets/img/sprite.svg#gitter"></use>
@@ -353,8 +353,8 @@ conn.postTransactionSync(txSigned)
         </div>
     </div>
 
-    <div class="row">
-        <div class="grid grid--full grid-small--fit grid--gutters">
+    <div class="row row--wide">
+        <div class="grid grid--full grid-small--fit grid--gutters--small">
             <div class="grid__col">
                 <h5>{{ content.community.follow.title }}</h5>
                 <p>{{ content.community.follow.description }}</p>

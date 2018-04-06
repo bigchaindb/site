@@ -7,7 +7,7 @@
 
 .feature {
     display: flex;
-    margin-bottom: $spacer * 2;
+    margin-bottom: $spacer;
 
     &:first-of-type { padding-top: 0; }
 }
@@ -54,6 +54,7 @@
     margin-left: ($spacer / 2);
     padding: ($spacer / 6) ($spacer / 2);
     border-radius: 2px;
+    white-space: nowrap;
 }
 
 .feature__title__new {

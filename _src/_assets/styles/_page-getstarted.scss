@@ -272,6 +272,16 @@
     }
 }
 
+.choice__title--community {
+    text-align: center;
+
+    &:after {
+        position: relative;
+        left: 50%;
+        margin-left: -1.5rem;
+    }
+}
+
 .architecture {
     text-align: center;
 
