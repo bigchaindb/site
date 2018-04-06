@@ -212,20 +212,6 @@ li.toc-h3 {
     display: none;
 }
 
-.section--getstarted {
-    padding-bottom: 0;
-
-    .section-header {
-        margin-bottom: -($spacer * 3.5);
-        position: relative;
-        z-index: 10;
-
-        .btn {
-            margin-top: $spacer * 2;
-        }
-    }
-}
-
 .image--create-transfer {
     max-width: calc(100% + 1rem) !important; //stylelint-disable-line declaration-no-important
     margin-left: -1rem;
