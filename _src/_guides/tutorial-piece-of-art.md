@@ -85,9 +85,7 @@ function createPaint() {
         alice.privateKey)
 
     // Send the transaction off to BigchainDB
-    conn.postTransaction(txSigned)
-        // Check the status of the transaction
-        .then(() => conn.pollStatusAndFetchTransaction(txSigned.id))
+    conn.postTransactionCommit(txSigned)
         .then(res => {
             document.body.innerHTML += '<h3>Transaction created</h3>';
             document.body.innerHTML += txSigned.id
@@ -134,10 +132,8 @@ function transferOwnership(txCreatedID, newOwner) {
             // Sign with the key of the owner of the painting (Alice)
             const signedTransfer = BigchainDB.Transaction
                 .signTransaction(createTranfer, alice.privateKey)
-            return conn.postTransaction(signedTransfer)
+            return conn.postTransactionCommit(signedTransfer)
         })
-        .then((signedTransfer) => conn
-            .pollStatusAndFetchTransaction(signedTransfer.id))
         .then(res => {
             document.body.innerHTML += '<h3>Transfer Transaction created</h3>'
             document.body.innerHTML += res.id

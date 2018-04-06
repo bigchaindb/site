@@ -78,8 +78,7 @@ let makeTransaction = BigchainDB.Transaction.makeCreateTransaction({
 const txSigned = BigchainDB.Transaction.signTransaction(makeTransaction, creator.privateKey)
 
 // Send the transaction to BigchainDB
-conn.postTransaction(txSigned)
-    .then(() => conn.pollStatusAndFetchTransaction(txSigned.id))
+conn.postTransactionCommit(txSigned)
     .then(res => {
         document.body.innerHTML +='<h3>Transaction created</h3>';
         document.body.innerHTML +=txSigned.id
@@ -127,8 +126,7 @@ function createPR() {
     createTranfer.inputs[0].fulfillment = fulfillmentUri
 
     // Post the transaction to BigchainDB
-    conn.postTransaction(createTranfer)
-        .then(() => conn.pollStatusAndFetchTransaction(createTranfer.id))
+    conn.postTransactionCommit(createTranfer)
         .then(res => {
           document.body.innerHTML +='<h3>Transaction created</h3>';
           document.body.innerHTML +=createTranfer.id
@@ -184,8 +182,7 @@ let createTranfer = BigchainDB.Transaction.makeTransferTransaction(
 const transferToProduction = BigchainDB.Transaction.signTransaction(createTranfer, QAperson.privateKey)
 
 // Send the transaction to BigchainDB
-conn.postTransaction(transferToProduction)
-    .then(() => conn.pollStatusAndFetchTransaction(transferToProduction.id))
+conn.postTransactionCommit(transferToProduction)
     .then(res => {
         document.body.innerHTML ='<h3>Transfer transaction created</h3>';
         document.body.innerHTML +=transferToProduction.id
@@ -230,8 +227,7 @@ let fulfillment = BigchainDB.Transaction.makeThresholdCondition(threshold, [fulf
 const fulfillmentUri = fulfillment.serializeUri()
 transferApprove.inputs[0].fulfillment = fulfillmentUri
 
-conn.postTransaction(transferApprove)
-    .then(() => conn.pollStatusAndFetchTransaction(transferApprove.id))
+conn.postTransactionCommit(transferApprove)
     .then(res => {
       document.body.innerHTML ='<h3>Transfer transaction created</h3>';
       document.body.innerHTML +=transferApprove.id
