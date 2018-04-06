@@ -37,6 +37,16 @@
   </RoutingRule>
   <RoutingRule>
     <Condition>
+      <KeyPrefixEquals>developers/</KeyPrefixEquals>
+      <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
+    </Condition>
+    <Redirect>
+      <ReplaceKeyPrefixWith>developers/getstarted/</ReplaceKeyPrefixWith>
+      <HttpRedirectCode>301</HttpRedirectCode>
+    </Redirect>
+  </RoutingRule>
+  <RoutingRule>
+    <Condition>
       <KeyPrefixEquals>guides/</KeyPrefixEquals>
       <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
