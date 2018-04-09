@@ -116,7 +116,7 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
         const messageFail = document.getElementsByClassName('message--fail')[0]
         const transactionLink = document.getElementsByClassName('transaction-link')[0]
 
-        conn.postTransaction(txSigned).then((response) => {
+        conn.postTransactionSync(txSigned).then((response) => {
             waiting.classList.add('hide')
             messageInitial.classList.add('hide')
             responseArea.classList.remove('hide')
