@@ -60,8 +60,7 @@ function tokenLaunch() {
       .signTransaction(tx, tokenCreator.privateKey)
 
     // Send the transaction off to BigchainDB
-    conn.postTransaction(txSigned)
-        .then(() => conn.pollStatusAndFetchTransaction(txSigned.id))
+    conn.postTransactionCommit(txSigned)
         .then(res => {
             tokensLeft = nTokens
             document.body.innerHTML ='<h3>Transaction created</h3>';
@@ -128,10 +127,8 @@ function transferTokens() {
             const signedTransfer = BigchainDB.Transaction
                 .signTransaction(createTranfer, tokenCreator.privateKey)
 
-            return conn.postTransaction(signedTransfer)
+            return conn.postTransactionCommit(signedTransfer)
         })
-        .then((signedTransfer) => conn
-            .pollStatusAndFetchTransaction(signedTransfer.id))
         .then(res => {
             // Update tokensLeft
             tokensLeft -= amountToSend
@@ -175,7 +172,7 @@ function combineTokens(transaction1, outputIndex1, transaction2, outputIndex2,
     const signedTransfer = BigchainDB.Transaction
         .signTransaction(combineTranfer, newUser.privateKey)
 
-    return conn.postTransaction(signedTransfer)
+    return conn.postTransactionCommit(signedTransfer)
 
 }
 ```

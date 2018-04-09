@@ -83,8 +83,7 @@ async function createNewAsset(keypair, asset, metadata) {
     const txSigned = BigchainDB.Transaction.signTransaction(transaction,
         keypair.privateKey)
     let tx
-    await conn.postTransaction(txSigned)
-        .then(() => conn.pollStatusAndFetchTransaction(txSigned.id))
+    await conn.postTransactionCommit(txSigned)
         .then(retrievedTx => {
             tx = retrievedTx
         })

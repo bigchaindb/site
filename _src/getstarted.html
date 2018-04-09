@@ -121,7 +121,7 @@ const tx = driver.Transaction.makeCreateTransaction(
         driver.Transaction.makeEd25519Condition(alice.publicKey))],
     alice.publicKey)
 const txSigned = driver.Transaction.signTransaction(tx, alice.privateKey)
-conn.postTransaction(txSigned)
+conn.postTransactionSync(txSigned)
 ```
 {% endcapture %}{{ nodejs | markdownify }}
                 </div>
