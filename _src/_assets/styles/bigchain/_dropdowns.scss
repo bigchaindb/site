@@ -16,11 +16,10 @@
     &:after {
         content: '';
         display: inline-block;
-        height: 0;
-        width: 0;
-        border: .3rem solid transparent;
-        border-top-color: inherit;
-        margin-bottom: -.2rem;
+        width: 14px;
+        height: 10px;
+        background: url('../img/icon-caret.svg') no-repeat center center;
+        background-size: contain;
         transition: .15s ease-out;
     }
 
@@ -28,7 +27,6 @@
     .dropdown--hover:hover & {
         &:after {
             transform: rotate(180deg);
-            margin-bottom: .2rem;
         }
     }
 }
