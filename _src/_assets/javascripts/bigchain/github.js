@@ -13,9 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const repo = repos[0]
         const stars = repo.stars
         const release = repo.release
+        const releaseUrl = repo.release_url
 
         document.getElementById('stars').innerText = stars
         document.getElementById('stars').style.opacity = 1
+        document.getElementById('release-link').href = releaseUrl
         document.getElementById('release').innerText = release
         document.getElementById('release').style.opacity = 1
     }

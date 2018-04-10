@@ -144,14 +144,6 @@ $menu-height-md: 90px;
             }
         }
 
-        &:visited {
-            .release:after {
-                // make it appear hidden by changing background-color
-                // cause modifiying display is not allowed for :visited
-                background-color: rgb(15, 40, 56);
-            }
-        }
-
         .icon {
             transform: translateY(1px);
         }
