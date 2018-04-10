@@ -63,8 +63,6 @@ docs:
                 link: "https://docs.bigchaindb.com/projects/py-driver/en/latest/usage.html"
               - title: "Handcrafting Transactions"
                 link: "https://docs.bigchaindb.com/projects/py-driver/en/latest/handcraft.html"
-              - title: "Kyber"
-                link: "https://github.com/bigchaindb/kyber"
 
         - title: "Quick References"
           items:
