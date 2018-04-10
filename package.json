@@ -39,8 +39,7 @@
     "smooth-scroll": "^12.1.5",
     "svg4everybody": "^2.1.9",
     "textarea-autogrow": "^1.0.0",
-    "vivus": "^0.4.3",
-    "whatwg-fetch": "^2.0.4"
+    "vivus": "^0.4.3"
   },
   "devDependencies": {
     "acorn": "^5.5.3",
