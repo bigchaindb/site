@@ -51,7 +51,7 @@
       <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
-      <ReplaceKeyPrefixWith>developers/guides/</ReplaceKeyPrefixWith>
+      <ReplaceKeyPrefixWith>developers/guide/</ReplaceKeyPrefixWith>
       <HttpRedirectCode>301</HttpRedirectCode>
     </Redirect>
   </RoutingRule>

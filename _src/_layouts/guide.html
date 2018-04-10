@@ -24,17 +24,17 @@ layout: base
 <section class="section section--guides-more">
     <div class="row">
         <header class="section-header">
-            <h1 class="section-title">More guides</h1>
+            <h1 class="section-title">More chapters</h1>
         </header>
     </div>
     <div class="row row--wide">
         <div class="grid grid--full grid-small--half grid-medium--third grid--gutters--small">
-            {% for guide in site.guides limit: 6 %}
-                {% unless page.id == guide.id %}
+            {% for chapter in site.guide limit: 6 %}
+                {% unless page.id == chapter.id %}
                     <div class="grid__col">
                         <article class="guide">
-                            <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('../{{ guide.header }}')"{% endif %}>
-                                <h1 class="guide__title">{{ guide.title }}</h1>
+                            <a href="{{ chapter.url }}" {% if chapter.header %}style="background-image:url('../{{ chapter.header }}')"{% endif %}>
+                                <h1 class="guide__title">{{ chapter.title }}</h1>
                             </a>
                         </article>
                     </div>
@@ -43,7 +43,7 @@ layout: base
         </div>
     </div>
     <div class="row text-center">
-        <a class="btn btn-primary" href="/guides/">All guides</a>
+        <a class="btn btn-primary" href="{% link developers/guide.html %}">All guides</a>
     </div>
 </section>
 

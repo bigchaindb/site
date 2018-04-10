@@ -8,13 +8,13 @@
 
     <div class="row row--wide">
         <div class="grid grid--full grid-small--half grid--gutters--small">
-            {% assign guides = site.guides | sort: 'order' %}
-            {% for guide in guides limit: 4 %}
+            {% assign guide = site.guide | sort: 'order' %}
+            {% for chapter in guide limit: 4 %}
                 <div class="grid__col">
                     <article class="guide">
-                        <a href="{{ guide.url }}" {% if guide.header %}style="background-image:url('/developers/guides/{{ guide.header }}')" {% endif %}>
-                            <h1 class="guide__title">{{ guide.title }}</h1>
-                            <p class="guide__tagline">{{ guide.tagline }}</p>
+                        <a href="{{ chapter.url }}" {% if chapter.header %}style="background-image:url('/developers/guide/{{ chapter.header }}')" {% endif %}>
+                            <h1 class="guide__title">{{ chapter.title }}</h1>
+                            <p class="guide__tagline">{{ chapter.tagline }}</p>
                         </a>
                     </article>
                 </div>
@@ -23,6 +23,6 @@
     </div>
 
     <div class="row text-center">
-        <a class="btn btn-secondary" href="{% link developers/guides.html %}">All chapters</a>
+        <a class="btn btn-secondary" href="{% link developers/guide.html %}">All chapters</a>
     </div>
 </section>

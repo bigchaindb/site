@@ -8,7 +8,7 @@ main:
         - title: Get Started
           url: /developers/getstarted/
         - title: Guide
-          url: /developers/guides/
+          url: /developers/guide/
         - title: Docs
           url: https://docs.bigchaindb.com/
     - title: Services

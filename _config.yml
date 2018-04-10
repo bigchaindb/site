@@ -90,18 +90,18 @@ collections:
     partners:
         output: true
         permalink: /:collection/:path/
-    guides:
+    guide:
         output: true
         permalink: /developers/:collection/:path/
 
 defaults:
     - scope:
         path: ""
-        type: guides
+        type: guide
       values:
         toc: true
-        image: share-image-guides.png
-        js: page-guides.min.js
+        image: share-image-guide.png
+        js: page-guide.min.js
 
 # Plugins
 # --------------------
