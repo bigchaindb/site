@@ -313,7 +313,7 @@
         margin-right: $spacer;
 
         &:after {
-            background: darken($gray-dark, 10%);
+            display: none;
         }
 
         &.active {
@@ -374,10 +374,6 @@
             .number {
                 background: $headings-color;
                 color: $gray;
-            }
-
-            &:after {
-                background: $headings-color;
             }
         }
     }

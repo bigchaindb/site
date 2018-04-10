@@ -46,6 +46,31 @@ stickyNav()
 
 
 //
+// Test network version
+//
+function testNetworkVersion() {
+    const versionOutput = document.getElementById('network-version')
+
+    fetch(bigchaindbUrl)
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(data) {
+            const version = data.version
+            const titleOrig = versionOutput.getAttribute('title')
+
+            versionOutput.innerText = version
+            versionOutput.setAttribute('title', titleOrig + version)
+        })
+        .catch(function(error) {
+            console.log(error)
+        })
+}
+
+testNetworkVersion()
+
+
+//
 // BigchainDB transaction tool
 //
 

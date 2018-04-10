@@ -141,7 +141,6 @@
         height: 3rem;
         border-radius: 50%;
         font-size: $font-size-lg;
-        vertical-align: .4rem;
         background: $headings-color;
         color: $gray;
         font-weight: 400;
@@ -152,6 +151,7 @@
         span {
             display: inline-block;
             margin: 0;
+            vertical-align: .4rem;
         }
     }
 
@@ -177,6 +177,7 @@
         margin-top: $spacer / 2;
     }
 }
+
 
 //
 // All your star bases belong to us
@@ -270,6 +271,13 @@
         margin: ($spacer * $line-height) 0 0;
         background: $gray-light;
     }
+}
+
+.choice__title__version {
+    font-size: $font-size-sm;
+    color: $gray-light;
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
 }
 
 .choice__title--community {

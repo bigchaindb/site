@@ -23,6 +23,7 @@ server:
     network:
         pretitle: "Managed"
         title: "The BigchainDB Test Network"
+        version_title: "Test Network is currently running on BigchainDB "
         description: "No installation needed. Sign up and connect instantly, we will handle running a BigchainDB network for you."
         button: "Sign up"
         link: "https://testnet.bigchaindb.com"

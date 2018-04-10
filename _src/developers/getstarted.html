@@ -162,7 +162,7 @@ conn.postTransactionSync(txSigned)
             <div class="grid grid--full grid-small--half grid--gutters">
                 <div class="grid__col">
                     <span class="pretitle">{{ content.server.network.pretitle }}</span>
-                    <h2 class="choice__title">{{ content.server.network.title }}</h2>
+                    <h2 class="choice__title">{{ content.server.network.title }} <span class="choice__title__version" id="network-version" title="{{ content.server.network.version_title }}"></span></h2>
                     <p>{{ content.server.network.description }}</p>
                     <a class="btn btn-primary" href="{{ content.server.network.link }}">{{ content.server.network.button }}</a>
                 </div>
