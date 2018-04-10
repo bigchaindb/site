@@ -1,5 +1,10 @@
 
 .section-cta--services {
+    @media ($screen-md) {
+        padding-top: $spacer * 7;
+        padding-bottom: $spacer * 7;
+    }
+
     .logo-services {
         margin-bottom: $spacer;
         transform: scale(.8);
