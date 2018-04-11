@@ -94,6 +94,9 @@
         .icon-check {
             stroke: $brand-primary;
         }
+
+        // hide external icon
+        &:after { display: none !important; } // stylelint-disable-line
     }
 }
 

@@ -88,6 +88,10 @@
         color: $gray-dark;
         text-decoration: none;
     }
+
+    &[rel='external']:after {
+        margin-left: 0;
+    }
 }
 
 .dropdown-menu.show,

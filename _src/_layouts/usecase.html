@@ -5,6 +5,7 @@ cta:
     title: Meet BigchainDB
     description: The blockchain database
     button: Learn More
+    button_link: "/"
 ---
 
 <header role="banner" class="header header--usecase" {% if page.header %}style="background-image:url('/assets/img/{{ page.header }}')"{% endif %}>
@@ -73,15 +74,15 @@ cta:
 
         <div class="grid grid--full grid-small--fit grid--top">
 
-            {% if page.pdf %}
             <div class="grid__col">
-                <a href="../{{ page.pdf }}" download rel="external">Download case study (pdf)</a>
+                <a class="link-back" href="/features/#usecases">&lt; Back to use cases</a>
             </div>
-            {% endif %}
 
-            <div class="grid__col">
-                <a class="link-back" href="/usecases/">&lt; Back to use cases</a>
-            </div>
+            {% if page.pdf %}
+                <div class="grid__col">
+                    <a href="../{{ page.pdf }}" download rel="external">Download case study (pdf)</a>
+                </div>
+            {% endif %}
         </div>
 
     </aside>
