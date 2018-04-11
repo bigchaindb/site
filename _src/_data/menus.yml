@@ -11,6 +11,7 @@ main:
           url: /developers/guide/
         - title: Docs
           url: https://docs.bigchaindb.com/
+          external: true
     - title: Services
       url: /services/
 

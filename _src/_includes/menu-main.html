@@ -41,7 +41,9 @@
                                         {% if page.url contains item.url %}
                                         {% assign active = 'active' %}
                                     {% endif %}
-                                    <a class="dropdown-item {{ active }}" href="{{ item.url }}">{{ item.title }}</a>
+                                    <a class="dropdown-item {{ active }}" href="{{ item.url }}" {% if item.external %}rel="external"{% endif %}>
+                                        {{ item.title }}
+                                    </a>
                                 {% endfor %}
                             </div>
                         </div>

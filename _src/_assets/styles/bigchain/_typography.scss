@@ -90,6 +90,24 @@ a {
     }
 }
 
+// External links
+.dropdown,
+.content--page {
+    [rel='external'],
+    [target='_blank'] {
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 9px;
+            height: 8px;
+            background: url('../img/icon-arrowout.svg') no-repeat center center;
+            background-size: contain;
+            transition: .15s ease-out;
+            margin-left: $spacer / 6;
+        }
+    }
+}
+
 
 //
 // Headings
