@@ -95,7 +95,7 @@ a {
 .content--page {
     [rel='external'],
     [target='_blank'] {
-        &:not(.btn) {
+        &:not(.btn):not(.driver):not(.social-link):not(.team__social__link) {
             &:after {
                 content: '';
                 display: inline-block;
