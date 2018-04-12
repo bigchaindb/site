@@ -9,12 +9,8 @@
         margin-bottom: $spacer;
         transform: scale(.8);
         transform-origin: left;
-    }
-
-    .logo-services--text,
-    .logo-services .logo {
-        color: $brand-main-blue-light;
-        fill: $brand-main-blue-light;
+        color: darken($brand-main-violet, 25%);
+        fill: darken($brand-main-violet, 25%);
     }
 
     .section-header {
@@ -23,9 +19,14 @@
 
     .section-title {
         text-align: left;
+        margin-bottom: $spacer * 2.5;
 
         &:after {
             display: none;
         }
+    }
+
+    .btn {
+        color: #fff !important; // stylelint-disable-line
     }
 }
