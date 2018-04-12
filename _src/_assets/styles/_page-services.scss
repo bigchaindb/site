@@ -28,8 +28,6 @@
         margin-bottom: $spacer / 6;
         width: 2.2rem;
         height: 2.2rem;
-        stroke: darken($brand-main-violet, 30%);
-        color: $brand-main-blue-light;
     }
 }
 
@@ -59,6 +57,11 @@
 }
 
 .section--servicesdetail {
+    .feature__icon {
+        stroke: darken($brand-main-violet, 30%);
+        color: $brand-main-green;
+    }
+
     .actions {
         text-align: center;
         margin-top: $spacer * 2;
