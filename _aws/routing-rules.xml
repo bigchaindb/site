@@ -17,7 +17,7 @@
   </RoutingRule>
   <RoutingRule>
     <Condition>
-      <KeyPrefixEquals>usecases/</KeyPrefixEquals>
+      <KeyPrefixEquals>usecases</KeyPrefixEquals>
       <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
@@ -27,7 +27,7 @@
   </RoutingRule>
   <RoutingRule>
     <Condition>
-      <KeyPrefixEquals>getstarted/</KeyPrefixEquals>
+      <KeyPrefixEquals>getstarted</KeyPrefixEquals>
       <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
@@ -37,7 +37,7 @@
   </RoutingRule>
   <RoutingRule>
     <Condition>
-      <KeyPrefixEquals>developers/</KeyPrefixEquals>
+      <KeyPrefixEquals>developers</KeyPrefixEquals>
       <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
@@ -47,7 +47,7 @@
   </RoutingRule>
   <RoutingRule>
     <Condition>
-      <KeyPrefixEquals>guides/</KeyPrefixEquals>
+      <KeyPrefixEquals>guides</KeyPrefixEquals>
       <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
@@ -57,7 +57,7 @@
   </RoutingRule>
   <RoutingRule>
     <Condition>
-      <KeyPrefixEquals>enterprise/</KeyPrefixEquals>
+      <KeyPrefixEquals>enterprise</KeyPrefixEquals>
       <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
@@ -67,11 +67,12 @@
   </RoutingRule>
   <RoutingRule>
     <Condition>
-      <KeyPrefixEquals>faq/</KeyPrefixEquals>
+      <KeyPrefixEquals>faq</KeyPrefixEquals>
       <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
       <HostName>docs.bigchaindb.com</HostName>
+      <ReplaceKeyPrefixWith></ReplaceKeyPrefixWith>
       <HttpRedirectCode>302</HttpRedirectCode>
     </Redirect>
   </RoutingRule>
