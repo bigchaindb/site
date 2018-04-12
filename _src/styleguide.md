@@ -3,28 +3,17 @@ layout: page
 
 title: Style Guide
 sitemap: false
+
+js: page-styleguide.min.js
 ---
 
 ## Colors
 
 ### Primary
 
-<div class="grid grid--gutters grid--full grid-medium--fit">
+<div class="grid grid--gutters--small grid--full grid-small--half grid-medium--third">
     {% for color in site.data.colors.primary %}
-    <div class="grid__col">
-        <div class="color {{ color.name }}">
-            <span class="color-meta color-name">${{ color.name }}</span>
-            <span class="color-meta color-hex">#{{ color.hex }}</span>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-
-### Secondary
-
-<div class="grid grid--gutters grid--full grid-medium--fit">
-    {% for color in site.data.colors.secondary %}
-    <div class="grid__col">
+    <div class="grid__col grid__col--2">
         <div class="color {{ color.name }}">
             <span class="color-meta color-name">${{ color.name }}</span>
             <span class="color-meta color-hex">#{{ color.hex }}</span>
@@ -35,9 +24,9 @@ sitemap: false
 
 ### Errors
 
-<div class="grid grid--gutters grid--full grid-medium--fit">
+<div class="grid grid--gutters--small grid--full grid-small--half grid-medium--third">
     {% for color in site.data.colors.errors %}
-    <div class="grid__col">
+    <div class="grid__col grid__col--2">
         <div class="color {{ color.name }}">
             <span class="color-meta color-name">${{ color.name }}</span>
             <span class="color-meta color-hex">#{{ color.hex }}</span>
@@ -317,5 +306,57 @@ Logo can be used with a base class and modifier classes for size & color:
 <div class="alert alert--danger">
     <strong class="alert__title">Lucas ipsum</strong>
     Lucas ipsum dolor sit amet kenobi ubese yaka weequay aka trioculus
+</div>
+```
+
+### Dropdowns
+
+<div class="dropdown">
+  <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Click me
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+<br />
+
+```html
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+```
+
+<div class="dropdown dropdown--hover">
+  <a class="dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Hover me
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+<br />
+
+```html
+<div class="dropdown dropdown--hover">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
 </div>
 ```

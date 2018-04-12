@@ -1,9 +1,9 @@
 //
-// Page: enterprise
+// Page: Services
 // ---
 // bigchaindb.com
 //
-.page-enterprise {
+.page-services {
     // Different Features unit layout
     .feature {
         display: block;
@@ -11,6 +11,7 @@
 
     .feature__title {
         margin-bottom: $spacer;
+        display: block;
 
         // the bottom line
         &:after {
@@ -22,10 +23,6 @@
         }
     }
 
-    .feature__text {
-        opacity: .75;
-    }
-
     .feature__icon {
         margin-top: 0;
         margin-bottom: $spacer / 6;
@@ -34,65 +31,46 @@
     }
 }
 
-.hero--enterprise {
-    .logo-enterprise {
+.hero--services {
+    .logo--services {
+        display: inline-block;
+        opacity: .75;
+    }
+
+    .hero__subtitle {
         margin-bottom: $spacer * 2;
+        font-size: $font-size-h5;
 
-        .logo,
-        .logo-enterprise--text {
-            opacity: .5;
-        }
-    }
-
-    .section-title {
-        .wf-active &,
-        .wf-inactive & {
-            animation-delay: .2s;
-        }
-    }
-
-    .section-description {
-        margin-bottom: $spacer * 2;
-
-        .wf-active &,
-        .wf-inactive & {
-            animation-delay: .4s;
-        }
-    }
-
-    .hero__action {
-        .wf-active &,
-        .wf-inactive & {
-            animation-delay: .6s;
+        @media ($screen-sm) {
+            font-size: $font-size-h4;
         }
     }
 
     .hero__content {
-        margin-top: $spacer * 6;
+        margin-top: $spacer * 2;
         margin-bottom: $spacer * 6;
     }
 
-    @media ($screen-md) {
-        .section-title,
-        .section-description {
-            max-width: 66%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-
     .btn {
-        @extend .btn-secondary;
         min-width: 220px;
-
-        &:first-of-type {
-            @extend .btn-primary;
-            margin-right: $spacer;
-        }
     }
 }
 
-.section--enterpriseintro {
+.section--servicesdetail {
+    .feature__icon {
+        stroke: darken($brand-main-violet, 30%);
+        color: $brand-main-green;
+    }
+
+    .actions {
+        text-align: center;
+        margin-top: $spacer * 2;
+        padding-top: $spacer * 2;
+        border-top: 1px solid darken($brand-main-violet, 5%);
+    }
+}
+
+.section--servicesintro {
     .grid,
     .feature {
         margin-bottom: 0;
@@ -115,7 +93,7 @@
     }
 }
 
-.section--enterprisetestimonial {
+.section--servicestestimonial {
     .testimonial {
         @extend .large;
         margin: 0 auto;
@@ -132,16 +110,7 @@
     }
 }
 
-.section--enterprisesupport {
-    .actions {
-        text-align: center;
-        margin-top: $spacer * 2;
-        padding-top: $spacer * 2;
-        border-top: 1px solid darken($brand-main-green, 5%);
-    }
-}
-
-.form--enterprise {
+.form--services {
     background: darken($brand-main-blue, 5%);
 
     .grid {

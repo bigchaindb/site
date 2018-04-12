@@ -64,6 +64,26 @@
     }
 }
 
+.background--violet {
+    background: $brand-main-violet;
+
+    &,
+    .section-description,
+    p {
+        color: darken($brand-main-violet, 35%);
+    }
+
+    .feature__title,
+    .section-title {
+        color: darken($brand-main-violet, 50%);
+
+        // the bottom line
+        &:after {
+            background: $brand-main-blue-light;
+        }
+    }
+}
+
 
 //
 // Photo background

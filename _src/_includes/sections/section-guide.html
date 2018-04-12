@@ -1,0 +1,28 @@
+<section class="section section--guides">
+    <div class="row">
+        <header class="section-header">
+            <h1 class="section-title">The Hitchhiker's Guide to BigchainDB</h1>
+            <p class="section-description">Complete the guide to learn about how to create apps in BigchainDB.</p>
+        </header>
+    </div>
+
+    <div class="row row--wide">
+        <div class="grid grid--full grid-small--half grid--gutters--small">
+            {% assign guide = site.guide | sort: 'order' %}
+            {% for chapter in guide limit: 4 %}
+                <div class="grid__col">
+                    <article class="guide">
+                        <a href="{{ chapter.url }}" {% if chapter.header %}style="background-image:url('/developers/guide/{{ chapter.header }}')" {% endif %}>
+                            <h1 class="guide__title">{{ chapter.title }}</h1>
+                            <p class="guide__tagline">{{ chapter.tagline }}</p>
+                        </a>
+                    </article>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <a class="btn btn-secondary" href="{% link developers/guide.html %}">All chapters</a>
+    </div>
+</section>

@@ -1,14 +1,3 @@
-<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In  -->
-<svg version="1.1"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-	 x="0px" y="0px" width="42.3px" height="22.2px" viewBox="0 0 42.3 22.2" style="enable-background:new 0 0 42.3 22.2;"
-	 xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;stroke:#231F20;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-</style>
-<defs>
-</defs>
-<g>
-	<polyline class="st0" points="41.3,1 21.2,21.2 1,1 	"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="14" viewBox="0 0 25 14">
+  <polyline fill="none" stroke="#fff" stroke-width="2" points="22.606 0 11.331 11.331 0 0" transform="translate(1 .971)"/>
 </svg>

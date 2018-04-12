@@ -159,12 +159,12 @@ var GoogleAnalytics = (function(w,d,$) {
             ga('send', 'event', 'cla', 'cla_form', 'error');
         },
 
-        // Enterprise form
-        gaEventEnterpriseSuccess: function() {
-            ga('send', 'event', 'enterprise', 'enterprise_form', 'success');
+        // Services form
+        gaEventServicesSuccess: function() {
+            ga('send', 'event', 'services', 'services_form', 'success');
         },
-        gaEventEnterpriseError: function() {
-            ga('send', 'event', 'enterprise', 'enterprise_form', 'error');
+        gaEventServicesError: function() {
+            ga('send', 'event', 'services', 'services_form', 'error');
         }
     };
 

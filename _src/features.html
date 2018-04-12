@@ -1,32 +1,42 @@
 ---
 layout: page
 
-title: Features
+title: Features & Use Cases
 description: "Rather than trying to enhance blockchain technology, BigchainDB starts with a big data distributed database and then adds blockchain characteristics - decentralized control, immutability and the transfer of digital assets."
 
 features:
+     - title: "Decentralization"
+       text: "No single point of control. No singe point of failure. Decentralized control via a federation of voting nodes makes for a P2P network."
+       icon: "icon-nodes"
+     - title: "Query"
+       text: "Write and run any MongoDB query to search the contents of all stored transactions, assets, metadata and blocks. Powered by MongoDB itself."
+       icon: "icon-search"
+     - title: "Immutability"
+       text: "More than just tamper-resistant. Once stored, data can't be changed or deleted."
+       icon: "icon-castle"
      - title: "Native Support of Multiassets"
        text: "With no native currency on BigchainDB, any asset, token or currency can be issued."
        icon: "icon-diamond"
+     - title: "Byzantine Fault Tolerant (BFT)"
+       text: "Up to one third of the nodes in the network can be experiencing arbitrary faults and the rest of the network will still come to consensus on the next block."
+       icon: "icon-network"
+       new: true
+     - title: "Low Latency"
+       text: "A global network takes about a second to come to consensus on a new block. In other words, transaction finality happens fast."
+       icon: "icon-hourglass"
+       new: true
      - title: "Customizable"
        text: "Design your own private network with custom assets, transactions, permissions and transparency."
        icon: "icon-settings"
      - title: "Rich Permissioning"
        text: "[Set permissions at transaction level](https://docs.bigchaindb.com/en/latest/permissions.html) to ensure a clear separation of duties and enforce selective access."
        icon: "icon-group"
-     - title: "Federation Consensus Model"
-       text: "Decentralized control via a federation of voting nodes makes for a super-peer P2P network."
-       icon: "icon-diamond"
      - title: "Open Source"
        text: "[Open sourced](https://github.com/bigchaindb) to the community so that everyone can use it and build their own applications on top of it."
        icon: "icon-tree"
      - title: "Public or Private"
        text: "Roll out your own public or private networks for specific industry use cases."
        icon: "icon-lock"
-     - title: "Query"
-       text: "Leverage efficient big data query capabilities out of the box."
-       icon: "icon-search"
-       comingsoon: true
 
 quotes: set2
 js: page-features.min.js
@@ -48,7 +58,8 @@ js: page-features.min.js
                         <use xlink:href="/assets/img/sprite.svg#{{ feature.icon }}"></use>
                     </svg>
                     <div class="feature__detail">
-                        <h1 class="feature__title">{{ feature.title }} {% if feature.comingsoon %}<span class="feature__title__comingsoon">Coming soon</span>{% endif %}</h1>
+                        <h1 class="feature__title">{{ feature.title }} {% if feature.comingsoon %}<span class="feature__title__comingsoon">Coming soon</span>{% endif %} {% if feature.new %}
+                        <span class="feature__title__new">New</span>{% endif %}</h1>
                         <div class="feature__text">{{ feature.text | markdownify }}</div>
                     </div>
                 </div>
@@ -98,7 +109,7 @@ js: page-features.min.js
             <p class="section-description">BigchainDB combines the key benefits of distributed DBs and traditional blockchains.</p>
         </header>
 
-        <p class="lead">We built BigchainDB on top of an enterprise-grade distributed DB, from which BigchainDB inherits high throughput, high capacity, a full-featured NoSQL query language, efficient querying and permissioning.</p>
+        <p class="lead">BigchainDB combines an enterprise-grade distributed database (MongoDB) with a production-ready consensus engine (Tendermint) to provide the benefits of both.</p>
 
         <figure>
             {% include table-comparison.html %}
@@ -106,4 +117,69 @@ js: page-features.min.js
     </div>
 </section>
 
-{% include sections/section-newsletter.html %}
+<section class="section section-usecases background--darker" id="usecases">
+    <div class="row">
+        <header class="section-header">
+            <h1 class="section-title">Use Cases</h1>
+            <p class="section-description">BigchainDB is for developers and organizations looking for a queryable database with blockchain characteristics such as decentralization, immutability and the ability to treat anything stored in the database as an asset. Whether it’s atoms, bits or bytes of value, any real-world blockchain application needs performance. A perfect fit for BigchainDB.</p>
+        </header>
+
+        <div class="grid grid--full grid-small--half grid--gutters grid--top text-left">
+            <div class="grid__col">
+                 We’re still in the early days of the decentralization movement and while all of the industries below are being disrupted in one way or another, there’s an abundance of opportunity within each.
+            </div>
+            <div class="grid__col">
+                <p>
+                    <strong>Building something with BigchainDB?</strong>
+                    <br>
+                    <a href="{% link contact.html %}">We want to hear from you.</a>
+                </p>
+            </div>
+        </div>
+
+        {% for industry in site.data.industries %}
+        <section class="section section--industry" id="{{ industry.name | downcase | replace: " ", " " }}">
+
+            <header class="section-header">
+                <h1 class="section-title">
+                    <svg class="icon">
+                        <use xlink:href="/assets/img/sprite.svg#{{ industry.icon }}"></use>
+                    </svg>
+                    {{ industry.name }}
+                </h1>
+                <p class="section-description">{{ industry.description }}</p>
+            </header>
+
+            {% if industry.usecase %}
+                {% for usecase in site.usecases %}
+                    {% if industry.usecase == usecase.slug %}
+                        <article class="featuredusecase">
+                            <a class="featuredusecase__logo" href="{{ usecase.url }}">
+                                {% if usecase.bitmaplogo %}
+                                <img src="/assets/img/{{ usecase.bitmaplogo }}" /> {% else %}
+                                <svg>
+                                    <use xlink:href="/assets/img/sprite.svg#logo-{{ usecase.slug }}"></use>
+                                </svg>
+                                {% endif %}
+                            </a>
+
+                            <div class="featuredusecase__content">
+                                <h1 class="featuredusecase__title">
+                                    <a href="{{ usecase.url }}">{{ usecase.title }}</a>
+                                </h1>
+                                <p>{{ usecase.description }}</p>
+                                <a href="{{ usecase.url }}">Learn more</a>
+                            </div>
+                        </article>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </section>
+        {% endfor%}
+
+        </div>
+
+    </div>
+</section>
+
+{% include sections/section-getstarted.html %}

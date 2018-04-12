@@ -19,7 +19,18 @@
                     {% assign active = 'active' %}
                 {% endif %}
 
+                {% unless link.items %}
                 <a class="menu__link {{ active }} js-tracking-menu" href="{{ link.url }}">{{ link.title }}</a>
+                {% endunless %}
+
+                {% for item in link.items %}
+                    {% assign active = nil %}
+                    {% if page.url contains item.url %}
+                        {% assign active = 'active' %}
+                    {% endif %}
+
+                    <a class="menu__link menu__link--secondary {{ active }} js-tracking-menu" href="{{ item.url }}">{{ item.title }}</a>
+                {% endfor %}
 
             {% endfor %}
         </div>

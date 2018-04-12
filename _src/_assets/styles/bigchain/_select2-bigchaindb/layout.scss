@@ -3,6 +3,7 @@
 .select2-container--bigchaindb {
     @import 'single';
     @import 'multiple';
+    max-width: 100%;
 
     .select2-dropdown {
         border-radius: $border-radius;
@@ -43,7 +44,7 @@
             @extend .form-control;
             padding-left: $spacer;
             padding-right: $spacer;
-            border-bottom: none !important;
+            border-bottom: none !important; // stylelint-disable-line declaration-no-important
             background: rgba($input-border-color, .2);
         }
     }

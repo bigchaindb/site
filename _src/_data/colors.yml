@@ -11,8 +11,6 @@ primary:
       hex: 445261
     - name: brand-main-blue-dark
       hex: 101A25
-
-secondary:
     - name: brand-main-violet
       hex: B581CF
     - name: brand-main-blue-light
@@ -21,6 +19,7 @@ secondary:
       hex: CAD2DA
     - name: brand-main-gray-lighter
       hex: E8EBEF
+
 
 #
 # Errors

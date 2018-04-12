@@ -31,7 +31,8 @@
     }
 
     .form-label,
-    .form-control {
+    .form-control,
+    .form-control:focus ~ .form-label {
         color: $gray-dark;
     }
 

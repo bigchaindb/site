@@ -5,7 +5,6 @@ title: Get started
 description: "Explore drivers, tools &amp; documentation to get started with BigchainDB"
 tagline: "Explore drivers, tools &amp; documentation"
 
-image: share-image-getstarted.png
 js: page-getstarted.min.js
 
 redirect_from:
@@ -163,7 +162,7 @@ conn.postTransactionSync(txSigned)
             <div class="grid grid--full grid-small--half grid--gutters">
                 <div class="grid__col">
                     <span class="pretitle">{{ content.server.network.pretitle }}</span>
-                    <h2 class="choice__title">{{ content.server.network.title }}</h2>
+                    <h2 class="choice__title">{{ content.server.network.title }} <span class="choice__title__version" id="network-version" title="{{ content.server.network.version_title }}"></span></h2>
                     <p>{{ content.server.network.description }}</p>
                     <a class="btn btn-primary" href="{{ content.server.network.link }}">{{ content.server.network.button }}</a>
                 </div>
@@ -203,7 +202,7 @@ conn.postTransactionSync(txSigned)
 
                     <h3 class="choice__title">{{ content.drivers.title_official }}</h3>
 
-                    <div class="grid grid--full grid-small--half grid--gutters">
+                    <div class="grid grid--full grid-medium--half grid--gutters--small">
 
                         {% for driver in site.data.drivers.official %}
 
@@ -230,7 +229,7 @@ conn.postTransactionSync(txSigned)
                 <div class="grid__col">
 
                     <h3 class="choice__title">{{ content.drivers.title_tools }}</h3>
-                    <div class="grid grid--full grid-small--half grid--gutters">
+                    <div class="grid grid--full grid-medium--half grid--gutters--small">
 
                         {% for driver in site.data.drivers.tools %}
                         <div class="grid__col">
@@ -252,8 +251,8 @@ conn.postTransactionSync(txSigned)
         </div>
 
         <div class="row row--wide">
-            <h3 class="choice__title">{{ content.drivers.title_community }}</h3>
-            <div class="grid grid--half grid-medium--fit grid--gutters">
+            <h3 class="choice__title choice__title--community">{{ content.drivers.title_community }}</h3>
+            <div class="grid grid--half grid-medium--fit grid--gutters--small">
 
                 {% for driver in site.data.drivers.community %}
                 <div class="grid__col">
@@ -286,10 +285,10 @@ conn.postTransactionSync(txSigned)
         <div class="grid grid--full grid-small--fit grid--gutters">
 
                 <div class="grid__col">
-                    <h2 class="docs__title">Guides</h2>
+                    <h2 class="docs__title">Hitchhiker's Guide</h2>
                     <ul class="docs__list">
-                        {% for guide in site.guides limit: 8 %}
-                        <li><a href="{{ guide.url }}">{{ guide.title }}</a></li>
+                        {% for chapter in site.guide limit: 8 %}
+                        <li><a href="{{ chapter.url }}">{{ chapter.title }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
@@ -311,7 +310,7 @@ conn.postTransactionSync(txSigned)
     </div>
     <div class="row row--wide text-center">
         <div class="docs__actions">
-            <a class="btn btn-primary" href="/guides/">{{ content.docs.button_guides }}</a>
+            <a class="btn btn-primary" href="{% link developers/guide.html %}">{{ content.docs.button_guides }}</a>
             <a class="btn btn-secondary" href="https://docs.bigchaindb.com">{{ content.docs.button_documentation }}</a>
         </div>
     </div>
@@ -326,7 +325,7 @@ conn.postTransactionSync(txSigned)
     </div>
 
     <div class="row community__actions">
-        <div class="grid grid--full grid-small--fit grid--gutters">
+        <div class="grid grid--full grid-small--fit grid--gutters--small">
             <div class="grid__col">
                 <svg class="icon icon--social icon--gitter">
                     <use xlink:href="/assets/img/sprite.svg#gitter"></use>
@@ -351,8 +350,8 @@ conn.postTransactionSync(txSigned)
         </div>
     </div>
 
-    <div class="row">
-        <div class="grid grid--full grid-small--fit grid--gutters">
+    <div class="row row--wide">
+        <div class="grid grid--full grid-small--fit grid--gutters--small">
             <div class="grid__col">
                 <h5>{{ content.community.follow.title }}</h5>
                 <p>{{ content.community.follow.description }}</p>

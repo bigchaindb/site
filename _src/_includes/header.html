@@ -1,9 +1,9 @@
 <header role="banner" class="header header--{{ page.url | replace: '/','' }} header--{{ page.layout }}"
     {% if page.header %}
-        {% if page.path contains '_guides' %}
-        style="background-image:url('../{{ page.header }}')"
+        {% if page.path contains '_guide' %}
+        style="background-image:url('../{{ page.header }}');"
         {% else %}
-        style="background-image:url('/assets/img/{{ page.header }}')"
+        style="background-image:url('/assets/img/{{ page.header }}');"
         {% endif %}
     {% endif %}>
 

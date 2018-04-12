@@ -14,7 +14,7 @@ redirect_from:
 
 intro:
     title: "This is BigchainDB"
-    description: "With high throughput, sub-second latency and powerful functionality to automate business processes, BigchainDB looks, acts and feels like a database with added blockchain characteristics."
+    description: "With high throughput, low latency, powerful query functionality, decentralized control, immutable data storage and built-in asset support, BigchainDB is like a database with blockchain characteristics."
     keyfeatures:
         - title: "Decentralization"
           icon: "icon-nodes"
@@ -40,7 +40,7 @@ intro:
     </div>
 
     <div class="row row--wide">
-        <div class="section-intro__main grid grid--full grid-small--fit grid--gutters">
+        <div class="section-intro__main grid grid--half grid-small--fit grid--gutters">
             {% for feature in page.intro.keyfeatures %}
             <div class="grid__col">
                 <svg class="icon">
@@ -56,15 +56,17 @@ intro:
         <p class="large text-center">{{ page.intro.text }}</p>
 
         <p class="text-center">
-            <a class="btn btn-primary" href="/features/">{{ page.intro.button1 }}</a> <a class="btn btn-secondary" href="/getstarted/">{{ page.intro.button2 }}</a>
+            <a class="btn btn-primary" href="{% link features.html %}">{{ page.intro.button1 }}</a> <a class="btn btn-secondary" href="{% link developers/getstarted.html %}">{{ page.intro.button2 }}</a>
         </p>
     </div>
 </section>
 
-{% include sections/section-guides.html %}
+{% include sections/section-guide.html %}
 
 {% include sections/section-partners.html %}
 
-{% include sections/section-cta-enterprise.html %}
+{% include sections/section-cta-services.html %}
 
 {% include sections/section-blog.html %}
+
+{% include sections/section-newsletter.html %}

@@ -1,5 +1,5 @@
 
-<form id="form-enterprise" class="form form--enterprise js-parsley" action="//formspree.io/{{ site.email.enterprise }}" method="POST" accept-charset="UTF-8">
+<form id="form-services" class="form form--services js-parsley" action="//formspree.io/{{ site.email.services }}" method="POST" accept-charset="UTF-8">
 
     <p class="form-group">
         <input class="form-control" type="text" id="name" name="name" required>
@@ -101,6 +101,6 @@
         </p>
     </div>
 
-    <input type="hidden" name="_subject" value="New enterprise form submission" />
-    <input type="hidden" name="_cc" value="{{ site.email.enterprise_cc }}" />
+    <input type="hidden" name="_subject" value="New services form submission" />
+    <input type="hidden" name="_cc" value="{{ site.email.services_cc }}" />
 </form>

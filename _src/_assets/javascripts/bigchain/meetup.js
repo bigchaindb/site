@@ -1,5 +1,3 @@
-//require whatwg-fetch/fetch.js
-
 document.addEventListener('DOMContentLoaded', function() {
 
     const url = 'https://bigchaindb-meetups.now.sh'

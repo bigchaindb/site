@@ -16,11 +16,9 @@
 
 ---
 
-## Table of Contents
-
 * [Development](#development)
-    * [Install dependencies](#install-dependencies)
-    * [Development build](#development-build)
+    * [Prerequisites](#prerequisites)
+    * [Get up and running](#get-up-and-running)
 * [Continuous deployment: always be shipping](#continuous-deployment-always-be-shipping)
 * [Manual deployment](#manual-deployment)
     * [Prerequisite: authentication](#prerequisite-authentication)
@@ -34,33 +32,43 @@
 
 ## Development
 
+The whole website is a Jekyll based site with a Gulp-based build pipeline in front of it.
+
+### Prerequisites
+
 You need to have the following tools installed on your development machine before moving on:
 
-- [node.js](http://nodejs.org/) & [npm](https://npmjs.org/)
-- (optional) use [Yarn](https://yarnpkg.com) instead of npm for faster dependency installations
+- [Node.js](http://nodejs.org/) & [npm](https://npmjs.org/)
 - [Ruby](https://www.ruby-lang.org) (for sanity, install with [rvm](https://rvm.io/))
 - [Bundler](http://bundler.io/)
 
-### Install dependencies
+### Get up and running
 
-Run the following command from the repository's root folder to install all dependencies.
+Run the following command from the repository's root folder to clone this repository, install all dependencies, and spin up local dev server reachable under [http://localhost:1337](http://localhost:1337):
 
 ```bash
+git clone git@github.com:bigchaindb/site.git
+cd site/
 npm i && bundle install
-```
 
-or
-
-```bash
-yarn && bundle install
-```
-
-### Development build
-
-Spin up local dev server and livereloading watch task, reachable under [http://localhost:1337](http://localhost:1337):
-
-```bash
+# development build and dev server
 gulp
+```
+
+Additionally, you can execute those commands to test the actual build output:
+
+```bash
+# full production build
+gulp build --production
+
+# build preventing search engine indexing & Google Analytics tracking
+gulp build --staging
+```
+
+All builds are output into the `_dist/` folder. Use a tool like [serve](https://github.com/zeit/serve) to inspect a local build in your browser:
+
+```bash
+serve -s _dist
 ```
 
 ## Continuous deployment: always be shipping
@@ -159,6 +167,7 @@ New js should follow [eslint-config-ascribe](https://github.com/ascribe/javascri
 ## Authors
 
 - Matthias Kretschmann ([@kremalicious](https://github.com/kremalicious)) - [BigchainDB](https://www.bigchaindb.com) & [Ocean Protocol](https://oceanprotocol.com)
+- [All the contributors](https://github.com/bigchaindb/site/graphs/contributors)
 
 ## License
 

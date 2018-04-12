@@ -1,15 +1,15 @@
 
-var FormEnterprise = (function(w, d, $) {
+var FormServices = (function(w, d, $) {
 
     'use strict';
 
     var app, _private, _config;
 
     _config = {
-        form:       $('#form-enterprise'),
-        formBtn:    $('#form-enterprise').find('.btn'),
-        formURL:    $('#form-enterprise').attr('action'),
-        formMethod: $('#form-enterprise').attr('method')
+        form:       $('#form-services'),
+        formBtn:    $('#form-services').find('.btn'),
+        formURL:    $('#form-services').attr('action'),
+        formMethod: $('#form-services').attr('method')
     };
 
     _private = {
@@ -35,7 +35,7 @@ var FormEnterprise = (function(w, d, $) {
 
                             // send GA event
                             if (!_dntEnabled()) {
-                                GoogleAnalytics.gaEventEnterpriseSuccess();
+                                GoogleAnalytics.gaEventServicesSuccess();
                             }
                         },
                         error: function(err) {
@@ -46,7 +46,7 @@ var FormEnterprise = (function(w, d, $) {
 
                             // send GA event
                             if (!_dntEnabled()) {
-                                GoogleAnalytics.gaEventEnterpriseError();
+                                GoogleAnalytics.gaEventServicesError();
                             }
                         }
                     });

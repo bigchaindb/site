@@ -1,4 +1,4 @@
-.header--guides {
+.header--developersguide {
     background: url('../img/nosprite/starbase-guides.svg') no-repeat center bottom;
     background-size: contain;
     padding-bottom: 18%;
@@ -103,13 +103,9 @@
         display: block;
         box-shadow: none;
         background-color: $brand-main-blue-dark;
-        padding: $spacer * 1.5;
+        padding: $spacer * 2;
         height: 100%;
         border-radius: $border-radius;
-
-        @media ($screen-sm) {
-            padding: $spacer * 3;
-        }
 
         &:before {
             opacity: .85;
@@ -130,17 +126,6 @@
     .grid {
         margin-bottom: 0;
     }
-
-    .section--guides &,
-    .section--guideslist & {
-        margin-bottom: $spacer * 2;
-
-        a {
-            @media ($screen-sm) {
-                padding: $spacer * 4;
-            }
-        }
-    }
 }
 
 .guide__title,
@@ -156,10 +141,31 @@ h1.guide__title {
     margin-bottom: $spacer / $line-height;
     margin-top: 0;
     color: #fff;
+
+    .section--guides-more & {
+        font-size: $font-size-lg;
+    }
 }
 
 .guide__tagline {
     color: $brand-main-blue-light;
+}
+
+.section--guideslist {
+    .guide {
+        margin-bottom: $spacer * 2;
+
+        a {
+            padding: $spacer * 3;
+        }
+    }
+}
+
+.section--guides,
+.section--guides-more {
+    .grid {
+        margin-bottom: $spacer * 3;
+    }
 }
 
 //
@@ -210,20 +216,6 @@ li.toc-h2 {
 
 li.toc-h3 {
     display: none;
-}
-
-.section--getstarted {
-    padding-bottom: 0;
-
-    .section-header {
-        margin-bottom: -($spacer * 3.5);
-        position: relative;
-        z-index: 10;
-
-        .btn {
-            margin-top: $spacer * 2;
-        }
-    }
 }
 
 .image--create-transfer {

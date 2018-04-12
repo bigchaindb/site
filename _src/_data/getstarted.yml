@@ -23,6 +23,7 @@ server:
     network:
         pretitle: "Managed"
         title: "The BigchainDB Test Network"
+        version_title: "Test Network is currently running on BigchainDB "
         description: "No installation needed. Sign up and connect instantly, we will handle running a BigchainDB network for you."
         button: "Sign up"
         link: "https://testnet.bigchaindb.com"
@@ -54,7 +55,7 @@ docs:
     title: "Guides & Documentation "
     description: "Dive into our documentation with guides, examples, terminology, references and more."
     button_documentation: "See All Documentation"
-    button_guides: "See All Guides"
+    button_guides: "See the Guide"
     categories:
 
         - title: "Code Examples"
@@ -63,8 +64,6 @@ docs:
                 link: "https://docs.bigchaindb.com/projects/py-driver/en/latest/usage.html"
               - title: "Handcrafting Transactions"
                 link: "https://docs.bigchaindb.com/projects/py-driver/en/latest/handcraft.html"
-              - title: "Kyber"
-                link: "https://github.com/bigchaindb/kyber"
 
         - title: "Quick References"
           items:

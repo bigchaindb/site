@@ -5,6 +5,10 @@
     width: 100%;
     align-self: flex-start;
     text-align: left;
+
+    .dropdown-menu {
+        position: absolute !important; // stylelint-disable-line declaration-no-important
+    }
 }
 
 .menu__link {
@@ -26,7 +30,7 @@
     }
 
     // link line
-    &:after {
+    &:not(.dropdown-toggle):after {
         content: '';
         position: absolute;
         height: 2px;
@@ -157,6 +161,7 @@
     @media ($screen-md) {
         padding-top: 0;
         padding-bottom: 0;
+        text-align: right;
     }
 }
 
@@ -308,7 +313,7 @@
         margin-right: $spacer;
 
         &:after {
-            background: darken($gray-dark, 10%);
+            display: none;
         }
 
         &.active {
@@ -369,10 +374,6 @@
             .number {
                 background: $headings-color;
                 color: $gray;
-            }
-
-            &:after {
-                background: $headings-color;
             }
         }
     }

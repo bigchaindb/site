@@ -1,25 +1,25 @@
 ---
 main:
-    - title: Get started
-      url: "/getstarted/"
     - title: Features
-      url: "/features/"
-    - title: Use Cases
-      url: "/usecases/"
-    - title: Guide
-      url: "/guides/"
-    - title: Docs
-      url: https://docs.bigchaindb.com/
+      url: /features/
+    - title: Developers
+      url: /developers/getstarted/
+      items:
+        - title: Get Started
+          url: /developers/getstarted/
+        - title: Guide
+          url: /developers/guide/
+        - title: Docs
+          url: https://docs.bigchaindb.com/
+          external: true
+    - title: Services
+      url: /services/
 
 secondary:
-    - title: FAQ
-      url: "/faq/"
     - title: About
       url: "/about/"
     - title: Blog
       url: https://blog.bigchaindb.com
-    - title: Enterprise
-      url: "/enterprise/"
     - title: Whitepaper
       url: "/whitepaper/"
     - title: Contact

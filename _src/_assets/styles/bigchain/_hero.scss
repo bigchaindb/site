@@ -4,7 +4,7 @@
 // bigchaindb.com
 //
 
-$menu-height-md: 66px;
+$menu-height-md: 90px;
 
 .hero {
     @include background--photo();
@@ -67,8 +67,7 @@ $menu-height-md: 66px;
 //
 .hero__title,
 .hero__subtitle,
-.hero__action,
-.logo-enterprise {
+.hero__action {
     .wf-active &,
     .wf-inactive & {
         @include animation-slide-in-from-bottom;
@@ -91,8 +90,7 @@ $menu-height-md: 66px;
 }
 
 .page-front .menu--main,
-.hero__community,
-.hero__more {
+.hero__community {
     @include transition;
     opacity: 0;
     transition-delay: .8s;
@@ -174,6 +172,17 @@ $menu-height-md: 66px;
 
     .release {
         min-width: 44px;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: .35rem;
+            height: .35rem;
+            border-radius: 50%;
+            background-color: saturate(adjust-hue($brand-main-green, -170%), 15%);
+            vertical-align: top;
+            margin-left: $spacer / 8;
+        }
     }
 
     .icon {
@@ -210,18 +219,20 @@ $menu-height-md: 66px;
 .hero__more {
     position: relative;
     z-index: 2;
-    color: rgba(#fff, .6);
+    color: #fff;
+    opacity: .6;
     align-self: flex-end;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: $spacer;
-    width: 100%;
     display: none;
 
     @media ($screen-md) {
-        display: block;
+        display: inline-block;
     }
 
     &:hover,
-    &:focus { color: #fff; }
+    &:focus { opacity: 1; }
 
     // the caret
     .icon {

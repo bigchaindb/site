@@ -104,13 +104,29 @@
     }
 }
 
+@mixin grid-gutters-small() {
+    margin: -($gutter-space / 3) 0 $gutter-space / 3 (-($gutter-space / 3));
+
+    > .grid__col {
+        padding: $gutter-space / 3 0 0 $gutter-space / 3;
+    }
+}
+
 .grid--gutters {
     @include grid-gutters();
+}
+
+.grid--gutters--small {
+    @include grid-gutters-small();
 }
 
 @media ($screen-sm) {
     .grid-small--gutters {
         @include grid-gutters();
+    }
+
+    .grid-small--gutters--small {
+        @include grid-gutters-small();
     }
 }
 
@@ -118,11 +134,19 @@
     .grid-medium--gutters {
         @include grid-gutters();
     }
+
+    .grid-medium--gutters--small {
+        @include grid-gutters-small();
+    }
 }
 
 @media ($screen-lg) {
     .grid-large--gutters {
         @include grid-gutters();
+    }
+
+    .grid-large--gutters--small {
+        @include grid-gutters-small();
     }
 }
 

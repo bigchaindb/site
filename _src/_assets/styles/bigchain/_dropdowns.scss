@@ -1,0 +1,106 @@
+// The dropdown wrapper (`<div>`)
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    box-shadow: none;
+    cursor: default;
+
+    &:hover,
+    &:focus {
+        background: transparent;
+    }
+
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 10px;
+        background: url('../img/icon-caret.svg') no-repeat center center;
+        background-size: contain;
+        transition: .15s ease-out;
+    }
+
+    .dropdown.show &,
+    .dropdown--hover:hover & {
+        &:after {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+// The dropdown menu
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    display: block;
+    float: left;
+    min-width: 10rem;
+    padding: $spacer / 4 0;
+    margin: 0;
+    font-size: $font-size-base;
+    color: $body-bg;
+    text-align: left;
+    list-style: none;
+    border-radius: $border-radius;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
+    background: $gray-dark;
+    background-clip: padding-box;
+    border: 0;
+    max-height: 20rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: .2s $timing-bounce;
+    opacity: 0;
+    transform: scale(1, 0);
+    transform-origin: top;
+
+    @media (max-width: 27rem), (max-height: 27rem) {
+        max-height: 11.25rem;
+    }
+}
+
+// Links, buttons, and more within the dropdown menu
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: $spacer / 2 $spacer;
+    clear: both;
+    font-weight: $font-weight-normal;
+    color: $brand-main-gray-light;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+    &.active {
+        background: $brand-main-gray-light;
+        color: $gray-dark;
+        text-decoration: none;
+    }
+
+    &[rel='external']:after {
+        margin-left: 0;
+    }
+}
+
+.dropdown-menu.show,
+.dropdown--hover:hover > .dropdown-menu {
+    transform: scale(1, 1);
+    opacity: 1;
+}
+
+.dropdown--hover > .dropdown-toggle:active {
+    // Without this, clicking will make it sticky
+    pointer-events: none;
+}
