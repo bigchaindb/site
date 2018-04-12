@@ -16,8 +16,6 @@ main:
       url: /services/
 
 secondary:
-    - title: FAQ
-      url: "/faq/"
     - title: About
       url: "/about/"
     - title: Blog

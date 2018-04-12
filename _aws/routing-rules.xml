@@ -65,4 +65,14 @@
       <HttpRedirectCode>301</HttpRedirectCode>
     </Redirect>
   </RoutingRule>
+  <RoutingRule>
+    <Condition>
+      <KeyPrefixEquals>faq/</KeyPrefixEquals>
+      <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
+    </Condition>
+    <Redirect>
+      <HostName>docs.bigchaindb.com</HostName>
+      <HttpRedirectCode>302</HttpRedirectCode>
+    </Redirect>
+  </RoutingRule>
 </RoutingRules>
