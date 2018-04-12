@@ -1,5 +1,5 @@
 //
-// Page: enterprise
+// Page: Services
 // ---
 // bigchaindb.com
 //
@@ -70,7 +70,16 @@
     }
 }
 
-.section--enterpriseintro {
+.section--servicesdetail {
+    .actions {
+        text-align: center;
+        margin-top: $spacer * 2;
+        padding-top: $spacer * 2;
+        border-top: 1px solid darken($brand-main-green, 5%);
+    }
+}
+
+.section--servicesintro {
     .grid,
     .feature {
         margin-bottom: 0;
@@ -93,7 +102,7 @@
     }
 }
 
-.section--enterprisetestimonial {
+.section--servicestestimonial {
     .testimonial {
         @extend .large;
         margin: 0 auto;
@@ -110,16 +119,7 @@
     }
 }
 
-.section--enterprisesupport {
-    .actions {
-        text-align: center;
-        margin-top: $spacer * 2;
-        padding-top: $spacer * 2;
-        border-top: 1px solid darken($brand-main-green, 5%);
-    }
-}
-
-.form--enterprise {
+.form--services {
     background: darken($brand-main-blue, 5%);
 
     .grid {
