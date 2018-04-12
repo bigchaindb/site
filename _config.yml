@@ -51,7 +51,7 @@ social:
 address:
     company:            BigchainDB GmbH
     street:             Chausseestraße 19
-    zip:                10115
+    zip:                "10115"
     city:               Berlin
     country:            Germany
 

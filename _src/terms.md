@@ -10,9 +10,9 @@ The Site is operated by:
 
 BigchainDB GmbH (“BigchainDB”, “we”, “us”, “our”)
 represented by its managing director Bruce Pon
-Wichertstr. 14a
-10439 Berlin, Germany
-https://bigchaindb.com
+{{ site.address.street }}
+{{ site.address.zip }} {{ site.address.city }}, {{ site.address.country }}
+{{ site.url }}
 
 ### Terms and Privacy Policy
 

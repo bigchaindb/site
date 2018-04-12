@@ -4,11 +4,11 @@ layout: page
 title: Imprint
 ---
 
-### BigchainDB GmbH
+### {{ site.address.company }}
 
-Wichertstr. 14a
-10439 Berlin
-Germany
+{{ site.address.street }}
+{{ site.address.zip }} {{ site.address.city }}
+{{ site.address.country }}
 USt-IdNr. DE296647599
 
 ### Contact
