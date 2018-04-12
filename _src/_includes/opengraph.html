@@ -12,7 +12,7 @@
 {% if page.description %}
     <meta content="{{ page.description }}" property="og:description">
 {% elsif page.front_page %}
-    <meta content="{{ site.description }}" property="og:description">
+    <meta content="{{ page.intro.description }}" property="og:description">
 {% else %}
     <meta content="{{ page.excerpt | strip_html | strip_newlines }}" property="og:description">
 {% endif %}

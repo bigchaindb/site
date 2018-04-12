@@ -17,7 +17,7 @@
 {% if page.description %}
     <meta name="twitter:description" content="{{ page.description }}">
 {% elsif page.front_page %}
-    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:description" content="{{ page.intro.description }}">
 {% else %}
     <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
 {% endif %}

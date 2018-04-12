@@ -16,7 +16,7 @@
     {% if page.description %}
         <meta name="description" content="{{ page.description }}">
     {% elsif page.front_page %}
-        <meta name="description" content="{{ site.description }}">
+        <meta name="description" content="{{ page.intro.description }}">
     {% else %}
         <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
     {% endif %}
@@ -76,7 +76,7 @@
 
     <!-- Google Search Console verification -->
     <meta name="google-site-verification" content="W78RKvWHp0dn7gE6CDevllN3Vq6yawxMUWAKDhRPIY0" />
-    
+
     <!-- YouTube verification -->
     <meta name="google-site-verification" content="K8OUAnTc9f8Lp3KWGB_qdyIk0LiqShVWp51Jj73Zlzw" />
 
