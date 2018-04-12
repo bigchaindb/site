@@ -45,32 +45,3 @@
     width: 100%;
     height: auto;
 }
-
-
-.logo-services {
-    .logo {
-        @extend .logo--sm;
-        display: inline-block;
-        color: $brand-main-blue-light;
-        fill: $brand-main-blue-light;
-    }
-}
-
-.logo-services--text {
-    font-size: $font-size-h3 * 1.1;
-    display: inline-block;
-    color: $brand-main-blue-light;
-    padding-left: $spacer;
-    position: relative;
-    top: -3px;
-
-    &:before {
-        content: '';
-        position: absolute;
-        left: $spacer / 3;
-        width: 1px;
-        height: 100%;
-        background: $brand-main-violet;
-        display: block;
-    }
-}
