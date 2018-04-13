@@ -35,15 +35,6 @@
     h3 {
         color: $brand-main-blue;
     }
-
-    .feature__title {
-        color: $brand-main-blue;
-
-        // the bottom line
-        &:after {
-            background: darken($brand-main-blue-light, 10%);
-        }
-    }
 }
 
 .background--gray {

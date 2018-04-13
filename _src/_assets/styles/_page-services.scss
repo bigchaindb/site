@@ -38,8 +38,12 @@
         fill: $brand-main-blue-light;
     }
 
+    .hero__title {
+        margin-top: $spacer;
+    }
+
     .hero__subtitle {
-        margin-bottom: $spacer * 2;
+        margin-bottom: $spacer * 3;
         font-size: $font-size-h5;
 
         @media ($screen-sm) {
@@ -59,15 +63,25 @@
 
 .section--servicesdetail {
     .feature__icon {
-        stroke: $brand-main-gray;
-        color: $brand-main-violet;
+        stroke: rgba($brand-main-gray, .65);
+        color: rgba($brand-main-violet, .65);
+    }
+
+    .feature__title {
+        // the bottom line
+        &:after {
+            background: rgba($brand-main-gray, .2);
+        }
+    }
+
+    .feature__text {
+        color: rgba($brand-main-blue, .65);
     }
 
     .actions {
         text-align: center;
-        margin-top: $spacer * 2;
-        padding-top: $spacer * 2;
-        border-top: 1px solid darken($brand-main-blue-light, 10%);
+        padding-top: $spacer * 3;
+        border-top: 2px solid rgba($brand-main-gray, .1);
     }
 }
 
