@@ -25,6 +25,27 @@
     }
 }
 
+.background--blue--light {
+    background: $brand-main-blue-light;
+
+    .section-title,
+    p,
+    h1,
+    h2,
+    h3 {
+        color: $brand-main-blue;
+    }
+
+    .feature__title {
+        color: $brand-main-blue;
+
+        // the bottom line
+        &:after {
+            background: darken($brand-main-blue-light, 10%);
+        }
+    }
+}
+
 .background--gray {
     background: $brand-main-gray;
 }

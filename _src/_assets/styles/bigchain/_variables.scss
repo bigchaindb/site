@@ -154,7 +154,10 @@ $btn-secondary-bg:               $gray-light !default;
 $btn-blue-color:                 $brand-main-blue-light !default;
 $btn-blue-bg:                    $brand-main-blue !default;
 
-$btn-violet-color:               $brand-main-blue !default;
+$btn-blue-light-color:           $brand-main-blue !default;
+$btn-blue-light-bg:              $brand-main-blue-light !default;
+
+$btn-violet-color:               darken($brand-main-violet, 45%) !default;
 $btn-violet-bg:                  $brand-main-violet !default;
 
 $btn-info-color:                 #fff !default;
