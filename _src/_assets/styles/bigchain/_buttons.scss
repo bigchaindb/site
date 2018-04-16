@@ -70,6 +70,10 @@ fieldset[disabled] a.btn {
     @include button-variant($btn-blue-color, $btn-blue-bg);
 }
 
+.btn-blue-light {
+    @include button-variant($btn-blue-light-color, $btn-blue-light-bg);
+}
+
 .btn-violet {
     @include button-variant($btn-violet-color, $btn-violet-bg);
 }

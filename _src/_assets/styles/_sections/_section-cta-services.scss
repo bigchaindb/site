@@ -9,8 +9,8 @@
         margin-bottom: $spacer;
         transform: scale(.8);
         transform-origin: left;
-        color: darken($brand-main-violet, 25%);
-        fill: darken($brand-main-violet, 25%);
+        color: $brand-main-violet;
+        fill: rgba($brand-main-blue, .5);
     }
 
     .section-header {

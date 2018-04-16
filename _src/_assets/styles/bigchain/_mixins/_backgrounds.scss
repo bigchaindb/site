@@ -25,6 +25,18 @@
     }
 }
 
+.background--blue--light {
+    background: $brand-main-blue-light;
+
+    .section-title,
+    p,
+    h1,
+    h2,
+    h3 {
+        color: $brand-main-blue;
+    }
+}
+
 .background--gray {
     background: $brand-main-gray;
 }
