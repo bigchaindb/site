@@ -21,7 +21,7 @@
       <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
-      <ReplaceKeyPrefixWith>features/#usecases</ReplaceKeyPrefixWith>
+      <ReplaceKeyWith>features/#usecases</ReplaceKeyWith>
       <HttpRedirectCode>301</HttpRedirectCode>
     </Redirect>
   </RoutingRule>
@@ -31,7 +31,7 @@
       <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
-      <ReplaceKeyPrefixWith>developers/getstarted/</ReplaceKeyPrefixWith>
+      <ReplaceKeyWith>developers/getstarted</ReplaceKeyWith>
       <HttpRedirectCode>301</HttpRedirectCode>
     </Redirect>
   </RoutingRule>
@@ -41,7 +41,7 @@
       <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
-      <ReplaceKeyPrefixWith>developers/getstarted/</ReplaceKeyPrefixWith>
+      <ReplaceKeyWith>developers/getstarted</ReplaceKeyWith>
       <HttpRedirectCode>301</HttpRedirectCode>
     </Redirect>
   </RoutingRule>
@@ -51,7 +51,7 @@
       <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
-      <ReplaceKeyPrefixWith>developers/guide/</ReplaceKeyPrefixWith>
+      <ReplaceKeyPrefixWith>developers/guide</ReplaceKeyPrefixWith>
       <HttpRedirectCode>301</HttpRedirectCode>
     </Redirect>
   </RoutingRule>
@@ -61,7 +61,7 @@
       <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
     </Condition>
     <Redirect>
-      <ReplaceKeyPrefixWith>services/</ReplaceKeyPrefixWith>
+      <ReplaceKeyWith>services/</ReplaceKeyWith>
       <HttpRedirectCode>301</HttpRedirectCode>
     </Redirect>
   </RoutingRule>
