@@ -47,6 +47,9 @@ if (!_dntEnabled()) {
             });
         {% endif %}
 
+        // IP Anonymization
+        ga('set', 'anonymizeIp', true);
+
         // Send initial pageview
         ga('send', 'pageview');
 
