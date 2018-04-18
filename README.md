@@ -16,6 +16,7 @@
 
 ---
 
+* [Documentation](#documentation)
 * [Development](#development)
     * [Prerequisites](#prerequisites)
     * [Get up and running](#get-up-and-running)
@@ -29,6 +30,10 @@
     * [JavaScript](#javascript)
 * [Authors](#authors)
 * [License](#license)
+
+## Documentation
+
+Have a look at the [`docs/`](docs/) folder.
 
 ## Development
 
