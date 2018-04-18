@@ -11,7 +11,8 @@ bigchaindb_api_url:     https://test.bigchaindb.com
 hiring:                 true
 
 email:
-    contact:            xgkblajx
+    contact:            contact@bigchaindb.com
+    contact_formspree:  xgkblajx
     contact_cc:         "contact@bigchaindb.com,kamal@bigchaindb.com,ricardo@bigchaindb.com,gautam@bigchaindb.com"
     cla:                xwojnopx
     cla_cc:             troy@ascribe.io
