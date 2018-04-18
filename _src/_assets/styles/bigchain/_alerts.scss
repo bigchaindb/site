@@ -18,6 +18,10 @@
     }
 
     > p:last-child { margin-bottom: 0; }
+
+    .form & {
+        text-align: center;
+    }
 }
 
 .alert__icon {
