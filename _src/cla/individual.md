@@ -55,6 +55,8 @@ An assertion of claims of the Patents shall be considered for a “Defensive Pur
 
 We agree to license patents owned or controlled by you only to the extent necessary to (sub)license Your Contribution(s) and the combination of Your Contribution(s) with the Material.
 
+As a condition on the grant of rights in Sections 2 and 3, We agree to license the Contribution only under the terms of the license or licenses which We are using on the Submission Date for the Material or any licenses which are approved by the Open Source Initiative on or after the Effective Date, including both permissive and copyleft licenses, whether or not such licenses are subsequently disapproved (including any right to adopt any future version of a license if permitted).
+
 ### 5. Disclaimer
 
 The Contribution is provided as is. More particularly, all express or implied warranties including, without limitation, any implied warranty of merchantability, fitness for a particular purpose and non-infringement are expressly disclaimed by You to Us and by Us to You. To the extent that any such warranties cannot be disclaimed, such warranty is limited in duration to the minimum period permitted by law.
