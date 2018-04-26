@@ -1,11 +1,16 @@
-<div class="grid grid--full grid-small--half grid-medium--third grid--gutters text-center grid--founders">
+<div class="grid grid--full grid-small--half grid-medium--third grid-large--columns text-center grid--founders">
 
     {% assign founders = site.data.team.founders %}
 
     {% for member in founders %}
     <div class="grid__col">
         <article class="team">
-            <img class="team__image" src="/assets/img/team/{{ member.image }}">
+            {% if member.image %}
+                {% assign image = member.image %}
+            {% else %}
+                {% assign image = 'wrigley-avatar.svg' %}
+            {% endif %}
+            <img class="team__image" src="/assets/img/team/{{ image }}">
             <h1 class="team__name">{{ member.name }}</h1>
             <p class="team__position">{{ member.position }}</p>
 
@@ -58,14 +63,19 @@
 
 
 
-<div class="grid grid--full grid-small--third grid-medium--columns grid--gutters text-center grid--team">
+<div class="grid grid--full grid-small--half grid-medium--third grid-large--columns grid--gutters text-center grid--team">
 
     {% assign team = site.data.team.team | sort: 'name' %}
 
     {% for member in team %}
     <div class="grid__col grid__col--2">
         <article class="team">
-            <img class="team__image" src="/assets/img/team/{{ member.image }}">
+            {% if member.image %}
+                {% assign image = member.image %}
+            {% else %}
+                {% assign image = 'wrigley-avatar.svg' %}
+            {% endif %}
+            <img class="team__image" src="/assets/img/team/{{ image }}">
             <h1 class="team__name">{{ member.name }}</h1>
             <p class="team__position">{{ member.position }}</p>
 
