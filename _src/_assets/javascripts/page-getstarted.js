@@ -117,11 +117,14 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
         }
     })
 
+    postButton.style.width = `${postButton.offsetWidth}px`
+
     postButton.addEventListener('click', function(e) {
         e.preventDefault()
 
         const message = messageInput.value
         postButton.classList.add('disabled')
+        postButton.innerHTML = '<span class="loader loader--dark"></span>'
 
         const alice = new driver.Ed25519Keypair()
         const tx = driver.Transaction.makeCreateTransaction(
@@ -165,6 +168,9 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
 
             const outputContent = reason.status + ' ' + reason.statusText
             output.textContent = outputContent
+
+            postButton.classList.remove('disabled')
+            postButton.innerHTML = 'Off you go'
         }).then((res) => console.log('Transaction status:', res.status))
 
     }, false)
