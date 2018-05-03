@@ -83,31 +83,39 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
     const driver = window.BigchainDB
     const API_PATH = proxyUrl + apiPath
 
-    const form = document.getElementById('form-transaction')
     const postButton = document.getElementById('post')
+    const postButtonText = postButton.innerText
     const messageInput = document.getElementById('message')
 
-    // nasty jquery inside of here, YOLO
-    $(".highlight code:contains('Blockchain all the things!')").html(function(_, html) {
-        return html.replace(/(Blockchain all the things!)/g, '<strong class="code-example__message">$1</strong>');
-    })
+    // put a wrapper around original message, and empty it
+    function addMessageWrapper() {
+        const codeExamples = document.querySelectorAll('.highlight code')
 
-    const codeMessages = document.querySelectorAll('.code-example__message')
-
-    function updateMessage(content) {
-        const escapedContent = content.replace(/'/g, "\\'")
-        for (var codeMessage of codeMessages) {
-            codeMessage.textContent = escapedContent
-        }
+        codeExamples.forEach(function (codeExample) {
+            if (codeExample.innerText.includes('Blockchain all the things!')) {
+                let html = codeExample.innerHTML
+                html = html.replace('Blockchain all the things!', '<strong class="code-example__message"></strong>')
+                codeExample.innerHTML = html
+            }
+        })
     }
-    // empty default message
-    updateMessage('')
+    addMessageWrapper()
+
+    // update message helper function
+    function updateMessage(content) {
+        const codeMessages = document.querySelectorAll('.code-example__message')
+        const escapedContent = content.replace(/'/g, "\\'")
+
+        codeMessages.forEach(function(codeMessage) {
+            codeMessage.textContent = escapedContent
+        })
+    }
 
     // quick form validation, live update code example with user input
     messageInput.addEventListener('input', function() {
         if (messageInput.value === '') {
             postButton.setAttribute('disabled', '')
-            // empty message again
+            // empty message
             updateMessage('')
         } else {
             postButton.removeAttribute('disabled')
@@ -119,13 +127,27 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
 
     postButton.style.width = `${postButton.offsetWidth}px`
 
+    function buttonStateLoading() {
+        postButton.classList.add('disabled')
+        postButton.innerHTML = '<span class="loader loader--dark"></span>'
+    }
+
+    function buttonStateSuccess() {
+        postButton.style.opacity = 0
+    }
+
+    function buttonStateFail() {
+        postButton.classList.remove('disabled')
+        postButton.removeAttribute('disabled')
+        postButton.innerHTML = postButtonText
+    }
+
     postButton.addEventListener('click', function(e) {
         e.preventDefault()
 
-        const message = messageInput.value
-        postButton.classList.add('disabled')
-        postButton.innerHTML = '<span class="loader loader--dark"></span>'
+        buttonStateLoading()
 
+        const message = messageInput.value
         const alice = new driver.Ed25519Keypair()
         const tx = driver.Transaction.makeCreateTransaction(
             { message: message },
@@ -150,14 +172,11 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
             responseArea.classList.remove('hide')
             messageSuccess.classList.remove('hide')
 
-            console.log(response)
-
             const outputContent = JSON.stringify(response, null, 2) // indented with 2 spaces
             output.textContent = outputContent
-
             transactionLink.href = bigchaindbUrl + apiPath + 'transactions/' + response.id
 
-            postButton.style.opacity = 0
+            buttonStateSuccess()
 
         }, reason => { // Error!
             console.log(reason)
@@ -169,8 +188,7 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
             const outputContent = reason.status + ' ' + reason.statusText
             output.textContent = outputContent
 
-            postButton.classList.remove('disabled')
-            postButton.innerHTML = 'Off you go'
+            buttonStateFail()
         }).then((res) => console.log('Transaction status:', res.status))
 
     }, false)
