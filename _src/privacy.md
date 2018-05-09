@@ -25,9 +25,11 @@ When you visit the Site, we may log some of the information about your visit (su
 ​
 If you want to contribute to the project, you must complete our [Contributor License Agreement](https://www.bigchaindb.com/cla) (CLA). We will store your completed CLA, including the personal information you include on it. We may use that personal information to contact you or to enforce the terms of the CLA.
 ​
-If you use the contact forms or CLA form on our website, the information you submit is collected by [Formspree.io](https://formspree.io/) and is subject to its terms and privacy policy. Note that Formspree.io only saves the most recent 100 messages. After that, messages are deleted. Formspree.io sends emails to us through Sendgrid.com in accordance with the [Sendgrid.com privacy policy](https://sendgrid.com/privacy).
+If you use the contact forms or CLA form on our website, the information you submit is collected by [Formspree.io](https://formspree.io/) and is subject to its [Terms](https://formspree.io/static/TermsOfUse.pdf) and [Privacy Policy](https://formspree.io/static/PrivacyPolicy.pdf). Note that Formspree.io only saves the most recent 100 messages. After that, messages are deleted. Formspree.io sends emails to us through Sendgrid.com in accordance with the [Sendgrid.com Privacy Policy](https://sendgrid.com/privacy).
 ​
 If you want to sign the CLA form or contact us without using these forms, you can email contact@bigchaindb.com.
+
+We use MailChimp for our newsletter, and the information you submit via our newsletter subscription form on our website will be transferred to MailChimp for processing in accordance with their [Terms](https://mailchimp.com/legal/terms/) and [Privacy Policy](https://mailchimp.com/legal/privacy/).
 ​
 ### How information is shared
 
