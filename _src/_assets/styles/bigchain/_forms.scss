@@ -325,3 +325,30 @@ input[type='checkbox'] {
     from { transform: translate3d(0, 0, 0); }
     to { transform: translate3d(0, ( $font-size-sm + ($spacer / 4)), 0); }
 }
+
+
+//
+// GDPR messages
+//
+.form__gdpr {
+    opacity: .7;
+    font-size: $font-size-sm;
+    position: relative;
+    margin-top: $spacer * 2;
+
+    .icon {
+        stroke: #fff;
+        color: #fff;
+        stroke-width: 1.5;
+        opacity: .5;
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        left: -.25rem;
+        top: .25rem;
+    }
+
+    .text {
+        margin-left: $spacer * 2;
+    }
+}

@@ -41,4 +41,13 @@
     <input type="text" name="_gotcha" style="display: none;">
     <input type="hidden" name="_subject" value="New contact form submission" />
     <input type="hidden" name="_cc" value="{{ site.email.contact_cc }}" />
+
+    <div class="form__gdpr">
+        <svg class="icon">
+            <use xlink:href="/assets/img/sprite.svg#icon-heart-protect"></use>
+        </svg>
+        <div class="text">
+            {{ site.data.gdpr.general | markdownify }}
+        </div>
+    </div>
 </form>

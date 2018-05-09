@@ -46,28 +46,6 @@
     color: $gray-dark;
 }
 
-.form__gdpr {
-    opacity: .8;
-    font-size: $font-size-sm;
-    position: relative;
-
-    .icon {
-        stroke: #fff;
-        color: #fff;
-        stroke-width: 1.5;
-        opacity: .5;
-        width: 1.5rem;
-        height: 1.5rem;
-        position: absolute;
-        left: -.25rem;
-        top: .25rem;
-    }
-
-    .text {
-        margin-left: $spacer * 2;
-    }
-}
-
 .newsletter__gdpr {
     .icon {
         stroke: $brand-main-blue;
