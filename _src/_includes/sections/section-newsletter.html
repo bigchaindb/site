@@ -1,8 +1,8 @@
 
-<section class="section section-newsletter newsletter">
+<section class="section section--newsletter">
     <div class="row row--wide">
 
-        <div class="grid grid--full grid-small--half grid--gutters grid--center">
+        <div class="grid grid--full grid-medium--half grid--gutters grid--center">
             <div class="grid__col">
                 <h1 class="newsletter__title">
                     {% if page.newsletter.title %}
@@ -18,10 +18,19 @@
                         No more than one email per month. We're busy too.
                     {% endif %}
                 </p>
+
+                 {% include form-newsletter.html %}
             </div>
             <div class="grid__col">
 
-                {% include form-newsletter.html %}
+                <div class="form__gdpr newsletter__gdpr">
+                    <svg class="icon">
+                        <use xlink:href="/assets/img/sprite.svg#icon-heart-protect"></use>
+                    </svg>
+                    <div class="text">
+                        {{ site.data.gdpr.newsletter | markdownify }}
+                    </div>
+                </div>
 
             </div>
         </div>

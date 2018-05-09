@@ -1,0 +1,85 @@
+
+.section--newsletter {
+    background: $brand-primary;
+    align-items: flex-start;
+
+    .form-group,
+    .grid { margin-bottom: 0; }
+
+    .form-control {
+        border-color: $gray-dark;
+
+        &:focus {
+            border-color: #000;
+        }
+    }
+
+    .btn {
+        background: $brand-main-blue;
+    }
+
+    .form-label,
+    .form-control,
+    .form-control:focus ~ .form-label {
+        color: $gray-dark;
+    }
+
+    .form-control-feedback {
+        @extend .bold;
+        margin-top: $spacer / 2;
+    }
+
+    .form--newsletter {
+        margin-top: $spacer * 2;
+    }
+}
+
+.newsletter__title {
+    @extend .h5;
+    margin-top: 0;
+    margin-bottom: $spacer / 4;
+}
+
+.newsletter__title,
+.newsletter__text,
+.newsletter__gdpr {
+    color: $gray-dark;
+}
+
+.form__gdpr {
+    opacity: .8;
+    font-size: $font-size-sm;
+    position: relative;
+
+    .icon {
+        stroke: #fff;
+        color: #fff;
+        stroke-width: 1.5;
+        opacity: .5;
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        left: -.25rem;
+        top: .25rem;
+    }
+
+    .text {
+        margin-left: $spacer * 2;
+    }
+}
+
+.newsletter__gdpr {
+    .icon {
+        stroke: $brand-main-blue;
+        color: $brand-main-blue;
+    }
+
+    a {
+        box-shadow: inset 0 -1px 0 $brand-main-blue;
+
+        &:hover,
+        &:focus {
+            background: $brand-main-blue;
+        }
+    }
+}
