@@ -2,7 +2,7 @@
 
 > 🦁 The fabulous cat of blockchain websites.
 
-[![Build Status](https://travis-ci.org/bigchaindb/site.svg?branch=master)](https://travis-ci.org/bigchaindb/site)
+[![Build Status](https://travis-ci.com/bigchaindb/site.svg?branch=master)](https://travis-ci.com/bigchaindb/site)
 [![css bigchaindb](https://img.shields.io/badge/css-bigchaindb-39BA91.svg)](https://github.com/bigchaindb/stylelint-config-bigchaindb)
 [![js ascribe](https://img.shields.io/badge/js-ascribe-39BA91.svg)](https://github.com/ascribe/javascript)
 [![Greenkeeper badge](https://badges.greenkeeper.io/bigchaindb/site.svg)](https://greenkeeper.io/)
@@ -37,7 +37,7 @@ Have a look at the [`docs/`](docs/) folder.
 
 ## Development
 
-The whole website is a Jekyll based site with a Gulp-based build pipeline in front of it.
+The whole website is a Jekyll site with a Gulp-based build pipeline in front of it.
 
 ### Prerequisites
 
