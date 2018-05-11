@@ -240,6 +240,15 @@ Logo can be used with a base class and modifier classes for size & color:
     <div class="form-group">
         <input class="btn btn-primary" type="submit" value="Submit">
     </div>
+
+    <div class="form__gdpr">
+        <svg class="icon">
+            <use xlink:href="/assets/img/sprite.svg#icon-heart-protect"></use>
+        </svg>
+        <div class="text">
+            {{ site.data.gdpr.general | markdownify }}
+        </div>
+    </div>
 </form>
 
 ```html
@@ -276,6 +285,15 @@ Logo can be used with a base class and modifier classes for size & color:
     </p>
     <div class="form-group">
         <input class="btn btn-primary" type="submit" value="Submit">
+    </div>
+
+    <div class="form__gdpr">
+        <svg class="icon">
+            <use xlink:href="/assets/img/sprite.svg#icon-heart-protect"></use>
+        </svg>
+        <div class="text">
+            {{ site.data.gdpr.general | markdownify }}
+        </div>
     </div>
 </form>
 ```
