@@ -35,6 +35,10 @@ If you want to contribute to the project, you must complete our [Contributor Lic
 If you want to sign the CLA form or contact us without using these forms, you can email {{ site.email.contact }}.
 
 We use MailChimp for our newsletter, and the information you submit via our newsletter subscription form on our website will be transferred to MailChimp for processing in accordance with their [Terms](https://mailchimp.com/legal/terms/) and [Privacy Policy](https://mailchimp.com/legal/privacy/).
+
+#### BigchainDB Test Network
+
+Use of the BigchainDB Test Network is subject to its own [Terms](https://testnet.bigchaindb.com/terms-network). Creating an account and using it submits your entered information to 3Scale according to their [Terms](https://www.3scale.net/terms-and-conditions/) and [Privacy Policy](https://www.redhat.com/en/about/privacy-policy).
 ​
 ### How information is shared
 
