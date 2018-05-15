@@ -28,6 +28,7 @@
     "bigchaindb-driver": "^4.0.0",
     "bootstrap": "^4.1.0",
     "clipboard": "^2.0.0",
+    "cookies-eu-banner": "^1.2.10",
     "gumshoe": "github:cferdinandi/gumshoe",
     "is-in-viewport": "^3.0.0",
     "jquery": "^3.3.1",

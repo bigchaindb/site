@@ -1,17 +1,11 @@
-
-
 <!--
 //
 // Site scripts
 //
 -->
-<script src="/assets/js/bigchain.min.js"></script>
-
-{% if page.js %}
-<script src="/assets/js/{{ page.js }}"></script>
-{% elsif layout.js %}
-<script src="/assets/js/{{ layout.js }}"></script>
-{% endif %}
+<script src="/assets/js/bigchain.min.js"></script> {% if page.js %}
+<script src="/assets/js/{{ page.js }}"></script> {% elsif layout.js %}
+<script src="/assets/js/{{ layout.js }}"></script> {% endif %}
 
 <!--
 svg4everybody.js
@@ -25,81 +19,60 @@ svg4everybody.js
 //
 -->
 <script>
-if (!_dntEnabled()) {
-    (function(window) {
+    if (!_dntEnabled()) {
+        new CookiesEuBanner(function () {
+            (function (window) {
+                // Google Analytics async snippet
+                // http://goo.gl/3FPNDx
+                window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+                ga.l = +new Date;
 
-        // Google Analytics async snippet
-        // http://goo.gl/3FPNDx
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};
-        ga.l=+new Date;
+                var d=document,
+                    g=d.createElement('script'),
+                    s=d.getElementsByTagName('script')[0];
+                g.async=true;
 
-        // Create the GA tracker
-        ga('create', '{{ site.analyticsID }}', 'auto', {siteSpeedSampleRate: 10});
+                {% if jekyll.environment == "production" %}
+                    g.src='https://www.google-analytics.com/analytics.js';
+                {% else %}
+                    g.src='https://www.google-analytics.com/analytics_debug.js';
+                {% endif%}
 
-        {% if jekyll.environment != 'production' %}
-            // In non-production mode, simply log GA hits to the console.
-            // Note, tasks must be set before sending the first hit
-            ga(function(tracker) {
-                tracker.set('sendHitTask', function() {
-                    // Throw to stop subsequent tasks.
-                    throw 'Abort tracking in non-production environments.'
-                });
-            });
-        {% endif %}
+                s.parentNode.insertBefore(g,s);
 
-        // IP Anonymization
-        ga('set', 'anonymizeIp', true);
+                // Create the GA tracker
+                ga('create', '{{ site.analyticsID }}', 'auto', { siteSpeedSampleRate: 10 });
 
-        // Send initial pageview
-        ga('send', 'pageview');
+                {% if jekyll.environment != 'production' %}
+                    // In non-production mode, simply log GA hits to the console.
+                    // Note, tasks must be set before sending the first hit
+                    ga(function (tracker) {
+                        tracker.set('sendHitTask', function () {
+                            // Throw to stop subsequent tasks.
+                            throw 'Abort tracking in non-production environments.'
+                        });
+                    });
+                {% endif %}
 
-        // Track uncaught errors
-        window.onerror = function(message, url, line, col) {
-            var desc = message + ' (line: ' + line + ', url: ' + url + ', col: '
-            + col + ')';
+                // IP Anonymization
+                ga('set', 'anonymizeIp', true);
 
-            ga('send', 'exception', {
-                exDescription: 'window.onerror: ' + desc,
-                exFatal: false
-            });
-        };
+                // Send initial pageview
+                ga('send', 'pageview');
 
-    }(window));
-}
+                // Track uncaught errors
+                window.onerror = function (message, url, line, col) {
+                    var desc = message + ' (line: ' + line + ', url: ' + url + ', col: ' + col + ')';
+
+                    ga('send', 'exception', {
+                        exDescription: 'window.onerror: ' + desc,
+                        exFatal: false
+                    });
+                };
+            }(window));
+
+            GoogleAnalytics.init()
+
+        }, true);
+    }
 </script>
-
-{% if jekyll.environment == "production" %}
-    <script async src="//www.google-analytics.com/analytics.js"></script>
-{% else %}
-    <script async src="//www.google-analytics.com/analytics_debug.js"></script>
-{% endif%}
-
-
-<!--
-//
-// Disqus comments
-//
--->
-{% if page.comments %}
-<script>
-    var disqus_config = function () {
-        this.page.url = '{{ site.url }}{{ page.url }}';
-        this.page.identifier = '{{ page.id }}';
-        this.page.title = '{{ page.title }}';
-    };
-
-    {% if jekyll.environment == "development" %}
-    var disqus_developer = 1;
-    {% endif %}
-
-    (function() {
-        var d = document, s = d.createElement('script');
-
-        s.src = '//{{ site.disqus }}.disqus.com/embed.js';
-
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-{% endif %}
