@@ -3,9 +3,13 @@
 // Site scripts
 //
 -->
-<script src="/assets/js/bigchain.min.js"></script> {% if page.js %}
-<script src="/assets/js/{{ page.js }}"></script> {% elsif layout.js %}
-<script src="/assets/js/{{ layout.js }}"></script> {% endif %}
+<script src="/assets/js/bigchain.min.js"></script>
+
+{% if page.js %}
+    <script src="/assets/js/{{ page.js }}"></script>
+{% elsif layout.js %}
+    <script src="/assets/js/{{ layout.js }}"></script>
+{% endif %}
 
 <!--
 svg4everybody.js
