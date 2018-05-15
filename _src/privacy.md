@@ -11,7 +11,7 @@ description: 'Privacy & Cookies policies for use of the BigchainDB website.'
 
 Our Privacy Policy sets out how your personal information is collected and used while you use the Site. We believe your personal information belongs to you, so we are very open about how we use it. The Privacy Policy is meant to be read together with the [Terms](https://bigchaindb.com/terms), so words that are capitalized have the same meaning in the Privacy Policy as they do in the Terms.
 ​
-If you have a question about the Privacy Policy, email {{ site.email.contact }} and we will try to answer it for you.
+If you have a question about the Privacy Policy, email {{ site.email.gdpr }} and we will try to answer it for you.
 
 ## Our policies
 
@@ -44,7 +44,7 @@ Note that Formspree.io only saves the most recent 100 messages. After that, mess
 
 If you want to contribute to the project, you must complete our [Contributor License Agreement](https://www.bigchaindb.com/cla) (CLA). We will store your completed CLA, including the personal information you include on it. We may use that personal information to contact you or to enforce the terms of the CLA.
 ​
-If you want to sign the CLA form or contact us without using these forms, you can email {{ site.email.contact }}.
+If you want to sign the CLA form or contact us without using these forms, you can email {{ site.email.gdpr }}.
 
 We use MailChimp for our newsletter, and the information you submit via our newsletter subscription form will be transferred to MailChimp for processing in accordance with their [Terms](https://mailchimp.com/legal/terms/) and [Privacy Policy](https://mailchimp.com/legal/privacy/).
 
@@ -76,7 +76,7 @@ In general, you can block cookies by using your browser's setting, or by install
 
 You may ask us to correct or update your personal information if you cannot update it yourself. You may ask us to delete your personal information unless we are under a legal obligation to store it. If you revoke consent to store your personal information, it will be deleted.
 
-If you want to correct or update your personal information, or revoke your consent you can email us at {{ site.email.contact }}.
+If you want to correct or update your personal information, or revoke your consent you can email us at {{ site.email.gdpr }}.
 
 ## Business transfers
 
