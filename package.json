@@ -16,21 +16,20 @@
   },
   "browserslist": [
     "last 2 versions",
-    "Chrome >= 30",
-    "Safari >= 6.1",
-    "Firefox >= 35",
-    "Opera >= 32",
-    "iOS >= 8",
-    "Android >= 4",
-    "ie >= 10"
+    "Chrome >= 50",
+    "Safari >= 9",
+    "Firefox >= 50",
+    "iOS >= 9",
+    "Android >= 6",
+    "ie >= 11"
   ],
   "dependencies": {
-    "bigchaindb-driver": "^4.0.0",
-    "bootstrap": "^4.1.0",
-    "clipboard": "^2.0.0",
+    "bigchaindb-driver": "^4.0.1",
+    "bootstrap": "^4.1.1",
+    "clipboard": "^2.0.1",
     "cookies-eu-banner": "^1.2.10",
     "gumshoe": "github:cferdinandi/gumshoe",
-    "is-in-viewport": "^3.0.0",
+    "is-in-viewport": "^3.0.3",
     "jquery": "^3.3.1",
     "normalize-css": "^2.3.1",
     "normalize-opentype.css": "^0.2.4",
@@ -44,16 +43,16 @@
   },
   "devDependencies": {
     "acorn": "^5.5.3",
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.23.7",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.4",
     "concurrent-transform": "^1.0.0",
-    "critical": "^1.2.2",
+    "critical": "^1.3.2",
     "cross-spawn": "^6.0.5",
     "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^5.0.0",
-    "gulp-clean-css": "^3.9.3",
+    "gulp-clean-css": "^3.9.4",
     "gulp-cli": "^2.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-header": "^2.0.5",
@@ -62,7 +61,7 @@
     "gulp-imagemin": "^4.1.0",
     "gulp-include": "^2.3.1",
     "gulp-load-plugins": "^1.5.0",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "^1.2.3",
     "gulp-replace": "^0.6.1",
     "gulp-rev": "^8.1.1",
     "gulp-rev-replace": "^0.4.4",
@@ -73,18 +72,17 @@
     "gulp-util": "^3.0.8",
     "gulp-zip": "^4.1.0",
     "js-yaml": "^3.11.0",
-    "request": "^2.85.0",
+    "request": "^2.86.0",
     "stylelint": "^9.2.0",
     "stylelint-config-bigchaindb": "^1.2.1",
     "stylelint-config-standard": "^18.2.0",
-    "uglify-es": "^3.3.10"
+    "uglify-es": "^3.3.9"
   },
   "engines": {
     "node": ">=7.0.0"
   },
-  "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/ascribe/bigchain-website"
+    "url": "https://github.com/bigchaindb/site.git"
   }
 }
