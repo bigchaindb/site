@@ -18,6 +18,7 @@ layout: base
 
 </section>
 
-{% if page.title == "Whitepaper" %}
+{% if page.path contains "whitepaper" %}
+    {% include sections/section-whitepaper-download.html %}
     {% include sections/section-newsletter.html %}
 {% endif %}
