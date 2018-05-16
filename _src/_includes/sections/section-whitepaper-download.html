@@ -1,8 +1,10 @@
-<section class="section section-whitepaper-download background--photo">
+<section class="section section--whitepaper-download background--photo">
     <div class="row">
         <header class="section-header">
             <h1 class="section-title">{{ page.whitepaper.title }}</h1>
-            <p class="section-description">{{ page.whitepaper.text }}</p>
+            {% if page.whitepaper.text %}
+                <p class="section-description">{{ page.whitepaper.text }}</p>
+            {% endif %}
         </header>
 
         <p class="text-center">

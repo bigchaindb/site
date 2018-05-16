@@ -6,3 +6,9 @@
         }
     }
 }
+
+.section--whitepaper-download {
+    .section-header + .text-center {
+        margin-top: -$spacer;
+    }
+}

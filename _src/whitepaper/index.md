@@ -10,7 +10,6 @@ header: photo3.jpg
 
 whitepaper:
     title: Whitepaper Downloads
-    text: The whitepaper is a living document...
     updated: 2018-05-14
     files:
         - file: bigchaindb-whitepaper.pdf
