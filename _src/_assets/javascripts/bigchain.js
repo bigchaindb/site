@@ -2,6 +2,7 @@
 //=include svg4everybody/dist/svg4everybody.js
 //=include jquery/dist/jquery.js
 //=include smooth-scroll/dist/js/smooth-scroll.js
+//=include cookies-eu-banner/dist/cookies-eu-banner.js
 
 //=include bigchain/analytics.js
 //=include bigchain/dnt.js
@@ -14,10 +15,6 @@ jQuery(function($) {
     // init global modules
     //
     Forms.init()
-
-    if (!_dntEnabled()) {
-        GoogleAnalytics.init();
-    }
 
 
     //

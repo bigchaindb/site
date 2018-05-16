@@ -18,6 +18,7 @@ email:
     cla_cc:             troy@ascribe.io
     services:           mdgvledx
     services_cc:        "kamal@bigchaindb.com,ricardo@bigchaindb.com,gautam@bigchaindb.com"
+    gdpr:               gdpr@bigchaindb.com
 
 social:
     gitter:

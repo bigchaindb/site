@@ -1,21 +1,9 @@
 
-.section-newsletter {
+.section--newsletter {
     background: $brand-primary;
+    align-items: flex-start;
 
-    // .sections redefinitions
-    padding-top: $spacer;
-    padding-bottom: $spacer;
-
-    @media ($screen-sm) {
-        padding-top: ($spacer * 3);
-        padding-bottom: ($spacer * 3);
-    }
-}
-
-.newsletter {
-    p,
-    .form-group { margin: 0; }
-
+    .form-group,
     .grid { margin-bottom: 0; }
 
     .form-control {
@@ -38,7 +26,11 @@
 
     .form-control-feedback {
         @extend .bold;
-        margin-top: ($spacer / 2);
+        margin-top: $spacer / 2;
+    }
+
+    .form--newsletter {
+        margin-top: $spacer * 2;
     }
 }
 
@@ -49,6 +41,25 @@
 }
 
 .newsletter__title,
-.newsletter__text {
+.newsletter__text,
+.newsletter__gdpr {
     color: $gray-dark;
+}
+
+.newsletter__gdpr {
+    opacity: .8;
+
+    .icon {
+        stroke: $brand-main-blue;
+        color: $brand-main-blue;
+    }
+
+    a {
+        box-shadow: inset 0 -1px 0 $brand-main-blue;
+
+        &:hover,
+        &:focus {
+            background: $brand-main-blue;
+        }
+    }
 }

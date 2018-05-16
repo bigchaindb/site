@@ -70,6 +70,15 @@
             <input type="text" name="_gotcha" style="display: none;">
             <input type="hidden" name="_subject" value="New CLA submission (Individual)" />
             <input type="hidden" name="_cc" value="{{ site.email.cla_cc }}" />
+
+            <div class="form__gdpr">
+                <svg class="icon">
+                    <use xlink:href="/assets/img/sprite.svg#icon-heart-protect"></use>
+                </svg>
+                <div class="text">
+                    {{ site.data.gdpr.general | markdownify }}
+                </div>
+            </div>
         </form>
     </div>
 
@@ -129,6 +138,15 @@
             <input type="text" name="_gotcha" style="display: none;">
             <input type="hidden" name="_subject" value="New CLA submission (Organization)" />
             <input type="hidden" name="_cc" value="{{ site.email.cla_cc }}" />
+
+            <div class="form__gdpr">
+                <svg class="icon">
+                    <use xlink:href="/assets/img/sprite.svg#icon-heart-protect"></use>
+                </svg>
+                <div class="text">
+                    {{ site.data.gdpr.general | markdownify }}
+                </div>
+            </div>
         </form>
     </div>
 
