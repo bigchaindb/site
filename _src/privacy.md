@@ -33,6 +33,10 @@ If you have Do Not Track activated in your browser, or if you rejected our cooki
 
 You can verify our technical implementation by looking into the [Site's repository source code](https://github.com/bigchaindb/site/blob/master/_src/_includes/scripts.html#L20).
 
+### Adobe Typekit
+
+We load [our fonts](https://www.bigchaindb.com/styleguide/#typography) from Adobe Typekit and the service is only used for delivering those font files. No cookies are set, nor does any of your information get submitted to Adobe. The Typekit service is subject to its own [Privacy Policy](https://www.adobe.com/privacy/policies/typekit.html).
+
 ### Web Forms
 
 If you use the contact forms or CLA form on our website, the information you submit is collected by:
