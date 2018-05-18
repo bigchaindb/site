@@ -1,14 +1,6 @@
 <RoutingRules>
   <RoutingRule>
     <Condition>
-      <KeyPrefixEquals>whitepaper/bigchaindb-whitepaper.pdf</KeyPrefixEquals>
-    </Condition>
-    <Redirect>
-      <ReplaceKeyPrefixWith>whitepaper/</ReplaceKeyPrefixWith>
-    </Redirect>
-  </RoutingRule>
-  <RoutingRule>
-    <Condition>
       <KeyPrefixEquals>whitepaper/bigchaindb-primer.pdf</KeyPrefixEquals>
     </Condition>
     <Redirect>

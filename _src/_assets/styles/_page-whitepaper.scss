@@ -1,8 +1,14 @@
 
 .page-whitepaper {
     .content--page--markdown {
-        > p:nth-child(1),
-        > p:nth-child(2),
-        > p:nth-child(3) { text-align: center; }
+        > p:first-child {
+            text-align: center;
+        }
+    }
+}
+
+.section--whitepaper-download {
+    .section-header + .text-center {
+        margin-top: -$spacer;
     }
 }

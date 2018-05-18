@@ -1,23 +1,26 @@
 ---
 layout: page
 
-title: Whitepaper
-description: "We're working on a new whitepaper. Stay tuned for updates."
+title: BigchainDB 2.0 Whitepaper
+description: >
+    BigchainDB version 2.0 makes significant improvements over previous versions. In particular, it is now Byzantine fault tolerant (BFT), so up to a third of the nodes can fail in any way, and the system will continue to agree on how to proceed. BigchainDB 2.0 is also production-ready for many use cases.
 
 image: photo3.jpg
 header: photo3.jpg
 
 whitepaper:
-    title: Whitepaper downloads
-    text: The whitepaper is no longer a living document. Significant changes made since June 8, 2016 are noted in an Addendum attached at the end.
-    updated: 2017-05-23
+    title: Whitepaper Downloads
+    updated: 2018-05-14
     files:
-        - file: bigchaindb-primer.pdf
-          button: Download primer (pdf)
-          class: btn-primary
         - file: bigchaindb-whitepaper.pdf
-          button: Download whitepaper (pdf)
-          class: btn-link
+          button: Download Whitepaper (pdf)
 ---
 
-<div class="alert alert--info"><div class="lead text-center">We're working on a new whitepaper. Stay tuned for updates.</div></div>
+*May 2018*
+*BigchainDB GmbH, Berlin, Germany*
+
+## Abstract
+
+BigchainDB is software that has blockchain properties (e.g. decentralization, immutability, owner-controlled assets) and database properties (e.g. high transaction rate, low latency, indexing & querying of structured data). It was first released — open source — in February 2016 and has been improved continuously ever since. BigchainDB version 2.0 makes significant improvements over previous versions. In particular, it is now Byzantine fault tolerant (BFT), so up to a third of the nodes can fail in any way, and the system will continue to agree on how to proceed. BigchainDB 2.0 is also production-ready for many use cases.
+
+In this paper, we review the design goals of BigchainDB 2.0 and how they were achieved, we explore some use cases, we show how BigchainDB fits into the overall decentralization ecosystem, we follow the life of a transaction to understand how BigchainDB 2.0 works, we note ways to try BigchainDB, we outline how you can contribute, and we summarize future plans.
