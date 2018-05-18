@@ -36,7 +36,7 @@
     "parsleyjs": "^2.8.1",
     "popper.js": "^1.14.3",
     "select2": "^4.0.5",
-    "smooth-scroll": "^12.1.5",
+    "smooth-scroll": "^14.0.0",
     "svg4everybody": "^2.1.9",
     "textarea-autogrow": "^1.0.0",
     "vivus": "^0.4.3"
