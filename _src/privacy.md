@@ -58,7 +58,7 @@ Use of the BigchainDB Test Network available under [testnet.bigchaindb.com](http
 
 ### BigchainDB Documentation
 
-Our documentation available under [docs.bigchaindb.com](https://docs.bigchaindb.com) is not part of this Site and is hosted by [Read the Docs](https://readthedocs.com). Usage of the documentation is subject to the [Terms](https://readthedocs.com/terms/) of Read the Docs.
+Our documentation available under [docs.bigchaindb.com](https://docs.bigchaindb.com) is not part of this Site and is hosted by [Read the Docs](https://readthedocs.com). Usage of the documentation is subject to the [Terms](https://readthedocs.com/terms/) and [Privacy Policy](https://docs.readthedocs.io/en/latest/privacy-policy.html) of Read the Docs.
 
 ## How information is shared
 
