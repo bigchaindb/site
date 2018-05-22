@@ -8,18 +8,18 @@ module Jekyll
 
     # Runs during jekyll build
     class RssFeedCollector < Generator
-       safe true
-       priority :high
-       def generate(site)
+    safe true
+    priority :high
+    def generate(site)
 
-          rss_items = SimpleRSS.parse open('https://blog.bigchaindb.com/feed/')
+        rss_items = SimpleRSS.parse open('https://blog.bigchaindb.com/feed/')
 
-          # Create a new on-the-fly Jekyll collection called "articles"
-          jekyll_items = Jekyll::Collection.new(site, 'articles')
-          site.collections['articles'] = jekyll_items
+        # Create a new on-the-fly Jekyll collection called "articles"
+        jekyll_items = Jekyll::Collection.new(site, 'articles')
+        site.collections['articles'] = jekyll_items
 
-          # Add fake virtual documents to the collection
-          rss_items.items.each do |item|
+        # Add fake virtual documents to the collection
+        rss_items.items.each do |item|
             title = item.title
             link = item.link
 
@@ -33,9 +33,10 @@ module Jekyll
             doc.data['link'] = link
             doc.data['image'] = image
             jekyll_items.docs << doc
-          end
-
-       end
+        end
+        rescue
+            puts "Could not parse blog feed. Are you offline?"
+        end
     end
 
 end
