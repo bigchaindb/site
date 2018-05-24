@@ -48,7 +48,7 @@ The first step required is the definition of the asset field that represents the
 ```js
 const painting = {
     name: 'Meninas',
-    author: 'Diego Rodríguez de Silva y Velázquez'
+    author: 'Diego Rodríguez de Silva y Velázquez',
     place: 'Madrid',
     year: '1656'
 }
