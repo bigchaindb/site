@@ -22,6 +22,8 @@ In our example use-case scenario for this guide, we have different tribes or gro
 
 **Important note:** The BigchainDB RBAC module does not work out of the box in BigchainDB and a plugin [smart-assets](https://github.com/bigchaindb/bigchaindb-smart-assets) needs to be loaded with a specific [BigchainDB branch (kyber-master)](https://github.com/bigchaindb/bigchaindb/tree/kyber-master). The setup instructions are available in the [README.md](https://github.com/bigchaindb/bigchaindb-smart-assets/blob/master/README.md) of the smart-assets repository.
 
+This tutorial is not compatable with latest version of BigchainDB v2
+
 Let's create the app. You will create an asset for Admin type which will act as the admin group for the app. Async/await functions will be used in this tutorial
 
 ```js
