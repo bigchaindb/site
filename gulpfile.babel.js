@@ -204,7 +204,10 @@ export const js = () =>
     ])
     .pipe($.if(!(isProduction || isStaging), $.sourcemaps.init()))
     .pipe($.include({
-        includePaths: ['node_modules', SRC + '/_assets/javascripts']
+        includePaths: [
+            __dirname + '/node_modules',
+            SRC + '/_assets/javascripts'
+        ]
     })).on('error', onError)
     .pipe($.if(isProduction || isStaging, minify())).on('error', onError)
     .pipe($.if(!(isProduction || isStaging), $.sourcemaps.write()))
