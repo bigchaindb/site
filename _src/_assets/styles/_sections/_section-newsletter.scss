@@ -12,6 +12,10 @@
         &:focus {
             border-color: #000;
         }
+
+        &.parsley-error {
+            border-color: $brand-danger !important; // stylelint-disable-line
+        }
     }
 
     .btn {
@@ -31,6 +35,12 @@
 
     .form--newsletter {
         margin-top: $spacer * 2;
+    }
+
+    .parsley-errors-list {
+        right: auto;
+        left: 0;
+        bottom: -.25rem;
     }
 }
 
