@@ -1,0 +1,69 @@
+.page-newsletter {
+    .header--newsletter {
+        background: url('../img/nosprite/starbase-drivers.svg') no-repeat center 103%;
+        background-size: contain;
+        padding-bottom: 5%;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .content--page--markdown {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .section--newsletter {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        display: flex;
+        align-items: center;
+        min-height: 60vh;
+        background: darken($body-bg, 5%);
+
+        .form-control {
+            border-color: $gray-light;
+
+            &:focus {
+                border-color: #fff;
+            }
+        }
+
+        .btn {
+            @extend .btn-primary;
+        }
+
+        .newsletter__title {
+            color: $brand-main-blue-light;
+        }
+
+        // stylelint-disable selector-max-compound-selectors
+        .form-label,
+        .form-control,
+        .form-control:focus ~ .form-label,
+        .newsletter__text,
+        .newsletter__gdpr {
+            color: $text-color;
+        }
+        // stylelint-enable selector-max-compound-selectors
+
+        .icon {
+            stroke: $gray-light;
+            color: $gray-light;
+        }
+
+        a {
+            box-shadow: inset 0 -1px 0 $gray-light;
+
+            &:hover,
+            &:focus {
+                background: $gray-light;
+            }
+        }
+    }
+}
