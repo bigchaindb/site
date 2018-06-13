@@ -42,7 +42,7 @@
             color: $brand-main-blue-light;
         }
 
-        // stylelint-disable selector-max-compound-selectors
+        // stylelint-disable selector-max-compound-selectors,max-nesting-depth
         .form-label,
         .form-control,
         .form-control:focus ~ .form-label,
@@ -50,20 +50,24 @@
         .newsletter__gdpr {
             color: $text-color;
         }
-        // stylelint-enable selector-max-compound-selectors
 
-        .icon {
-            stroke: $gray-light;
-            color: $gray-light;
-        }
+        .newsletter__gdpr {
+            opacity: .6;
 
-        a {
-            box-shadow: inset 0 -1px 0 $gray-light;
+            .icon {
+                stroke: $gray-light;
+                color: $gray-light;
+            }
 
-            &:hover,
-            &:focus {
-                background: $gray-light;
+            a {
+                box-shadow: inset 0 -1px 0 $gray-light;
+
+                &:hover,
+                &:focus {
+                    background: $gray-light;
+                }
             }
         }
+        // stylelint-enable selector-max-compound-selectors,max-nesting-depth
     }
 }
