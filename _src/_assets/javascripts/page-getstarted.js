@@ -1,4 +1,4 @@
-//=require gumshoe/dist/js/gumshoe.js
+//=include gumshoejs/dist/js/gumshoe.js
 
 //=include bigchain/tab.js
 //=include bigchain/newsletter.js
@@ -7,7 +7,7 @@ const bigchaindbUrl = 'https://test.bigchaindb.com'
 const proxyUrl = 'https://getstarted.bigchaindb.com'
 const apiPath = '/api/v1/'
 
-jQuery(function($) {
+jQuery(function ($) {
 
     //
     // init modules
@@ -29,10 +29,10 @@ gumshoe.init()
 function stickyNav() {
     const menu = document.getElementsByClassName('menu--sub')[0]
 
-    if ( window.innerWidth >= 768 ) {
+    if (window.innerWidth >= 768) {
         const offset = menu.offsetTop
 
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (offset < window.pageYOffset) {
                 menu.classList.add('sticky')
             } else {
@@ -52,17 +52,17 @@ function testNetworkVersion() {
     const versionOutput = document.getElementById('network-version')
 
     fetch(bigchaindbUrl)
-        .then(function(response) {
+        .then(function (response) {
             return response.json()
         })
-        .then(function(data) {
+        .then(function (data) {
             const version = data.version
             const titleOrig = versionOutput.getAttribute('title')
 
             versionOutput.innerText = version
             versionOutput.setAttribute('title', titleOrig + version)
         })
-        .catch(function(error) {
+        .catch(function (error) {
             console.log(error)
         })
 }
@@ -106,13 +106,13 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
         const codeMessages = document.querySelectorAll('.code-example__message')
         const escapedContent = content.replace(/'/g, "\\'")
 
-        codeMessages.forEach(function(codeMessage) {
+        codeMessages.forEach(function (codeMessage) {
             codeMessage.textContent = escapedContent
         })
     }
 
     // quick form validation, live update code example with user input
-    messageInput.addEventListener('input', function() {
+    messageInput.addEventListener('input', function () {
         if (messageInput.value === '') {
             postButton.setAttribute('disabled', '')
             // empty message
@@ -142,7 +142,7 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
         postButton.innerHTML = postButtonText
     }
 
-    postButton.addEventListener('click', function(e) {
+    postButton.addEventListener('click', function (e) {
         e.preventDefault()
 
         buttonStateLoading()

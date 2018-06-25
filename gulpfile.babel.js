@@ -159,7 +159,7 @@ export const html = () => src(DIST + '/**/*.html')
 export const css = () => src(SRC + '/_assets/styles/bigchain.scss')
     .pipe($.if(!(isProduction || isStaging), $.sourcemaps.init()))
     .pipe($.sass({
-        includePaths: ['node_modules']
+        includePaths: [__dirname + '/node_modules']
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer())
     .pipe($.if(isProduction || isStaging, $.cleanCss()))
