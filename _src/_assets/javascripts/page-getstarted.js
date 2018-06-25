@@ -1,4 +1,4 @@
-//=include gumshoe/dist/js/gumshoe.js
+//=include gumshoejs/dist/js/gumshoe.js
 
 //=include bigchain/tab.js
 //=include bigchain/newsletter.js
