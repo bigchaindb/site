@@ -28,7 +28,7 @@ If you do not agree to the changes, you must stop using the Site.
 
 ### Code of conduct
 
-We may deny access to the Site or to the BigchainDB project for unacceptable behavior, including but not limited to violations of our [Community Guidelines](https://github.com/BigchainDB/bigchaindb/CONTRIBUTING.md).
+We may deny access to the Site or to the BigchainDB project for unacceptable behavior, including but not limited to violations of our [Community Guidelines](https://github.com/bigchaindb/bigchaindb/blob/master/.github/CONTRIBUTING.md).
 
 ### Liability
 
