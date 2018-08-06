@@ -8,12 +8,14 @@ official:
       repo: js-bigchaindb-driver
       version: v4.0
       icon: logo-js
-
-community:
+      
     - title: Java
       repo: java-bigchaindb-driver
-      link: https://github.com/authenteq/java-bigchaindb-driver
+      link: https://github.com/bigchaindb/java-bigchaindb-driver
+      version: v1.0
       icon: logo-java
+
+community:
     - title: Ruby (CLI wrapper)
       repo: bigchaindb-ruby-client
       icon: logo-ruby
