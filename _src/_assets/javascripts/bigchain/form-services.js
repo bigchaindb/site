@@ -30,7 +30,7 @@ var FormServices = (function(w, d, $) {
                         },
                         success: function(data) {
                             _config.form.find('.form-group').addClass('hide');
-                            _config.form.find('.alert-success').removeClass('hide');
+                            _config.form.find('.alert--success').removeClass('hide');
                             _config.formBtn.removeClass('disabled');
 
                             // send GA event
@@ -39,7 +39,7 @@ var FormServices = (function(w, d, $) {
                             }
                         },
                         error: function(err) {
-                            _config.form.find('.alert-danger').removeClass('hide');
+                            _config.form.find('.alert--danger').removeClass('hide');
                             _config.formBtn
                                 .removeClass('disabled')
                                 .attr('value', 'Send');
