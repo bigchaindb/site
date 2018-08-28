@@ -77,15 +77,24 @@ pre {
     .btn--clipboard,
     .success__text {
         position: absolute;
-        top: .1rem;
+        top: $spacer * 1.65;
         right: .1rem;
     }
 
     .success__text {
-        top: 2rem;
+        top: $spacer * 3.5;
         right: -1.5rem;
         font-size: $font-size-xs;
     }
+}
+
+.highlight__title {
+    margin-top: 0;
+    margin-bottom: $spacer / 4;
+    margin-left: $spacer / 1.5;
+    font-size: $font-size-sm;
+    color: $gray-light;
+    display: inline-block;
 }
 
 .btn--clipboard {
