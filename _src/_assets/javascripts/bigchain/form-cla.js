@@ -49,7 +49,7 @@ var FormCla = (function(w, d, $) {
                         },
                         success: function(data) {
                             thisForm.find('.form-group').addClass('hide');
-                            thisForm.find('.alert-success').removeClass('hide');
+                            thisForm.find('.alert--success').removeClass('hide');
                             thisButton.removeClass('disabled');
 
                             // send GA event
@@ -58,7 +58,7 @@ var FormCla = (function(w, d, $) {
                             }
                         },
                         error: function(err) {
-                            thisForm.find('.alert-danger').removeClass('hide');
+                            thisForm.find('.alert--danger').removeClass('hide');
                             thisButton
                                 .removeClass('disabled')
                                 .attr('value', 'Send');
