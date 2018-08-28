@@ -39,9 +39,18 @@ const alice = new BigchainDB.Ed25519Keypair(bip39.mnemonicToSeed('seedPhrase').s
 # Decentralized Identifier Class
 
 In telemetry applications, certain objects like in our case e.g. the car, need to have an identity to conduct actions in the system. Ideally, this identity is not controlled by anyone, such that the device can truly act autonomously. For these use cases, in BigchainDB we will use decentralized identifiers (DID) which are identifiers intended for verifiable digital identity that is "self-sovereign". They do not dependent on a centralized registry, identity provider, or certificate authority. You can learn more about it in our [DID specification](https://w3c-ccg.github.io/did-spec/).
+
 So in our app, each object in the real world as the car, the telemetry box in the car, the GPS device, etc. will be represented by a DID. Each object will have a tag or cryptochip containing a securely hidden private key that serves as unique identity.
 
 You will create a DID class that inherits from Orm BigchainDB driver, so DID objects will have all of the methods available in Orm. The `entity` represents the public key of the object itself.
+
+Start by installing [Orm BigchainDB JavaScript driver](https://github.com/bigchaindb/js-driver-orm):
+
+```bash
+npm i bigchaindb-orm
+```
+
+Then create your DID class:
 
 ```js
 const Orm = require('bigchaindb-orm')
@@ -59,12 +68,11 @@ class DID extends Orm {
 }
 ```
 
-
 So as now each object has its own keypair, it is possible to create a DID from each object. The objects are thus "self-sovereign", there is not a central authority that controls them. They will just have a user or another object that will have the ownership over them. Because in our Orm driver, a model is needed, the default one can be used for this tutorial.
 
 ```js
-const car = new driver.Ed25519Keypair()
-const sensorGPS = new driver.Ed25519Keypair()
+const car = new BigchainDB.Ed25519Keypair()
+const sensorGPS = new BigchainDB.Ed25519Keypair()
 
 const userDID = new DID(alice.publicKey)
 const carDID = new DID(car.publicKey)
@@ -74,7 +82,8 @@ userDID.define("myModel", "https://schema.org/v1/myModel")
 carDID.define("myModel", "https://schema.org/v1/myModel")
 gpsDID.define("myModel", "https://schema.org/v1/myModel")
 ```
-As you can see, every object or actor (alice, car, GPS sensor) has now it's own key pair and identity in our system.
+
+As you can see, every object or actor (alice, car, GPS sensor) has now its own key pair and identity in our system.
 
 # Digital registration of assets on BigchainDB
 
@@ -98,6 +107,7 @@ userDID.myModel.create({
     })
 ```
 As you can see, by inheriting the Orm class it is very easy to create an asset in BigchainDB. The only thing needed is the keypair and the asset.
+
 The id property is set in the DID object. This is the unique identifier of this asset.
 
 In order to create the asset of the car you first need to define the asset field that represents the car. It has a JSON format:
