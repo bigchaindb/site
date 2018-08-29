@@ -10,7 +10,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const codeBlocks = document.querySelectorAll('.highlight')
 
     codeBlocks.forEach(codeBlock => {
+        const language = codeBlock.getElementsByTagName('code')[0].dataset.lang
+
         codeBlock.insertAdjacentHTML('afterbegin', clipboardButton)
+        codeBlock.insertAdjacentHTML('afterbegin', `<h6 class="highlight__title">${language}</h6>`)
     })
 
     const buttons = document.querySelectorAll('.highlight .btn--clipboard')
