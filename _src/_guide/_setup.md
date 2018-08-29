@@ -25,7 +25,6 @@ Then, include that as a module and connect to any BigchainDB node. You can creat
 
 ```js
 const BigchainDB = require('bigchaindb-driver')
-const bip39 = require('bip39')
 
 const API_PATH = 'https://test.bigchaindb.com/api/v1/'
 const conn = new BigchainDB.Connection(API_PATH, {

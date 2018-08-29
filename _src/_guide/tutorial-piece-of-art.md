@@ -36,7 +36,22 @@ Before starting, you need to create a user in BigchainDB. In BigchainDB, users a
 You can generate a key pair from a seed phrase using the BIP39 library, so you will just need to remember this particular seed phrase. The code below illustrates that.
 
 ```js
-const alice = new BigchainDB.Ed25519Keypair(bip39.mnemonicToSeed('seedPhrase').slice(0,32))
+const bip39 = require('bip39')
+
+const seed = bip39.mnemonicToSeed('seedPhrase').slice(0,32)
+const alice = new BigchainDB.Ed25519Keypair(seed)
+```
+
+```python
+from bigchaindb_driver.crypto import generate_keypair
+
+alice = generate_keypair()
+```
+
+```java
+net.i2p.crypto.eddsa.KeyPairGenerator edDsaKpg = new net.i2p.crypto.eddsa.KeyPairGenerator();
+
+KeyPair alice = edDsaKpg.generateKeyPair();
 ```
 
 # Digital registration of an asset on BigchainDB
