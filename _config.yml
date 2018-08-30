@@ -13,11 +13,11 @@ hiring:                 true
 email:
     contact:            contact@bigchaindb.com
     contact_formspree:  xgkblajx
-    contact_cc:         "contact@bigchaindb.com,kamal@bigchaindb.com,ricardo@bigchaindb.com,gautam@bigchaindb.com,bilel@bigchaindb.com"
+    contact_cc:         "contact@bigchaindb.com,kamal@bigchaindb.com,ricardo@bigchaindb.com,gautam@bigchaindb.com,bilel@bigchaindb.com,kevin@bigchaindb.com"
     cla:                xwojnopx
     cla_cc:             "troy@ascribe.io,upod-team@bigchaindb.com"
     services:           mdgvledx
-    services_cc:        "kamal@bigchaindb.com,ricardo@bigchaindb.com,gautam@bigchaindb.com,bilel@bigchaindb.com"
+    services_cc:        "kamal@bigchaindb.com,ricardo@bigchaindb.com,gautam@bigchaindb.com,bilel@bigchaindb.com,kevin@bigchaindb.com"
     gdpr:               gdpr@bigchaindb.com
 
 social:
