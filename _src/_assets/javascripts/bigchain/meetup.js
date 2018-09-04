@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             const elementTitle = document.getElementsByClassName('meetup-title')[0]
 
-            elementTitle.innerHTML = `<span class="hero__community__label">${date}</span><strong>${name}</strong>`
+            elementTitle.innerHTML = `<span class="hero__community__label">${date}</span><strong> ${name}</strong>`
             elementTitle.style.opacity = 1
             element.href = link
         } else {
