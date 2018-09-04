@@ -14,6 +14,7 @@ learn: >
 Hi there! Welcome to our next tutorial about Role-based access controls (RBAC) in BigchainDB. For this tutorial, we assume that you are familiar with the BigchainDB primitives (assets, inputs, outputs, transactions etc.). If you are not, familiarize yourself with the [Key concepts of BigchainDB](../key-concepts-of-bigchaindb/). We also assume that you have completed our [first tutorial](../tutorial-car-telemetry-app/).
 
 # About RBAC
+
 Role based access control is a way to restrict the system access to certain users. In BigchainDB this function enables the creation of hierarchies of role and permissions as assets. Furthermore, users can be assigned roles to “act on behalf of” or “represent” other users or groups.
 
 In our example use-case scenario for this guide, we have different tribes or groups of users where they have different roles, users belonging to one tribe can create proposal assets and others can create vote assets on the BigchainDB blockchain.
@@ -25,7 +26,6 @@ In our example use-case scenario for this guide, we have different tribes or gro
 Let's create the app. You will create an asset for Admin type which will act as the admin group for the app. Async/await functions will be used in this tutorial
 
 ```js
-
 const nameSpace = 'rbac-bdb-tutorial'
 async function createApp(){
     // Generate keypair for admin instance
@@ -63,7 +63,8 @@ async function createApp(){
 }
 ```
 
-The `createNewAsset` function looks like this
+The `createNewAsset` function looks like this:
+
 ```js
 async function createNewAsset(keypair, asset, metadata) {
 
