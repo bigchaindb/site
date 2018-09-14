@@ -42,7 +42,7 @@
     "vivus": "^0.4.4"
   },
   "devDependencies": {
-    "acorn": "^5.7.2",
+    "acorn": "^6.0.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.24.7",
