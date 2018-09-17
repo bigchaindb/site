@@ -37,7 +37,7 @@ const nTokens = 10000
 let tokensLeft
 const tokenCreator = new BigchainDB
 .Ed25519Keypair(bip39.mnemonicToSeed('seedPhrase').slice(0,32))
-
+let createTxId
 function tokenLaunch() {
     // Construct a transaction payload
     const tx = BigchainDB.Transaction.makeCreateTransaction({
@@ -62,6 +62,7 @@ function tokenLaunch() {
     // Send the transaction off to BigchainDB
     conn.postTransactionCommit(txSigned)
         .then(res => {
+            createTxId = res.id
             tokensLeft = nTokens
             document.body.innerHTML ='<h3>Transaction created</h3>';
             // txSigned.id corresponds to the asset id of the tokens
@@ -91,12 +92,7 @@ function transferTokens() {
 
     // Search outputs of the transactions belonging the token creator
     // False argument to retrieve unspent outputs
-    conn.listOutputs(tokenCreator.publicKey, 'false')
-        .then((txs) => {
-            // Just one transaction available with outputs not being spent by
-            // tokenCreator. Therefore, txs[0]
-            return conn.getTransaction(txs[0].transaction_id)
-        })
+    conn.getTransaction(createTxId)
         .then((txOutputs) => {
             // Create transfer transaction
             const createTranfer = BigchainDB.Transaction
