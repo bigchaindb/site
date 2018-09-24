@@ -23,16 +23,16 @@ server:
     network:
         pretitle: "Managed"
         title: "The BigchainDB Test Network"
-        version_title: "Test Network is currently running on BigchainDB "
-        description: "No installation needed. Sign up and connect instantly, we will handle running a BigchainDB network for you."
-        button: "Sign up"
-        link: "https://testnet.bigchaindb.com"
+        version_title: "The BigchainDB Test Network is currently running on BigchainDB "
+        description: "No installation needed. We handle running a BigchainDB network for you."
+        button: "Get the URLs"
+        link: "https://info.testnet2.com"
     bdb:
         pretitle: "Self-Hosted"
         title: "BigchainDB Server"
-        description: "If you want to run your own BigchainDB instance, you can either get set up on Linux or with Docker on any system."
-        button: "Install BigchainDB Server"
-        link: "https://docs.bigchaindb.com/projects/server/en/latest/quickstart.html"
+        description: "If you want to deploy and run your own BigchainDB node or network, you can."
+        button: "Deploy a BigchainDB node"
+        link: "http://docs.bigchaindb.com/projects/server/en/latest/simple-deployment-template/index.html"
 
 
 # ----------------------------
