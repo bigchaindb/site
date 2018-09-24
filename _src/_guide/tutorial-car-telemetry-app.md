@@ -72,12 +72,7 @@ const Orm = require('bigchaindb-orm')
 
 class DID extends Orm {
     constructor(entity) {
-        super(
-            API_PATH, {
-                app_id: 'Get one from testnet.bigchaindb.com',
-                app_key: 'Get one from testnet.bigchaindb.com'
-            }
-        )
+        super(API_PATH)
         this.entity = entity
     }
 }
