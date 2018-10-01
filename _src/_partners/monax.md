@@ -5,6 +5,10 @@ title: Monax
 link: https://monax.io
 ---
 
-The Monax platform is an open platform for developers and devops to build, ship, and run blockchain-based applications for business ecosystems. Monax sells legally compliant smart contract-based SDKs to accelerate your time to market with sophisticated ecosystem applications.
+Monax are pioneers of blockchain technology, and were first to market with a permissionable smart-contract capable blockchain design, Burrow. First of it’s kind when released in 2014, Burrow provides a modular blockchain client with a permissioned smart contract interpreter built in part to the specification of the Ethereum Virtual Machine (EVM). 
 
-With Monax you can leverage an enterprise-grade, mature, free and open-source application platform that utilizes best in breed, modular components to quickly build ecosystem applications that operate well with your existing systems and infrastructure.
+[Hyperledger Burrow](https://www.hyperledger.org.projects/) is now one of the five Hyperledger projects hosted by the Linux Foundation. It was contributed by Monax and co-sponsored by Intel.
+
+Monax pivoted in early 2018 to become one of the founding companies behind the [Agreements Network](http://www.agreements.network/) - a decentralised contract management system built on public, permissioned blockchain technology and optimised to be the Legal Layer for a Networked World. 
+
+Monax’s main product is a contract lifecycle management platform that uses blockchain, smart contracts and business processes to manage the contracts. The Monax Platform is a portal to the Agreements Network and will be launched late 2018.
