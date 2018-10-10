@@ -25,8 +25,8 @@ server:
         title: "The BigchainDB Test Network"
         version_title: "The BigchainDB Test Network is currently running on BigchainDB "
         description: "No installation needed. We handle running a BigchainDB network for you."
-        button: "Get the URLs"
-        link: "https://info.testnet2.com"
+        button: "Visit the Test Network"
+        link: "https://test.bigchaindb.com"
     bdb:
         pretitle: "Self-Hosted"
         title: "BigchainDB Server"

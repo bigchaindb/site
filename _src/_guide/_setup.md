@@ -26,17 +26,17 @@ Then, include that as a module and connect to any BigchainDB node.
 ```js
 const BigchainDB = require('bigchaindb-driver')
 
-const API_PATH = 'https://test1.testnet2.com/api/v1/'
+const API_PATH = 'https://test.bigchaindb.com/api/v1/'
 const conn = new BigchainDB.Connection(API_PATH)
 ```
 
 ```python
 from bigchaindb_driver import BigchainDB
 
-conn = BigchainDB('https://test1.testnet2.com')
+conn = BigchainDB('https://test.bigchaindb.com')
 ```
 
 ```java
 BigchainDbConfigBuilder
-	.baseUrl("https://test1.testnet2.com/").setup();
+	.baseUrl("https://test.bigchaindb.com/").setup();
 ```
