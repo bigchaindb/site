@@ -86,10 +86,7 @@ redirect_from:
 from bigchaindb_driver import BigchainDB
 from bigchaindb_driver.crypto import generate_keypair
 
-bdb = BigchainDB(
-    '{{ site.bigchaindb_api_url }}',
-    headers={'app_id': 'Get credentials from testnet.bigchaindb.com',
-             'app_key': 'by signing up and going to your Applications screen'})
+bdb = BigchainDB('{{ site.bigchaindb_api_url }}')
 alice = generate_keypair()
 tx = bdb.transactions.prepare(
     operation='CREATE',
@@ -109,10 +106,7 @@ bdb.transactions.send(signed_tx)
 const driver = require('bigchaindb-driver')
 
 const alice = new driver.Ed25519Keypair()
-const conn = new driver.Connection(
-    '{{ site.bigchaindb_api_url }}/api/v1/',
-    { app_id: 'Get credentials from testnet.bigchaindb.com',
-      app_key: 'by signing up and going to your Applications screen' })
+const conn = new driver.Connection('{{ site.bigchaindb_api_url }}/api/v1/')
 const tx = driver.Transaction.makeCreateTransaction(
     { message: 'Blockchain all the things!' },
     null,

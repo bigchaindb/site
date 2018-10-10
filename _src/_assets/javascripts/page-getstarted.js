@@ -4,7 +4,6 @@
 //=include bigchain/newsletter.js
 
 const bigchaindbUrl = 'https://test.bigchaindb.com'
-const proxyUrl = 'https://getstarted.bigchaindb.com'
 const apiPath = '/api/v1/'
 
 jQuery(function ($) {
@@ -81,7 +80,7 @@ window.addEventListener('DOMContentLoaded', function domload(event) {
     window.removeEventListener('DOMContentLoaded', domload, false)
 
     const driver = window.BigchainDB
-    const API_PATH = proxyUrl + apiPath
+    const API_PATH = bigchaindbUrl + apiPath
 
     const postButton = document.getElementById('post')
     const postButtonText = postButton.innerText
