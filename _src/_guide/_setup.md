@@ -21,30 +21,22 @@ pip install -U bigchaindb-driver
 </dependency>
 ```
 
-Then, include that as a module and connect to any BigchainDB node. You can create your own `app_id` and `app_key` on [BigchainDB Testnet](https://testnet.bigchaindb.com).
+Then, include that as a module and connect to any BigchainDB node.
 
 ```js
 const BigchainDB = require('bigchaindb-driver')
 
-const API_PATH = 'https://test.bigchaindb.com/api/v1/'
-const conn = new BigchainDB.Connection(API_PATH, {
-    app_id: 'Get one from testnet.bigchaindb.com',
-    app_key: 'Get one from testnet.bigchaindb.com'
-})
+const API_PATH = '{{ site.bigchaindb_api_url }}/api/v1/'
+const conn = new BigchainDB.Connection(API_PATH)
 ```
 
 ```python
 from bigchaindb_driver import BigchainDB
 
-conn = BigchainDB(
-    'https://test.bigchaindb.com',
-    headers={'app_id': 'Get one from testnet.bigchaindb.com',
-             'app_key': 'Get one from testnet.bigchaindb.com'})
+conn = BigchainDB('{{ site.bigchaindb_api_url }}')
 ```
 
 ```java
 BigchainDbConfigBuilder
-	.baseUrl("https://test.bigchaindb.com/")
-	.addToken("app_id", "Get one from testnet.bigchaindb.com")
-	.addToken("app_key","Get one from testnet.bigchaindb.com").setup();
+	.baseUrl("{{ site.bigchaindb_api_url }}/").setup();
 ```
