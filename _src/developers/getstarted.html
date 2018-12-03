@@ -95,7 +95,7 @@ tx = bdb.transactions.prepare(
 signed_tx = bdb.transactions.fulfill(
     tx,
     private_keys=alice.private_key)
-bdb.transactions.send(signed_tx)
+bdb.transactions.send_commit(signed_tx)
 ```
 {% endcapture %}{{ python | markdownify }}
                 </div>
