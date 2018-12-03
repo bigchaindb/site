@@ -8,13 +8,14 @@ cache:
   - $TRAVIS_BUILD_DIR/node_modules
 
 before_install:
-    - nvm install 10
-    - pip install --user awscli
-    - export PATH=$PATH:$HOME/.local/bin
+    - nvm install node
 
 before_script: "_ci/setup.sh"
 script: "_ci/build.sh"
-after_success: "_ci/deploy.sh"
+after_success:
+    - pip install --user awscli
+    - export PATH=$PATH:$HOME/.local/bin
+    - "_ci/deploy.sh"
 
 notifications:
     email: false
