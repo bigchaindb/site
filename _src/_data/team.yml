@@ -23,7 +23,7 @@ founders:
         Trent has a PhD in Engineering from KU Leuven, Belgium and Bachelor’s degrees in Engineering and in Computer Science from the University of Saskatchewan where he won awards for the top PhD thesis and top undergraduate thesis.
 
     - name:     Masha McConaghy
-      position: CMO
+      position: Strategic Partnerships
       image:    masha.jpg
       linkedin: mashamc
       bio: |
@@ -47,7 +47,7 @@ team:
       github:   vrde
 
     - name:     Dimitri de Jonghe
-      position: Application Director
+      position: Co-Founder
       image:    dimi.jpg
       twitter:  DimitriDeJonghe
       facebook: dimitri.jonghe
@@ -58,26 +58,7 @@ team:
       position: Engineer
       image:    troy.jpg
       twitter:  TroyMc
-
-    - name:     Wojciech Hupert
-      position: UX/UI Designer
-      image:    wojciech.jpg
-      twitter:  WojciechHupert
-      linkedin: wojciechhupert
-
-    - name:     Sylvain Bellemare
-      position: Engineer
-      image:    sylvain.jpg
-      twitter:  sbellem
-      facebook: slvnb
-      github:   sbellem
-      linkedin: sylvainbellemare
-
-    - name:     Tim Daubenschütz
-      position: VP Engineering
-      image:    tim.jpg
-      twitter:  TimDaub
-      github:   TimDaub
+      github:   ttmc
 
     - name:     Matthias Kretschmann
       position: Designer & Engineer
@@ -85,27 +66,25 @@ team:
       twitter:  kremalicious
       github:   kremalicious
 
-    - name:     Wrigley the Buffalo
-      position: Community Manager
-      image:    wrigley-avatar.svg
-      github:   wrigley
-
     - name:     Gautam Dhameja
-      position: Application Engineer
+      position: Head of Consulting Services
       image:    gautam.jpg
       twitter:  gautamdhameja
+      github:   gautamdhameja
       linkedin: gautamdhameja
 
     - name:     Jernej Pregelj
-      position: Application Engineer
+      position: Blockchain Consultant
       image:    jernej.jpg
       twitter:  jernejpregelj
+      github:   jernejpregelj
       linkedin: jernej-pregelj
 
     - name:     Ahmed Muawia Khan
       position: DevOps Engineer
       image:    muawia.jpg
       twitter:  mobykhn
+      github:   muawiakh
       linkedin: muawiakhan
 
     - name:     Shahbaz Nazir
@@ -121,15 +100,16 @@ team:
       linkedin: kamalved
 
     - name:     Ricardo Garcia
-      position: Business Development
+      position: Business Development Manager
       image:    ricardo.jpg
       linkedin: ricardo-garcia-b226a6a9
 
     - name:     Manuel Rodriguez
-      position: Application Engineer
+      position: Blockchain Consultant
       image:    manuel.jpg
       linkedin: manuel-rodr%C3%ADguez-18555a11a
       github:   manolodewiner
+      twitter:  manolodewiner
 
     - name:     Katharina Grieß
       position: Engineer
@@ -137,6 +117,56 @@ team:
       github:   codegeschrei
 
     - name:     Artur Gomer
-      position: Finance
+      position: Accountant
       image:    artur.jpg
       linkedin: arturgomer
+
+    - name:     Sarah-Jean Vallon
+      position: Communications Executive
+      image:    sarah.jpg
+      linkedin: sarah-jean-vallon-b4603a65
+
+    - name:     Cristina Pon
+      position: Marketing Director
+      image:    cristina.jpg
+      linkedin: cristinacenuse
+
+    - name:     Vanshdeep Singh
+      position: Engineer
+      github:   kansi
+      linkedin: vanshdeep-singh
+      image:    vanshdeep.jpg
+
+    - name:     Chalid Mannaa
+      position: Executive Director Special Projects
+      image:    chalid.jpg
+      linkedin: cmannaa
+
+    # waiting for photos
+    - name:     Lev Berman
+      position: Engineer
+      github:   ldmberman
+
+    - name:     Bilel Seddik
+      position: Business Development
+      linkedin: bilelseddik
+
+    - name:     Zachary Bowen
+      position: Engineer
+      github:   z-bowen
+
+    - name:     Manan Patel
+      position: Engineer
+      github:   innoprenuer
+      twitter:  manan77patel
+
+    - name:     Shubhendu Shekhar
+      position: Blockchain Consultant
+      github:   shekhar-shubhendu
+
+    - name:     Shubhendu Shekhar
+      position: Blockchain Consultant
+      github:   shekhar-shubhendu
+
+    - name:     Kevin Tharayil
+      position: Engineer

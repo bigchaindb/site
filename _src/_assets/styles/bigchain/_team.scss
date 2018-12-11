@@ -13,23 +13,23 @@
 
 .team__name {
     @extend .h5;
-    color: $text-color;
+    color: $brand-main-blue-light;
     margin-bottom: 0;
-
-    // the bottom line
-    &:after {
-        content: '';
-        height: 1px;
-        width: 3rem;
-        display: block;
-        margin: ($spacer / 1.3) auto ($spacer / 2) auto;
-        background: $brand-main-blue-light;
-    }
 }
 
 .team__position {
     @extend .text-dimmed;
     margin-bottom: ($spacer / 2);
+
+    // the bottom line
+    &:after {
+        content: '';
+        height: 2px;
+        width: 3rem;
+        display: block;
+        margin: ($spacer / 1.3) auto;
+        background: $gray-dark;
+    }
 }
 
 .team__social {
@@ -68,7 +68,7 @@
     text-align: left;
     font-size: $font-size-sm;
     margin-bottom: 0;
-    margin-top: $spacer;
+    margin-top: $spacer * $line-height;
     display: none;
     opacity: 0;
     height: 0;
@@ -84,9 +84,9 @@
     text-align: center;
     cursor: pointer;
     padding-top: $spacer;
-    border-top: 1px solid $gray-dark;
-    margin-top: $spacer * 3;
-    margin-bottom: $spacer * 2;
+    border-top: 2px solid $gray-dark;
+    margin-top: $spacer * 4;
+    margin-bottom: $spacer * 4;
     position: relative;
     font-size: $font-size-sm;
     color: $gray;
@@ -99,10 +99,11 @@
         margin-right: auto;
         margin-top: -2rem;
         background: $gray-dark;
-        color: $gray-light;
+        color: $brand-main-green;
         font-size: $font-size-lg;
         line-height: 1.35;
         transition: .15s ease-out;
+        border-radius: 2px;
     }
 
     &:hover {
@@ -121,10 +122,21 @@
 //
 $spacer-team: 3rem;
 
-.grid--team {
+.grid--team,
+.grid--founders {
     margin: -($spacer-team) 0 $spacer-team (-($spacer-team));
 
     > .grid__col {
         padding: $spacer-team 0 0 $spacer-team;
+    }
+}
+
+.grid--founders {
+    justify-content: center;
+}
+
+.section--team {
+    .section-title {
+        margin-bottom: $spacer * 4;
     }
 }
