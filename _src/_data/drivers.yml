@@ -16,6 +16,11 @@ official:
       icon: logo-java
 
 community:
+    - title: C#
+      repo: bigchaindb-csharp-driver
+      icon: logo-ruby
+      link: https://github.com/Omnibasis/bigchaindb-csharp-driver
+
     - title: Ruby (CLI wrapper)
       repo: bigchaindb-ruby-client
       icon: logo-ruby
