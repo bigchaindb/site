@@ -202,12 +202,12 @@ export const js = () =>
         SRC + '/_assets/javascripts/bigchain.js',
         SRC + '/_assets/javascripts/page-*.js'
     ])
-    .pipe($.if(!(isProduction || isStaging), $.sourcemaps.init()))
+    //.pipe($.if(!(isProduction || isStaging), $.sourcemaps.init()))
     .pipe($.include({
         includePaths: ['node_modules', SRC + '/_assets/javascripts']
     })).on('error', onError)
     .pipe($.if(isProduction || isStaging, minify())).on('error', onError)
-    .pipe($.if(!(isProduction || isStaging), $.sourcemaps.write()))
+    // .pipe($.if(!(isProduction || isStaging), $.sourcemaps.write()))
     .pipe($.if(isProduction || isStaging, $.header(BANNER, { pkg: pkg })))
     .pipe($.rename({suffix: '.min'}))
     .pipe(dest(DIST + '/assets/js/'))
