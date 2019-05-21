@@ -8,7 +8,7 @@ official:
       repo: js-bigchaindb-driver
       version: v4.0
       icon: logo-js
-      
+
     - title: Java
       repo: java-bigchaindb-driver
       link: https://github.com/bigchaindb/java-bigchaindb-driver
@@ -18,7 +18,7 @@ official:
 community:
     - title: C#
       repo: bigchaindb-csharp-driver
-      icon: logo-ruby
+      icon: logo-csharp
       link: https://github.com/Omnibasis/bigchaindb-csharp-driver
 
     - title: Ruby (CLI wrapper)
