@@ -19,14 +19,13 @@ firsttransaction:
 
 server:
     title: "Network"
-    description: "Roll out your own BigchainDB network, or let us take care of this for you."
+    description: "Use an existing IPDB deployment of BigchainDB, or roll out your own BigchainDB network."
     network:
         pretitle: "Managed"
-        title: "The BigchainDB Test Network"
-        version_title: "The BigchainDB Test Network is currently running on BigchainDB "
-        description: "No installation needed. We handle running a BigchainDB network for you."
-        button: "Visit the Test Network"
-        link: "https://test.bigchaindb.com"
+        title: "IPDB Network"
+        description: "No installation needed. IPDB handles running this network."
+        button: "Visit IPDB Resources"
+        link: "https://ipdb.io/resources/"
     bdb:
         pretitle: "Self-Hosted"
         title: "BigchainDB Server"
