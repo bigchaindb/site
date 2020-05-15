@@ -12,8 +12,6 @@ main:
         - title: Docs
           url: https://docs.bigchaindb.com/
           external: true
-    - title: Services
-      url: /services/
 
 secondary:
     - title: About
