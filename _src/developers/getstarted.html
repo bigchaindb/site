@@ -14,116 +14,6 @@ redirect_from:
 
 {% assign content =  site.data.getstarted %}
 
-<section class="section section--firsttransaction">
-
-    <div class="row row--wide">
-        <h1 class="section-title">{{ content.firsttransaction.title }}</h1>
-
-        <div class="grid grid--full grid-small--half grid--gutters">
-            <div class="grid__col">
-
-                <form id="form-transaction" class="form form--transaction js-parsley">
-                    <fieldset class="form--transaction__content">
-
-                        <p class="form-group">
-                            <input id="message" class="form-control" type="text" name="message" required>
-                            <label class="form-label" for="message">{{ content.firsttransaction.message.label }}</label>
-                        </p>
-
-                        <p class="message alert alert--info">{{ content.firsttransaction.message.request }}</p>
-
-                        <button class="btn btn-primary" id="post" disabled>{{ content.firsttransaction.message.button }}</button>
-                    </fieldset>
-
-                </form>
-
-            </div>
-            <div class="grid__col">
-                <div class="waiting">
-                    <pre>
-<code class="waiting">Beep, boop, waiting for your input...</code>
-                    </pre>
-                </div>
-
-                <div class="response highlight hide">
-                    <pre>
-<code class="output language-json">{
-  "asset": {
-    "data": {
-      "msg": "Blockchain all the things!"
-    }
-  },
-  "id": "04c00267af82c161b4bf2ad4a47d1ddbfeb47eef1a14b8d51",
-  ...</code>
-</pre>
-                </div>
-
-                <div class="message message--success alert alert--success hide">
-                    <p>{{ content.firsttransaction.message.response }}</p>
-                    <p><a class="transaction-link" href="{{ site.bigchaindb_api_url }}/api/v1/transactions/">Check out your transaction on BigchainDB Testnet</a></p>
-                </div>
-                <p class="message message--fail alert alert--warning hide">Shenanigans! Something's off. Would you mind trying again?</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="row row--wide">
-        <aside class="code-example">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#python" data-toggle="tab" role="tab">Python</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#nodejs" data-toggle="tab" role="tab">Node.js</a>
-                </li>
-            </ul>
-
-            <div class="tab-content">
-
-                <div class="tab-pane active" id="python" role="tabpanel">
-{% capture python %}
-```python
-from bigchaindb_driver import BigchainDB
-from bigchaindb_driver.crypto import generate_keypair
-
-bdb = BigchainDB('{{ site.bigchaindb_api_url }}')
-alice = generate_keypair()
-tx = bdb.transactions.prepare(
-    operation='CREATE',
-    signers=alice.public_key,
-    asset={'data': {'message': 'Blockchain all the things!'}})
-signed_tx = bdb.transactions.fulfill(
-    tx,
-    private_keys=alice.private_key)
-bdb.transactions.send_commit(signed_tx)
-```
-{% endcapture %}{{ python | markdownify }}
-                </div>
-
-                <div class="tab-pane highlight" id="nodejs" role="tabpanel">
-{% capture nodejs %}
-```js
-const driver = require('bigchaindb-driver')
-
-const alice = new driver.Ed25519Keypair()
-const conn = new driver.Connection('{{ site.bigchaindb_api_url }}/api/v1/')
-const tx = driver.Transaction.makeCreateTransaction(
-    { message: 'Blockchain all the things!' },
-    null,
-    [ driver.Transaction.makeOutput(
-        driver.Transaction.makeEd25519Condition(alice.publicKey))],
-    alice.publicKey)
-const txSigned = driver.Transaction.signTransaction(tx, alice.privateKey)
-conn.postTransactionCommit(txSigned)
-```
-{% endcapture %}{{ nodejs | markdownify }}
-                </div>
-
-            </div>
-        </aside>
-    </div>
-</section>
-
 <nav class="menu--sub" data-gumshoe-header>
     <div class="row row--wide">
         <div class="menu-overflow" data-gumshoe>
@@ -320,13 +210,6 @@ conn.postTransactionCommit(txSigned)
 
     <div class="row community__actions">
         <div class="grid grid--full grid-small--fit grid--gutters--small">
-            <div class="grid__col">
-                <svg class="icon icon--social icon--gitter">
-                    <use xlink:href="/assets/img/sprite.svg#gitter"></use>
-                </svg>
-                <p>{{ content.community.gitter.text }}</p>
-                <a href="{{ site.social.gitter.url }}" class="btn btn-primary btn-sm">{{ content.community.gitter.button }}</a>
-            </div>
             <div class="grid__col">
                 <svg class="icon icon--social icon--github">
                     <use xlink:href="/assets/img/sprite.svg#github"></use>
