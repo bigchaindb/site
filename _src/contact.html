@@ -1,14 +1,27 @@
 ---
 layout: page
 
-title: Contact BigchainDB GmbH
+title: Contact
 tagline: Get In Touch
 
 js: page-contact.min.js
 ---
 
 <section class="section section-contactform">
+    <div class="row row--wide">
+        <div class="grid grid--full grid-medium--columns grid--gutters">
+            <div class="grid__col grid__col--4">
+                <p>Have a technical question? Head to
+                    <a href="{{ site.social.gitter.url }}">
+                        <svg class="icon icon--social icon--gitter">
+                            <use xlink:href="/assets/img/sprite.svg#gitter"></use>
+                        </svg> Gitter
+                    </a> to chat directly with our developers.
+                </p>
 
+                {% include/form-contact.html %}
+            </div>
+            <div class="grid__col grid__col--2">
                 <div class="h-card contactlist">
                     <p><strong class="p-name p-org">{{ site.address.company }}</strong></p>
 
@@ -20,6 +33,39 @@ js: page-contact.min.js
 
                     <p><a class="u-url" href="{{ site.url }}">{{ site.url | remove: 'https://' }}</a></p>
                     <p><a class="u-email" href="mailto:{{ site.email.contact }}">{{ site.email.contact }}</a></p>
-                 </div>
-    
+
+                    <div class="social">
+                        <p>
+                            <a href="https://github.com/{{ site.social.github.org }}">
+                                <svg class="icon icon--social icon--github" aria-labelledby="title">
+                                    <title>GitHub</title>
+                                    <use xlink:href="/assets/img/sprite.svg#github"></use>
+                                </svg>
+                                GitHub
+                            </a>
+                        </p>
+                        <p>
+                            <a href="{{ site.social.twitter.url }}">
+                                <svg class="icon icon--social icon--twitter" aria-labelledby="title">
+                                    <title>Twitter</title>
+                                    <use xlink:href="/assets/img/sprite.svg#twitter"></use>
+                                </svg>
+                                Twitter
+                            </a>
+                        </p>
+                        <p>
+                            <a href="{{ site.social.medium.url }}">
+                                <svg class="icon icon--social icon--blog" aria-labelledby="title">
+                                    <title>Blog</title>
+                                    <use xlink:href="/assets/img/sprite.svg#medium"></use>
+                                </svg>
+                                Blog
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
