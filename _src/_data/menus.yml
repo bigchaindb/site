@@ -12,8 +12,6 @@ main:
         - title: Docs
           url: https://docs.bigchaindb.com/
           external: true
-    - title: Services
-      url: /services/
 
 secondary:
     - title: About
@@ -26,8 +24,6 @@ secondary:
       url: "/contact/"
 
 community:
-    - title: Gitter
-      url: https://gitter.im/bigchaindb/bigchaindb
     - title: GitHub
       url: https://github.com/bigchaindb
     - title: Twitter
