@@ -2,80 +2,18 @@
 layout: base
 
 title: Services
-description: "Hands-on consulting and production support by blockchain experts"
+description: "Support for BigchainDB Software"
 
 header: hero-services.jpg
 image: share-image-services.jpg
 js: page-services.min.js
 
 hero:
-    title: "Hands-on consulting and production support"
-    description: "From ideation to production, we have the team and technology to help you build enterprise-grade applications and platforms."
+    title: "Support for BigchainDB software"
+    description: "To learn about service providers for BigchainDB software, please contact IPDB Foundation."
     cta:
-        - name: Get in touch
-          link: "#contact"
-          scroll: true
-
-support:
-    features:
-        - title: "Ideation"
-          description: "Have some ideas but don’t know where to start? We run a workshop to help you better understand blockchain technologies and let you drill-down into the right use cases that bring the biggest benefit."
-          icon: icon-education
-        - title: "Use case development"
-          description: "You have a specific idea for a blockchain application? We help you build a detailed business and technical architecture that lets you move forward with confidence."
-          icon: icon-blueprint
-        - title: "Blockchain consulting"
-          description: "The idea is clear. Now you need help to build a prototype. Our blockchain consultants can work to your needs, budget and timeline to get a demo into your hands that will impress."
-          icon: icon-engineering
-
-partners:
-    title: "Trusted by leading global companies"
-    description: "We work with partners who are deploying data-centric blockchain applications for automotive, energy, identity, IoT, intellectual property and supply chain use cases."
-
-intro:
-    title: "Designed for data-centric, high-transaction use cases."
-    description: "Whether you’re a system architect, a developer or a database specialist, BigchainDB offers the performance and tooling to help you create the future."
-    title2: "Decentralized, secure and immutable."
-    text: "Traditional blockchains lack what most enterprises require. BigchainDB takes a different approach, one that starts with a big data distributed database and then adds blockchain characteristics. The result is high throughput and low latency, making data-centric and high volume use cases a breeze."
-    text2: "Only BigchainDB combines the all-important advantages of queryability and performance of traditional databases with the distributed, secure and immutable nature of blockchain technology into one package."
-    features:
-        - title: "Easy to build with"
-          description: "Build applications that speak directly to BigchainDB using our set of drivers and APIs. A powerfully simple and quick way to prototype."
-          icon: icon-wrench
-        - title: "Interoperability by design"
-          description: "Interoperability with Ethereum, IPFS, Bitcoin and other protocols such as the Interledger Protocol (ILP), IPLD, COALA IP and COALA SC mean that enterprises can develop their applications knowing that their work is future-proofed."
-          icon: icon-plug
-
-contact:
-    title: "Get in touch"
-    description: "Ready to start building with BigchainDB? Enter your details below and we'll be in touch right away."
-
-    interests:
-        - Training
-        - Partnership
-        - Proof-of-concept / prototype / pilot
-        - Production support
-        - Other
-
-    industries:
-        - Analytics
-        - Automotive
-        - Consulting
-        - Data Exchange
-        - Energy
-        - Finance
-        - Government
-        - Health Care
-        - Identity
-        - Insurance
-        - Law
-        - Manufacturing
-        - Media
-        - Security
-        - Supply Chain
-        - Technology
-        - Other
-
+        - name: IPDB Homepage
+          link: "https://www.ipdb.io"
 ---
 
 <header class="hero hero--services" {% if page.header %}style="background-image:url('/assets/img/{{ page.header }}')"{% endif %}>
@@ -91,98 +29,9 @@ contact:
             <h2 class="hero__subtitle">{{ page.hero.description }}</h2>
 
             {% for cta in page.hero.cta %}
-                <a class="btn btn-blue-light hero__action" href="{{ cta.link }}" {% if cta.scroll %}data-scroll{% endif %}>{{ cta.name }}</a>
+                <a class="btn btn-blue-light hero__action" href="{{ cta.link }}">{{ cta.name }}</a>
             {% endfor %}
         </hgroup>
     </div>
 
 </header>
-
-<section class="section section--servicesdetail background--blue--light">
-    <div class="row row--wide">
-
-        <div class="grid grid--full grid-small--third grid--gutters">
-            {% for feature in page.support.features %}
-            <div class="grid__col">
-                <div class="feature">
-                    <svg class="feature__icon icon">
-                        <use xlink:href="/assets/img/sprite.svg#{{ feature.icon }}"></use>
-                    </svg>
-                    <div class="feature__detail">
-                        <h1 class="feature__title">{{ feature.title }}</h1>
-                        <p class="feature__text">{{ feature.description }}</p>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-
-        <div class="actions">
-            <a class="btn btn-blue" data-scroll href="#contact">Get in touch</a>
-        </div>
-
-    </div>
-</section>
-
-{% include sections/section-partners.html %}
-
-<section class="section section--servicesintro background--darker">
-    <div class="row">
-        <header class="section-header text-left">
-            <h1 class="section-title">{{ page.intro.title }}</h1>
-            <p class="section-description">{{ page.intro.description }}</p>
-
-            <h2>{{ page.intro.title2 }}</h2>
-
-            <p>{{ page.intro.text }}</p>
-
-            <p>{{ page.intro.text2 }}</p>
-        </header>
-
-        <div class="grid grid--full grid-small--half grid--gutters">
-            {% for feature in page.intro.features %}
-                <div class="grid__col">
-                    <div class="feature">
-                        <svg class="feature__icon icon">
-                            <use xlink:href="/assets/img/sprite.svg#{{ feature.icon }}"></use>
-                        </svg>
-                        <div class="feature__detail">
-                            <h1 class="feature__title">{{ feature.title }}</h1>
-                            <p class="feature__text">{{ feature.description }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-
-    </div>
-</section>
-
-<section class="section section--servicestestimonial">
-    <div class="row">
-
-        <figure class="testimonial">
-            <blockquote class="testimonial__quote">{{ site.data.testimonials.set4[0].quote }}</blockquote>
-
-            <figcaption class="testimonial__caption">
-                <img class="testimonial__avatar" src="/assets/img/{{ site.data.testimonials.set4[0].image }}">
-                <cite class="testimonial__cite">
-                    <span class="testimonial__name">{{ site.data.testimonials.set4[0].name }}</span>
-                    <span class="testimonial__org">{{ site.data.testimonials.set4[0].org }}</span>
-                </cite>
-            </figcaption>
-        </figure>
-    </div>
-</section>
-
-<section class="section section--servicescontact background--blue" id="contact">
-    <div class="row">
-        <header class="section-header">
-            <h1 class="section-title">{{ page.contact.title }}</h1>
-            <p class="section-description">{{ page.contact.description }}</p>
-        </header>
-
-        {% include form-services.html %}
-
-    </div>
-</section>
