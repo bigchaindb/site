@@ -71,7 +71,7 @@ permalink:              /:title/
 
 # Content Parsing
 # --------------------
-markdown:               redcarpet
+markdown:               kramdown
 
 redcarpet:
     extensions:         ['no_intra_emphasis', 'autolink', 'tables', 'smart', 'hard_wrap', 'fenced_code_blocks', 'strikethrough', 'highlight', 'quote', 'footnotes', 'with_toc_data', 'space_after_headers', 'superscript', 'lax_spacing']
