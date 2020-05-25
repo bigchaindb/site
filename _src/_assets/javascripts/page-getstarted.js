@@ -19,7 +19,7 @@ jQuery(function ($) {
 //
 // Scrollspy
 //
-gumshoe.init()
+var spy = new Gumshoe('#gumshoe a');
 
 
 //
