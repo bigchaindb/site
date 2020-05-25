@@ -15,9 +15,7 @@ email:
     contact_formspree:  xgkblajx
     contact_cc:         "contact@bigchaindb.com"
     cla:                xwojnopx
-    cla_cc:             "troy@bigchaindb.com,upod-team@bigchaindb.com"
-    services:           mdgvledx
-    services_cc:        "contact@bigchaindb.com"
+    cla_cc:             "upod-team@bigchaindb.com"
     gdpr:               gdpr@bigchaindb.com
 
 social:

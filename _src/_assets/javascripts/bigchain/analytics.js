@@ -157,14 +157,6 @@ var GoogleAnalytics = (function(w,d,$) {
         },
         gaEventClaError: function() {
             ga('send', 'event', 'cla', 'cla_form', 'error');
-        },
-
-        // Services form
-        gaEventServicesSuccess: function() {
-            ga('send', 'event', 'services', 'services_form', 'success');
-        },
-        gaEventServicesError: function() {
-            ga('send', 'event', 'services', 'services_form', 'error');
         }
     };
 

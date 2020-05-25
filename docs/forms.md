@@ -6,7 +6,6 @@ Form          | Actions
 ------------  |-------------
 `/newsletter` | send data to MailChimp and subscribe to newsletter list (double opt-in)
 `/contact`    | send data to CC emails, Slack message
-`/services`   | send data to CC emails, Slack message, add new row to Google Sheets
 `/cla`        | 2 different forms, send data to CC emails
 
 Initial form sending, except for newsletter, is handled via formspree.io with a Gold account. As form submissions arrive there, Formspree sends out the received data to the email addresses setup as CC in [our site config](../_config.yml).
