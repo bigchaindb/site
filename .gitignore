@@ -7,5 +7,4 @@ yarn.lock
 .yarnclean
 .bundle
 vendor/
-package-lock.json
 *.code-workspace

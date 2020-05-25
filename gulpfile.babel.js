@@ -230,7 +230,7 @@ export const svg = () => src(SRC + '/_assets/images/*.svg')
 export const images = () => src(SRC + '/_assets/images/**/*')
     .pipe($.if(isProduction || isStaging, $.imagemin([
     	$.imagemin.gifsicle({ interlaced: true }),
-    	$.imagemin.jpegtran({ progressive: true }),
+    	$.imagemin.mozjpeg({ progressive: true }),
     	$.imagemin.optipng({ optimizationLevel: 5 }),
     	$.imagemin.svgo({plugins: [{ removeViewBox: true }]})
     ])))
