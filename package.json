@@ -13,6 +13,8 @@
     "start": "gulp",
     "build": "gulp build --production",
     "build:staging": "gulp build --staging",
+    "deploy": "gulp deploy --live",
+    "deploy:staging": "gulp deploy --beta",
     "test": "stylelint _src/_assets/styles/**/*.scss"
   },
   "browserslist": [
