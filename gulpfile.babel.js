@@ -6,7 +6,6 @@ const $ = require('gulp-load-plugins')()
 // manually import modules that won't get picked up by gulp-load-plugins
 import { src, dest, watch, parallel, series } from 'gulp'
 import del          from 'del'
-import parallelize  from 'concurrent-transform'
 import browser      from 'browser-sync'
 import critical     from 'critical'
 import fs           from 'fs'
