@@ -135,22 +135,6 @@ var GoogleAnalytics = (function(w,d,$) {
         // All custom events
         //
 
-        // newsletter forms
-        gaEventNewsletterSuccess: function() {
-            ga('send', 'event', 'newsletter', 'subscribe', 'success');
-        },
-        gaEventNewsletterError: function() {
-            ga('send', 'event', 'newsletter', 'subscribe', 'error');
-        },
-
-        // contact forms
-        gaEventContactSuccess: function() {
-            ga('send', 'event', 'contact', 'contact_form', 'success');
-        },
-        gaEventContactError: function() {
-            ga('send', 'event', 'contact', 'contact_form', 'error');
-        },
-
         // CLA forms
         gaEventClaSuccess: function() {
             ga('send', 'event', 'cla', 'cla_form', 'success');

@@ -12,8 +12,6 @@ hiring:                 false
 
 email:
     contact:            contact@bigchaindb.com
-    contact_formspree:  xgkblajx
-    contact_cc:         "contact@bigchaindb.com"
     cla:                xwojnopx
     cla_cc:             "upod-team@bigchaindb.com"
     gdpr:               gdpr@bigchaindb.com

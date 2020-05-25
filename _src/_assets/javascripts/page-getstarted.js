@@ -1,19 +1,13 @@
 //=include gumshoejs/dist/gumshoe.js
 
 //=include bigchain/tab.js
-//=include bigchain/newsletter.js
 
 const bigchaindbUrl = 'https://test.bigchaindb.com'
 const apiPath = '/api/v1/'
 
-jQuery(function ($) {
+// jQuery(function ($) {
 
-    //
-    // init modules
-    //
-    Newsletter.init()
-
-})
+// })
 
 
 //
