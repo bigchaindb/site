@@ -7,13 +7,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const successImage = '<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><path d="M2.12132034,39.4786797 C0.949747468,38.3071068 -0.949747468,38.3071068 -2.12132034,39.4786797 C-3.29289322,40.6502525 -3.29289322,42.5497475 -2.12132034,43.7213203 L14.2786797,60.1213203 C15.5878487,61.4304894 17.7587151,61.2529588 18.8377878,59.7484823 L60.4377878,1.74848232 C61.403448,0.402129267 61.0948354,-1.47212773 59.7484823,-2.43778785 C58.4021293,-3.40344797 56.5278723,-3.09483537 55.5622122,-1.74848232 L16.0221415,53.3795008 L2.12132034,39.4786797 Z" transform="translate(3 3)"/></svg>'
     const clipboardButton = `<button class="btn btn--clipboard" title="Copy to clipboard">${clipboardImage}</button>`
 
-    const codeBlocks = document.querySelectorAll('.highlight')
+    const codeBlocks = document.querySelectorAll('div.highlighter-rouge')
 
     codeBlocks.forEach(codeBlock => {
-        const language = codeBlock.getElementsByTagName('code')[0].dataset.lang
-
-        codeBlock.insertAdjacentHTML('afterbegin', clipboardButton)
+        const language = codeBlock.className.split(' ')[0].replace('language-', '')
         codeBlock.insertAdjacentHTML('afterbegin', `<h6 class="highlight__title">${language}</h6>`)
+
+        const pre = codeBlock.querySelectorAll('div.highlight')[0]
+        pre.insertAdjacentHTML('afterbegin', clipboardButton)
     })
 
     const buttons = document.querySelectorAll('.highlight .btn--clipboard')

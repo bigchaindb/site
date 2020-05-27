@@ -14,14 +14,14 @@ set -e;
 ##
 if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
 
-    gulp deploy --beta;
+    npm run deploy:staging;
 
 ##
 ## check for master push which is no pull request
 ##
 elif [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
-    gulp deploy --live;
+    npm run deploy;
 
 else
 

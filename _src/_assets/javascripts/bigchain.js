@@ -1,5 +1,4 @@
 
-//=include svg4everybody/dist/svg4everybody.js
 //=include jquery/dist/jquery.js
 //=include smooth-scroll/dist/smooth-scroll.js
 //=include cookies-eu-banner/dist/cookies-eu-banner.js

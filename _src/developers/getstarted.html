@@ -124,9 +124,9 @@ conn.postTransactionCommit(txSigned)
     </div>
 </section>
 
-<nav class="menu--sub" data-gumshoe-header>
+<nav class="menu--sub" id="gumshoe">
     <div class="row row--wide">
-        <div class="menu-overflow" data-gumshoe>
+        <div class="menu-overflow">
             <a class="menu__link" href="#server" data-scroll><span class="number">1</span> {{ content.server.title }}</a>
             <a class="menu__link" href="#drivers" data-scroll><span class="number">2</span> {{ content.drivers.title }}</a>
             <a class="menu__link" href="#docs" data-scroll><span class="number">3</span> {{ content.docs.title }}</a>
@@ -367,5 +367,3 @@ conn.postTransactionCommit(txSigned)
     </div>
 
 </section>
-
-{% include sections/section-newsletter.html %}

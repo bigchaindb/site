@@ -28,7 +28,7 @@ echo "$(tput sgr0)" # reset
 ##
 if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
 
-    gulp build --staging
+    npm run build:staging
 
 
 ##
@@ -36,11 +36,11 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; th
 ##
 elif [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
-    gulp build --production
+    npm run build
 
 else
 
-    gulp build --production
+    npm run build
 
 fi;
 

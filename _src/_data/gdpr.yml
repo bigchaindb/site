@@ -5,11 +5,5 @@ general: >
     We use Formspree & Zapier to send this form and by submitting it, you acknowledge that the information you provide will be transferred to Formspree ([Privacy Policy](https://formspree.io/static/PrivacyPolicy.pdf)) & Zapier ([Privacy Policy](https://zapier.com/privacy/)) for processing. Don't want that? Send us an email at contact@bigchaindb.com.
 
 
-newsletter: >
-    We will only use your email to send you our newsletter and by submitting this form you give us permission to do so. You can change your mind at any time by clicking the unsubscribe link of any newsletter you receive from us, deleting your data in the process. For more information visit our [Privacy Policy](/privacy/).
-
-
-    We use MailChimp for our newsletter and by submitting this form, you acknowledge that the information you provide will be transferred to MailChimp for processing in accordance with their their [Terms](https://mailchimp.com/legal/terms/) and [Privacy Policy](https://mailchimp.com/legal/privacy/).
-
 cookies: >
     By continuing your visit to this site, you accept the use of cookies from Google Analytics so we can improve the site for you.

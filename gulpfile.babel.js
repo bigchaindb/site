@@ -6,7 +6,6 @@ const $ = require('gulp-load-plugins')()
 // manually import modules that won't get picked up by gulp-load-plugins
 import { src, dest, watch, parallel, series } from 'gulp'
 import del          from 'del'
-import parallelize  from 'concurrent-transform'
 import browser      from 'browser-sync'
 import critical     from 'critical'
 import fs           from 'fs'
@@ -230,7 +229,7 @@ export const svg = () => src(SRC + '/_assets/images/*.svg')
 export const images = () => src(SRC + '/_assets/images/**/*')
     .pipe($.if(isProduction || isStaging, $.imagemin([
     	$.imagemin.gifsicle({ interlaced: true }),
-    	$.imagemin.jpegtran({ progressive: true }),
+    	$.imagemin.mozjpeg({ progressive: true }),
     	$.imagemin.optipng({ optimizationLevel: 5 }),
     	$.imagemin.svgo({plugins: [{ removeViewBox: true }]})
     ])))
