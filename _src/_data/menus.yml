@@ -3,12 +3,13 @@ main:
     - title: Features
       url: /features/
     - title: Developers
-      url: /developers/getstarted/
+      url: /developers/guide/
       items:
-        - title: Get Started
-          url: /developers/getstarted/
         - title: Guide
           url: /developers/guide/
+        - title: Get Started
+          url: https://ipdb.io/resources/
+          external: true
         - title: Docs
           url: https://docs.bigchaindb.com/
           external: true
