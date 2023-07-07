@@ -71,7 +71,7 @@
     "gulp-zip": "^5.0.1",
     "js-yaml": "^3.14.0",
     "request": "^2.88.2",
-    "stylelint": "^13.5.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-bigchaindb": "^1.2.2",
     "stylelint-config-standard": "^20.0.0",
     "uglify-es": "^3.3.9"
