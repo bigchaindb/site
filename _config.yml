@@ -1,76 +1,70 @@
-
-
 # The Basics
 # --------------------
-name:                   BigchainDB
-description:            'The blockchain database.'
-url:                    https://www.bigchaindb.com
-bigchaindb_api_url:     https://test.ipdb.io
-getstarted_url:         https://ipdb.io/resources/
+name: BigchainDB
+description: "The blockchain database."
+url: https://www.bigchaindb.com
+bigchaindb_api_url: https://test.ipdb.io
+getstarted_url: https://ipdb.io/resources/
 
 # set to `true` to make hiring link appear in main menu
-hiring:                 false
+hiring: false
 
 email:
-    contact:            contact@bigchaindb.com
-    cla:                xwojnopx
-    cla_cc:             "upod-team@bigchaindb.com"
-    gdpr:               gdpr@bigchaindb.com
+    contact: contact@bigchaindb.com
+    cla: xwojnopx
+    cla_cc: "upod-team@bigchaindb.com"
+    gdpr: gdpr@bigchaindb.com
 
 social:
     gitter:
-        title:  Gitter
-        url:    https://gitter.im/bigchaindb/bigchaindb
+        title: Gitter
+        url: https://gitter.im/bigchaindb/bigchaindb
     github:
-        title:  GitHub
-        url:    https://github.com/bigchaindb
-        org:    bigchaindb
-        repo:   bigchaindb
+        title: GitHub
+        url: https://github.com/bigchaindb
+        org: bigchaindb
+        repo: bigchaindb
     twitter:
-        title:  Twitter
+        title: Twitter
         handle: bigchaindb
-        url:    https://twitter.com/bigchaindb
+        url: https://twitter.com/bigchaindb
     facebook:
-        title:  Facebook
+        title: Facebook
         handle: bigchaindb
-        url:    https://www.facebook.com/BigchainDB/
+        url: https://www.facebook.com/BigchainDB/
     medium:
-        title:  Blog
-        url:    https://blog.bigchaindb.com
+        title: Blog
+        url: https://blog.bigchaindb.com
     meetup:
-        title:  Meetup
-        url:    https://www.meetup.com/BigchainDB-IPDB-Meetup
+        title: Meetup
+        url: https://www.meetup.com/BigchainDB-IPDB-Meetup
     linkedin:
-        title:  LinkedIn
-        url:    https://www.linkedin.com/company/bigchaindb
+        title: LinkedIn
+        url: https://www.linkedin.com/company/bigchaindb
     youtube:
-        title:  YouTube
-        url:    https://www.youtube.com/bigchaindb
+        title: YouTube
+        url: https://www.youtube.com/bigchaindb
 
 address:
-    company:            BigchainDB GmbH
-    street:             Bernauer Str. 49
-    zip:                "10435"
-    city:               Berlin
-    country:            Germany
-
+    company: BigchainDB GmbH
+    street: An der Kolonnade 11
+    zip: "10117"
+    city: Berlin
+    country: Germany
 
 # Track all the things
 # --------------------
-analyticsID:            UA-60614729-8
-typekitID:              fih1ngo
-
+analyticsID: UA-60614729-8
+typekitID: fih1ngo
 
 # Urls
 # --------------------
-permalink:              /:title/
-
+permalink: /:title/
 
 # Generator
 # --------------------
-source:                 ./_src
-destination:            ./_dist
-
+source: ./_src
+destination: ./_dist
 
 # Jekyll native collections
 # --------------------
@@ -87,12 +81,12 @@ collections:
 
 defaults:
     - scope:
-        path: ""
-        type: guide
+          path: ""
+          type: guide
       values:
-        toc: true
-        image: share-image-guide.png
-        js: page-guide.min.js
+          toc: true
+          image: share-image-guide.png
+          js: page-guide.min.js
 
 # Plugins
 # --------------------
@@ -101,7 +95,6 @@ plugins:
     - jekyll-redirect-from
     - jekyll-toc
 
-
 jekyll_get:
     data: countries
-    json: 'https://raw.githubusercontent.com/mledoze/countries/master/dist/countries.json'
+    json: "https://raw.githubusercontent.com/mledoze/countries/master/dist/countries.json"
